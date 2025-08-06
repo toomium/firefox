@@ -1,0 +1,91 @@
+#mk_add_options "export AFL_CC=$MOZ_FETCHES_DIR/clang/bin/clang"
+#mk_add_options "export AFL_CXX=$MOZ_FETCHES_DIR/clang/bin/clang++"
+mk_add_options "export AFL_LLVM_INSTRUMENT=llvmnative"
+mk_add_options "export AFL_LLVM_NO_RPATH=1"
+
+#export CC="$MOZ_FETCHES_DIR/afl-instrumentation/bin/afl-clang-fast"
+#export CXX="$MOZ_FETCHES_DIR/afl-instrumentation/bin/afl-clang-fast++"
+
+#export HOST_CC="$MOZ_FETCHES_DIR/clang/bin/clang"
+#export HOST_CXX="$MOZ_FETCHES_DIR/clang/bin/clang++"
+
+
+# We still need to build with debug symbols
+ac_add_options --enable-debug-symbols=-gline-tables-only
+
+export RUSTC="/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc"
+
+mk_add_options AUTOCLOBBER=1
+
+ac_add_options --enable-js-shell
+
+#mk_add_options "export MOZ_AUTOMATION_BUILD_SYMBOLS=${MOZ_AUTOMATION_BUILD_SYMBOLS-1}"
+#mk_add_options "export MOZ_AUTOMATION_PACKAGE=${MOZ_AUTOMATION_PACKAGE-1}"
+#mk_add_options "export MOZ_AUTOMATION_PACKAGE_GENERATED_SOURCES=${MOZ_AUTOMATION_PACKAGE_GENERATED_SOURCES-1}"
+#mk_add_options "export MOZ_AUTOMATION_UPLOAD=${MOZ_AUTOMATION_UPLOAD-1}"
+#mk_add_options "export MOZ_AUTOMATION_CHECK=${MOZ_AUTOMATION_CHECK-1}"
+
+# The following variables are expected to be exported by Taskcluster
+# configuration files rather than mozconfig files
+#mk_add_options "export MOZ_AUTOMATION_PACKAGE_TESTS=${MOZ_AUTOMATION_PACKAGE_TESTS-0}"
+
+#export MOZ_AUTOMATION_MOZCONFIG=1
+#ac_add_options --enable-rust-simd
+# . "$topsrcdir/build/mozconfig.cache"
+
+
+
+
+if [ -n "$FORCE_GCC" ]; then
+    #CC="$MOZ_FETCHES_DIR/gcc/bin/gcc"
+    #CXX="$MOZ_FETCHES_DIR/gcc/bin/g++"
+
+    # We want to make sure we use binutils and other binaries in the tooltool
+    # package.
+    #mk_add_options "export PATH=$MOZ_FETCHES_DIR/gcc/bin:$MOZ_FETCHES_DIR/binutils/bin:$PATH"
+    FOO=""
+else
+    # For some builds we don't want to have Clang based static-analysis activated
+    if [ -z "$DISABLE_CLANG_PLUGIN" ]; then
+        export ENABLE_CLANG_PLUGIN=1
+    fi
+
+    export CFLAGS="$CFLAGS -fcrash-diagnostics-dir=${UPLOAD_PATH}"
+    export CXXFLAGS="$CXXFLAGS -fcrash-diagnostics-dir=${UPLOAD_PATH}"
+
+    #mk_add_options "export PATH=$MOZ_FETCHES_DIR/binutils/bin:$PATH"
+fi
+
+export MOZ_STDCXX_COMPAT=1
+
+#export LLVM_SYMBOLIZER="$MOZ_FETCHES_DIR/llvm-symbolizer/bin/llvm-symbolizer"
+#
+# Enable ASan specific code and build workarounds
+ac_add_options --enable-address-sanitizer
+
+# Mandatory options required for ASan builds (both on Linux and Mac)
+ac_add_options --disable-install-strip
+ac_add_options --disable-jemalloc
+ac_add_options --disable-crashreporter
+ac_add_options --disable-profiling
+
+
+# Enable ASan for rust code. This is done for specific build tasks rather than
+# globally in mozconfig.asan because it requires an unstable -Z flag.
+export RUSTFLAGS="$RUSTFLAGS -Zsanitizer=address"
+
+ac_add_options --enable-gczeal
+ac_add_options --enable-snapshot-fuzzing
+unset MOZ_STDCXX_COMPAT
+
+# Piggybacking UBSan for now since only a small subset of checks are enabled.
+# A new build can be created when appropriate.
+ac_add_options --enable-undefined-sanitizer
+
+# Package js shell.
+export MOZ_PACKAGE_JSSHELL=1
+
+# Need this to prevent name conflicts with the normal nightly build packages
+# export MOZ_PKG_SPECIAL=asan
+
+ac_add_options --disable-sandbox
