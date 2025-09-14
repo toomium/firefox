@@ -1531,9 +1531,15 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
 
   MOZ_FUZZING_NYX_DEBUG("DEBUG: Requesting data...\n");
 
+#ifdef FUZZ_LPM
+  // Grab new message
+  uint32_t bufsize =
+      Nyx::instance().get_protobuf_data((uint8_t*)buffer.begin(), buffer.length(), aMsg->type())
+#else
   // Grab enough data to send at most `maxMsgSize` bytes
   uint32_t bufsize =
       Nyx::instance().get_raw_data((uint8_t*)buffer.begin(), buffer.length());
+#endif
 
   if (bufsize == 0xFFFFFFFF) {
     MOZ_FUZZING_NYX_DEBUG("Nyx: Out of data.\n");
