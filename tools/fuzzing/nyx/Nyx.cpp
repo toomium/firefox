@@ -132,6 +132,7 @@ void Nyx::start(void) {
   NYX_CHECK_API(nyx_start);
   NYX_CHECK_API(nyx_get_next_fuzz_data);
   NYX_CHECK_API(nyx_get_raw_fuzz_data);
+  NYX_CHECK_API(nyx_get_protobuf_fuzz_data);
   NYX_CHECK_API(nyx_get_owned_raw_fuzz_data);
   NYX_CHECK_API(nyx_release);
   NYX_CHECK_API(nyx_handle_event);
