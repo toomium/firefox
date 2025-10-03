@@ -13,7 +13,7 @@ mk_add_options "export AFL_LLVM_NO_RPATH=1"
 # We still need to build with debug symbols
 ac_add_options --enable-debug-symbols=-gline-tables-only
 
-export RUSTC="/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc"
+export RUSTC="/home/tmittendorf/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc"
 
 mk_add_options AUTOCLOBBER=1
 
