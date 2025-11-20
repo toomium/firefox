@@ -9,14 +9,19 @@ Library("fuzzer-ipc-protocol")
 LOCAL_INCLUDES += [
     "/dom/base",
     "/dom/ipc",
+    "/tools/fuzzing/ipc/protobuf",
 ]
 
 SOURCES += [
     "IPCFuzzController.cpp",
+    "LibprotobufMapping.cpp",
+    "protobuf/test.pb.cc",
 ]
 
 EXPORTS.mozilla.fuzzing += [
     "IPCFuzzController.h",
+    "LibprotobufMapping.h",
+    "protobuf/test.pb.h",
 ]
 
 include("/ipc/chromium/chromium-config.mozbuild")

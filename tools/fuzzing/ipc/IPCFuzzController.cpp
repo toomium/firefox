@@ -5,9 +5,11 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #include "IPCFuzzController.h"
+#include "LibprotobufMapping.h"
 #include "mozilla/Fuzzing.h"
 #include "mozilla/SpinEventLoopUntil.h"
 #include "mozilla/SyncRunnable.h"
+#include "protobuf/test.pb.h"
 
 #include "nsIThread.h"
 #include "nsThreadUtils.h"
@@ -1532,6 +1534,9 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
   MOZ_FUZZING_NYX_DEBUG("DEBUG: Requesting data...\n");
 
 #ifdef FUZZ_LPM
+  // convert original message to protobuf
+  TypedProtobuf typedProtobuf = LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(std::move(aMsg));
+
   // Grab new message
   uint32_t bufsize =
       Nyx::instance().get_protobuf_data((uint8_t*)buffer.begin(), buffer.length(), aMsg->type())
@@ -1539,6 +1544,29 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
   // Grab enough data to send at most `maxMsgSize` bytes
   uint32_t bufsize =
       Nyx::instance().get_raw_data((uint8_t*)buffer.begin(), buffer.length());
+
+
+  // test some things here
+  // first dump original message
+  MOZ_FUZZING_NYX_PRINTF("INFO: Dumped orig. to: %i \n", mIPCDumpCount);
+  dumpIPCMessageToFile(aMsg, mIPCDumpCount++);
+  // convert to proto
+  TypedProtobuf typedProtobuf = LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(std::move(aMsg));
+  //convert back to ipc msg
+  UniquePtr<IPC::Message> conv_msg = LibprotobufMapping::instance().ConvertProtobufToIPCMessage(&typedProtobuf);
+  // dump again
+  MOZ_FUZZING_NYX_PRINTF("INFO: Dumped conv. to %i \n", mIPCDumpCount);
+  dumpIPCMessageToFile(conv_msg, mIPCDumpCount++);
+
+  if(typedProtobuf.type == dom::PContent::Msg_ExtProtocolChannelConnectParent__ID){
+    auto message = std::make_unique<ExtProtocolChannelConnectParent>();
+    if (message->ParseFromString(typedProtobuf.serialized_data)) {
+      MOZ_FUZZING_NYX_PRINTF("INFO: Reading conv. proto arg: %lu \n", message->registrarid());
+      MOZ_FUZZING_NYX_PRINTF("INFO: Converted to type: %i \n", typedProtobuf.type);
+    }
+  }
+
+
 #endif
 
   if (bufsize == 0xFFFFFFFF) {

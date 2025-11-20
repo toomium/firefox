@@ -123,6 +123,10 @@ class IPCFuzzController {
   UniquePtr<IPC::Message> replaceIPCMessage(UniquePtr<IPC::Message> aMsg);
   void syncAfterReplace();
 
+  // Used for protobuf based fuzzing
+  IPC::Message ConvertProtobufToIPCMessage(const std::string& serialized_protobuf);
+  const std::string& ConvertIPCMessageToProtobuf(IPC::Message msg);
+
  private:
   // This is a mapping from port name to a pair of last seen sequence numbers.
   std::unordered_map<mojo::core::ports::PortName, SeqNoPair> portSeqNos;
