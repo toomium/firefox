@@ -19,6 +19,28 @@ regenerate() {
     popd >/dev/null
 }
 
+regenerate_dir() {
+    DIR="$1"
+    echo
+    echo "${DIR}"
+
+    if [ ! -d "$DIR" ]; then
+        echo "Directory '$DIR' does not exist!"
+        return 1
+    fi
+
+    pushd "$DIR" >/dev/null
+
+    for proto_file in *.proto; do
+        if [ -f "$proto_file" ]; then
+            echo "${DIR}${proto_file}:"
+            protoc --cpp_out=. "$proto_file"
+        fi
+    done
+
+    popd >/dev/null
+}
+
 cd $(dirname $0)
 cd ../../.. # Top level.
 
@@ -30,3 +52,4 @@ command cp third_party/content_analysis_sdk/proto/content_analysis/sdk/analysis.
 regenerate toolkit/components/contentanalysis/content_analysis/sdk/ analysis.proto
 command cp third_party/rust/viaduct/src/fetch_msg_types.proto toolkit/components/viaduct/fetch_msg_types.proto
 regenerate toolkit/components/viaduct/ fetch_msg_types.proto
+regenerate_dir tools/fuzzing/ipc/protobuf
