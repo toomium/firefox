@@ -29,7 +29,7 @@ LibprotobufMapping& LibprotobufMapping::instance() {
   return lib;
 }
 
-UniquePtr<IPC::Message> LibprotobufMapping::ConvertProtobufToIPCMessage(const TypedProtobuf* protobuf) {
+UniquePtr<IPC::Message> LibprotobufMapping::ConvertProtobufToIPCMessage(UniquePtr<TypedProtobuf> protobuf) {
 
     // first deserialize protobuf
     ExtProtocolChannelConnectParent input;
@@ -50,9 +50,9 @@ UniquePtr<IPC::Message> LibprotobufMapping::ConvertProtobufToIPCMessage(const Ty
     return msg;
 }
 
-TypedProtobuf LibprotobufMapping::ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message> msg){
+UniquePtr<TypedProtobuf> LibprotobufMapping::ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message> msg){
 
-  TypedProtobuf output;
+  UniquePtr<TypedProtobuf> output;
 
   switch (msg->type()){
     case dom::PContent::Msg_ExtProtocolChannelConnectParent__ID:
@@ -79,8 +79,8 @@ TypedProtobuf LibprotobufMapping::ConvertIPCMessageToProtobuf(UniquePtr<IPC::Mes
       ExtProtocolChannelConnectParent proto;
       proto.set_registrarid(registrarId);
 
-      output.type = dom::PContent::Msg_ExtProtocolChannelConnectParent__ID;
-      output.serialized_data = proto.SerializeAsString();
+      output->type = dom::PContent::Msg_ExtProtocolChannelConnectParent__ID;
+      output->serialized_data = proto.SerializeAsString();
       break;
     }
     default:

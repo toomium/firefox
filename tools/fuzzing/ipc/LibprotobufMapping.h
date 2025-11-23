@@ -28,8 +28,8 @@ class LibprotobufMapping {
  public:
   static LibprotobufMapping& instance();
   // Used for protobuf-based fuzzing
-  UniquePtr<IPC::Message> ConvertProtobufToIPCMessage(const TypedProtobuf* protobuf);
-  TypedProtobuf ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message> msg);
+  UniquePtr<IPC::Message> ConvertProtobufToIPCMessage(UniquePtr<TypedProtobuf> protobuf);
+  UniquePtr<TypedProtobuf> ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message> msg);
 };
 
 }  // namespace fuzzing
