@@ -48,6 +48,9 @@ using namespace mozilla::ipc;
 // but it is necessary when using `OnMessageError` to release on early errors.
 #define MOZ_FUZZ_IPC_SYNC_AFTER_EACH_MSG 1
 
+// Use protobuf based structure aware fuzzing
+#define FUZZ_LPM
+
 namespace mozilla {
 namespace fuzzing {
 
@@ -1456,6 +1459,42 @@ static void dumpIPCMessageToFile(const UniquePtr<IPC::Message>& aMsg,
   }
 }
 
+static void dumpProtobufMessageToFile(const UniquePtr<TypedProtobuf>& aMsg,
+                                 uint32_t aDumpCount, bool aUseNyx = false) {
+  if (Nyx::instance().is_replay()) {
+    return;
+  }
+
+  std::stringstream dumpFilename;
+  std::string msgName(IPC::StringFromIPCMessageType(aMsg->type));
+  std::replace(msgName.begin(), msgName.end(), ':', '_');
+
+  if (aUseNyx) {
+    dumpFilename << "seeds/";
+  }
+
+  dumpFilename << msgName << aDumpCount << ".protobin";
+
+  Vector<char, 256, InfallibleAllocPolicy> dumpBuffer;
+  if (!dumpBuffer.initLengthUninitialized(aMsg->serialized_data.length())) {
+    MOZ_FUZZING_NYX_ABORT("dumpBuffer.initLengthUninitialized failed\n");
+  }
+  memcpy(dumpBuffer.begin(), aMsg->serialized_data.c_str(), aMsg->serialized_data.length());
+
+  if (aUseNyx) {
+    MOZ_FUZZING_NYX_PRINTF("INFO: Calling dump_file: %s Size: %zu\n",
+                           dumpFilename.str().c_str(), dumpBuffer.length());
+    Nyx::instance().dump_file(reinterpret_cast<char*>(dumpBuffer.begin()),
+                              dumpBuffer.length(), dumpFilename.str().c_str());
+  } else {
+    std::fstream file;
+    file.open(dumpFilename.str(), std::ios::out | std::ios::binary);
+    file.write(reinterpret_cast<char*>(dumpBuffer.begin()),
+               dumpBuffer.length());
+    file.close();
+  }
+}
+
 UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
     UniquePtr<IPC::Message> aMsg) {
   if (!mozilla::fuzzing::Nyx::instance().is_enabled("IPC_SingleMessage")) {
@@ -1485,11 +1524,19 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
       if (!dumpFilter.empty()) {
         std::string msgName(IPC::StringFromIPCMessageType(aMsg->type()));
         if (msgName.find(dumpFilter) != std::string::npos) {
+          #ifdef FUZZ_LPM
+          dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(std::move(aMsg)), mIPCDumpCount);
+          #else
           dumpIPCMessageToFile(aMsg, mIPCDumpCount);
+          #endif
           mIPCDumpCount++;
         }
       } else {
-        dumpIPCMessageToFile(aMsg, mIPCDumpCount);
+        #ifdef FUZZ_LPM
+          dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(std::move(aMsg)), mIPCDumpCount);
+        #else
+          dumpIPCMessageToFile(aMsg, mIPCDumpCount);
+        #endif
         mIPCDumpCount++;
       }
     }
@@ -1504,7 +1551,11 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
   } else {
     // Dump the trigger message through Nyx in case we want to use it
     // as a seed to AFL++ outside of the VM.
+    #ifdef FUZZ_LPM
+    dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(std::move(aMsg)), mIPCDumpCount, true);
+    #else
     dumpIPCMessageToFile(aMsg, mIPCDumpCount, true /* aUseNyx */);
+    #endif
     mIPCDumpCount++;
     if (mIPCTriggerSingleMsgWait > 0) {
       mIPCTriggerSingleMsgWait--;
@@ -1534,39 +1585,33 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
   MOZ_FUZZING_NYX_DEBUG("DEBUG: Requesting data...\n");
 
 #ifdef FUZZ_LPM
-  // convert original message to protobuf
-  TypedProtobuf typedProtobuf = LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(std::move(aMsg));
-
-  // Grab new message
-  uint32_t bufsize =
-      Nyx::instance().get_protobuf_data((uint8_t*)buffer.begin(), buffer.length(), aMsg->type())
-#else
   // Grab enough data to send at most `maxMsgSize` bytes
   uint32_t bufsize =
       Nyx::instance().get_raw_data((uint8_t*)buffer.begin(), buffer.length());
-
 
   // test some things here
   // first dump original message
   MOZ_FUZZING_NYX_PRINTF("INFO: Dumped orig. to: %i \n", mIPCDumpCount);
   dumpIPCMessageToFile(aMsg, mIPCDumpCount++);
   // convert to proto
-  TypedProtobuf typedProtobuf = LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(std::move(aMsg));
+  UniquePtr<TypedProtobuf> typedProtobuf = LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(std::move(aMsg));
   //convert back to ipc msg
-  UniquePtr<IPC::Message> conv_msg = LibprotobufMapping::instance().ConvertProtobufToIPCMessage(&typedProtobuf);
+  UniquePtr<IPC::Message> conv_msg = LibprotobufMapping::instance().ConvertProtobufToIPCMessage(std::move(typedProtobuf));
   // dump again
   MOZ_FUZZING_NYX_PRINTF("INFO: Dumped conv. to %i \n", mIPCDumpCount);
   dumpIPCMessageToFile(conv_msg, mIPCDumpCount++);
 
-  if(typedProtobuf.type == dom::PContent::Msg_ExtProtocolChannelConnectParent__ID){
+  if(typedProtobuf->type == dom::PContent::Msg_ExtProtocolChannelConnectParent__ID){
     auto message = std::make_unique<ExtProtocolChannelConnectParent>();
-    if (message->ParseFromString(typedProtobuf.serialized_data)) {
+    if (message->ParseFromString(typedProtobuf->serialized_data)) {
       MOZ_FUZZING_NYX_PRINTF("INFO: Reading conv. proto arg: %lu \n", message->registrarid());
-      MOZ_FUZZING_NYX_PRINTF("INFO: Converted to type: %i \n", typedProtobuf.type);
+      MOZ_FUZZING_NYX_PRINTF("INFO: Converted to type: %i \n", typedProtobuf->type);
     }
   }
-
-
+#else
+  // Grab enough data to send at most `maxMsgSize` bytes
+  uint32_t bufsize =
+      Nyx::instance().get_raw_data((uint8_t*)buffer.begin(), buffer.length());
 #endif
 
   if (bufsize == 0xFFFFFFFF) {
