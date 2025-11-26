@@ -1600,14 +1600,6 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
   // dump again
   MOZ_FUZZING_NYX_PRINTF("INFO: Dumped conv. to %i \n", mIPCDumpCount);
   dumpIPCMessageToFile(conv_msg, mIPCDumpCount++);
-
-  if(typedProtobuf->type == dom::PContent::Msg_ExtProtocolChannelConnectParent__ID){
-    auto message = std::make_unique<ExtProtocolChannelConnectParent>();
-    if (message->ParseFromString(typedProtobuf->serialized_data)) {
-      MOZ_FUZZING_NYX_PRINTF("INFO: Reading conv. proto arg: %lu \n", message->registrarid());
-      MOZ_FUZZING_NYX_PRINTF("INFO: Converted to type: %i \n", typedProtobuf->type);
-    }
-  }
 #else
   // Grab enough data to send at most `maxMsgSize` bytes
   uint32_t bufsize =
