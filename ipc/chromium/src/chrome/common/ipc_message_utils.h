@@ -29,6 +29,12 @@ class RefPtr;
 template <typename T>
 class nsCOMPtr;
 
+#ifdef FUZZING_SNAPSHOT
+namespace mozilla::fuzzing {
+class LibprotobufMapping;
+}
+#endif
+
 namespace mozilla::ipc {
 class IProtocol;
 template <typename P>
@@ -142,6 +148,10 @@ class MOZ_STACK_CLASS MessageWriter final {
  * used when deserializing and tracks iteration.
  */
 class MOZ_STACK_CLASS MessageReader final {
+#ifdef FUZZING_SNAPSHOT
+    // calls various private API functions on the header.
+    friend class mozilla::fuzzing::LibprotobufMapping;
+#endif
  public:
   explicit MessageReader(const Message& message,
                          mozilla::ipc::IProtocol* actor = nullptr)

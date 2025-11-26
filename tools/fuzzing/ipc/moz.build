@@ -15,12 +15,14 @@ LOCAL_INCLUDES += [
 SOURCES += [
     "IPCFuzzController.cpp",
     "LibprotobufMapping.cpp",
+    "protobuf/SetCharacterMap.pb.cc",
     "protobuf/test.pb.cc",
 ]
 
 EXPORTS.mozilla.fuzzing += [
     "IPCFuzzController.h",
     "LibprotobufMapping.h",
+    "protobuf/SetCharacterMap.pb.h",
     "protobuf/test.pb.h",
 ]
 
