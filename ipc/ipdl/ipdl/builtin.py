@@ -45,6 +45,38 @@ Types = (
     "mozilla::ipc::FileDescriptor",
 )
 
+# C/C++ -> Protobuf type mappings
+# These mappings are used for .proto generation intended for fuzzing IPC messages
+# using structure-aware mutations.
+PBTypeMappings = {
+    'int32_t': 'int32',
+    'int64_t': 'int64',
+    'uint32_t': 'uint32',
+    'uint64_t': 'uint64',
+
+    # protobuf got no 8-bit wide integer type
+    'int8_t': 'int32',
+    'uint8_t': 'uint32',
+    'int16_t': 'int32',
+    'uint16_t': 'uint32',
+
+    'int': 'int32',
+    'long': 'int64',
+    'long long': 'int64',
+    'unsigned int': 'uint32',
+    'unsigned long': 'uint64',
+    'unsigned long long': 'uint64',
+    'size_t': 'uint64',
+
+    'float': 'float',
+    'double': 'double',
+
+    'bool': 'bool',
+
+    'string': 'string',
+    'char*': 'string',
+    'const char*': 'string',
+}
 
 # XXX(Bug 1677487) Can we restrict including ByteBuf.h, FileDescriptor.h,
 # MozPromise.h and Shmem.h to those protocols that really use them?

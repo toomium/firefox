@@ -11,7 +11,7 @@ from multiprocessing import Manager
 
 import ipdl
 from ipdl.ast import SYNC
-from ipdl.exporter import JSONExporter
+from ipdl.exporter import JSONExporter, ProtobufExporter
 
 
 class WorkerPool:
@@ -30,6 +30,7 @@ class WorkerPool:
         allmessageprognames,
         allsyncmessages,
         alljsonobjs,
+        allprotobufs,
         *,
         processes=None
     ):
@@ -51,6 +52,7 @@ class WorkerPool:
                 allmessageprognames,
                 allsyncmessages,
                 alljsonobjs,
+                allprotobufs,
             ),
             processes=processes,
         )
@@ -75,6 +77,7 @@ class WorkerPool:
             allmessageprognames,
             allsyncmessages,
             alljsonobjs,
+            allprotobufs,
         ) = WorkerPool.per_process_context
         ast = asts[index]
         ipdl.gencxx(files[index], ast, headersdir, cppdir, segmentCapacityDict)
@@ -84,6 +87,7 @@ class WorkerPool:
             allprotocols.append(ast.protocol.name)
 
             alljsonobjs.append(JSONExporter.protocolToObject(ast.protocol))
+            allprotobufs.append(ProtobufExporter.protocolToProtobuf(ast.protocol))
 
             # e.g. PContent::RequestMemoryReport (not prefixed or suffixed.)
             for md in ast.protocol.messageDecls:
@@ -224,6 +228,7 @@ def main():
     allmessageprognames = manager.list()
     allprotocols = manager.list()
     alljsonobjs = manager.list()
+    allprotobufs = manager.list()
 
     for msgName in msgMetadataConfig.sections():
         if msgMetadataConfig.has_option(msgName, "segment_capacity"):
@@ -280,6 +285,7 @@ def main():
         allmessageprognames,
         allsyncmessages,
         alljsonobjs,
+        allprotobufs,
     )
     pool.run()
 
@@ -290,6 +296,12 @@ def main():
         ipdl.writeifmodified(
             json.dumps({"protocols": alljsonobjs}, indent=2),
             os.path.join(cppdir, "protocols.json"),
+        )
+
+    for filename, protobuf in allprotobufs:
+        ipdl.writeifmodified(
+            protobuf,
+            os.path.join(cppdir, "protobuf", f"{filename}.proto")
         )
 
     allprotocols.sort()
