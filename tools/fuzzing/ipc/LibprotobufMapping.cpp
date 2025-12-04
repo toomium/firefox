@@ -99,7 +99,11 @@ UniquePtr<IPC::Message> LibprotobufMapping::ConvertProtobufToIPCMessage
 
 UniquePtr<TypedProtobuf> LibprotobufMapping::ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message> msg){
 
-  UniquePtr<TypedProtobuf> output;
+  MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto]: %s Size: %u\n",
+                           IPC::StringFromIPCMessageType(msg->type()),
+                           msg->header()->payload_size);
+
+  UniquePtr<TypedProtobuf> output = MakeUnique<TypedProtobuf>();;
 
   switch (msg->type()){
     case dom::PContent::Msg_SetCharacterMap__ID: {
@@ -109,6 +113,9 @@ UniquePtr<TypedProtobuf> LibprotobufMapping::ConvertIPCMessageToProtobuf(UniqueP
       auto maybe__aGeneration = IPC::ReadParam<uint32_t>((&(reader__)));
 
       auto& aGeneration = *maybe__aGeneration;
+      MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto] Read Parameter Generation: %u\n",
+                      aGeneration);
+
       // Sentinel = 'aGeneration'
       if ((!(((&(reader__)))->ReadSentinel(430179438)))) {
           mozilla::ipc::SentinelReadError("Error deserializing 'uint32_t'");
@@ -116,6 +123,9 @@ UniquePtr<TypedProtobuf> LibprotobufMapping::ConvertIPCMessageToProtobuf(UniqueP
       auto maybe__aFamilyIndex = IPC::ReadParam<uint32_t>((&(reader__)));
 
       auto& aFamilyIndex = *maybe__aFamilyIndex;
+      MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto] Read Parameter FamilyIndex: %u\n",
+                      aFamilyIndex);
+
       // Sentinel = 'aFamilyIndex'
       if ((!(((&(reader__)))->ReadSentinel(501089468)))) {
           mozilla::ipc::SentinelReadError("Error deserializing 'uint32_t'");
@@ -123,6 +133,8 @@ UniquePtr<TypedProtobuf> LibprotobufMapping::ConvertIPCMessageToProtobuf(UniqueP
       auto maybe__aAlias = IPC::ReadParam<bool>((&(reader__)));
 
       auto& aAlias = *maybe__aAlias;
+      MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto] Read Parameter Alias: %u\n",
+                      aAlias);
       // Sentinel = 'aAlias'
       if ((!(((&(reader__)))->ReadSentinel(129040972)))) {
           mozilla::ipc::SentinelReadError("Error deserializing 'bool'");
@@ -130,29 +142,37 @@ UniquePtr<TypedProtobuf> LibprotobufMapping::ConvertIPCMessageToProtobuf(UniqueP
       auto maybe__aFaceIndex = IPC::ReadParam<uint32_t>((&(reader__)));
 
       auto& aFaceIndex = *maybe__aFaceIndex;
+      MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto] Read Parameter FaceIndex: %u\n",
+                      aFaceIndex);
       // Sentinel = 'aFaceIndex'
       if ((!(((&(reader__)))->ReadSentinel(335021001)))) {
           mozilla::ipc::SentinelReadError("Error deserializing 'uint32_t'");
       }
 
-      size_t offset_before = reader__.iter_.iter_.AbsoluteOffset();
-      // copy iter state
-      Pickle::BufferList::IterImpl iter_before = reader__.iter_.iter_;
-      auto maybe__aMap = IPC::ReadParam<gfxSparseBitSet>((&(reader__)));
-      auto& aMap = *maybe__aMap;
-      size_t offset_after = reader__.iter_.iter_.AbsoluteOffset();
-      size_t serialized_size = offset_after - offset_before;
 
-      Vector<char, 256, InfallibleAllocPolicy> dumpBuffer;
-      if (!dumpBuffer.initLengthUninitialized(serialized_size)) {
-        MOZ_FUZZING_NYX_ABORT("dumpBuffer.initLengthUninitialized failed\n");
-      }
-      if (!msg->Buffers().ReadBytes(
-              iter_before,
-              reinterpret_cast<char*>(dumpBuffer.begin()),
-              serialized_size)) {
-        MOZ_FUZZING_NYX_ABORT("ReadBytes failed\n");
-      }
+
+      size_t offset_before = reader__.iter_.iter_.AbsoluteOffset();
+      MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto] Read Parameter AbsoluteOffset: %lu\n",
+                      offset_before);
+      // copy iter state
+      // Pickle::BufferList::IterImpl iter_before = reader__.iter_.iter_;
+      // auto maybe__aMap = IPC::ReadParam<gfxSparseBitSet>((&(reader__)));
+      // auto& aMap = *maybe__aMap;
+      // size_t offset_after = reader__.iter_.iter_.AbsoluteOffset();
+      // MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto] Read Parameter AbsoluteOffset After: %lu\n",
+      //                 offset_after);
+      // size_t serialized_size = offset_after - offset_before;
+
+      // Vector<char, 256, InfallibleAllocPolicy> dumpBuffer;
+      // if (!dumpBuffer.initLengthUninitialized(serialized_size)) {
+      //   MOZ_FUZZING_NYX_ABORT("dumpBuffer.initLengthUninitialized failed\n");
+      // }
+      // if (!msg->Buffers().ReadBytes(
+      //         iter_before,
+      //         reinterpret_cast<char*>(dumpBuffer.begin()),
+      //         serialized_size)) {
+      //   MOZ_FUZZING_NYX_ABORT("ReadBytes failed\n");
+      // }
 
 
       // Sentinel = 'aMap'
@@ -171,8 +191,13 @@ UniquePtr<TypedProtobuf> LibprotobufMapping::ConvertIPCMessageToProtobuf(UniqueP
       proto.set_afaceindex(aFaceIndex);
       proto.set_gfxsparsebitset("test");
 
+      MOZ_FUZZING_NYX_PRINT("INFO: [ConvertToProto] Proto created\n");
+
       output->type = dom::PContent::Msg_SetCharacterMap__ID;
+      MOZ_FUZZING_NYX_PRINT("INFO: [ConvertToProto] Type set\n");
       output->serialized_data = proto.SerializeAsString();
+      MOZ_FUZZING_NYX_PRINT("INFO: [ConvertToProto] Proto serialized\n");
+
       break;
     }
     case dom::PContent::Msg_ExtProtocolChannelConnectParent__ID:

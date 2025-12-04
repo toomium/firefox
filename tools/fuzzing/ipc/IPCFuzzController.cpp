@@ -1475,6 +1475,9 @@ static void dumpProtobufMessageToFile(const UniquePtr<TypedProtobuf>& aMsg,
 
   dumpFilename << msgName << aDumpCount << ".protobin";
 
+  MOZ_FUZZING_NYX_PRINTF("INFO: Dumping proto: %s\n",
+                           dumpFilename.str().c_str());
+
   Vector<char, 256, InfallibleAllocPolicy> dumpBuffer;
   if (!dumpBuffer.initLengthUninitialized(aMsg->serialized_data.length())) {
     MOZ_FUZZING_NYX_ABORT("dumpBuffer.initLengthUninitialized failed\n");
@@ -1551,8 +1554,13 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
   } else {
     // Dump the trigger message through Nyx in case we want to use it
     // as a seed to AFL++ outside of the VM.
+    MOZ_FUZZING_NYX_PRINTF("INFO: [OnIPCMessage] Got Trigger Message: %s Size: %u\n",
+                           IPC::StringFromIPCMessageType(aMsg->type()),
+                           aMsg->header()->payload_size);
     #ifdef FUZZ_LPM
+    dumpIPCMessageToFile(aMsg, mIPCDumpCount, true /* aUseNyx */);
     dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(std::move(aMsg)), mIPCDumpCount, true);
+    MOZ_FUZZING_NYX_PRINT("INFO: [DumpToFile] Message dumped\n");
     #else
     dumpIPCMessageToFile(aMsg, mIPCDumpCount, true /* aUseNyx */);
     #endif
