@@ -30,7 +30,8 @@ class WorkerPool:
         allmessageprognames,
         allsyncmessages,
         alljsonobjs,
-        allprotobufs,
+        protoheadersdir,
+        protosrcdir,
         *,
         processes=None
     ):
@@ -52,7 +53,8 @@ class WorkerPool:
                 allmessageprognames,
                 allsyncmessages,
                 alljsonobjs,
-                allprotobufs,
+                protoheadersdir,
+                protosrcdir
             ),
             processes=processes,
         )
@@ -77,17 +79,20 @@ class WorkerPool:
             allmessageprognames,
             allsyncmessages,
             alljsonobjs,
-            allprotobufs,
+            protoheadersdir,
+            protosrcdir
         ) = WorkerPool.per_process_context
         ast = asts[index]
         ipdl.gencxx(files[index], ast, headersdir, cppdir, segmentCapacityDict)
+        ipdl.genproto(files[index], ast, protosrcdir)
+
+        #ProtobufExporter().genproto(ast, protoheadersdir, protosrcdir)
 
         if ast.protocol:
             allmessages[ast.protocol.name] = ipdl.genmsgenum(ast)
             allprotocols.append(ast.protocol.name)
 
             alljsonobjs.append(JSONExporter.protocolToObject(ast.protocol))
-            allprotobufs.append(ProtobufExporter.protocolToProtobuf(ast.protocol))
 
             # e.g. PContent::RequestMemoryReport (not prefixed or suffixed.)
             for md in ast.protocol.messageDecls:
@@ -173,6 +178,20 @@ def main():
         help="""A file containing IPDL files to parse. This will be
     merged with files provided on the commandline.""",
     )
+    op.add_option(
+        "-b",
+        "--protoheaders-dir",
+        dest="protoheadersdir",
+        default=".",
+        help="""Directory into which proto headers will be generated.""",
+    )
+    op.add_option(
+        "-p",
+        "--protosrc-dir",
+        dest="protosrcdir",
+        default=".",
+        help="""Directory into which proto sources will be generated.""",
+    )
 
     options, cmdline_files = op.parse_args()
     _verbosity = options.verbosity
@@ -180,6 +199,8 @@ def main():
     headersdir = options.headersdir
     cppdir = options.cppdir
     includedirs = [os.path.abspath(incdir) for incdir in options.includedirs]
+    protoheadersdir = options.protoheadersdir
+    protosrcdir = options.protosrcdir
 
     files = []
 
@@ -285,7 +306,8 @@ def main():
         allmessageprognames,
         allsyncmessages,
         alljsonobjs,
-        allprotobufs,
+        protoheadersdir,
+        protosrcdir
     )
     pool.run()
 
@@ -296,12 +318,6 @@ def main():
         ipdl.writeifmodified(
             json.dumps({"protocols": alljsonobjs}, indent=2),
             os.path.join(cppdir, "protocols.json"),
-        )
-
-    for filename, protobuf in allprotobufs:
-        ipdl.writeifmodified(
-            protobuf,
-            os.path.join(cppdir, "protobuf", f"{filename}.proto")
         )
 
     allprotocols.sort()

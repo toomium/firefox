@@ -4,6 +4,7 @@
 
 __all__ = [
     "gencxx",
+    "genproto",
     "genipdl",
     "parse",
     "typecheck",
@@ -23,6 +24,7 @@ from ipdl.type import TypeCheck
 from ipdl.checker import checkSyncMessage, checkFixedSyncMessages
 
 from ipdl.cxx.cgen import CxxCodeGen
+from ipdl.protobuf.convert import ConvertToProto
 
 
 def parse(specstring, filename="/stdin", includedirs=[], errout=sys.stderr):
@@ -51,6 +53,12 @@ def typecheck(ast, errout=sys.stderr):
     it is not."""
     return TypeCheck().check(ast, errout)
 
+def genproto(ipdlfilename, ast, outprotodir):
+    proto = ConvertToProto().convert(ast)
+
+    print(os.path.join(outprotodir, ast.name + ".proto"))
+
+    writeifmodified(proto, os.path.join(outprotodir, ast.name + ".proto"))
 
 def gencxx(ipdlfilename, ast, outheadersdir, outcppdir, segmentcapacitydict):
     headers, cpps = LowerToCxx().lower(ast, segmentcapacitydict)

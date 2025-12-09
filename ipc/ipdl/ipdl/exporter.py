@@ -11,7 +11,9 @@ from ipdl.builtin import PBTypeMappings
 from ipdl.ast import ASYNC, SYNC
 from ipdl.ast import IN, OUT, INOUT
 from ipdl.ast import StringLiteral
-from ipdl.type import ImportedCxxType, BuiltinCType, ArrayType, ActorType, StructType, UnionType, MaybeType, FDType
+from ipdl.lower import TranslationUnit, _DISCLAIMER
+from ipdl.type import ImportedCxxType, BuiltinCType, ArrayType, ActorType, StructType, UnionType, MaybeType, FDType, IPDLType
+from ipdl import writeifmodified
 
 from pprint import pprint
 
@@ -64,7 +66,46 @@ class JSONExporter:
 
         return p
 
+_PROTO_HEAD = """syntax = "proto2";
+
+option optimize_for = LITE_RUNTIME;\n\n"""
+
 class ProtobufExporter:
+
+    def genheader(self, ast : TranslationUnit):
+        pprint(vars(ast))
+        out = _DISCLAIMER.ws + "\n"
+        out += _PROTO_HEAD
+
+        if ast.namespaces:
+            out += "package "
+        for ns in ast.namespaces:
+            out +=  + ns.name + ";\n"
+
+        # print imports
+        for inc in ast.includes:
+            pprint(vars(inc))
+
+        return out
+
+
+    def genproto(self, ast : TranslationUnit, protoheadersdir : str, protosrcdir : str):
+        # generate header and includes
+        out = self.genheader(ast)
+
+        # generate structs
+        out += self.genStructs(ast)
+
+        # generate protocol if it exists
+        if ast.protocol:
+            protocolname, out = self.protocolToProtobuf(ast.protocol)
+
+        if ast.filetype == 'header':
+            writeifmodified(out, os.path.join(protoheadersdir, f"{ast.name}.proto"))
+        else:
+            writeifmodified(out, os.path.join(protosrcdir, f"{protocolname}.proto"))
+
+        print("todo")
 
     def checkType(ipdltype, counters):
         if isinstance(ipdltype, ImportedCxxType):
@@ -87,17 +128,72 @@ class ProtobufExporter:
             counters['other'] += 1
         return counters
 
-    @staticmethod
-    def protocolToProtobuf(protocol):
-        out = """syntax = "proto2";
+    def mapImportedCxxType(self, importedCxxType : ImportedCxxType):
+        # Type 1: map directly to corresponding scalar type
+        out = ""
+        if importedCxxType.name() in PBTypeMappings.keys():
+            out += PBTypeMappings[importedCxxType.name()]
+            self.counters['scalar_mappings'] += 1
+        else:
+            out += importedCxxType.name()
+        return out
 
-option optimize_for = LITE_RUNTIME;\n\n"""
-        pprint(vars(protocol))
+
+    def mapArrayType(self, arraytype : ArrayType):
+        # create repeated param and map basetype recursively
+        return "repeated " + self.mapType(arraytype.basetype)
+
+    def mapBuiltinCType(self, builtinCType : BuiltinCType):
+        # map directly to scalar type
+        self.counters['scalar_mappings'] += 1
+        return PBTypeMappings[builtinCType.name()]
+
+    def mapActorType(self, actorType : ActorType):
+        return "ActorType TODO"
+
+    def mapStructType(self, structType : StructType):
+        #pprint(vars(structType))
+        #pprint(vars(structType.qname))
+        # we have to define a seperate message
+        return "StructType TODO"
+
+    def mapUnionType(self, unionType : UnionType):
+        return "UnionType TODO"
+
+    def mapMaybeType(self, maybeType : MaybeType):
+        return "MaybeType TODO"
+
+    def mapFDType(self, fdType : FDType):
+        return "FDTYPE TODO"
+
+    def mapType(self, ipdltype : IPDLType):
+        if isinstance(ipdltype, ImportedCxxType):
+            return self.mapImportedCxxType(ipdltype)
+        elif isinstance(ipdltype, BuiltinCType):
+            return self.mapBuiltinCType(ipdltype)
+        elif isinstance(ipdltype, ArrayType):
+            return self.mapArrayType(ipdltype)
+        elif isinstance(ipdltype, ActorType):
+            return self.mapActorType(ipdltype)
+        elif isinstance(ipdltype, StructType):
+            return self.mapStructType(ipdltype)
+        elif isinstance(ipdltype, UnionType):
+            return self.mapUnionType(ipdltype)
+        elif isinstance(ipdltype, MaybeType):
+            return self.mapMaybeType(ipdltype)
+        elif isinstance(ipdltype, FDType):
+            return self.mapFDType(ipdltype)
+        else:
+            return "bytes"
+
+    def protocolToProtobuf(self, protocol):
+        out = _DISCLAIMER.ws + "\n"
+        out += _PROTO_HEAD
+        #pprint(vars(protocol))
 
         # used for stats
         param_count = 0
-        scalar_mappings = 0
-        counters = {
+        self.counters = {
             'ImportedCxxType': 0,
             'BuiltinCType': 0,
             'ArrayType': 0,
@@ -106,34 +202,51 @@ option optimize_for = LITE_RUNTIME;\n\n"""
             'UnionType': 0,
             'MaybeType': 0,
             'FDType': 0,
-            'other': 0
+            'other': 0,
+            'scalar_mappings': 0
         }
 
+        # for every message in this protocol...
         for msg in protocol.messageDecls:
+            # add one proto message
             out += f"message {msg.name} " + "{\n"
+
+            # initialize field numbers for this message
+            field_number = 0
+
             for param in msg.params:
-                pprint(vars(param))
-                counters = ProtobufExporter.checkType(counters, param.ipdltype)
+                #pprint(vars(param))
+                #pprint(vars((param.ipdltype)))
+                #if isinstance(param.ipdltype, ImportedCxxType):
+                #    pprint(vars((param.ipdltype.qname)))
+
+                # increment stats counter
+                self.counters = ProtobufExporter.checkType(param.ipdltype, self.counters)
                 param_count += 1
+
+                # map type
                 out += "   "
-                # Type 1: map directly to corresponding scalar type
-                if param.ipdltype.name() in PBTypeMappings.keys():
-                    scalar_mappings += 1
-                    out += "MAPPED "
-                    out += PBTypeMappings[param.ipdltype.name()]
-                #elif param.ipdltype.
-                    # Type 2:
-                else:
-                    # Type 3: just pretend it's a byte string
-                    out += param.ipdltype.name()
+                out += self.mapType(param.ipdltype)
                 out += " "
-                out += f"{param.ipdltype.isCxx()} {param.name}\n"
+
+                # add name and field number
+                out += param.name
+                out += f" = {field_number}"
+
+                # special case for arraytype
+                if isinstance(param.ipdltype, ArrayType):
+                    out += " [packed = true]"
+
+                # close
+                out += ";\n"
+
+                # increase field_number
+                field_number += 1
             out += "}\n\n"
 
-        # print stats
+        # print stats for this protocol
         out += "\n\n"
         out += "// Parameter mapping stats\n"
         out += f"// Total parameter count: {param_count}\n"
-        out += f"// Parameters mapped to scalar type: {scalar_mappings}\n"
-        print(counters)
+        out += f"//{self.counters}"
         return (protocol.name, out)
