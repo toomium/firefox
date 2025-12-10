@@ -81,7 +81,7 @@ class WorkerPool:
         ) = WorkerPool.per_process_context
         ast = asts[index]
         ipdl.gencxx(files[index], ast, headersdir, cppdir, segmentCapacityDict)
-        ipdl.genproto(files[index], ast, protodir)
+        ipdl.genproto(ast, protodir)
 
         #ProtobufExporter().genproto(ast, protoheadersdir, protosrcdir)
 

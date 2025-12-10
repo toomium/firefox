@@ -11,21 +11,18 @@ import ipdl.type
 _NL = ast.Comment("")
 
 class ConvertToProto:
-    def convert(self, tu):
+    def convert(self, tu) -> ast.File:
         """returns |[ proto : File ]| representing the
         converted form of |tu|"""
 
         # Any modifications to the filename scheme here need corresponding
         # modifications in the ipdl.py driver script.
-        name = tu.name
         pproto = ast.File()
-
         _GenerateProtobufCode().lower(tu, pproto)
+        return pproto
 
-        proto_gen = generator.Generator().generate(pproto)
-
-        return ipdl.lower._DISCLAIMER.ws + proto_gen
-
+    def genProto(self, file : ast.File) -> str:
+        return ipdl.lower._DISCLAIMER.ws + generator.Generator().generate(file)
 
 class _GenerateProtobufCode(ipdl.ast.Visitor):
     """Creates protobuf ast for given ipdl ast."""
