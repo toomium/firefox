@@ -25,8 +25,7 @@ ipdl.track: $(ALL_IPDLSRCS) $(ALL_IPDLSRCS_FILE) $(srcdir)/sync-messages.ini $(s
 	  --msg-metadata=$(srcdir)/message-metadata.ini \
 	  --outheaders-dir=_ipdlheaders \
 	  --outcpp-dir=. \
-	  --protoheaders-dir=_protobufheaders \
-	  --protosrc-dir=. \
+	  --outproto-dir=protobuf \
 	  $(IPDLDIRS:%=-I%) \
 	  --file-list $(ALL_IPDLSRCS_FILE)
 	touch $@

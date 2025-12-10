@@ -30,8 +30,7 @@ class WorkerPool:
         allmessageprognames,
         allsyncmessages,
         alljsonobjs,
-        protoheadersdir,
-        protosrcdir,
+        protodir,
         *,
         processes=None
     ):
@@ -53,8 +52,7 @@ class WorkerPool:
                 allmessageprognames,
                 allsyncmessages,
                 alljsonobjs,
-                protoheadersdir,
-                protosrcdir
+                protodir
             ),
             processes=processes,
         )
@@ -79,12 +77,11 @@ class WorkerPool:
             allmessageprognames,
             allsyncmessages,
             alljsonobjs,
-            protoheadersdir,
-            protosrcdir
+            protodir
         ) = WorkerPool.per_process_context
         ast = asts[index]
         ipdl.gencxx(files[index], ast, headersdir, cppdir, segmentCapacityDict)
-        ipdl.genproto(files[index], ast, protosrcdir)
+        ipdl.genproto(files[index], ast, protodir)
 
         #ProtobufExporter().genproto(ast, protoheadersdir, protosrcdir)
 
@@ -179,18 +176,11 @@ def main():
     merged with files provided on the commandline.""",
     )
     op.add_option(
-        "-b",
-        "--protoheaders-dir",
-        dest="protoheadersdir",
-        default=".",
-        help="""Directory into which proto headers will be generated.""",
-    )
-    op.add_option(
         "-p",
-        "--protosrc-dir",
-        dest="protosrcdir",
+        "--outproto-dir",
+        dest="protodir",
         default=".",
-        help="""Directory into which proto sources will be generated.""",
+        help="""Directory into which protobuf files will be generated.""",
     )
 
     options, cmdline_files = op.parse_args()
@@ -199,8 +189,7 @@ def main():
     headersdir = options.headersdir
     cppdir = options.cppdir
     includedirs = [os.path.abspath(incdir) for incdir in options.includedirs]
-    protoheadersdir = options.protoheadersdir
-    protosrcdir = options.protosrcdir
+    protodir = options.protodir
 
     files = []
 
@@ -218,6 +207,7 @@ def main():
 
     log(2, 'Generated C++ headers will be generated relative to "%s"', headersdir)
     log(2, 'Generated C++ sources will be generated in "%s"', cppdir)
+    log(2, 'Generated Protobuf sources will be generated relative to "%s"', protodir)
 
     def normalizedFilename(f):
         if f == "-":
@@ -249,7 +239,6 @@ def main():
     allmessageprognames = manager.list()
     allprotocols = manager.list()
     alljsonobjs = manager.list()
-    allprotobufs = manager.list()
 
     for msgName in msgMetadataConfig.sections():
         if msgMetadataConfig.has_option(msgName, "segment_capacity"):
@@ -306,8 +295,7 @@ def main():
         allmessageprognames,
         allsyncmessages,
         alljsonobjs,
-        protoheadersdir,
-        protosrcdir
+        protodir
     )
     pool.run()
 
