@@ -56,7 +56,7 @@ def typecheck(ast, errout=sys.stderr):
 def genproto(ipdlfilename, ast, outprotodir):
     proto = ConvertToProto().convert(ast)
 
-    print(os.path.join(outprotodir, ast.name + ".proto"))
+    #print(os.path.join(outprotodir, ast.name + ".proto"))
 
     writeifmodified(proto, os.path.join(outprotodir, ast.name + ".proto"))
 

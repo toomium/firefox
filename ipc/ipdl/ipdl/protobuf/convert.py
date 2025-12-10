@@ -1,8 +1,8 @@
-
+import os
 from ipdl.builtin import PBTypeMappings
 from pprint import pprint
 import ipdl.ast
-from ipdl.lower import _DISCLAIMER
+import ipdl.lower
 from ipdl.protobuf.parser.proto_schema_parser import ast, generator
 import ipdl.type
 #from parser.proto_schema_parser import *
@@ -24,7 +24,7 @@ class ConvertToProto:
 
         proto_gen = generator.Generator().generate(pproto)
 
-        return _DISCLAIMER.ws + proto_gen
+        return ipdl.lower._DISCLAIMER.ws + proto_gen
 
 
 class _GenerateProtobufCode(ipdl.ast.Visitor):
@@ -35,6 +35,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         self.protofile : ast.File = None # internal protobuf ast
         self.imports : list[ast.Import] = []
         self.messages : list[ast.Message] = []
+        self.structsAndUnions : list[ast.Message] = []
         self.scalar_mappings = 0
         self.param_count = 0
         self.counters = {
@@ -54,34 +55,29 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         #self.protofile.file_elements = []
         tu.accept(self)
 
-    def visitDecl(self, d):
-        return d.progname
-
-    def checkType(ipdltype : ipdl.type.Type, counters):
+    def checkType(self, ipdltype : ipdl.type.Type):
         if isinstance(ipdltype, ipdl.type.ImportedCxxType):
-            counters['ImportedCxxType'] += 1
+            self.counters['ImportedCxxType'] += 1
         elif isinstance(ipdltype, ipdl.type.BuiltinCType):
-            counters['BuiltinCType'] += 1
+            self.counters['BuiltinCType'] += 1
         elif isinstance(ipdltype, ipdl.type.ArrayType):
-            counters['ArrayType'] += 1
+            self.counters['ArrayType'] += 1
         elif isinstance(ipdltype, ipdl.type.ActorType):
-            counters['ActorType'] += 1
+            self.counters['ActorType'] += 1
         elif isinstance(ipdltype, ipdl.type.StructType):
-            counters['StructType'] += 1
+            self.counters['StructType'] += 1
         elif isinstance(ipdltype, ipdl.type.UnionType):
-            counters['UnionType'] += 1
+            self.counters['UnionType'] += 1
         elif isinstance(ipdltype, ipdl.type.MaybeType):
-            counters['MaybeType'] += 1
+            self.counters['MaybeType'] += 1
         elif isinstance(ipdltype, ipdl.type.FDType):
-            counters['FDType'] += 1
+            self.counters['FDType'] += 1
         else:
-            counters['other'] += 1
-        return counters
+            self.counters['other'] += 1
 
     def mapImportedCxxType(self, importedCxxType : ipdl.type.ImportedCxxType):
         if importedCxxType.name() in PBTypeMappings.keys():
             # Type 1: map directly to corresponding scalar type
-            self.scalar_mappings += 1
             return PBTypeMappings[importedCxxType.name()]
 
         # otherwise bytes
@@ -89,27 +85,23 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
     def mapArrayType(self, arraytype : ipdl.type.ArrayType):
         # create repeated param and map basetype recursively
-        return "repeated " + self.mapType(arraytype.basetype)
+        return self.mapType(arraytype.basetype)
 
     def mapBuiltinCType(self, builtinCType : ipdl.type.BuiltinCType):
         # map directly to scalar type
-        self.scalar_mappings += 1
         return PBTypeMappings[builtinCType.name()]
 
     def mapActorType(self, actorType : ipdl.type.ActorType):
         return "bytes"
 
     def mapStructType(self, structType : ipdl.type.StructType):
-        #pprint(vars(structType))
-        #pprint(vars(structType.qname))
-        # we have to define a seperate message
-        return "StructType TODO"
+        return structType.name()
 
     def mapUnionType(self, unionType : ipdl.type.UnionType):
-        return "UnionType TODO"
+        return unionType.name()
 
     def mapMaybeType(self, maybeType : ipdl.type.MaybeType):
-        return "MaybeType TODO"
+        return self.mapType(maybeType.basetype)
 
     def mapFDType(self, fdType : ipdl.type.FDType):
         return "bytes"
@@ -134,21 +126,73 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         else:
             return "bytes"
 
+    def mapParam(self, param_name, ipdltype):
+        #pprint(vars(param))
+        self.checkType(ipdltype)
+
+        if isinstance(ipdltype, ipdl.type.ImportedCxxType):
+            if ipdltype.name() in PBTypeMappings.keys():
+                self.scalar_mappings += 1
+            return ast.Field(param_name, 0, self.mapImportedCxxType(ipdltype), ast.FieldCardinality.REQUIRED)
+        elif isinstance(ipdltype, ipdl.type.BuiltinCType):
+            self.scalar_mappings += 1
+            return ast.Field(param_name, 0, self.mapBuiltinCType(ipdltype), ast.FieldCardinality.REQUIRED)
+        elif isinstance(ipdltype, ipdl.type.ArrayType):
+            return ast.Field(param_name, 0, self.mapArrayType(ipdltype), ast.FieldCardinality.REPEATED)
+        elif isinstance(ipdltype, ipdl.type.ActorType):
+            return ast.Field(param_name, 0, self.mapActorType(ipdltype), ast.FieldCardinality.REQUIRED)
+        elif isinstance(ipdltype, ipdl.type.StructType):
+            return ast.Field(param_name, 0, self.mapStructType(ipdltype), ast.FieldCardinality.REQUIRED)
+        elif isinstance(ipdltype, ipdl.type.UnionType):
+            return ast.Field(param_name, 0, self.mapUnionType(ipdltype), ast.FieldCardinality.REQUIRED)
+        elif isinstance(ipdltype, ipdl.type.MaybeType):
+            return ast.Field(param_name, 0, self.mapMaybeType(ipdltype), ast.FieldCardinality.OPTIONAL)
+        elif isinstance(ipdltype, ipdl.type.FDType):
+            return ast.Field(param_name, 0, self.mapFDType(ipdltype), ast.FieldCardinality.REQUIRED)
+        else:
+            return ast.Field(param_name, 0, "bytes", ast.FieldCardinality.REQUIRED)
+
+
     def visitMessageDecl(self, md : ipdl.ast.MessageDecl):
         new_msg = ast.Message(md.name)
-        msg_elements : list[ast.Field]= []
         field_num = 1
 
-        pprint(vars(md))
+        #pprint(vars(md))
         for parm in md.inParams:
-            #pprint(vars(parm))
-            pprint(vars(parm))
-            new_msg.elements.append(ast.Field(parm.accept(self), field_num, self.mapType(parm.type)))
+            field = self.mapParam(parm.progname, parm.type)
+            field.number = field_num
+            new_msg.elements.append(field)
             field_num += 1
             self.param_count += 1
 
         return new_msg
 
+
+    def visitStructDecl(self, struct : ipdl.lower.StructDecl):
+        # convert struct decl to message
+        new_struct = ast.Message(struct.name)
+        field_number = 1
+        for f in struct.fields:
+            field = self.mapParam(f.name, f.ipdltype)
+            field.number = field_number
+            field_number += 1
+            new_struct.elements.append(field)
+
+        self.structsAndUnions.append(new_struct)
+
+    def visitUnionDecl(self, union : ipdl.lower.UnionDecl):
+        # convert union struct to message
+        new_union = ast.Message(union.name)
+        one_of = ast.OneOf("content")
+        field_number = 1
+        for f in union.components:
+            field = self.mapParam(f.name, f.ipdltype)
+            field.number = field_number
+            field_number += 1
+            one_of.elements.append(field)
+
+        new_union.elements.append(one_of)
+        self.structsAndUnions.append(new_union)
 
     def visitTranslationUnit(self, tu : ipdl.ast.TranslationUnit):
         pf = self.protofile
@@ -161,26 +205,41 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         for inc in tu.includes:
             self.imports.append(inc.accept(self))
 
+        # converting structs and unions
+        for su in tu.structsAndUnions:
+            su.accept(self)
+
         # converting messages
         if tu.protocol:
             self.messages.extend(tu.protocol.accept(self))
 
         # converting structs
 
-        #pprint(self.messages)
+
+        # converting is done, now adding all elements together
+
         # build elements list of protobuf ast
         pf.file_elements = [option_runtime] + [_NL] + self.imports + [_NL]
 
+        # print structs and unions
+        pf.file_elements.append(ast.Comment("// Structs and unions declarations"))
+        for su in self.structsAndUnions:
+            pf.file_elements.append(su)
+            pf.file_elements.append(_NL)
+
+        # print messages
+        pf.file_elements.append(ast.Comment("// Message declarations"))
         for msg in self.messages:
-            pf.file_elements.extend([msg])
-            pf.file_elements.extend([_NL])
+            pf.file_elements.append(msg)
+            pf.file_elements.append(_NL)
 
-        # add stats about parameters
+        # print stats about parameters
         pf.file_elements.append(ast.Comment("\n\n// Parameter mappings stats:"))
-        pf.file_elements.append(ast.Comment(f"Total parameters in this file {self.param_count}"))
-        pf.file_elements.append(ast.Comment(f"//{self.counters}"))
-
-        pprint(vars(pf))
+        pf.file_elements.append(ast.Comment(f"//Total parameters in this file {self.param_count}"))
+        pf.file_elements.append(ast.Comment(f"//Parameter types:\n{self.counters}"))
+        pf.file_elements.append(ast.Comment(f"//Scalar mappings performed: {self.scalar_mappings}"))
+        pf.file_elements.append(ast.Comment(f"//Message structs/unions generated from ipdl structs/unions: {len(self.structsAndUnions)}"))
+        #pprint(vars(pf))
 
 
     def visitBuiltinCxxInclude(self, inc):
@@ -190,7 +249,12 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         pass
 
     def visitInclude(self, inc : ipdl.ast.Include):
-        return ast.Import(inc.file)
+        base_name, ext = os.path.splitext(inc.file)
+        if ext.lower() not in ('.ipdl', '.ipdlh'):
+            print(f"Error: '{inc.file}' is not a .ipdl or .ipdlh file.")
+            return
+
+        return ast.Import(base_name + ".proto")
 
     def visitProtocol(self, p : ipdl.ast.Protocol):
         msgs : list[ast.Message] = []

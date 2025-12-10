@@ -60,6 +60,7 @@ PBTypeMappings = {
     'int16_t': 'int32',
     'uint16_t': 'uint32',
 
+    'short' : 'int32',
     'int': 'int32',
     'long': 'int64',
     'long long': 'int64',
