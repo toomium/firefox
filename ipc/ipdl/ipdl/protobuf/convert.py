@@ -11,27 +11,31 @@ import ipdl.type
 _NL = ast.Comment("")
 
 class ConvertToProto:
-    def convert(self, tu) -> ast.File:
+    def convert(self, tu) -> dict[str, ast.File]:
         """returns |[ proto : File ]| representing the
         converted form of |tu|"""
 
         # Any modifications to the filename scheme here need corresponding
         # modifications in the ipdl.py driver script.
-        pproto = ast.File()
-        _GenerateProtobufCode().lower(tu, pproto)
-        return pproto
+        files = _GenerateProtobufCode().lower(tu)
+        #pprint(files)
+        return files
 
-    def genProto(self, file : ast.File) -> str:
-        return ipdl.lower._DISCLAIMER.ws + generator.Generator().generate(file)
+    def genProto(self, file : ast.File, ipdlname) -> str:
+        return ipdl.lower._DISCLAIMER.ws + f"// Generated from {ipdlname}\n\n" + generator.Generator().generate(file)
 
 class _GenerateProtobufCode(ipdl.ast.Visitor):
     """Creates protobuf ast for given ipdl ast."""
 
     def __init__(self):
-        self.protofile : ast.File = None # internal protobuf ast
-        self.imports : list[ast.Import] = []
+        #self.protofile : ast.File = ast.File() # internal protobuf ast
         self.messages : list[ast.Message] = []
-        self.structsAndUnions : list[ast.Message] = []
+        self.namespacedStructsAndUnions : dict[str, list[ast.Message]] = {}
+        self.namespacedProtoHeaders : dict[str, ast.File] = {}
+        self.mainProtofile : ast.File = ast.File()
+        self.imports : list[ast.Import] = []
+        #self.messages : list[ast.Message] = []
+        #self.structsAndUnions : list[ast.Message] = []
         self.scalar_mappings = 0
         self.param_count = 0
         self.counters = {
@@ -46,10 +50,15 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             'other': 0,
         }
 
-    def lower(self, tu, protoFile):
-        self.protofile = protoFile
-        self.protofile.file_elements = []
+    def lower(self, tu):
+        self.name = tu.name
         tu.accept(self)
+        file_list : dict[str, ast.File] = dict()
+        #file_list["main"] = self.namespacedProtofiles["main"]
+        file_list["main"] = self.mainProtofile
+        for ns, file in self.namespacedProtoHeaders.items():
+            file_list[ns] = file
+        return file_list
 
     def countParamTypes(self, ipdltype : ipdl.type.Type):
         self.param_count += 1
@@ -79,7 +88,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         return "bytes" # otherwise just use bytes
 
     def mapArrayType(self, arraytype : ipdl.type.ArrayType):
-        # create repeated param and map basetype recursively
+        # map basetype recursively
         return self.mapType(arraytype.basetype)
 
     def mapBuiltinCType(self, builtinCType : ipdl.type.BuiltinCType):
@@ -90,12 +99,19 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         return "bytes"
 
     def mapStructType(self, structType : ipdl.type.StructType):
-        return structType.name()
+        qual = "protobuf"
+        for ns in structType.qname.quals:
+            qual += f".{ns}"
+        return qual + "." + structType.name()
 
     def mapUnionType(self, unionType : ipdl.type.UnionType):
-        return unionType.name()
+        qual = "protobuf"
+        for ns in unionType.qname.quals:
+            qual += f".{ns}"
+        return qual + "." + unionType.name()
 
     def mapMaybeType(self, maybeType : ipdl.type.MaybeType):
+        # map basetype recursively
         return self.mapType(maybeType.basetype)
 
     def mapFDType(self, fdType : ipdl.type.FDType):
@@ -138,15 +154,30 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         return ast.Field(param_name, 0, mapped_type, cardinality)
 
 
-    def visitMessageDecl(self, md : ipdl.ast.MessageDecl):
-        new_msg = ast.Message(md.name)
+    def visitMessageDecl(self, md : ipdl.lower.MessageDecl):
+        gen_msgs = []
+        send_msg = ast.Message(md.prettyMsgName())
         field_num = 1
+        # add normal msg including incoming params
         for parm in md.inParams:
             field = self.mapParam(parm.progname, parm.type)
             field.number = field_num
-            new_msg.elements.append(field)
+            send_msg.elements.append(field)
             field_num += 1
-        return new_msg
+        gen_msgs.append(send_msg)
+
+        # add another message if there's a reply with outgoing params
+        if md.hasReply():
+            field_num = 0
+            reply_msg = ast.Message(md.prettyReplyName())
+            for parm in md.outParams:
+                field = self.mapParam(parm.progname, parm.type)
+                field.number = field_num
+                reply_msg.elements.append(field)
+            field_num += 1
+            gen_msgs.append(reply_msg)
+
+        return gen_msgs
 
 
     def visitStructDecl(self, struct : ipdl.lower.StructDecl):
@@ -172,19 +203,89 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         new_union.elements.append(one_of)
         return new_union
 
-    def addElement(self, e : ast.MessageElement):
-        self.protofile.file_elements.append(e)
+    def addElement(self, f : ast.File, e : ast.MessageElement):
+        f.file_elements.append(e)
+
+
+    def buildMainProtofile(self, mf : ast.File, tu : ipdl.ast.TranslationUnit):
+        # import all namespaced proto files publicly
+        mf.syntax = "proto2"
+        option_runtime = ast.Comment("option optimize_for = LITE_RUNTIME;")
+        self.addElement(mf, option_runtime)
+        self.addNL(mf)
+
+        if tu.protocol:
+            package = ast.Package(self.getNamespace(tu.protocol.namespaces) + "." + self.name)
+            self.addElement(mf, package)
+            self.addNL(mf)
+
+        self.addComment(mf, "// Importing all namespaced protobuf children headers")
+        for ns in self.namespacedProtoHeaders.keys():
+            mf.file_elements.append(ast.Import(name=f"{tu.name}_{ns}.proto", public=True))
+        self.addNL(mf)
+
+        # adding protocol messages if there are any
+        if self.messages:
+            # if there's a protocol here, we also need the imports inherited by ipdl
+            if self.imports:
+                self.addComment(mf, "// Imports inherited by ipdl")
+                for imp in self.imports:
+                    self.addElement(mf, imp)
+                self.addNL(mf)
+            #  add protocol messages
+            self.addComment(mf, "// Message declarations")
+            for msg in self.messages:
+                self.addElement(mf, msg)
+                self.addNL(mf)
+
+        # add stats about parameters
+        self.addComment(mf, "// Parameter mappings stats:")
+        self.addComment(mf, f"// Total parameters in this file {self.param_count}")
+        self.addComment(mf, f"// Parameter types:{self.counters}")
+        self.addComment(mf, f"// Scalar mappings performed: {self.scalar_mappings}")
+        #self.addComment(mf, f"// Message structs/unions generated from ipdl structs/unions: {len(self.structsAndUnions)}")
+
+    def buildNamespacedProtofile(self, ns : str, file : ast.File, tu : ipdl.ast.TranslationUnit):
+        option_runtime = ast.Comment("option optimize_for = LITE_RUNTIME;")
+        file.syntax = "proto2"
+
+        package = ast.Package(ns)
+
+        self.addElement(file, option_runtime)
+        self.addNL(file)
+        self.addElement(file, package)
+
+        # add regular imports inherited from ipdl file
+        if self.imports:
+            self.addNL(file)
+            for imp in self.imports:
+                self.addElement(file, imp)
+        self.addNL(file)
+
+        # add parent namespaces
+        names = ns.split(".")
+        to_import = []
+        for i in range(0, len(names)):
+            potential_namespace = ".".join(names[:i])
+            if potential_namespace in self.namespacedStructsAndUnions.keys():
+                to_import.append(potential_namespace)
+        if to_import:
+            self.addComment(file, "// Importing other parent namespaces")
+            for i in to_import:
+                self.addElement(file, ast.Import(self.name + f"_{i}.proto"))
+            self.addNL(file)
+
+
+        # add structs and unions
+        if ns in self.namespacedStructsAndUnions.keys():
+            self.addComment(file, "// Structs and unions declarations")
+            for su in self.namespacedStructsAndUnions[ns]:
+                self.addElement(file, su)
+                self.addNL(file)
+
 
     def visitTranslationUnit(self, tu : ipdl.ast.TranslationUnit):
-        pf = self.protofile
-        pf.syntax = "proto2"
-        #option_runtime = ast.Option("optimize_for", ast.Identifier("LITE_RUNTIME"))
-        option_runtime = ast.Comment("option optimize_for = LITE_RUNTIME;")
-        namespace = "protobuf"
-        for ns in tu.namespaces:
-            namespace += f".{ns.name}"
-
-        package = ast.Package(namespace)
+        #self.namespacedProtofiles["protobuf"] = ast.File("proto2")
 
         # converting includes
         for inc in tu.includes:
@@ -192,50 +293,45 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
         # converting structs and unions
         for su in tu.structsAndUnions:
-            self.structsAndUnions.append(su.accept(self))
+            new_su = su.accept(self)
+            ns = self.getNamespace(su.namespaces)
+            #print(ns)
+            if ns not in self.namespacedStructsAndUnions.keys():
+                self.namespacedStructsAndUnions[ns] = []
+            self.namespacedStructsAndUnions[ns].append(new_su)
+            #self.structsAndUnions.append(su.accept(self))
 
+        #pprint(self.namespacedStructsAndUnions)
         # converting messages
         if tu.protocol:
             self.messages.extend(tu.protocol.accept(self))
 
+        # build namespaced header files based on found namespaces in structs and unions
+        #print(self.all_namespaces)
+        for ns in self.namespacedStructsAndUnions.keys():
+            self.namespacedProtoHeaders[ns] = ast.File()
+
         # converting is done, now adding all elements together into the ast
-        self.addElement(option_runtime)
-        self.addNL()
-        self.addElement(package)
+        self.buildMainProtofile(self.mainProtofile, tu)
 
-        if self.imports:
-            self.addNL()
-            for imp in self.imports:
-                self.addElement(imp)
+        for ns, file in self.namespacedProtoHeaders.items():
+            self.buildNamespacedProtofile(ns, file, tu)
 
-        self.addNL()
 
-        # add structs and unions
-        if self.structsAndUnions:
-            self.addComment("// Structs and unions declarations")
-            for su in self.structsAndUnions:
-                self.addElement(su)
-                self.addNL()
+    def addComment(self, file : ast.File, cmt : str):
+        self.addElement(file, ast.Comment(cmt))
 
-        # add messages
-        if self.messages:
-            self.addComment("// Message declarations")
-            for msg in self.messages:
-                self.addElement(msg)
-                self.addNL()
+    def getNamespace(self, namespaces : list[ipdl.ast.Namespace], addParent = True) -> str:
+        ret = ""
+        if addParent:
+            ret += "protobuf"
+        for ns in namespaces:
+            ret += "." + ns.name
+        return ret
 
-        # add stats about parameters
-        self.addComment("// Parameter mappings stats:")
-        self.addComment(f"// Total parameters in this file {self.param_count}")
-        self.addComment(f"// Parameter types:{self.counters}")
-        self.addComment(f"// Scalar mappings performed: {self.scalar_mappings}")
-        self.addComment(f"// Message structs/unions generated from ipdl structs/unions: {len(self.structsAndUnions)}")
 
-    def addComment(self, cmt : str):
-        self.addElement(ast.Comment(cmt))
-
-    def addNL(self):
-        self.addElement(_NL)
+    def addNL(self, f : ast.File):
+        self.addElement(f, _NL)
 
     def visitBuiltinCxxInclude(self, inc):
         pass
@@ -245,8 +341,8 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
     def visitInclude(self, inc : ipdl.ast.Include):
         base_name, ext = os.path.splitext(inc.file)
-        if ext.lower() not in ('.ipdl', '.ipdlh'):
-            print(f"Error: '{inc.file}' is not a .ipdl or .ipdlh file.")
+        if ext.lower() != '.ipdlh':
+            #print(f"Error: '{inc.file}' is not a .ipdlh file.")
             return
 
         return ast.Import(base_name + ".proto")
@@ -255,7 +351,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         msgs : list[ast.Message] = []
 
         for msg in p.messageDecls:
-            msgs.append(msg.accept(self))
+            msgs.extend(msg.accept(self))
 
         return msgs
 

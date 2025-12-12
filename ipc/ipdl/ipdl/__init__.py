@@ -53,10 +53,19 @@ def typecheck(ast, errout=sys.stderr):
     it is not."""
     return TypeCheck().check(ast, errout)
 
-def genproto(ipdl_ast, outprotodir):
-    proto_ast = ConvertToProto().convert(ipdl_ast)
-    tempfile = ConvertToProto().genProto(proto_ast)
-    writeifmodified(tempfile, os.path.join(outprotodir, ipdl_ast.name + ".proto"))
+def genproto(ipdlfilename, ipdl_ast, outprotodir):
+    proto_asts = ConvertToProto().convert(ipdl_ast)
+    for namespace, ast in proto_asts.items():
+        tempfile = ConvertToProto().genProto(ast, ipdlfilename)
+
+        filename = ipdl_ast.name
+        if namespace == "main":
+            filename += ".proto"
+        else:
+            filename += f"_{namespace}.proto"
+
+        writeifmodified(tempfile, os.path.join(outprotodir, filename))
+
 
 def gencxx(ipdlfilename, ast, outheadersdir, outcppdir, segmentcapacitydict):
     headers, cpps = LowerToCxx().lower(ast, segmentcapacitydict)
