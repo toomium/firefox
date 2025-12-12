@@ -168,13 +168,13 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
         # add another message if there's a reply with outgoing params
         if md.hasReply():
-            field_num = 0
+            field_num = 1
             reply_msg = ast.Message(md.prettyReplyName())
             for parm in md.outParams:
                 field = self.mapParam(parm.progname, parm.type)
                 field.number = field_num
                 reply_msg.elements.append(field)
-            field_num += 1
+                field_num += 1
             gen_msgs.append(reply_msg)
 
         return gen_msgs
