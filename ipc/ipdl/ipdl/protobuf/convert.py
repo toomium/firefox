@@ -54,7 +54,6 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         self.name = tu.name
         tu.accept(self)
         file_list : dict[str, ast.File] = dict()
-        #file_list["main"] = self.namespacedProtofiles["main"]
         file_list["main"] = self.mainProtofile
         for ns, file in self.namespacedProtoHeaders.items():
             file_list[ns] = file
@@ -194,12 +193,26 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         new_union = ast.Message(union.name)
         one_of = ast.OneOf("content")
         field_number = 1
+        oneof_elements = []
         for f in union.components:
             field = self.mapParam(f.name, f.ipdltype)
-            field.number = field_number
-            field.cardinality = None
-            field_number += 1
-            one_of.elements.append(field)
+            if isinstance(f.ipdltype, ipdl.type.ArrayType):
+                # add param to nested message instead
+                msg = ast.Message("_" + f.name)
+                field.number = 1
+                msg.elements.append(field)
+                new_union.elements.append(msg)
+                # add dummy to one-of pointing to this nested message
+                dummy_field = ast.Field(f.name, field_number, "_" + f.name)
+                field_number += 1
+                oneof_elements.append(dummy_field)
+            else:
+                field.number = field_number
+                field.cardinality = None
+                field_number += 1
+                oneof_elements.append(field)
+
+        one_of.elements.extend(oneof_elements)    
         new_union.elements.append(one_of)
         return new_union
 
@@ -221,7 +234,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
         self.addComment(mf, "// Importing all namespaced protobuf children headers")
         for ns in self.namespacedProtoHeaders.keys():
-            mf.file_elements.append(ast.Import(name=f"{tu.name}_{ns}.proto", public=True))
+            mf.file_elements.append(ast.Import(name=f"{self.name}_{ns}.h.proto", public=True))
         self.addNL(mf)
 
         # adding protocol messages if there are any
@@ -272,7 +285,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         if to_import:
             self.addComment(file, "// Importing other parent namespaces")
             for i in to_import:
-                self.addElement(file, ast.Import(self.name + f"_{i}.proto"))
+                self.addElement(file, ast.Import(self.name + f"_{i}.h.proto"))
             self.addNL(file)
 
 
@@ -285,33 +298,27 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
 
     def visitTranslationUnit(self, tu : ipdl.ast.TranslationUnit):
-        #self.namespacedProtofiles["protobuf"] = ast.File("proto2")
-
         # converting includes
         for inc in tu.includes:
             self.imports.append(inc.accept(self))
 
-        # converting structs and unions
+        # converting structs and unions to protobuf message format
         for su in tu.structsAndUnions:
-            new_su = su.accept(self)
+            conv_su = su.accept(self)
             ns = self.getNamespace(su.namespaces)
-            #print(ns)
             if ns not in self.namespacedStructsAndUnions.keys():
                 self.namespacedStructsAndUnions[ns] = []
-            self.namespacedStructsAndUnions[ns].append(new_su)
-            #self.structsAndUnions.append(su.accept(self))
+            self.namespacedStructsAndUnions[ns].append(conv_su)
 
-        #pprint(self.namespacedStructsAndUnions)
         # converting messages
         if tu.protocol:
             self.messages.extend(tu.protocol.accept(self))
 
         # build namespaced header files based on found namespaces in structs and unions
-        #print(self.all_namespaces)
         for ns in self.namespacedStructsAndUnions.keys():
             self.namespacedProtoHeaders[ns] = ast.File()
 
-        # converting is done, now adding all elements together into the ast
+        # converting is done. Now build all files
         self.buildMainProtofile(self.mainProtofile, tu)
 
         for ns, file in self.namespacedProtoHeaders.items():
@@ -341,8 +348,8 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
     def visitInclude(self, inc : ipdl.ast.Include):
         base_name, ext = os.path.splitext(inc.file)
+        # ignore non header includes
         if ext.lower() != '.ipdlh':
-            #print(f"Error: '{inc.file}' is not a .ipdlh file.")
             return
 
         return ast.Import(base_name + ".proto")

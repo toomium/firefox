@@ -62,7 +62,7 @@ def genproto(ipdlfilename, ipdl_ast, outprotodir):
         if namespace == "main":
             filename += ".proto"
         else:
-            filename += f"_{namespace}.proto"
+            filename += f"_{namespace}.h.proto"
 
         writeifmodified(tempfile, os.path.join(outprotodir, filename))
 
