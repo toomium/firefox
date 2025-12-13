@@ -15,10 +15,7 @@ class ConvertToProto:
         """returns |[ proto : File ]| representing the
         converted form of |tu|"""
 
-        # Any modifications to the filename scheme here need corresponding
-        # modifications in the ipdl.py driver script.
         files = _GenerateProtobufCode().lower(tu)
-        #pprint(files)
         return files
 
     def genProto(self, file : ast.File, ipdlname) -> str:
@@ -28,10 +25,9 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
     """Creates protobuf ast for given ipdl ast."""
 
     def __init__(self):
-        #self.protofile : ast.File = ast.File() # internal protobuf ast
         self.messages : list[ast.Message] = []
         self.namespacedStructsAndUnions : dict[str, list[ast.Message]] = {}
-        self.namespacedProtoHeaders : dict[str, ast.File] = {}
+        self.namespacedHeaders : dict[str, ast.File] = {}
         self.mainProtofile : ast.File = ast.File()
         self.imports : list[ast.Import] = []
         #self.messages : list[ast.Message] = []
@@ -55,7 +51,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         tu.accept(self)
         file_list : dict[str, ast.File] = dict()
         file_list["main"] = self.mainProtofile
-        for ns, file in self.namespacedProtoHeaders.items():
+        for ns, file in self.namespacedHeaders.items():
             file_list[ns] = file
         return file_list
 
@@ -233,7 +229,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             self.addNL(mf)
 
         self.addComment(mf, "// Importing all namespaced protobuf children headers")
-        for ns in self.namespacedProtoHeaders.keys():
+        for ns in self.namespacedHeaders.keys():
             mf.file_elements.append(ast.Import(name=f"{self.name}_{ns}.h.proto", public=True))
         self.addNL(mf)
 
@@ -258,7 +254,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         self.addComment(mf, f"// Scalar mappings performed: {self.scalar_mappings}")
         #self.addComment(mf, f"// Message structs/unions generated from ipdl structs/unions: {len(self.structsAndUnions)}")
 
-    def buildNamespacedProtofile(self, ns : str, file : ast.File, tu : ipdl.ast.TranslationUnit):
+    def buildHeader(self, ns : str, file : ast.File, tu : ipdl.ast.TranslationUnit):
         option_runtime = ast.Comment("option optimize_for = LITE_RUNTIME;")
         file.syntax = "proto2"
 
@@ -316,13 +312,13 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
         # build namespaced header files based on found namespaces in structs and unions
         for ns in self.namespacedStructsAndUnions.keys():
-            self.namespacedProtoHeaders[ns] = ast.File()
+            self.namespacedHeaders[ns] = ast.File()
 
         # converting is done. Now build all files
         self.buildMainProtofile(self.mainProtofile, tu)
 
-        for ns, file in self.namespacedProtoHeaders.items():
-            self.buildNamespacedProtofile(ns, file, tu)
+        for ns, file in self.namespacedHeaders.items():
+            self.buildHeader(ns, file, tu)
 
 
     def addComment(self, file : ast.File, cmt : str):
