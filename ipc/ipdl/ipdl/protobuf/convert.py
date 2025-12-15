@@ -5,7 +5,6 @@ import ipdl.ast
 import ipdl.lower
 from ipdl.protobuf.parser.proto_schema_parser import ast, generator
 import ipdl.type
-#from parser.proto_schema_parser import *
 
 
 _NL = ast.Comment("")
@@ -15,39 +14,136 @@ class ConvertToProto:
         """returns |[ proto : File ]| representing the
         converted form of |tu|"""
 
-        files = _GenerateProtobufCode().lower(tu)
+        files = _GenerateProtobufCode(tu).lower(tu)
         return files
 
     def genProto(self, file : ast.File, ipdlname) -> str:
         return ipdl.lower._DISCLAIMER.ws + f"// Generated from {ipdlname}\n\n" + generator.Generator().generate(file)
 
+
+class ProtobufTypeMapper(ipdl.type.TypeVisitor):
+
+    def __init__(self):
+        self.counters = {
+            str(ipdl.type.ActorType) : 0,
+            str(ipdl.type.ArrayType) : 0,
+            str(ipdl.type.BuiltinCType) : 0,
+            str(ipdl.type.ByteBufType) : 0,
+            str(ipdl.type.EndpointType) : 0,
+            str(ipdl.type.FDType): 0,
+            str(ipdl.type.ImportedCxxType) : 0,
+            str(ipdl.type.ManagedEndpointType) : 0,
+            str(ipdl.type.MaybeType) : 0,
+            str(ipdl.type.NotNullType) : 0,
+            str(ipdl.type.ProtocolType) : 0,
+            str(ipdl.type.ShmemType): 0,
+            str(ipdl.type.StructType) : 0,
+            str(ipdl.type.UnionType) : 0,
+            str(ipdl.type.UniquePtrType) : 0,
+        }
+        self.scalarMappings = 0
+        self.paramCount = 0
+        super().__init__()
+
+    def countParamTypes(self, ipdltype : ipdl.type.Type):
+        self.counters[str(type(ipdltype))] += 1
+
+    def mapType(self, type : ipdl.type.Type):
+        self.countParamTypes(type)
+        mapped_type = type.accept(self)
+
+        if isinstance(type, ipdl.type.BuiltinCType) or (isinstance(type, ipdl.type.ImportedCxxType) and mapped_type != "bytes"):
+            self.scalarMappings += 1
+
+        return mapped_type
+
+    def visitActorType(self, a : ipdl.type.ActorType, *args):
+        return "bytes"
+
+    def visitBuiltinCType(self, b : ipdl.type.BuiltinCType, *args):
+        return PBTypeMappings[b.name()]
+
+    def visitByteBufType(self, s : ipdl.type.ByteBufType, *args):
+        return "bytes"
+
+    def visitEndpointType(self, s : ipdl.type.EndpointType, *args):
+        return "bytes"
+
+    def visitArrayType(self, a : ipdl.type.ArrayType, *args):
+        return self.mapType(a.basetype)
+
+    def visitFDType(self, s : ipdl.type.ArrayType, *args):
+        return "bytes"
+
+    def visitImportedCxxType(self, t : ipdl.type.ImportedCxxType, *args):
+        if t.name() in PBTypeMappings.keys():
+            # map directly to corresponding scalar type
+            return PBTypeMappings[t.name()]
+        return "bytes" # otherwise just use bytes
+
+    def visitManagedEndpointType(self, s : ipdl.type.ManagedEndpointType, *args):
+        return "bytes"
+
+    def visitMaybeType(self, m : ipdl.type.MaybeType, *args):
+        return m.basetype.accept(self)
+
+    def visitMessageType(self, m, *args):
+        return super().visitMessageType(m, *args)
+
+    def visitNotNullType(self, m : ipdl.type.NotNullType, *args):
+        return m.basetype.accept(self)
+
+    def visitProtocolType(self, p : ipdl.type.ProtocolType, *args):
+        return "bytes"
+
+    def visitShmemType(self, s : ipdl.type.ShmemType, *args):
+        return "bytes"
+
+    def visitStructType(self, s : ipdl.type.StructType, *args):
+        qual = "protobuf"
+        for ns in s.qname.quals:
+            qual += f".{ns}"
+        return qual + "." + s.name()
+
+    def visitUnionType(self, u : ipdl.type.UnionType, *args):
+        qual = "protobuf"
+        for ns in u.qname.quals:
+            qual += f".{ns}"
+        return qual + "." + u.name()
+
+    def visitUniquePtrType(self, m : ipdl.type.UniquePtrType, *args):
+        return "bytes"
+
+    def visitVoidType(self, v : ipdl.type.VoidType, *args):
+        return "bytes"
+
+    def defaultVisit(self, node, *args):
+        return super().defaultVisit(node, *args)
+
+    def getCounters(self):
+        return self.counters
+    
+    def getScalarMappings(self):
+        return self.scalarMappings
+
+    def getParamCount(self):
+        return sum(self.counters.values())
+
+
+
 class _GenerateProtobufCode(ipdl.ast.Visitor):
     """Creates protobuf ast for given ipdl ast."""
 
-    def __init__(self):
+    def __init__(self, tu : ipdl.ast.TranslationUnit):
+        self.typeVisitor = ProtobufTypeMapper()
+        self.name = tu.name
         self.messages : list[ast.Message] = []
         self.namespacedStructsAndUnions : dict[str, list[ast.Message]] = {}
         self.namespacedHeaders : dict[str, ast.File] = {}
         self.mainProtofile : ast.File = ast.File()
         self.imports : list[ast.Import] = []
-        #self.messages : list[ast.Message] = []
-        #self.structsAndUnions : list[ast.Message] = []
-        self.scalar_mappings = 0
-        self.param_count = 0
-        self.counters = {
-            'ImportedCxxType': 0,
-            'BuiltinCType': 0,
-            'ArrayType': 0,
-            'ActorType': 0,
-            'StructType': 0,
-            'UnionType': 0,
-            'MaybeType': 0,
-            'FDType': 0,
-            'other': 0,
-        }
 
     def lower(self, tu):
-        self.name = tu.name
         tu.accept(self)
         file_list : dict[str, ast.File] = dict()
         file_list["main"] = self.mainProtofile
@@ -55,90 +151,8 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             file_list[ns] = file
         return file_list
 
-    def countParamTypes(self, ipdltype : ipdl.type.Type):
-        self.param_count += 1
-        if isinstance(ipdltype, ipdl.type.ImportedCxxType):
-            self.counters['ImportedCxxType'] += 1
-        elif isinstance(ipdltype, ipdl.type.BuiltinCType):
-            self.counters['BuiltinCType'] += 1
-        elif isinstance(ipdltype, ipdl.type.ArrayType):
-            self.counters['ArrayType'] += 1
-        elif isinstance(ipdltype, ipdl.type.ActorType):
-            self.counters['ActorType'] += 1
-        elif isinstance(ipdltype, ipdl.type.StructType):
-            self.counters['StructType'] += 1
-        elif isinstance(ipdltype, ipdl.type.UnionType):
-            self.counters['UnionType'] += 1
-        elif isinstance(ipdltype, ipdl.type.MaybeType):
-            self.counters['MaybeType'] += 1
-        elif isinstance(ipdltype, ipdl.type.FDType):
-            self.counters['FDType'] += 1
-        else:
-            self.counters['other'] += 1
-
-    def mapImportedCxxType(self, importedCxxType : ipdl.type.ImportedCxxType):
-        if importedCxxType.name() in PBTypeMappings.keys():
-            # map directly to corresponding scalar type
-            return PBTypeMappings[importedCxxType.name()]
-        return "bytes" # otherwise just use bytes
-
-    def mapArrayType(self, arraytype : ipdl.type.ArrayType):
-        # map basetype recursively
-        return self.mapType(arraytype.basetype)
-
-    def mapBuiltinCType(self, builtinCType : ipdl.type.BuiltinCType):
-        # map directly to scalar type
-        return PBTypeMappings[builtinCType.name()]
-
-    def mapActorType(self, actorType : ipdl.type.ActorType):
-        return "bytes"
-
-    def mapStructType(self, structType : ipdl.type.StructType):
-        qual = "protobuf"
-        for ns in structType.qname.quals:
-            qual += f".{ns}"
-        return qual + "." + structType.name()
-
-    def mapUnionType(self, unionType : ipdl.type.UnionType):
-        qual = "protobuf"
-        for ns in unionType.qname.quals:
-            qual += f".{ns}"
-        return qual + "." + unionType.name()
-
-    def mapMaybeType(self, maybeType : ipdl.type.MaybeType):
-        # map basetype recursively
-        return self.mapType(maybeType.basetype)
-
-    def mapFDType(self, fdType : ipdl.type.FDType):
-        return "bytes"
-
-    def mapType(self, ipdltype : ipdl.type.Type) -> str:
-        if isinstance(ipdltype, ipdl.type.ImportedCxxType):
-            return self.mapImportedCxxType(ipdltype)
-        elif isinstance(ipdltype, ipdl.type.BuiltinCType):
-            return self.mapBuiltinCType(ipdltype)
-        elif isinstance(ipdltype, ipdl.type.ArrayType):
-            return self.mapArrayType(ipdltype)
-        elif isinstance(ipdltype, ipdl.type.ActorType):
-            return self.mapActorType(ipdltype)
-        elif isinstance(ipdltype, ipdl.type.StructType):
-            return self.mapStructType(ipdltype)
-        elif isinstance(ipdltype, ipdl.type.UnionType):
-            return self.mapUnionType(ipdltype)
-        elif isinstance(ipdltype, ipdl.type.MaybeType):
-            return self.mapMaybeType(ipdltype)
-        elif isinstance(ipdltype, ipdl.type.FDType):
-            return self.mapFDType(ipdltype)
-        else:
-            return "bytes"
-
     def mapParam(self, param_name, ipdltype : ipdl.type.Type) -> ast.Field:
-        self.countParamTypes(ipdltype)
-        mapped_type = self.mapType(ipdltype)
-
-        if (isinstance(ipdltype, ipdl.type.BuiltinCType) or
-            isinstance(ipdltype, ipdl.type.ImportedCxxType)) and mapped_type != "bytes":
-            self.scalar_mappings += 1
+        mapped_type = self.typeVisitor.mapType(ipdltype)
 
         cardinality = ast.FieldCardinality.REQUIRED
         if isinstance(ipdltype, ipdl.type.MaybeType):
@@ -192,7 +206,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         oneof_elements = []
         for f in union.components:
             field = self.mapParam(f.name, f.ipdltype)
-            if isinstance(f.ipdltype, ipdl.type.ArrayType):
+            if field.cardinality == ast.FieldCardinality.REPEATED:
                 # add param to nested message instead
                 msg = ast.Message("_" + f.name)
                 field.number = 1
@@ -249,10 +263,10 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
         # add stats about parameters
         self.addComment(mf, "// Parameter mappings stats:")
-        self.addComment(mf, f"// Total parameters in this file {self.param_count}")
-        self.addComment(mf, f"// Parameter types:{self.counters}")
-        self.addComment(mf, f"// Scalar mappings performed: {self.scalar_mappings}")
-        #self.addComment(mf, f"// Message structs/unions generated from ipdl structs/unions: {len(self.structsAndUnions)}")
+        self.addComment(mf, f"// Total parameters in this file {self.typeVisitor.getParamCount()}")
+        self.addComment(mf, f"// Parameter types:{self.typeVisitor.getCounters()}")
+        self.addComment(mf, f"// Scalar mappings performed: {self.typeVisitor.getScalarMappings()}")
+        self.addComment(mf, f"// Message structs/unions generated from ipdl structs/unions: {sum([len(x) for x in self.namespacedStructsAndUnions.values()])}")
 
     def buildHeader(self, ns : str, file : ast.File, tu : ipdl.ast.TranslationUnit):
         option_runtime = ast.Comment("option optimize_for = LITE_RUNTIME;")
@@ -357,8 +371,4 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             msgs.extend(msg.accept(self))
 
         return msgs
-
-
-
-# --------------------------------------------------
 

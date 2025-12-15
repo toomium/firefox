@@ -83,8 +83,6 @@ class WorkerPool:
         ipdl.gencxx(files[index], ast, headersdir, cppdir, segmentCapacityDict)
         ipdl.genproto(files[index], ast, protodir)
 
-        #ProtobufExporter().genproto(ast, protoheadersdir, protosrcdir)
-
         if ast.protocol:
             allmessages[ast.protocol.name] = ipdl.genmsgenum(ast)
             allprotocols.append(ast.protocol.name)
