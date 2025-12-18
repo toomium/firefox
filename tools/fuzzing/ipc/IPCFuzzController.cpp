@@ -48,8 +48,6 @@ using namespace mozilla::ipc;
 // but it is necessary when using `OnMessageError` to release on early errors.
 #define MOZ_FUZZ_IPC_SYNC_AFTER_EACH_MSG 1
 
-// Use protobuf based structure aware fuzzing
-#define FUZZ_LPM
 
 namespace mozilla {
 namespace fuzzing {
@@ -1528,15 +1526,15 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
         std::string msgName(IPC::StringFromIPCMessageType(aMsg->type()));
         if (msgName.find(dumpFilter) != std::string::npos) {
           #ifdef FUZZ_LPM
-          dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(std::move(aMsg)), mIPCDumpCount);
+          dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(aMsg), mIPCDumpCount);
           #else
           dumpIPCMessageToFile(aMsg, mIPCDumpCount);
           #endif
           mIPCDumpCount++;
         }
       } else {
-        #ifdef FUZZ_LPM
-          dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(std::move(aMsg)), mIPCDumpCount);
+        #ifdef FUZZING_SNAPSHOT_LPM
+          dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(aMsg), mIPCDumpCount);
         #else
           dumpIPCMessageToFile(aMsg, mIPCDumpCount);
         #endif
@@ -1557,9 +1555,9 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
     MOZ_FUZZING_NYX_PRINTF("INFO: [OnIPCMessage] Got Trigger Message: %s Size: %u\n",
                            IPC::StringFromIPCMessageType(aMsg->type()),
                            aMsg->header()->payload_size);
-    #ifdef FUZZ_LPM
+    #ifdef FUZZING_SNAPSHOT_LPM
     dumpIPCMessageToFile(aMsg, mIPCDumpCount, true /* aUseNyx */);
-    dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(std::move(aMsg)), mIPCDumpCount, true);
+    dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(aMsg), mIPCDumpCount, true);
     MOZ_FUZZING_NYX_PRINT("INFO: [DumpToFile] Message dumped\n");
     #else
     dumpIPCMessageToFile(aMsg, mIPCDumpCount, true /* aUseNyx */);
@@ -1592,27 +1590,30 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
 
   MOZ_FUZZING_NYX_DEBUG("DEBUG: Requesting data...\n");
 
-#ifdef FUZZ_LPM
+#ifdef FUZZING_SNAPSHOT_LPM
   // Grab enough data to send at most `maxMsgSize` bytes
   uint32_t bufsize =
       Nyx::instance().get_raw_data((uint8_t*)buffer.begin(), buffer.length());
 
-  // test some things here
-  // first dump original message
-  MOZ_FUZZING_NYX_PRINTF("INFO: Dumped orig. to: %i \n", mIPCDumpCount);
-  dumpIPCMessageToFile(aMsg, mIPCDumpCount++);
-  // convert to proto
-  UniquePtr<TypedProtobuf> typedProtobuf = LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(std::move(aMsg));
-  //convert back to ipc msg
-  UniquePtr<IPC::Message> conv_msg = LibprotobufMapping::instance().ConvertProtobufToIPCMessage(std::move(typedProtobuf));
-  // dump again
-  MOZ_FUZZING_NYX_PRINTF("INFO: Dumped conv. to %i \n", mIPCDumpCount);
-  dumpIPCMessageToFile(conv_msg, mIPCDumpCount++);
+  // create typed protobuf struct
+  MOZ_FUZZING_NYX_PRINT("INFO: Creating typed protobuf \n");
+  UniquePtr<TypedProtobuf> typedProtobuf = MakeUnique<TypedProtobuf>();
+  typedProtobuf->type = aMsg->type();
+  typedProtobuf->serialized_data.assign(
+    reinterpret_cast<char*>(buffer.begin()), bufsize
+  );
+
+  // convert typed protobuf to ipc message
+  MOZ_FUZZING_NYX_PRINT("INFO: Converting typed protobuf to ipc message \n");
+  UniquePtr<IPC::Message> msg = LibprotobufMapping::instance().ConvertProtobufToIPCMessage(typedProtobuf);
+  MOZ_FUZZING_NYX_PRINT("INFO: Copying header of original message \n");
+  memcpy(msg->header(), aMsg->header(), sizeof(IPC::Message::Header));
+  dumpIPCMessageToFile(msg, mIPCDumpCount++, true /* aUseNyx */);
+
 #else
   // Grab enough data to send at most `maxMsgSize` bytes
   uint32_t bufsize =
       Nyx::instance().get_raw_data((uint8_t*)buffer.begin(), buffer.length());
-#endif
 
   if (bufsize == 0xFFFFFFFF) {
     MOZ_FUZZING_NYX_DEBUG("Nyx: Out of data.\n");
@@ -1656,7 +1657,7 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
   }
 
   UniquePtr<IPC::Message> msg(new IPC::Message(ipcMsgData, ipcMsgLen));
-
+#endif
   if (!!getenv("MOZ_FUZZ_DEBUG")) {
     MOZ_FUZZING_NYX_PRINTF("INFO: Name: %s Target: %" PRId64 "\n", msg->name(),
                            msg->routing_id());

@@ -38,7 +38,7 @@ LibprotobufMapping& LibprotobufMapping::instance() {
 }
 
 UniquePtr<IPC::Message> LibprotobufMapping::ConvertProtobufToIPCMessage
-(UniquePtr<TypedProtobuf> protobuf) {
+(UniquePtr<TypedProtobuf>& protobuf) {
     UniquePtr<IPC::Message> msg;
 
     switch(protobuf->type){
@@ -82,9 +82,10 @@ UniquePtr<IPC::Message> LibprotobufMapping::ConvertProtobufToIPCMessage
         IPC::WriteParam((&(writer__)), input.afaceindex());
         // Sentinel = 'aFaceIndex'
         ((&(writer__)))->WriteSentinel(335021001);
-        IPC::WriteParam((&(writer__)), *(new gfxSparseBitSet()));
+        //IPC::WriteParam((&(writer__)), MakeUnique<gfxSparseBitSet>());
+        //((&(writer__)))->WriteBytes(&input.gfxsparsebitset(), input.gfxsparsebitset().length());
         // Sentinel = 'aMap'
-        ((&(writer__)))->WriteSentinel(60883328);
+        //((&(writer__)))->WriteSentinel(60883328);
         break;
       }
 
@@ -97,13 +98,13 @@ UniquePtr<IPC::Message> LibprotobufMapping::ConvertProtobufToIPCMessage
     return msg;
 }
 
-UniquePtr<TypedProtobuf> LibprotobufMapping::ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message> msg){
+UniquePtr<TypedProtobuf> LibprotobufMapping::ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message>& msg){
 
   MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto]: %s Size: %u\n",
                            IPC::StringFromIPCMessageType(msg->type()),
                            msg->header()->payload_size);
 
-  UniquePtr<TypedProtobuf> output = MakeUnique<TypedProtobuf>();;
+  UniquePtr<TypedProtobuf> output = MakeUnique<TypedProtobuf>();
 
   switch (msg->type()){
     case dom::PContent::Msg_SetCharacterMap__ID: {
@@ -151,10 +152,10 @@ UniquePtr<TypedProtobuf> LibprotobufMapping::ConvertIPCMessageToProtobuf(UniqueP
 
 
 
-      size_t offset_before = reader__.iter_.iter_.AbsoluteOffset();
-      MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto] Read Parameter AbsoluteOffset: %lu\n",
-                      offset_before);
-      // copy iter state
+      // size_t offset_before = reader__.iter_.iter_.AbsoluteOffset();
+      // MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto] Read Parameter AbsoluteOffset: %lu\n",
+      //                 offset_before);
+      // //copy iter state
       // Pickle::BufferList::IterImpl iter_before = reader__.iter_.iter_;
       // auto maybe__aMap = IPC::ReadParam<gfxSparseBitSet>((&(reader__)));
       // auto& aMap = *maybe__aMap;
@@ -175,13 +176,11 @@ UniquePtr<TypedProtobuf> LibprotobufMapping::ConvertIPCMessageToProtobuf(UniqueP
       // }
 
 
-      // Sentinel = 'aMap'
-      if ((!(((&(reader__)))->ReadSentinel(60883328)))) {
-          mozilla::ipc::SentinelReadError("Error deserializing 'gfxSparseBitSet'");
-      }
+      // // Sentinel = 'aMap'
+      // if ((!(((&(reader__)))->ReadSentinel(60883328)))) {
+      //     mozilla::ipc::SentinelReadError("Error deserializing 'gfxSparseBitSet'");
+      // }
       reader__.EndRead();
-
-
 
       // create protobuf
       SetCharacterMap proto;
@@ -189,14 +188,14 @@ UniquePtr<TypedProtobuf> LibprotobufMapping::ConvertIPCMessageToProtobuf(UniqueP
       proto.set_afamilyindex(aFamilyIndex);
       proto.set_aalias(aAlias);
       proto.set_afaceindex(aFaceIndex);
-      proto.set_gfxsparsebitset("test");
+      //proto.set_gfxsparsebitset(dumpBuffer.begin());
 
       MOZ_FUZZING_NYX_PRINT("INFO: [ConvertToProto] Proto created\n");
 
       output->type = dom::PContent::Msg_SetCharacterMap__ID;
       MOZ_FUZZING_NYX_PRINT("INFO: [ConvertToProto] Type set\n");
       output->serialized_data = proto.SerializeAsString();
-      MOZ_FUZZING_NYX_PRINT("INFO: [ConvertToProto] Proto serialized\n");
+      MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto] Proto serialized: %s\n", output->serialized_data.c_str());
 
       break;
     }
