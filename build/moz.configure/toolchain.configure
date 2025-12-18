@@ -3419,13 +3419,24 @@ option(
     help="Enable experimental snapshot fuzzing support",
 )
 
+option(
+    "--enable-snapshot-fuzzing-lpm",
+    help="Enable usage of protobuf structure awareness for snapshot fuzzing",
+)
 
+
+imply_option("--enable-snapshot-fuzzing", True, when="--enable-snapshot-fuzzing-lpm")
 imply_option("--enable-fuzzing", True, when="--enable-snapshot-fuzzing")
 
 
-@depends("--enable-snapshot-fuzzing")
-def enable_snapshot_fuzzing(value):
+@depends("--enable-snapshot-fuzzing-lpm")
+def enable_snapshot_fuzzing_lpm(value):
     if value:
+        return True
+
+@depends("--enable-snapshot-fuzzing", enable_snapshot_fuzzing_lpm)
+def enable_snapshot_fuzzing(value, snapshot_fuzzing_lpm):
+    if value or snapshot_fuzzing_lpm:
         return True
 
 
@@ -3493,6 +3504,8 @@ set_define("FUZZING_JS_FUZZILLI", enable_js_fuzzilli)
 set_config("FUZZING_SNAPSHOT", enable_snapshot_fuzzing)
 set_define("FUZZING_SNAPSHOT", enable_snapshot_fuzzing)
 
+set_config("FUZZING_SNAPSHOT_LPM", enable_snapshot_fuzzing_lpm)
+set_define("FUZZING_SNAPSHOT_LPM", enable_snapshot_fuzzing_lpm)
 
 @depends(
     c_compiler.try_compile(
