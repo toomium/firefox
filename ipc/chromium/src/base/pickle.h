@@ -20,14 +20,14 @@
 #if !defined(FUZZING) && (!defined(RELEASE_OR_BETA) || defined(DEBUG))
 #  define MOZ_PICKLE_SENTINEL_CHECKING
 #endif
-#ifdef FUZZING_SNAPSHOT
+#ifdef FUZZING_SNAPSHOT_LPM
 namespace mozilla::fuzzing {
 class LibprotobufMapping;
 }
 #endif
 class Pickle;
 class PickleIterator {
-#ifdef FUZZING_SNAPSHOT
+#ifdef FUZZING_SNAPSHOT_LPM
     // calls various private API functions on the header.
     friend class mozilla::fuzzing::LibprotobufMapping;
 #endif
