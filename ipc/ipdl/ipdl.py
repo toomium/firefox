@@ -85,7 +85,7 @@ class WorkerPool:
 
         if ast.protocol:
             allmessages[ast.protocol.name] = ipdl.genmsgenum(ast)
-            allprotocols.append((ast.protocol.name, ast.protocol.namespaces))
+            allprotocols[ast.protocol.name] = "::".join([ns.name for ns in ast.protocol.namespaces])
 
             alljsonobjs.append(JSONExporter.protocolToObject(ast.protocol))
 
@@ -202,7 +202,7 @@ def main():
 
     ipcmessagestartpath = os.path.join(headersdir, "IPCMessageStart.h")
     ipc_msgtype_name_path = os.path.join(cppdir, "IPCMessageTypeName.cpp")
-    protobufFactory_path = os.path.join(cppdir, "ProtobufFactory.cpp")
+    protobufFactory_path = os.path.join(cppdir, "IPCProtobufFactory.cpp")
 
     log(2, 'Generated C++ headers will be generated relative to "%s"', headersdir)
     log(2, 'Generated C++ sources will be generated in "%s"', cppdir)
@@ -236,7 +236,7 @@ def main():
     allmessages = manager.dict()
     allsyncmessages = manager.list()
     allmessageprognames = manager.list()
-    allprotocols = manager.list()
+    allprotocols = manager.dict()
     alljsonobjs = manager.list()
 
     for msgName in msgMetadataConfig.sections():
@@ -307,7 +307,6 @@ def main():
             os.path.join(cppdir, "protocols.json"),
         )
 
-    allprotocols.sort()
     allsyncmessages.sort()
 
     # Check if we have undefined message names in segmentCapacityDict.
@@ -331,16 +330,32 @@ def main():
 
 """, file=ipc_factory)
 
-    # for (name, namespaces) in allprotocols:
-    #     loc = namespaces.join("/")
-    #     print(f"#include \"protobuf/{loc}/{name}.pb.h\"")
+    for name in sorted(allprotocols.keys()):
+        print(f"#include \"mozilla/fuzzing/protobuf/{name}.pb.h\"", file=ipc_factory)
 
     print("""
 
 namespace mozilla {
 namespace fuzzing {
 
-mozilla::UniquePtr<IPC::Message> ConvertProtoToIPCMessage(mozilla::UniquePtr<mozilla::fuzzing::TypedProtobuf>& proto) {
+template<typename T>
+UniquePtr<T> ParseTypedProtobuf(UniquePtr<TypedProtobuf>& proto) {
+    auto input = mozilla::MakeUnique<T>();
+    if (input.ParseFromString(proto->serialized_data)) {
+        return input;
+    }
+    return nullptr;
+}
+
+template<typename T>
+UniquePtr<TypedProtobuf> SerializeTypedProtobuf(UniquePtr<T>& proto, uint32_t type) {
+    UniquePtr<TypedProtobuf> output = mozilla::MakeUnique<TypedProtobuf>();
+    output->serialized_data = proto.SerializeAsString();
+    output->type = type;
+    return output;
+}
+
+UniquePtr<IPC::Message> ConvertProtobufToIPCMessage(UniquePtr<TypedProtobuf>& proto) {
     switch (proto->type) {""",
         file=ipc_factory,
     )
@@ -348,11 +363,34 @@ mozilla::UniquePtr<IPC::Message> ConvertProtoToIPCMessage(mozilla::UniquePtr<moz
         for msg, num in allmessages[protocol].idnums:
             if num or msg.endswith("End"):
                 continue
+            enum = f"{protocol}__{msg}"
+            namespace = allprotocols[protocol]
             print("""
-    case %s__%s: {
-        return protobuf::%s;
+    case %s: {
+        return ::%s_ToIPC(ParseTypedProtobuf<protobuf::%s::%s::%s>(proto));
     }"""
-                % (protocol, msg, msg),
+                % (enum, msg, namespace, protocol, msg),
+                file=ipc_factory,
+            )
+
+    print("""
+}
+
+UniquePtr<TypedProtobuf> ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message>& ipc) {
+    switch (ipc->type()) {""",
+        file=ipc_factory,
+    )
+    for protocol in sorted(allmessages.keys()):
+        for msg, num in allmessages[protocol].idnums:
+            if num or msg.endswith("End"):
+                continue
+            enum = f"{protocol}__{msg}"
+            namespace = allprotocols[protocol]
+            print("""
+    case %s: {
+        return SerializeTypedProtobuf<protobuf::%s::%s::%s>(protobuf::%s_ToProto(ipc), %s);
+    }"""
+                % (enum, namespace, protocol, msg, msg, enum),
                 file=ipc_factory,
             )
 
@@ -376,7 +414,7 @@ enum IPCMessageStart {
         file=ipcmsgstart,
     )
 
-    for (name, namespaces) in allprotocols:
+    for name in sorted(allprotocols.keys()):
         print("  %sMsgStart," % name, file=ipcmsgstart)
 
     print(
@@ -525,7 +563,7 @@ const char* ProtocolIdToName(IPCMessageStart aId) {
         file=ipc_msgtype_name,
     )
 
-    for (name, namespaces) in allprotocols:
+    for name in sorted(allprotocols.keys()):
         print("    case %sMsgStart:" % name, file=ipc_msgtype_name)
         print('      return "%s";' % name, file=ipc_msgtype_name)
 

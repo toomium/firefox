@@ -46,7 +46,8 @@ namespace IPC {
 bool IPCMessageTypeIsSync(uint32_t aMessageType);
 const char* StringFromIPCMessageType(uint32_t aMessageType);
 #ifdef FUZZING_SNAPSHOT_LPM
-mozilla::UniquePtr<IPC::Message> ConvertProtoToIPCMessage(mozilla::UniquePtr<mozilla::fuzzing::TypedProtobuf>& proto);
+mozilla::UniquePtr<IPC::Message> ConvertProtobufToIPCMessage(mozilla::UniquePtr<mozilla::fuzzing::TypedProtobuf>& proto);
+mozilla::UniquePtr<mozilla::fuzzing::TypedProtobuf> ConvertIPCMessageToProtobuf(mozilla::UniquePtr<IPC::Message>& ipc);
 #endif
 
 class Channel;
