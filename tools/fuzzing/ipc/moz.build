@@ -6,24 +6,27 @@
 
 Library("fuzzer-ipc-protocol")
 
+if CONFIG["FUZZING_SNAPSHOT_LPM"]:
+    DIRS += [
+        "protobuf",
+    ]
+    USE_LIBS += [
+        "fuzzer-ipc-protocol-protobuf",
+    ]
+
 LOCAL_INCLUDES += [
     "/dom/base",
     "/dom/ipc",
-    "/tools/fuzzing/ipc/protobuf",
 ]
 
 SOURCES += [
     "IPCFuzzController.cpp",
     "LibprotobufMapping.cpp",
-    "protobuf/SetCharacterMap.pb.cc",
-    "protobuf/test.pb.cc",
 ]
 
 EXPORTS.mozilla.fuzzing += [
     "IPCFuzzController.h",
     "LibprotobufMapping.h",
-    "protobuf/SetCharacterMap.pb.h",
-    "protobuf/test.pb.h",
 ]
 
 include("/ipc/chromium/chromium-config.mozbuild")

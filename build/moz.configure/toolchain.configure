@@ -3425,7 +3425,7 @@ option(
 )
 
 
-imply_option("--enable-snapshot-fuzzing", True, when="--enable-snapshot-fuzzing-lpm")
+#imply_option("--enable-snapshot-fuzzing", True, when="--enable-snapshot-fuzzing-lpm")
 imply_option("--enable-fuzzing", True, when="--enable-snapshot-fuzzing")
 
 
@@ -3434,9 +3434,14 @@ def enable_snapshot_fuzzing_lpm(value):
     if value:
         return True
 
-@depends("--enable-snapshot-fuzzing", enable_snapshot_fuzzing_lpm)
-def enable_snapshot_fuzzing(value, snapshot_fuzzing_lpm):
-    if value or snapshot_fuzzing_lpm:
+#@depends("--enable-snapshot-fuzzing", enable_snapshot_fuzzing_lpm)
+# def enable_snapshot_fuzzing(value, snapshot_fuzzing_lpm):
+#    if value or snapshot_fuzzing_lpm:
+#        return True
+
+@depends("--enable-snapshot-fuzzing")
+def enable_snapshot_fuzzing(value):
+    if value:
         return True
 
 
