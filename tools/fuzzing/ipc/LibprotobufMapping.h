@@ -30,6 +30,10 @@ class LibprotobufMapping {
   // Used for protobuf-based fuzzing
   UniquePtr<IPC::Message> ConvertProtobufToIPCMessage(UniquePtr<TypedProtobuf>& protobuf);
   UniquePtr<TypedProtobuf> ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message>& msg);
+  std::string ReadPayloadFromMessage(mozilla::UniquePtr<IPC::Message>& msg);
+  mozilla::UniquePtr<IPC::Message> CreateMessageFromPayload(const std::string& payload);
+  template<typename T>
+  std::string ReadSerializedParam(IPC::MessageReader* reader, UniquePtr<IPC::Message>& msg) ;
 };
 
 }  // namespace fuzzing

@@ -5,6 +5,7 @@ import json
 import optparse
 import os
 import sys
+import traceback
 from configparser import RawConfigParser
 from io import StringIO
 from multiprocessing import Manager
@@ -79,24 +80,30 @@ class WorkerPool:
             alljsonobjs,
             protodir
         ) = WorkerPool.per_process_context
-        ast = asts[index]
-        ipdl.gencxx(files[index], ast, headersdir, cppdir, segmentCapacityDict)
-        ipdl.genproto(files[index], ast, protodir)
+        try:
+            ast = asts[index]
+            ipdl.gencxx(files[index], ast, headersdir, cppdir, segmentCapacityDict)
+            ipdl.genproto(files[index], ast, protodir)
 
-        if ast.protocol:
-            allmessages[ast.protocol.name] = ipdl.genmsgenum(ast)
-            allprotocols[ast.protocol.name] = "::".join([ns.name for ns in ast.protocol.namespaces])
+            if ast.protocol:
+                allmessages[ast.protocol.name] = ipdl.genmsgenum(ast)
+                allprotocols[ast.protocol.name] = "::".join([ns.name for ns in ast.protocol.namespaces])
 
-            alljsonobjs.append(JSONExporter.protocolToObject(ast.protocol))
+                alljsonobjs.append(JSONExporter.protocolToObject(ast.protocol))
 
-            # e.g. PContent::RequestMemoryReport (not prefixed or suffixed.)
-            for md in ast.protocol.messageDecls:
-                allmessageprognames.append("%s::%s" % (md.namespace, md.decl.progname))
+                # e.g. PContent::RequestMemoryReport (not prefixed or suffixed.)
+                for md in ast.protocol.messageDecls:
+                    allmessageprognames.append("%s::%s" % (md.namespace, md.decl.progname))
 
-                if md.sendSemantics is SYNC:
-                    allsyncmessages.append(
-                        "%s__%s" % (ast.protocol.name, md.prettyMsgName())
-                    )
+                    if md.sendSemantics is SYNC:
+                        allsyncmessages.append(
+                            "%s__%s" % (ast.protocol.name, md.prettyMsgName())
+                        )
+        except Exception as e:
+            print("\n--- WORKER EXCEPTION ---")
+            traceback.print_exc()
+            print("------------------------\n")
+            raise e
 
 
 def main():
@@ -338,6 +345,58 @@ def main():
 namespace mozilla {
 namespace fuzzing {
 
+enum IPCMessages {
+    """,
+        file=ipc_factory,
+    )
+
+    for protocol in sorted(allmessages.keys()):
+        for msg, num in allmessages[protocol].idnums:
+            if num:
+                print("  %s = %s," % (msg, num), file=ipc_factory)
+            elif not msg.endswith("End"):
+                print("  %s__%s," % (protocol, msg), file=ipc_factory)
+
+    print(
+        """
+};
+
+mozilla::UniquePtr<IPC::Message> CreateMessageFromPayload(const std::string& payload) {
+    uint32_t payload_size = payload.size();
+    std::vector<char> buffer(sizeof(IPC::Message::Header) + payload_size);
+
+    // write dummy header
+    IPC::Message::Header* header = reinterpret_cast<IPC::Message::Header*>(buffer.data());
+    header->payload_size = payload_size;
+
+    // copy payload to buffer
+    memcpy(buffer.data() + sizeof(IPC::Message::Header), payload.data(), payload_size);
+
+    // create msg from buffer
+    auto msg = std::make_unique<IPC::Message>(buffer.data(), buffer.size());
+    return msg;
+}
+
+const std::string ReadPayloadFromMessage(mozilla::UniquePtr<IPC::Message>& msg) {
+    Pickle::BufferList::IterImpl iter(msg->Buffers());
+
+    Vector<char, 256, InfallibleAllocPolicy> dumpBuffer;
+    if (!dumpBuffer.initLengthUninitialized(msg->Buffers().Size())) {
+        MOZ_FUZZING_NYX_ABORT("dumpBuffer.initLengthUninitialized failed\n");
+    }
+
+    // copy from buffer but skip header
+    if (!msg->Buffers().ReadBytes(
+                                    iter,
+                                    reinterpret_cast<char*>(dumpBuffer.begin() + sizeof(IPC::Message::Header)),
+                                    dumpBuffer.length() - sizeof(IPC::Message::Header))) {
+        MOZ_FUZZING_NYX_ABORT("ReadBytes failed\n");
+    }
+
+    return std::string(reinterpret_cast<char*>(dumpBuffer.begin()),
+               dumpBuffer.length());
+}
+
 template<typename T>
 UniquePtr<T> ParseTypedProtobuf(UniquePtr<TypedProtobuf>& proto) {
     auto input = mozilla::MakeUnique<T>();
@@ -348,7 +407,7 @@ UniquePtr<T> ParseTypedProtobuf(UniquePtr<TypedProtobuf>& proto) {
 }
 
 template<typename T>
-UniquePtr<TypedProtobuf> SerializeTypedProtobuf(UniquePtr<T>& proto, uint32_t type) {
+UniquePtr<TypedProtobuf> SerializeTypedProtobuf(UniquePtr<T>& proto, IPCMessages type) {
     UniquePtr<TypedProtobuf> output = mozilla::MakeUnique<TypedProtobuf>();
     output->serialized_data = proto.SerializeAsString();
     output->type = type;
@@ -424,22 +483,6 @@ enum IPCMessageStart {
 
 static_assert(LastMsgIndex <= 65536, "need to update IPC_MESSAGE_MACRO");
 
-enum IPCMessages {
-    """,
-        file=ipcmsgstart,
-    )
-
-    for protocol in sorted(allmessages.keys()):
-        for msg, num in allmessages[protocol].idnums:
-            if num:
-                print("  %s = %s," % (msg, num), file=ipcmsgstart)
-            elif not msg.endswith("End"):
-                print("  %s__%s," % (protocol, msg), file=ipcmsgstart)
-
-    print(
-        """
-};
-
 #endif // ifndef IPCMessageStart_h
 """,
         file=ipcmsgstart,
@@ -454,29 +497,28 @@ enum IPCMessages {
 #include "mozilla/ipc/ProtocolUtils.h"
 #include "IPCMessageStart.h"
 
-using std::uint32_t;""", file=ipc_msgtype_name)
+using std::uint32_t;
 
-# namespace {
+namespace {
 
-# enum IPCMessages {
-#     """,
-#         file=ipc_msgtype_name,
-#     )
+enum IPCMessages {
+    """,
+        file=ipc_msgtype_name,
+    )
 
-#     for protocol in sorted(allmessages.keys()):
-#         for msg, num in allmessages[protocol].idnums:
-#             if num:
-#                 print("  %s = %s," % (msg, num), file=ipc_msgtype_name)
-#             elif not msg.endswith("End"):
-#                 print("  %s__%s," % (protocol, msg), file=ipc_msgtype_name)
+    for protocol in sorted(allmessages.keys()):
+        for msg, num in allmessages[protocol].idnums:
+            if num:
+                print("  %s = %s," % (msg, num), file=ipc_msgtype_name)
+            elif not msg.endswith("End"):
+                print("  %s__%s," % (protocol, msg), file=ipc_msgtype_name)
 
-#     print(
-#         """
-# };
-
-# } // anonymous namespace
     print(
         """
+};
+
+} // anonymous namespace
+
 namespace IPC {
 
 bool IPCMessageTypeIsSync(uint32_t aMessageType)

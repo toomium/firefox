@@ -13,7 +13,10 @@ from ipdl.cxx.ast import *
 from ipdl.cxx.code import *
 from ipdl.type import ActorType, UnionType, TypeVisitor, builtinHeaderIncludes
 from ipdl.util import hash_str
+from ipdl.protobuf.convert import getNamespace, ProtobufTypeMapper
+from ipdl.builtin import PBTypeMappings
 
+from pprint import pprint
 
 # -----------------------------------------------------------------------------
 # "Public" interface to lowering
@@ -99,6 +102,18 @@ def _ipdlhHeaderName(tu):
     assert tu.filetype == "header"
     return _namespacedHeaderName(tu.name, tu.namespaces)
 
+def _protobufHeaderName(tu):
+    return f"mozilla/fuzzing/protobuf/{tu.name}"
+
+def _protobufGetName(decl):
+    pprint(vars(decl))
+    return f"{getNamespace("::", decl.namespaces)}::{decl.name}"
+
+def _protobufTypeIsScalar(type):
+    return type.name() in PBTypeMappings.keys()
+
+def __protobufGetType(ipdltype):
+    return ProtobufTypeMapper().mapType(ipdltype)
 
 def _protocolHeaderName(p, side=""):
     if side:
@@ -120,6 +135,14 @@ def _includeGuardEnd(headerfile):
     guard = _includeGuardMacroName(headerfile)
     return [CppDirective("endif", "// ifndef " + guard)]
 
+def _defineStart(cond):
+    return CppDirective("ifdef", cond)
+
+def _defineEnd():
+    return CppDirective("endif")
+
+def _defineFuzzingStart():
+    return _defineStart("FUZZING_SNAPSHOT_LPM")
 
 def _messageStartName(ptype):
     return ptype.name() + "MsgStart"
@@ -790,6 +813,15 @@ class _HybridDecl:
 
     def var(self):
         return ExprVar(self.name)
+
+    def protobufType(self):
+        return __protobufGetType(self.ipdltype)
+
+    def protobufName(self):
+        return self.name.lower()
+
+    def protobufVar(self):
+        return self.protobufName()
 
     def bareType(self, side, fq=False):
         """Return this decl's unqualified C++ type."""
@@ -1547,6 +1579,7 @@ class _GenerateProtocolCode(ipdl.ast.Visitor):
             cxxInc.accept(self)
         for inc in tu.includes:
             inc.accept(self)
+        self.generateProtobufIncludes(tu)
         self.generateStructsAndUnions(tu)
         for using in tu.builtinUsing:
             using.accept(self)
@@ -1606,6 +1639,19 @@ class _GenerateProtocolCode(ipdl.ast.Visitor):
                 _protocolHeaderName(inc.tu.protocol, "parent") + ".h",
                 _protocolHeaderName(inc.tu.protocol, "child") + ".h",
             ]
+
+    def generateProtobufIncludes(self, tu):
+        self.hdrfile.addthing(Whitespace.NL)
+        self.hdrfile.addthings([Whitespace("// Headers for protobuf-based fuzzing"), Whitespace.NL])
+        self.hdrfile.addthing(_defineFuzzingStart())
+        self.hdrfile.addthing(
+                CppDirective("include", '"' + _protobufHeaderName(tu) + '.pb.h"')
+        )
+        for inc in tu.includes:
+            self.hdrfile.addthing(
+                CppDirective("include", '"' + _protobufHeaderName(inc.tu) + '.pb.h"')
+            )
+        self.hdrfile.addthing(_defineEnd())
 
     def generateStructsAndUnions(self, tu):
         """Generate the definitions for all structs and unions. This will
@@ -2567,10 +2613,10 @@ def _generateCxxStruct(sd):
         )
         valctor.memberinits = []
         for f in sd.fields_member_order():
-            arg = f.argVar()
+            proto_var = f.argVar()
             if _cxxTypeNeedsMoveForData(f.ipdltype):
-                arg = ExprMove(arg)
-            valctor.memberinits.append(ExprMemberInit(f.memberVar(), args=[arg]))
+                proto_var = ExprMove(proto_var)
+            valctor.memberinits.append(ExprMemberInit(f.memberVar(), args=[proto_var]))
 
         struct.addstmts([valctor, Whitespace.NL])
 
@@ -2601,14 +2647,54 @@ def _generateCxxStruct(sd):
 
             valmovector.memberinits = []
             for f in sd.fields_member_order():
-                arg = f.argVar()
+                proto_var = f.argVar()
                 if _cxxTypeCanMove(f.ipdltype):
-                    arg = ExprMove(arg)
+                    proto_var = ExprMove(proto_var)
                 valmovector.memberinits.append(
-                    ExprMemberInit(f.memberVar(), args=[arg])
+                    ExprMemberInit(f.memberVar(), args=[proto_var])
                 )
 
             struct.addstmts([valmovector, Whitespace.NL])
+
+
+    # build protobuf constructor
+    protobufCtor = ConstructorDefn(
+            ConstructorDecl(
+                sd.name,
+                params=[
+                    Decl(Type(_protobufGetName(sd), ref=True), "proto"
+                    )
+                ],
+            )
+        )
+
+    # protobufCtor.memberinits = []
+    # for f in sd.fields_member_order():
+    #     #pprint(vars(f))
+    #     proto_var = ExprVar("proto." + f.protobufVar() + "()")
+    #     if _protobufTypeIsScalar(f.ipdltype):
+    #         # case 1: scalar type
+    #         arg = ExprMove(proto_var)
+    #     elif f.ipdltype.isIPDL() and (f.ipdltype.isStruct() or f.ipdltype.isUnion()):
+    #         # case 2: struct or union
+    #         # recursively call protobuf constructor of struct / union
+    #         ctor = ExprVar("(" + proto_var + ")")
+    #         arg = ExprMove(proto_var)
+    #     else:
+    #         # case 3: some complex type which is given in serialized from
+    #         arg = ExprMove(proto_var)
+    #     protobufCtor.memberinits.append(
+    #         ExprMemberInit(f.memberVar(), args=[arg])
+    #     )
+
+    struct.addcode("""
+#ifdef FUZZING_SNAPSHOT_LPM
+""")
+    struct.addstmts([protobufCtor])
+    struct.addcode("""
+#endif
+
+""")
 
     # The default copy, move, and assignment constructors, and the default
     # destructor, will do the right thing.
@@ -2963,6 +3049,18 @@ def _generateCxxUnion(ud):
     movector = ConstructorDefn(
         ConstructorDecl(ud.name, params=[Decl(rvalueRefClsType, othervar.name)])
     )
+
+    # build protobuf constructor
+    protobufCtor = ConstructorDefn(
+            ConstructorDecl(
+                ud.name,
+                params=[
+                    Decl(Type(_protobufGetName(ud), ref=True), "proto"
+                    )
+                ],
+            )
+        )
+
     othertypevar = ExprVar("t")
     moveswitch = StmtSwitch(othertypevar)
     for c in ud.components:
@@ -3014,6 +3112,16 @@ def _generateCxxUnion(ud):
         ]
     )
     cls.addstmts([movector, Whitespace.NL])
+
+    cls.addcode("""
+#ifdef FUZZING_SNAPSHOT_LPM
+""")
+    cls.addstmts([protobufCtor])
+    cls.addcode("""
+#endif
+
+""")
+
 
     # ~Union()
     dtor = DestructorDefn(DestructorDecl(ud.name))

@@ -9,7 +9,6 @@
 #include "mozilla/Fuzzing.h"
 #include "mozilla/SpinEventLoopUntil.h"
 #include "mozilla/SyncRunnable.h"
-#include "protobuf/test.pb.h"
 
 #include "nsIThread.h"
 #include "nsThreadUtils.h"
@@ -1468,7 +1467,7 @@ static void dumpProtobufMessageToFile(const UniquePtr<TypedProtobuf>& aMsg,
   std::replace(msgName.begin(), msgName.end(), ':', '_');
 
   if (aUseNyx) {
-    dumpFilename << "seeds/";
+    dumpFilename << "seeds/protobuf/" << msgName << "/";
   }
 
   dumpFilename << msgName << aDumpCount << ".protobin";
@@ -1525,7 +1524,7 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
       if (!dumpFilter.empty()) {
         std::string msgName(IPC::StringFromIPCMessageType(aMsg->type()));
         if (msgName.find(dumpFilter) != std::string::npos) {
-          #ifdef FUZZ_LPM
+          #ifdef FUZZING_SNAPSHOT_LPM
           dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(aMsg), mIPCDumpCount);
           #else
           dumpIPCMessageToFile(aMsg, mIPCDumpCount);
@@ -1557,7 +1556,10 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
                            aMsg->header()->payload_size);
     #ifdef FUZZING_SNAPSHOT_LPM
     dumpIPCMessageToFile(aMsg, mIPCDumpCount, true /* aUseNyx */);
-    dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(aMsg), mIPCDumpCount, true);
+    UniquePtr<TypedProtobuf> proto = LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(aMsg);
+    dumpProtobufMessageToFile(proto, mIPCDumpCount, true);
+    mIPCDumpCount++;
+    dumpIPCMessageToFile(LibprotobufMapping::instance().ConvertProtobufToIPCMessage(proto), mIPCDumpCount, true);
     MOZ_FUZZING_NYX_PRINT("INFO: [DumpToFile] Message dumped\n");
     #else
     dumpIPCMessageToFile(aMsg, mIPCDumpCount, true /* aUseNyx */);
@@ -1576,8 +1578,6 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
     MOZ_FUZZING_NYX_ABORT("ERROR: Failed to initialize buffer!\n");
   }
 
-  char* ipcMsgData = buffer.begin();
-
   //                        //
   // *** Snapshot Point *** //
   //                        //
@@ -1590,27 +1590,6 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
 
   MOZ_FUZZING_NYX_DEBUG("DEBUG: Requesting data...\n");
 
-#ifdef FUZZING_SNAPSHOT_LPM
-  // Grab enough data to send at most `maxMsgSize` bytes
-  uint32_t bufsize =
-      Nyx::instance().get_raw_data((uint8_t*)buffer.begin(), buffer.length());
-
-  // create typed protobuf struct
-  MOZ_FUZZING_NYX_PRINT("INFO: Creating typed protobuf \n");
-  UniquePtr<TypedProtobuf> typedProtobuf = MakeUnique<TypedProtobuf>();
-  typedProtobuf->type = aMsg->type();
-  typedProtobuf->serialized_data.assign(
-    reinterpret_cast<char*>(buffer.begin()), bufsize
-  );
-
-  // convert typed protobuf to ipc message
-  MOZ_FUZZING_NYX_PRINT("INFO: Converting typed protobuf to ipc message \n");
-  UniquePtr<IPC::Message> msg = LibprotobufMapping::instance().ConvertProtobufToIPCMessage(typedProtobuf);
-  MOZ_FUZZING_NYX_PRINT("INFO: Copying header of original message \n");
-  memcpy(msg->header(), aMsg->header(), sizeof(IPC::Message::Header));
-  dumpIPCMessageToFile(msg, mIPCDumpCount++, true /* aUseNyx */);
-
-#else
   // Grab enough data to send at most `maxMsgSize` bytes
   uint32_t bufsize =
       Nyx::instance().get_raw_data((uint8_t*)buffer.begin(), buffer.length());
@@ -1623,6 +1602,30 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
 #ifdef FUZZ_DEBUG
   MOZ_FUZZING_NYX_PRINTF("DEBUG: Got buffer of size %u...\n", bufsize);
 #endif
+
+#ifdef FUZZING_SNAPSHOT_LPM
+// create typed protobuf struct
+  //MOZ_FUZZING_NYX_PRINT("INFO: Creating typed protobuf \n");
+  //UniquePtr<TypedProtobuf> typedProtobuf = MakeUnique<TypedProtobuf>();
+  //typedProtobuf->type = aMsg->type();
+  //typedProtobuf->serialized_data.assign(
+  //  reinterpret_cast<char*>(buffer.begin()), bufsize
+  //);
+
+  // convert typed protobuf to ipc message
+  MOZ_FUZZING_NYX_PRINT("INFO: Converting typed protobuf to ipc message \n");
+  //UniquePtr<IPC::Message> msg = LibprotobufMapping::instance().ConvertProtobufToIPCMessage(typedProtobuf);
+  UniquePtr<TypedProtobuf> typedProtobuf = LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(aMsg);
+  UniquePtr<IPC::Message> msg = LibprotobufMapping::instance().ConvertProtobufToIPCMessage(typedProtobuf);
+
+  MOZ_FUZZING_NYX_PRINT("INFO: Copying header of original message \n");
+  memcpy(msg->header(), aMsg->header(), sizeof(IPC::Message::Header));
+
+  MOZ_FUZZING_NYX_PRINT("INFO: dumping fuzzed IPC message before returning \n");
+  dumpIPCMessageToFile(msg, mIPCDumpCount, true /* aUseNyx */);
+  mIPCDumpCount++;
+#else
+  char* ipcMsgData = buffer.begin();
 
   // Payload must be int aligned
   bufsize -= bufsize % 4;

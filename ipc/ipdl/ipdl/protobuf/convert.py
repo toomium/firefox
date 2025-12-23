@@ -21,6 +21,16 @@ class ConvertToProto:
         return ipdl.lower._DISCLAIMER.ws + f"// Generated from {ipdlname}\n\n" + generator.Generator().generate(file)
 
 
+def getNamespace(sep : str, namespaces: list[ipdl.ast.Namespace], addParent=True) -> str:
+    parts = []
+    if addParent:
+        parts.append("protobuf")
+
+    for ns in namespaces:
+        parts.append(ns.name)
+
+    return sep.join(parts)
+
 class ProtobufTypeMapper(ipdl.type.TypeVisitor):
 
     def __init__(self):
@@ -163,7 +173,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         return ast.Field(param_name, 0, mapped_type, cardinality)
 
 
-    def visitMessageDecl(self, md : ipdl.lower.MessageDecl):
+    def visitMessageDecl(self, md : 'ipdl.lower.MessageDecl'):
         gen_msgs = []
         send_msg = ast.Message(md.prettyMsgName())
         field_num = 1
@@ -189,7 +199,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         return gen_msgs
 
 
-    def visitStructDecl(self, struct : ipdl.lower.StructDecl):
+    def visitStructDecl(self, struct : 'ipdl.lower.StructDecl'):
         new_struct = ast.Message(struct.name)
         field_number = 1
         for f in struct.fields:
@@ -199,7 +209,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             new_struct.elements.append(field)
         return new_struct
 
-    def visitUnionDecl(self, union : ipdl.lower.UnionDecl):
+    def visitUnionDecl(self, union : 'ipdl.lower.UnionDecl'):
         new_union = ast.Message(union.name)
         one_of = ast.OneOf("content")
         field_number = 1
@@ -238,7 +248,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         self.addNL(mf)
 
         if tu.protocol:
-            package = ast.Package(self.getNamespace(tu.protocol.namespaces) + "." + self.name)
+            package = ast.Package(getNamespace(".", tu.protocol.namespaces) + "." + self.name)
             self.addElement(mf, package)
             self.addNL(mf)
 
@@ -315,7 +325,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         # converting structs and unions to protobuf message format
         for su in tu.structsAndUnions:
             conv_su = su.accept(self)
-            ns = self.getNamespace(su.namespaces)
+            ns = getNamespace(".", su.namespaces)
             if ns not in self.namespacedStructsAndUnions.keys():
                 self.namespacedStructsAndUnions[ns] = []
             self.namespacedStructsAndUnions[ns].append(conv_su)
@@ -337,15 +347,6 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
     def addComment(self, file : ast.File, cmt : str):
         self.addElement(file, ast.Comment(cmt))
-
-    def getNamespace(self, namespaces : list[ipdl.ast.Namespace], addParent = True) -> str:
-        ret = ""
-        if addParent:
-            ret += "protobuf"
-        for ns in namespaces:
-            ret += "." + ns.name
-        return ret
-
 
     def addNL(self, f : ast.File):
         self.addElement(f, _NL)
