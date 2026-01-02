@@ -5,6 +5,7 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #include "LibprotobufMapping.h"
+#include "IPCMessageStart.h"
 
 #include "nsThreadUtils.h"
 
@@ -30,10 +31,63 @@ typedef ::gfxSparseBitSet gfxSparseBitSet;
 namespace mozilla {
 namespace fuzzing {
 
+// mozilla::UniquePtr<IPC::Message> CreateMessageFromPayload(const std::string& payload) {
+//     uint32_t payload_size = payload.size();
+//     std::vector<char> buffer(sizeof(IPC::Message::Header) + payload_size);
+
+//     // write dummy header
+//     IPC::Message::Header* header = reinterpret_cast<IPC::Message::Header*>(buffer.data());
+//     header->payload_size = payload_size;
+
+//     // copy payload to buffer
+//     memcpy(buffer.data() + sizeof(IPC::Message::Header), payload.data(), payload_size);
+
+//     // create msg from buffer
+//     auto msg = std::make_unique<IPC::Message>(buffer.data(), buffer.size());
+//     return msg;
+// }
+
+// const std::string ReadPayloadFromMessage(mozilla::UniquePtr<IPC::Message>& msg) {
+//     Pickle::BufferList::IterImpl iter(msg->Buffers());
+
+//     Vector<char, 256, InfallibleAllocPolicy> dumpBuffer;
+//     if (!dumpBuffer.initLengthUninitialized(msg->Buffers().Size())) {
+//         MOZ_FUZZING_NYX_ABORT("dumpBuffer.initLengthUninitialized failed\n");
+//     }
+
+//     // copy from buffer but skip header
+//     if (!msg->Buffers().ReadBytes(
+//                                     iter,
+//                                     reinterpret_cast<char*>(dumpBuffer.begin() + sizeof(IPC::Message::Header)),
+//                                     dumpBuffer.length() - sizeof(IPC::Message::Header))) {
+//         MOZ_FUZZING_NYX_ABORT("ReadBytes failed\n");
+//     }
+
+//     return std::string(reinterpret_cast<char*>(dumpBuffer.begin()),
+//                dumpBuffer.length());
+// }
+
 // static
 LibprotobufMapping& LibprotobufMapping::instance() {
   static LibprotobufMapping lib;
   return lib;
+}
+
+template<typename T>
+UniquePtr<T> LibprotobufMapping::ParseTypedProtobuf(UniquePtr<TypedProtobuf>& proto) {
+    auto input = mozilla::MakeUnique<T>();
+    if (input.ParseFromString(proto->serialized_data)) {
+        return input;
+    }
+    return nullptr;
+}
+
+template<typename T>
+UniquePtr<TypedProtobuf> LibprotobufMapping::SerializeTypedProtobuf(UniquePtr<T>& proto, IPC::IPCMessages type) {
+    UniquePtr<TypedProtobuf> output = mozilla::MakeUnique<TypedProtobuf>();
+    output->serialized_data = proto.SerializeAsString();
+    output->type = type;
+    return output;
 }
 
 mozilla::UniquePtr<IPC::Message> LibprotobufMapping::CreateMessageFromPayload(const std::string& payload) {
@@ -116,7 +170,7 @@ std::string LibprotobufMapping::SerializeToString(T* param) {
 }
 
 template<typename T>
-T LibprotobufMapping::DeserializeFromString(std::string& payload) {
+mozilla::Maybe<T> LibprotobufMapping::DeserializeFromString(std::string& payload) {
   // create dummy msg
   mozilla::UniquePtr<IPC::Message> dummy_msg = CreateMessageFromPayload(payload);
 
@@ -124,9 +178,13 @@ T LibprotobufMapping::DeserializeFromString(std::string& payload) {
   IPC::MessageReader reader__{
                         *(dummy_msg)};
 
-  auto maybe__aPayload = IPC::ReadParam<T>((&(reader__)));
+  T result;
+  if (!IPC::ReadParam<T>(&reader__, &result)) {
+    MOZ_FUZZING_NYX_ABORT("Deserialization from string failed\n");
+    return mozilla::Nothing();
+  }
 
-  return *maybe__aPayload;
+  return mozilla::Some(std::move(result));
 }
 
 UniquePtr<IPC::Message> LibprotobufMapping::ConvertProtobufToIPCMessage

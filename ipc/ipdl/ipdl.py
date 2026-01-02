@@ -13,6 +13,7 @@ from multiprocessing import Manager
 import ipdl
 from ipdl.ast import SYNC
 from ipdl.exporter import JSONExporter
+from ipdl.protobuf.convert import getNamespace
 
 
 class WorkerPool:
@@ -87,7 +88,8 @@ class WorkerPool:
 
             if ast.protocol:
                 allmessages[ast.protocol.name] = ipdl.genmsgenum(ast)
-                allprotocols[ast.protocol.name] = "::".join([ns.name for ns in ast.protocol.namespaces])
+                #allprotocols[ast.protocol.name] = "::".join([ns.name for ns in ast.protocol.namespaces])
+                allprotocols[ast.protocol.name] = ast.protocol.namespaces
 
                 alljsonobjs.append(JSONExporter.protocolToObject(ast.protocol))
 
@@ -338,81 +340,15 @@ def main():
 """, file=ipc_factory)
 
     for name in sorted(allprotocols.keys()):
+        namespace_pb = getNamespace("/", allprotocols[name], addParent=True)
+        namespace = getNamespace("/", allprotocols[name], addParent=False)
         print(f"#include \"mozilla/fuzzing/protobuf/{name}.pb.h\"", file=ipc_factory)
+        print(f"#include \"{namespace}/{name}Protobuf.h\"", file=ipc_factory)
 
     print("""
 
 namespace mozilla {
 namespace fuzzing {
-
-enum IPCMessages {
-    """,
-        file=ipc_factory,
-    )
-
-    for protocol in sorted(allmessages.keys()):
-        for msg, num in allmessages[protocol].idnums:
-            if num:
-                print("  %s = %s," % (msg, num), file=ipc_factory)
-            elif not msg.endswith("End"):
-                print("  %s__%s," % (protocol, msg), file=ipc_factory)
-
-    print(
-        """
-};
-
-mozilla::UniquePtr<IPC::Message> CreateMessageFromPayload(const std::string& payload) {
-    uint32_t payload_size = payload.size();
-    std::vector<char> buffer(sizeof(IPC::Message::Header) + payload_size);
-
-    // write dummy header
-    IPC::Message::Header* header = reinterpret_cast<IPC::Message::Header*>(buffer.data());
-    header->payload_size = payload_size;
-
-    // copy payload to buffer
-    memcpy(buffer.data() + sizeof(IPC::Message::Header), payload.data(), payload_size);
-
-    // create msg from buffer
-    auto msg = std::make_unique<IPC::Message>(buffer.data(), buffer.size());
-    return msg;
-}
-
-const std::string ReadPayloadFromMessage(mozilla::UniquePtr<IPC::Message>& msg) {
-    Pickle::BufferList::IterImpl iter(msg->Buffers());
-
-    Vector<char, 256, InfallibleAllocPolicy> dumpBuffer;
-    if (!dumpBuffer.initLengthUninitialized(msg->Buffers().Size())) {
-        MOZ_FUZZING_NYX_ABORT("dumpBuffer.initLengthUninitialized failed\n");
-    }
-
-    // copy from buffer but skip header
-    if (!msg->Buffers().ReadBytes(
-                                    iter,
-                                    reinterpret_cast<char*>(dumpBuffer.begin() + sizeof(IPC::Message::Header)),
-                                    dumpBuffer.length() - sizeof(IPC::Message::Header))) {
-        MOZ_FUZZING_NYX_ABORT("ReadBytes failed\n");
-    }
-
-    return std::string(reinterpret_cast<char*>(dumpBuffer.begin()),
-               dumpBuffer.length());
-}
-
-template<typename T>
-UniquePtr<T> ParseTypedProtobuf(UniquePtr<TypedProtobuf>& proto) {
-    auto input = mozilla::MakeUnique<T>();
-    if (input.ParseFromString(proto->serialized_data)) {
-        return input;
-    }
-    return nullptr;
-}
-
-template<typename T>
-UniquePtr<TypedProtobuf> SerializeTypedProtobuf(UniquePtr<T>& proto, IPCMessages type) {
-    UniquePtr<TypedProtobuf> output = mozilla::MakeUnique<TypedProtobuf>();
-    output->serialized_data = proto.SerializeAsString();
-    output->type = type;
-    return output;
-}
 
 UniquePtr<IPC::Message> ConvertProtobufToIPCMessage(UniquePtr<TypedProtobuf>& proto) {
     switch (proto->type) {""",
@@ -423,12 +359,13 @@ UniquePtr<IPC::Message> ConvertProtobufToIPCMessage(UniquePtr<TypedProtobuf>& pr
             if num or msg.endswith("End"):
                 continue
             enum = f"{protocol}__{msg}"
-            namespace = allprotocols[protocol]
+            namespace = getNamespace("::", allprotocols[protocol], addParent=False)
+            namespace_pb = getNamespace("::", allprotocols[protocol], addParent=True)
             print("""
-    case %s: {
-        return ::%s_ToIPC(ParseTypedProtobuf<protobuf::%s::%s::%s>(proto));
+    case IPC::%s: {
+        return %s::%s::%s_ToIPC(LibprotobufMapping::ParseTypedProtobuf<%s::%s::%s>(proto));
     }"""
-                % (enum, msg, namespace, protocol, msg),
+                % (enum, namespace, protocol, msg, namespace_pb, protocol, msg),
                 file=ipc_factory,
             )
 
@@ -444,12 +381,13 @@ UniquePtr<TypedProtobuf> ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message>& ip
             if num or msg.endswith("End"):
                 continue
             enum = f"{protocol}__{msg}"
-            namespace = allprotocols[protocol]
+            namespace = getNamespace("::", allprotocols[protocol], addParent=False)
+            namespace_pb = getNamespace("::", allprotocols[protocol], addParent=True)
             print("""
-    case %s: {
-        return SerializeTypedProtobuf<protobuf::%s::%s::%s>(protobuf::%s_ToProto(ipc), %s);
+    case IPC::%s: {
+        return LibprotobufMapping::SerializeTypedProtobuf<%s::%s::%s>(%s::%s::%s_ToProtobuf(ipc), %s);
     }"""
-                % (enum, namespace, protocol, msg, msg, enum),
+                % (enum, namespace_pb, protocol, msg, namespace, protocol, msg, enum),
                 file=ipc_factory,
             )
 
@@ -483,6 +421,25 @@ enum IPCMessageStart {
 
 static_assert(LastMsgIndex <= 65536, "need to update IPC_MESSAGE_MACRO");
 
+namespace IPC {
+
+enum IPCMessages {
+    """,
+        file=ipcmsgstart,
+    )
+
+    for protocol in sorted(allmessages.keys()):
+        for msg, num in allmessages[protocol].idnums:
+            if num:
+                print("  %s = %s," % (msg, num), file=ipcmsgstart)
+            elif not msg.endswith("End"):
+                print("  %s__%s," % (protocol, msg), file=ipcmsgstart)
+
+    print(
+        """
+};
+} // namespace IPC
+
 #endif // ifndef IPCMessageStart_h
 """,
         file=ipcmsgstart,
@@ -498,26 +455,6 @@ static_assert(LastMsgIndex <= 65536, "need to update IPC_MESSAGE_MACRO");
 #include "IPCMessageStart.h"
 
 using std::uint32_t;
-
-namespace {
-
-enum IPCMessages {
-    """,
-        file=ipc_msgtype_name,
-    )
-
-    for protocol in sorted(allmessages.keys()):
-        for msg, num in allmessages[protocol].idnums:
-            if num:
-                print("  %s = %s," % (msg, num), file=ipc_msgtype_name)
-            elif not msg.endswith("End"):
-                print("  %s__%s," % (protocol, msg), file=ipc_msgtype_name)
-
-    print(
-        """
-};
-
-} // anonymous namespace
 
 namespace IPC {
 

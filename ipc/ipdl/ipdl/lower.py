@@ -39,6 +39,12 @@ class LowerToCxx:
         headers = [pheader]
         cpps = [pcpp]
 
+        # fuzzing files
+        pbheader, pbcpp = File(name + "Protobuf.h"), File(name + "Protobuf.cpp")
+        _GenerateProtobufCode().lower(tu, pbheader, pbcpp, segmentcapacitydict)
+        headers += [pbheader]
+        cpps += [pbcpp]
+
         if tu.protocol:
             pname = tu.protocol.name
 
@@ -105,9 +111,8 @@ def _ipdlhHeaderName(tu):
 def _protobufHeaderName(tu):
     return f"mozilla/fuzzing/protobuf/{tu.name}"
 
-def _protobufGetName(decl):
-    pprint(vars(decl))
-    return f"{getNamespace("::", decl.namespaces)}::{decl.name}"
+def _protobufGetName(name, namespaces, addParent=True):
+    return f"{getNamespace("::", namespaces, addParent=addParent)}::{name}"
 
 def _protobufTypeIsScalar(type):
     return type.name() in PBTypeMappings.keys()
@@ -1579,7 +1584,6 @@ class _GenerateProtocolCode(ipdl.ast.Visitor):
             cxxInc.accept(self)
         for inc in tu.includes:
             inc.accept(self)
-        self.generateProtobufIncludes(tu)
         self.generateStructsAndUnions(tu)
         for using in tu.builtinUsing:
             using.accept(self)
@@ -1639,19 +1643,6 @@ class _GenerateProtocolCode(ipdl.ast.Visitor):
                 _protocolHeaderName(inc.tu.protocol, "parent") + ".h",
                 _protocolHeaderName(inc.tu.protocol, "child") + ".h",
             ]
-
-    def generateProtobufIncludes(self, tu):
-        self.hdrfile.addthing(Whitespace.NL)
-        self.hdrfile.addthings([Whitespace("// Headers for protobuf-based fuzzing"), Whitespace.NL])
-        self.hdrfile.addthing(_defineFuzzingStart())
-        self.hdrfile.addthing(
-                CppDirective("include", '"' + _protobufHeaderName(tu) + '.pb.h"')
-        )
-        for inc in tu.includes:
-            self.hdrfile.addthing(
-                CppDirective("include", '"' + _protobufHeaderName(inc.tu) + '.pb.h"')
-            )
-        self.hdrfile.addthing(_defineEnd())
 
     def generateStructsAndUnions(self, tu):
         """Generate the definitions for all structs and unions. This will
@@ -1834,10 +1825,364 @@ class _GenerateProtocolCode(ipdl.ast.Visitor):
 
 # --------------------------------------------------
 
+
+
+class _GenerateProtobufCode(ipdl.ast.Visitor):
+    """Creates code common to both the parent and child actors."""
+
+    def __init__(self):
+        self.protocol = None  # protocol we're generating a class for
+        self.hdrfile = None  # what will become Protocol.h
+        self.cppfile = None  # what will become Protocol.cpp
+        self.cppIncludeHeaders = []
+        self.structUnionDefns = []
+        self.funcDefns = []
+        self.funcDefnsFuzz = []
+
+    def lower(self, tu, cxxHeaderFile, cxxFile, segmentcapacitydict):
+        self.protocol = tu.protocol
+        self.hdrfile = cxxHeaderFile
+        self.cppfile = cxxFile
+        self.segmentcapacitydict = segmentcapacitydict
+        tu.accept(self)
+
+    def visitTranslationUnit(self, tu):
+        hf = self.hdrfile
+
+        hf.addthing(_DISCLAIMER)
+        hf.addthings(_includeGuardStart(hf))
+        hf.addthing(Whitespace.NL)
+
+        for inc in builtinHeaderIncludes:
+            self.visitBuiltinCxxInclude(inc)
+
+        # Compute the set of includes we need for declared structure/union
+        # classes for this protocol.
+        typesToIncludes = {}
+        for using in tu.using:
+            typestr = str(using.type)
+            if typestr not in typesToIncludes:
+                typesToIncludes[typestr] = using.header
+            else:
+                assert typesToIncludes[typestr] == using.header
+
+        aggregateTypeIncludes = set()
+        for su in tu.structsAndUnions:
+            typedeps = _ComputeTypeDeps(su.decl.type, typesToIncludes)
+            if isinstance(su, ipdl.ast.StructDecl):
+                aggregateTypeIncludes.add("mozilla/ipc/IPDLStructMember.h")
+                for f in su.fields:
+                    f.ipdltype.accept(typedeps)
+            elif isinstance(su, ipdl.ast.UnionDecl):
+                for c in su.components:
+                    c.ipdltype.accept(typedeps)
+
+            aggregateTypeIncludes.update(typedeps.includeHeaders)
+
+        if len(aggregateTypeIncludes) != 0:
+            hf.addthing(Whitespace.NL)
+            hf.addthings([Whitespace("// Headers for typedefs"), Whitespace.NL])
+
+            for headername in sorted(iter(aggregateTypeIncludes)):
+                hf.addthing(CppDirective("include", '"' + headername + '"'))
+
+        # Manually run Visitor.visitTranslationUnit. For dependency resolution
+        # we need to handle structs and unions separately.
+        for cxxInc in tu.cxxIncludes:
+            cxxInc.accept(self)
+        for inc in tu.includes:
+            inc.accept(self)
+        self.generateProtobufIncludes(tu)
+        self.generateStructsAndUnions(tu)
+        for using in tu.builtinUsing:
+            using.accept(self)
+        for using in tu.using:
+            using.accept(self)
+        if tu.protocol:
+            tu.protocol.accept(self)
+
+        if tu.filetype == "header":
+            self.cppIncludeHeaders.append(_ipdlhHeaderName(tu) + ".h")
+
+        hf.addthing(Whitespace.NL)
+        hf.addthings(_includeGuardEnd(hf))
+
+        cf = self.cppfile
+        cf.addthings(
+            (
+                [_DISCLAIMER, Whitespace.NL]
+                + [
+                    CppDirective("include", '"' + _namespacedHeaderName(tu.name, tu.namespaces) + 'Protobuf.h"')
+                ]
+                +
+                [
+                    CppDirective("include", '"' + h + '"')
+                    for h in self.cppIncludeHeaders
+                ]
+                + [Whitespace.NL]
+                + [
+                    CppDirective("include", '"%s"' % filename)
+                    for filename in ipdl.builtin.CppIncludes
+                ]
+                + [Whitespace.NL]
+            )
+        )
+
+        if self.structUnionDefns:
+            cf.addthings(self.structUnionDefns)
+
+        if self.protocol:
+            # construct the namespace into which we'll stick all our defns
+            ns = Namespace(self.protocol.name)
+            cf.addthing(_putInNamespaces(ns, self.protocol.namespaces))
+            ns.addstmts((self.funcDefnsFuzz))
+
+    def visitBuiltinCxxInclude(self, inc):
+        self.hdrfile.addthing(CppDirective("include", '"' + inc.file + '"'))
+
+    def visitCxxInclude(self, inc):
+        self.cppIncludeHeaders.append(inc.file)
+
+    def visitInclude(self, inc):
+        if inc.tu.filetype == "header":
+            self.hdrfile.addthing(
+                CppDirective("include", '"' + _ipdlhHeaderName(inc.tu) + '.h"')
+            )
+            # Inherit cpp includes defined by imported header files, as they may
+            # be required to serialize an imported `using` type.
+            for cxxinc in inc.tu.cxxIncludes:
+                cxxinc.accept(self)
+        else:
+            self.cppIncludeHeaders += [
+                _protocolHeaderName(inc.tu.protocol, "parent") + ".h",
+                _protocolHeaderName(inc.tu.protocol, "child") + ".h",
+            ]
+
+    def generateProtobufIncludes(self, tu):
+        self.hdrfile.addthing(Whitespace.NL)
+        self.hdrfile.addthings([Whitespace("// Headers for protobuf-based fuzzing"), Whitespace.NL])
+        self.hdrfile.addthing(
+                CppDirective("include", '"' + _namespacedHeaderName(tu.name, tu.namespaces) + '.h"')
+        )
+        self.hdrfile.addthing(
+                CppDirective("include", '"' + _protobufHeaderName(tu) + '.pb.h"')
+        )
+        for inc in tu.includes:
+            self.hdrfile.addthing(
+                CppDirective("include", '"' + _namespacedHeaderName(inc.tu.name, inc.tu.namespaces) + 'Protobuf.h"')
+            )
+            self.hdrfile.addthing(
+                CppDirective("include", '"' + _protobufHeaderName(inc.tu) + '.pb.h"')
+            )
+
+    def generateStructsAndUnions(self, tu):
+        """Generate the definitions for all structs and unions. This will
+        re-order the declarations if needed in the C++ code such that
+        dependencies have already been defined."""
+
+        if tu.structsAndUnions:
+            self.hdrfile.addstmts([Whitespace.NL])
+            for su in tu.structsAndUnions:
+                if isinstance(su, StructDecl):
+                    which = "struct"
+                    toProto, toIPC = _generateCxxStructProtobuf(su)
+                else:
+                    assert isinstance(su, UnionDecl)
+                    which = "union"
+                    toProto, toIPC = _generateCxxUnionProtobuf(su)
+
+
+                toProtoDefn, toProtoDecl = _splitFuncDeclDefn(toProto)
+                toIPCDefn, toIPCDecl = _splitFuncDeclDefn(toIPC)
+
+                decls = [toProtoDecl, toIPCDecl]
+                defns = [toProtoDefn, toIPCDefn]
+
+                declsBlock = Block()
+                declsBlock.addstmts(decls)
+                defnsBlock = Block()
+                defnsBlock.addstmts(defns)
+
+                self.structUnionDefns.extend(
+                        [
+                            Whitespace(
+                                """
+//-----------------------------------------------------------------------------
+// Fuzzing helper functions for the IPDL type |%s %s|
+//
+"""
+                                % (which, su.name)
+                            ),
+                            _putInNamespaces(declsBlock, su.namespaces),
+                            Whitespace.NL,
+                        ]
+                    )
+
+                self.hdrfile.addstmts(
+                        [
+                            Whitespace(
+                                """
+//-----------------------------------------------------------------------------
+// Fuzzing helper functions for the IPDL type |%s %s|
+//
+"""
+                                % (which, su.name)
+                            ),
+                            _putInNamespaces(defnsBlock, su.namespaces),
+                            Whitespace.NL,
+                        ]
+                    )
+
+
+
+
+
+    def visitProtocol(self, p):
+        self.cppIncludeHeaders.append(_protocolHeaderName(self.protocol, "") + ".h")
+        self.cppIncludeHeaders.append(_protocolHeaderName(self.protocol, "") + "Protobuf.h")
+        self.cppIncludeHeaders.append(
+            _protocolHeaderName(self.protocol, "Parent") + ".h"
+        )
+        self.cppIncludeHeaders.append(
+            _protocolHeaderName(self.protocol, "Child") + ".h"
+        )
+
+        # Forward declare our own actors.
+        self.hdrfile.addthings(
+            [
+                Whitespace.NL,
+                _makeForwardDeclForActor(p.decl.type, "Parent"),
+                _makeForwardDeclForActor(p.decl.type, "Child"),
+            ]
+        )
+
+        self.hdrfile.addthing(
+            Whitespace(
+                """
+//-----------------------------------------------------------------------------
+// Fuzzing Code for protocol %s
+//
+"""
+                % (p.name)
+            )
+        )
+
+        # construct the namespace into which we'll stick all our decls
+        ns = Namespace(self.protocol.name)
+        self.hdrfile.addthing(_putInNamespaces(ns, p.namespaces))
+        ns.addstmt(Whitespace.NL)
+
+        for md in p.messageDecls:
+            # protobuf-based fuzzing helper functions
+            decls_fuzz = []
+
+            toProtoDecl, toProtoDefn = _splitFuncDeclDefn(_generateMsgToProtobuf(md, p))
+            decls_fuzz.append(toProtoDecl)
+            self.funcDefnsFuzz.append(toProtoDefn)
+
+            toIPCDecl, toIPCDefn = _splitFuncDeclDefn(_generateMsgToIPC(md, p))
+            decls_fuzz.append(toIPCDecl)
+            self.funcDefnsFuzz.append(toIPCDefn)
+
+            if md.hasReply():
+                toProtoDeclReply, toProtoDefnReply = _splitFuncDeclDefn(_generateMsgToProtobuf(md, p, forReply=True))
+                decls_fuzz.append(toProtoDeclReply)
+                self.funcDefnsFuzz.append(toProtoDefnReply)
+
+                toIPCDeclReply, toIPCDefnReply = _splitFuncDeclDefn(_generateMsgToIPC(md, p, forReply=True))
+                decls_fuzz.append(toIPCDeclReply)
+                self.funcDefnsFuzz.append(toIPCDefnReply)
+
+            # decls.append(Whitespace.NL)
+            # ns.addstmts(decls)
+            ns.addstmts(decls_fuzz)
+
+        ns.addstmt(Whitespace.NL)
+
+    # Generate code for PFoo::CreateEndpoints.
+    def genEndpointFuncs(self):
+        p = self.protocol.decl.type
+        tparent = _cxxBareType(ActorType(p), "Parent", fq=True)
+        tchild = _cxxBareType(ActorType(p), "Child", fq=True)
+
+        def mkOverload(includepids):
+            params = []
+            if includepids:
+                params = [
+                    Decl(Type("mozilla::ipc::EndpointProcInfo"), "aParentDestInfo"),
+                    Decl(Type("mozilla::ipc::EndpointProcInfo"), "aChildDestInfo"),
+                ]
+            params += [
+                Decl(
+                    Type("mozilla::ipc::Endpoint<" + tparent.name + ">", ptr=True),
+                    "aParent",
+                ),
+                Decl(
+                    Type("mozilla::ipc::Endpoint<" + tchild.name + ">", ptr=True),
+                    "aChild",
+                ),
+            ]
+            openfunc = MethodDefn(
+                MethodDecl("CreateEndpoints", params=params, ret=Type.NSRESULT)
+            )
+            openfunc.addcode(
+                """
+                return mozilla::ipc::CreateEndpoints(
+                    mozilla::ipc::PrivateIPDLInterface(),
+                    $,{args});
+                """,
+                args=[ExprVar(d.name) for d in params],
+            )
+            return openfunc
+
+        funcs = [mkOverload(True)]
+        if not p.hasOtherPid():
+            funcs.append(mkOverload(False))
+        return funcs
+
+
+# --------------------------------------------------
+
+
 cppPriorityList = list(
     map(lambda src: src.upper() + "_PRIORITY", ipdl.ast.priorityList)
 )
 
+
+def _generateMsgToProtobuf(md, p, forReply=False):
+    ns = p.namespaces + [ipdl.ast.Namespace(loc="", namespace=md.namespace)]
+    if forReply:
+        msgName = md.replyCtorFunc()
+    else:
+        msgName = md.msgCtorFunc()
+    func = FunctionDefn(
+        FunctionDecl(
+            msgName + "_ToProtobuf",
+            params=[Decl(Type("mozilla::UniquePtr<IPC::Message>"), "msg")],
+            ret=Type(f"mozilla::UniquePtr<{_protobufGetName(msgName, ns)}>"),
+        )
+    )
+
+    # create protobuf object
+    func.addstmt(Decl(Type(f"mozilla::UniquePtr<{_protobufGetName(msgName, ns)}>"), "proto"))
+
+
+    return func
+
+def _generateMsgToIPC(md, p, forReply=False):
+    ns = p.namespaces + [ipdl.ast.Namespace(loc="", namespace=md.namespace)]
+    if forReply:
+        msgName = md.replyCtorFunc()
+    else:
+        msgName = md.msgCtorFunc()
+    func = FunctionDefn(
+        FunctionDecl(
+            msgName + "_ToIPC",
+            params=[Decl(Type(f"mozilla::UniquePtr<{_protobufGetName(msgName, ns)}>"), "proto")],
+            ret=Type("mozilla::UniquePtr<IPC::Message>"),
+        )
+    )
+    return func
 
 def _generateMessageConstructor(md, segmentSize, protocol, forReply=False):
     if forReply:
@@ -2647,54 +2992,15 @@ def _generateCxxStruct(sd):
 
             valmovector.memberinits = []
             for f in sd.fields_member_order():
-                proto_var = f.argVar()
+                arg = f.argVar()
                 if _cxxTypeCanMove(f.ipdltype):
-                    proto_var = ExprMove(proto_var)
+                    arg = ExprMove(arg)
                 valmovector.memberinits.append(
-                    ExprMemberInit(f.memberVar(), args=[proto_var])
+                    ExprMemberInit(f.memberVar(), args=[arg])
                 )
 
             struct.addstmts([valmovector, Whitespace.NL])
 
-
-    # build protobuf constructor
-    protobufCtor = ConstructorDefn(
-            ConstructorDecl(
-                sd.name,
-                params=[
-                    Decl(Type(_protobufGetName(sd), ref=True), "proto"
-                    )
-                ],
-            )
-        )
-
-    # protobufCtor.memberinits = []
-    # for f in sd.fields_member_order():
-    #     #pprint(vars(f))
-    #     proto_var = ExprVar("proto." + f.protobufVar() + "()")
-    #     if _protobufTypeIsScalar(f.ipdltype):
-    #         # case 1: scalar type
-    #         arg = ExprMove(proto_var)
-    #     elif f.ipdltype.isIPDL() and (f.ipdltype.isStruct() or f.ipdltype.isUnion()):
-    #         # case 2: struct or union
-    #         # recursively call protobuf constructor of struct / union
-    #         ctor = ExprVar("(" + proto_var + ")")
-    #         arg = ExprMove(proto_var)
-    #     else:
-    #         # case 3: some complex type which is given in serialized from
-    #         arg = ExprMove(proto_var)
-    #     protobufCtor.memberinits.append(
-    #         ExprMemberInit(f.memberVar(), args=[arg])
-    #     )
-
-    struct.addcode("""
-#ifdef FUZZING_SNAPSHOT_LPM
-""")
-    struct.addstmts([protobufCtor])
-    struct.addcode("""
-#endif
-
-""")
 
     # The default copy, move, and assignment constructors, and the default
     # destructor, will do the right thing.
@@ -2778,6 +3084,63 @@ def _generateCxxStruct(sd):
     )
 
     return forwarddeclstmts, fulldecltypes, struct
+
+
+def _generateCxxUnionProtobuf(sd):
+    func_toProto = FunctionDefn(
+        FunctionDecl(
+            sd.name + "_ToProtobuf",
+            params=[Decl(Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces, False)}>"), "ipc")],
+            ret=Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces)}>"),
+        )
+    )
+
+    func_toIPC = FunctionDefn(
+        FunctionDecl(
+            sd.name + "_ToIPC",
+            params=[Decl(Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces)}>"), "proto")],
+            ret=Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces, False)}>"),
+        )
+    )
+
+    return func_toProto, func_toIPC
+
+
+def _generateCxxStructProtobuf(sd):
+    func_toProto = FunctionDefn(
+        FunctionDecl(
+            sd.name + "_ToProtobuf",
+            params=[Decl(Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces, False)}>"), "ipc")],
+            ret=Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces)}>"),
+        )
+    )
+
+    func_toIPC = FunctionDefn(
+        FunctionDecl(
+            sd.name + "_ToIPC",
+            params=[Decl(Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces)}>"), "proto")],
+            ret=Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces, False)}>"),
+        )
+    )
+
+    stmts = []
+    for f in sd.fields_member_order():
+        #pprint(vars(f))
+        proto_var = ExprVar("proto." + f.protobufVar() + "()")
+        if _protobufTypeIsScalar(f.ipdltype):
+            # case 1: scalar type
+            stmts.append(StmtDecl(ExprAssn(f.memberVar(), proto_var)))
+        elif f.ipdltype.isIPDL() and (f.ipdltype.isStruct() or f.ipdltype.isUnion()):
+            # case 2: struct or union
+            # recursively call protobuf constructor of struct / union
+            stmts.append(StmtDecl(ExprMove(proto_var)))
+        else:
+            # case 3: some complex type which is given in serialized from
+            stmts.append(StmtDecl(ExprMove(proto_var)))
+    func_toIPC.addstmts(stmts)
+
+    return func_toProto, func_toIPC
+
 
 
 def _effectiveMemberType(f):
@@ -3050,17 +3413,6 @@ def _generateCxxUnion(ud):
         ConstructorDecl(ud.name, params=[Decl(rvalueRefClsType, othervar.name)])
     )
 
-    # build protobuf constructor
-    protobufCtor = ConstructorDefn(
-            ConstructorDecl(
-                ud.name,
-                params=[
-                    Decl(Type(_protobufGetName(ud), ref=True), "proto"
-                    )
-                ],
-            )
-        )
-
     othertypevar = ExprVar("t")
     moveswitch = StmtSwitch(othertypevar)
     for c in ud.components:
@@ -3112,16 +3464,6 @@ def _generateCxxUnion(ud):
         ]
     )
     cls.addstmts([movector, Whitespace.NL])
-
-    cls.addcode("""
-#ifdef FUZZING_SNAPSHOT_LPM
-""")
-    cls.addstmts([protobufCtor])
-    cls.addcode("""
-#endif
-
-""")
-
 
     # ~Union()
     dtor = DestructorDefn(DestructorDecl(ud.name))

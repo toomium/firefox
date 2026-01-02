@@ -1,7 +1,0 @@
-syntax = "proto2";
-
-option optimize_for = LITE_RUNTIME;
-
-message ExtProtocolChannelConnectParent {
-        optional uint64 registrarId = 1;
-}
