@@ -116,7 +116,7 @@ GoogleSOCSCookie_extraData::GoogleSOCSCookie_extraData(const GoogleSOCSCookie_ex
     _impl_.platform_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_platform()) {
-    _this->_impl_.platform_.Set(from._internal_platform(),
+    _this->_impl_.platform_.Set(from._internal_platform(), 
       _this->GetArenaForAllocation());
   }
   _impl_.region_.InitDefault();
@@ -124,7 +124,7 @@ GoogleSOCSCookie_extraData::GoogleSOCSCookie_extraData(const GoogleSOCSCookie_ex
     _impl_.region_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_region()) {
-    _this->_impl_.region_.Set(from._internal_region(),
+    _this->_impl_.region_.Set(from._internal_region(), 
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.unused1_, &from._impl_.unused1_,

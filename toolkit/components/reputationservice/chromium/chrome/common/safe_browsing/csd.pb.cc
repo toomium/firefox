@@ -2837,7 +2837,7 @@ ClientPhishingRequest_Feature::ClientPhishingRequest_Feature(const ClientPhishin
     _impl_.name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(),
+    _this->_impl_.name_.Set(from._internal_name(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.value_ = from._impl_.value_;
@@ -3141,7 +3141,7 @@ ClientPhishingRequest::ClientPhishingRequest(const ClientPhishingRequest& from)
     _impl_.url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_url()) {
-    _this->_impl_.url_.Set(from._internal_url(),
+    _this->_impl_.url_.Set(from._internal_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.obsolete_referrer_url_.InitDefault();
@@ -3149,7 +3149,7 @@ ClientPhishingRequest::ClientPhishingRequest(const ClientPhishingRequest& from)
     _impl_.obsolete_referrer_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_obsolete_referrer_url()) {
-    _this->_impl_.obsolete_referrer_url_.Set(from._internal_obsolete_referrer_url(),
+    _this->_impl_.obsolete_referrer_url_.Set(from._internal_obsolete_referrer_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.obsolete_hash_prefix_.InitDefault();
@@ -3157,7 +3157,7 @@ ClientPhishingRequest::ClientPhishingRequest(const ClientPhishingRequest& from)
     _impl_.obsolete_hash_prefix_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_obsolete_hash_prefix()) {
-    _this->_impl_.obsolete_hash_prefix_.Set(from._internal_obsolete_hash_prefix(),
+    _this->_impl_.obsolete_hash_prefix_.Set(from._internal_obsolete_hash_prefix(), 
       _this->GetArenaForAllocation());
   }
   _impl_.model_filename_.InitDefault();
@@ -3165,7 +3165,7 @@ ClientPhishingRequest::ClientPhishingRequest(const ClientPhishingRequest& from)
     _impl_.model_filename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_model_filename()) {
-    _this->_impl_.model_filename_.Set(from._internal_model_filename(),
+    _this->_impl_.model_filename_.Set(from._internal_model_filename(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_population()) {
@@ -3983,7 +3983,7 @@ ClientMalwareRequest_UrlInfo::ClientMalwareRequest_UrlInfo(const ClientMalwareRe
     _impl_.ip_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_ip()) {
-    _this->_impl_.ip_.Set(from._internal_ip(),
+    _this->_impl_.ip_.Set(from._internal_ip(), 
       _this->GetArenaForAllocation());
   }
   _impl_.url_.InitDefault();
@@ -3991,7 +3991,7 @@ ClientMalwareRequest_UrlInfo::ClientMalwareRequest_UrlInfo(const ClientMalwareRe
     _impl_.url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_url()) {
-    _this->_impl_.url_.Set(from._internal_url(),
+    _this->_impl_.url_.Set(from._internal_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.method_.InitDefault();
@@ -3999,7 +3999,7 @@ ClientMalwareRequest_UrlInfo::ClientMalwareRequest_UrlInfo(const ClientMalwareRe
     _impl_.method_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_method()) {
-    _this->_impl_.method_.Set(from._internal_method(),
+    _this->_impl_.method_.Set(from._internal_method(), 
       _this->GetArenaForAllocation());
   }
   _impl_.referrer_.InitDefault();
@@ -4007,7 +4007,7 @@ ClientMalwareRequest_UrlInfo::ClientMalwareRequest_UrlInfo(const ClientMalwareRe
     _impl_.referrer_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_referrer()) {
-    _this->_impl_.referrer_.Set(from._internal_referrer(),
+    _this->_impl_.referrer_.Set(from._internal_referrer(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.resource_type_ = from._impl_.resource_type_;
@@ -4409,7 +4409,7 @@ ClientMalwareRequest::ClientMalwareRequest(const ClientMalwareRequest& from)
     _impl_.url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_url()) {
-    _this->_impl_.url_.Set(from._internal_url(),
+    _this->_impl_.url_.Set(from._internal_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.referrer_url_.InitDefault();
@@ -4417,7 +4417,7 @@ ClientMalwareRequest::ClientMalwareRequest(const ClientMalwareRequest& from)
     _impl_.referrer_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_referrer_url()) {
-    _this->_impl_.referrer_url_.Set(from._internal_referrer_url(),
+    _this->_impl_.referrer_url_.Set(from._internal_referrer_url(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_population()) {
@@ -4752,7 +4752,7 @@ LoginReputationClientRequest_Frame_Form::LoginReputationClientRequest_Frame_Form
     _impl_.action_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_action_url()) {
-    _this->_impl_.action_url_.Set(from._internal_action_url(),
+    _this->_impl_.action_url_.Set(from._internal_action_url(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.has_password_field_ = from._impl_.has_password_field_;
@@ -5014,7 +5014,7 @@ LoginReputationClientRequest_Frame::LoginReputationClientRequest_Frame(const Log
     _impl_.url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_url()) {
-    _this->_impl_.url_.Set(from._internal_url(),
+    _this->_impl_.url_.Set(from._internal_url(), 
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.frame_index_, &from._impl_.frame_index_,
@@ -5725,7 +5725,7 @@ LoginReputationClientRequest::LoginReputationClientRequest(const LoginReputation
     _impl_.page_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_page_url()) {
-    _this->_impl_.page_url_.Set(from._internal_page_url(),
+    _this->_impl_.page_url_.Set(from._internal_page_url(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_password_reuse_event()) {
@@ -6159,7 +6159,7 @@ LoginReputationClientResponse::LoginReputationClientResponse(const LoginReputati
     _impl_.cache_expression_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_cache_expression()) {
-    _this->_impl_.cache_expression_.Set(from._internal_cache_expression(),
+    _this->_impl_.cache_expression_.Set(from._internal_cache_expression(), 
       _this->GetArenaForAllocation());
   }
   _impl_.verdict_token_.InitDefault();
@@ -6167,7 +6167,7 @@ LoginReputationClientResponse::LoginReputationClientResponse(const LoginReputati
     _impl_.verdict_token_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_verdict_token()) {
-    _this->_impl_.verdict_token_.Set(from._internal_verdict_token(),
+    _this->_impl_.verdict_token_.Set(from._internal_verdict_token(), 
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.cache_duration_sec_, &from._impl_.cache_duration_sec_,
@@ -6531,7 +6531,7 @@ ClientMalwareResponse::ClientMalwareResponse(const ClientMalwareResponse& from)
     _impl_.bad_ip_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_bad_ip()) {
-    _this->_impl_.bad_ip_.Set(from._internal_bad_ip(),
+    _this->_impl_.bad_ip_.Set(from._internal_bad_ip(), 
       _this->GetArenaForAllocation());
   }
   _impl_.bad_url_.InitDefault();
@@ -6539,7 +6539,7 @@ ClientMalwareResponse::ClientMalwareResponse(const ClientMalwareResponse& from)
     _impl_.bad_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_bad_url()) {
-    _this->_impl_.bad_url_.Set(from._internal_bad_url(),
+    _this->_impl_.bad_url_.Set(from._internal_bad_url(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.blacklist_ = from._impl_.blacklist_;
@@ -6835,7 +6835,7 @@ ClientDownloadRequest_Digests::ClientDownloadRequest_Digests(const ClientDownloa
     _impl_.sha256_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_sha256()) {
-    _this->_impl_.sha256_.Set(from._internal_sha256(),
+    _this->_impl_.sha256_.Set(from._internal_sha256(), 
       _this->GetArenaForAllocation());
   }
   _impl_.sha1_.InitDefault();
@@ -6843,7 +6843,7 @@ ClientDownloadRequest_Digests::ClientDownloadRequest_Digests(const ClientDownloa
     _impl_.sha1_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_sha1()) {
-    _this->_impl_.sha1_.Set(from._internal_sha1(),
+    _this->_impl_.sha1_.Set(from._internal_sha1(), 
       _this->GetArenaForAllocation());
   }
   _impl_.md5_.InitDefault();
@@ -6851,7 +6851,7 @@ ClientDownloadRequest_Digests::ClientDownloadRequest_Digests(const ClientDownloa
     _impl_.md5_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_md5()) {
-    _this->_impl_.md5_.Set(from._internal_md5(),
+    _this->_impl_.md5_.Set(from._internal_md5(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.ClientDownloadRequest.Digests)
@@ -7164,7 +7164,7 @@ ClientDownloadRequest_Resource::ClientDownloadRequest_Resource(const ClientDownl
     _impl_.url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_url()) {
-    _this->_impl_.url_.Set(from._internal_url(),
+    _this->_impl_.url_.Set(from._internal_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.remote_ip_.InitDefault();
@@ -7172,7 +7172,7 @@ ClientDownloadRequest_Resource::ClientDownloadRequest_Resource(const ClientDownl
     _impl_.remote_ip_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_remote_ip()) {
-    _this->_impl_.remote_ip_.Set(from._internal_remote_ip(),
+    _this->_impl_.remote_ip_.Set(from._internal_remote_ip(), 
       _this->GetArenaForAllocation());
   }
   _impl_.referrer_.InitDefault();
@@ -7180,7 +7180,7 @@ ClientDownloadRequest_Resource::ClientDownloadRequest_Resource(const ClientDownl
     _impl_.referrer_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_referrer()) {
-    _this->_impl_.referrer_.Set(from._internal_referrer(),
+    _this->_impl_.referrer_.Set(from._internal_referrer(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.type_ = from._impl_.type_;
@@ -7532,7 +7532,7 @@ ClientDownloadRequest_CertificateChain_Element::ClientDownloadRequest_Certificat
     _impl_.certificate_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_certificate()) {
-    _this->_impl_.certificate_.Set(from._internal_certificate(),
+    _this->_impl_.certificate_.Set(from._internal_certificate(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.ClientDownloadRequest.CertificateChain.Element)
@@ -7941,7 +7941,7 @@ ClientDownloadRequest_ExtendedAttr::ClientDownloadRequest_ExtendedAttr(const Cli
     _impl_.key_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_key()) {
-    _this->_impl_.key_.Set(from._internal_key(),
+    _this->_impl_.key_.Set(from._internal_key(), 
       _this->GetArenaForAllocation());
   }
   _impl_.value_.InitDefault();
@@ -7949,7 +7949,7 @@ ClientDownloadRequest_ExtendedAttr::ClientDownloadRequest_ExtendedAttr(const Cli
     _impl_.value_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_value()) {
-    _this->_impl_.value_.Set(from._internal_value(),
+    _this->_impl_.value_.Set(from._internal_value(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.ClientDownloadRequest.ExtendedAttr)
@@ -8508,7 +8508,7 @@ ClientDownloadRequest_PEImageHeaders_DebugData::ClientDownloadRequest_PEImageHea
     _impl_.directory_entry_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_directory_entry()) {
-    _this->_impl_.directory_entry_.Set(from._internal_directory_entry(),
+    _this->_impl_.directory_entry_.Set(from._internal_directory_entry(), 
       _this->GetArenaForAllocation());
   }
   _impl_.raw_data_.InitDefault();
@@ -8516,7 +8516,7 @@ ClientDownloadRequest_PEImageHeaders_DebugData::ClientDownloadRequest_PEImageHea
     _impl_.raw_data_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_raw_data()) {
-    _this->_impl_.raw_data_.Set(from._internal_raw_data(),
+    _this->_impl_.raw_data_.Set(from._internal_raw_data(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.ClientDownloadRequest.PEImageHeaders.DebugData)
@@ -8794,7 +8794,7 @@ ClientDownloadRequest_PEImageHeaders::ClientDownloadRequest_PEImageHeaders(const
     _impl_.dos_header_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_dos_header()) {
-    _this->_impl_.dos_header_.Set(from._internal_dos_header(),
+    _this->_impl_.dos_header_.Set(from._internal_dos_header(), 
       _this->GetArenaForAllocation());
   }
   _impl_.file_header_.InitDefault();
@@ -8802,7 +8802,7 @@ ClientDownloadRequest_PEImageHeaders::ClientDownloadRequest_PEImageHeaders(const
     _impl_.file_header_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_file_header()) {
-    _this->_impl_.file_header_.Set(from._internal_file_header(),
+    _this->_impl_.file_header_.Set(from._internal_file_header(), 
       _this->GetArenaForAllocation());
   }
   _impl_.optional_headers32_.InitDefault();
@@ -8810,7 +8810,7 @@ ClientDownloadRequest_PEImageHeaders::ClientDownloadRequest_PEImageHeaders(const
     _impl_.optional_headers32_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_optional_headers32()) {
-    _this->_impl_.optional_headers32_.Set(from._internal_optional_headers32(),
+    _this->_impl_.optional_headers32_.Set(from._internal_optional_headers32(), 
       _this->GetArenaForAllocation());
   }
   _impl_.optional_headers64_.InitDefault();
@@ -8818,7 +8818,7 @@ ClientDownloadRequest_PEImageHeaders::ClientDownloadRequest_PEImageHeaders(const
     _impl_.optional_headers64_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_optional_headers64()) {
-    _this->_impl_.optional_headers64_.Set(from._internal_optional_headers64(),
+    _this->_impl_.optional_headers64_.Set(from._internal_optional_headers64(), 
       _this->GetArenaForAllocation());
   }
   _impl_.export_section_data_.InitDefault();
@@ -8826,7 +8826,7 @@ ClientDownloadRequest_PEImageHeaders::ClientDownloadRequest_PEImageHeaders(const
     _impl_.export_section_data_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_export_section_data()) {
-    _this->_impl_.export_section_data_.Set(from._internal_export_section_data(),
+    _this->_impl_.export_section_data_.Set(from._internal_export_section_data(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.ClientDownloadRequest.PEImageHeaders)
@@ -9273,7 +9273,7 @@ ClientDownloadRequest_MachOHeaders_LoadCommand::ClientDownloadRequest_MachOHeade
     _impl_.command_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_command()) {
-    _this->_impl_.command_.Set(from._internal_command(),
+    _this->_impl_.command_.Set(from._internal_command(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.command_id_ = from._impl_.command_id_;
@@ -9541,7 +9541,7 @@ ClientDownloadRequest_MachOHeaders::ClientDownloadRequest_MachOHeaders(const Cli
     _impl_.mach_header_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_mach_header()) {
-    _this->_impl_.mach_header_.Set(from._internal_mach_header(),
+    _this->_impl_.mach_header_.Set(from._internal_mach_header(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.ClientDownloadRequest.MachOHeaders)
@@ -10069,7 +10069,7 @@ ClientDownloadRequest_ArchivedBinary::ClientDownloadRequest_ArchivedBinary(const
     _impl_.file_basename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_file_basename()) {
-    _this->_impl_.file_basename_.Set(from._internal_file_basename(),
+    _this->_impl_.file_basename_.Set(from._internal_file_basename(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_digests()) {
@@ -10554,7 +10554,7 @@ ClientDownloadRequest::ClientDownloadRequest(const ClientDownloadRequest& from)
     _impl_.url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_url()) {
-    _this->_impl_.url_.Set(from._internal_url(),
+    _this->_impl_.url_.Set(from._internal_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.file_basename_.InitDefault();
@@ -10562,7 +10562,7 @@ ClientDownloadRequest::ClientDownloadRequest(const ClientDownloadRequest& from)
     _impl_.file_basename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_file_basename()) {
-    _this->_impl_.file_basename_.Set(from._internal_file_basename(),
+    _this->_impl_.file_basename_.Set(from._internal_file_basename(), 
       _this->GetArenaForAllocation());
   }
   _impl_.locale_.InitDefault();
@@ -10570,7 +10570,7 @@ ClientDownloadRequest::ClientDownloadRequest(const ClientDownloadRequest& from)
     _impl_.locale_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_locale()) {
-    _this->_impl_.locale_.Set(from._internal_locale(),
+    _this->_impl_.locale_.Set(from._internal_locale(), 
       _this->GetArenaForAllocation());
   }
   _impl_.udif_code_signature_.InitDefault();
@@ -10578,7 +10578,7 @@ ClientDownloadRequest::ClientDownloadRequest(const ClientDownloadRequest& from)
     _impl_.udif_code_signature_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_udif_code_signature()) {
-    _this->_impl_.udif_code_signature_.Set(from._internal_udif_code_signature(),
+    _this->_impl_.udif_code_signature_.Set(from._internal_udif_code_signature(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_digests()) {
@@ -11415,7 +11415,7 @@ ReferrerChainEntry_ServerRedirect::ReferrerChainEntry_ServerRedirect(const Refer
     _impl_.url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_url()) {
-    _this->_impl_.url_.Set(from._internal_url(),
+    _this->_impl_.url_.Set(from._internal_url(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.ReferrerChainEntry.ServerRedirect)
@@ -11656,7 +11656,7 @@ ReferrerChainEntry::ReferrerChainEntry(const ReferrerChainEntry& from)
     _impl_.url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_url()) {
-    _this->_impl_.url_.Set(from._internal_url(),
+    _this->_impl_.url_.Set(from._internal_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.referrer_url_.InitDefault();
@@ -11664,7 +11664,7 @@ ReferrerChainEntry::ReferrerChainEntry(const ReferrerChainEntry& from)
     _impl_.referrer_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_referrer_url()) {
-    _this->_impl_.referrer_url_.Set(from._internal_referrer_url(),
+    _this->_impl_.referrer_url_.Set(from._internal_referrer_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.referrer_main_frame_url_.InitDefault();
@@ -11672,7 +11672,7 @@ ReferrerChainEntry::ReferrerChainEntry(const ReferrerChainEntry& from)
     _impl_.referrer_main_frame_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_referrer_main_frame_url()) {
-    _this->_impl_.referrer_main_frame_url_.Set(from._internal_referrer_main_frame_url(),
+    _this->_impl_.referrer_main_frame_url_.Set(from._internal_referrer_main_frame_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.main_frame_url_.InitDefault();
@@ -11680,7 +11680,7 @@ ReferrerChainEntry::ReferrerChainEntry(const ReferrerChainEntry& from)
     _impl_.main_frame_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_main_frame_url()) {
-    _this->_impl_.main_frame_url_.Set(from._internal_main_frame_url(),
+    _this->_impl_.main_frame_url_.Set(from._internal_main_frame_url(), 
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.navigation_time_msec_, &from._impl_.navigation_time_msec_,
@@ -12181,7 +12181,7 @@ ClientDownloadResponse_MoreInfo::ClientDownloadResponse_MoreInfo(const ClientDow
     _impl_.description_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_description()) {
-    _this->_impl_.description_.Set(from._internal_description(),
+    _this->_impl_.description_.Set(from._internal_description(), 
       _this->GetArenaForAllocation());
   }
   _impl_.url_.InitDefault();
@@ -12189,7 +12189,7 @@ ClientDownloadResponse_MoreInfo::ClientDownloadResponse_MoreInfo(const ClientDow
     _impl_.url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_url()) {
-    _this->_impl_.url_.Set(from._internal_url(),
+    _this->_impl_.url_.Set(from._internal_url(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.ClientDownloadResponse.MoreInfo)
@@ -12466,7 +12466,7 @@ ClientDownloadResponse::ClientDownloadResponse(const ClientDownloadResponse& fro
     _impl_.token_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_token()) {
-    _this->_impl_.token_.Set(from._internal_token(),
+    _this->_impl_.token_.Set(from._internal_token(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_more_info()) {
@@ -12792,7 +12792,7 @@ ClientDownloadReport_UserInformation::ClientDownloadReport_UserInformation(const
     _impl_.email_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_email()) {
-    _this->_impl_.email_.Set(from._internal_email(),
+    _this->_impl_.email_.Set(from._internal_email(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.ClientDownloadReport.UserInformation)
@@ -13038,7 +13038,7 @@ ClientDownloadReport::ClientDownloadReport(const ClientDownloadReport& from)
     _impl_.comment_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_comment()) {
-    _this->_impl_.comment_.Set(from._internal_comment(),
+    _this->_impl_.comment_.Set(from._internal_comment(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_download_request()) {
@@ -13411,7 +13411,7 @@ ClientUploadResponse::ClientUploadResponse(const ClientUploadResponse& from)
     _impl_.permalink_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_permalink()) {
-    _this->_impl_.permalink_.Set(from._internal_permalink(),
+    _this->_impl_.permalink_.Set(from._internal_permalink(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.status_ = from._impl_.status_;
@@ -13674,7 +13674,7 @@ ClientIncidentReport_IncidentData_TrackedPreferenceIncident::ClientIncidentRepor
     _impl_.path_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_path()) {
-    _this->_impl_.path_.Set(from._internal_path(),
+    _this->_impl_.path_.Set(from._internal_path(), 
       _this->GetArenaForAllocation());
   }
   _impl_.atomic_value_.InitDefault();
@@ -13682,7 +13682,7 @@ ClientIncidentReport_IncidentData_TrackedPreferenceIncident::ClientIncidentRepor
     _impl_.atomic_value_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_atomic_value()) {
-    _this->_impl_.atomic_value_.Set(from._internal_atomic_value(),
+    _this->_impl_.atomic_value_.Set(from._internal_atomic_value(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.value_state_ = from._impl_.value_state_;
@@ -14027,7 +14027,7 @@ ClientIncidentReport_IncidentData_BinaryIntegrityIncident_ContainedFile::ClientI
     _impl_.relative_path_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_relative_path()) {
-    _this->_impl_.relative_path_.Set(from._internal_relative_path(),
+    _this->_impl_.relative_path_.Set(from._internal_relative_path(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_signature()) {
@@ -14354,7 +14354,7 @@ ClientIncidentReport_IncidentData_BinaryIntegrityIncident::ClientIncidentReport_
     _impl_.file_basename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_file_basename()) {
-    _this->_impl_.file_basename_.Set(from._internal_file_basename(),
+    _this->_impl_.file_basename_.Set(from._internal_file_basename(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_signature()) {
@@ -14728,7 +14728,7 @@ ClientIncidentReport_IncidentData_ResourceRequestIncident::ClientIncidentReport_
     _impl_.digest_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_digest()) {
-    _this->_impl_.digest_.Set(from._internal_digest(),
+    _this->_impl_.digest_.Set(from._internal_digest(), 
       _this->GetArenaForAllocation());
   }
   _impl_.origin_.InitDefault();
@@ -14736,7 +14736,7 @@ ClientIncidentReport_IncidentData_ResourceRequestIncident::ClientIncidentReport_
     _impl_.origin_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_origin()) {
-    _this->_impl_.origin_.Set(from._internal_origin(),
+    _this->_impl_.origin_.Set(from._internal_origin(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.type_ = from._impl_.type_;
@@ -15389,7 +15389,7 @@ ClientIncidentReport_DownloadDetails::ClientIncidentReport_DownloadDetails(const
     _impl_.token_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_token()) {
-    _this->_impl_.token_.Set(from._internal_token(),
+    _this->_impl_.token_.Set(from._internal_token(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_download()) {
@@ -15720,7 +15720,7 @@ ClientIncidentReport_EnvironmentData_OS_RegistryValue::ClientIncidentReport_Envi
     _impl_.name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(),
+    _this->_impl_.name_.Set(from._internal_name(), 
       _this->GetArenaForAllocation());
   }
   _impl_.data_.InitDefault();
@@ -15728,7 +15728,7 @@ ClientIncidentReport_EnvironmentData_OS_RegistryValue::ClientIncidentReport_Envi
     _impl_.data_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_data()) {
-    _this->_impl_.data_.Set(from._internal_data(),
+    _this->_impl_.data_.Set(from._internal_data(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.type_ = from._impl_.type_;
@@ -16018,7 +16018,7 @@ ClientIncidentReport_EnvironmentData_OS_RegistryKey::ClientIncidentReport_Enviro
     _impl_.name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(),
+    _this->_impl_.name_.Set(from._internal_name(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.ClientIncidentReport.EnvironmentData.OS.RegistryKey)
@@ -16308,7 +16308,7 @@ ClientIncidentReport_EnvironmentData_OS::ClientIncidentReport_EnvironmentData_OS
     _impl_.os_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_os_name()) {
-    _this->_impl_.os_name_.Set(from._internal_os_name(),
+    _this->_impl_.os_name_.Set(from._internal_os_name(), 
       _this->GetArenaForAllocation());
   }
   _impl_.os_version_.InitDefault();
@@ -16316,7 +16316,7 @@ ClientIncidentReport_EnvironmentData_OS::ClientIncidentReport_EnvironmentData_OS
     _impl_.os_version_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_os_version()) {
-    _this->_impl_.os_version_.Set(from._internal_os_version(),
+    _this->_impl_.os_version_.Set(from._internal_os_version(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.is_enrolled_to_domain_ = from._impl_.is_enrolled_to_domain_;
@@ -16645,7 +16645,7 @@ ClientIncidentReport_EnvironmentData_Machine::ClientIncidentReport_EnvironmentDa
     _impl_.cpu_architecture_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_cpu_architecture()) {
-    _this->_impl_.cpu_architecture_.Set(from._internal_cpu_architecture(),
+    _this->_impl_.cpu_architecture_.Set(from._internal_cpu_architecture(), 
       _this->GetArenaForAllocation());
   }
   _impl_.cpu_vendor_.InitDefault();
@@ -16653,7 +16653,7 @@ ClientIncidentReport_EnvironmentData_Machine::ClientIncidentReport_EnvironmentDa
     _impl_.cpu_vendor_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_cpu_vendor()) {
-    _this->_impl_.cpu_vendor_.Set(from._internal_cpu_vendor(),
+    _this->_impl_.cpu_vendor_.Set(from._internal_cpu_vendor(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.cpuid_ = from._impl_.cpuid_;
@@ -16945,7 +16945,7 @@ ClientIncidentReport_EnvironmentData_Process_Patch::ClientIncidentReport_Environ
     _impl_.function_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_function()) {
-    _this->_impl_.function_.Set(from._internal_function(),
+    _this->_impl_.function_.Set(from._internal_function(), 
       _this->GetArenaForAllocation());
   }
   _impl_.target_dll_.InitDefault();
@@ -16953,7 +16953,7 @@ ClientIncidentReport_EnvironmentData_Process_Patch::ClientIncidentReport_Environ
     _impl_.target_dll_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_target_dll()) {
-    _this->_impl_.target_dll_.Set(from._internal_target_dll(),
+    _this->_impl_.target_dll_.Set(from._internal_target_dll(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.ClientIncidentReport.EnvironmentData.Process.Patch)
@@ -17379,7 +17379,7 @@ ClientIncidentReport_EnvironmentData_Process_Dll::ClientIncidentReport_Environme
     _impl_.path_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_path()) {
-    _this->_impl_.path_.Set(from._internal_path(),
+    _this->_impl_.path_.Set(from._internal_path(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_image_headers()) {
@@ -17757,7 +17757,7 @@ ClientIncidentReport_EnvironmentData_Process_ModuleState_Modification::ClientInc
     _impl_.modified_bytes_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_modified_bytes()) {
-    _this->_impl_.modified_bytes_.Set(from._internal_modified_bytes(),
+    _this->_impl_.modified_bytes_.Set(from._internal_modified_bytes(), 
       _this->GetArenaForAllocation());
   }
   _impl_.export_name_.InitDefault();
@@ -17765,7 +17765,7 @@ ClientIncidentReport_EnvironmentData_Process_ModuleState_Modification::ClientInc
     _impl_.export_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_export_name()) {
-    _this->_impl_.export_name_.Set(from._internal_export_name(),
+    _this->_impl_.export_name_.Set(from._internal_export_name(), 
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.file_offset_, &from._impl_.file_offset_,
@@ -18094,7 +18094,7 @@ ClientIncidentReport_EnvironmentData_Process_ModuleState::ClientIncidentReport_E
     _impl_.name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(),
+    _this->_impl_.name_.Set(from._internal_name(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.modified_state_ = from._impl_.modified_state_;
@@ -18440,7 +18440,7 @@ ClientIncidentReport_EnvironmentData_Process::ClientIncidentReport_EnvironmentDa
     _impl_.version_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_version()) {
-    _this->_impl_.version_.Set(from._internal_version(),
+    _this->_impl_.version_.Set(from._internal_version(), 
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.uptime_msec_, &from._impl_.uptime_msec_,
@@ -19384,7 +19384,7 @@ ClientIncidentReport_ExtensionData_ExtensionInfo::ClientIncidentReport_Extension
     _impl_.id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_id()) {
-    _this->_impl_.id_.Set(from._internal_id(),
+    _this->_impl_.id_.Set(from._internal_id(), 
       _this->GetArenaForAllocation());
   }
   _impl_.version_.InitDefault();
@@ -19392,7 +19392,7 @@ ClientIncidentReport_ExtensionData_ExtensionInfo::ClientIncidentReport_Extension
     _impl_.version_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_version()) {
-    _this->_impl_.version_.Set(from._internal_version(),
+    _this->_impl_.version_.Set(from._internal_version(), 
       _this->GetArenaForAllocation());
   }
   _impl_.name_.InitDefault();
@@ -19400,7 +19400,7 @@ ClientIncidentReport_ExtensionData_ExtensionInfo::ClientIncidentReport_Extension
     _impl_.name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(),
+    _this->_impl_.name_.Set(from._internal_name(), 
       _this->GetArenaForAllocation());
   }
   _impl_.description_.InitDefault();
@@ -19408,7 +19408,7 @@ ClientIncidentReport_ExtensionData_ExtensionInfo::ClientIncidentReport_Extension
     _impl_.description_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_description()) {
-    _this->_impl_.description_.Set(from._internal_description(),
+    _this->_impl_.description_.Set(from._internal_description(), 
       _this->GetArenaForAllocation());
   }
   _impl_.update_url_.InitDefault();
@@ -19416,7 +19416,7 @@ ClientIncidentReport_ExtensionData_ExtensionInfo::ClientIncidentReport_Extension
     _impl_.update_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_update_url()) {
-    _this->_impl_.update_url_.Set(from._internal_update_url(),
+    _this->_impl_.update_url_.Set(from._internal_update_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.manifest_.InitDefault();
@@ -19424,7 +19424,7 @@ ClientIncidentReport_ExtensionData_ExtensionInfo::ClientIncidentReport_Extension
     _impl_.manifest_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_manifest()) {
-    _this->_impl_.manifest_.Set(from._internal_manifest(),
+    _this->_impl_.manifest_.Set(from._internal_manifest(), 
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.state_, &from._impl_.state_,
@@ -20413,7 +20413,7 @@ ClientIncidentReport_NonBinaryDownloadDetails::ClientIncidentReport_NonBinaryDow
     _impl_.file_type_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_file_type()) {
-    _this->_impl_.file_type_.Set(from._internal_file_type(),
+    _this->_impl_.file_type_.Set(from._internal_file_type(), 
       _this->GetArenaForAllocation());
   }
   _impl_.url_spec_sha256_.InitDefault();
@@ -20421,7 +20421,7 @@ ClientIncidentReport_NonBinaryDownloadDetails::ClientIncidentReport_NonBinaryDow
     _impl_.url_spec_sha256_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_url_spec_sha256()) {
-    _this->_impl_.url_spec_sha256_.Set(from._internal_url_spec_sha256(),
+    _this->_impl_.url_spec_sha256_.Set(from._internal_url_spec_sha256(), 
       _this->GetArenaForAllocation());
   }
   _impl_.host_.InitDefault();
@@ -20429,7 +20429,7 @@ ClientIncidentReport_NonBinaryDownloadDetails::ClientIncidentReport_NonBinaryDow
     _impl_.host_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_host()) {
-    _this->_impl_.host_.Set(from._internal_host(),
+    _this->_impl_.host_.Set(from._internal_host(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.length_ = from._impl_.length_;
@@ -21391,7 +21391,7 @@ ClientIncidentResponse::ClientIncidentResponse(const ClientIncidentResponse& fro
     _impl_.token_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_token()) {
-    _this->_impl_.token_.Set(from._internal_token(),
+    _this->_impl_.token_.Set(from._internal_token(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.download_requested_ = from._impl_.download_requested_;
@@ -21931,7 +21931,7 @@ ClientSafeBrowsingReportRequest_HTTPHeader::ClientSafeBrowsingReportRequest_HTTP
     _impl_.name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(),
+    _this->_impl_.name_.Set(from._internal_name(), 
       _this->GetArenaForAllocation());
   }
   _impl_.value_.InitDefault();
@@ -21939,7 +21939,7 @@ ClientSafeBrowsingReportRequest_HTTPHeader::ClientSafeBrowsingReportRequest_HTTP
     _impl_.value_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_value()) {
-    _this->_impl_.value_.Set(from._internal_value(),
+    _this->_impl_.value_.Set(from._internal_value(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.ClientSafeBrowsingReportRequest.HTTPHeader)
@@ -22205,7 +22205,7 @@ ClientSafeBrowsingReportRequest_HTTPRequest_FirstLine::ClientSafeBrowsingReportR
     _impl_.verb_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_verb()) {
-    _this->_impl_.verb_.Set(from._internal_verb(),
+    _this->_impl_.verb_.Set(from._internal_verb(), 
       _this->GetArenaForAllocation());
   }
   _impl_.uri_.InitDefault();
@@ -22213,7 +22213,7 @@ ClientSafeBrowsingReportRequest_HTTPRequest_FirstLine::ClientSafeBrowsingReportR
     _impl_.uri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_uri()) {
-    _this->_impl_.uri_.Set(from._internal_uri(),
+    _this->_impl_.uri_.Set(from._internal_uri(), 
       _this->GetArenaForAllocation());
   }
   _impl_.version_.InitDefault();
@@ -22221,7 +22221,7 @@ ClientSafeBrowsingReportRequest_HTTPRequest_FirstLine::ClientSafeBrowsingReportR
     _impl_.version_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_version()) {
-    _this->_impl_.version_.Set(from._internal_version(),
+    _this->_impl_.version_.Set(from._internal_version(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.ClientSafeBrowsingReportRequest.HTTPRequest.FirstLine)
@@ -22537,7 +22537,7 @@ ClientSafeBrowsingReportRequest_HTTPRequest::ClientSafeBrowsingReportRequest_HTT
     _impl_.body_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_body()) {
-    _this->_impl_.body_.Set(from._internal_body(),
+    _this->_impl_.body_.Set(from._internal_body(), 
       _this->GetArenaForAllocation());
   }
   _impl_.bodydigest_.InitDefault();
@@ -22545,7 +22545,7 @@ ClientSafeBrowsingReportRequest_HTTPRequest::ClientSafeBrowsingReportRequest_HTT
     _impl_.bodydigest_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_bodydigest()) {
-    _this->_impl_.bodydigest_.Set(from._internal_bodydigest(),
+    _this->_impl_.bodydigest_.Set(from._internal_bodydigest(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_firstline()) {
@@ -22916,7 +22916,7 @@ ClientSafeBrowsingReportRequest_HTTPResponse_FirstLine::ClientSafeBrowsingReport
     _impl_.message_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_message()) {
-    _this->_impl_.message_.Set(from._internal_message(),
+    _this->_impl_.message_.Set(from._internal_message(), 
       _this->GetArenaForAllocation());
   }
   _impl_.version_.InitDefault();
@@ -22924,7 +22924,7 @@ ClientSafeBrowsingReportRequest_HTTPResponse_FirstLine::ClientSafeBrowsingReport
     _impl_.version_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_version()) {
-    _this->_impl_.version_.Set(from._internal_version(),
+    _this->_impl_.version_.Set(from._internal_version(), 
       _this->GetArenaForAllocation());
   }
   _this->_impl_.code_ = from._impl_.code_;
@@ -23234,7 +23234,7 @@ ClientSafeBrowsingReportRequest_HTTPResponse::ClientSafeBrowsingReportRequest_HT
     _impl_.body_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_body()) {
-    _this->_impl_.body_.Set(from._internal_body(),
+    _this->_impl_.body_.Set(from._internal_body(), 
       _this->GetArenaForAllocation());
   }
   _impl_.bodydigest_.InitDefault();
@@ -23242,7 +23242,7 @@ ClientSafeBrowsingReportRequest_HTTPResponse::ClientSafeBrowsingReportRequest_HT
     _impl_.bodydigest_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_bodydigest()) {
-    _this->_impl_.bodydigest_.Set(from._internal_bodydigest(),
+    _this->_impl_.bodydigest_.Set(from._internal_bodydigest(), 
       _this->GetArenaForAllocation());
   }
   _impl_.remote_ip_.InitDefault();
@@ -23250,7 +23250,7 @@ ClientSafeBrowsingReportRequest_HTTPResponse::ClientSafeBrowsingReportRequest_HT
     _impl_.remote_ip_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_remote_ip()) {
-    _this->_impl_.remote_ip_.Set(from._internal_remote_ip(),
+    _this->_impl_.remote_ip_.Set(from._internal_remote_ip(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_firstline()) {
@@ -23685,7 +23685,7 @@ ClientSafeBrowsingReportRequest_Resource::ClientSafeBrowsingReportRequest_Resour
     _impl_.url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_url()) {
-    _this->_impl_.url_.Set(from._internal_url(),
+    _this->_impl_.url_.Set(from._internal_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.tag_name_.InitDefault();
@@ -23693,7 +23693,7 @@ ClientSafeBrowsingReportRequest_Resource::ClientSafeBrowsingReportRequest_Resour
     _impl_.tag_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_tag_name()) {
-    _this->_impl_.tag_name_.Set(from._internal_tag_name(),
+    _this->_impl_.tag_name_.Set(from._internal_tag_name(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_request()) {
@@ -24140,7 +24140,7 @@ ClientSafeBrowsingReportRequest_SafeBrowsingClientProperties::ClientSafeBrowsing
     _impl_.client_version_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_client_version()) {
-    _this->_impl_.client_version_.Set(from._internal_client_version(),
+    _this->_impl_.client_version_.Set(from._internal_client_version(), 
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.google_play_services_version_, &from._impl_.google_play_services_version_,
@@ -24505,7 +24505,7 @@ ClientSafeBrowsingReportRequest::ClientSafeBrowsingReportRequest(const ClientSaf
     _impl_.url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_url()) {
-    _this->_impl_.url_.Set(from._internal_url(),
+    _this->_impl_.url_.Set(from._internal_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.page_url_.InitDefault();
@@ -24513,7 +24513,7 @@ ClientSafeBrowsingReportRequest::ClientSafeBrowsingReportRequest(const ClientSaf
     _impl_.page_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_page_url()) {
-    _this->_impl_.page_url_.Set(from._internal_page_url(),
+    _this->_impl_.page_url_.Set(from._internal_page_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.referrer_url_.InitDefault();
@@ -24521,7 +24521,7 @@ ClientSafeBrowsingReportRequest::ClientSafeBrowsingReportRequest(const ClientSaf
     _impl_.referrer_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_referrer_url()) {
-    _this->_impl_.referrer_url_.Set(from._internal_referrer_url(),
+    _this->_impl_.referrer_url_.Set(from._internal_referrer_url(), 
       _this->GetArenaForAllocation());
   }
   _impl_.client_country_.InitDefault();
@@ -24529,7 +24529,7 @@ ClientSafeBrowsingReportRequest::ClientSafeBrowsingReportRequest(const ClientSaf
     _impl_.client_country_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_client_country()) {
-    _this->_impl_.client_country_.Set(from._internal_client_country(),
+    _this->_impl_.client_country_.Set(from._internal_client_country(), 
       _this->GetArenaForAllocation());
   }
   _impl_.token_.InitDefault();
@@ -24537,7 +24537,7 @@ ClientSafeBrowsingReportRequest::ClientSafeBrowsingReportRequest(const ClientSaf
     _impl_.token_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_token()) {
-    _this->_impl_.token_.Set(from._internal_token(),
+    _this->_impl_.token_.Set(from._internal_token(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_client_properties()) {
@@ -25232,7 +25232,7 @@ HTMLElement_Attribute::HTMLElement_Attribute(const HTMLElement_Attribute& from)
     _impl_.name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(),
+    _this->_impl_.name_.Set(from._internal_name(), 
       _this->GetArenaForAllocation());
   }
   _impl_.value_.InitDefault();
@@ -25240,7 +25240,7 @@ HTMLElement_Attribute::HTMLElement_Attribute(const HTMLElement_Attribute& from)
     _impl_.value_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_value()) {
-    _this->_impl_.value_.Set(from._internal_value(),
+    _this->_impl_.value_.Set(from._internal_value(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:safe_browsing.HTMLElement.Attribute)
@@ -25510,7 +25510,7 @@ HTMLElement::HTMLElement(const HTMLElement& from)
     _impl_.tag_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_tag()) {
-    _this->_impl_.tag_.Set(from._internal_tag(),
+    _this->_impl_.tag_.Set(from._internal_tag(), 
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.id_, &from._impl_.id_,
@@ -26123,7 +26123,7 @@ ImageData::ImageData(const ImageData& from)
     _impl_.data_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_data()) {
-    _this->_impl_.data_.Set(from._internal_data(),
+    _this->_impl_.data_.Set(from._internal_data(), 
       _this->GetArenaForAllocation());
   }
   _impl_.mime_type_.InitDefault();
@@ -26131,7 +26131,7 @@ ImageData::ImageData(const ImageData& from)
     _impl_.mime_type_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_mime_type()) {
-    _this->_impl_.mime_type_.Set(from._internal_mime_type(),
+    _this->_impl_.mime_type_.Set(from._internal_mime_type(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_dimensions()) {
@@ -26476,7 +26476,7 @@ NotificationImageReportRequest::NotificationImageReportRequest(const Notificatio
     _impl_.notification_origin_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (from._internal_has_notification_origin()) {
-    _this->_impl_.notification_origin_.Set(from._internal_notification_origin(),
+    _this->_impl_.notification_origin_.Set(from._internal_notification_origin(), 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_image()) {
