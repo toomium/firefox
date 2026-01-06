@@ -13,6 +13,7 @@ SOURCES += ["!IPCMessageTypeName.cpp"]
 
 if CONFIG["FUZZING_SNAPSHOT_LPM"]:
     SOURCES += ["!IPCProtobufFactory.cpp"]
+    UNIFIED_SOURCES += ["!PContentProtobuf.cpp"]
 
 FINAL_LIBRARY = "xul"
 

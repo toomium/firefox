@@ -13,6 +13,7 @@
 #include "nsThreadUtils.h"
 
 #include "chrome/common/ipc_message.h"
+#include "chrome/common/ipc_message_utils.h"
 #include "mojo/core/ports/name.h"
 
 #include <string>
@@ -27,22 +28,21 @@ struct TypedProtobuf {
 
 class LibprotobufMapping {
  public:
-  static LibprotobufMapping& instance();
   // Used for protobuf-based fuzzing
-  static UniquePtr<IPC::Message> ConvertProtobufToIPCMessage(UniquePtr<TypedProtobuf>& protobuf);
-  static UniquePtr<TypedProtobuf> ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message>& msg);
+  // static UniquePtr<IPC::Message> ConvertProtobufToIPCMessage(UniquePtr<TypedProtobuf>& protobuf);
+  // static UniquePtr<TypedProtobuf> ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message>& msg);
   static std::string ReadPayloadFromMessage(mozilla::UniquePtr<IPC::Message>& msg);
   static mozilla::UniquePtr<IPC::Message> CreateMessageFromPayload(const std::string& payload);
   template<typename T>
-  static std::string ReadSerializedParam(IPC::MessageReader* reader, UniquePtr<IPC::Message>& msg);
+  static IPC::ReadResult<std::string> ReadSerializedParam(IPC::MessageReader* reader);
   template<typename T>
   static mozilla::Maybe<T> DeserializeFromString(std::string& payload);
   template<typename T>
   static std::string SerializeToString(T* param);
   template<typename T>
-  static UniquePtr<T> ParseTypedProtobuf(UniquePtr<TypedProtobuf>& proto);
+  static UniquePtr<T> ParseTypedProtobuf(UniquePtr<TypedProtobuf> proto);
   template<typename T>
-  static UniquePtr<TypedProtobuf> SerializeTypedProtobuf(UniquePtr<T>& proto, IPC::IPCMessages type);
+  static UniquePtr<TypedProtobuf> SerializeTypedProtobuf(UniquePtr<T> proto, IPC::IPCMessages type);
 };
 
 }  // namespace fuzzing

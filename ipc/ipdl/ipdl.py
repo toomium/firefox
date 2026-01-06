@@ -88,7 +88,6 @@ class WorkerPool:
 
             if ast.protocol:
                 allmessages[ast.protocol.name] = ipdl.genmsgenum(ast)
-                #allprotocols[ast.protocol.name] = "::".join([ns.name for ns in ast.protocol.namespaces])
                 allprotocols[ast.protocol.name] = ast.protocol.namespaces
 
                 alljsonobjs.append(JSONExporter.protocolToObject(ast.protocol))
@@ -363,13 +362,14 @@ UniquePtr<IPC::Message> ConvertProtobufToIPCMessage(UniquePtr<TypedProtobuf>& pr
             namespace_pb = getNamespace("::", allprotocols[protocol], addParent=True)
             print("""
     case IPC::%s: {
-        return %s::%s::%s_ToIPC(LibprotobufMapping::ParseTypedProtobuf<%s::%s::%s>(proto));
+        return %s::%s::%s_ToIPC(LibprotobufMapping::ParseTypedProtobuf<%s::%s::%s>(std::move(proto)));
     }"""
                 % (enum, namespace, protocol, msg, namespace_pb, protocol, msg),
                 file=ipc_factory,
             )
 
     print("""
+    }
 }
 
 UniquePtr<TypedProtobuf> ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message>& ipc) {
@@ -383,15 +383,15 @@ UniquePtr<TypedProtobuf> ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message>& ip
             enum = f"{protocol}__{msg}"
             namespace = getNamespace("::", allprotocols[protocol], addParent=False)
             namespace_pb = getNamespace("::", allprotocols[protocol], addParent=True)
-            print("""
-    case IPC::%s: {
-        return LibprotobufMapping::SerializeTypedProtobuf<%s::%s::%s>(%s::%s::%s_ToProtobuf(ipc), %s);
+            print("""   case IPC::%s: {
+        return LibprotobufMapping::SerializeTypedProtobuf<%s::%s::%s>(%s::%s::%s_ToProtobuf(std::move(ipc)), IPC::%s);
     }"""
                 % (enum, namespace_pb, protocol, msg, namespace, protocol, msg, enum),
                 file=ipc_factory,
             )
 
     print("""
+    }
 }
 
 } // namespace fuzzing

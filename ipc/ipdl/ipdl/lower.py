@@ -15,6 +15,7 @@ from ipdl.type import ActorType, UnionType, TypeVisitor, builtinHeaderIncludes
 from ipdl.util import hash_str
 from ipdl.protobuf.convert import getNamespace, ProtobufTypeMapper
 from ipdl.builtin import PBTypeMappings
+import ipdl.type
 
 from pprint import pprint
 
@@ -116,6 +117,15 @@ def _protobufGetName(name, namespaces, addParent=True):
 
 def _protobufTypeIsScalar(type):
     return type.name() in PBTypeMappings.keys()
+
+def _protobufTypeIsStructOrUnion(type):
+    return isinstance(type, ipdl.type.StructType) or isinstance(type, ipdl.type.UnionType)
+
+def _protobufTypeIsArray(type):
+    return isinstance(type, ipdl.type.ArrayType)
+
+def _protobufTypeIsMaybe(type):
+    return isinstance(type, ipdl.type.MaybeType)
 
 def __protobufGetType(ipdltype):
     return ProtobufTypeMapper().mapType(ipdltype)
@@ -1838,6 +1848,27 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         self.structUnionDefns = []
         self.funcDefns = []
         self.funcDefnsFuzz = []
+        self.actorForwardDecls = []
+        self.usingDecls = []
+        self.externalIncludes = set()
+        self.nonForwardDeclaredHeaders = set()
+        self.typedefSet = set(
+            [
+                Typedef(Type("mozilla::ipc::ActorId"), "ActorId"),
+                Typedef(Type("base::ProcessId"), "ProcessId"),
+                Typedef(Type("mozilla::ipc::ProtocolId"), "ProtocolId"),
+                Typedef(Type("mozilla::ipc::Endpoint"), "Endpoint", ["FooSide"]),
+                Typedef(
+                    Type("mozilla::ipc::ManagedEndpoint"),
+                    "ManagedEndpoint",
+                    ["FooSide"],
+                ),
+                Typedef(Type("mozilla::UniquePtr"), "UniquePtr", ["T"]),
+                Typedef(
+                    Type("mozilla::ipc::ResponseRejectReason"), "ResponseRejectReason"
+                ),
+            ]
+        )
 
     def lower(self, tu, cxxHeaderFile, cxxFile, segmentcapacitydict):
         self.protocol = tu.protocol
@@ -1883,8 +1914,8 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             hf.addthing(Whitespace.NL)
             hf.addthings([Whitespace("// Headers for typedefs"), Whitespace.NL])
 
-            for headername in sorted(iter(aggregateTypeIncludes)):
-                hf.addthing(CppDirective("include", '"' + headername + '"'))
+            #for headername in sorted(iter(aggregateTypeIncludes)):
+            #    hf.addthing(CppDirective("include", '"' + headername + '"'))
 
         # Manually run Visitor.visitTranslationUnit. For dependency resolution
         # we need to handle structs and unions separately.
@@ -1898,6 +1929,8 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             using.accept(self)
         for using in tu.using:
             using.accept(self)
+        for su in tu.structsAndUnions:
+            su.accept(self)
         if tu.protocol:
             tu.protocol.accept(self)
 
@@ -1912,7 +1945,8 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             (
                 [_DISCLAIMER, Whitespace.NL]
                 + [
-                    CppDirective("include", '"' + _namespacedHeaderName(tu.name, tu.namespaces) + 'Protobuf.h"')
+                    CppDirective("include", '"mozilla/fuzzing/LibprotobufMapping.h"'),
+                    CppDirective("include", '"' + _namespacedHeaderName(tu.name, tu.namespaces) + 'Protobuf.h"'),
                 ]
                 +
                 [
@@ -1928,6 +1962,11 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             )
         )
 
+        for typedef in sorted(self.typedefSet):
+            cf.addstmt(typedef)
+
+        cf.addstmt(Whitespace.NL)
+
         if self.structUnionDefns:
             cf.addthings(self.structUnionDefns)
 
@@ -1937,6 +1976,42 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             cf.addthing(_putInNamespaces(ns, self.protocol.namespaces))
             ns.addstmts((self.funcDefnsFuzz))
 
+    def visitStructDecl(self, sd):
+        if sd.decl.fullname is not None:
+            self.typedefSet.add(Typedef(Type(sd.fqClassName()), sd.name))
+
+    def visitUnionDecl(self, ud):
+        if ud.decl.fullname is not None:
+            self.typedefSet.add(Typedef(Type(ud.fqClassName()), ud.name))
+
+    def visitUsingStmt(self, using):
+        if using.decl.fullname is not None:
+            self.typedefSet.add(
+                Typedef(Type(using.decl.fullname), using.decl.shortname)
+            )
+
+        if using.header is None:
+            return
+
+        if using.canBeForwardDeclared():
+            spec = using.type
+
+            self.usingDecls.extend(
+                [
+                    _makeForwardDeclForQClass(
+                        spec.baseid,
+                        spec.quals,
+                        cls=using.isClass(),
+                        struct=using.isStruct(),
+                    ),
+                    Whitespace.NL,
+                ]
+            )
+            self.externalIncludes.add(using.header)
+        else:
+            self.nonForwardDeclaredHeaders.add(using.header)
+
+
     def visitBuiltinCxxInclude(self, inc):
         self.hdrfile.addthing(CppDirective("include", '"' + inc.file + '"'))
 
@@ -1945,18 +2020,61 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
     def visitInclude(self, inc):
         if inc.tu.filetype == "header":
-            self.hdrfile.addthing(
-                CppDirective("include", '"' + _ipdlhHeaderName(inc.tu) + '.h"')
-            )
-            # Inherit cpp includes defined by imported header files, as they may
-            # be required to serialize an imported `using` type.
+            # Including a header will declare any globals defined by "using"
+            # statements into our scope. To serialize these, we also may need
+            # cxx include statements, so visit them as well.
             for cxxinc in inc.tu.cxxIncludes:
                 cxxinc.accept(self)
-        else:
-            self.cppIncludeHeaders += [
-                _protocolHeaderName(inc.tu.protocol, "parent") + ".h",
-                _protocolHeaderName(inc.tu.protocol, "child") + ".h",
-            ]
+            for using in inc.tu.using:
+                using.accept(self)
+            for su in inc.tu.structsAndUnions:
+                su.accept(self)
+        # else:
+        #     # Includes for protocols only include types explicitly exported by
+        #     # those protocols.
+        #     ip = inc.tu.protocol
+        #     if ip == self.protocol:
+        #         return
+
+        #     # self.actorForwardDecls.extend(
+        #     #     [
+        #     #         _makeForwardDeclForActor(ip.decl.type, self.side),
+        #     #         _makeForwardDeclForActor(ip.decl.type, _otherSide(self.side)),
+        #     #         Whitespace.NL,
+        #     #     ]
+        #     # )
+        #     # self.protocolCxxIncludes.append(_protocolHeaderName(ip, self.side))
+
+        #     if ip.decl.fullname is not None:
+        #         self.typedefSet.add(
+        #             Typedef(
+        #                 Type(_actorName(ip.decl.fullname, self.side.title())),
+        #                 _actorName(ip.decl.shortname, self.side.title()),
+        #             )
+        #         )
+
+        #         self.typedefSet.add(
+        #             Typedef(
+        #                 Type(
+        #                     _actorName(ip.decl.fullname, _otherSide(self.side).title())
+        #                 ),
+        #                 _actorName(ip.decl.shortname, _otherSide(self.side).title()),
+        #             )
+        #         )
+
+        # if inc.tu.filetype == "header":
+        #     self.hdrfile.addthing(
+        #         CppDirective("include", '"' + _ipdlhHeaderName(inc.tu) + '.h"')
+        #     )
+        #     # Inherit cpp includes defined by imported header files, as they may
+        #     # be required to serialize an imported `using` type.
+        #     for cxxinc in inc.tu.cxxIncludes:
+        #         cxxinc.accept(self)
+        # else:
+        #     self.cppIncludeHeaders += [
+        #         _protocolHeaderName(inc.tu.protocol, "parent") + ".h",
+        #         _protocolHeaderName(inc.tu.protocol, "child") + ".h",
+        #     ]
 
     def generateProtobufIncludes(self, tu):
         self.hdrfile.addthing(Whitespace.NL)
@@ -1974,6 +2092,155 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             self.hdrfile.addthing(
                 CppDirective("include", '"' + _protobufHeaderName(inc.tu) + '.pb.h"')
             )
+
+    def makeMessage(self, md, errfn, fromActor=None):
+        msgvar = ExprVar("ipc")
+        writervar = ExprVar("writer__")
+        isctor = md.decl.type.isCtor()
+        routingId = self.protocol.routingId(fromActor)
+        this = fromActor or ExprVar.THIS
+
+        stmts = [
+            StmtDecl(
+                Decl(Type("UniquePtr<IPC::Message>"), msgvar.name),
+                init=ExprCall(ExprVar(md.pqMsgCtorFunc()), args=[routingId]),
+            ),
+            StmtDecl(
+                Decl(Type("IPC::MessageWriter"), writervar.name),
+                initargs=[ExprDeref(msgvar), this],
+            ),
+            Whitespace.NL,
+        ]
+
+        start = 0
+        if isctor:
+            # serialize the actor as the raw actor ID so that it can be used to
+            # construct the "real" actor on the other side.
+            stmts += [
+                _ParamTraits.checkedWrite(
+                    None,
+                    _actorId(ExprVar("actor")),
+                    ExprAddrOf(writervar),
+                    sentinelKey="actorid",
+                )
+            ]
+            start = 1
+
+        stmts += [
+            _ParamTraits.checkedWrite(
+                p.ipdltype,
+                p.var(),
+                ExprAddrOf(writervar),
+                sentinelKey=p.name,
+            )
+            for p in md.params[start:]
+        ]
+        return msgvar, stmts
+
+    def deserializeMessage(self, md, side, errfn, errfnSent):
+        msgvar = ExprVar("*msg")
+        msgexpr = ExprAddrOf(msgvar)
+        readervar = ExprVar("reader__")
+        isctor = md.decl.type.isCtor()
+        stmts = [
+            # self.logMessage(md, msgexpr, "Received ", receiving=True),
+            # self.profilerLabel(md),
+            # Whitespace.NL,
+        ]
+
+        if 0 == len(md.params):
+            return stmts
+
+        start, reads = 0, []
+        if isctor:
+            # return the raw actor handle so that its ID can be used
+            # to construct the "real" actor
+            actoridvar = ExprVar("actorid__")
+            actoridtype = _actorIdType()
+            reads = [
+                _ParamTraits.checkedRead(
+                    None,
+                    actoridtype,
+                    actoridvar,
+                    ExprAddrOf(readervar),
+                    errfn,
+                    "'%s'" % actoridtype.name,
+                    sentinelKey="actorid",
+                    errfnSentinel=errfnSent,
+                )
+            ]
+            start = 1
+
+        def maybeTainted(p, side):
+            if md.decl.type.tainted and "NoTaint" not in p.attributes:
+                return Type("Tainted", T=p.bareType(side))
+            return p.bareType(side)
+
+        def errfnReader(msg):
+            return [_ParamTraits.fatalError(readervar, msg, "."), StmtReturn(ExprVar("{}"))]
+
+        for p in md.params[start:]:
+            if _protobufTypeIsScalar(p.ipdltype) or _protobufTypeIsStructOrUnion(p.ipdltype) or _protobufTypeIsArray(p.ipdltype) or _protobufTypeIsMaybe(p.ipdltype):
+                # read "normally" as intended
+                reads.extend(
+                [
+                    _ParamTraits.checkedRead(
+                    p.ipdltype,
+                    maybeTainted(p, "Child"),
+                    p.var(),
+                    ExprAddrOf(readervar),
+                    errfnReader,
+                    "'%s'" % p.ipdltype.name(),
+                    sentinelKey=p.name,
+                    errfnSentinel=errfnSent,
+                )])
+            else:
+                # read as serialized bytestring
+                reads.extend(
+                [
+                    _ParamTraits.checkedRead(
+                    p.ipdltype,
+                    maybeTainted(p, "Child"),
+                    p.var(),
+                    ExprAddrOf(readervar),
+                    errfnReader,
+                    "'%s'" % p.ipdltype.name(),
+                    sentinelKey=p.name,
+                    errfnSentinel=errfnSent,
+                    readMethod="mozilla::fuzzing::LibprotobufMapping::ReadSerializedParam"
+                )])
+
+        # reads.extend(
+        #     [
+        #         _ParamTraits.checkedRead(
+        #             p.ipdltype,
+        #             maybeTainted(p, "Child"),
+        #             p.var(),
+        #             ExprAddrOf(readervar),
+        #             errfn,
+        #             "'%s'" % p.ipdltype.name(),
+        #             sentinelKey=p.name,
+        #             errfnSentinel=errfnSent,
+        #         )
+        #         for p in md.params[start:]
+        #     ]
+        # )
+
+        stmts.extend(
+            (
+                [
+                    StmtDecl(
+                        Decl(Type("IPC::MessageReader"), readervar.name),
+                        initargs=[msgvar],#, ExprVar.THIS],
+                    )
+                ]
+                + [Whitespace.NL]
+                + reads
+                + [StmtCode("${reader}.EndRead();\n", reader=readervar)]
+            )
+        )
+
+        return stmts
 
     def generateStructsAndUnions(self, tu):
         """Generate the definitions for all structs and unions. This will
@@ -2033,10 +2300,6 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                         ]
                     )
 
-
-
-
-
     def visitProtocol(self, p):
         self.cppIncludeHeaders.append(_protocolHeaderName(self.protocol, "") + ".h")
         self.cppIncludeHeaders.append(_protocolHeaderName(self.protocol, "") + "Protobuf.h")
@@ -2076,20 +2339,20 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             # protobuf-based fuzzing helper functions
             decls_fuzz = []
 
-            toProtoDecl, toProtoDefn = _splitFuncDeclDefn(_generateMsgToProtobuf(md, p))
+            toProtoDecl, toProtoDefn = _splitFuncDeclDefn(self._generateMsgToProtobuf(md, p))
             decls_fuzz.append(toProtoDecl)
             self.funcDefnsFuzz.append(toProtoDefn)
 
-            toIPCDecl, toIPCDefn = _splitFuncDeclDefn(_generateMsgToIPC(md, p))
+            toIPCDecl, toIPCDefn = _splitFuncDeclDefn(self._generateMsgToIPC(md, p))
             decls_fuzz.append(toIPCDecl)
             self.funcDefnsFuzz.append(toIPCDefn)
 
             if md.hasReply():
-                toProtoDeclReply, toProtoDefnReply = _splitFuncDeclDefn(_generateMsgToProtobuf(md, p, forReply=True))
+                toProtoDeclReply, toProtoDefnReply = _splitFuncDeclDefn(self._generateMsgToProtobuf(md, p, forReply=True))
                 decls_fuzz.append(toProtoDeclReply)
                 self.funcDefnsFuzz.append(toProtoDefnReply)
 
-                toIPCDeclReply, toIPCDefnReply = _splitFuncDeclDefn(_generateMsgToIPC(md, p, forReply=True))
+                toIPCDeclReply, toIPCDefnReply = _splitFuncDeclDefn(self._generateMsgToIPC(md, p, forReply=True))
                 decls_fuzz.append(toIPCDeclReply)
                 self.funcDefnsFuzz.append(toIPCDefnReply)
 
@@ -2141,6 +2404,206 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         return funcs
 
 
+    def _generateProtobufValue(self, ipdltype, readField):
+        block = Block()
+        if _protobufTypeIsStructOrUnion(ipdltype):
+            block.addcode(
+                """
+                ${ipdltype}_ToProtobuf(${readField})
+                """,
+                ipdltype=ipdltype.name(),
+                readField=readField
+            )
+            #return ipdltype.name() + "_ToProtobuf(" + readField + ")"
+        elif _protobufTypeIsMaybe(ipdltype):
+            block.addcode(
+                """
+                *${readField}
+                """,
+                ipdltype=ipdltype,
+                readField=readField
+            )
+            #return "*" + readField
+        elif not _protobufTypeIsScalar(ipdltype):
+            block.addcode(
+                """
+                mozilla::fuzzing::LibprotobufMapping::SerializeToString<${ty}>(&${readField})
+                """,
+                ty=_cxxBareType(ipdltype, "Child"),
+                readField=readField
+            )
+            #return f"mozilla::fuzzing::LibprotobufMapping::SerializeToString<{_cxxBareType(ipdltype, "Child")}>(&{readField})"
+        else:
+            block.addcode(
+                """
+                ${readField}
+                """,
+                readField=readField
+            )
+            #return readField
+        return block
+
+
+    def _generateProtobufAssignDecl(self, ipdltype, protoVar, protoField, readField):
+        block = Block()
+        if _protobufTypeIsStructOrUnion(ipdltype):
+            block.addcode(
+                        """
+                        *${protoVar}->mutable_${protoField}() = ${itemValue};
+                        """,
+                        protoVar=protoVar,
+                        protoField=protoField,
+                        itemValue=self._generateProtobufValue(ipdltype, readField)
+                    )
+        elif _protobufTypeIsArray(ipdltype):
+            inner = Block()
+            if _protobufTypeIsStructOrUnion(ipdltype.basetype):
+                inner.addcode(
+                    """
+                    *${protoVar}->add_${protoField}() = ${item};
+                    """,
+                    item=self._generateProtobufValue(ipdltype.basetype, "item"),
+                    protoVar=protoVar,
+                    protoField=protoField,
+                    )
+            else:
+                inner.addcode(
+                    """
+                    ${protoVar}->add_${protoField}(${item});
+                    """,
+                    item=self._generateProtobufValue(ipdltype.basetype, "item"),
+                    protoVar=protoVar,
+                    protoField=protoField,
+                    )
+                #inner = f"{protoVar}->add_{protoField}({self._generateProtobufValue(ipdltype.basetype, "item")});"
+            block.addcode(
+                        """
+                        for (auto& item : ${readField}) {
+                            ${inner}
+                        }
+                        """,
+                        readField=readField,
+                        inner=inner,
+                    )
+        elif _protobufTypeIsMaybe(ipdltype):
+            block.addcode(
+                        """
+                        if (${readField}) {
+                            ${inner}
+                        }
+                        """,
+                        readField=readField,
+                        inner=self._generateProtobufAssignDecl(ipdltype.basetype, protoVar, protoField, self._generateProtobufValue(ipdltype, readField))
+                    )
+        else:
+            block.addcode(
+                        """
+                        ${protoVar}->set_${protoField}(${readField});
+                        """,
+                        protoVar=protoVar,
+                        protoField=protoField,
+                        readField=readField,
+                    )
+        return block
+
+    def _generateMsgToProtobuf(self, md, p, forReply=False):
+        ns = p.namespaces + [ipdl.ast.Namespace(loc="", namespace=md.namespace)]
+        if forReply:
+            msgName = md.replyCtorFunc()
+        else:
+            msgName = md.msgCtorFunc()
+        func = FunctionDefn(
+            FunctionDecl(
+                msgName + "_ToProtobuf",
+                params=[Decl(Type("mozilla::UniquePtr<IPC::Message>"), "msg")],
+                ret=Type(f"mozilla::UniquePtr<{_protobufGetName(msgName, ns)}>"),
+            )
+        )
+
+        protoVar = "proto"
+
+        # deserialize ipc message
+        if not (forReply or md.decl.type.isCtor() or md.decl.type.isDtor()):
+            stmts = self.deserializeMessage(
+                md, "Child", errfn=errfnRecv, errfnSent=errfnSentinel(ExprVar("{}"))
+            )
+            func.addstmts(stmts)
+
+            # create protobuf object
+            block = Block()
+            block.addstmt(Whitespace.NL)
+            block.addcode(
+                """
+                mozilla::UniquePtr<${ty}> ${var} = mozilla::MakeUnique<${ty}>();
+                """,
+                var=protoVar,
+                ty=_protobufGetName(msgName, ns),
+            )
+
+            # copy arguments into protobuf object
+            for p in md.params:
+                block.addstmt(self._generateProtobufAssignDecl(p.ipdltype, protoVar, p.protobufVar(), p.name))
+
+            block.addcode(
+                    """
+                    return ${protoVar};
+                    """,
+                    protoVar=protoVar,
+                )
+
+            func.addstmt(block)
+        else:
+            pass
+
+        return func
+
+    def _generateMsgToIPC(self, md, p, forReply=False):
+        ns = p.namespaces + [ipdl.ast.Namespace(loc="", namespace=md.namespace)]
+        if forReply:
+            msgName = md.replyCtorFunc()
+        else:
+            msgName = md.msgCtorFunc()
+        func = FunctionDefn(
+            FunctionDecl(
+                msgName + "_ToIPC",
+                params=[Decl(Type(f"mozilla::UniquePtr<{_protobufGetName(msgName, ns)}>"), "proto")],
+                ret=Type("mozilla::UniquePtr<IPC::Message>"),
+            )
+        )
+
+        ipcVar = "ipc"
+
+        # deserialize ipc message
+        if not (forReply or md.decl.type.isCtor() or md.decl.type.isDtor()):
+            # stmts = self.deserializeMessage(
+            #     md, "Child", errfn=errfnRecv, errfnSent=errfnSentinel(ExprVar("{}"))
+            # )
+            # func.addstmts(stmts)
+
+            # create protobuf object
+            block = Block()
+            block.addstmt(Whitespace.NL)
+            block.addcode(
+                """
+                mozilla::UniquePtr<IPC::Message> ${var} = mozilla::MakeUnique<IPC::Message>();
+                """,
+                var=ipcVar,
+            )
+
+            block.addcode(
+                    """
+                    return ${var};
+                    """,
+                    var=ipcVar,
+                )
+
+            func.addstmt(block)
+        else:
+            pass
+
+        return func
+
+
 # --------------------------------------------------
 
 
@@ -2149,40 +2612,6 @@ cppPriorityList = list(
 )
 
 
-def _generateMsgToProtobuf(md, p, forReply=False):
-    ns = p.namespaces + [ipdl.ast.Namespace(loc="", namespace=md.namespace)]
-    if forReply:
-        msgName = md.replyCtorFunc()
-    else:
-        msgName = md.msgCtorFunc()
-    func = FunctionDefn(
-        FunctionDecl(
-            msgName + "_ToProtobuf",
-            params=[Decl(Type("mozilla::UniquePtr<IPC::Message>"), "msg")],
-            ret=Type(f"mozilla::UniquePtr<{_protobufGetName(msgName, ns)}>"),
-        )
-    )
-
-    # create protobuf object
-    func.addstmt(Decl(Type(f"mozilla::UniquePtr<{_protobufGetName(msgName, ns)}>"), "proto"))
-
-
-    return func
-
-def _generateMsgToIPC(md, p, forReply=False):
-    ns = p.namespaces + [ipdl.ast.Namespace(loc="", namespace=md.namespace)]
-    if forReply:
-        msgName = md.replyCtorFunc()
-    else:
-        msgName = md.msgCtorFunc()
-    func = FunctionDefn(
-        FunctionDecl(
-            msgName + "_ToIPC",
-            params=[Decl(Type(f"mozilla::UniquePtr<{_protobufGetName(msgName, ns)}>"), "proto")],
-            ret=Type("mozilla::UniquePtr<IPC::Message>"),
-        )
-    )
-    return func
 
 def _generateMessageConstructor(md, segmentSize, protocol, forReply=False):
     if forReply:
@@ -2300,10 +2729,11 @@ class _ParamTraits:
         return ifstmt
 
     @classmethod
-    def fatalError(cls, rdrwtr, reason):
+    def fatalError(cls, rdrwtr, reason, accessor="->"):
         return StmtCode(
-            "${rdrwtr}->FatalError(${reason});",
+            "${rdrwtr}${acc}FatalError(${reason});",
             rdrwtr=rdrwtr,
+            acc=accessor,
             reason=ExprLiteral.String(reason),
         )
 
@@ -2420,6 +2850,7 @@ class _ParamTraits:
         paramtype,
         sentinelKey,
         errfnSentinel,
+        readMethod="IPC::ReadParam"
     ):
         assert isinstance(var, ExprVar)
 
@@ -2431,13 +2862,14 @@ class _ParamTraits:
         # Read the data
         block.addcode(
             """
-            auto ${maybevar} = IPC::ReadParam<${ty}>(${reader});
+            auto ${maybevar} = ${readmeth}<${ty}>(${reader});
             if (!${maybevar}) {
                 $*{errfn}
             }
             auto& ${var} = *${maybevar};
             """,
             maybevar=ExprVar("maybe__" + var.name),
+            readmeth=readMethod,
             ty=cxxtype,
             reader=readervar,
             errfn=errfn(*paramtype),
@@ -3090,16 +3522,16 @@ def _generateCxxUnionProtobuf(sd):
     func_toProto = FunctionDefn(
         FunctionDecl(
             sd.name + "_ToProtobuf",
-            params=[Decl(Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces, False)}>"), "ipc")],
-            ret=Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces)}>"),
+            params=[Decl(Type(f"{_protobufGetName(sd.name, sd.namespaces, False)}", ref=True, const=True), "ipc")],
+            ret=Type(f"{_protobufGetName(sd.name, sd.namespaces)}"),
         )
     )
 
     func_toIPC = FunctionDefn(
         FunctionDecl(
             sd.name + "_ToIPC",
-            params=[Decl(Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces)}>"), "proto")],
-            ret=Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces, False)}>"),
+            params=[Decl(Type(f"{_protobufGetName(sd.name, sd.namespaces)}", ref=True, const=True), "proto")],
+            ret=Type(f"{_protobufGetName(sd.name, sd.namespaces, False)}"),
         )
     )
 
@@ -3110,34 +3542,34 @@ def _generateCxxStructProtobuf(sd):
     func_toProto = FunctionDefn(
         FunctionDecl(
             sd.name + "_ToProtobuf",
-            params=[Decl(Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces, False)}>"), "ipc")],
-            ret=Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces)}>"),
+            params=[Decl(Type(f"{_protobufGetName(sd.name, sd.namespaces, False)}", ref=True, const=True), "ipc")],
+            ret=Type(f"{_protobufGetName(sd.name, sd.namespaces)}"),
         )
     )
 
     func_toIPC = FunctionDefn(
         FunctionDecl(
             sd.name + "_ToIPC",
-            params=[Decl(Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces)}>"), "proto")],
-            ret=Type(f"mozilla::UniquePtr<{_protobufGetName(sd.name, sd.namespaces, False)}>"),
+            params=[Decl(Type(f"{_protobufGetName(sd.name, sd.namespaces)}", ref=True, const=True), "proto")],
+            ret=Type(f"{_protobufGetName(sd.name, sd.namespaces, False)}"),
         )
     )
 
-    stmts = []
-    for f in sd.fields_member_order():
-        #pprint(vars(f))
-        proto_var = ExprVar("proto." + f.protobufVar() + "()")
-        if _protobufTypeIsScalar(f.ipdltype):
-            # case 1: scalar type
-            stmts.append(StmtDecl(ExprAssn(f.memberVar(), proto_var)))
-        elif f.ipdltype.isIPDL() and (f.ipdltype.isStruct() or f.ipdltype.isUnion()):
-            # case 2: struct or union
-            # recursively call protobuf constructor of struct / union
-            stmts.append(StmtDecl(ExprMove(proto_var)))
-        else:
-            # case 3: some complex type which is given in serialized from
-            stmts.append(StmtDecl(ExprMove(proto_var)))
-    func_toIPC.addstmts(stmts)
+    # stmts = []
+    # for f in sd.fields_member_order():
+    #     #pprint(vars(f))
+    #     proto_var = ExprVar("proto." + f.protobufVar() + "()")
+    #     if _protobufTypeIsScalar(f.ipdltype):
+    #         # case 1: scalar type
+    #         stmts.append(StmtDecl(ExprAssn(f.memberVar(), proto_var)))
+    #     elif f.ipdltype.isIPDL() and (f.ipdltype.isStruct() or f.ipdltype.isUnion()):
+    #         # case 2: struct or union
+    #         # recursively call protobuf constructor of struct / union
+    #         stmts.append(StmtDecl(ExprMove(proto_var)))
+    #     else:
+    #         # case 3: some complex type which is given in serialized from
+    #         stmts.append(StmtDecl(ExprMove(proto_var)))
+    # func_toIPC.addstmts(stmts)
 
     return func_toProto, func_toIPC
 

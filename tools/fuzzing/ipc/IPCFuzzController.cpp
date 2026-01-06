@@ -1525,7 +1525,7 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
         std::string msgName(IPC::StringFromIPCMessageType(aMsg->type()));
         if (msgName.find(dumpFilter) != std::string::npos) {
           #ifdef FUZZING_SNAPSHOT_LPM
-          dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(aMsg), mIPCDumpCount);
+          dumpProtobufMessageToFile(ConvertIPCMessageToProtobuf(aMsg), mIPCDumpCount); // LibprotobufMapping::ConvertIPCMessageToProtobuf(aMsg), mIPCDumpCount);
           #else
           dumpIPCMessageToFile(aMsg, mIPCDumpCount);
           #endif
@@ -1533,7 +1533,7 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
         }
       } else {
         #ifdef FUZZING_SNAPSHOT_LPM
-          dumpProtobufMessageToFile(LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(aMsg), mIPCDumpCount);
+          dumpProtobufMessageToFile(ConvertIPCMessageToProtobuf(aMsg), mIPCDumpCount);
         #else
           dumpIPCMessageToFile(aMsg, mIPCDumpCount);
         #endif
@@ -1556,10 +1556,10 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
                            aMsg->header()->payload_size);
     #ifdef FUZZING_SNAPSHOT_LPM
     dumpIPCMessageToFile(aMsg, mIPCDumpCount, true /* aUseNyx */);
-    UniquePtr<TypedProtobuf> proto = LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(aMsg);
+    UniquePtr<TypedProtobuf> proto = ConvertIPCMessageToProtobuf(aMsg);
     dumpProtobufMessageToFile(proto, mIPCDumpCount, true);
     mIPCDumpCount++;
-    dumpIPCMessageToFile(LibprotobufMapping::instance().ConvertProtobufToIPCMessage(proto), mIPCDumpCount, true);
+    dumpIPCMessageToFile(ConvertProtobufToIPCMessage(proto), mIPCDumpCount, true);
     MOZ_FUZZING_NYX_PRINT("INFO: [DumpToFile] Message dumped\n");
     #else
     dumpIPCMessageToFile(aMsg, mIPCDumpCount, true /* aUseNyx */);
@@ -1615,8 +1615,8 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
   // convert typed protobuf to ipc message
   MOZ_FUZZING_NYX_PRINT("INFO: Converting typed protobuf to ipc message \n");
   //UniquePtr<IPC::Message> msg = LibprotobufMapping::instance().ConvertProtobufToIPCMessage(typedProtobuf);
-  UniquePtr<TypedProtobuf> typedProtobuf = LibprotobufMapping::instance().ConvertIPCMessageToProtobuf(aMsg);
-  UniquePtr<IPC::Message> msg = LibprotobufMapping::instance().ConvertProtobufToIPCMessage(typedProtobuf);
+  UniquePtr<TypedProtobuf> typedProtobuf = ConvertIPCMessageToProtobuf(aMsg);
+  UniquePtr<IPC::Message> msg = ConvertProtobufToIPCMessage(typedProtobuf);
 
   MOZ_FUZZING_NYX_PRINT("INFO: Copying header of original message \n");
   memcpy(msg->header(), aMsg->header(), sizeof(IPC::Message::Header));
