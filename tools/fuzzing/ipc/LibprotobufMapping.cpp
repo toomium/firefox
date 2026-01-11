@@ -12,21 +12,12 @@
 #include "mozilla/ipc/MessageLink.h"
 #include "chrome/common/ipc_message_utils.h"
 
-#include "mozilla/dom/PContent.h"
-
 #include <fstream>
 #include <sstream>
 
-#include "protobuf/PContent.pb.h"
-
-#include "gfxFontUtils.h"
-#include "mozilla/GfxMessageUtils.h"
 
 using namespace mojo::core::ports;
 using namespace mozilla::ipc;
-
-typedef ::gfxSparseBitSet gfxSparseBitSet;
-
 
 namespace mozilla {
 namespace fuzzing {
@@ -73,23 +64,6 @@ namespace fuzzing {
 //   return lib;
 // }
 
-template<typename T>
-UniquePtr<T> LibprotobufMapping::ParseTypedProtobuf(UniquePtr<TypedProtobuf> proto) {
-    auto input = mozilla::MakeUnique<T>();
-    if (input.ParseFromString(proto->serialized_data)) {
-        return input;
-    }
-    return nullptr;
-}
-
-template<typename T>
-UniquePtr<TypedProtobuf> LibprotobufMapping::SerializeTypedProtobuf(UniquePtr<T> proto, IPC::IPCMessages type) {
-    UniquePtr<TypedProtobuf> output = mozilla::MakeUnique<TypedProtobuf>();
-    output->serialized_data = proto.SerializeAsString();
-    output->type = type;
-    return output;
-}
-
 mozilla::UniquePtr<IPC::Message> LibprotobufMapping::CreateMessageFromPayload(const std::string& payload) {
     uint32_t payload_size = payload.size();
     std::vector<char> buffer(sizeof(IPC::Message::Header) + payload_size);
@@ -126,70 +100,6 @@ std::string LibprotobufMapping::ReadPayloadFromMessage(mozilla::UniquePtr<IPC::M
                dumpBuffer.length());
 }
 
-
-template<typename T>
-IPC::ReadResult<std::string> LibprotobufMapping::ReadSerializedParam(IPC::MessageReader* reader) {
-  size_t offset_before = reader->iter_.iter_.AbsoluteOffset();
-  MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto] Read Parameter AbsoluteOffset: %lu\n",
-                    offset_before);
-
-  //copy iter state
-  Pickle::BufferList::IterImpl iter_before = reader->iter_.iter_;
-  auto readResult = IPC::ReadParam<T>(reader);
-
-  size_t offset_after = reader->iter_.iter_.AbsoluteOffset();
-  MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto] Read Parameter AbsoluteOffset After: %lu\n",
-                  offset_after);
-  size_t serialized_size = offset_after - offset_before;
-
-  Vector<char, 256, InfallibleAllocPolicy> dumpBuffer;
-  if (!dumpBuffer.initLengthUninitialized(serialized_size)) {
-    MOZ_FUZZING_NYX_ABORT("dumpBuffer.initLengthUninitialized failed\n");
-    return {};
-  }
-  if (!reader->message_.Buffers().ReadBytes(
-          iter_before,
-          reinterpret_cast<char*>(dumpBuffer.begin()),
-          serialized_size)) {
-    MOZ_FUZZING_NYX_ABORT("ReadBytes failed\n");
-    return {};
-  }
-
-  std::string result = std::string(dumpBuffer.begin(), dumpBuffer.length());
-
-  return std::move(result);
-}
-
-template<typename T>
-std::string LibprotobufMapping::SerializeToString(T* param) {
-  // create dummy msg
-  mozilla::UniquePtr<IPC::Message> dummy_msg = mozilla::MakeUnique<IPC::Message>();
-  IPC::MessageWriter writer__{
-                (*(dummy_msg))};
-  // let ParamTraits serialize the parameter into the dummy msg
-  IPC::WriteParam((&(writer__)), param);
-
-  // read entire payload of dummy msg and return as string
-  return ReadPayloadFromMessage(dummy_msg);
-}
-
-template<typename T>
-mozilla::Maybe<T> LibprotobufMapping::DeserializeFromString(std::string& payload) {
-  // create dummy msg
-  mozilla::UniquePtr<IPC::Message> dummy_msg = CreateMessageFromPayload(payload);
-
-  // let ParamTraits deserialize the parameter
-  IPC::MessageReader reader__{
-                        *(dummy_msg)};
-
-  T result;
-  if (!IPC::ReadParam<T>(&reader__, &result)) {
-    MOZ_FUZZING_NYX_ABORT("Deserialization from string failed\n");
-    return mozilla::Nothing();
-  }
-
-  return mozilla::Some(std::move(result));
-}
 
 // UniquePtr<IPC::Message> LibprotobufMapping::ConvertProtobufToIPCMessage
 // (UniquePtr<TypedProtobuf>& protobuf) {
