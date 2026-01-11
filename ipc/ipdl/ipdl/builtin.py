@@ -75,8 +75,8 @@ PBTypeMappings = {
     'bool': 'bool',
 
     'string': 'string',
-    'nsString' : 'string',
-    'nsCString' : 'string',
+    # 'nsString' : 'string',
+    # 'nsCString' : 'string',
 }
 
 # XXX(Bug 1677487) Can we restrict including ByteBuf.h, FileDescriptor.h,
