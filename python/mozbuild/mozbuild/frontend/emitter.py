@@ -1084,6 +1084,10 @@ class TreeMetadataEmitter(LoggingMixin):
                     mozpath.join(ipdl_root, root + suffix) for suffix in suffix_map[ext]
                 )
 
+                gen_sources["SOURCES"].append(
+                    mozpath.join(ipdl_root, root + "Protobuf.cpp")
+                )
+
         no_pgo = context.get("NO_PGO")
         no_pgo_sources = [f for f, flags in all_flags.items() if flags.no_pgo]
         if no_pgo:
