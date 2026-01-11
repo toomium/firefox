@@ -523,7 +523,7 @@ class Reply_EnsureConnected final :
   std::string* _internal_mutable_maybeidnamespace();
   public:
 
-  // required string error = 3;
+  // required bytes error = 3;
   bool has_error() const;
   private:
   bool _internal_has_error() const;
@@ -1304,7 +1304,7 @@ class Msg_SetDisplayList final :
   std::string* _internal_mutable_txnstarttime();
   public:
 
-  // required string txnURL = 10;
+  // required bytes txnURL = 10;
   bool has_txnurl() const;
   private:
   bool _internal_has_txnurl() const;
@@ -1702,7 +1702,7 @@ class Msg_EmptyTransaction final :
   std::string* _internal_mutable_txnstarttime();
   public:
 
-  // required string txnURL = 10;
+  // required bytes txnURL = 10;
   bool has_txnurl() const;
   private:
   bool _internal_has_txnurl() const;
@@ -3496,7 +3496,7 @@ class Msg_StartCaptureSequence final :
     kAPathFieldNumber = 1,
     kAFlagsFieldNumber = 2,
   };
-  // required string aPath = 1;
+  // required bytes aPath = 1;
   bool has_apath() const;
   private:
   bool _internal_has_apath() const;
@@ -7512,7 +7512,7 @@ inline void Reply_EnsureConnected::set_allocated_maybeidnamespace(std::string* m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PWebRenderBridge.Reply_EnsureConnected.maybeIdNamespace)
 }
 
-// required string error = 3;
+// required bytes error = 3;
 inline bool Reply_EnsureConnected::_internal_has_error() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7532,7 +7532,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_EnsureConnected::set_error(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.error_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PWebRenderBridge.Reply_EnsureConnected.error)
 }
 inline std::string* Reply_EnsureConnected::mutable_error() {
@@ -8348,7 +8348,7 @@ inline void Msg_SetDisplayList::set_allocated_txnstarttime(std::string* txnstart
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetDisplayList.txnStartTime)
 }
 
-// required string txnURL = 10;
+// required bytes txnURL = 10;
 inline bool Msg_SetDisplayList::_internal_has_txnurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -8368,7 +8368,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetDisplayList::set_txnurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.txnurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.txnurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetDisplayList.txnURL)
 }
 inline std::string* Msg_SetDisplayList::mutable_txnurl() {
@@ -9132,7 +9132,7 @@ inline void Msg_EmptyTransaction::set_allocated_txnstarttime(std::string* txnsta
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PWebRenderBridge.Msg_EmptyTransaction.txnStartTime)
 }
 
-// required string txnURL = 10;
+// required bytes txnURL = 10;
 inline bool Msg_EmptyTransaction::_internal_has_txnurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -9152,7 +9152,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_EmptyTransaction::set_txnurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000080u;
- _impl_.txnurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.txnurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PWebRenderBridge.Msg_EmptyTransaction.txnURL)
 }
 inline std::string* Msg_EmptyTransaction::mutable_txnurl() {
@@ -9973,7 +9973,7 @@ inline void Msg_ScheduleComposite::set_allocated_areasons(std::string* areasons)
 
 // Msg_StartCaptureSequence
 
-// required string aPath = 1;
+// required bytes aPath = 1;
 inline bool Msg_StartCaptureSequence::_internal_has_apath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9993,7 +9993,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StartCaptureSequence::set_apath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.apath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PWebRenderBridge.Msg_StartCaptureSequence.aPath)
 }
 inline std::string* Msg_StartCaptureSequence::mutable_apath() {

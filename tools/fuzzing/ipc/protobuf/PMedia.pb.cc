@@ -466,7 +466,7 @@ const char* Reply_GetPrincipalKey::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string aKey = 1;
+      // required bytes aKey = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_akey();
@@ -506,9 +506,9 @@ uint8_t* Reply_GetPrincipalKey::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string aKey = 1;
+  // required bytes aKey = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_akey(), target);
   }
 
@@ -524,10 +524,10 @@ size_t Reply_GetPrincipalKey::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey)
   size_t total_size = 0;
 
-  // required string aKey = 1;
+  // required bytes aKey = 1;
   if (_internal_has_akey()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_akey());
   }
   uint32_t cached_has_bits = 0;

@@ -215,7 +215,7 @@ const char* SelectContentData::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // repeated string values = 2;
+      // repeated bytes values = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
@@ -264,10 +264,10 @@ uint8_t* SelectContentData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_indices(i), target);
   }
 
-  // repeated string values = 2;
+  // repeated bytes values = 2;
   for (int i = 0, n = this->_internal_values_size(); i < n; i++) {
     const auto& s = this->_internal_values(i);
-    target = stream->WriteString(2, s, target);
+    target = stream->WriteBytes(2, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -295,11 +295,11 @@ size_t SelectContentData::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  // repeated string values = 2;
+  // repeated bytes values = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.values_.size());
   for (int i = 0, n = _impl_.values_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.values_.Get(i));
   }
 
@@ -661,7 +661,7 @@ const char* FileContentData::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // string mVnsString = 2;
+      // bytes mVnsString = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_mvnsstring();
@@ -706,7 +706,7 @@ uint8_t* FileContentData::_InternalSerialize(
       break;
     }
     case kMVnsString: {
-      target = stream->WriteStringMaybeAliased(
+      target = stream->WriteBytesMaybeAliased(
           2, this->_internal_mvnsstring(), target);
       break;
     }
@@ -736,10 +736,10 @@ size_t FileContentData::ByteSizeLong() const {
           this->_internal_mvblobimpl());
       break;
     }
-    // string mVnsString = 2;
+    // bytes mVnsString = 2;
     case kMVnsString: {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_mvnsstring());
       break;
     }
@@ -907,7 +907,7 @@ const char* TextContentData::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string value = 1;
+      // required bytes value = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_value();
@@ -956,9 +956,9 @@ uint8_t* TextContentData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string value = 1;
+  // required bytes value = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_value(), target);
   }
 
@@ -981,9 +981,9 @@ size_t TextContentData::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_value()) {
-    // required string value = 1;
+    // required bytes value = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_value());
   }
 
@@ -999,9 +999,9 @@ size_t TextContentData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string value = 1;
+    // required bytes value = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_value());
 
     // required bool lastValueChangeWasInteractive = 2;

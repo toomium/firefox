@@ -127,7 +127,7 @@ message Msg_SimulateDeviceReset {
 }
 
 message Msg_NotifyGpuObservers {
-  required string aTopic = 1;
+  required bytes aTopic = 1;
 }
 
 message Msg_RequestMemoryReport {
@@ -152,7 +152,7 @@ message Msg_CollectPerfStatsJSON {
 }
 
 message Reply_CollectPerfStatsJSON {
-  required string aStats = 1;
+  required bytes aStats = 1;
 }
 
 message Msg_FlushFOGData {
@@ -178,11 +178,11 @@ message Msg_InitComplete {
 
 message Msg_ReportCheckerboard {
   required uint32 severity = 1;
-  required string log = 2;
+  required bytes log = 2;
 }
 
 message Msg_GraphicsError {
-  required string aError = 1;
+  required bytes aError = 1;
 }
 
 message Msg_InitCrashReporter {
@@ -196,7 +196,7 @@ message Msg_ShutdownVRProcess {
 }
 
 message Msg_NotifyUiObservers {
-  required string aTopic = 1;
+  required bytes aTopic = 1;
 }
 
 message Msg_AccumulateChildHistograms {
@@ -244,7 +244,7 @@ message Msg_NotifyDisableRemoteCanvas {
 }
 
 message Msg_FlushMemory {
-  required string reason = 1;
+  required bytes reason = 1;
 }
 
 message Msg_AddMemoryReport {
@@ -258,7 +258,7 @@ message Msg_UpdateFeature {
 
 message Msg_UsedFallback {
   required bytes aFallback = 1;
-  required string message = 2;
+  required bytes message = 2;
 }
 
 message Msg_BHRThreadHang {
@@ -276,5 +276,5 @@ message Msg_FOGData {
 // Parameter mappings stats:
 // Total parameters in this file 79
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 8, "<class 'ipdl.type.BuiltinCType'>": 3, "<class 'ipdl.type.ByteBufType'>": 2, "<class 'ipdl.type.EndpointType'>": 13, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 37, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 1, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 15, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 17
+// Scalar mappings performed: 10
 // Message structs/unions generated from ipdl structs/unions: 1

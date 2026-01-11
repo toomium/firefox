@@ -439,7 +439,7 @@ class SDBRequestReadResponse final :
   enum : int {
     kDataFieldNumber = 1,
   };
-  // required string data = 1;
+  // required bytes data = 1;
   bool has_data() const;
   private:
   bool _internal_has_data() const;
@@ -1012,7 +1012,7 @@ class SDBRequestResponse final :
 
 // SDBRequestReadResponse
 
-// required string data = 1;
+// required bytes data = 1;
 inline bool SDBRequestReadResponse::_internal_has_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1032,7 +1032,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SDBRequestReadResponse::set_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.data_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SDBRequestReadResponse.data)
 }
 inline std::string* SDBRequestReadResponse::mutable_data() {

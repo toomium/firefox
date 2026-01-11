@@ -31,22 +31,22 @@ message CookieJarSettingsArgs {
   required bool isOnContentBlockingAllowList = 4;
   repeated protobuf.mozilla.net.CookiePermissionData cookiePermissions = 5;
   required bool isFixed = 6;
-  required string partitionKey = 7;
+  required bytes partitionKey = 7;
   required bool hasFingerprintingRandomizationKey = 8;
   repeated uint32 fingerprintingRandomizationKey = 9;
   required uint64 topLevelWindowContextId = 10;
 }
 
 message PreferredAlternativeDataTypeParams {
-  required string type = 1;
-  required string contentType = 2;
+  required bytes type = 1;
+  required bytes contentType = 2;
   required bytes deliverAltData = 3;
 }
 
 message RedirectHistoryEntryInfo {
   required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
   optional protobuf.mozilla.ipc.URIParams referrerUri = 2;
-  required string remoteAddress = 3;
+  required bytes remoteAddress = 3;
 }
 
 message InterceptionInfoArg {
@@ -62,7 +62,7 @@ message LoadInfoArgs {
   optional protobuf.mozilla.ipc.PrincipalInfo principalToInheritInfo = 3;
   optional protobuf.mozilla.ipc.PrincipalInfo topLevelPrincipalInfo = 4;
   optional protobuf.mozilla.ipc.URIParams resultPrincipalURI = 5;
-  required string triggeringRemoteType = 6;
+  required bytes triggeringRemoteType = 6;
   required bytes sandboxedNullPrincipalID = 7;
   required uint32 securityFlags = 8;
   required uint32 sandboxFlags = 9;
@@ -103,7 +103,7 @@ message LoadInfoArgs {
   optional protobuf.mozilla.dom.IPCClientInfo reservedClientInfo = 44;
   optional protobuf.mozilla.dom.IPCClientInfo initialClientInfo = 45;
   optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor controller = 46;
-  repeated string corsUnsafeHeaders = 47;
+  repeated bytes corsUnsafeHeaders = 47;
   required bool forcePreflight = 48;
   required bool isPreflight = 49;
   required bool loadTriggeredFromExternal = 50;
@@ -111,8 +111,8 @@ message LoadInfoArgs {
   required bool documentHasUserInteracted = 52;
   required bool allowListFutureDocumentsCreatedFromThisRedirectChain = 53;
   required bool needForCheckingAntiTrackingHeuristic = 54;
-  required string cspNonce = 55;
-  required string integrityMetadata = 56;
+  required bytes cspNonce = 55;
+  required bytes integrityMetadata = 56;
   required bool skipContentSniffing = 57;
   required uint32 httpsOnlyStatus = 58;
   required bool hstsStatus = 59;
@@ -184,7 +184,7 @@ message ChildLoadInfoForwarderArgs {
 }
 
 message CorsPreflightArgs {
-  repeated string unsafeHeaders = 1;
+  repeated bytes unsafeHeaders = 1;
 }
 
 message HttpChannelOpenArgs {
@@ -209,13 +209,13 @@ message HttpChannelOpenArgs {
   required uint64 contentWindowId = 19;
   required uint64 browserId = 20;
   required uint64 earlyHintPreloaderId = 21;
-  required string requestMethod = 22;
+  required bytes requestMethod = 22;
   required bytes classOfService = 23;
-  required string entityID = 24;
-  required string appCacheClientID = 25;
+  required bytes entityID = 24;
+  required bytes appCacheClientID = 25;
   optional protobuf.mozilla.net.CorsPreflightArgs preflightArgs = 26;
-  required string contentTypeHint = 27;
-  required string integrityMetadata = 28;
+  required bytes contentTypeHint = 27;
+  required bytes integrityMetadata = 28;
   optional protobuf.mozilla.ipc.IPCStream uploadStream = 29;
   required protobuf.mozilla.net.LoadInfoArgs loadInfo = 30;
   required uint32 loadFlags = 31;
@@ -240,10 +240,10 @@ message HttpChannelOpenArgs {
   required bool preferCacheLoadOverBypass = 50;
   required bool forceMainDocumentChannel = 51;
   required uint32 redirectionLimit = 52;
-  required string classicScriptHintCharset = 53;
-  required string documentCharacterSet = 54;
+  required bytes classicScriptHintCharset = 53;
+  required bytes documentCharacterSet = 54;
   required bool isUserAgentHeaderModified = 55;
-  required string initiatorType = 56;
+  required bytes initiatorType = 56;
 }
 
 message HttpChannelConnectArgs {
@@ -258,26 +258,26 @@ message HttpChannelCreationArgs {
 }
 
 message ProxyInfoCloneArgs {
-  required string type = 1;
-  required string host = 2;
+  required bytes type = 1;
+  required bytes host = 2;
   required int32 port = 3;
-  required string username = 4;
-  required string password = 5;
+  required bytes username = 4;
+  required bytes password = 5;
   required uint32 flags = 6;
   required uint32 timeout = 7;
   required uint32 resolveFlags = 8;
-  required string proxyAuthorizationHeader = 9;
-  required string connectionIsolationKey = 10;
+  required bytes proxyAuthorizationHeader = 9;
+  required bytes connectionIsolationKey = 10;
 }
 
 message HttpConnectionInfoCloneArgs {
-  required string host = 1;
+  required bytes host = 1;
   required int32 port = 2;
-  required string npnToken = 3;
-  required string username = 4;
+  required bytes npnToken = 3;
+  required bytes username = 4;
   required bytes originAttributes = 5;
   required bool endToEndSSL = 6;
-  required string routedHost = 7;
+  required bytes routedHost = 7;
   required int32 routedPort = 8;
   required bool anonymous = 9;
   required bool aPrivate = 10;
@@ -293,31 +293,31 @@ message HttpConnectionInfoCloneArgs {
   required uint32 trrMode = 20;
   required bool isIPv4Disabled = 21;
   required bool isIPv6Disabled = 22;
-  required string topWindowOrigin = 23;
+  required bytes topWindowOrigin = 23;
   required bool isHttp3 = 24;
   required bool webTransport = 25;
   required uint64 webTransportId = 26;
   required bool hasIPHintAddress = 27;
-  required string echConfig = 28;
+  required bytes echConfig = 28;
   repeated protobuf.mozilla.net.ProxyInfoCloneArgs proxyInfo = 29;
 }
 
 message ConsoleReportCollected {
   required uint32 errorFlags = 1;
-  required string category = 2;
+  required bytes category = 2;
   required uint32 propertiesFile = 3;
-  required string sourceFileURI = 4;
+  required bytes sourceFileURI = 4;
   required uint32 lineNumber = 5;
   required uint32 columnNumber = 6;
-  required string messageName = 7;
-  repeated string stringParams = 8;
+  required bytes messageName = 7;
+  repeated bytes stringParams = 8;
 }
 
 message CookieStruct {
-  required string name = 1;
-  required string value = 2;
-  required string host = 3;
-  required string path = 4;
+  required bytes name = 1;
+  required bytes value = 2;
+  required bytes host = 3;
+  required bytes path = 4;
   required int64 expiry = 5;
   required int64 lastAccessed = 6;
   required int64 creationTime = 7;
@@ -381,17 +381,17 @@ message RedirectToRealChannelArgs {
   required uint32 redirectMode = 8;
   required uint32 redirectFlags = 9;
   optional uint32 contentDisposition = 10;
-  optional string contentDispositionFilename = 11;
+  optional bytes contentDispositionFilename = 11;
   required bytes properties = 12;
   required uint32 loadStateExternalLoadFlags = 13;
   required uint32 loadStateInternalLoadFlags = 14;
   required uint32 loadStateLoadType = 15;
   required bytes timing = 16;
-  required string srcdocData = 17;
+  required bytes srcdocData = 17;
   required bytes baseUri = 18;
   optional bytes loadingSessionHistoryInfo = 19;
   required uint64 loadIdentifier = 20;
-  optional string originalUriString = 21;
+  optional bytes originalUriString = 21;
   repeated protobuf.mozilla.net.EarlyHintConnectArgs earlyHints = 22;
   required uint32 earlyHintLinkType = 23;
 }
@@ -430,14 +430,14 @@ message ResourceTimingStructArgs {
 }
 
 message HttpActivity {
-  required string host = 1;
+  required bytes host = 1;
   required int32 port = 2;
   required bool endToEndSSL = 3;
 }
 
 message HttpConnectionActivity {
-  required string connInfoKey = 1;
-  required string host = 2;
+  required bytes connInfoKey = 1;
+  required bytes host = 2;
   required int32 port = 3;
   required bool ssl = 4;
   required bool hasECH = 5;
@@ -468,7 +468,7 @@ message SpeculativeConnectionOverriderArgs {
 message GIOChannelOpenArgs {
   required protobuf.mozilla.ipc.URIParams uri = 1;
   required uint64 startPos = 2;
-  required string entityID = 3;
+  required bytes entityID = 3;
   optional protobuf.mozilla.ipc.IPCStream uploadStream = 4;
   required protobuf.mozilla.net.LoadInfoArgs loadInfo = 5;
   required uint32 loadFlags = 6;
@@ -490,12 +490,12 @@ message FileChannelInfo {
   required bytes originalURI = 2;
   required uint32 loadFlags = 3;
   required protobuf.mozilla.net.LoadInfoArgs loadInfo = 4;
-  required string contentType = 5;
+  required bytes contentType = 5;
   required uint64 channelId = 6;
 }
 
 message RemoteStreamInfo {
   required bytes inputStream = 1;
-  required string contentType = 2;
+  required bytes contentType = 2;
   required int64 contentLength = 3;
 }

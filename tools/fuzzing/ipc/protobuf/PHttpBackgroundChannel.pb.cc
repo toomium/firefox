@@ -955,7 +955,7 @@ const char* Msg_OnTransportAndData::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // required string data = 5;
+      // required bytes data = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_data();
@@ -1037,9 +1037,9 @@ uint8_t* Msg_OnTransportAndData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_count(), target);
   }
 
-  // required string data = 5;
+  // required bytes data = 5;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         5, this->_internal_data(), target);
   }
 
@@ -1082,9 +1082,9 @@ size_t Msg_OnTransportAndData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_data()) {
-    // required string data = 5;
+    // required bytes data = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_data());
   }
 
@@ -1127,9 +1127,9 @@ size_t Msg_OnTransportAndData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_transportstatus());
 
-    // required string data = 5;
+    // required bytes data = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_data());
 
     // required bytes onDataAvailableStart = 7;

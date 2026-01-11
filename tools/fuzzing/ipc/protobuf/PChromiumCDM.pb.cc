@@ -2014,7 +2014,7 @@ const char* Msg_LoadSession::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required string aSessionId = 3;
+      // required bytes aSessionId = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_asessionid();
@@ -2066,9 +2066,9 @@ uint8_t* Msg_LoadSession::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_asessiontype(), target);
   }
 
-  // required string aSessionId = 3;
+  // required bytes aSessionId = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_asessionid(), target);
   }
 
@@ -2085,9 +2085,9 @@ size_t Msg_LoadSession::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_asessionid()) {
-    // required string aSessionId = 3;
+    // required bytes aSessionId = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
   }
 
@@ -2108,9 +2108,9 @@ size_t Msg_LoadSession::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string aSessionId = 3;
+    // required bytes aSessionId = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
 
     // required uint32 aPromiseId = 1;
@@ -2311,7 +2311,7 @@ const char* Msg_UpdateSession::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string aSessionId = 2;
+      // required bytes aSessionId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_asessionid();
@@ -2373,9 +2373,9 @@ uint8_t* Msg_UpdateSession::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_apromiseid(), target);
   }
 
-  // required string aSessionId = 2;
+  // required bytes aSessionId = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_asessionid(), target);
   }
 
@@ -2398,9 +2398,9 @@ size_t Msg_UpdateSession::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_asessionid()) {
-    // required string aSessionId = 2;
+    // required bytes aSessionId = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
   }
 
@@ -2416,9 +2416,9 @@ size_t Msg_UpdateSession::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string aSessionId = 2;
+    // required bytes aSessionId = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
 
     // required uint32 aPromiseId = 1;
@@ -2615,7 +2615,7 @@ const char* Msg_CloseSession::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required string aSessionId = 2;
+      // required bytes aSessionId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_asessionid();
@@ -2661,9 +2661,9 @@ uint8_t* Msg_CloseSession::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_apromiseid(), target);
   }
 
-  // required string aSessionId = 2;
+  // required bytes aSessionId = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_asessionid(), target);
   }
 
@@ -2680,9 +2680,9 @@ size_t Msg_CloseSession::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_asessionid()) {
-    // required string aSessionId = 2;
+    // required bytes aSessionId = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
   }
 
@@ -2698,9 +2698,9 @@ size_t Msg_CloseSession::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string aSessionId = 2;
+    // required bytes aSessionId = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
 
     // required uint32 aPromiseId = 1;
@@ -2886,7 +2886,7 @@ const char* Msg_RemoveSession::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string aSessionId = 2;
+      // required bytes aSessionId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_asessionid();
@@ -2932,9 +2932,9 @@ uint8_t* Msg_RemoveSession::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_apromiseid(), target);
   }
 
-  // required string aSessionId = 2;
+  // required bytes aSessionId = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_asessionid(), target);
   }
 
@@ -2951,9 +2951,9 @@ size_t Msg_RemoveSession::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_asessionid()) {
-    // required string aSessionId = 2;
+    // required bytes aSessionId = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
   }
 
@@ -2969,9 +2969,9 @@ size_t Msg_RemoveSession::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string aSessionId = 2;
+    // required bytes aSessionId = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
 
     // required uint32 aPromiseId = 1;
@@ -5662,7 +5662,7 @@ const char* Msg_OnResolveNewSessionPromise::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // required string aSessionId = 2;
+      // required bytes aSessionId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_asessionid();
@@ -5708,9 +5708,9 @@ uint8_t* Msg_OnResolveNewSessionPromise::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_apromiseid(), target);
   }
 
-  // required string aSessionId = 2;
+  // required bytes aSessionId = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_asessionid(), target);
   }
 
@@ -5727,9 +5727,9 @@ size_t Msg_OnResolveNewSessionPromise::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_asessionid()) {
-    // required string aSessionId = 2;
+    // required bytes aSessionId = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
   }
 
@@ -5745,9 +5745,9 @@ size_t Msg_OnResolveNewSessionPromise::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string aSessionId = 2;
+    // required bytes aSessionId = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
 
     // required uint32 aPromiseId = 1;
@@ -6162,7 +6162,7 @@ const char* Msg_OnRejectPromise::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string aErrorMessage = 4;
+      // required bytes aErrorMessage = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_aerrormessage();
@@ -6220,9 +6220,9 @@ uint8_t* Msg_OnRejectPromise::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_asystemcode(), target);
   }
 
-  // required string aErrorMessage = 4;
+  // required bytes aErrorMessage = 4;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_aerrormessage(), target);
   }
 
@@ -6239,9 +6239,9 @@ size_t Msg_OnRejectPromise::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_aerrormessage()) {
-    // required string aErrorMessage = 4;
+    // required bytes aErrorMessage = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aerrormessage());
   }
 
@@ -6267,9 +6267,9 @@ size_t Msg_OnRejectPromise::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string aErrorMessage = 4;
+    // required bytes aErrorMessage = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aerrormessage());
 
     // required uint32 aPromiseId = 1;
@@ -6467,7 +6467,7 @@ const char* Msg_OnSessionMessage::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string aSessionId = 1;
+      // required bytes aSessionId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_asessionid();
@@ -6532,9 +6532,9 @@ uint8_t* Msg_OnSessionMessage::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string aSessionId = 1;
+  // required bytes aSessionId = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_asessionid(), target);
   }
 
@@ -6563,9 +6563,9 @@ size_t Msg_OnSessionMessage::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_asessionid()) {
-    // required string aSessionId = 1;
+    // required bytes aSessionId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
   }
 
@@ -6581,9 +6581,9 @@ size_t Msg_OnSessionMessage::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string aSessionId = 1;
+    // required bytes aSessionId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
 
     // required uint32 aMessageType = 2;
@@ -6771,7 +6771,7 @@ const char* Msg_OnSessionKeysChange::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string aSessionId = 1;
+      // required bytes aSessionId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_asessionid();
@@ -6824,9 +6824,9 @@ uint8_t* Msg_OnSessionKeysChange::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string aSessionId = 1;
+  // required bytes aSessionId = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_asessionid(), target);
   }
 
@@ -6850,10 +6850,10 @@ size_t Msg_OnSessionKeysChange::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionKeysChange)
   size_t total_size = 0;
 
-  // required string aSessionId = 1;
+  // required bytes aSessionId = 1;
   if (_internal_has_asessionid()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
   }
   uint32_t cached_has_bits = 0;
@@ -7027,7 +7027,7 @@ const char* Msg_OnExpirationChange::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string aSessionId = 1;
+      // required bytes aSessionId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_asessionid();
@@ -7076,9 +7076,9 @@ uint8_t* Msg_OnExpirationChange::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string aSessionId = 1;
+  // required bytes aSessionId = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_asessionid(), target);
   }
 
@@ -7101,9 +7101,9 @@ size_t Msg_OnExpirationChange::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_asessionid()) {
-    // required string aSessionId = 1;
+    // required bytes aSessionId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
   }
 
@@ -7119,9 +7119,9 @@ size_t Msg_OnExpirationChange::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string aSessionId = 1;
+    // required bytes aSessionId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
 
     // required double aSecondsSinceEpoch = 2;
@@ -7291,7 +7291,7 @@ const char* Msg_OnSessionClosed::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string aSessionId = 1;
+      // required bytes aSessionId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_asessionid();
@@ -7331,9 +7331,9 @@ uint8_t* Msg_OnSessionClosed::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string aSessionId = 1;
+  // required bytes aSessionId = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_asessionid(), target);
   }
 
@@ -7349,10 +7349,10 @@ size_t Msg_OnSessionClosed::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionClosed)
   size_t total_size = 0;
 
-  // required string aSessionId = 1;
+  // required bytes aSessionId = 1;
   if (_internal_has_asessionid()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_asessionid());
   }
   uint32_t cached_has_bits = 0;

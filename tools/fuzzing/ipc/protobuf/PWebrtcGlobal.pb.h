@@ -467,7 +467,7 @@ class Msg_PeerConnectionCreated final :
     kAPcIdFieldNumber = 1,
     kAIsLongTermStatsDisabledFieldNumber = 2,
   };
-  // required string aPcId = 1;
+  // required bytes aPcId = 1;
   bool has_apcid() const;
   private:
   bool _internal_has_apcid() const;
@@ -631,7 +631,7 @@ class Msg_PeerConnectionDestroyed final :
   enum : int {
     kAPcIdFieldNumber = 1,
   };
-  // required string aPcId = 1;
+  // required bytes aPcId = 1;
   bool has_apcid() const;
   private:
   bool _internal_has_apcid() const;
@@ -925,7 +925,7 @@ class Msg_GetStats final :
   enum : int {
     kAPcIdFilterFieldNumber = 1,
   };
-  // required string aPcIdFilter = 1;
+  // required bytes aPcIdFilter = 1;
   bool has_apcidfilter() const;
   private:
   bool _internal_has_apcidfilter() const;
@@ -1790,7 +1790,7 @@ class Msg_SetAecLogging final :
 
 // Msg_PeerConnectionCreated
 
-// required string aPcId = 1;
+// required bytes aPcId = 1;
 inline bool Msg_PeerConnectionCreated::_internal_has_apcid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1810,7 +1810,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PeerConnectionCreated::set_apcid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.apcid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apcid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.aPcId)
 }
 inline std::string* Msg_PeerConnectionCreated::mutable_apcid() {
@@ -1890,7 +1890,7 @@ inline void Msg_PeerConnectionCreated::set_aislongtermstatsdisabled(bool value) 
 
 // Msg_PeerConnectionDestroyed
 
-// required string aPcId = 1;
+// required bytes aPcId = 1;
 inline bool Msg_PeerConnectionDestroyed::_internal_has_apcid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1910,7 +1910,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PeerConnectionDestroyed::set_apcid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.apcid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apcid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.aPcId)
 }
 inline std::string* Msg_PeerConnectionDestroyed::mutable_apcid() {
@@ -2034,7 +2034,7 @@ inline void Msg_PeerConnectionFinalStats::set_allocated_afinalstats(std::string*
 
 // Msg_GetStats
 
-// required string aPcIdFilter = 1;
+// required bytes aPcIdFilter = 1;
 inline bool Msg_GetStats::_internal_has_apcidfilter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2054,7 +2054,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetStats::set_apcidfilter(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.apcidfilter_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apcidfilter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.aPcIdFilter)
 }
 inline std::string* Msg_GetStats::mutable_apcidfilter() {

@@ -14,12 +14,12 @@ package protobuf.mozilla.dom;
 message IPCFormDataValue {
   oneof content {
     bytes mVBlobImpl = 1;
-    string mVnsString = 2;
+    bytes mVnsString = 2;
   }
 }
 
 message FormDataTuple {
-  required string name = 1;
+  required bytes name = 1;
   required protobuf.mozilla.dom.IPCFormDataValue value = 2;
 }
 
@@ -30,7 +30,7 @@ message CustomElementFormValue {
   oneof content {
     bytes mVvoid_t = 1;
     bytes mVBlobImpl = 2;
-    string mVnsString = 3;
+    bytes mVnsString = 3;
     _mVArrayOfFormDataTuple mVArrayOfFormDataTuple = 4;
   }
 }

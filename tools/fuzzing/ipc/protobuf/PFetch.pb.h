@@ -1074,7 +1074,7 @@ class Msg_OnCSPViolationEvent final :
   enum : int {
     kAJSONFieldNumber = 1,
   };
-  // required string aJSON = 1;
+  // required bytes aJSON = 1;
   bool has_ajson() const;
   private:
   bool _internal_has_ajson() const;
@@ -2028,7 +2028,7 @@ Msg_OnFlushConsoleReport::areports() const {
 
 // Msg_OnCSPViolationEvent
 
-// required string aJSON = 1;
+// required bytes aJSON = 1;
 inline bool Msg_OnCSPViolationEvent::_internal_has_ajson() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2048,7 +2048,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnCSPViolationEvent::set_ajson(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ajson_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.ajson_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFetch.Msg_OnCSPViolationEvent.aJSON)
 }
 inline std::string* Msg_OnCSPViolationEvent::mutable_ajson() {

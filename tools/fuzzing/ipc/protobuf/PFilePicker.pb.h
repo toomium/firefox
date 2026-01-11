@@ -194,7 +194,7 @@ class Msg_Open final :
     kSelectedTypeFieldNumber = 1,
     kAddToRecentDocsFieldNumber = 2,
   };
-  // repeated string filters = 5;
+  // repeated bytes filters = 5;
   int filters_size() const;
   private:
   int _internal_filters_size() const;
@@ -205,12 +205,12 @@ class Msg_Open final :
   void set_filters(int index, const std::string& value);
   void set_filters(int index, std::string&& value);
   void set_filters(int index, const char* value);
-  void set_filters(int index, const char* value, size_t size);
+  void set_filters(int index, const void* value, size_t size);
   std::string* add_filters();
   void add_filters(const std::string& value);
   void add_filters(std::string&& value);
   void add_filters(const char* value);
-  void add_filters(const char* value, size_t size);
+  void add_filters(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& filters() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_filters();
   private:
@@ -218,7 +218,7 @@ class Msg_Open final :
   std::string* _internal_add_filters();
   public:
 
-  // repeated string filterNames = 6;
+  // repeated bytes filterNames = 6;
   int filternames_size() const;
   private:
   int _internal_filternames_size() const;
@@ -229,12 +229,12 @@ class Msg_Open final :
   void set_filternames(int index, const std::string& value);
   void set_filternames(int index, std::string&& value);
   void set_filternames(int index, const char* value);
-  void set_filternames(int index, const char* value, size_t size);
+  void set_filternames(int index, const void* value, size_t size);
   std::string* add_filternames();
   void add_filternames(const std::string& value);
   void add_filternames(std::string&& value);
   void add_filternames(const char* value);
-  void add_filternames(const char* value, size_t size);
+  void add_filternames(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& filternames() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_filternames();
   private:
@@ -242,7 +242,7 @@ class Msg_Open final :
   std::string* _internal_add_filternames();
   public:
 
-  // repeated string rawFilters = 7;
+  // repeated bytes rawFilters = 7;
   int rawfilters_size() const;
   private:
   int _internal_rawfilters_size() const;
@@ -253,12 +253,12 @@ class Msg_Open final :
   void set_rawfilters(int index, const std::string& value);
   void set_rawfilters(int index, std::string&& value);
   void set_rawfilters(int index, const char* value);
-  void set_rawfilters(int index, const char* value, size_t size);
+  void set_rawfilters(int index, const void* value, size_t size);
   std::string* add_rawfilters();
   void add_rawfilters(const std::string& value);
   void add_rawfilters(std::string&& value);
   void add_rawfilters(const char* value);
-  void add_rawfilters(const char* value, size_t size);
+  void add_rawfilters(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& rawfilters() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_rawfilters();
   private:
@@ -266,7 +266,7 @@ class Msg_Open final :
   std::string* _internal_add_rawfilters();
   public:
 
-  // required string defaultFile = 3;
+  // required bytes defaultFile = 3;
   bool has_defaultfile() const;
   private:
   bool _internal_has_defaultfile() const;
@@ -284,7 +284,7 @@ class Msg_Open final :
   std::string* _internal_mutable_defaultfile();
   public:
 
-  // required string defaultExtension = 4;
+  // required bytes defaultExtension = 4;
   bool has_defaultextension() const;
   private:
   bool _internal_has_defaultextension() const;
@@ -302,7 +302,7 @@ class Msg_Open final :
   std::string* _internal_mutable_defaultextension();
   public:
 
-  // required string displayDirectory = 8;
+  // required bytes displayDirectory = 8;
   bool has_displaydirectory() const;
   private:
   bool _internal_has_displaydirectory() const;
@@ -320,7 +320,7 @@ class Msg_Open final :
   std::string* _internal_mutable_displaydirectory();
   public:
 
-  // required string displaySpecialDirectory = 9;
+  // required bytes displaySpecialDirectory = 9;
   bool has_displayspecialdirectory() const;
   private:
   bool _internal_has_displayspecialdirectory() const;
@@ -338,7 +338,7 @@ class Msg_Open final :
   std::string* _internal_mutable_displayspecialdirectory();
   public:
 
-  // required string okButtonLabel = 10;
+  // required bytes okButtonLabel = 10;
   bool has_okbuttonlabel() const;
   private:
   bool _internal_has_okbuttonlabel() const;
@@ -789,7 +789,7 @@ inline void Msg_Open::set_addtorecentdocs(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFilePicker.Msg_Open.addToRecentDocs)
 }
 
-// required string defaultFile = 3;
+// required bytes defaultFile = 3;
 inline bool Msg_Open::_internal_has_defaultfile() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -809,7 +809,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Open::set_defaultfile(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.defaultfile_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.defaultfile_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFilePicker.Msg_Open.defaultFile)
 }
 inline std::string* Msg_Open::mutable_defaultfile() {
@@ -857,7 +857,7 @@ inline void Msg_Open::set_allocated_defaultfile(std::string* defaultfile) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PFilePicker.Msg_Open.defaultFile)
 }
 
-// required string defaultExtension = 4;
+// required bytes defaultExtension = 4;
 inline bool Msg_Open::_internal_has_defaultextension() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -877,7 +877,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Open::set_defaultextension(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.defaultextension_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.defaultextension_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFilePicker.Msg_Open.defaultExtension)
 }
 inline std::string* Msg_Open::mutable_defaultextension() {
@@ -925,7 +925,7 @@ inline void Msg_Open::set_allocated_defaultextension(std::string* defaultextensi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PFilePicker.Msg_Open.defaultExtension)
 }
 
-// repeated string filters = 5;
+// repeated bytes filters = 5;
 inline int Msg_Open::_internal_filters_size() const {
   return _impl_.filters_.size();
 }
@@ -964,7 +964,7 @@ inline void Msg_Open::set_filters(int index, const char* value) {
   _impl_.filters_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PFilePicker.Msg_Open.filters)
 }
-inline void Msg_Open::set_filters(int index, const char* value, size_t size) {
+inline void Msg_Open::set_filters(int index, const void* value, size_t size) {
   _impl_.filters_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PFilePicker.Msg_Open.filters)
@@ -985,7 +985,7 @@ inline void Msg_Open::add_filters(const char* value) {
   _impl_.filters_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PFilePicker.Msg_Open.filters)
 }
-inline void Msg_Open::add_filters(const char* value, size_t size) {
+inline void Msg_Open::add_filters(const void* value, size_t size) {
   _impl_.filters_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PFilePicker.Msg_Open.filters)
 }
@@ -1000,7 +1000,7 @@ Msg_Open::mutable_filters() {
   return &_impl_.filters_;
 }
 
-// repeated string filterNames = 6;
+// repeated bytes filterNames = 6;
 inline int Msg_Open::_internal_filternames_size() const {
   return _impl_.filternames_.size();
 }
@@ -1039,7 +1039,7 @@ inline void Msg_Open::set_filternames(int index, const char* value) {
   _impl_.filternames_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PFilePicker.Msg_Open.filterNames)
 }
-inline void Msg_Open::set_filternames(int index, const char* value, size_t size) {
+inline void Msg_Open::set_filternames(int index, const void* value, size_t size) {
   _impl_.filternames_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PFilePicker.Msg_Open.filterNames)
@@ -1060,7 +1060,7 @@ inline void Msg_Open::add_filternames(const char* value) {
   _impl_.filternames_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PFilePicker.Msg_Open.filterNames)
 }
-inline void Msg_Open::add_filternames(const char* value, size_t size) {
+inline void Msg_Open::add_filternames(const void* value, size_t size) {
   _impl_.filternames_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PFilePicker.Msg_Open.filterNames)
 }
@@ -1075,7 +1075,7 @@ Msg_Open::mutable_filternames() {
   return &_impl_.filternames_;
 }
 
-// repeated string rawFilters = 7;
+// repeated bytes rawFilters = 7;
 inline int Msg_Open::_internal_rawfilters_size() const {
   return _impl_.rawfilters_.size();
 }
@@ -1114,7 +1114,7 @@ inline void Msg_Open::set_rawfilters(int index, const char* value) {
   _impl_.rawfilters_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PFilePicker.Msg_Open.rawFilters)
 }
-inline void Msg_Open::set_rawfilters(int index, const char* value, size_t size) {
+inline void Msg_Open::set_rawfilters(int index, const void* value, size_t size) {
   _impl_.rawfilters_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PFilePicker.Msg_Open.rawFilters)
@@ -1135,7 +1135,7 @@ inline void Msg_Open::add_rawfilters(const char* value) {
   _impl_.rawfilters_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PFilePicker.Msg_Open.rawFilters)
 }
-inline void Msg_Open::add_rawfilters(const char* value, size_t size) {
+inline void Msg_Open::add_rawfilters(const void* value, size_t size) {
   _impl_.rawfilters_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PFilePicker.Msg_Open.rawFilters)
 }
@@ -1150,7 +1150,7 @@ Msg_Open::mutable_rawfilters() {
   return &_impl_.rawfilters_;
 }
 
-// required string displayDirectory = 8;
+// required bytes displayDirectory = 8;
 inline bool Msg_Open::_internal_has_displaydirectory() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1170,7 +1170,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Open::set_displaydirectory(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.displaydirectory_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.displaydirectory_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFilePicker.Msg_Open.displayDirectory)
 }
 inline std::string* Msg_Open::mutable_displaydirectory() {
@@ -1218,7 +1218,7 @@ inline void Msg_Open::set_allocated_displaydirectory(std::string* displaydirecto
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PFilePicker.Msg_Open.displayDirectory)
 }
 
-// required string displaySpecialDirectory = 9;
+// required bytes displaySpecialDirectory = 9;
 inline bool Msg_Open::_internal_has_displayspecialdirectory() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1238,7 +1238,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Open::set_displayspecialdirectory(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.displayspecialdirectory_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.displayspecialdirectory_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFilePicker.Msg_Open.displaySpecialDirectory)
 }
 inline std::string* Msg_Open::mutable_displayspecialdirectory() {
@@ -1286,7 +1286,7 @@ inline void Msg_Open::set_allocated_displayspecialdirectory(std::string* display
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PFilePicker.Msg_Open.displaySpecialDirectory)
 }
 
-// required string okButtonLabel = 10;
+// required bytes okButtonLabel = 10;
 inline bool Msg_Open::_internal_has_okbuttonlabel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1306,7 +1306,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Open::set_okbuttonlabel(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.okbuttonlabel_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.okbuttonlabel_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFilePicker.Msg_Open.okButtonLabel)
 }
 inline std::string* Msg_Open::mutable_okbuttonlabel() {

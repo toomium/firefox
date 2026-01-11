@@ -1277,7 +1277,7 @@ const char* Msg_PWebBrowserPersistSerializeConstructor::_InternalParse(const cha
         } else
           goto handle_unusual;
         continue;
-      // required string aRequestedContentType = 2;
+      // required bytes aRequestedContentType = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_arequestedcontenttype();
@@ -1342,9 +1342,9 @@ uint8_t* Msg_PWebBrowserPersistSerializeConstructor::_InternalSerialize(
         _Internal::amap(this).GetCachedSize(), target, stream);
   }
 
-  // required string aRequestedContentType = 2;
+  // required bytes aRequestedContentType = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_arequestedcontenttype(), target);
   }
 
@@ -1373,9 +1373,9 @@ size_t Msg_PWebBrowserPersistSerializeConstructor::RequiredFieldsByteSizeFallbac
   size_t total_size = 0;
 
   if (_internal_has_arequestedcontenttype()) {
-    // required string aRequestedContentType = 2;
+    // required bytes aRequestedContentType = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_arequestedcontenttype());
   }
 
@@ -1403,9 +1403,9 @@ size_t Msg_PWebBrowserPersistSerializeConstructor::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string aRequestedContentType = 2;
+    // required bytes aRequestedContentType = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_arequestedcontenttype());
 
     // required .protobuf.mozilla.WebBrowserPersistURIMap aMap = 1;

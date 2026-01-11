@@ -346,7 +346,7 @@ class Msg_GetFileReferences final :
   std::string* _internal_mutable_persistencetype();
   public:
 
-  // required string origin = 2;
+  // required bytes origin = 2;
   bool has_origin() const;
   private:
   bool _internal_has_origin() const;
@@ -364,7 +364,7 @@ class Msg_GetFileReferences final :
   std::string* _internal_mutable_origin();
   public:
 
-  // required string databaseName = 3;
+  // required bytes databaseName = 3;
   bool has_databasename() const;
   private:
   bool _internal_has_databasename() const;
@@ -1193,7 +1193,7 @@ inline void Msg_GetFileReferences::set_allocated_persistencetype(std::string* pe
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.persistenceType)
 }
 
-// required string origin = 2;
+// required bytes origin = 2;
 inline bool Msg_GetFileReferences::_internal_has_origin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1213,7 +1213,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetFileReferences::set_origin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.origin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.origin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.origin)
 }
 inline std::string* Msg_GetFileReferences::mutable_origin() {
@@ -1261,7 +1261,7 @@ inline void Msg_GetFileReferences::set_allocated_origin(std::string* origin) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.origin)
 }
 
-// required string databaseName = 3;
+// required bytes databaseName = 3;
 inline bool Msg_GetFileReferences::_internal_has_databasename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1281,7 +1281,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetFileReferences::set_databasename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.databasename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.databasename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.databaseName)
 }
 inline std::string* Msg_GetFileReferences::mutable_databasename() {

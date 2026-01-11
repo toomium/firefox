@@ -179,7 +179,7 @@ class UDPAddressInfo final :
     kAddrFieldNumber = 1,
     kPortFieldNumber = 2,
   };
-  // required string addr = 1;
+  // required bytes addr = 1;
   bool has_addr() const;
   private:
   bool _internal_has_addr() const;
@@ -762,7 +762,7 @@ class UDPData final :
 #endif  // __GNUC__
 // UDPAddressInfo
 
-// required string addr = 1;
+// required bytes addr = 1;
 inline bool UDPAddressInfo::_internal_has_addr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -782,7 +782,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void UDPAddressInfo::set_addr(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.addr_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.addr_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.UDPAddressInfo.addr)
 }
 inline std::string* UDPAddressInfo::mutable_addr() {

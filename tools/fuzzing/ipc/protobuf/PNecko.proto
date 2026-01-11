@@ -58,15 +58,15 @@ message Reply_PTCPServerSocketConstructor {
 
 message Msg_PUDPSocketConstructor {
   required bytes principal = 1;
-  required string filter = 2;
+  required bytes filter = 2;
 }
 
 message Reply_PUDPSocketConstructor {
 }
 
 message Msg_PDNSRequestConstructor {
-  required string hostName = 1;
-  required string trrServer = 2;
+  required bytes hostName = 1;
+  required bytes trrServer = 2;
   required int32 port = 3;
   required uint32 type = 4;
   required bytes originAttributes = 5;
@@ -117,14 +117,14 @@ message Msg_SpeculativeConnect {
 }
 
 message Msg_HTMLDNSPrefetch {
-  required string hostname = 1;
+  required bytes hostname = 1;
   required bool isHttps = 2;
   required bytes originAttributes = 3;
   required bytes flags = 4;
 }
 
 message Msg_CancelHTMLDNSPrefetch {
-  required string hostname = 1;
+  required bytes hostname = 1;
   required bool isHttps = 2;
   required bytes originAttributes = 3;
   required bytes flags = 4;
@@ -173,7 +173,7 @@ message Msg_RemoveRequestContext {
 }
 
 message Msg_PAltDataOutputStreamConstructor {
-  required string type = 1;
+  required bytes type = 1;
   required int64 predictedSize = 2;
   required bytes channel = 3;
 }
@@ -262,7 +262,7 @@ message Msg_SpeculativeConnectRequest {
 }
 
 message Msg_NetworkChangeNotification {
-  required string type = 1;
+  required bytes type = 1;
 }
 
 message Msg_PTransportProviderConstructor {
@@ -272,11 +272,11 @@ message Reply_PTransportProviderConstructor {
 }
 
 message Msg_SetTRRDomain {
-  required string domain = 1;
+  required bytes domain = 1;
 }
 
 message Msg_PTCPSocketConstructor {
-  required string host = 1;
+  required bytes host = 1;
   required uint32 port = 2;
 }
 
@@ -286,5 +286,5 @@ message Reply_PTCPSocketConstructor {
 // Parameter mappings stats:
 // Total parameters in this file 74
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 3, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 6, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 1, "<class 'ipdl.type.FDType'>": 1, "<class 'ipdl.type.ImportedCxxType'>": 53, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 4, "<class 'ipdl.type.NotNullType'>": 1, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 3, "<class 'ipdl.type.UnionType'>": 2, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 31
+// Scalar mappings performed: 22
 // Message structs/unions generated from ipdl structs/unions: 0

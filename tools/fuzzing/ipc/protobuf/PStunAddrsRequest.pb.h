@@ -327,7 +327,7 @@ class Msg_RegisterMDNSHostname final :
     kHostnameFieldNumber = 1,
     kAddressFieldNumber = 2,
   };
-  // required string hostname = 1;
+  // required bytes hostname = 1;
   bool has_hostname() const;
   private:
   bool _internal_has_hostname() const;
@@ -345,7 +345,7 @@ class Msg_RegisterMDNSHostname final :
   std::string* _internal_mutable_hostname();
   public:
 
-  // required string address = 2;
+  // required bytes address = 2;
   bool has_address() const;
   private:
   bool _internal_has_address() const;
@@ -496,7 +496,7 @@ class Msg_QueryMDNSHostname final :
   enum : int {
     kHostnameFieldNumber = 1,
   };
-  // required string hostname = 1;
+  // required bytes hostname = 1;
   bool has_hostname() const;
   private:
   bool _internal_has_hostname() const;
@@ -643,7 +643,7 @@ class Msg_UnregisterMDNSHostname final :
   enum : int {
     kHostnameFieldNumber = 1,
   };
-  // required string hostname = 1;
+  // required bytes hostname = 1;
   bool has_hostname() const;
   private:
   bool _internal_has_hostname() const;
@@ -1039,7 +1039,7 @@ class Msg_OnMDNSQueryComplete final :
     kHostnameFieldNumber = 1,
     kAddressFieldNumber = 2,
   };
-  // required string hostname = 1;
+  // required bytes hostname = 1;
   bool has_hostname() const;
   private:
   bool _internal_has_hostname() const;
@@ -1256,7 +1256,7 @@ class Msg_OnStunAddrsAvailable final :
 
 // Msg_RegisterMDNSHostname
 
-// required string hostname = 1;
+// required bytes hostname = 1;
 inline bool Msg_RegisterMDNSHostname::_internal_has_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1276,7 +1276,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RegisterMDNSHostname::set_hostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.hostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname.hostname)
 }
 inline std::string* Msg_RegisterMDNSHostname::mutable_hostname() {
@@ -1324,7 +1324,7 @@ inline void Msg_RegisterMDNSHostname::set_allocated_hostname(std::string* hostna
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname.hostname)
 }
 
-// required string address = 2;
+// required bytes address = 2;
 inline bool Msg_RegisterMDNSHostname::_internal_has_address() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1344,7 +1344,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RegisterMDNSHostname::set_address(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.address_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.address_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname.address)
 }
 inline std::string* Msg_RegisterMDNSHostname::mutable_address() {
@@ -1396,7 +1396,7 @@ inline void Msg_RegisterMDNSHostname::set_allocated_address(std::string* address
 
 // Msg_QueryMDNSHostname
 
-// required string hostname = 1;
+// required bytes hostname = 1;
 inline bool Msg_QueryMDNSHostname::_internal_has_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1416,7 +1416,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_QueryMDNSHostname::set_hostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.hostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PStunAddrsRequest.Msg_QueryMDNSHostname.hostname)
 }
 inline std::string* Msg_QueryMDNSHostname::mutable_hostname() {
@@ -1468,7 +1468,7 @@ inline void Msg_QueryMDNSHostname::set_allocated_hostname(std::string* hostname)
 
 // Msg_UnregisterMDNSHostname
 
-// required string hostname = 1;
+// required bytes hostname = 1;
 inline bool Msg_UnregisterMDNSHostname::_internal_has_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1488,7 +1488,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UnregisterMDNSHostname::set_hostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.hostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PStunAddrsRequest.Msg_UnregisterMDNSHostname.hostname)
 }
 inline std::string* Msg_UnregisterMDNSHostname::mutable_hostname() {
@@ -1548,7 +1548,7 @@ inline void Msg_UnregisterMDNSHostname::set_allocated_hostname(std::string* host
 
 // Msg_OnMDNSQueryComplete
 
-// required string hostname = 1;
+// required bytes hostname = 1;
 inline bool Msg_OnMDNSQueryComplete::_internal_has_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1568,7 +1568,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnMDNSQueryComplete::set_hostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.hostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnMDNSQueryComplete.hostname)
 }
 inline std::string* Msg_OnMDNSQueryComplete::mutable_hostname() {

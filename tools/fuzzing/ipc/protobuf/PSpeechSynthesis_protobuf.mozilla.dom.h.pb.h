@@ -175,7 +175,7 @@ class RemoteVoice final :
     kLocalServiceFieldNumber = 4,
     kQueuedFieldNumber = 5,
   };
-  // required string voiceURI = 1;
+  // required bytes voiceURI = 1;
   bool has_voiceuri() const;
   private:
   bool _internal_has_voiceuri() const;
@@ -193,7 +193,7 @@ class RemoteVoice final :
   std::string* _internal_mutable_voiceuri();
   public:
 
-  // required string name = 2;
+  // required bytes name = 2;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -211,7 +211,7 @@ class RemoteVoice final :
   std::string* _internal_mutable_name();
   public:
 
-  // required string lang = 3;
+  // required bytes lang = 3;
   bool has_lang() const;
   private:
   bool _internal_has_lang() const;
@@ -288,7 +288,7 @@ class RemoteVoice final :
 #endif  // __GNUC__
 // RemoteVoice
 
-// required string voiceURI = 1;
+// required bytes voiceURI = 1;
 inline bool RemoteVoice::_internal_has_voiceuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -308,7 +308,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteVoice::set_voiceuri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.voiceuri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.voiceuri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteVoice.voiceURI)
 }
 inline std::string* RemoteVoice::mutable_voiceuri() {
@@ -356,7 +356,7 @@ inline void RemoteVoice::set_allocated_voiceuri(std::string* voiceuri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteVoice.voiceURI)
 }
 
-// required string name = 2;
+// required bytes name = 2;
 inline bool RemoteVoice::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -376,7 +376,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteVoice::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteVoice.name)
 }
 inline std::string* RemoteVoice::mutable_name() {
@@ -424,7 +424,7 @@ inline void RemoteVoice::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteVoice.name)
 }
 
-// required string lang = 3;
+// required bytes lang = 3;
 inline bool RemoteVoice::_internal_has_lang() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -444,7 +444,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteVoice::set_lang(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.lang_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.lang_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteVoice.lang)
 }
 inline std::string* RemoteVoice::mutable_lang() {

@@ -28,7 +28,7 @@ message ServiceWorkerTerminateWorkerOpArgs {
 }
 
 message ServiceWorkerLifeCycleEventOpArgs {
-  required string eventName = 1;
+  required bytes eventName = 1;
 }
 
 message ServiceWorkerCookieChangeEventOpArgs {
@@ -47,12 +47,12 @@ message OptionalPushData {
 }
 
 message ServiceWorkerPushEventOpArgs {
-  required string messageId = 1;
+  required bytes messageId = 1;
   required protobuf.mozilla.dom.OptionalPushData data = 2;
 }
 
 message PushSubscriptionData {
-  required string endpoint = 1;
+  required bytes endpoint = 1;
   repeated uint32 rawP256dhKey = 2;
   repeated uint32 authSecret = 3;
   repeated uint32 appServerKey = 4;
@@ -64,7 +64,7 @@ message ServiceWorkerPushSubscriptionChangeEventOpArgs {
 
 message ServiceWorkerNotificationClickEventOpArgs {
   required protobuf.mozilla.dom.IPCNotification notification = 1;
-  required string action = 2;
+  required bytes action = 2;
 }
 
 message ServiceWorkerNotificationCloseEventOpArgs {
@@ -79,8 +79,8 @@ message ServiceWorkerNotificationEventOpArgs {
 }
 
 message ServiceWorkerExtensionAPIEventOpArgs {
-  required string apiNamespace = 1;
-  required string apiEventName = 2;
+  required bytes apiNamespace = 1;
+  required bytes apiEventName = 2;
 }
 
 message ServiceWorkerMessageEventOpArgs {
@@ -89,10 +89,10 @@ message ServiceWorkerMessageEventOpArgs {
 }
 
 message ServiceWorkerFetchEventOpArgsCommon {
-  required string workerScriptSpec = 1;
+  required bytes workerScriptSpec = 1;
   required protobuf.mozilla.dom.IPCInternalRequest internalRequest = 2;
-  required string clientId = 3;
-  required string resultingClientId = 4;
+  required bytes clientId = 3;
+  required bytes resultingClientId = 4;
   required bool isNonSubresourceRequest = 5;
   required bool preloadNavigation = 6;
   required bytes testingInjectCancellation = 7;
@@ -134,7 +134,7 @@ message ServiceWorkerOpArgs {
 }
 
 message FetchEventRespondWithClosure {
-  required string respondWithScriptSpec = 1;
+  required bytes respondWithScriptSpec = 1;
   required uint32 respondWithLineNumber = 2;
   required uint32 respondWithColumnNumber = 3;
 }

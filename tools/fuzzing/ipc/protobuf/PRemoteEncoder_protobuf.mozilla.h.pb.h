@@ -371,7 +371,7 @@ class EncodeInitCompletionIPDL final :
     kHardwareReasonFieldNumber = 3,
     kHardwareFieldNumber = 2,
   };
-  // required string description = 1;
+  // required bytes description = 1;
   bool has_description() const;
   private:
   bool _internal_has_description() const;
@@ -389,7 +389,7 @@ class EncodeInitCompletionIPDL final :
   std::string* _internal_mutable_description();
   public:
 
-  // required string hardwareReason = 3;
+  // required bytes hardwareReason = 3;
   bool has_hardwarereason() const;
   private:
   bool _internal_has_hardwarereason() const;
@@ -1153,7 +1153,7 @@ inline EncodedInputIPDL::ContentCase EncodedInputIPDL::content_case() const {
 
 // EncodeInitCompletionIPDL
 
-// required string description = 1;
+// required bytes description = 1;
 inline bool EncodeInitCompletionIPDL::_internal_has_description() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1173,7 +1173,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void EncodeInitCompletionIPDL::set_description(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.description_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.description_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.EncodeInitCompletionIPDL.description)
 }
 inline std::string* EncodeInitCompletionIPDL::mutable_description() {
@@ -1249,7 +1249,7 @@ inline void EncodeInitCompletionIPDL::set_hardware(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.EncodeInitCompletionIPDL.hardware)
 }
 
-// required string hardwareReason = 3;
+// required bytes hardwareReason = 3;
 inline bool EncodeInitCompletionIPDL::_internal_has_hardwarereason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1269,7 +1269,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void EncodeInitCompletionIPDL::set_hardwarereason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.hardwarereason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.hardwarereason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.EncodeInitCompletionIPDL.hardwareReason)
 }
 inline std::string* EncodeInitCompletionIPDL::mutable_hardwarereason() {

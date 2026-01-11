@@ -452,7 +452,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required string url = 13;
+      // required bytes url = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 106)) {
           auto str = _internal_mutable_url();
@@ -564,9 +564,9 @@ uint8_t* FrameStats::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(12, this->_internal_skippedcomposites(), target);
   }
 
-  // required string url = 13;
+  // required bytes url = 13;
   if (cached_has_bits & 0x00000100u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         13, this->_internal_url(), target);
   }
 
@@ -639,9 +639,9 @@ size_t FrameStats::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_url()) {
-    // required string url = 13;
+    // required bytes url = 13;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_url());
   }
 
@@ -712,9 +712,9 @@ size_t FrameStats::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scenebuilttime());
 
-    // required string url = 13;
+    // required bytes url = 13;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_url());
 
     // required double resourceUploadTime = 6;

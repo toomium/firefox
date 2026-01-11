@@ -185,7 +185,7 @@ class Msg_ConfigurePAC final :
     kAIncludePathFieldNumber = 3,
     kAExtraHeapSizeFieldNumber = 4,
   };
-  // required string aPACURI = 1;
+  // required bytes aPACURI = 1;
   bool has_apacuri() const;
   private:
   bool _internal_has_apacuri() const;
@@ -203,7 +203,7 @@ class Msg_ConfigurePAC final :
   std::string* _internal_mutable_apacuri();
   public:
 
-  // required string aPACScriptData = 2;
+  // required bytes aPACScriptData = 2;
   bool has_apacscriptdata() const;
   private:
   bool _internal_has_apacscriptdata() const;
@@ -383,7 +383,7 @@ class Msg_GetProxyForURI final :
     kATestURIFieldNumber = 1,
     kATestHostFieldNumber = 2,
   };
-  // required string aTestURI = 1;
+  // required bytes aTestURI = 1;
   bool has_atesturi() const;
   private:
   bool _internal_has_atesturi() const;
@@ -401,7 +401,7 @@ class Msg_GetProxyForURI final :
   std::string* _internal_mutable_atesturi();
   public:
 
-  // required string aTestHost = 2;
+  // required bytes aTestHost = 2;
   bool has_atesthost() const;
   private:
   bool _internal_has_atesthost() const;
@@ -571,7 +571,7 @@ class Reply_GetProxyForURI final :
   std::string* _internal_mutable_astatus();
   public:
 
-  // required string aResult = 2;
+  // required bytes aResult = 2;
   bool has_aresult() const;
   private:
   bool _internal_has_aresult() const;
@@ -619,7 +619,7 @@ class Reply_GetProxyForURI final :
 #endif  // __GNUC__
 // Msg_ConfigurePAC
 
-// required string aPACURI = 1;
+// required bytes aPACURI = 1;
 inline bool Msg_ConfigurePAC::_internal_has_apacuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -639,7 +639,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ConfigurePAC::set_apacuri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.apacuri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apacuri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aPACURI)
 }
 inline std::string* Msg_ConfigurePAC::mutable_apacuri() {
@@ -687,7 +687,7 @@ inline void Msg_ConfigurePAC::set_allocated_apacuri(std::string* apacuri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aPACURI)
 }
 
-// required string aPACScriptData = 2;
+// required bytes aPACScriptData = 2;
 inline bool Msg_ConfigurePAC::_internal_has_apacscriptdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -707,7 +707,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ConfigurePAC::set_apacscriptdata(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.apacscriptdata_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apacscriptdata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aPACScriptData)
 }
 inline std::string* Msg_ConfigurePAC::mutable_apacscriptdata() {
@@ -815,7 +815,7 @@ inline void Msg_ConfigurePAC::set_aextraheapsize(uint32_t value) {
 
 // Msg_GetProxyForURI
 
-// required string aTestURI = 1;
+// required bytes aTestURI = 1;
 inline bool Msg_GetProxyForURI::_internal_has_atesturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -835,7 +835,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetProxyForURI::set_atesturi(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atesturi_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atesturi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.aTestURI)
 }
 inline std::string* Msg_GetProxyForURI::mutable_atesturi() {
@@ -883,7 +883,7 @@ inline void Msg_GetProxyForURI::set_allocated_atesturi(std::string* atesturi) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.aTestURI)
 }
 
-// required string aTestHost = 2;
+// required bytes aTestHost = 2;
 inline bool Msg_GetProxyForURI::_internal_has_atesthost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -903,7 +903,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetProxyForURI::set_atesthost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.atesthost_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atesthost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.aTestHost)
 }
 inline std::string* Msg_GetProxyForURI::mutable_atesthost() {
@@ -1023,7 +1023,7 @@ inline void Reply_GetProxyForURI::set_allocated_astatus(std::string* astatus) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.aStatus)
 }
 
-// required string aResult = 2;
+// required bytes aResult = 2;
 inline bool Reply_GetProxyForURI::_internal_has_aresult() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1043,7 +1043,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_GetProxyForURI::set_aresult(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aresult_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.aResult)
 }
 inline std::string* Reply_GetProxyForURI::mutable_aresult() {

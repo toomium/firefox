@@ -1938,7 +1938,7 @@ class Msg_ObserveHttpActivity final :
   std::string* _internal_mutable_atimestamp();
   public:
 
-  // required string aExtraStringData = 6;
+  // required bytes aExtraStringData = 6;
   bool has_aextrastringdata() const;
   private:
   bool _internal_has_aextrastringdata() const;
@@ -2981,7 +2981,7 @@ class Msg_OnConsoleMessage final :
   enum : int {
     kAMessageFieldNumber = 1,
   };
-  // required string aMessage = 1;
+  // required bytes aMessage = 1;
   bool has_amessage() const;
   private:
   bool _internal_has_amessage() const;
@@ -5297,7 +5297,7 @@ class Msg_UpdateDeviceModelId final :
   enum : int {
     kAModelIdFieldNumber = 1,
   };
-  // required string aModelId = 1;
+  // required bytes aModelId = 1;
   bool has_amodelid() const;
   private:
   bool _internal_has_amodelid() const;
@@ -6716,7 +6716,7 @@ class Msg_PTRRServiceConstructor final :
     kACaptiveIsPassedFieldNumber = 1,
     kAParentalControlEnabledFieldNumber = 2,
   };
-  // repeated string aDNSSuffixList = 3;
+  // repeated bytes aDNSSuffixList = 3;
   int adnssuffixlist_size() const;
   private:
   int _internal_adnssuffixlist_size() const;
@@ -6727,12 +6727,12 @@ class Msg_PTRRServiceConstructor final :
   void set_adnssuffixlist(int index, const std::string& value);
   void set_adnssuffixlist(int index, std::string&& value);
   void set_adnssuffixlist(int index, const char* value);
-  void set_adnssuffixlist(int index, const char* value, size_t size);
+  void set_adnssuffixlist(int index, const void* value, size_t size);
   std::string* add_adnssuffixlist();
   void add_adnssuffixlist(const std::string& value);
   void add_adnssuffixlist(std::string&& value);
   void add_adnssuffixlist(const char* value);
-  void add_adnssuffixlist(const char* value, size_t size);
+  void add_adnssuffixlist(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& adnssuffixlist() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_adnssuffixlist();
   private:
@@ -7273,7 +7273,7 @@ class Msg_NotifyObserver final :
     kATopicFieldNumber = 1,
     kADataFieldNumber = 2,
   };
-  // required string aTopic = 1;
+  // required bytes aTopic = 1;
   bool has_atopic() const;
   private:
   bool _internal_has_atopic() const;
@@ -7291,7 +7291,7 @@ class Msg_NotifyObserver final :
   std::string* _internal_mutable_atopic();
   public:
 
-  // required string aData = 2;
+  // required bytes aData = 2;
   bool has_adata() const;
   private:
   bool _internal_has_adata() const;
@@ -9772,7 +9772,7 @@ class Msg_PDNSRequestConstructor final :
     kPortFieldNumber = 3,
     kTypeFieldNumber = 4,
   };
-  // required string hostName = 1;
+  // required bytes hostName = 1;
   bool has_hostname() const;
   private:
   bool _internal_has_hostname() const;
@@ -9790,7 +9790,7 @@ class Msg_PDNSRequestConstructor final :
   std::string* _internal_mutable_hostname();
   public:
 
-  // required string trrServer = 2;
+  // required bytes trrServer = 2;
   bool has_trrserver() const;
   private:
   bool _internal_has_trrserver() const;
@@ -10992,7 +10992,7 @@ inline void Msg_ObserveHttpActivity::set_aextrasizedata(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aExtraSizeData)
 }
 
-// required string aExtraStringData = 6;
+// required bytes aExtraStringData = 6;
 inline bool Msg_ObserveHttpActivity::_internal_has_aextrastringdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11012,7 +11012,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ObserveHttpActivity::set_aextrastringdata(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aextrastringdata_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aextrastringdata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aExtraStringData)
 }
 inline std::string* Msg_ObserveHttpActivity::mutable_aextrastringdata() {
@@ -11339,7 +11339,7 @@ inline void Msg_ExcludeHttp2OrHttp3::set_allocated_aargs(::protobuf::mozilla::ne
 
 // Msg_OnConsoleMessage
 
-// required string aMessage = 1;
+// required bytes aMessage = 1;
 inline bool Msg_OnConsoleMessage::_internal_has_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11359,7 +11359,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnConsoleMessage::set_amessage(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.amessage_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.amessage_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_OnConsoleMessage.aMessage)
 }
 inline std::string* Msg_OnConsoleMessage::mutable_amessage() {
@@ -12308,7 +12308,7 @@ inline void Msg_PHttpConnectionMgrConstructor::set_allocated_aargs(::protobuf::m
 
 // Msg_UpdateDeviceModelId
 
-// required string aModelId = 1;
+// required bytes aModelId = 1;
 inline bool Msg_UpdateDeviceModelId::_internal_has_amodelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12328,7 +12328,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateDeviceModelId::set_amodelid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.amodelid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.amodelid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_UpdateDeviceModelId.aModelId)
 }
 inline std::string* Msg_UpdateDeviceModelId::mutable_amodelid() {
@@ -12795,7 +12795,7 @@ inline void Msg_PTRRServiceConstructor::set_aparentalcontrolenabled(bool value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aParentalControlEnabled)
 }
 
-// repeated string aDNSSuffixList = 3;
+// repeated bytes aDNSSuffixList = 3;
 inline int Msg_PTRRServiceConstructor::_internal_adnssuffixlist_size() const {
   return _impl_.adnssuffixlist_.size();
 }
@@ -12834,7 +12834,7 @@ inline void Msg_PTRRServiceConstructor::set_adnssuffixlist(int index, const char
   _impl_.adnssuffixlist_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
 }
-inline void Msg_PTRRServiceConstructor::set_adnssuffixlist(int index, const char* value, size_t size) {
+inline void Msg_PTRRServiceConstructor::set_adnssuffixlist(int index, const void* value, size_t size) {
   _impl_.adnssuffixlist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
@@ -12855,7 +12855,7 @@ inline void Msg_PTRRServiceConstructor::add_adnssuffixlist(const char* value) {
   _impl_.adnssuffixlist_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
 }
-inline void Msg_PTRRServiceConstructor::add_adnssuffixlist(const char* value, size_t size) {
+inline void Msg_PTRRServiceConstructor::add_adnssuffixlist(const void* value, size_t size) {
   _impl_.adnssuffixlist_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
 }
@@ -12886,7 +12886,7 @@ Msg_PTRRServiceConstructor::mutable_adnssuffixlist() {
 
 // Msg_NotifyObserver
 
-// required string aTopic = 1;
+// required bytes aTopic = 1;
 inline bool Msg_NotifyObserver::_internal_has_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12906,7 +12906,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyObserver::set_atopic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atopic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atopic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.aTopic)
 }
 inline std::string* Msg_NotifyObserver::mutable_atopic() {
@@ -12954,7 +12954,7 @@ inline void Msg_NotifyObserver::set_allocated_atopic(std::string* atopic) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.aTopic)
 }
 
-// required string aData = 2;
+// required bytes aData = 2;
 inline bool Msg_NotifyObserver::_internal_has_adata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12974,7 +12974,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyObserver::set_adata(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.adata_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.adata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.aData)
 }
 inline std::string* Msg_NotifyObserver::mutable_adata() {
@@ -13706,7 +13706,7 @@ inline void Msg_AddNetAddrOverride::set_allocated_ato(std::string* ato) {
 
 // Msg_PDNSRequestConstructor
 
-// required string hostName = 1;
+// required bytes hostName = 1;
 inline bool Msg_PDNSRequestConstructor::_internal_has_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13726,7 +13726,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PDNSRequestConstructor::set_hostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.hostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.hostName)
 }
 inline std::string* Msg_PDNSRequestConstructor::mutable_hostname() {
@@ -13774,7 +13774,7 @@ inline void Msg_PDNSRequestConstructor::set_allocated_hostname(std::string* host
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.hostName)
 }
 
-// required string trrServer = 2;
+// required bytes trrServer = 2;
 inline bool Msg_PDNSRequestConstructor::_internal_has_trrserver() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13794,7 +13794,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PDNSRequestConstructor::set_trrserver(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.trrserver_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.trrserver_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.trrServer)
 }
 inline std::string* Msg_PDNSRequestConstructor::mutable_trrserver() {

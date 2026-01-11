@@ -447,7 +447,7 @@ class Msg_AddIPOverride final :
     kAHostFieldNumber = 1,
     kAIPLiteralFieldNumber = 2,
   };
-  // required string aHost = 1;
+  // required bytes aHost = 1;
   bool has_ahost() const;
   private:
   bool _internal_has_ahost() const;
@@ -465,7 +465,7 @@ class Msg_AddIPOverride final :
   std::string* _internal_mutable_ahost();
   public:
 
-  // required string aIPLiteral = 2;
+  // required bytes aIPLiteral = 2;
   bool has_aipliteral() const;
   private:
   bool _internal_has_aipliteral() const;
@@ -639,7 +639,7 @@ class Msg_AddHTTPSRecordOverride final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_adata();
 
-  // required string aHost = 1;
+  // required bytes aHost = 1;
   bool has_ahost() const;
   private:
   bool _internal_has_ahost() const;
@@ -788,7 +788,7 @@ class Msg_SetCnameOverride final :
     kAHostFieldNumber = 1,
     kACNAMEFieldNumber = 2,
   };
-  // required string aHost = 1;
+  // required bytes aHost = 1;
   bool has_ahost() const;
   private:
   bool _internal_has_ahost() const;
@@ -806,7 +806,7 @@ class Msg_SetCnameOverride final :
   std::string* _internal_mutable_ahost();
   public:
 
-  // required string aCNAME = 2;
+  // required bytes aCNAME = 2;
   bool has_acname() const;
   private:
   bool _internal_has_acname() const;
@@ -957,7 +957,7 @@ class Msg_ClearHostOverride final :
   enum : int {
     kAHostFieldNumber = 1,
   };
-  // required string aHost = 1;
+  // required bytes aHost = 1;
   bool has_ahost() const;
   private:
   bool _internal_has_ahost() const;
@@ -1133,7 +1133,7 @@ class Msg_ClearOverrides final :
 
 // Msg_AddIPOverride
 
-// required string aHost = 1;
+// required bytes aHost = 1;
 inline bool Msg_AddIPOverride::_internal_has_ahost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1153,7 +1153,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AddIPOverride::set_ahost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ahost_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.aHost)
 }
 inline std::string* Msg_AddIPOverride::mutable_ahost() {
@@ -1201,7 +1201,7 @@ inline void Msg_AddIPOverride::set_allocated_ahost(std::string* ahost) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.aHost)
 }
 
-// required string aIPLiteral = 2;
+// required bytes aIPLiteral = 2;
 inline bool Msg_AddIPOverride::_internal_has_aipliteral() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1221,7 +1221,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AddIPOverride::set_aipliteral(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aipliteral_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aipliteral_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.aIPLiteral)
 }
 inline std::string* Msg_AddIPOverride::mutable_aipliteral() {
@@ -1273,7 +1273,7 @@ inline void Msg_AddIPOverride::set_allocated_aipliteral(std::string* aipliteral)
 
 // Msg_AddHTTPSRecordOverride
 
-// required string aHost = 1;
+// required bytes aHost = 1;
 inline bool Msg_AddHTTPSRecordOverride::_internal_has_ahost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1293,7 +1293,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AddHTTPSRecordOverride::set_ahost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ahost_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.aHost)
 }
 inline std::string* Msg_AddHTTPSRecordOverride::mutable_ahost() {
@@ -1392,7 +1392,7 @@ Msg_AddHTTPSRecordOverride::mutable_adata() {
 
 // Msg_SetCnameOverride
 
-// required string aHost = 1;
+// required bytes aHost = 1;
 inline bool Msg_SetCnameOverride::_internal_has_ahost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1412,7 +1412,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetCnameOverride::set_ahost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ahost_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.aHost)
 }
 inline std::string* Msg_SetCnameOverride::mutable_ahost() {
@@ -1460,7 +1460,7 @@ inline void Msg_SetCnameOverride::set_allocated_ahost(std::string* ahost) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.aHost)
 }
 
-// required string aCNAME = 2;
+// required bytes aCNAME = 2;
 inline bool Msg_SetCnameOverride::_internal_has_acname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1480,7 +1480,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetCnameOverride::set_acname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.acname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.acname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.aCNAME)
 }
 inline std::string* Msg_SetCnameOverride::mutable_acname() {
@@ -1532,7 +1532,7 @@ inline void Msg_SetCnameOverride::set_allocated_acname(std::string* acname) {
 
 // Msg_ClearHostOverride
 
-// required string aHost = 1;
+// required bytes aHost = 1;
 inline bool Msg_ClearHostOverride::_internal_has_ahost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1552,7 +1552,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ClearHostOverride::set_ahost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ahost_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride.aHost)
 }
 inline std::string* Msg_ClearHostOverride::mutable_ahost() {

@@ -12,7 +12,7 @@ package protobuf.mozilla.ipc;
 
 // Structs and unions declarations
 message ContentSecurityPolicy {
-  required string policy = 1;
+  required bytes policy = 1;
   required bool reportOnlyFlag = 2;
   required bool deliveredViaMetaTagFlag = 3;
   required bool hasRequireTrustedTypesForDirective = 4;
@@ -20,10 +20,10 @@ message ContentSecurityPolicy {
 
 message ContentPrincipalInfo {
   required bytes attrs = 1;
-  required string originNoSuffix = 2;
-  required string spec = 3;
-  optional string domain = 4;
-  required string baseDomain = 5;
+  required bytes originNoSuffix = 2;
+  required bytes spec = 3;
+  optional bytes domain = 4;
+  required bytes baseDomain = 5;
 }
 
 message SystemPrincipalInfo {
@@ -31,7 +31,7 @@ message SystemPrincipalInfo {
 
 message NullPrincipalInfo {
   required bytes attrs = 1;
-  required string spec = 2;
+  required bytes spec = 2;
 }
 
 message ExpandedPrincipalInfo {
@@ -51,14 +51,14 @@ message PrincipalInfo {
 message CSPInfo {
   repeated protobuf.mozilla.ipc.ContentSecurityPolicy policyInfos = 1;
   required protobuf.mozilla.ipc.PrincipalInfo requestPrincipalInfo = 2;
-  required string selfURISpec = 3;
-  required string referrer = 4;
+  required bytes selfURISpec = 3;
+  required bytes referrer = 4;
   required uint64 innerWindowID = 5;
   required bytes requireTrustedTypesForDirectiveState = 6;
   required bool skipAllowInlineStyleCheck = 7;
 }
 
 message WebTransportHash {
-  required string algorithm = 1;
+  required bytes algorithm = 1;
   repeated uint32 value = 2;
 }

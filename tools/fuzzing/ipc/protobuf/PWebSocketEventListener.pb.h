@@ -208,7 +208,7 @@ class Msg_WebSocketCreated final :
     kAProtocolsFieldNumber = 3,
     kAwebSocketSerialIDFieldNumber = 1,
   };
-  // required string aURI = 2;
+  // required bytes aURI = 2;
   bool has_auri() const;
   private:
   bool _internal_has_auri() const;
@@ -226,7 +226,7 @@ class Msg_WebSocketCreated final :
   std::string* _internal_mutable_auri();
   public:
 
-  // required string aProtocols = 3;
+  // required bytes aProtocols = 3;
   bool has_aprotocols() const;
   private:
   bool _internal_has_aprotocols() const;
@@ -395,7 +395,7 @@ class Msg_WebSocketOpened final :
     kAHttpChannelIdFieldNumber = 5,
     kAwebSocketSerialIDFieldNumber = 1,
   };
-  // required string aEffectiveURI = 2;
+  // required bytes aEffectiveURI = 2;
   bool has_aeffectiveuri() const;
   private:
   bool _internal_has_aeffectiveuri() const;
@@ -413,7 +413,7 @@ class Msg_WebSocketOpened final :
   std::string* _internal_mutable_aeffectiveuri();
   public:
 
-  // required string aProtocols = 3;
+  // required bytes aProtocols = 3;
   bool has_aprotocols() const;
   private:
   bool _internal_has_aprotocols() const;
@@ -431,7 +431,7 @@ class Msg_WebSocketOpened final :
   std::string* _internal_mutable_aprotocols();
   public:
 
-  // required string aExtensions = 4;
+  // required bytes aExtensions = 4;
   bool has_aextensions() const;
   private:
   bool _internal_has_aextensions() const;
@@ -613,7 +613,7 @@ class Msg_WebSocketMessageAvailable final :
     kAwebSocketSerialIDFieldNumber = 1,
     kAMessageTypeFieldNumber = 3,
   };
-  // required string aData = 2;
+  // required bytes aData = 2;
   bool has_adata() const;
   private:
   bool _internal_has_adata() const;
@@ -794,7 +794,7 @@ class Msg_WebSocketClosed final :
     kAWasCleanFieldNumber = 2,
     kACodeFieldNumber = 3,
   };
-  // required string aReason = 4;
+  // required bytes aReason = 4;
   bool has_areason() const;
   private:
   bool _internal_has_areason() const;
@@ -1613,7 +1613,7 @@ inline void Msg_WebSocketCreated::set_awebsocketserialid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated.awebSocketSerialID)
 }
 
-// required string aURI = 2;
+// required bytes aURI = 2;
 inline bool Msg_WebSocketCreated::_internal_has_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1633,7 +1633,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketCreated::set_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.auri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated.aURI)
 }
 inline std::string* Msg_WebSocketCreated::mutable_auri() {
@@ -1681,7 +1681,7 @@ inline void Msg_WebSocketCreated::set_allocated_auri(std::string* auri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated.aURI)
 }
 
-// required string aProtocols = 3;
+// required bytes aProtocols = 3;
 inline bool Msg_WebSocketCreated::_internal_has_aprotocols() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1701,7 +1701,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketCreated::set_aprotocols(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aprotocols_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aprotocols_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated.aProtocols)
 }
 inline std::string* Msg_WebSocketCreated::mutable_aprotocols() {
@@ -1781,7 +1781,7 @@ inline void Msg_WebSocketOpened::set_awebsocketserialid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.awebSocketSerialID)
 }
 
-// required string aEffectiveURI = 2;
+// required bytes aEffectiveURI = 2;
 inline bool Msg_WebSocketOpened::_internal_has_aeffectiveuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1801,7 +1801,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketOpened::set_aeffectiveuri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aeffectiveuri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aeffectiveuri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.aEffectiveURI)
 }
 inline std::string* Msg_WebSocketOpened::mutable_aeffectiveuri() {
@@ -1849,7 +1849,7 @@ inline void Msg_WebSocketOpened::set_allocated_aeffectiveuri(std::string* aeffec
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.aEffectiveURI)
 }
 
-// required string aProtocols = 3;
+// required bytes aProtocols = 3;
 inline bool Msg_WebSocketOpened::_internal_has_aprotocols() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1869,7 +1869,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketOpened::set_aprotocols(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aprotocols_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aprotocols_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.aProtocols)
 }
 inline std::string* Msg_WebSocketOpened::mutable_aprotocols() {
@@ -1917,7 +1917,7 @@ inline void Msg_WebSocketOpened::set_allocated_aprotocols(std::string* aprotocol
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.aProtocols)
 }
 
-// required string aExtensions = 4;
+// required bytes aExtensions = 4;
 inline bool Msg_WebSocketOpened::_internal_has_aextensions() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1937,7 +1937,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketOpened::set_aextensions(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.aextensions_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aextensions_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.aExtensions)
 }
 inline std::string* Msg_WebSocketOpened::mutable_aextensions() {
@@ -2045,7 +2045,7 @@ inline void Msg_WebSocketMessageAvailable::set_awebsocketserialid(uint32_t value
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketMessageAvailable.awebSocketSerialID)
 }
 
-// required string aData = 2;
+// required bytes aData = 2;
 inline bool Msg_WebSocketMessageAvailable::_internal_has_adata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2065,7 +2065,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketMessageAvailable::set_adata(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.adata_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.adata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketMessageAvailable.aData)
 }
 inline std::string* Msg_WebSocketMessageAvailable::mutable_adata() {
@@ -2229,7 +2229,7 @@ inline void Msg_WebSocketClosed::set_acode(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketClosed.aCode)
 }
 
-// required string aReason = 4;
+// required bytes aReason = 4;
 inline bool Msg_WebSocketClosed::_internal_has_areason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2249,7 +2249,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketClosed::set_areason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.areason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.areason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketClosed.aReason)
 }
 inline std::string* Msg_WebSocketClosed::mutable_areason() {

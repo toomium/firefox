@@ -23,9 +23,9 @@ import "ProtocolTypes.proto";
 message ServiceWorkerData {
   required protobuf.mozilla.dom.IPCServiceWorkerDescriptor descriptor = 1;
   required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor registrationDescriptor = 2;
-  required string cacheName = 3;
+  required bytes cacheName = 3;
   required uint32 loadFlags = 4;
-  required string id = 5;
+  required bytes id = 5;
 }
 
 message OptionalServiceWorkerData {
@@ -36,7 +36,7 @@ message OptionalServiceWorkerData {
 }
 
 message RemoteWorkerData {
-  required string originalScriptURL = 1;
+  required bytes originalScriptURL = 1;
   required protobuf.mozilla.ipc.URIParams baseScriptURL = 2;
   required protobuf.mozilla.ipc.URIParams resolvedScriptURL = 3;
   required bytes workerOptions = 4;
@@ -46,7 +46,7 @@ message RemoteWorkerData {
   required bool useRegularPrincipal = 8;
   required bool usingStorageAccess = 9;
   required protobuf.mozilla.net.CookieJarSettingsArgs cookieJarSettings = 10;
-  required string domain = 11;
+  required bytes domain = 11;
   required bool isSecureContext = 12;
   optional protobuf.mozilla.dom.IPCClientInfo clientInfo = 13;
   required bytes referrerInfo = 14;
@@ -58,27 +58,27 @@ message RemoteWorkerData {
   required bytes originTrials = 20;
   required protobuf.mozilla.dom.OptionalServiceWorkerData serviceWorkerData = 21;
   required bytes agentClusterId = 22;
-  required string remoteType = 23;
+  required bytes remoteType = 23;
 }
 
 message ErrorDataNote {
   required uint32 lineNumber = 1;
   required uint32 columnNumber = 2;
-  required string message = 3;
-  required string filename = 4;
+  required bytes message = 3;
+  required bytes filename = 4;
 }
 
 message ErrorData {
   required bool isWarning = 1;
   required uint32 lineNumber = 2;
   required uint32 columnNumber = 3;
-  required string message = 4;
-  required string filename = 5;
+  required bytes message = 4;
+  required bytes filename = 5;
   repeated protobuf.mozilla.dom.ErrorDataNote notes = 6;
 }
 
 message CSPViolation {
-  required string json = 1;
+  required bytes json = 1;
 }
 
 message ErrorMismatchOptions {
@@ -97,17 +97,17 @@ message ErrorValue {
 message RemoteWorkerDebuggerInfo {
   required bool isChrome = 1;
   required uint32 type = 2;
-  required string url = 3;
+  required bytes url = 3;
   required uint64 windowID = 4;
   required bytes principal = 5;
   required uint64 serviceWorkerID = 6;
-  required string Id = 7;
-  required string name = 8;
-  required string parentId = 9;
+  required bytes Id = 7;
+  required bytes name = 8;
+  required bytes parentId = 9;
 }
 
 message RemoteWorkerDebuggerErrorInfo {
-  required string fileName = 1;
+  required bytes fileName = 1;
   required uint32 lineNo = 2;
-  required string message = 3;
+  required bytes message = 3;
 }

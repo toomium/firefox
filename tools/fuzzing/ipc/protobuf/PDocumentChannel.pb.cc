@@ -279,7 +279,7 @@ const char* Msg_Cancel::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required string reason = 2;
+      // required bytes reason = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_reason();
@@ -325,9 +325,9 @@ uint8_t* Msg_Cancel::_InternalSerialize(
         1, this->_internal_status(), target);
   }
 
-  // required string reason = 2;
+  // required bytes reason = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_reason(), target);
   }
 
@@ -351,9 +351,9 @@ size_t Msg_Cancel::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_reason()) {
-    // required string reason = 2;
+    // required bytes reason = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_reason());
   }
 
@@ -369,9 +369,9 @@ size_t Msg_Cancel::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_status());
 
-    // required string reason = 2;
+    // required bytes reason = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_reason());
 
   } else {

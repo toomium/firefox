@@ -6077,7 +6077,7 @@ class Msg_RegisterChrome final :
   std::string* _internal_add_overrides();
   public:
 
-  // required string locale = 4;
+  // required bytes locale = 4;
   bool has_locale() const;
   private:
   bool _internal_has_locale() const;
@@ -6414,7 +6414,7 @@ class Msg_ClearImageCache final :
   std::string* _internal_mutable_aprincipal();
   public:
 
-  // optional string aSchemelessSite = 4;
+  // optional bytes aSchemelessSite = 4;
   bool has_aschemelesssite() const;
   private:
   bool _internal_has_aschemelesssite() const;
@@ -6450,7 +6450,7 @@ class Msg_ClearImageCache final :
   std::string* _internal_mutable_apattern();
   public:
 
-  // optional string aURL = 6;
+  // optional bytes aURL = 6;
   bool has_aurl() const;
   private:
   bool _internal_has_aurl() const;
@@ -6650,7 +6650,7 @@ class Msg_ClearStyleSheetCache final :
   std::string* _internal_mutable_aprincipal();
   public:
 
-  // optional string aSchemelessSite = 3;
+  // optional bytes aSchemelessSite = 3;
   bool has_aschemelesssite() const;
   private:
   bool _internal_has_aschemelesssite() const;
@@ -6686,7 +6686,7 @@ class Msg_ClearStyleSheetCache final :
   std::string* _internal_mutable_apattern();
   public:
 
-  // optional string aURL = 5;
+  // optional bytes aURL = 5;
   bool has_aurl() const;
   private:
   bool _internal_has_aurl() const;
@@ -6872,7 +6872,7 @@ class Msg_ClearScriptCache final :
   std::string* _internal_mutable_aprincipal();
   public:
 
-  // optional string aSchemelessSite = 3;
+  // optional bytes aSchemelessSite = 3;
   bool has_aschemelesssite() const;
   private:
   bool _internal_has_aschemelesssite() const;
@@ -6908,7 +6908,7 @@ class Msg_ClearScriptCache final :
   std::string* _internal_mutable_apattern();
   public:
 
-  // optional string aURL = 5;
+  // optional bytes aURL = 5;
   bool has_aurl() const;
   private:
   bool _internal_has_aurl() const;
@@ -8544,7 +8544,7 @@ class Reply_CollectPerfStatsJSON final :
   enum : int {
     kAStatsFieldNumber = 1,
   };
-  // required string aStats = 1;
+  // required bytes aStats = 1;
   bool has_astats() const;
   private:
   bool _internal_has_astats() const;
@@ -9264,7 +9264,7 @@ class Msg_UpdateDictionaryList final :
   enum : int {
     kDictionariesFieldNumber = 1,
   };
-  // repeated string dictionaries = 1;
+  // repeated bytes dictionaries = 1;
   int dictionaries_size() const;
   private:
   int _internal_dictionaries_size() const;
@@ -9275,12 +9275,12 @@ class Msg_UpdateDictionaryList final :
   void set_dictionaries(int index, const std::string& value);
   void set_dictionaries(int index, std::string&& value);
   void set_dictionaries(int index, const char* value);
-  void set_dictionaries(int index, const char* value, size_t size);
+  void set_dictionaries(int index, const void* value, size_t size);
   std::string* add_dictionaries();
   void add_dictionaries(const std::string& value);
   void add_dictionaries(std::string&& value);
   void add_dictionaries(const char* value);
-  void add_dictionaries(const char* value, size_t size);
+  void add_dictionaries(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& dictionaries() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_dictionaries();
   private:
@@ -10032,7 +10032,7 @@ class Msg_UpdateAppLocales final :
   enum : int {
     kAppLocalesFieldNumber = 1,
   };
-  // repeated string appLocales = 1;
+  // repeated bytes appLocales = 1;
   int applocales_size() const;
   private:
   int _internal_applocales_size() const;
@@ -10043,12 +10043,12 @@ class Msg_UpdateAppLocales final :
   void set_applocales(int index, const std::string& value);
   void set_applocales(int index, std::string&& value);
   void set_applocales(int index, const char* value);
-  void set_applocales(int index, const char* value, size_t size);
+  void set_applocales(int index, const void* value, size_t size);
   std::string* add_applocales();
   void add_applocales(const std::string& value);
   void add_applocales(std::string&& value);
   void add_applocales(const char* value);
-  void add_applocales(const char* value, size_t size);
+  void add_applocales(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& applocales() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_applocales();
   private:
@@ -10184,7 +10184,7 @@ class Msg_UpdateRequestedLocales final :
   enum : int {
     kRequestedLocalesFieldNumber = 1,
   };
-  // repeated string requestedLocales = 1;
+  // repeated bytes requestedLocales = 1;
   int requestedlocales_size() const;
   private:
   int _internal_requestedlocales_size() const;
@@ -10195,12 +10195,12 @@ class Msg_UpdateRequestedLocales final :
   void set_requestedlocales(int index, const std::string& value);
   void set_requestedlocales(int index, std::string&& value);
   void set_requestedlocales(int index, const char* value);
-  void set_requestedlocales(int index, const char* value, size_t size);
+  void set_requestedlocales(int index, const void* value, size_t size);
   std::string* add_requestedlocales();
   void add_requestedlocales(const std::string& value);
   void add_requestedlocales(std::string&& value);
   void add_requestedlocales(const char* value);
-  void add_requestedlocales(const char* value, size_t size);
+  void add_requestedlocales(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& requestedlocales() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_requestedlocales();
   private:
@@ -10752,7 +10752,7 @@ class Msg_SimpleURIUnknownRemoteSchemes final :
   enum : int {
     kRemoteSchemesFieldNumber = 1,
   };
-  // repeated string remoteSchemes = 1;
+  // repeated bytes remoteSchemes = 1;
   int remoteschemes_size() const;
   private:
   int _internal_remoteschemes_size() const;
@@ -10763,12 +10763,12 @@ class Msg_SimpleURIUnknownRemoteSchemes final :
   void set_remoteschemes(int index, const std::string& value);
   void set_remoteschemes(int index, std::string&& value);
   void set_remoteschemes(int index, const char* value);
-  void set_remoteschemes(int index, const char* value, size_t size);
+  void set_remoteschemes(int index, const void* value, size_t size);
   std::string* add_remoteschemes();
   void add_remoteschemes(const std::string& value);
   void add_remoteschemes(std::string&& value);
   void add_remoteschemes(const char* value);
-  void add_remoteschemes(const char* value, size_t size);
+  void add_remoteschemes(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& remoteschemes() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_remoteschemes();
   private:
@@ -10924,7 +10924,7 @@ class Msg_UpdateSharedData final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCBlob >&
       blobs() const;
 
-  // repeated string changedKeys = 3;
+  // repeated bytes changedKeys = 3;
   int changedkeys_size() const;
   private:
   int _internal_changedkeys_size() const;
@@ -10935,12 +10935,12 @@ class Msg_UpdateSharedData final :
   void set_changedkeys(int index, const std::string& value);
   void set_changedkeys(int index, std::string&& value);
   void set_changedkeys(int index, const char* value);
-  void set_changedkeys(int index, const char* value, size_t size);
+  void set_changedkeys(int index, const void* value, size_t size);
   std::string* add_changedkeys();
   void add_changedkeys(const std::string& value);
   void add_changedkeys(std::string&& value);
   void add_changedkeys(const char* value);
-  void add_changedkeys(const char* value, size_t size);
+  void add_changedkeys(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& changedkeys() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_changedkeys();
   private:
@@ -11368,7 +11368,7 @@ class Msg_FlushMemory final :
   enum : int {
     kReasonFieldNumber = 1,
   };
-  // required string reason = 1;
+  // required bytes reason = 1;
   bool has_reason() const;
   private:
   bool _internal_has_reason() const;
@@ -12550,7 +12550,7 @@ class Msg_AppInfo final :
     kSourceURLFieldNumber = 7,
     kUpdateURLFieldNumber = 8,
   };
-  // required string version = 1;
+  // required bytes version = 1;
   bool has_version() const;
   private:
   bool _internal_has_version() const;
@@ -12568,7 +12568,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_version();
   public:
 
-  // required string buildID = 2;
+  // required bytes buildID = 2;
   bool has_buildid() const;
   private:
   bool _internal_has_buildid() const;
@@ -12586,7 +12586,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_buildid();
   public:
 
-  // required string name = 3;
+  // required bytes name = 3;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -12604,7 +12604,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_name();
   public:
 
-  // required string UAName = 4;
+  // required bytes UAName = 4;
   bool has_uaname() const;
   private:
   bool _internal_has_uaname() const;
@@ -12622,7 +12622,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_uaname();
   public:
 
-  // required string ID = 5;
+  // required bytes ID = 5;
   bool has_id() const;
   private:
   bool _internal_has_id() const;
@@ -12640,7 +12640,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_id();
   public:
 
-  // required string vendor = 6;
+  // required bytes vendor = 6;
   bool has_vendor() const;
   private:
   bool _internal_has_vendor() const;
@@ -12658,7 +12658,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_vendor();
   public:
 
-  // required string sourceURL = 7;
+  // required bytes sourceURL = 7;
   bool has_sourceurl() const;
   private:
   bool _internal_has_sourceurl() const;
@@ -12676,7 +12676,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_sourceurl();
   public:
 
-  // required string updateURL = 8;
+  // required bytes updateURL = 8;
   bool has_updateurl() const;
   private:
   bool _internal_has_updateurl() const;
@@ -12834,7 +12834,7 @@ class Msg_RemoteType final :
     kARemoteTypeFieldNumber = 1,
     kAProfileFieldNumber = 2,
   };
-  // required string aRemoteType = 1;
+  // required bytes aRemoteType = 1;
   bool has_aremotetype() const;
   private:
   bool _internal_has_aremotetype() const;
@@ -12852,7 +12852,7 @@ class Msg_RemoteType final :
   std::string* _internal_mutable_aremotetype();
   public:
 
-  // required string aProfile = 2;
+  // required bytes aProfile = 2;
   bool has_aprofile() const;
   private:
   bool _internal_has_aprofile() const;
@@ -13485,7 +13485,7 @@ class Msg_UnregisterJSWindowActor final :
   enum : int {
     kNameFieldNumber = 1,
   };
-  // required string name = 1;
+  // required bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -13632,7 +13632,7 @@ class Msg_UnregisterJSProcessActor final :
   enum : int {
     kNameFieldNumber = 1,
   };
-  // required string name = 1;
+  // required bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -14797,7 +14797,7 @@ class Msg_NotifyIdleObserver final :
     kStrFieldNumber = 3,
     kObserverIdFieldNumber = 1,
   };
-  // required string topic = 2;
+  // required bytes topic = 2;
   bool has_topic() const;
   private:
   bool _internal_has_topic() const;
@@ -14815,7 +14815,7 @@ class Msg_NotifyIdleObserver final :
   std::string* _internal_mutable_topic();
   public:
 
-  // required string str = 3;
+  // required bytes str = 3;
   bool has_str() const;
   private:
   bool _internal_has_str() const;
@@ -15408,7 +15408,7 @@ class Msg_LoadProcessScript final :
   enum : int {
     kUrlFieldNumber = 1,
   };
-  // required string url = 1;
+  // required bytes url = 1;
   bool has_url() const;
   private:
   bool _internal_has_url() const;
@@ -15828,7 +15828,7 @@ class Msg_Push final :
     kPrincipalFieldNumber = 2,
     kMessageIdFieldNumber = 3,
   };
-  // required string scope = 1;
+  // required bytes scope = 1;
   bool has_scope() const;
   private:
   bool _internal_has_scope() const;
@@ -15864,7 +15864,7 @@ class Msg_Push final :
   std::string* _internal_mutable_principal();
   public:
 
-  // required string messageId = 3;
+  // required bytes messageId = 3;
   bool has_messageid() const;
   private:
   bool _internal_has_messageid() const;
@@ -16041,7 +16041,7 @@ class Msg_PushWithData final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_data();
 
-  // required string scope = 1;
+  // required bytes scope = 1;
   bool has_scope() const;
   private:
   bool _internal_has_scope() const;
@@ -16077,7 +16077,7 @@ class Msg_PushWithData final :
   std::string* _internal_mutable_principal();
   public:
 
-  // required string messageId = 3;
+  // required bytes messageId = 3;
   bool has_messageid() const;
   private:
   bool _internal_has_messageid() const;
@@ -16403,7 +16403,7 @@ class Msg_BlobURLRegistration final :
     kAPartitionKeyFieldNumber = 4,
     kABlobFieldNumber = 2,
   };
-  // required string aURI = 1;
+  // required bytes aURI = 1;
   bool has_auri() const;
   private:
   bool _internal_has_auri() const;
@@ -16439,7 +16439,7 @@ class Msg_BlobURLRegistration final :
   std::string* _internal_mutable_aprincipal();
   public:
 
-  // required string aPartitionKey = 4;
+  // required bytes aPartitionKey = 4;
   bool has_apartitionkey() const;
   private:
   bool _internal_has_apartitionkey() const;
@@ -16610,7 +16610,7 @@ class Msg_BlobURLUnregistration final :
   enum : int {
     kAURIsFieldNumber = 1,
   };
-  // repeated string aURIs = 1;
+  // repeated bytes aURIs = 1;
   int auris_size() const;
   private:
   int _internal_auris_size() const;
@@ -16621,12 +16621,12 @@ class Msg_BlobURLUnregistration final :
   void set_auris(int index, const std::string& value);
   void set_auris(int index, std::string&& value);
   void set_auris(int index, const char* value);
-  void set_auris(int index, const char* value, size_t size);
+  void set_auris(int index, const void* value, size_t size);
   std::string* add_auris();
   void add_auris(const std::string& value);
   void add_auris(std::string&& value);
   void add_auris(const char* value);
-  void add_auris(const char* value, size_t size);
+  void add_auris(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& auris() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_auris();
   private:
@@ -17098,7 +17098,7 @@ class Msg_SetPermissionsWithKey final :
   std::string* _internal_add_apermissions();
   public:
 
-  // required string aPermissionKey = 1;
+  // required bytes aPermissionKey = 1;
   bool has_apermissionkey() const;
   private:
   bool _internal_has_apermissionkey() const;
@@ -20087,7 +20087,7 @@ class Msg_DisplayLoadError final :
   std::string* _internal_mutable_acontext();
   public:
 
-  // required string aURI = 2;
+  // required bytes aURI = 2;
   bool has_auri() const;
   private:
   bool _internal_has_auri() const;
@@ -21174,7 +21174,7 @@ class Msg_OnAllowAccessFor final :
   std::string* _internal_mutable_aparentcontext();
   public:
 
-  // required string aTrackingOrigin = 2;
+  // required bytes aTrackingOrigin = 2;
   bool has_atrackingorigin() const;
   private:
   bool _internal_has_atrackingorigin() const;
@@ -23541,7 +23541,7 @@ class Msg_SessionHistoryEntryTitle final :
   std::string* _internal_mutable_acontext();
   public:
 
-  // required string aTitle = 2;
+  // required bytes aTitle = 2;
   bool has_atitle() const;
   private:
   bool _internal_has_atitle() const;
@@ -24221,7 +24221,7 @@ class Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries final :
   std::string* _internal_mutable_acontext();
   public:
 
-  // required string aName = 2;
+  // required bytes aName = 2;
   bool has_aname() const;
   private:
   bool _internal_has_aname() const;
@@ -25724,7 +25724,7 @@ class Msg_InitStreamFilter final :
     kAddonIdFieldNumber = 2,
     kChannelIdFieldNumber = 1,
   };
-  // required string addonId = 2;
+  // required bytes addonId = 2;
   bool has_addonid() const;
   private:
   bool _internal_has_addonid() const;
@@ -29268,7 +29268,7 @@ class Msg_PURLClassifierLocalByNameConstructor final :
     kUriFieldNumber = 1,
     kAListTypeFieldNumber = 3,
   };
-  // repeated string featureNames = 2;
+  // repeated bytes featureNames = 2;
   int featurenames_size() const;
   private:
   int _internal_featurenames_size() const;
@@ -29279,12 +29279,12 @@ class Msg_PURLClassifierLocalByNameConstructor final :
   void set_featurenames(int index, const std::string& value);
   void set_featurenames(int index, std::string&& value);
   void set_featurenames(int index, const char* value);
-  void set_featurenames(int index, const char* value, size_t size);
+  void set_featurenames(int index, const void* value, size_t size);
   std::string* add_featurenames();
   void add_featurenames(const std::string& value);
   void add_featurenames(std::string&& value);
   void add_featurenames(const char* value);
-  void add_featurenames(const char* value, size_t size);
+  void add_featurenames(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& featurenames() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_featurenames();
   private:
@@ -30005,7 +30005,7 @@ class Msg_SetURITitle final :
   std::string* _internal_mutable_uri();
   public:
 
-  // required string title = 2;
+  // required bytes title = 2;
   bool has_title() const;
   private:
   bool _internal_has_title() const;
@@ -30554,7 +30554,7 @@ class Msg_SyncMessage final :
     kAMessageFieldNumber = 1,
     kADataFieldNumber = 2,
   };
-  // required string aMessage = 1;
+  // required bytes aMessage = 1;
   bool has_amessage() const;
   private:
   bool _internal_has_amessage() const;
@@ -31068,7 +31068,7 @@ class Msg_PExternalHelperAppConstructor final :
   std::string* _internal_mutable_uri();
   public:
 
-  // required string aMimeContentType = 3;
+  // required bytes aMimeContentType = 3;
   bool has_amimecontenttype() const;
   private:
   bool _internal_has_amimecontenttype() const;
@@ -31086,7 +31086,7 @@ class Msg_PExternalHelperAppConstructor final :
   std::string* _internal_mutable_amimecontenttype();
   public:
 
-  // required string aContentDisposition = 4;
+  // required bytes aContentDisposition = 4;
   bool has_acontentdisposition() const;
   private:
   bool _internal_has_acontentdisposition() const;
@@ -31104,7 +31104,7 @@ class Msg_PExternalHelperAppConstructor final :
   std::string* _internal_mutable_acontentdisposition();
   public:
 
-  // required string aContentDispositionFilename = 6;
+  // required bytes aContentDispositionFilename = 6;
   bool has_acontentdispositionfilename() const;
   private:
   bool _internal_has_acontentdispositionfilename() const;
@@ -32150,7 +32150,7 @@ class Msg_ConsoleMessage final :
   enum : int {
     kMessageFieldNumber = 1,
   };
-  // required string message = 1;
+  // required bytes message = 1;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -32305,7 +32305,7 @@ class Msg_ScriptErrorWithStack final :
     kIsFromPrivateWindowFieldNumber = 7,
     kIsFromChromeContextFieldNumber = 8,
   };
-  // required string message = 1;
+  // required bytes message = 1;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -32323,7 +32323,7 @@ class Msg_ScriptErrorWithStack final :
   std::string* _internal_mutable_message();
   public:
 
-  // required string sourceName = 2;
+  // required bytes sourceName = 2;
   bool has_sourcename() const;
   private:
   bool _internal_has_sourcename() const;
@@ -32341,7 +32341,7 @@ class Msg_ScriptErrorWithStack final :
   std::string* _internal_mutable_sourcename();
   public:
 
-  // required string category = 6;
+  // required bytes category = 6;
   bool has_category() const;
   private:
   bool _internal_has_category() const;
@@ -32774,7 +32774,7 @@ class Msg_GetClipboard final :
     kAWhichClipboardFieldNumber = 2,
     kARequestingWindowContextFieldNumber = 3,
   };
-  // repeated string aTypes = 1;
+  // repeated bytes aTypes = 1;
   int atypes_size() const;
   private:
   int _internal_atypes_size() const;
@@ -32785,12 +32785,12 @@ class Msg_GetClipboard final :
   void set_atypes(int index, const std::string& value);
   void set_atypes(int index, std::string&& value);
   void set_atypes(int index, const char* value);
-  void set_atypes(int index, const char* value, size_t size);
+  void set_atypes(int index, const void* value, size_t size);
   std::string* add_atypes();
   void add_atypes(const std::string& value);
   void add_atypes(std::string&& value);
   void add_atypes(const char* value);
-  void add_atypes(const char* value, size_t size);
+  void add_atypes(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& atypes() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_atypes();
   private:
@@ -33118,7 +33118,7 @@ class Msg_GetClipboardDataSnapshot final :
     kARequestingWindowContextFieldNumber = 3,
     kARequestingPrincipalFieldNumber = 4,
   };
-  // repeated string aTypes = 1;
+  // repeated bytes aTypes = 1;
   int atypes_size() const;
   private:
   int _internal_atypes_size() const;
@@ -33129,12 +33129,12 @@ class Msg_GetClipboardDataSnapshot final :
   void set_atypes(int index, const std::string& value);
   void set_atypes(int index, std::string&& value);
   void set_atypes(int index, const char* value);
-  void set_atypes(int index, const char* value, size_t size);
+  void set_atypes(int index, const void* value, size_t size);
   std::string* add_atypes();
   void add_atypes(const std::string& value);
   void add_atypes(std::string&& value);
   void add_atypes(const char* value);
-  void add_atypes(const char* value, size_t size);
+  void add_atypes(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& atypes() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_atypes();
   private:
@@ -33480,7 +33480,7 @@ class Msg_GetClipboardDataSnapshotSync final :
     kAWhichClipboardFieldNumber = 2,
     kARequestingWindowContextFieldNumber = 3,
   };
-  // repeated string aTypes = 1;
+  // repeated bytes aTypes = 1;
   int atypes_size() const;
   private:
   int _internal_atypes_size() const;
@@ -33491,12 +33491,12 @@ class Msg_GetClipboardDataSnapshotSync final :
   void set_atypes(int index, const std::string& value);
   void set_atypes(int index, std::string&& value);
   void set_atypes(int index, const char* value);
-  void set_atypes(int index, const char* value, size_t size);
+  void set_atypes(int index, const void* value, size_t size);
   std::string* add_atypes();
   void add_atypes(const std::string& value);
   void add_atypes(std::string&& value);
   void add_atypes(const char* value);
-  void add_atypes(const char* value, size_t size);
+  void add_atypes(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& atypes() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_atypes();
   private:
@@ -33969,7 +33969,7 @@ class Msg_ClipboardHasType final :
     kATypesFieldNumber = 1,
     kAWhichClipboardFieldNumber = 2,
   };
-  // repeated string aTypes = 1;
+  // repeated bytes aTypes = 1;
   int atypes_size() const;
   private:
   int _internal_atypes_size() const;
@@ -33980,12 +33980,12 @@ class Msg_ClipboardHasType final :
   void set_atypes(int index, const std::string& value);
   void set_atypes(int index, std::string&& value);
   void set_atypes(int index, const char* value);
-  void set_atypes(int index, const char* value, size_t size);
+  void set_atypes(int index, const void* value, size_t size);
   std::string* add_atypes();
   void add_atypes(const std::string& value);
   void add_atypes(std::string&& value);
   void add_atypes(const char* value);
-  void add_atypes(const char* value, size_t size);
+  void add_atypes(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& atypes() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_atypes();
   private:
@@ -34578,7 +34578,7 @@ class Msg_GetIconForExtension final :
     kAFileExtFieldNumber = 1,
     kAIconSizeFieldNumber = 2,
   };
-  // required string aFileExt = 1;
+  // required bytes aFileExt = 1;
   bool has_afileext() const;
   private:
   bool _internal_has_afileext() const;
@@ -35202,7 +35202,7 @@ class Msg_FindImageText final :
     kLanguagesFieldNumber = 2,
     kImageFieldNumber = 1,
   };
-  // repeated string languages = 2;
+  // repeated bytes languages = 2;
   int languages_size() const;
   private:
   int _internal_languages_size() const;
@@ -35213,12 +35213,12 @@ class Msg_FindImageText final :
   void set_languages(int index, const std::string& value);
   void set_languages(int index, std::string&& value);
   void set_languages(int index, const char* value);
-  void set_languages(int index, const char* value, size_t size);
+  void set_languages(int index, const void* value, size_t size);
   std::string* add_languages();
   void add_languages(const std::string& value);
   void add_languages(std::string&& value);
   void add_languages(const char* value);
-  void add_languages(const char* value, size_t size);
+  void add_languages(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& languages() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_languages();
   private:
@@ -35521,7 +35521,7 @@ class Msg_GraphicsError final :
   enum : int {
     kAErrorFieldNumber = 1,
   };
-  // required string aError = 1;
+  // required bytes aError = 1;
   bool has_aerror() const;
   private:
   bool _internal_has_aerror() const;
@@ -37439,7 +37439,7 @@ class Msg_ShutdownProfile final :
   enum : int {
     kAProfileFieldNumber = 1,
   };
-  // required string aProfile = 1;
+  // required bytes aProfile = 1;
   bool has_aprofile() const;
   private:
   bool _internal_has_aprofile() const;
@@ -37586,7 +37586,7 @@ class Msg_ShutdownPerfStats final :
   enum : int {
     kAPerfStatsFieldNumber = 1,
   };
-  // required string aPerfStats = 1;
+  // required bytes aPerfStats = 1;
   bool has_aperfstats() const;
   private:
   bool _internal_has_aperfstats() const;
@@ -39568,7 +39568,7 @@ class Msg_CreateWindow final :
   std::string* _internal_mutable_auritoload();
   public:
 
-  // required string aFeatures = 10;
+  // required bytes aFeatures = 10;
   bool has_afeatures() const;
   private:
   bool _internal_has_afeatures() const;
@@ -40130,7 +40130,7 @@ class Msg_CreateWindowInDifferentProcess final :
   std::string* _internal_mutable_auritoload();
   public:
 
-  // required string aFeatures = 7;
+  // required bytes aFeatures = 7;
   bool has_afeatures() const;
   private:
   bool _internal_has_afeatures() const;
@@ -40166,7 +40166,7 @@ class Msg_CreateWindowInDifferentProcess final :
   std::string* _internal_mutable_amodifiers();
   public:
 
-  // required string aName = 9;
+  // required bytes aName = 9;
   bool has_aname() const;
   private:
   bool _internal_has_aname() const;
@@ -40469,7 +40469,7 @@ class Msg_NotifyPushObservers final :
     kPrincipalFieldNumber = 2,
     kMessageIdFieldNumber = 3,
   };
-  // required string scope = 1;
+  // required bytes scope = 1;
   bool has_scope() const;
   private:
   bool _internal_has_scope() const;
@@ -40505,7 +40505,7 @@ class Msg_NotifyPushObservers final :
   std::string* _internal_mutable_principal();
   public:
 
-  // required string messageId = 3;
+  // required bytes messageId = 3;
   bool has_messageid() const;
   private:
   bool _internal_has_messageid() const;
@@ -40682,7 +40682,7 @@ class Msg_NotifyPushObserversWithData final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_data();
 
-  // required string scope = 1;
+  // required bytes scope = 1;
   bool has_scope() const;
   private:
   bool _internal_has_scope() const;
@@ -40718,7 +40718,7 @@ class Msg_NotifyPushObserversWithData final :
   std::string* _internal_mutable_principal();
   public:
 
-  // required string messageId = 3;
+  // required bytes messageId = 3;
   bool has_messageid() const;
   private:
   bool _internal_has_messageid() const;
@@ -40873,7 +40873,7 @@ class Msg_GetFilesRequest final :
     kAIDFieldNumber = 1,
     kARecursiveFlagFieldNumber = 3,
   };
-  // repeated string aDirectories = 2;
+  // repeated bytes aDirectories = 2;
   int adirectories_size() const;
   private:
   int _internal_adirectories_size() const;
@@ -40884,12 +40884,12 @@ class Msg_GetFilesRequest final :
   void set_adirectories(int index, const std::string& value);
   void set_adirectories(int index, std::string&& value);
   void set_adirectories(int index, const char* value);
-  void set_adirectories(int index, const char* value, size_t size);
+  void set_adirectories(int index, const void* value, size_t size);
   std::string* add_adirectories();
   void add_adirectories(const std::string& value);
   void add_adirectories(std::string&& value);
   void add_adirectories(const char* value);
-  void add_adirectories(const char* value, size_t size);
+  void add_adirectories(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& adirectories() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_adirectories();
   private:
@@ -41212,7 +41212,7 @@ class Msg_StoreAndBroadcastBlobURLRegistration final :
     kAPartitionKeyFieldNumber = 4,
     kBlobFieldNumber = 2,
   };
-  // required string url = 1;
+  // required bytes url = 1;
   bool has_url() const;
   private:
   bool _internal_has_url() const;
@@ -41248,7 +41248,7 @@ class Msg_StoreAndBroadcastBlobURLRegistration final :
   std::string* _internal_mutable_principal();
   public:
 
-  // required string aPartitionKey = 4;
+  // required bytes aPartitionKey = 4;
   bool has_apartitionkey() const;
   private:
   bool _internal_has_apartitionkey() const;
@@ -42935,7 +42935,7 @@ class Msg_AddCertException final :
   std::string* _internal_mutable_acert();
   public:
 
-  // required string aHostName = 2;
+  // required bytes aHostName = 2;
   bool has_ahostname() const;
   private:
   bool _internal_has_ahostname() const;
@@ -43611,7 +43611,7 @@ class Msg_StorageAccessPermissionGrantedForOrigin final :
   std::string* _internal_mutable_atrackingprincipal();
   public:
 
-  // required string aTrackingOrigin = 4;
+  // required bytes aTrackingOrigin = 4;
   bool has_atrackingorigin() const;
   private:
   bool _internal_has_atrackingorigin() const;
@@ -44007,7 +44007,7 @@ class Msg_CompleteAllowAccessFor final :
   std::string* _internal_mutable_atrackingprincipal();
   public:
 
-  // required string aTrackingOrigin = 4;
+  // required bytes aTrackingOrigin = 4;
   bool has_atrackingorigin() const;
   private:
   bool _internal_has_atrackingorigin() const;
@@ -45455,7 +45455,7 @@ class Msg_TestStorageAccessPermission final :
   std::string* _internal_mutable_aembeddingprincipal();
   public:
 
-  // required string aEmbeddedOrigin = 2;
+  // required bytes aEmbeddedOrigin = 2;
   bool has_aembeddedorigin() const;
   private:
   bool _internal_has_aembeddedorigin() const;
@@ -49068,7 +49068,7 @@ class Msg_BlobURLDataRequest final :
     kAPartitionKeyFieldNumber = 6,
     kAInnerWindowIdFieldNumber = 5,
   };
-  // required string aBlobURL = 1;
+  // required bytes aBlobURL = 1;
   bool has_abloburl() const;
   private:
   bool _internal_has_abloburl() const;
@@ -49140,7 +49140,7 @@ class Msg_BlobURLDataRequest final :
   std::string* _internal_mutable_aoriginattributes();
   public:
 
-  // required string aPartitionKey = 6;
+  // required bytes aPartitionKey = 6;
   bool has_apartitionkey() const;
   private:
   bool _internal_has_apartitionkey() const;
@@ -50332,7 +50332,7 @@ class Msg_ScriptError final :
     kIsFromChromeContextFieldNumber = 9,
     kInnerWindowIdFieldNumber = 8,
   };
-  // required string message = 1;
+  // required bytes message = 1;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -50350,7 +50350,7 @@ class Msg_ScriptError final :
   std::string* _internal_mutable_message();
   public:
 
-  // required string sourceName = 2;
+  // required bytes sourceName = 2;
   bool has_sourcename() const;
   private:
   bool _internal_has_sourcename() const;
@@ -50368,7 +50368,7 @@ class Msg_ScriptError final :
   std::string* _internal_mutable_sourcename();
   public:
 
-  // required string category = 6;
+  // required bytes category = 6;
   bool has_category() const;
   private:
   bool _internal_has_category() const;
@@ -50607,7 +50607,7 @@ class Msg_ReportFrameTimingData final :
     kADataFieldNumber = 4,
     kLoadInfoFieldNumber = 1,
   };
-  // required string entryName = 2;
+  // required bytes entryName = 2;
   bool has_entryname() const;
   private:
   bool _internal_has_entryname() const;
@@ -50625,7 +50625,7 @@ class Msg_ReportFrameTimingData final :
   std::string* _internal_mutable_entryname();
   public:
 
-  // required string initiatorType = 3;
+  // required bytes initiatorType = 3;
   bool has_initiatortype() const;
   private:
   bool _internal_has_initiatortype() const;
@@ -51000,7 +51000,7 @@ class Msg_AsyncMessage final :
     kAMessageFieldNumber = 1,
     kADataFieldNumber = 2,
   };
-  // required string aMessage = 1;
+  // required bytes aMessage = 1;
   bool has_amessage() const;
   private:
   bool _internal_has_amessage() const;
@@ -51170,7 +51170,7 @@ class Msg_NotifyPushSubscriptionModifiedObservers final :
     kScopeFieldNumber = 1,
     kPrincipalFieldNumber = 2,
   };
-  // required string scope = 1;
+  // required bytes scope = 1;
   bool has_scope() const;
   private:
   bool _internal_has_scope() const;
@@ -51342,7 +51342,7 @@ class Msg_PushError final :
     kMessageFieldNumber = 3,
     kFlagsFieldNumber = 4,
   };
-  // required string scope = 1;
+  // required bytes scope = 1;
   bool has_scope() const;
   private:
   bool _internal_has_scope() const;
@@ -51378,7 +51378,7 @@ class Msg_PushError final :
   std::string* _internal_mutable_principal();
   public:
 
-  // required string message = 3;
+  // required bytes message = 3;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -57678,7 +57678,7 @@ class Msg_AttributionEvent final :
     kATargetHostFieldNumber = 5,
     kAIndexFieldNumber = 3,
   };
-  // required string aSourceHost = 1;
+  // required bytes aSourceHost = 1;
   bool has_asourcehost() const;
   private:
   bool _internal_has_asourcehost() const;
@@ -57714,7 +57714,7 @@ class Msg_AttributionEvent final :
   std::string* _internal_mutable_atype();
   public:
 
-  // required string aAd = 4;
+  // required bytes aAd = 4;
   bool has_aad() const;
   private:
   bool _internal_has_aad() const;
@@ -57732,7 +57732,7 @@ class Msg_AttributionEvent final :
   std::string* _internal_mutable_aad();
   public:
 
-  // required string aTargetHost = 5;
+  // required bytes aTargetHost = 5;
   bool has_atargethost() const;
   private:
   bool _internal_has_atargethost() const;
@@ -57905,7 +57905,7 @@ class Msg_AttributionConversion final :
     kAHistogramSizeFieldNumber = 3,
     kALookbackDaysFieldNumber = 4,
   };
-  // repeated string aAds = 6;
+  // repeated bytes aAds = 6;
   int aads_size() const;
   private:
   int _internal_aads_size() const;
@@ -57916,12 +57916,12 @@ class Msg_AttributionConversion final :
   void set_aads(int index, const std::string& value);
   void set_aads(int index, std::string&& value);
   void set_aads(int index, const char* value);
-  void set_aads(int index, const char* value, size_t size);
+  void set_aads(int index, const void* value, size_t size);
   std::string* add_aads();
   void add_aads(const std::string& value);
   void add_aads(std::string&& value);
   void add_aads(const char* value);
-  void add_aads(const char* value, size_t size);
+  void add_aads(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& aads() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_aads();
   private:
@@ -57929,7 +57929,7 @@ class Msg_AttributionConversion final :
   std::string* _internal_add_aads();
   public:
 
-  // repeated string aImpressionSourceHosts = 7;
+  // repeated bytes aImpressionSourceHosts = 7;
   int aimpressionsourcehosts_size() const;
   private:
   int _internal_aimpressionsourcehosts_size() const;
@@ -57940,12 +57940,12 @@ class Msg_AttributionConversion final :
   void set_aimpressionsourcehosts(int index, const std::string& value);
   void set_aimpressionsourcehosts(int index, std::string&& value);
   void set_aimpressionsourcehosts(int index, const char* value);
-  void set_aimpressionsourcehosts(int index, const char* value, size_t size);
+  void set_aimpressionsourcehosts(int index, const void* value, size_t size);
   std::string* add_aimpressionsourcehosts();
   void add_aimpressionsourcehosts(const std::string& value);
   void add_aimpressionsourcehosts(std::string&& value);
   void add_aimpressionsourcehosts(const char* value);
-  void add_aimpressionsourcehosts(const char* value, size_t size);
+  void add_aimpressionsourcehosts(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& aimpressionsourcehosts() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_aimpressionsourcehosts();
   private:
@@ -57953,7 +57953,7 @@ class Msg_AttributionConversion final :
   std::string* _internal_add_aimpressionsourcehosts();
   public:
 
-  // required string aTargetHost = 1;
+  // required bytes aTargetHost = 1;
   bool has_atargethost() const;
   private:
   bool _internal_has_atargethost() const;
@@ -57971,7 +57971,7 @@ class Msg_AttributionConversion final :
   std::string* _internal_mutable_atargethost();
   public:
 
-  // required string aTask = 2;
+  // required bytes aTask = 2;
   bool has_atask() const;
   private:
   bool _internal_has_atask() const;
@@ -61546,7 +61546,7 @@ Msg_RegisterChrome::mutable_overrides() {
   return &_impl_.overrides_;
 }
 
-// required string locale = 4;
+// required bytes locale = 4;
 inline bool Msg_RegisterChrome::_internal_has_locale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -61566,7 +61566,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RegisterChrome::set_locale(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.locale_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.locale_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_RegisterChrome.locale)
 }
 inline std::string* Msg_RegisterChrome::mutable_locale() {
@@ -61861,7 +61861,7 @@ inline void Msg_ClearImageCache::set_allocated_aprincipal(std::string* aprincipa
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ClearImageCache.aPrincipal)
 }
 
-// optional string aSchemelessSite = 4;
+// optional bytes aSchemelessSite = 4;
 inline bool Msg_ClearImageCache::_internal_has_aschemelesssite() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -61881,7 +61881,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ClearImageCache::set_aschemelesssite(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aschemelesssite_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aschemelesssite_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ClearImageCache.aSchemelessSite)
 }
 inline std::string* Msg_ClearImageCache::mutable_aschemelesssite() {
@@ -61997,7 +61997,7 @@ inline void Msg_ClearImageCache::set_allocated_apattern(std::string* apattern) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ClearImageCache.aPattern)
 }
 
-// optional string aURL = 6;
+// optional bytes aURL = 6;
 inline bool Msg_ClearImageCache::_internal_has_aurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -62017,7 +62017,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ClearImageCache::set_aurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.aurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ClearImageCache.aURL)
 }
 inline std::string* Msg_ClearImageCache::mutable_aurl() {
@@ -62165,7 +62165,7 @@ inline void Msg_ClearStyleSheetCache::set_allocated_aprincipal(std::string* apri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ClearStyleSheetCache.aPrincipal)
 }
 
-// optional string aSchemelessSite = 3;
+// optional bytes aSchemelessSite = 3;
 inline bool Msg_ClearStyleSheetCache::_internal_has_aschemelesssite() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -62185,7 +62185,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ClearStyleSheetCache::set_aschemelesssite(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aschemelesssite_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aschemelesssite_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ClearStyleSheetCache.aSchemelessSite)
 }
 inline std::string* Msg_ClearStyleSheetCache::mutable_aschemelesssite() {
@@ -62301,7 +62301,7 @@ inline void Msg_ClearStyleSheetCache::set_allocated_apattern(std::string* apatte
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ClearStyleSheetCache.aPattern)
 }
 
-// optional string aURL = 5;
+// optional bytes aURL = 5;
 inline bool Msg_ClearStyleSheetCache::_internal_has_aurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -62321,7 +62321,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ClearStyleSheetCache::set_aurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.aurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ClearStyleSheetCache.aURL)
 }
 inline std::string* Msg_ClearStyleSheetCache::mutable_aurl() {
@@ -62469,7 +62469,7 @@ inline void Msg_ClearScriptCache::set_allocated_aprincipal(std::string* aprincip
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ClearScriptCache.aPrincipal)
 }
 
-// optional string aSchemelessSite = 3;
+// optional bytes aSchemelessSite = 3;
 inline bool Msg_ClearScriptCache::_internal_has_aschemelesssite() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -62489,7 +62489,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ClearScriptCache::set_aschemelesssite(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aschemelesssite_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aschemelesssite_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ClearScriptCache.aSchemelessSite)
 }
 inline std::string* Msg_ClearScriptCache::mutable_aschemelesssite() {
@@ -62605,7 +62605,7 @@ inline void Msg_ClearScriptCache::set_allocated_apattern(std::string* apattern) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ClearScriptCache.aPattern)
 }
 
-// optional string aURL = 5;
+// optional bytes aURL = 5;
 inline bool Msg_ClearScriptCache::_internal_has_aurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -62625,7 +62625,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ClearScriptCache::set_aurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.aurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ClearScriptCache.aURL)
 }
 inline std::string* Msg_ClearScriptCache::mutable_aurl() {
@@ -63331,7 +63331,7 @@ inline void Msg_UpdatePerfStatsCollectionMask::set_amask(uint64_t value) {
 
 // Reply_CollectPerfStatsJSON
 
-// required string aStats = 1;
+// required bytes aStats = 1;
 inline bool Reply_CollectPerfStatsJSON::_internal_has_astats() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -63351,7 +63351,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_CollectPerfStatsJSON::set_astats(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.astats_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.astats_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Reply_CollectPerfStatsJSON.aStats)
 }
 inline std::string* Reply_CollectPerfStatsJSON::mutable_astats() {
@@ -63571,7 +63571,7 @@ inline void Msg_GeolocationError::set_errorcode(uint32_t value) {
 
 // Msg_UpdateDictionaryList
 
-// repeated string dictionaries = 1;
+// repeated bytes dictionaries = 1;
 inline int Msg_UpdateDictionaryList::_internal_dictionaries_size() const {
   return _impl_.dictionaries_.size();
 }
@@ -63610,7 +63610,7 @@ inline void Msg_UpdateDictionaryList::set_dictionaries(int index, const char* va
   _impl_.dictionaries_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_UpdateDictionaryList.dictionaries)
 }
-inline void Msg_UpdateDictionaryList::set_dictionaries(int index, const char* value, size_t size) {
+inline void Msg_UpdateDictionaryList::set_dictionaries(int index, const void* value, size_t size) {
   _impl_.dictionaries_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_UpdateDictionaryList.dictionaries)
@@ -63631,7 +63631,7 @@ inline void Msg_UpdateDictionaryList::add_dictionaries(const char* value) {
   _impl_.dictionaries_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_UpdateDictionaryList.dictionaries)
 }
-inline void Msg_UpdateDictionaryList::add_dictionaries(const char* value, size_t size) {
+inline void Msg_UpdateDictionaryList::add_dictionaries(const void* value, size_t size) {
   _impl_.dictionaries_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_UpdateDictionaryList.dictionaries)
 }
@@ -63973,7 +63973,7 @@ inline void Msg_FontListShmBlockAdded::set_allocated_ahandle(std::string* ahandl
 
 // Msg_UpdateAppLocales
 
-// repeated string appLocales = 1;
+// repeated bytes appLocales = 1;
 inline int Msg_UpdateAppLocales::_internal_applocales_size() const {
   return _impl_.applocales_.size();
 }
@@ -64012,7 +64012,7 @@ inline void Msg_UpdateAppLocales::set_applocales(int index, const char* value) {
   _impl_.applocales_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_UpdateAppLocales.appLocales)
 }
-inline void Msg_UpdateAppLocales::set_applocales(int index, const char* value, size_t size) {
+inline void Msg_UpdateAppLocales::set_applocales(int index, const void* value, size_t size) {
   _impl_.applocales_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_UpdateAppLocales.appLocales)
@@ -64033,7 +64033,7 @@ inline void Msg_UpdateAppLocales::add_applocales(const char* value) {
   _impl_.applocales_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_UpdateAppLocales.appLocales)
 }
-inline void Msg_UpdateAppLocales::add_applocales(const char* value, size_t size) {
+inline void Msg_UpdateAppLocales::add_applocales(const void* value, size_t size) {
   _impl_.applocales_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_UpdateAppLocales.appLocales)
 }
@@ -64052,7 +64052,7 @@ Msg_UpdateAppLocales::mutable_applocales() {
 
 // Msg_UpdateRequestedLocales
 
-// repeated string requestedLocales = 1;
+// repeated bytes requestedLocales = 1;
 inline int Msg_UpdateRequestedLocales::_internal_requestedlocales_size() const {
   return _impl_.requestedlocales_.size();
 }
@@ -64091,7 +64091,7 @@ inline void Msg_UpdateRequestedLocales::set_requestedlocales(int index, const ch
   _impl_.requestedlocales_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_UpdateRequestedLocales.requestedLocales)
 }
-inline void Msg_UpdateRequestedLocales::set_requestedlocales(int index, const char* value, size_t size) {
+inline void Msg_UpdateRequestedLocales::set_requestedlocales(int index, const void* value, size_t size) {
   _impl_.requestedlocales_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_UpdateRequestedLocales.requestedLocales)
@@ -64112,7 +64112,7 @@ inline void Msg_UpdateRequestedLocales::add_requestedlocales(const char* value) 
   _impl_.requestedlocales_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_UpdateRequestedLocales.requestedLocales)
 }
-inline void Msg_UpdateRequestedLocales::add_requestedlocales(const char* value, size_t size) {
+inline void Msg_UpdateRequestedLocales::add_requestedlocales(const void* value, size_t size) {
   _impl_.requestedlocales_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_UpdateRequestedLocales.requestedLocales)
 }
@@ -64217,7 +64217,7 @@ Msg_RegisterStringBundles::stringbundles() const {
 
 // Msg_SimpleURIUnknownRemoteSchemes
 
-// repeated string remoteSchemes = 1;
+// repeated bytes remoteSchemes = 1;
 inline int Msg_SimpleURIUnknownRemoteSchemes::_internal_remoteschemes_size() const {
   return _impl_.remoteschemes_.size();
 }
@@ -64256,7 +64256,7 @@ inline void Msg_SimpleURIUnknownRemoteSchemes::set_remoteschemes(int index, cons
   _impl_.remoteschemes_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_SimpleURIUnknownRemoteSchemes.remoteSchemes)
 }
-inline void Msg_SimpleURIUnknownRemoteSchemes::set_remoteschemes(int index, const char* value, size_t size) {
+inline void Msg_SimpleURIUnknownRemoteSchemes::set_remoteschemes(int index, const void* value, size_t size) {
   _impl_.remoteschemes_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_SimpleURIUnknownRemoteSchemes.remoteSchemes)
@@ -64277,7 +64277,7 @@ inline void Msg_SimpleURIUnknownRemoteSchemes::add_remoteschemes(const char* val
   _impl_.remoteschemes_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_SimpleURIUnknownRemoteSchemes.remoteSchemes)
 }
-inline void Msg_SimpleURIUnknownRemoteSchemes::add_remoteschemes(const char* value, size_t size) {
+inline void Msg_SimpleURIUnknownRemoteSchemes::add_remoteschemes(const void* value, size_t size) {
   _impl_.remoteschemes_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_SimpleURIUnknownRemoteSchemes.remoteSchemes)
 }
@@ -64401,7 +64401,7 @@ Msg_UpdateSharedData::blobs() const {
   return _impl_.blobs_;
 }
 
-// repeated string changedKeys = 3;
+// repeated bytes changedKeys = 3;
 inline int Msg_UpdateSharedData::_internal_changedkeys_size() const {
   return _impl_.changedkeys_.size();
 }
@@ -64440,7 +64440,7 @@ inline void Msg_UpdateSharedData::set_changedkeys(int index, const char* value) 
   _impl_.changedkeys_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_UpdateSharedData.changedKeys)
 }
-inline void Msg_UpdateSharedData::set_changedkeys(int index, const char* value, size_t size) {
+inline void Msg_UpdateSharedData::set_changedkeys(int index, const void* value, size_t size) {
   _impl_.changedkeys_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_UpdateSharedData.changedKeys)
@@ -64461,7 +64461,7 @@ inline void Msg_UpdateSharedData::add_changedkeys(const char* value) {
   _impl_.changedkeys_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_UpdateSharedData.changedKeys)
 }
-inline void Msg_UpdateSharedData::add_changedkeys(const char* value, size_t size) {
+inline void Msg_UpdateSharedData::add_changedkeys(const void* value, size_t size) {
   _impl_.changedkeys_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_UpdateSharedData.changedKeys)
 }
@@ -64556,7 +64556,7 @@ inline void Msg_AddPermission::set_allocated_permission(std::string* permission)
 
 // Msg_FlushMemory
 
-// required string reason = 1;
+// required bytes reason = 1;
 inline bool Msg_FlushMemory::_internal_has_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -64576,7 +64576,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_FlushMemory::set_reason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.reason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.reason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_FlushMemory.reason)
 }
 inline std::string* Msg_FlushMemory::mutable_reason() {
@@ -64716,7 +64716,7 @@ inline void Msg_SetCacheDomains::set_acachedomains(uint64_t value) {
 
 // Msg_AppInfo
 
-// required string version = 1;
+// required bytes version = 1;
 inline bool Msg_AppInfo::_internal_has_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -64736,7 +64736,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AppInfo::set_version(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.version_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.version_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AppInfo.version)
 }
 inline std::string* Msg_AppInfo::mutable_version() {
@@ -64784,7 +64784,7 @@ inline void Msg_AppInfo::set_allocated_version(std::string* version) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.version)
 }
 
-// required string buildID = 2;
+// required bytes buildID = 2;
 inline bool Msg_AppInfo::_internal_has_buildid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -64804,7 +64804,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AppInfo::set_buildid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.buildid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.buildid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AppInfo.buildID)
 }
 inline std::string* Msg_AppInfo::mutable_buildid() {
@@ -64852,7 +64852,7 @@ inline void Msg_AppInfo::set_allocated_buildid(std::string* buildid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.buildID)
 }
 
-// required string name = 3;
+// required bytes name = 3;
 inline bool Msg_AppInfo::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -64872,7 +64872,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AppInfo::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AppInfo.name)
 }
 inline std::string* Msg_AppInfo::mutable_name() {
@@ -64920,7 +64920,7 @@ inline void Msg_AppInfo::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.name)
 }
 
-// required string UAName = 4;
+// required bytes UAName = 4;
 inline bool Msg_AppInfo::_internal_has_uaname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -64940,7 +64940,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AppInfo::set_uaname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.uaname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.uaname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AppInfo.UAName)
 }
 inline std::string* Msg_AppInfo::mutable_uaname() {
@@ -64988,7 +64988,7 @@ inline void Msg_AppInfo::set_allocated_uaname(std::string* uaname) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.UAName)
 }
 
-// required string ID = 5;
+// required bytes ID = 5;
 inline bool Msg_AppInfo::_internal_has_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -65008,7 +65008,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AppInfo::set_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AppInfo.ID)
 }
 inline std::string* Msg_AppInfo::mutable_id() {
@@ -65056,7 +65056,7 @@ inline void Msg_AppInfo::set_allocated_id(std::string* id) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.ID)
 }
 
-// required string vendor = 6;
+// required bytes vendor = 6;
 inline bool Msg_AppInfo::_internal_has_vendor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -65076,7 +65076,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AppInfo::set_vendor(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.vendor_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.vendor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AppInfo.vendor)
 }
 inline std::string* Msg_AppInfo::mutable_vendor() {
@@ -65124,7 +65124,7 @@ inline void Msg_AppInfo::set_allocated_vendor(std::string* vendor) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.vendor)
 }
 
-// required string sourceURL = 7;
+// required bytes sourceURL = 7;
 inline bool Msg_AppInfo::_internal_has_sourceurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -65144,7 +65144,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AppInfo::set_sourceurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.sourceurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.sourceurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AppInfo.sourceURL)
 }
 inline std::string* Msg_AppInfo::mutable_sourceurl() {
@@ -65192,7 +65192,7 @@ inline void Msg_AppInfo::set_allocated_sourceurl(std::string* sourceurl) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.sourceURL)
 }
 
-// required string updateURL = 8;
+// required bytes updateURL = 8;
 inline bool Msg_AppInfo::_internal_has_updateurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -65212,7 +65212,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AppInfo::set_updateurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000080u;
- _impl_.updateurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.updateurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AppInfo.updateURL)
 }
 inline std::string* Msg_AppInfo::mutable_updateurl() {
@@ -65264,7 +65264,7 @@ inline void Msg_AppInfo::set_allocated_updateurl(std::string* updateurl) {
 
 // Msg_RemoteType
 
-// required string aRemoteType = 1;
+// required bytes aRemoteType = 1;
 inline bool Msg_RemoteType::_internal_has_aremotetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -65284,7 +65284,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RemoteType::set_aremotetype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aremotetype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aremotetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_RemoteType.aRemoteType)
 }
 inline std::string* Msg_RemoteType::mutable_aremotetype() {
@@ -65332,7 +65332,7 @@ inline void Msg_RemoteType::set_allocated_aremotetype(std::string* aremotetype) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_RemoteType.aRemoteType)
 }
 
-// required string aProfile = 2;
+// required bytes aProfile = 2;
 inline bool Msg_RemoteType::_internal_has_aprofile() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -65352,7 +65352,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RemoteType::set_aprofile(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aprofile_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aprofile_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_RemoteType.aProfile)
 }
 inline std::string* Msg_RemoteType::mutable_aprofile() {
@@ -65663,7 +65663,7 @@ Msg_InitJSActorInfos::awindowinfos() const {
 
 // Msg_UnregisterJSWindowActor
 
-// required string name = 1;
+// required bytes name = 1;
 inline bool Msg_UnregisterJSWindowActor::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -65683,7 +65683,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UnregisterJSWindowActor::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_UnregisterJSWindowActor.name)
 }
 inline std::string* Msg_UnregisterJSWindowActor::mutable_name() {
@@ -65735,7 +65735,7 @@ inline void Msg_UnregisterJSWindowActor::set_allocated_name(std::string* name) {
 
 // Msg_UnregisterJSProcessActor
 
-// required string name = 1;
+// required bytes name = 1;
 inline bool Msg_UnregisterJSProcessActor::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -65755,7 +65755,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UnregisterJSProcessActor::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_UnregisterJSProcessActor.name)
 }
 inline std::string* Msg_UnregisterJSProcessActor::mutable_name() {
@@ -66687,7 +66687,7 @@ inline void Msg_NotifyIdleObserver::set_observerid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_NotifyIdleObserver.observerId)
 }
 
-// required string topic = 2;
+// required bytes topic = 2;
 inline bool Msg_NotifyIdleObserver::_internal_has_topic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -66707,7 +66707,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyIdleObserver::set_topic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.topic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.topic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_NotifyIdleObserver.topic)
 }
 inline std::string* Msg_NotifyIdleObserver::mutable_topic() {
@@ -66755,7 +66755,7 @@ inline void Msg_NotifyIdleObserver::set_allocated_topic(std::string* topic) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyIdleObserver.topic)
 }
 
-// required string str = 3;
+// required bytes str = 3;
 inline bool Msg_NotifyIdleObserver::_internal_has_str() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -66775,7 +66775,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyIdleObserver::set_str(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.str_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.str_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_NotifyIdleObserver.str)
 }
 inline std::string* Msg_NotifyIdleObserver::mutable_str() {
@@ -66963,7 +66963,7 @@ inline void Msg_DomainSetChanged::set_allocated_adomain(std::string* adomain) {
 
 // Msg_LoadProcessScript
 
-// required string url = 1;
+// required bytes url = 1;
 inline bool Msg_LoadProcessScript::_internal_has_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -66983,7 +66983,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LoadProcessScript::set_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_LoadProcessScript.url)
 }
 inline std::string* Msg_LoadProcessScript::mutable_url() {
@@ -67111,7 +67111,7 @@ inline void Msg_UpdateWindow::set_allocated_achildid(std::string* achildid) {
 
 // Msg_Push
 
-// required string scope = 1;
+// required bytes scope = 1;
 inline bool Msg_Push::_internal_has_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -67131,7 +67131,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Push::set_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_Push.scope)
 }
 inline std::string* Msg_Push::mutable_scope() {
@@ -67247,7 +67247,7 @@ inline void Msg_Push::set_allocated_principal(std::string* principal) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_Push.principal)
 }
 
-// required string messageId = 3;
+// required bytes messageId = 3;
 inline bool Msg_Push::_internal_has_messageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -67267,7 +67267,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Push::set_messageid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.messageid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.messageid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_Push.messageId)
 }
 inline std::string* Msg_Push::mutable_messageid() {
@@ -67319,7 +67319,7 @@ inline void Msg_Push::set_allocated_messageid(std::string* messageid) {
 
 // Msg_PushWithData
 
-// required string scope = 1;
+// required bytes scope = 1;
 inline bool Msg_PushWithData::_internal_has_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -67339,7 +67339,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PushWithData::set_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PushWithData.scope)
 }
 inline std::string* Msg_PushWithData::mutable_scope() {
@@ -67455,7 +67455,7 @@ inline void Msg_PushWithData::set_allocated_principal(std::string* principal) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PushWithData.principal)
 }
 
-// required string messageId = 3;
+// required bytes messageId = 3;
 inline bool Msg_PushWithData::_internal_has_messageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -67475,7 +67475,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PushWithData::set_messageid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.messageid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.messageid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PushWithData.messageId)
 }
 inline std::string* Msg_PushWithData::mutable_messageid() {
@@ -67733,7 +67733,7 @@ inline void Msg_GetFilesResponse::set_allocated_aresult(::protobuf::mozilla::dom
 
 // Msg_BlobURLRegistration
 
-// required string aURI = 1;
+// required bytes aURI = 1;
 inline bool Msg_BlobURLRegistration::_internal_has_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -67753,7 +67753,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BlobURLRegistration::set_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.auri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_BlobURLRegistration.aURI)
 }
 inline std::string* Msg_BlobURLRegistration::mutable_auri() {
@@ -67956,7 +67956,7 @@ inline void Msg_BlobURLRegistration::set_allocated_aprincipal(std::string* aprin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_BlobURLRegistration.aPrincipal)
 }
 
-// required string aPartitionKey = 4;
+// required bytes aPartitionKey = 4;
 inline bool Msg_BlobURLRegistration::_internal_has_apartitionkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -67976,7 +67976,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BlobURLRegistration::set_apartitionkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.apartitionkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apartitionkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_BlobURLRegistration.aPartitionKey)
 }
 inline std::string* Msg_BlobURLRegistration::mutable_apartitionkey() {
@@ -68028,7 +68028,7 @@ inline void Msg_BlobURLRegistration::set_allocated_apartitionkey(std::string* ap
 
 // Msg_BlobURLUnregistration
 
-// repeated string aURIs = 1;
+// repeated bytes aURIs = 1;
 inline int Msg_BlobURLUnregistration::_internal_auris_size() const {
   return _impl_.auris_.size();
 }
@@ -68067,7 +68067,7 @@ inline void Msg_BlobURLUnregistration::set_auris(int index, const char* value) {
   _impl_.auris_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_BlobURLUnregistration.aURIs)
 }
-inline void Msg_BlobURLUnregistration::set_auris(int index, const char* value, size_t size) {
+inline void Msg_BlobURLUnregistration::set_auris(int index, const void* value, size_t size) {
   _impl_.auris_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_BlobURLUnregistration.aURIs)
@@ -68088,7 +68088,7 @@ inline void Msg_BlobURLUnregistration::add_auris(const char* value) {
   _impl_.auris_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_BlobURLUnregistration.aURIs)
 }
-inline void Msg_BlobURLUnregistration::add_auris(const char* value, size_t size) {
+inline void Msg_BlobURLUnregistration::add_auris(const void* value, size_t size) {
   _impl_.auris_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_BlobURLUnregistration.aURIs)
 }
@@ -68267,7 +68267,7 @@ inline void Msg_ProvideAnonymousTemporaryFile::set_allocated_afd(::protobuf::moz
 
 // Msg_SetPermissionsWithKey
 
-// required string aPermissionKey = 1;
+// required bytes aPermissionKey = 1;
 inline bool Msg_SetPermissionsWithKey::_internal_has_apermissionkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -68287,7 +68287,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetPermissionsWithKey::set_apermissionkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.apermissionkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apermissionkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_SetPermissionsWithKey.aPermissionKey)
 }
 inline std::string* Msg_SetPermissionsWithKey::mutable_apermissionkey() {
@@ -69714,7 +69714,7 @@ inline void Msg_DisplayLoadError::set_allocated_acontext(std::string* acontext) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_DisplayLoadError.aContext)
 }
 
-// required string aURI = 2;
+// required bytes aURI = 2;
 inline bool Msg_DisplayLoadError::_internal_has_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -69734,7 +69734,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DisplayLoadError::set_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.auri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_DisplayLoadError.aURI)
 }
 inline std::string* Msg_DisplayLoadError::mutable_auri() {
@@ -70522,7 +70522,7 @@ inline void Msg_OnAllowAccessFor::set_allocated_aparentcontext(std::string* apar
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_OnAllowAccessFor.aParentContext)
 }
 
-// required string aTrackingOrigin = 2;
+// required bytes aTrackingOrigin = 2;
 inline bool Msg_OnAllowAccessFor::_internal_has_atrackingorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -70542,7 +70542,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnAllowAccessFor::set_atrackingorigin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.atrackingorigin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atrackingorigin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_OnAllowAccessFor.aTrackingOrigin)
 }
 inline std::string* Msg_OnAllowAccessFor::mutable_atrackingorigin() {
@@ -72014,7 +72014,7 @@ inline void Msg_SessionHistoryEntryTitle::set_allocated_acontext(std::string* ac
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryTitle.aContext)
 }
 
-// required string aTitle = 2;
+// required bytes aTitle = 2;
 inline bool Msg_SessionHistoryEntryTitle::_internal_has_atitle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -72034,7 +72034,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SessionHistoryEntryTitle::set_atitle(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.atitle_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atitle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryTitle.aTitle)
 }
 inline std::string* Msg_SessionHistoryEntryTitle::mutable_atitle() {
@@ -72482,7 +72482,7 @@ inline void Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries::set_alloc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries.aContext)
 }
 
-// required string aName = 2;
+// required bytes aName = 2;
 inline bool Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries::_internal_has_aname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -72502,7 +72502,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries::set_aname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries.aName)
 }
 inline std::string* Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries::mutable_aname() {
@@ -73305,7 +73305,7 @@ inline void Msg_InitStreamFilter::set_channelid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_InitStreamFilter.channelId)
 }
 
-// required string addonId = 2;
+// required bytes addonId = 2;
 inline bool Msg_InitStreamFilter::_internal_has_addonid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -73325,7 +73325,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitStreamFilter::set_addonid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.addonid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.addonid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_InitStreamFilter.addonId)
 }
 inline std::string* Msg_InitStreamFilter::mutable_addonid() {
@@ -74316,7 +74316,7 @@ inline void Msg_PURLClassifierLocalByNameConstructor::set_allocated_uri(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalByNameConstructor.uri)
 }
 
-// repeated string featureNames = 2;
+// repeated bytes featureNames = 2;
 inline int Msg_PURLClassifierLocalByNameConstructor::_internal_featurenames_size() const {
   return _impl_.featurenames_.size();
 }
@@ -74355,7 +74355,7 @@ inline void Msg_PURLClassifierLocalByNameConstructor::set_featurenames(int index
   _impl_.featurenames_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalByNameConstructor.featureNames)
 }
-inline void Msg_PURLClassifierLocalByNameConstructor::set_featurenames(int index, const char* value, size_t size) {
+inline void Msg_PURLClassifierLocalByNameConstructor::set_featurenames(int index, const void* value, size_t size) {
   _impl_.featurenames_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalByNameConstructor.featureNames)
@@ -74376,7 +74376,7 @@ inline void Msg_PURLClassifierLocalByNameConstructor::add_featurenames(const cha
   _impl_.featurenames_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalByNameConstructor.featureNames)
 }
-inline void Msg_PURLClassifierLocalByNameConstructor::add_featurenames(const char* value, size_t size) {
+inline void Msg_PURLClassifierLocalByNameConstructor::add_featurenames(const void* value, size_t size) {
   _impl_.featurenames_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalByNameConstructor.featureNames)
 }
@@ -74622,7 +74622,7 @@ inline void Msg_SetURITitle::set_allocated_uri(std::string* uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SetURITitle.uri)
 }
 
-// required string title = 2;
+// required bytes title = 2;
 inline bool Msg_SetURITitle::_internal_has_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -74642,7 +74642,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetURITitle::set_title(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.title_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.title_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_SetURITitle.title)
 }
 inline std::string* Msg_SetURITitle::mutable_title() {
@@ -75086,7 +75086,7 @@ inline void Msg_ExtProtocolChannelConnectParent::set_registrarid(uint64_t value)
 
 // Msg_SyncMessage
 
-// required string aMessage = 1;
+// required bytes aMessage = 1;
 inline bool Msg_SyncMessage::_internal_has_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -75106,7 +75106,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SyncMessage::set_amessage(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.amessage_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.amessage_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_SyncMessage.aMessage)
 }
 inline std::string* Msg_SyncMessage::mutable_amessage() {
@@ -75579,7 +75579,7 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_loadinfoargs(::prot
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.loadInfoArgs)
 }
 
-// required string aMimeContentType = 3;
+// required bytes aMimeContentType = 3;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_amimecontenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -75599,7 +75599,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PExternalHelperAppConstructor::set_amimecontenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.amimecontenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.amimecontenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.aMimeContentType)
 }
 inline std::string* Msg_PExternalHelperAppConstructor::mutable_amimecontenttype() {
@@ -75647,7 +75647,7 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_amimecontenttype(st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.aMimeContentType)
 }
 
-// required string aContentDisposition = 4;
+// required bytes aContentDisposition = 4;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_acontentdisposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -75667,7 +75667,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PExternalHelperAppConstructor::set_acontentdisposition(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.acontentdisposition_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.acontentdisposition_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.aContentDisposition)
 }
 inline std::string* Msg_PExternalHelperAppConstructor::mutable_acontentdisposition() {
@@ -75743,7 +75743,7 @@ inline void Msg_PExternalHelperAppConstructor::set_acontentdispositionhint(uint3
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.aContentDispositionHint)
 }
 
-// required string aContentDispositionFilename = 6;
+// required bytes aContentDispositionFilename = 6;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_acontentdispositionfilename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -75763,7 +75763,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PExternalHelperAppConstructor::set_acontentdispositionfilename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.acontentdispositionfilename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.acontentdispositionfilename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.aContentDispositionFilename)
 }
 inline std::string* Msg_PExternalHelperAppConstructor::mutable_acontentdispositionfilename() {
@@ -76115,7 +76115,7 @@ inline void Msg_SetGeolocationHigherAccuracy::set_enable(bool value) {
 
 // Msg_ConsoleMessage
 
-// required string message = 1;
+// required bytes message = 1;
 inline bool Msg_ConsoleMessage::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -76135,7 +76135,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ConsoleMessage::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ConsoleMessage.message)
 }
 inline std::string* Msg_ConsoleMessage::mutable_message() {
@@ -76187,7 +76187,7 @@ inline void Msg_ConsoleMessage::set_allocated_message(std::string* message) {
 
 // Msg_ScriptErrorWithStack
 
-// required string message = 1;
+// required bytes message = 1;
 inline bool Msg_ScriptErrorWithStack::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -76207,7 +76207,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ScriptErrorWithStack::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptErrorWithStack.message)
 }
 inline std::string* Msg_ScriptErrorWithStack::mutable_message() {
@@ -76255,7 +76255,7 @@ inline void Msg_ScriptErrorWithStack::set_allocated_message(std::string* message
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ScriptErrorWithStack.message)
 }
 
-// required string sourceName = 2;
+// required bytes sourceName = 2;
 inline bool Msg_ScriptErrorWithStack::_internal_has_sourcename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -76275,7 +76275,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ScriptErrorWithStack::set_sourcename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.sourcename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.sourcename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptErrorWithStack.sourceName)
 }
 inline std::string* Msg_ScriptErrorWithStack::mutable_sourcename() {
@@ -76407,7 +76407,7 @@ inline void Msg_ScriptErrorWithStack::set_flags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptErrorWithStack.flags)
 }
 
-// required string category = 6;
+// required bytes category = 6;
 inline bool Msg_ScriptErrorWithStack::_internal_has_category() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -76427,7 +76427,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ScriptErrorWithStack::set_category(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.category_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.category_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptErrorWithStack.category)
 }
 inline std::string* Msg_ScriptErrorWithStack::mutable_category() {
@@ -76849,7 +76849,7 @@ inline void Msg_SetClipboard::set_allocated_arequestingwindowcontext(std::string
 
 // Msg_GetClipboard
 
-// repeated string aTypes = 1;
+// repeated bytes aTypes = 1;
 inline int Msg_GetClipboard::_internal_atypes_size() const {
   return _impl_.atypes_.size();
 }
@@ -76888,7 +76888,7 @@ inline void Msg_GetClipboard::set_atypes(int index, const char* value) {
   _impl_.atypes_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_GetClipboard.aTypes)
 }
-inline void Msg_GetClipboard::set_atypes(int index, const char* value, size_t size) {
+inline void Msg_GetClipboard::set_atypes(int index, const void* value, size_t size) {
   _impl_.atypes_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_GetClipboard.aTypes)
@@ -76909,7 +76909,7 @@ inline void Msg_GetClipboard::add_atypes(const char* value) {
   _impl_.atypes_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_GetClipboard.aTypes)
 }
-inline void Msg_GetClipboard::add_atypes(const char* value, size_t size) {
+inline void Msg_GetClipboard::add_atypes(const void* value, size_t size) {
   _impl_.atypes_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_GetClipboard.aTypes)
 }
@@ -77155,7 +77155,7 @@ inline void Reply_GetClipboard::set_allocated_transferabledataorerror(::protobuf
 
 // Msg_GetClipboardDataSnapshot
 
-// repeated string aTypes = 1;
+// repeated bytes aTypes = 1;
 inline int Msg_GetClipboardDataSnapshot::_internal_atypes_size() const {
   return _impl_.atypes_.size();
 }
@@ -77194,7 +77194,7 @@ inline void Msg_GetClipboardDataSnapshot::set_atypes(int index, const char* valu
   _impl_.atypes_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_GetClipboardDataSnapshot.aTypes)
 }
-inline void Msg_GetClipboardDataSnapshot::set_atypes(int index, const char* value, size_t size) {
+inline void Msg_GetClipboardDataSnapshot::set_atypes(int index, const void* value, size_t size) {
   _impl_.atypes_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_GetClipboardDataSnapshot.aTypes)
@@ -77215,7 +77215,7 @@ inline void Msg_GetClipboardDataSnapshot::add_atypes(const char* value) {
   _impl_.atypes_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_GetClipboardDataSnapshot.aTypes)
 }
-inline void Msg_GetClipboardDataSnapshot::add_atypes(const char* value, size_t size) {
+inline void Msg_GetClipboardDataSnapshot::add_atypes(const void* value, size_t size) {
   _impl_.atypes_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_GetClipboardDataSnapshot.aTypes)
 }
@@ -77529,7 +77529,7 @@ inline void Reply_GetClipboardDataSnapshot::set_allocated_aclipboardreadrequesto
 
 // Msg_GetClipboardDataSnapshotSync
 
-// repeated string aTypes = 1;
+// repeated bytes aTypes = 1;
 inline int Msg_GetClipboardDataSnapshotSync::_internal_atypes_size() const {
   return _impl_.atypes_.size();
 }
@@ -77568,7 +77568,7 @@ inline void Msg_GetClipboardDataSnapshotSync::set_atypes(int index, const char* 
   _impl_.atypes_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_GetClipboardDataSnapshotSync.aTypes)
 }
-inline void Msg_GetClipboardDataSnapshotSync::set_atypes(int index, const char* value, size_t size) {
+inline void Msg_GetClipboardDataSnapshotSync::set_atypes(int index, const void* value, size_t size) {
   _impl_.atypes_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_GetClipboardDataSnapshotSync.aTypes)
@@ -77589,7 +77589,7 @@ inline void Msg_GetClipboardDataSnapshotSync::add_atypes(const char* value) {
   _impl_.atypes_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_GetClipboardDataSnapshotSync.aTypes)
 }
-inline void Msg_GetClipboardDataSnapshotSync::add_atypes(const char* value, size_t size) {
+inline void Msg_GetClipboardDataSnapshotSync::add_atypes(const void* value, size_t size) {
   _impl_.atypes_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_GetClipboardDataSnapshotSync.aTypes)
 }
@@ -77907,7 +77907,7 @@ inline void Msg_EmptyClipboard::set_allocated_awhichclipboard(std::string* awhic
 
 // Msg_ClipboardHasType
 
-// repeated string aTypes = 1;
+// repeated bytes aTypes = 1;
 inline int Msg_ClipboardHasType::_internal_atypes_size() const {
   return _impl_.atypes_.size();
 }
@@ -77946,7 +77946,7 @@ inline void Msg_ClipboardHasType::set_atypes(int index, const char* value) {
   _impl_.atypes_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_ClipboardHasType.aTypes)
 }
-inline void Msg_ClipboardHasType::set_atypes(int index, const char* value, size_t size) {
+inline void Msg_ClipboardHasType::set_atypes(int index, const void* value, size_t size) {
   _impl_.atypes_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_ClipboardHasType.aTypes)
@@ -77967,7 +77967,7 @@ inline void Msg_ClipboardHasType::add_atypes(const char* value) {
   _impl_.atypes_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_ClipboardHasType.aTypes)
 }
-inline void Msg_ClipboardHasType::add_atypes(const char* value, size_t size) {
+inline void Msg_ClipboardHasType::add_atypes(const void* value, size_t size) {
   _impl_.atypes_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_ClipboardHasType.aTypes)
 }
@@ -78230,7 +78230,7 @@ inline void Msg_PClipboardWriteRequestConstructor::set_allocated_asettingwindowc
 
 // Msg_GetIconForExtension
 
-// required string aFileExt = 1;
+// required bytes aFileExt = 1;
 inline bool Msg_GetIconForExtension::_internal_has_afileext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -78250,7 +78250,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetIconForExtension::set_afileext(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.afileext_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.afileext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_GetIconForExtension.aFileExt)
 }
 inline std::string* Msg_GetIconForExtension::mutable_afileext() {
@@ -78640,7 +78640,7 @@ inline void Msg_FindImageText::set_allocated_image(::protobuf::mozilla::dom::IPC
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_FindImageText.image)
 }
 
-// repeated string languages = 2;
+// repeated bytes languages = 2;
 inline int Msg_FindImageText::_internal_languages_size() const {
   return _impl_.languages_.size();
 }
@@ -78679,7 +78679,7 @@ inline void Msg_FindImageText::set_languages(int index, const char* value) {
   _impl_.languages_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_FindImageText.languages)
 }
-inline void Msg_FindImageText::set_languages(int index, const char* value, size_t size) {
+inline void Msg_FindImageText::set_languages(int index, const void* value, size_t size) {
   _impl_.languages_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_FindImageText.languages)
@@ -78700,7 +78700,7 @@ inline void Msg_FindImageText::add_languages(const char* value) {
   _impl_.languages_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_FindImageText.languages)
 }
-inline void Msg_FindImageText::add_languages(const char* value, size_t size) {
+inline void Msg_FindImageText::add_languages(const void* value, size_t size) {
   _impl_.languages_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_FindImageText.languages)
 }
@@ -78810,7 +78810,7 @@ inline void Reply_FindImageText::set_allocated_result(::protobuf::mozilla::dom::
 
 // Msg_GraphicsError
 
-// required string aError = 1;
+// required bytes aError = 1;
 inline bool Msg_GraphicsError::_internal_has_aerror() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -78830,7 +78830,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GraphicsError::set_aerror(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aerror_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aerror_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_GraphicsError.aError)
 }
 inline std::string* Msg_GraphicsError::mutable_aerror() {
@@ -79519,7 +79519,7 @@ inline void Msg_PContentPermissionRequestConstructor::set_allocated_tabid(std::s
 
 // Msg_ShutdownProfile
 
-// required string aProfile = 1;
+// required bytes aProfile = 1;
 inline bool Msg_ShutdownProfile::_internal_has_aprofile() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -79539,7 +79539,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ShutdownProfile::set_aprofile(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aprofile_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aprofile_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ShutdownProfile.aProfile)
 }
 inline std::string* Msg_ShutdownProfile::mutable_aprofile() {
@@ -79591,7 +79591,7 @@ inline void Msg_ShutdownProfile::set_allocated_aprofile(std::string* aprofile) {
 
 // Msg_ShutdownPerfStats
 
-// required string aPerfStats = 1;
+// required bytes aPerfStats = 1;
 inline bool Msg_ShutdownPerfStats::_internal_has_aperfstats() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -79611,7 +79611,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ShutdownPerfStats::set_aperfstats(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aperfstats_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aperfstats_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ShutdownPerfStats.aPerfStats)
 }
 inline std::string* Msg_ShutdownPerfStats::mutable_aperfstats() {
@@ -80867,7 +80867,7 @@ inline void Msg_CreateWindow::set_allocated_auritoload(std::string* auritoload) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindow.aURIToLoad)
 }
 
-// required string aFeatures = 10;
+// required bytes aFeatures = 10;
 inline bool Msg_CreateWindow::_internal_has_afeatures() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -80887,7 +80887,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CreateWindow::set_afeatures(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.afeatures_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.afeatures_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CreateWindow.aFeatures)
 }
 inline std::string* Msg_CreateWindow::mutable_afeatures() {
@@ -81714,7 +81714,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_allocated_auritoload(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.aURIToLoad)
 }
 
-// required string aFeatures = 7;
+// required bytes aFeatures = 7;
 inline bool Msg_CreateWindowInDifferentProcess::_internal_has_afeatures() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -81734,7 +81734,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CreateWindowInDifferentProcess::set_afeatures(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.afeatures_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.afeatures_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.aFeatures)
 }
 inline std::string* Msg_CreateWindowInDifferentProcess::mutable_afeatures() {
@@ -81850,7 +81850,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_allocated_amodifiers(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.aModifiers)
 }
 
-// required string aName = 9;
+// required bytes aName = 9;
 inline bool Msg_CreateWindowInDifferentProcess::_internal_has_aname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -81870,7 +81870,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CreateWindowInDifferentProcess::set_aname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.aname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.aName)
 }
 inline std::string* Msg_CreateWindowInDifferentProcess::mutable_aname() {
@@ -82250,7 +82250,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_atextdirectiveuseractivation
 
 // Msg_NotifyPushObservers
 
-// required string scope = 1;
+// required bytes scope = 1;
 inline bool Msg_NotifyPushObservers::_internal_has_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -82270,7 +82270,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyPushObservers::set_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_NotifyPushObservers.scope)
 }
 inline std::string* Msg_NotifyPushObservers::mutable_scope() {
@@ -82386,7 +82386,7 @@ inline void Msg_NotifyPushObservers::set_allocated_principal(std::string* princi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyPushObservers.principal)
 }
 
-// required string messageId = 3;
+// required bytes messageId = 3;
 inline bool Msg_NotifyPushObservers::_internal_has_messageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -82406,7 +82406,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyPushObservers::set_messageid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.messageid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.messageid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_NotifyPushObservers.messageId)
 }
 inline std::string* Msg_NotifyPushObservers::mutable_messageid() {
@@ -82458,7 +82458,7 @@ inline void Msg_NotifyPushObservers::set_allocated_messageid(std::string* messag
 
 // Msg_NotifyPushObserversWithData
 
-// required string scope = 1;
+// required bytes scope = 1;
 inline bool Msg_NotifyPushObserversWithData::_internal_has_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -82478,7 +82478,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyPushObserversWithData::set_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_NotifyPushObserversWithData.scope)
 }
 inline std::string* Msg_NotifyPushObserversWithData::mutable_scope() {
@@ -82594,7 +82594,7 @@ inline void Msg_NotifyPushObserversWithData::set_allocated_principal(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyPushObserversWithData.principal)
 }
 
-// required string messageId = 3;
+// required bytes messageId = 3;
 inline bool Msg_NotifyPushObserversWithData::_internal_has_messageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -82614,7 +82614,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyPushObserversWithData::set_messageid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.messageid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.messageid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_NotifyPushObserversWithData.messageId)
 }
 inline std::string* Msg_NotifyPushObserversWithData::mutable_messageid() {
@@ -82781,7 +82781,7 @@ inline void Msg_GetFilesRequest::set_allocated_aid(std::string* aid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_GetFilesRequest.aID)
 }
 
-// repeated string aDirectories = 2;
+// repeated bytes aDirectories = 2;
 inline int Msg_GetFilesRequest::_internal_adirectories_size() const {
   return _impl_.adirectories_.size();
 }
@@ -82820,7 +82820,7 @@ inline void Msg_GetFilesRequest::set_adirectories(int index, const char* value) 
   _impl_.adirectories_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_GetFilesRequest.aDirectories)
 }
-inline void Msg_GetFilesRequest::set_adirectories(int index, const char* value, size_t size) {
+inline void Msg_GetFilesRequest::set_adirectories(int index, const void* value, size_t size) {
   _impl_.adirectories_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_GetFilesRequest.aDirectories)
@@ -82841,7 +82841,7 @@ inline void Msg_GetFilesRequest::add_adirectories(const char* value) {
   _impl_.adirectories_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_GetFilesRequest.aDirectories)
 }
-inline void Msg_GetFilesRequest::add_adirectories(const char* value, size_t size) {
+inline void Msg_GetFilesRequest::add_adirectories(const void* value, size_t size) {
   _impl_.adirectories_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_GetFilesRequest.aDirectories)
 }
@@ -82960,7 +82960,7 @@ inline void Msg_DeleteGetFilesRequest::set_allocated_aid(std::string* aid) {
 
 // Msg_StoreAndBroadcastBlobURLRegistration
 
-// required string url = 1;
+// required bytes url = 1;
 inline bool Msg_StoreAndBroadcastBlobURLRegistration::_internal_has_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -82980,7 +82980,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StoreAndBroadcastBlobURLRegistration::set_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_StoreAndBroadcastBlobURLRegistration.url)
 }
 inline std::string* Msg_StoreAndBroadcastBlobURLRegistration::mutable_url() {
@@ -83183,7 +83183,7 @@ inline void Msg_StoreAndBroadcastBlobURLRegistration::set_allocated_principal(st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_StoreAndBroadcastBlobURLRegistration.principal)
 }
 
-// required string aPartitionKey = 4;
+// required bytes aPartitionKey = 4;
 inline bool Msg_StoreAndBroadcastBlobURLRegistration::_internal_has_apartitionkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -83203,7 +83203,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StoreAndBroadcastBlobURLRegistration::set_apartitionkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.apartitionkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apartitionkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_StoreAndBroadcastBlobURLRegistration.aPartitionKey)
 }
 inline std::string* Msg_StoreAndBroadcastBlobURLRegistration::mutable_apartitionkey() {
@@ -84085,7 +84085,7 @@ inline void Msg_AddCertException::set_allocated_acert(std::string* acert) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AddCertException.aCert)
 }
 
-// required string aHostName = 2;
+// required bytes aHostName = 2;
 inline bool Msg_AddCertException::_internal_has_ahostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -84105,7 +84105,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AddCertException::set_ahostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.ahostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.ahostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AddCertException.aHostName)
 }
 inline std::string* Msg_AddCertException::mutable_ahostname() {
@@ -84621,7 +84621,7 @@ inline void Msg_StorageAccessPermissionGrantedForOrigin::set_allocated_atracking
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_StorageAccessPermissionGrantedForOrigin.aTrackingPrincipal)
 }
 
-// required string aTrackingOrigin = 4;
+// required bytes aTrackingOrigin = 4;
 inline bool Msg_StorageAccessPermissionGrantedForOrigin::_internal_has_atrackingorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -84641,7 +84641,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StorageAccessPermissionGrantedForOrigin::set_atrackingorigin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.atrackingorigin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atrackingorigin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_StorageAccessPermissionGrantedForOrigin.aTrackingOrigin)
 }
 inline std::string* Msg_StorageAccessPermissionGrantedForOrigin::mutable_atrackingorigin() {
@@ -85013,7 +85013,7 @@ inline void Msg_CompleteAllowAccessFor::set_allocated_atrackingprincipal(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CompleteAllowAccessFor.aTrackingPrincipal)
 }
 
-// required string aTrackingOrigin = 4;
+// required bytes aTrackingOrigin = 4;
 inline bool Msg_CompleteAllowAccessFor::_internal_has_atrackingorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -85033,7 +85033,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CompleteAllowAccessFor::set_atrackingorigin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.atrackingorigin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atrackingorigin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CompleteAllowAccessFor.aTrackingOrigin)
 }
 inline std::string* Msg_CompleteAllowAccessFor::mutable_atrackingorigin() {
@@ -85909,7 +85909,7 @@ inline void Msg_TestStorageAccessPermission::set_allocated_aembeddingprincipal(s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_TestStorageAccessPermission.aEmbeddingPrincipal)
 }
 
-// required string aEmbeddedOrigin = 2;
+// required bytes aEmbeddedOrigin = 2;
 inline bool Msg_TestStorageAccessPermission::_internal_has_aembeddedorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -85929,7 +85929,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TestStorageAccessPermission::set_aembeddedorigin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aembeddedorigin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aembeddedorigin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_TestStorageAccessPermission.aEmbeddedOrigin)
 }
 inline std::string* Msg_TestStorageAccessPermission::mutable_aembeddedorigin() {
@@ -88553,7 +88553,7 @@ inline void Reply_HistoryGo::set_requestedindex(int32_t value) {
 
 // Msg_BlobURLDataRequest
 
-// required string aBlobURL = 1;
+// required bytes aBlobURL = 1;
 inline bool Msg_BlobURLDataRequest::_internal_has_abloburl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -88573,7 +88573,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BlobURLDataRequest::set_abloburl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.abloburl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.abloburl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_BlobURLDataRequest.aBlobURL)
 }
 inline std::string* Msg_BlobURLDataRequest::mutable_abloburl() {
@@ -88853,7 +88853,7 @@ inline void Msg_BlobURLDataRequest::set_ainnerwindowid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_BlobURLDataRequest.aInnerWindowId)
 }
 
-// required string aPartitionKey = 6;
+// required bytes aPartitionKey = 6;
 inline bool Msg_BlobURLDataRequest::_internal_has_apartitionkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -88873,7 +88873,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BlobURLDataRequest::set_apartitionkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.apartitionkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.apartitionkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_BlobURLDataRequest.aPartitionKey)
 }
 inline std::string* Msg_BlobURLDataRequest::mutable_apartitionkey() {
@@ -89732,7 +89732,7 @@ inline void Msg_CleanupPendingLoadState::set_aloadidentifier(uint64_t value) {
 
 // Msg_ScriptError
 
-// required string message = 1;
+// required bytes message = 1;
 inline bool Msg_ScriptError::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -89752,7 +89752,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ScriptError::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptError.message)
 }
 inline std::string* Msg_ScriptError::mutable_message() {
@@ -89800,7 +89800,7 @@ inline void Msg_ScriptError::set_allocated_message(std::string* message) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ScriptError.message)
 }
 
-// required string sourceName = 2;
+// required bytes sourceName = 2;
 inline bool Msg_ScriptError::_internal_has_sourcename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -89820,7 +89820,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ScriptError::set_sourcename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.sourcename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.sourcename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptError.sourceName)
 }
 inline std::string* Msg_ScriptError::mutable_sourcename() {
@@ -89952,7 +89952,7 @@ inline void Msg_ScriptError::set_flags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptError.flags)
 }
 
-// required string category = 6;
+// required bytes category = 6;
 inline bool Msg_ScriptError::_internal_has_category() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -89972,7 +89972,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ScriptError::set_category(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.category_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.category_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptError.category)
 }
 inline std::string* Msg_ScriptError::mutable_category() {
@@ -90195,7 +90195,7 @@ inline void Msg_ReportFrameTimingData::set_allocated_loadinfo(::protobuf::mozill
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ReportFrameTimingData.loadInfo)
 }
 
-// required string entryName = 2;
+// required bytes entryName = 2;
 inline bool Msg_ReportFrameTimingData::_internal_has_entryname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -90215,7 +90215,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReportFrameTimingData::set_entryname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.entryname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.entryname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ReportFrameTimingData.entryName)
 }
 inline std::string* Msg_ReportFrameTimingData::mutable_entryname() {
@@ -90263,7 +90263,7 @@ inline void Msg_ReportFrameTimingData::set_allocated_entryname(std::string* entr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ReportFrameTimingData.entryName)
 }
 
-// required string initiatorType = 3;
+// required bytes initiatorType = 3;
 inline bool Msg_ReportFrameTimingData::_internal_has_initiatortype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -90283,7 +90283,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReportFrameTimingData::set_initiatortype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.initiatortype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.initiatortype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ReportFrameTimingData.initiatorType)
 }
 inline std::string* Msg_ReportFrameTimingData::mutable_initiatortype() {
@@ -90571,7 +90571,7 @@ inline void Msg_CommitBrowsingContextTransaction::set_aepoch(uint64_t value) {
 
 // Msg_AsyncMessage
 
-// required string aMessage = 1;
+// required bytes aMessage = 1;
 inline bool Msg_AsyncMessage::_internal_has_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -90591,7 +90591,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncMessage::set_amessage(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.amessage_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.amessage_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AsyncMessage.aMessage)
 }
 inline std::string* Msg_AsyncMessage::mutable_amessage() {
@@ -90730,7 +90730,7 @@ inline void Msg_AsyncMessage::set_allocated_adata(::protobuf::mozilla::dom::Clon
 
 // Msg_NotifyPushSubscriptionModifiedObservers
 
-// required string scope = 1;
+// required bytes scope = 1;
 inline bool Msg_NotifyPushSubscriptionModifiedObservers::_internal_has_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -90750,7 +90750,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyPushSubscriptionModifiedObservers::set_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_NotifyPushSubscriptionModifiedObservers.scope)
 }
 inline std::string* Msg_NotifyPushSubscriptionModifiedObservers::mutable_scope() {
@@ -90870,7 +90870,7 @@ inline void Msg_NotifyPushSubscriptionModifiedObservers::set_allocated_principal
 
 // Msg_PushError
 
-// required string scope = 1;
+// required bytes scope = 1;
 inline bool Msg_PushError::_internal_has_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -90890,7 +90890,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PushError::set_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PushError.scope)
 }
 inline std::string* Msg_PushError::mutable_scope() {
@@ -91006,7 +91006,7 @@ inline void Msg_PushError::set_allocated_principal(std::string* principal) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PushError.principal)
 }
 
-// required string message = 3;
+// required bytes message = 3;
 inline bool Msg_PushError::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -91026,7 +91026,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PushError::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PushError.message)
 }
 inline std::string* Msg_PushError::mutable_message() {
@@ -95248,7 +95248,7 @@ inline void Reply_RequestGeolocationPermissionFromUser::set_allocated_astatus(st
 
 // Msg_AttributionEvent
 
-// required string aSourceHost = 1;
+// required bytes aSourceHost = 1;
 inline bool Msg_AttributionEvent::_internal_has_asourcehost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -95268,7 +95268,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AttributionEvent::set_asourcehost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.asourcehost_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.asourcehost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AttributionEvent.aSourceHost)
 }
 inline std::string* Msg_AttributionEvent::mutable_asourcehost() {
@@ -95412,7 +95412,7 @@ inline void Msg_AttributionEvent::set_aindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AttributionEvent.aIndex)
 }
 
-// required string aAd = 4;
+// required bytes aAd = 4;
 inline bool Msg_AttributionEvent::_internal_has_aad() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -95432,7 +95432,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AttributionEvent::set_aad(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.aad_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aad_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AttributionEvent.aAd)
 }
 inline std::string* Msg_AttributionEvent::mutable_aad() {
@@ -95480,7 +95480,7 @@ inline void Msg_AttributionEvent::set_allocated_aad(std::string* aad) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AttributionEvent.aAd)
 }
 
-// required string aTargetHost = 5;
+// required bytes aTargetHost = 5;
 inline bool Msg_AttributionEvent::_internal_has_atargethost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -95500,7 +95500,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AttributionEvent::set_atargethost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.atargethost_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atargethost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AttributionEvent.aTargetHost)
 }
 inline std::string* Msg_AttributionEvent::mutable_atargethost() {
@@ -95552,7 +95552,7 @@ inline void Msg_AttributionEvent::set_allocated_atargethost(std::string* atarget
 
 // Msg_AttributionConversion
 
-// required string aTargetHost = 1;
+// required bytes aTargetHost = 1;
 inline bool Msg_AttributionConversion::_internal_has_atargethost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -95572,7 +95572,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AttributionConversion::set_atargethost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atargethost_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atargethost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.aTargetHost)
 }
 inline std::string* Msg_AttributionConversion::mutable_atargethost() {
@@ -95620,7 +95620,7 @@ inline void Msg_AttributionConversion::set_allocated_atargethost(std::string* at
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.aTargetHost)
 }
 
-// required string aTask = 2;
+// required bytes aTask = 2;
 inline bool Msg_AttributionConversion::_internal_has_atask() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -95640,7 +95640,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AttributionConversion::set_atask(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.atask_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atask_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.aTask)
 }
 inline std::string* Msg_AttributionConversion::mutable_atask() {
@@ -95812,7 +95812,7 @@ inline void Msg_AttributionConversion::set_allocated_aimpressiontype(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.aImpressionType)
 }
 
-// repeated string aAds = 6;
+// repeated bytes aAds = 6;
 inline int Msg_AttributionConversion::_internal_aads_size() const {
   return _impl_.aads_.size();
 }
@@ -95851,7 +95851,7 @@ inline void Msg_AttributionConversion::set_aads(int index, const char* value) {
   _impl_.aads_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.aAds)
 }
-inline void Msg_AttributionConversion::set_aads(int index, const char* value, size_t size) {
+inline void Msg_AttributionConversion::set_aads(int index, const void* value, size_t size) {
   _impl_.aads_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.aAds)
@@ -95872,7 +95872,7 @@ inline void Msg_AttributionConversion::add_aads(const char* value) {
   _impl_.aads_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.aAds)
 }
-inline void Msg_AttributionConversion::add_aads(const char* value, size_t size) {
+inline void Msg_AttributionConversion::add_aads(const void* value, size_t size) {
   _impl_.aads_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.aAds)
 }
@@ -95887,7 +95887,7 @@ Msg_AttributionConversion::mutable_aads() {
   return &_impl_.aads_;
 }
 
-// repeated string aImpressionSourceHosts = 7;
+// repeated bytes aImpressionSourceHosts = 7;
 inline int Msg_AttributionConversion::_internal_aimpressionsourcehosts_size() const {
   return _impl_.aimpressionsourcehosts_.size();
 }
@@ -95926,7 +95926,7 @@ inline void Msg_AttributionConversion::set_aimpressionsourcehosts(int index, con
   _impl_.aimpressionsourcehosts_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.aImpressionSourceHosts)
 }
-inline void Msg_AttributionConversion::set_aimpressionsourcehosts(int index, const char* value, size_t size) {
+inline void Msg_AttributionConversion::set_aimpressionsourcehosts(int index, const void* value, size_t size) {
   _impl_.aimpressionsourcehosts_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.aImpressionSourceHosts)
@@ -95947,7 +95947,7 @@ inline void Msg_AttributionConversion::add_aimpressionsourcehosts(const char* va
   _impl_.aimpressionsourcehosts_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.aImpressionSourceHosts)
 }
-inline void Msg_AttributionConversion::add_aimpressionsourcehosts(const char* value, size_t size) {
+inline void Msg_AttributionConversion::add_aimpressionsourcehosts(const void* value, size_t size) {
   _impl_.aimpressionsourcehosts_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.aImpressionSourceHosts)
 }

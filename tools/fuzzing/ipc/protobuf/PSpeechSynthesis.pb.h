@@ -362,7 +362,7 @@ class Msg_VoiceRemoved final :
   enum : int {
     kAUriFieldNumber = 1,
   };
-  // required string aUri = 1;
+  // required bytes aUri = 1;
   bool has_auri() const;
   private:
   bool _internal_has_auri() const;
@@ -510,7 +510,7 @@ class Msg_SetDefaultVoice final :
     kAUriFieldNumber = 1,
     kAIsDefaultFieldNumber = 2,
   };
-  // required string aUri = 1;
+  // required bytes aUri = 1;
   bool has_auri() const;
   private:
   bool _internal_has_auri() const;
@@ -940,7 +940,7 @@ class Msg_NotifyVoicesError final :
   enum : int {
     kAErrorFieldNumber = 1,
   };
-  // required string aError = 1;
+  // required bytes aError = 1;
   bool has_aerror() const;
   private:
   bool _internal_has_aerror() const;
@@ -1107,7 +1107,7 @@ class Msg_InitialVoicesAndState final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::RemoteVoice >&
       avoices() const;
 
-  // repeated string aDefaults = 2;
+  // repeated bytes aDefaults = 2;
   int adefaults_size() const;
   private:
   int _internal_adefaults_size() const;
@@ -1118,12 +1118,12 @@ class Msg_InitialVoicesAndState final :
   void set_adefaults(int index, const std::string& value);
   void set_adefaults(int index, std::string&& value);
   void set_adefaults(int index, const char* value);
-  void set_adefaults(int index, const char* value, size_t size);
+  void set_adefaults(int index, const void* value, size_t size);
   std::string* add_adefaults();
   void add_adefaults(const std::string& value);
   void add_adefaults(std::string&& value);
   void add_adefaults(const char* value);
-  void add_adefaults(const char* value, size_t size);
+  void add_adefaults(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& adefaults() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_adefaults();
   private:
@@ -1529,7 +1529,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
     kAPitchFieldNumber = 6,
     kAShouldResistFingerprintingFieldNumber = 7,
   };
-  // required string aText = 1;
+  // required bytes aText = 1;
   bool has_atext() const;
   private:
   bool _internal_has_atext() const;
@@ -1547,7 +1547,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   std::string* _internal_mutable_atext();
   public:
 
-  // required string aUri = 2;
+  // required bytes aUri = 2;
   bool has_auri() const;
   private:
   bool _internal_has_auri() const;
@@ -1565,7 +1565,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   std::string* _internal_mutable_auri();
   public:
 
-  // required string aLang = 3;
+  // required bytes aLang = 3;
   bool has_alang() const;
   private:
   bool _internal_has_alang() const;
@@ -1885,7 +1885,7 @@ inline void Msg_VoiceAdded::set_allocated_avoice(::protobuf::mozilla::dom::Remot
 
 // Msg_VoiceRemoved
 
-// required string aUri = 1;
+// required bytes aUri = 1;
 inline bool Msg_VoiceRemoved::_internal_has_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1905,7 +1905,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_VoiceRemoved::set_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.auri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved.aUri)
 }
 inline std::string* Msg_VoiceRemoved::mutable_auri() {
@@ -1957,7 +1957,7 @@ inline void Msg_VoiceRemoved::set_allocated_auri(std::string* auri) {
 
 // Msg_SetDefaultVoice
 
-// required string aUri = 1;
+// required bytes aUri = 1;
 inline bool Msg_SetDefaultVoice::_internal_has_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1977,7 +1977,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetDefaultVoice::set_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.auri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.aUri)
 }
 inline std::string* Msg_SetDefaultVoice::mutable_auri() {
@@ -2093,7 +2093,7 @@ inline void Msg_IsSpeakingChanged::set_aisspeaking(bool value) {
 
 // Msg_NotifyVoicesError
 
-// required string aError = 1;
+// required bytes aError = 1;
 inline bool Msg_NotifyVoicesError::_internal_has_aerror() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2113,7 +2113,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyVoicesError::set_aerror(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aerror_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aerror_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError.aError)
 }
 inline std::string* Msg_NotifyVoicesError::mutable_aerror() {
@@ -2202,7 +2202,7 @@ Msg_InitialVoicesAndState::avoices() const {
   return _impl_.avoices_;
 }
 
-// repeated string aDefaults = 2;
+// repeated bytes aDefaults = 2;
 inline int Msg_InitialVoicesAndState::_internal_adefaults_size() const {
   return _impl_.adefaults_.size();
 }
@@ -2241,7 +2241,7 @@ inline void Msg_InitialVoicesAndState::set_adefaults(int index, const char* valu
   _impl_.adefaults_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
 }
-inline void Msg_InitialVoicesAndState::set_adefaults(int index, const char* value, size_t size) {
+inline void Msg_InitialVoicesAndState::set_adefaults(int index, const void* value, size_t size) {
   _impl_.adefaults_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
@@ -2262,7 +2262,7 @@ inline void Msg_InitialVoicesAndState::add_adefaults(const char* value) {
   _impl_.adefaults_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
 }
-inline void Msg_InitialVoicesAndState::add_adefaults(const char* value, size_t size) {
+inline void Msg_InitialVoicesAndState::add_adefaults(const void* value, size_t size) {
   _impl_.adefaults_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
 }
@@ -2317,7 +2317,7 @@ inline void Msg_InitialVoicesAndState::set_aisspeaking(bool value) {
 
 // Msg_PSpeechSynthesisRequestConstructor
 
-// required string aText = 1;
+// required bytes aText = 1;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_atext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2337,7 +2337,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PSpeechSynthesisRequestConstructor::set_atext(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atext_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aText)
 }
 inline std::string* Msg_PSpeechSynthesisRequestConstructor::mutable_atext() {
@@ -2385,7 +2385,7 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_atext(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aText)
 }
 
-// required string aUri = 2;
+// required bytes aUri = 2;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2405,7 +2405,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PSpeechSynthesisRequestConstructor::set_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.auri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aUri)
 }
 inline std::string* Msg_PSpeechSynthesisRequestConstructor::mutable_auri() {
@@ -2453,7 +2453,7 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_auri(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aUri)
 }
 
-// required string aLang = 3;
+// required bytes aLang = 3;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_alang() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2473,7 +2473,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PSpeechSynthesisRequestConstructor::set_alang(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.alang_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.alang_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aLang)
 }
 inline std::string* Msg_PSpeechSynthesisRequestConstructor::mutable_alang() {

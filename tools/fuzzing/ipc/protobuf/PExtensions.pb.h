@@ -1101,7 +1101,7 @@ class Msg_CreatedNavigationTarget final :
   std::string* _internal_mutable_sourcebc();
   public:
 
-  // required string url = 3;
+  // required bytes url = 3;
   bool has_url() const;
   private:
   bool _internal_has_url() const;
@@ -2210,7 +2210,7 @@ inline void Msg_CreatedNavigationTarget::set_allocated_sourcebc(std::string* sou
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.sourceBC)
 }
 
-// required string url = 3;
+// required bytes url = 3;
 inline bool Msg_CreatedNavigationTarget::_internal_has_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2230,7 +2230,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CreatedNavigationTarget::set_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.url)
 }
 inline std::string* Msg_CreatedNavigationTarget::mutable_url() {

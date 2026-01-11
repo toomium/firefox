@@ -212,7 +212,7 @@ const char* IPCServerTiming::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string name = 1;
+      // required bytes name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_name();
@@ -230,7 +230,7 @@ const char* IPCServerTiming::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required string description = 3;
+      // required bytes description = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_description();
@@ -270,9 +270,9 @@ uint8_t* IPCServerTiming::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string name = 1;
+  // required bytes name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_name(), target);
   }
 
@@ -282,9 +282,9 @@ uint8_t* IPCServerTiming::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_duration(), target);
   }
 
-  // required string description = 3;
+  // required bytes description = 3;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_description(), target);
   }
 
@@ -301,16 +301,16 @@ size_t IPCServerTiming::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_name()) {
-    // required string name = 1;
+    // required bytes name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
   }
 
   if (_internal_has_description()) {
-    // required string description = 3;
+    // required bytes description = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_description());
   }
 
@@ -326,14 +326,14 @@ size_t IPCServerTiming::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string name = 1;
+    // required bytes name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
 
-    // required string description = 3;
+    // required bytes description = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_description());
 
     // required double duration = 2;
@@ -1021,7 +1021,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string nextHopProtocol = 2;
+      // required bytes nextHopProtocol = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_nexthopprotocol();
@@ -1246,7 +1246,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string contentType = 27;
+      // required bytes contentType = 27;
       case 27:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 218)) {
           auto str = _internal_mutable_contenttype();
@@ -1348,9 +1348,9 @@ uint8_t* IPCPerformanceTimingData::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string nextHopProtocol = 2;
+  // required bytes nextHopProtocol = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_nexthopprotocol(), target);
   }
 
@@ -1498,9 +1498,9 @@ uint8_t* IPCPerformanceTimingData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(26, this->_internal_renderblocking(), target);
   }
 
-  // required string contentType = 27;
+  // required bytes contentType = 27;
   if (cached_has_bits & 0x00080000u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         27, this->_internal_contenttype(), target);
   }
 
@@ -1553,9 +1553,9 @@ size_t IPCPerformanceTimingData::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_nexthopprotocol()) {
-    // required string nextHopProtocol = 2;
+    // required bytes nextHopProtocol = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_nexthopprotocol());
   }
 
@@ -1686,9 +1686,9 @@ size_t IPCPerformanceTimingData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_contenttype()) {
-    // required string contentType = 27;
+    // required bytes contentType = 27;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_contenttype());
   }
 
@@ -1771,9 +1771,9 @@ size_t IPCPerformanceTimingData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0xffffffff) ^ 0xffffffff) == 0) {  // All required fields are present.
-    // required string nextHopProtocol = 2;
+    // required bytes nextHopProtocol = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_nexthopprotocol());
 
     // required bytes asyncOpen = 3;
@@ -1866,9 +1866,9 @@ size_t IPCPerformanceTimingData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_fetchstart());
 
-    // required string contentType = 27;
+    // required bytes contentType = 27;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_contenttype());
 
     // required bytes bodyInfoAccessAllowed = 31;

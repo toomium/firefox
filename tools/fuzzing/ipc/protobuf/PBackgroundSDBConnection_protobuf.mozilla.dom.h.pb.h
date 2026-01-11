@@ -191,7 +191,7 @@ class SDBRequestOpenParams final :
   enum : int {
     kNameFieldNumber = 1,
   };
-  // required string name = 1;
+  // required bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -622,7 +622,7 @@ class SDBRequestWriteParams final :
   enum : int {
     kDataFieldNumber = 1,
   };
-  // required string data = 1;
+  // required bytes data = 1;
   bool has_data() const;
   private:
   bool _internal_has_data() const;
@@ -1041,7 +1041,7 @@ class SDBRequestParams final :
 #endif  // __GNUC__
 // SDBRequestOpenParams
 
-// required string name = 1;
+// required bytes name = 1;
 inline bool SDBRequestOpenParams::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1061,7 +1061,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SDBRequestOpenParams::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SDBRequestOpenParams.name)
 }
 inline std::string* SDBRequestOpenParams::mutable_name() {
@@ -1177,7 +1177,7 @@ inline void SDBRequestReadParams::set_size(uint64_t value) {
 
 // SDBRequestWriteParams
 
-// required string data = 1;
+// required bytes data = 1;
 inline bool SDBRequestWriteParams::_internal_has_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1197,7 +1197,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SDBRequestWriteParams::set_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.data_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SDBRequestWriteParams.data)
 }
 inline std::string* SDBRequestWriteParams::mutable_data() {

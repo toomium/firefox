@@ -194,7 +194,7 @@ class Msg_GetData final :
   enum : int {
     kAFlavorsFieldNumber = 1,
   };
-  // repeated string aFlavors = 1;
+  // repeated bytes aFlavors = 1;
   int aflavors_size() const;
   private:
   int _internal_aflavors_size() const;
@@ -205,12 +205,12 @@ class Msg_GetData final :
   void set_aflavors(int index, const std::string& value);
   void set_aflavors(int index, std::string&& value);
   void set_aflavors(int index, const char* value);
-  void set_aflavors(int index, const char* value, size_t size);
+  void set_aflavors(int index, const void* value, size_t size);
   std::string* add_aflavors();
   void add_aflavors(const std::string& value);
   void add_aflavors(std::string&& value);
   void add_aflavors(const char* value);
-  void add_aflavors(const char* value, size_t size);
+  void add_aflavors(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& aflavors() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_aflavors();
   private:
@@ -493,7 +493,7 @@ class Msg_GetDataSync final :
   enum : int {
     kAFlavorsFieldNumber = 1,
   };
-  // repeated string aFlavors = 1;
+  // repeated bytes aFlavors = 1;
   int aflavors_size() const;
   private:
   int _internal_aflavors_size() const;
@@ -504,12 +504,12 @@ class Msg_GetDataSync final :
   void set_aflavors(int index, const std::string& value);
   void set_aflavors(int index, std::string&& value);
   void set_aflavors(int index, const char* value);
-  void set_aflavors(int index, const char* value, size_t size);
+  void set_aflavors(int index, const void* value, size_t size);
   std::string* add_aflavors();
   void add_aflavors(const std::string& value);
   void add_aflavors(std::string&& value);
   void add_aflavors(const char* value);
-  void add_aflavors(const char* value, size_t size);
+  void add_aflavors(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& aflavors() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_aflavors();
   private:
@@ -937,7 +937,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_GetData
 
-// repeated string aFlavors = 1;
+// repeated bytes aFlavors = 1;
 inline int Msg_GetData::_internal_aflavors_size() const {
   return _impl_.aflavors_.size();
 }
@@ -976,7 +976,7 @@ inline void Msg_GetData::set_aflavors(int index, const char* value) {
   _impl_.aflavors_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.PClipboardReadRequest.Msg_GetData.aFlavors)
 }
-inline void Msg_GetData::set_aflavors(int index, const char* value, size_t size) {
+inline void Msg_GetData::set_aflavors(int index, const void* value, size_t size) {
   _impl_.aflavors_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.PClipboardReadRequest.Msg_GetData.aFlavors)
@@ -997,7 +997,7 @@ inline void Msg_GetData::add_aflavors(const char* value) {
   _impl_.aflavors_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.PClipboardReadRequest.Msg_GetData.aFlavors)
 }
-inline void Msg_GetData::add_aflavors(const char* value, size_t size) {
+inline void Msg_GetData::add_aflavors(const void* value, size_t size) {
   _impl_.aflavors_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.PClipboardReadRequest.Msg_GetData.aFlavors)
 }
@@ -1107,7 +1107,7 @@ inline void Reply_GetData::set_allocated_atransferabledata(::protobuf::mozilla::
 
 // Msg_GetDataSync
 
-// repeated string aFlavors = 1;
+// repeated bytes aFlavors = 1;
 inline int Msg_GetDataSync::_internal_aflavors_size() const {
   return _impl_.aflavors_.size();
 }
@@ -1146,7 +1146,7 @@ inline void Msg_GetDataSync::set_aflavors(int index, const char* value) {
   _impl_.aflavors_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.PClipboardReadRequest.Msg_GetDataSync.aFlavors)
 }
-inline void Msg_GetDataSync::set_aflavors(int index, const char* value, size_t size) {
+inline void Msg_GetDataSync::set_aflavors(int index, const void* value, size_t size) {
   _impl_.aflavors_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.PClipboardReadRequest.Msg_GetDataSync.aFlavors)
@@ -1167,7 +1167,7 @@ inline void Msg_GetDataSync::add_aflavors(const char* value) {
   _impl_.aflavors_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.PClipboardReadRequest.Msg_GetDataSync.aFlavors)
 }
-inline void Msg_GetDataSync::add_aflavors(const char* value, size_t size) {
+inline void Msg_GetDataSync::add_aflavors(const void* value, size_t size) {
   _impl_.aflavors_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.PClipboardReadRequest.Msg_GetDataSync.aFlavors)
 }

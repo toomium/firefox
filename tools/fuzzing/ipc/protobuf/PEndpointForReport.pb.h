@@ -178,7 +178,7 @@ class Msg___delete__ final :
   enum : int {
     kEndpointURLFieldNumber = 1,
   };
-  // required string endpointURL = 1;
+  // required bytes endpointURL = 1;
   bool has_endpointurl() const;
   private:
   bool _internal_has_endpointurl() const;
@@ -346,7 +346,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// required string endpointURL = 1;
+// required bytes endpointURL = 1;
 inline bool Msg___delete__::_internal_has_endpointurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -366,7 +366,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg___delete__::set_endpointurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.endpointurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.endpointurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PEndpointForReport.Msg___delete__.endpointURL)
 }
 inline std::string* Msg___delete__::mutable_endpointurl() {

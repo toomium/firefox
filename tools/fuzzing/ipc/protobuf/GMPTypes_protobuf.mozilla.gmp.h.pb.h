@@ -209,7 +209,7 @@ class NodeIdParts final :
     kMTopLevelOriginFieldNumber = 2,
     kMGMPNameFieldNumber = 3,
   };
-  // required string mOrigin = 1;
+  // required bytes mOrigin = 1;
   bool has_morigin() const;
   private:
   bool _internal_has_morigin() const;
@@ -227,7 +227,7 @@ class NodeIdParts final :
   std::string* _internal_mutable_morigin();
   public:
 
-  // required string mTopLevelOrigin = 2;
+  // required bytes mTopLevelOrigin = 2;
   bool has_mtoplevelorigin() const;
   private:
   bool _internal_has_mtoplevelorigin() const;
@@ -245,7 +245,7 @@ class NodeIdParts final :
   std::string* _internal_mutable_mtoplevelorigin();
   public:
 
-  // required string mGMPName = 3;
+  // required bytes mGMPName = 3;
   bool has_mgmpname() const;
   private:
   bool _internal_has_mgmpname() const;
@@ -404,7 +404,7 @@ class NodeIdVariant final :
     kMVnsCStringFieldNumber = 1,
     kMVNodeIdPartsFieldNumber = 2,
   };
-  // string mVnsCString = 1;
+  // bytes mVnsCString = 1;
   bool has_mvnscstring() const;
   private:
   bool _internal_has_mvnscstring() const;
@@ -2373,7 +2373,7 @@ class CDMVideoFrame final :
 #endif  // __GNUC__
 // NodeIdParts
 
-// required string mOrigin = 1;
+// required bytes mOrigin = 1;
 inline bool NodeIdParts::_internal_has_morigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2393,7 +2393,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void NodeIdParts::set_morigin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.morigin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.morigin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.NodeIdParts.mOrigin)
 }
 inline std::string* NodeIdParts::mutable_morigin() {
@@ -2441,7 +2441,7 @@ inline void NodeIdParts::set_allocated_morigin(std::string* morigin) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.NodeIdParts.mOrigin)
 }
 
-// required string mTopLevelOrigin = 2;
+// required bytes mTopLevelOrigin = 2;
 inline bool NodeIdParts::_internal_has_mtoplevelorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2461,7 +2461,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void NodeIdParts::set_mtoplevelorigin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.mtoplevelorigin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.mtoplevelorigin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.NodeIdParts.mTopLevelOrigin)
 }
 inline std::string* NodeIdParts::mutable_mtoplevelorigin() {
@@ -2509,7 +2509,7 @@ inline void NodeIdParts::set_allocated_mtoplevelorigin(std::string* mtoplevelori
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.NodeIdParts.mTopLevelOrigin)
 }
 
-// required string mGMPName = 3;
+// required bytes mGMPName = 3;
 inline bool NodeIdParts::_internal_has_mgmpname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2529,7 +2529,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void NodeIdParts::set_mgmpname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.mgmpname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.mgmpname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.NodeIdParts.mGMPName)
 }
 inline std::string* NodeIdParts::mutable_mgmpname() {
@@ -2581,7 +2581,7 @@ inline void NodeIdParts::set_allocated_mgmpname(std::string* mgmpname) {
 
 // NodeIdVariant
 
-// string mVnsCString = 1;
+// bytes mVnsCString = 1;
 inline bool NodeIdVariant::_internal_has_mvnscstring() const {
   return content_case() == kMVnsCString;
 }
@@ -2608,7 +2608,7 @@ inline void NodeIdVariant::set_mvnscstring(ArgT0&& arg0, ArgT... args) {
     set_has_mvnscstring();
     _impl_.content_.mvnscstring_.InitDefault();
   }
-  _impl_.content_.mvnscstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.mvnscstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.NodeIdVariant.mVnsCString)
 }
 inline std::string* NodeIdVariant::mutable_mvnscstring() {

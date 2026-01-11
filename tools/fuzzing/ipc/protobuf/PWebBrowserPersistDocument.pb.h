@@ -914,7 +914,7 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
     kAEncoderFlagsFieldNumber = 3,
     kAWrapColumnFieldNumber = 4,
   };
-  // required string aRequestedContentType = 2;
+  // required bytes aRequestedContentType = 2;
   bool has_arequestedcontenttype() const;
   private:
   bool _internal_has_arequestedcontenttype() const;
@@ -1757,7 +1757,7 @@ inline void Msg_PWebBrowserPersistSerializeConstructor::set_allocated_amap(::pro
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aMap)
 }
 
-// required string aRequestedContentType = 2;
+// required bytes aRequestedContentType = 2;
 inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_arequestedcontenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1777,7 +1777,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PWebBrowserPersistSerializeConstructor::set_arequestedcontenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arequestedcontenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.arequestedcontenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aRequestedContentType)
 }
 inline std::string* Msg_PWebBrowserPersistSerializeConstructor::mutable_arequestedcontenttype() {

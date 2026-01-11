@@ -1169,7 +1169,7 @@ class Msg_LoadSession final :
     kAPromiseIdFieldNumber = 1,
     kASessionTypeFieldNumber = 2,
   };
-  // required string aSessionId = 3;
+  // required bytes aSessionId = 3;
   bool has_asessionid() const;
   private:
   bool _internal_has_asessionid() const;
@@ -1371,7 +1371,7 @@ class Msg_UpdateSession final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_aresponse();
 
-  // required string aSessionId = 2;
+  // required bytes aSessionId = 2;
   bool has_asessionid() const;
   private:
   bool _internal_has_asessionid() const;
@@ -1537,7 +1537,7 @@ class Msg_CloseSession final :
     kASessionIdFieldNumber = 2,
     kAPromiseIdFieldNumber = 1,
   };
-  // required string aSessionId = 2;
+  // required bytes aSessionId = 2;
   bool has_asessionid() const;
   private:
   bool _internal_has_asessionid() const;
@@ -1702,7 +1702,7 @@ class Msg_RemoveSession final :
     kASessionIdFieldNumber = 2,
     kAPromiseIdFieldNumber = 1,
   };
-  // required string aSessionId = 2;
+  // required bytes aSessionId = 2;
   bool has_asessionid() const;
   private:
   bool _internal_has_asessionid() const;
@@ -3676,7 +3676,7 @@ class Msg_OnResolveNewSessionPromise final :
     kASessionIdFieldNumber = 2,
     kAPromiseIdFieldNumber = 1,
   };
-  // required string aSessionId = 2;
+  // required bytes aSessionId = 2;
   bool has_asessionid() const;
   private:
   bool _internal_has_asessionid() const;
@@ -3985,7 +3985,7 @@ class Msg_OnRejectPromise final :
     kAExceptionFieldNumber = 2,
     kASystemCodeFieldNumber = 3,
   };
-  // required string aErrorMessage = 4;
+  // required bytes aErrorMessage = 4;
   bool has_aerrormessage() const;
   private:
   bool _internal_has_aerrormessage() const;
@@ -4201,7 +4201,7 @@ class Msg_OnSessionMessage final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_amessage();
 
-  // required string aSessionId = 1;
+  // required bytes aSessionId = 1;
   bool has_asessionid() const;
   private:
   bool _internal_has_asessionid() const;
@@ -4385,7 +4385,7 @@ class Msg_OnSessionKeysChange final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::gmp::CDMKeyInformation >&
       akeysinfo() const;
 
-  // required string aSessionId = 1;
+  // required bytes aSessionId = 1;
   bool has_asessionid() const;
   private:
   bool _internal_has_asessionid() const;
@@ -4534,7 +4534,7 @@ class Msg_OnExpirationChange final :
     kASessionIdFieldNumber = 1,
     kASecondsSinceEpochFieldNumber = 2,
   };
-  // required string aSessionId = 1;
+  // required bytes aSessionId = 1;
   bool has_asessionid() const;
   private:
   bool _internal_has_asessionid() const;
@@ -4698,7 +4698,7 @@ class Msg_OnSessionClosed final :
   enum : int {
     kASessionIdFieldNumber = 1,
   };
-  // required string aSessionId = 1;
+  // required bytes aSessionId = 1;
   bool has_asessionid() const;
   private:
   bool _internal_has_asessionid() const;
@@ -6949,7 +6949,7 @@ inline void Msg_LoadSession::set_asessiontype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_LoadSession.aSessionType)
 }
 
-// required string aSessionId = 3;
+// required bytes aSessionId = 3;
 inline bool Msg_LoadSession::_internal_has_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6969,7 +6969,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LoadSession::set_asessionid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.asessionid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_LoadSession.aSessionId)
 }
 inline std::string* Msg_LoadSession::mutable_asessionid() {
@@ -7049,7 +7049,7 @@ inline void Msg_UpdateSession::set_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_UpdateSession.aPromiseId)
 }
 
-// required string aSessionId = 2;
+// required bytes aSessionId = 2;
 inline bool Msg_UpdateSession::_internal_has_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7069,7 +7069,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateSession::set_asessionid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.asessionid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_UpdateSession.aSessionId)
 }
 inline std::string* Msg_UpdateSession::mutable_asessionid() {
@@ -7196,7 +7196,7 @@ inline void Msg_CloseSession::set_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_CloseSession.aPromiseId)
 }
 
-// required string aSessionId = 2;
+// required bytes aSessionId = 2;
 inline bool Msg_CloseSession::_internal_has_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7216,7 +7216,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CloseSession::set_asessionid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.asessionid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_CloseSession.aSessionId)
 }
 inline std::string* Msg_CloseSession::mutable_asessionid() {
@@ -7296,7 +7296,7 @@ inline void Msg_RemoveSession::set_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_RemoveSession.aPromiseId)
 }
 
-// required string aSessionId = 2;
+// required bytes aSessionId = 2;
 inline bool Msg_RemoveSession::_internal_has_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7316,7 +7316,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RemoveSession::set_asessionid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.asessionid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_RemoveSession.aSessionId)
 }
 inline std::string* Msg_RemoveSession::mutable_asessionid() {
@@ -7945,7 +7945,7 @@ inline void Msg_OnResolveNewSessionPromise::set_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnResolveNewSessionPromise.aPromiseId)
 }
 
-// required string aSessionId = 2;
+// required bytes aSessionId = 2;
 inline bool Msg_OnResolveNewSessionPromise::_internal_has_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7965,7 +7965,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnResolveNewSessionPromise::set_asessionid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.asessionid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnResolveNewSessionPromise.aSessionId)
 }
 inline std::string* Msg_OnResolveNewSessionPromise::mutable_asessionid() {
@@ -8133,7 +8133,7 @@ inline void Msg_OnRejectPromise::set_asystemcode(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnRejectPromise.aSystemCode)
 }
 
-// required string aErrorMessage = 4;
+// required bytes aErrorMessage = 4;
 inline bool Msg_OnRejectPromise::_internal_has_aerrormessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8153,7 +8153,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnRejectPromise::set_aerrormessage(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aerrormessage_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aerrormessage_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnRejectPromise.aErrorMessage)
 }
 inline std::string* Msg_OnRejectPromise::mutable_aerrormessage() {
@@ -8205,7 +8205,7 @@ inline void Msg_OnRejectPromise::set_allocated_aerrormessage(std::string* aerror
 
 // Msg_OnSessionMessage
 
-// required string aSessionId = 1;
+// required bytes aSessionId = 1;
 inline bool Msg_OnSessionMessage::_internal_has_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8225,7 +8225,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnSessionMessage::set_asessionid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.asessionid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionMessage.aSessionId)
 }
 inline std::string* Msg_OnSessionMessage::mutable_asessionid() {
@@ -8352,7 +8352,7 @@ Msg_OnSessionMessage::mutable_amessage() {
 
 // Msg_OnSessionKeysChange
 
-// required string aSessionId = 1;
+// required bytes aSessionId = 1;
 inline bool Msg_OnSessionKeysChange::_internal_has_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8372,7 +8372,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnSessionKeysChange::set_asessionid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.asessionid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionKeysChange.aSessionId)
 }
 inline std::string* Msg_OnSessionKeysChange::mutable_asessionid() {
@@ -8461,7 +8461,7 @@ Msg_OnSessionKeysChange::akeysinfo() const {
 
 // Msg_OnExpirationChange
 
-// required string aSessionId = 1;
+// required bytes aSessionId = 1;
 inline bool Msg_OnExpirationChange::_internal_has_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8481,7 +8481,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnExpirationChange::set_asessionid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.asessionid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnExpirationChange.aSessionId)
 }
 inline std::string* Msg_OnExpirationChange::mutable_asessionid() {
@@ -8561,7 +8561,7 @@ inline void Msg_OnExpirationChange::set_asecondssinceepoch(double value) {
 
 // Msg_OnSessionClosed
 
-// required string aSessionId = 1;
+// required bytes aSessionId = 1;
 inline bool Msg_OnSessionClosed::_internal_has_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8581,7 +8581,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnSessionClosed::set_asessionid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.asessionid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionClosed.aSessionId)
 }
 inline std::string* Msg_OnSessionClosed::mutable_asessionid() {

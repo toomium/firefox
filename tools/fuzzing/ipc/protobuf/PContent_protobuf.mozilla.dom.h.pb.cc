@@ -654,7 +654,7 @@ const char* SystemFontListEntry::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string pattern = 1;
+      // required bytes pattern = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_pattern();
@@ -703,9 +703,9 @@ uint8_t* SystemFontListEntry::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string pattern = 1;
+  // required bytes pattern = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_pattern(), target);
   }
 
@@ -728,9 +728,9 @@ size_t SystemFontListEntry::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_pattern()) {
-    // required string pattern = 1;
+    // required bytes pattern = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_pattern());
   }
 
@@ -746,9 +746,9 @@ size_t SystemFontListEntry::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string pattern = 1;
+    // required bytes pattern = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_pattern());
 
     // required bool appFontFamily = 2;
@@ -2697,7 +2697,7 @@ const char* AndroidSystemInfo::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string device = 1;
+      // required bytes device = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_device();
@@ -2706,7 +2706,7 @@ const char* AndroidSystemInfo::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string manufacturer = 2;
+      // required bytes manufacturer = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_manufacturer();
@@ -2715,7 +2715,7 @@ const char* AndroidSystemInfo::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string release_version = 3;
+      // required bytes release_version = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_release_version();
@@ -2724,7 +2724,7 @@ const char* AndroidSystemInfo::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string hardware = 4;
+      // required bytes hardware = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_hardware();
@@ -2782,27 +2782,27 @@ uint8_t* AndroidSystemInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string device = 1;
+  // required bytes device = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_device(), target);
   }
 
-  // required string manufacturer = 2;
+  // required bytes manufacturer = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_manufacturer(), target);
   }
 
-  // required string release_version = 3;
+  // required bytes release_version = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_release_version(), target);
   }
 
-  // required string hardware = 4;
+  // required bytes hardware = 4;
   if (cached_has_bits & 0x00000008u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_hardware(), target);
   }
 
@@ -2831,30 +2831,30 @@ size_t AndroidSystemInfo::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_device()) {
-    // required string device = 1;
+    // required bytes device = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_device());
   }
 
   if (_internal_has_manufacturer()) {
-    // required string manufacturer = 2;
+    // required bytes manufacturer = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_manufacturer());
   }
 
   if (_internal_has_release_version()) {
-    // required string release_version = 3;
+    // required bytes release_version = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_release_version());
   }
 
   if (_internal_has_hardware()) {
-    // required string hardware = 4;
+    // required bytes hardware = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_hardware());
   }
 
@@ -2875,24 +2875,24 @@ size_t AndroidSystemInfo::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required string device = 1;
+    // required bytes device = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_device());
 
-    // required string manufacturer = 2;
+    // required bytes manufacturer = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_manufacturer());
 
-    // required string release_version = 3;
+    // required bytes release_version = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_release_version());
 
-    // required string hardware = 4;
+    // required bytes hardware = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_hardware());
 
     // required uint32 sdk_version = 5;
@@ -3901,7 +3901,7 @@ const char* BlobURLRegistrationData::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string url = 1;
+      // required bytes url = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_url();
@@ -3927,7 +3927,7 @@ const char* BlobURLRegistrationData::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required string partitionKey = 4;
+      // required bytes partitionKey = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_partitionkey();
@@ -3976,9 +3976,9 @@ uint8_t* BlobURLRegistrationData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string url = 1;
+  // required bytes url = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_url(), target);
   }
 
@@ -3995,9 +3995,9 @@ uint8_t* BlobURLRegistrationData::_InternalSerialize(
         3, this->_internal_principal(), target);
   }
 
-  // required string partitionKey = 4;
+  // required bytes partitionKey = 4;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_partitionkey(), target);
   }
 
@@ -4020,9 +4020,9 @@ size_t BlobURLRegistrationData::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_url()) {
-    // required string url = 1;
+    // required bytes url = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_url());
   }
 
@@ -4034,9 +4034,9 @@ size_t BlobURLRegistrationData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_partitionkey()) {
-    // required string partitionKey = 4;
+    // required bytes partitionKey = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_partitionkey());
   }
 
@@ -4059,9 +4059,9 @@ size_t BlobURLRegistrationData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required string url = 1;
+    // required bytes url = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_url());
 
     // required bytes principal = 3;
@@ -4069,9 +4069,9 @@ size_t BlobURLRegistrationData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_principal());
 
-    // required string partitionKey = 4;
+    // required bytes partitionKey = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_partitionkey());
 
     // required .protobuf.mozilla.dom.IPCBlob blob = 2;
@@ -4305,7 +4305,7 @@ const char* JSWindowActorEventDecl::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string name = 1;
+      // required bytes name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_name();
@@ -4390,9 +4390,9 @@ uint8_t* JSWindowActorEventDecl::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string name = 1;
+  // required bytes name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_name(), target);
   }
 
@@ -4439,9 +4439,9 @@ size_t JSWindowActorEventDecl::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_name()) {
-    // required string name = 1;
+    // required bytes name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
   }
 
@@ -4472,9 +4472,9 @@ size_t JSWindowActorEventDecl::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000002f) ^ 0x0000002f) == 0) {  // All required fields are present.
-    // required string name = 1;
+    // required bytes name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
 
     // required bool capture = 2;
@@ -4735,7 +4735,7 @@ const char* JSWindowActorInfo::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string name = 1;
+      // required bytes name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_name();
@@ -4762,7 +4762,7 @@ const char* JSWindowActorInfo::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // optional string url = 4;
+      // optional bytes url = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_url();
@@ -4784,7 +4784,7 @@ const char* JSWindowActorInfo::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // repeated string observers = 6;
+      // repeated bytes observers = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr -= 1;
@@ -4798,7 +4798,7 @@ const char* JSWindowActorInfo::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // repeated string matches = 7;
+      // repeated bytes matches = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr -= 1;
@@ -4812,7 +4812,7 @@ const char* JSWindowActorInfo::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // repeated string remoteTypes = 8;
+      // repeated bytes remoteTypes = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           ptr -= 1;
@@ -4826,7 +4826,7 @@ const char* JSWindowActorInfo::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // repeated string messageManagerGroups = 9;
+      // repeated bytes messageManagerGroups = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           ptr -= 1;
@@ -4871,9 +4871,9 @@ uint8_t* JSWindowActorInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string name = 1;
+  // required bytes name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_name(), target);
   }
 
@@ -4889,9 +4889,9 @@ uint8_t* JSWindowActorInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_loadindevtoolsloader(), target);
   }
 
-  // optional string url = 4;
+  // optional bytes url = 4;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_url(), target);
   }
 
@@ -4903,28 +4903,28 @@ uint8_t* JSWindowActorInfo::_InternalSerialize(
         InternalWriteMessage(5, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // repeated string observers = 6;
+  // repeated bytes observers = 6;
   for (int i = 0, n = this->_internal_observers_size(); i < n; i++) {
     const auto& s = this->_internal_observers(i);
-    target = stream->WriteString(6, s, target);
+    target = stream->WriteBytes(6, s, target);
   }
 
-  // repeated string matches = 7;
+  // repeated bytes matches = 7;
   for (int i = 0, n = this->_internal_matches_size(); i < n; i++) {
     const auto& s = this->_internal_matches(i);
-    target = stream->WriteString(7, s, target);
+    target = stream->WriteBytes(7, s, target);
   }
 
-  // repeated string remoteTypes = 8;
+  // repeated bytes remoteTypes = 8;
   for (int i = 0, n = this->_internal_remotetypes_size(); i < n; i++) {
     const auto& s = this->_internal_remotetypes(i);
-    target = stream->WriteString(8, s, target);
+    target = stream->WriteBytes(8, s, target);
   }
 
-  // repeated string messageManagerGroups = 9;
+  // repeated bytes messageManagerGroups = 9;
   for (int i = 0, n = this->_internal_messagemanagergroups_size(); i < n; i++) {
     const auto& s = this->_internal_messagemanagergroups(i);
-    target = stream->WriteString(9, s, target);
+    target = stream->WriteBytes(9, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4940,9 +4940,9 @@ size_t JSWindowActorInfo::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_name()) {
-    // required string name = 1;
+    // required bytes name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
   }
 
@@ -4963,9 +4963,9 @@ size_t JSWindowActorInfo::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000d) ^ 0x0000000d) == 0) {  // All required fields are present.
-    // required string name = 1;
+    // required bytes name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
 
     // required bool allFrames = 2;
@@ -4988,43 +4988,43 @@ size_t JSWindowActorInfo::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // repeated string observers = 6;
+  // repeated bytes observers = 6;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.observers_.size());
   for (int i = 0, n = _impl_.observers_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.observers_.Get(i));
   }
 
-  // repeated string matches = 7;
+  // repeated bytes matches = 7;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.matches_.size());
   for (int i = 0, n = _impl_.matches_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.matches_.Get(i));
   }
 
-  // repeated string remoteTypes = 8;
+  // repeated bytes remoteTypes = 8;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.remotetypes_.size());
   for (int i = 0, n = _impl_.remotetypes_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.remotetypes_.Get(i));
   }
 
-  // repeated string messageManagerGroups = 9;
+  // repeated bytes messageManagerGroups = 9;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.messagemanagergroups_.size());
   for (int i = 0, n = _impl_.messagemanagergroups_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.messagemanagergroups_.Get(i));
   }
 
-  // optional string url = 4;
+  // optional bytes url = 4;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000002u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_url());
   }
 
@@ -5259,7 +5259,7 @@ const char* JSProcessActorInfo::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string name = 1;
+      // required bytes name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_name();
@@ -5286,7 +5286,7 @@ const char* JSProcessActorInfo::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // optional string url = 4;
+      // optional bytes url = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_url();
@@ -5295,7 +5295,7 @@ const char* JSProcessActorInfo::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // repeated string observers = 5;
+      // repeated bytes observers = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr -= 1;
@@ -5309,7 +5309,7 @@ const char* JSProcessActorInfo::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // repeated string remoteTypes = 6;
+      // repeated bytes remoteTypes = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr -= 1;
@@ -5354,9 +5354,9 @@ uint8_t* JSProcessActorInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string name = 1;
+  // required bytes name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_name(), target);
   }
 
@@ -5372,22 +5372,22 @@ uint8_t* JSProcessActorInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_loadindevtoolsloader(), target);
   }
 
-  // optional string url = 4;
+  // optional bytes url = 4;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_url(), target);
   }
 
-  // repeated string observers = 5;
+  // repeated bytes observers = 5;
   for (int i = 0, n = this->_internal_observers_size(); i < n; i++) {
     const auto& s = this->_internal_observers(i);
-    target = stream->WriteString(5, s, target);
+    target = stream->WriteBytes(5, s, target);
   }
 
-  // repeated string remoteTypes = 6;
+  // repeated bytes remoteTypes = 6;
   for (int i = 0, n = this->_internal_remotetypes_size(); i < n; i++) {
     const auto& s = this->_internal_remotetypes(i);
-    target = stream->WriteString(6, s, target);
+    target = stream->WriteBytes(6, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5403,9 +5403,9 @@ size_t JSProcessActorInfo::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_name()) {
-    // required string name = 1;
+    // required bytes name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
   }
 
@@ -5426,9 +5426,9 @@ size_t JSProcessActorInfo::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000d) ^ 0x0000000d) == 0) {  // All required fields are present.
-    // required string name = 1;
+    // required bytes name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
 
     // required bool isESModule = 2;
@@ -5444,27 +5444,27 @@ size_t JSProcessActorInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string observers = 5;
+  // repeated bytes observers = 5;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.observers_.size());
   for (int i = 0, n = _impl_.observers_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.observers_.Get(i));
   }
 
-  // repeated string remoteTypes = 6;
+  // repeated bytes remoteTypes = 6;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.remotetypes_.size());
   for (int i = 0, n = _impl_.remotetypes_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.remotetypes_.Get(i));
   }
 
-  // optional string url = 4;
+  // optional bytes url = 4;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000002u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_url());
   }
 
@@ -5648,7 +5648,7 @@ const char* GMPAPITags::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string api = 1;
+      // required bytes api = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_api();
@@ -5657,7 +5657,7 @@ const char* GMPAPITags::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // repeated string tags = 2;
+      // repeated bytes tags = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
@@ -5702,16 +5702,16 @@ uint8_t* GMPAPITags::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string api = 1;
+  // required bytes api = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_api(), target);
   }
 
-  // repeated string tags = 2;
+  // repeated bytes tags = 2;
   for (int i = 0, n = this->_internal_tags_size(); i < n; i++) {
     const auto& s = this->_internal_tags(i);
-    target = stream->WriteString(2, s, target);
+    target = stream->WriteBytes(2, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5726,21 +5726,21 @@ size_t GMPAPITags::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.GMPAPITags)
   size_t total_size = 0;
 
-  // required string api = 1;
+  // required bytes api = 1;
   if (_internal_has_api()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_api());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string tags = 2;
+  // repeated bytes tags = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.tags_.size());
   for (int i = 0, n = _impl_.tags_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.tags_.Get(i));
   }
 
@@ -5922,7 +5922,7 @@ const char* GMPCapabilityData::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string name = 1;
+      // required bytes name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_name();
@@ -5931,7 +5931,7 @@ const char* GMPCapabilityData::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string version = 2;
+      // required bytes version = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_version();
@@ -5984,15 +5984,15 @@ uint8_t* GMPCapabilityData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string name = 1;
+  // required bytes name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_name(), target);
   }
 
-  // required string version = 2;
+  // required bytes version = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_version(), target);
   }
 
@@ -6017,16 +6017,16 @@ size_t GMPCapabilityData::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_name()) {
-    // required string name = 1;
+    // required bytes name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
   }
 
   if (_internal_has_version()) {
-    // required string version = 2;
+    // required bytes version = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_version());
   }
 
@@ -6037,14 +6037,14 @@ size_t GMPCapabilityData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string name = 1;
+    // required bytes name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
 
-    // required string version = 2;
+    // required bytes version = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_version());
 
   } else {
@@ -6276,7 +6276,7 @@ const char* L10nFileSourceDescriptor::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string name = 1;
+      // required bytes name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_name();
@@ -6285,7 +6285,7 @@ const char* L10nFileSourceDescriptor::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string metasource = 2;
+      // required bytes metasource = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_metasource();
@@ -6294,7 +6294,7 @@ const char* L10nFileSourceDescriptor::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // repeated string locales = 3;
+      // repeated bytes locales = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
@@ -6308,7 +6308,7 @@ const char* L10nFileSourceDescriptor::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string prePath = 4;
+      // required bytes prePath = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_prepath();
@@ -6317,7 +6317,7 @@ const char* L10nFileSourceDescriptor::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // repeated string index = 5;
+      // repeated bytes index = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr -= 1;
@@ -6362,34 +6362,34 @@ uint8_t* L10nFileSourceDescriptor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string name = 1;
+  // required bytes name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_name(), target);
   }
 
-  // required string metasource = 2;
+  // required bytes metasource = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_metasource(), target);
   }
 
-  // repeated string locales = 3;
+  // repeated bytes locales = 3;
   for (int i = 0, n = this->_internal_locales_size(); i < n; i++) {
     const auto& s = this->_internal_locales(i);
-    target = stream->WriteString(3, s, target);
+    target = stream->WriteBytes(3, s, target);
   }
 
-  // required string prePath = 4;
+  // required bytes prePath = 4;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_prepath(), target);
   }
 
-  // repeated string index = 5;
+  // repeated bytes index = 5;
   for (int i = 0, n = this->_internal_index_size(); i < n; i++) {
     const auto& s = this->_internal_index(i);
-    target = stream->WriteString(5, s, target);
+    target = stream->WriteBytes(5, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6405,23 +6405,23 @@ size_t L10nFileSourceDescriptor::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_name()) {
-    // required string name = 1;
+    // required bytes name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
   }
 
   if (_internal_has_metasource()) {
-    // required string metasource = 2;
+    // required bytes metasource = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_metasource());
   }
 
   if (_internal_has_prepath()) {
-    // required string prePath = 4;
+    // required bytes prePath = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_prepath());
   }
 
@@ -6432,19 +6432,19 @@ size_t L10nFileSourceDescriptor::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string name = 1;
+    // required bytes name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
 
-    // required string metasource = 2;
+    // required bytes metasource = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_metasource());
 
-    // required string prePath = 4;
+    // required bytes prePath = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_prepath());
 
   } else {
@@ -6454,19 +6454,19 @@ size_t L10nFileSourceDescriptor::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string locales = 3;
+  // repeated bytes locales = 3;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.locales_.size());
   for (int i = 0, n = _impl_.locales_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.locales_.Get(i));
   }
 
-  // repeated string index = 5;
+  // repeated bytes index = 5;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.index_.size());
   for (int i = 0, n = _impl_.index_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.index_.Get(i));
   }
 
@@ -6896,7 +6896,7 @@ const char* XPCOMInitData::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // repeated string dictionaries = 6;
+      // repeated bytes dictionaries = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr -= 1;
@@ -6969,7 +6969,7 @@ const char* XPCOMInitData::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // repeated string appLocales = 13;
+      // repeated bytes appLocales = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 106)) {
           ptr -= 1;
@@ -6983,7 +6983,7 @@ const char* XPCOMInitData::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // repeated string requestedLocales = 14;
+      // repeated bytes requestedLocales = 14;
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 114)) {
           ptr -= 1;
@@ -7033,7 +7033,7 @@ const char* XPCOMInitData::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required string trrDomain = 18;
+      // required bytes trrDomain = 18;
       case 18:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 146)) {
           auto str = _internal_mutable_trrdomain();
@@ -7121,10 +7121,10 @@ uint8_t* XPCOMInitData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_havebidikeyboards(), target);
   }
 
-  // repeated string dictionaries = 6;
+  // repeated bytes dictionaries = 6;
   for (int i = 0, n = this->_internal_dictionaries_size(); i < n; i++) {
     const auto& s = this->_internal_dictionaries(i);
-    target = stream->WriteString(6, s, target);
+    target = stream->WriteBytes(6, s, target);
   }
 
   // required .protobuf.mozilla.dom.ClipboardCapabilities clipboardCaps = 7;
@@ -7170,16 +7170,16 @@ uint8_t* XPCOMInitData::_InternalSerialize(
         InternalWriteMessage(12, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // repeated string appLocales = 13;
+  // repeated bytes appLocales = 13;
   for (int i = 0, n = this->_internal_applocales_size(); i < n; i++) {
     const auto& s = this->_internal_applocales(i);
-    target = stream->WriteString(13, s, target);
+    target = stream->WriteBytes(13, s, target);
   }
 
-  // repeated string requestedLocales = 14;
+  // repeated bytes requestedLocales = 14;
   for (int i = 0, n = this->_internal_requestedlocales_size(); i < n; i++) {
     const auto& s = this->_internal_requestedlocales(i);
-    target = stream->WriteString(14, s, target);
+    target = stream->WriteBytes(14, s, target);
   }
 
   // repeated .protobuf.mozilla.dom.L10nFileSourceDescriptor l10nFileSources = 15;
@@ -7202,9 +7202,9 @@ uint8_t* XPCOMInitData::_InternalSerialize(
         17, this->_internal_perfstatsmask(), target);
   }
 
-  // required string trrDomain = 18;
+  // required bytes trrDomain = 18;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         18, this->_internal_trrdomain(), target);
   }
 
@@ -7247,9 +7247,9 @@ size_t XPCOMInitData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_trrdomain()) {
-    // required string trrDomain = 18;
+    // required bytes trrDomain = 18;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_trrdomain());
   }
 
@@ -7330,9 +7330,9 @@ size_t XPCOMInitData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_perfstatsmask());
 
-    // required string trrDomain = 18;
+    // required bytes trrDomain = 18;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_trrdomain());
 
     // required bytes trrMode = 19;
@@ -7382,11 +7382,11 @@ size_t XPCOMInitData::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string dictionaries = 6;
+  // repeated bytes dictionaries = 6;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.dictionaries_.size());
   for (int i = 0, n = _impl_.dictionaries_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.dictionaries_.Get(i));
   }
 
@@ -7404,19 +7404,19 @@ size_t XPCOMInitData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // repeated string appLocales = 13;
+  // repeated bytes appLocales = 13;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.applocales_.size());
   for (int i = 0, n = _impl_.applocales_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.applocales_.Get(i));
   }
 
-  // repeated string requestedLocales = 14;
+  // repeated bytes requestedLocales = 14;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.requestedlocales_.size());
   for (int i = 0, n = _impl_.requestedlocales_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.requestedlocales_.Get(i));
   }
 
@@ -7974,7 +7974,7 @@ const char* StringBundleDescriptor::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string bundleURL = 1;
+      // required bytes bundleURL = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_bundleurl();
@@ -8023,9 +8023,9 @@ uint8_t* StringBundleDescriptor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string bundleURL = 1;
+  // required bytes bundleURL = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_bundleurl(), target);
   }
 
@@ -8048,9 +8048,9 @@ size_t StringBundleDescriptor::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_bundleurl()) {
-    // required string bundleURL = 1;
+    // required bytes bundleURL = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_bundleurl());
   }
 
@@ -8068,9 +8068,9 @@ size_t StringBundleDescriptor::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string bundleURL = 1;
+    // required bytes bundleURL = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_bundleurl());
 
     // required bytes mapHandle = 2;
@@ -8248,7 +8248,7 @@ const char* IPCURLClassifierFeature::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string featureName = 1;
+      // required bytes featureName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_featurename();
@@ -8257,7 +8257,7 @@ const char* IPCURLClassifierFeature::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // repeated string tables = 2;
+      // repeated bytes tables = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
@@ -8302,16 +8302,16 @@ uint8_t* IPCURLClassifierFeature::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string featureName = 1;
+  // required bytes featureName = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_featurename(), target);
   }
 
-  // repeated string tables = 2;
+  // repeated bytes tables = 2;
   for (int i = 0, n = this->_internal_tables_size(); i < n; i++) {
     const auto& s = this->_internal_tables(i);
-    target = stream->WriteString(2, s, target);
+    target = stream->WriteBytes(2, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8326,21 +8326,21 @@ size_t IPCURLClassifierFeature::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCURLClassifierFeature)
   size_t total_size = 0;
 
-  // required string featureName = 1;
+  // required bytes featureName = 1;
   if (_internal_has_featurename()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_featurename());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string tables = 2;
+  // repeated bytes tables = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.tables_.size());
   for (int i = 0, n = _impl_.tables_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.tables_.Get(i));
   }
 
@@ -8671,7 +8671,7 @@ const char* PostMessageData::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required string origin = 2;
+      // required bytes origin = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_origin();
@@ -8680,7 +8680,7 @@ const char* PostMessageData::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required string targetOrigin = 3;
+      // required bytes targetOrigin = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_targetorigin();
@@ -8734,7 +8734,7 @@ const char* PostMessageData::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required string scriptLocation = 9;
+      // required bytes scriptLocation = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_scriptlocation();
@@ -8789,15 +8789,15 @@ uint8_t* PostMessageData::_InternalSerialize(
         1, this->_internal_source(), target);
   }
 
-  // required string origin = 2;
+  // required bytes origin = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_origin(), target);
   }
 
-  // required string targetOrigin = 3;
+  // required bytes targetOrigin = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_targetorigin(), target);
   }
 
@@ -8831,9 +8831,9 @@ uint8_t* PostMessageData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_isfromprivatewindow(), target);
   }
 
-  // required string scriptLocation = 9;
+  // required bytes scriptLocation = 9;
   if (cached_has_bits & 0x00000080u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         9, this->_internal_scriptlocation(), target);
   }
 
@@ -8863,16 +8863,16 @@ size_t PostMessageData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_origin()) {
-    // required string origin = 2;
+    // required bytes origin = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_origin());
   }
 
   if (_internal_has_targetorigin()) {
-    // required string targetOrigin = 3;
+    // required bytes targetOrigin = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_targetorigin());
   }
 
@@ -8905,9 +8905,9 @@ size_t PostMessageData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_scriptlocation()) {
-    // required string scriptLocation = 9;
+    // required bytes scriptLocation = 9;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scriptlocation());
   }
 
@@ -8933,14 +8933,14 @@ size_t PostMessageData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_source());
 
-    // required string origin = 2;
+    // required bytes origin = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_origin());
 
-    // required string targetOrigin = 3;
+    // required bytes targetOrigin = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_targetorigin());
 
     // required bytes targetOriginURI = 4;
@@ -8963,9 +8963,9 @@ size_t PostMessageData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_calleruri());
 
-    // required string scriptLocation = 9;
+    // required bytes scriptLocation = 9;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scriptlocation());
 
     // required uint64 innerWindowId = 10;
@@ -10055,7 +10055,7 @@ const char* TextRecognitionQuad::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string string = 2;
+      // required bytes string = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_string();
@@ -10115,9 +10115,9 @@ uint8_t* TextRecognitionQuad::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteFloatToArray(1, this->_internal_confidence(), target);
   }
 
-  // required string string = 2;
+  // required bytes string = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_string(), target);
   }
 
@@ -10140,9 +10140,9 @@ size_t TextRecognitionQuad::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_string()) {
-    // required string string = 2;
+    // required bytes string = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_string());
   }
 
@@ -10158,9 +10158,9 @@ size_t TextRecognitionQuad::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string string = 2;
+    // required bytes string = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_string());
 
     // required float confidence = 1;
@@ -10572,7 +10572,7 @@ const char* TextRecognitionResultOrError::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // string mVnsCString = 2;
+      // bytes mVnsCString = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_mvnscstring();
@@ -10618,7 +10618,7 @@ uint8_t* TextRecognitionResultOrError::_InternalSerialize(
       break;
     }
     case kMVnsCString: {
-      target = stream->WriteStringMaybeAliased(
+      target = stream->WriteBytesMaybeAliased(
           2, this->_internal_mvnscstring(), target);
       break;
     }
@@ -10648,10 +10648,10 @@ size_t TextRecognitionResultOrError::ByteSizeLong() const {
           *_impl_.content_.mvtextrecognitionresult_);
       break;
     }
-    // string mVnsCString = 2;
+    // bytes mVnsCString = 2;
     case kMVnsCString: {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_mvnscstring());
       break;
     }
@@ -10840,7 +10840,7 @@ const char* ClipboardReadRequest::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // repeated string availableTypes = 2;
+      // repeated bytes availableTypes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
@@ -10891,10 +10891,10 @@ uint8_t* ClipboardReadRequest::_InternalSerialize(
         1, this->_internal_childendpoint(), target);
   }
 
-  // repeated string availableTypes = 2;
+  // repeated bytes availableTypes = 2;
   for (int i = 0, n = this->_internal_availabletypes_size(); i < n; i++) {
     const auto& s = this->_internal_availabletypes(i);
-    target = stream->WriteString(2, s, target);
+    target = stream->WriteBytes(2, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -10919,11 +10919,11 @@ size_t ClipboardReadRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string availableTypes = 2;
+  // repeated bytes availableTypes = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.availabletypes_.size());
   for (int i = 0, n = _impl_.availabletypes_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.availabletypes_.Get(i));
   }
 
@@ -11399,7 +11399,7 @@ const char* BroadcastBlobURLUnregistrationRequest::_InternalParse(const char* pt
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string url = 1;
+      // required bytes url = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_url();
@@ -11448,9 +11448,9 @@ uint8_t* BroadcastBlobURLUnregistrationRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string url = 1;
+  // required bytes url = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_url(), target);
   }
 
@@ -11473,9 +11473,9 @@ size_t BroadcastBlobURLUnregistrationRequest::RequiredFieldsByteSizeFallback() c
   size_t total_size = 0;
 
   if (_internal_has_url()) {
-    // required string url = 1;
+    // required bytes url = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_url());
   }
 
@@ -11493,9 +11493,9 @@ size_t BroadcastBlobURLUnregistrationRequest::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string url = 1;
+    // required bytes url = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_url());
 
     // required bytes principal = 2;

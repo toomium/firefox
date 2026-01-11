@@ -602,7 +602,7 @@ class Msg_PBackgroundTestConstructor final :
   enum : int {
     kTestArgFieldNumber = 1,
   };
-  // required string testArg = 1;
+  // required bytes testArg = 1;
   bool has_testarg() const;
   private:
   bool _internal_has_testarg() const;
@@ -874,7 +874,7 @@ class Msg_PBackgroundIDBFactoryConstructor final :
     kSystemLocaleFieldNumber = 2,
     kLoggingInfoFieldNumber = 1,
   };
-  // required string systemLocale = 2;
+  // required bytes systemLocale = 2;
   bool has_systemlocale() const;
   private:
   bool _internal_has_systemlocale() const;
@@ -2643,7 +2643,7 @@ class Msg_PBackgroundLocalStorageCacheConstructor final :
     kPrincipalInfoFieldNumber = 1,
     kPrivateBrowsingIdFieldNumber = 3,
   };
-  // required string originKey = 2;
+  // required bytes originKey = 2;
   bool has_originkey() const;
   private:
   bool _internal_has_originkey() const;
@@ -3465,7 +3465,7 @@ class Msg_PBackgroundStorageConstructor final :
     kProfilePathFieldNumber = 1,
     kPrivateBrowsingIdFieldNumber = 2,
   };
-  // required string profilePath = 1;
+  // required bytes profilePath = 1;
   bool has_profilepath() const;
   private:
   bool _internal_has_profilepath() const;
@@ -4095,7 +4095,7 @@ class Msg_CreateWebTransportParent final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::WebTransportHash >&
       aservercerthashes() const;
 
-  // required string aURL = 1;
+  // required bytes aURL = 1;
   bool has_aurl() const;
   private:
   bool _internal_has_aurl() const;
@@ -4569,7 +4569,7 @@ class Msg_CreateNotificationParent final :
   std::string* _internal_mutable_aeffectivestorageprincipal();
   public:
 
-  // required string aScope = 5;
+  // required bytes aScope = 5;
   bool has_ascope() const;
   private:
   bool _internal_has_ascope() const;
@@ -5394,7 +5394,7 @@ class Msg_PUDPSocketConstructor final :
     kFilterFieldNumber = 2,
     kPInfoFieldNumber = 1,
   };
-  // required string filter = 2;
+  // required bytes filter = 2;
   bool has_filter() const;
   private:
   bool _internal_has_filter() const;
@@ -5686,7 +5686,7 @@ class Msg_PBroadcastChannelConstructor final :
     kChannelFieldNumber = 3,
     kPInfoFieldNumber = 1,
   };
-  // required string origin = 2;
+  // required bytes origin = 2;
   bool has_origin() const;
   private:
   bool _internal_has_origin() const;
@@ -5704,7 +5704,7 @@ class Msg_PBroadcastChannelConstructor final :
   std::string* _internal_mutable_origin();
   public:
 
-  // required string channel = 3;
+  // required bytes channel = 3;
   bool has_channel() const;
   private:
   bool _internal_has_channel() const;
@@ -10294,7 +10294,7 @@ class Msg_PFileCreatorConstructor final :
     kAExistenceCheckFieldNumber = 5,
     kAIsFromNsIFileFieldNumber = 6,
   };
-  // required string aFullPath = 1;
+  // required bytes aFullPath = 1;
   bool has_afullpath() const;
   private:
   bool _internal_has_afullpath() const;
@@ -10312,7 +10312,7 @@ class Msg_PFileCreatorConstructor final :
   std::string* _internal_mutable_afullpath();
   public:
 
-  // required string aType = 2;
+  // required bytes aType = 2;
   bool has_atype() const;
   private:
   bool _internal_has_atype() const;
@@ -10330,7 +10330,7 @@ class Msg_PFileCreatorConstructor final :
   std::string* _internal_mutable_atype();
   public:
 
-  // required string aName = 3;
+  // required bytes aName = 3;
   bool has_aname() const;
   private:
   bool _internal_has_aname() const;
@@ -12896,7 +12896,7 @@ class Msg_PEndpointForReportConstructor final :
     kAGroupNameFieldNumber = 1,
     kAPrincipalInfoFieldNumber = 2,
   };
-  // required string aGroupName = 1;
+  // required bytes aGroupName = 1;
   bool has_agroupname() const;
   private:
   bool _internal_has_agroupname() const;
@@ -13191,7 +13191,7 @@ class Msg_RemoveEndpoint final :
     kAEndpointURLFieldNumber = 2,
     kAPrincipalInfoFieldNumber = 3,
   };
-  // required string aGroupName = 1;
+  // required bytes aGroupName = 1;
   bool has_agroupname() const;
   private:
   bool _internal_has_agroupname() const;
@@ -13209,7 +13209,7 @@ class Msg_RemoveEndpoint final :
   std::string* _internal_mutable_agroupname();
   public:
 
-  // required string aEndpointURL = 2;
+  // required bytes aEndpointURL = 2;
   bool has_aendpointurl() const;
   private:
   bool _internal_has_aendpointurl() const;
@@ -15459,7 +15459,7 @@ class Reply_PCacheStreamControlConstructor final :
 #endif  // __GNUC__
 // Msg_PBackgroundTestConstructor
 
-// required string testArg = 1;
+// required bytes testArg = 1;
 inline bool Msg_PBackgroundTestConstructor::_internal_has_testarg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -15479,7 +15479,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PBackgroundTestConstructor::set_testarg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.testarg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.testarg_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundTestConstructor.testArg)
 }
 inline std::string* Msg_PBackgroundTestConstructor::mutable_testarg() {
@@ -15622,7 +15622,7 @@ inline void Msg_PBackgroundIDBFactoryConstructor::set_allocated_logginginfo(::pr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundIDBFactoryConstructor.loggingInfo)
 }
 
-// required string systemLocale = 2;
+// required bytes systemLocale = 2;
 inline bool Msg_PBackgroundIDBFactoryConstructor::_internal_has_systemlocale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -15642,7 +15642,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PBackgroundIDBFactoryConstructor::set_systemlocale(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.systemlocale_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.systemlocale_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundIDBFactoryConstructor.systemLocale)
 }
 inline std::string* Msg_PBackgroundIDBFactoryConstructor::mutable_systemlocale() {
@@ -16186,7 +16186,7 @@ inline void Msg_PBackgroundLocalStorageCacheConstructor::set_allocated_principal
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLocalStorageCacheConstructor.principalInfo)
 }
 
-// required string originKey = 2;
+// required bytes originKey = 2;
 inline bool Msg_PBackgroundLocalStorageCacheConstructor::_internal_has_originkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -16206,7 +16206,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PBackgroundLocalStorageCacheConstructor::set_originkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.originkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.originkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLocalStorageCacheConstructor.originKey)
 }
 inline std::string* Msg_PBackgroundLocalStorageCacheConstructor::mutable_originkey() {
@@ -16334,7 +16334,7 @@ inline void Msg_PBackgroundSessionStorageManagerConstructor::set_atopcontextid(u
 
 // Msg_PBackgroundStorageConstructor
 
-// required string profilePath = 1;
+// required bytes profilePath = 1;
 inline bool Msg_PBackgroundStorageConstructor::_internal_has_profilepath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -16354,7 +16354,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PBackgroundStorageConstructor::set_profilepath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.profilepath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.profilepath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundStorageConstructor.profilePath)
 }
 inline std::string* Msg_PBackgroundStorageConstructor::mutable_profilepath() {
@@ -16669,7 +16669,7 @@ inline void Reply_CreateFileSystemManagerParent::set_allocated_rv(std::string* r
 
 // Msg_CreateWebTransportParent
 
-// required string aURL = 1;
+// required bytes aURL = 1;
 inline bool Msg_CreateWebTransportParent::_internal_has_aurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -16689,7 +16689,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CreateWebTransportParent::set_aurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_CreateWebTransportParent.aURL)
 }
 inline std::string* Msg_CreateWebTransportParent::mutable_aurl() {
@@ -17417,7 +17417,7 @@ inline void Msg_CreateNotificationParent::set_aissecurecontext(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_CreateNotificationParent.aIsSecureContext)
 }
 
-// required string aScope = 5;
+// required bytes aScope = 5;
 inline bool Msg_CreateNotificationParent::_internal_has_ascope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -17437,7 +17437,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CreateNotificationParent::set_ascope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.ascope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.ascope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_CreateNotificationParent.aScope)
 }
 inline std::string* Msg_CreateNotificationParent::mutable_ascope() {
@@ -17711,7 +17711,7 @@ inline void Msg_PUDPSocketConstructor::set_allocated_pinfo(::protobuf::mozilla::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PUDPSocketConstructor.pInfo)
 }
 
-// required string filter = 2;
+// required bytes filter = 2;
 inline bool Msg_PUDPSocketConstructor::_internal_has_filter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17731,7 +17731,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PUDPSocketConstructor::set_filter(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.filter_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.filter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PUDPSocketConstructor.filter)
 }
 inline std::string* Msg_PUDPSocketConstructor::mutable_filter() {
@@ -17874,7 +17874,7 @@ inline void Msg_PBroadcastChannelConstructor::set_allocated_pinfo(::protobuf::mo
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBroadcastChannelConstructor.pInfo)
 }
 
-// required string origin = 2;
+// required bytes origin = 2;
 inline bool Msg_PBroadcastChannelConstructor::_internal_has_origin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17894,7 +17894,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PBroadcastChannelConstructor::set_origin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.origin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.origin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBroadcastChannelConstructor.origin)
 }
 inline std::string* Msg_PBroadcastChannelConstructor::mutable_origin() {
@@ -17942,7 +17942,7 @@ inline void Msg_PBroadcastChannelConstructor::set_allocated_origin(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBroadcastChannelConstructor.origin)
 }
 
-// required string channel = 3;
+// required bytes channel = 3;
 inline bool Msg_PBroadcastChannelConstructor::_internal_has_channel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -17962,7 +17962,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PBroadcastChannelConstructor::set_channel(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.channel_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.channel_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBroadcastChannelConstructor.channel)
 }
 inline std::string* Msg_PBroadcastChannelConstructor::mutable_channel() {
@@ -19288,7 +19288,7 @@ inline void Msg_PSharedWorkerConstructor::set_allocated_portidentifier(::protobu
 
 // Msg_PFileCreatorConstructor
 
-// required string aFullPath = 1;
+// required bytes aFullPath = 1;
 inline bool Msg_PFileCreatorConstructor::_internal_has_afullpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -19308,7 +19308,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PFileCreatorConstructor::set_afullpath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.afullpath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.afullpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.aFullPath)
 }
 inline std::string* Msg_PFileCreatorConstructor::mutable_afullpath() {
@@ -19356,7 +19356,7 @@ inline void Msg_PFileCreatorConstructor::set_allocated_afullpath(std::string* af
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.aFullPath)
 }
 
-// required string aType = 2;
+// required bytes aType = 2;
 inline bool Msg_PFileCreatorConstructor::_internal_has_atype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -19376,7 +19376,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PFileCreatorConstructor::set_atype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.atype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.aType)
 }
 inline std::string* Msg_PFileCreatorConstructor::mutable_atype() {
@@ -19424,7 +19424,7 @@ inline void Msg_PFileCreatorConstructor::set_allocated_atype(std::string* atype)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.aType)
 }
 
-// required string aName = 3;
+// required bytes aName = 3;
 inline bool Msg_PFileCreatorConstructor::_internal_has_aname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -19444,7 +19444,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PFileCreatorConstructor::set_aname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.aname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.aName)
 }
 inline std::string* Msg_PFileCreatorConstructor::mutable_aname() {
@@ -20498,7 +20498,7 @@ inline void Msg_PServiceWorkerRegistrationConstructor::set_allocated_aforclient(
 
 // Msg_PEndpointForReportConstructor
 
-// required string aGroupName = 1;
+// required bytes aGroupName = 1;
 inline bool Msg_PEndpointForReportConstructor::_internal_has_agroupname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -20518,7 +20518,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PEndpointForReportConstructor::set_agroupname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.agroupname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.agroupname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PEndpointForReportConstructor.aGroupName)
 }
 inline std::string* Msg_PEndpointForReportConstructor::mutable_agroupname() {
@@ -20661,7 +20661,7 @@ inline void Msg_PEndpointForReportConstructor::set_allocated_aprincipalinfo(::pr
 
 // Msg_RemoveEndpoint
 
-// required string aGroupName = 1;
+// required bytes aGroupName = 1;
 inline bool Msg_RemoveEndpoint::_internal_has_agroupname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -20681,7 +20681,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RemoveEndpoint::set_agroupname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.agroupname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.agroupname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_RemoveEndpoint.aGroupName)
 }
 inline std::string* Msg_RemoveEndpoint::mutable_agroupname() {
@@ -20729,7 +20729,7 @@ inline void Msg_RemoveEndpoint::set_allocated_agroupname(std::string* agroupname
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_RemoveEndpoint.aGroupName)
 }
 
-// required string aEndpointURL = 2;
+// required bytes aEndpointURL = 2;
 inline bool Msg_RemoveEndpoint::_internal_has_aendpointurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -20749,7 +20749,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RemoveEndpoint::set_aendpointurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aendpointurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aendpointurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_RemoveEndpoint.aEndpointURL)
 }
 inline std::string* Msg_RemoveEndpoint::mutable_aendpointurl() {

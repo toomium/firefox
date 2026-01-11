@@ -333,7 +333,7 @@ class ClientSourceConstructorArgs final :
   std::string* _internal_mutable_creationtime();
   public:
 
-  // required string url = 6;
+  // required bytes url = 6;
   bool has_url() const;
   private:
   bool _internal_has_url() const;
@@ -605,7 +605,7 @@ class IPCClientInfo final :
   std::string* _internal_mutable_creationtime();
   public:
 
-  // required string url = 6;
+  // required bytes url = 6;
   bool has_url() const;
   private:
   bool _internal_has_url() const;
@@ -1728,7 +1728,7 @@ class ClientSourceExecutionReadyArgs final :
     kUrlFieldNumber = 1,
     kFrameTypeFieldNumber = 2,
   };
-  // required string url = 1;
+  // required bytes url = 1;
   bool has_url() const;
   private:
   bool _internal_has_url() const;
@@ -2194,7 +2194,7 @@ class ClientNavigateArgs final :
     kTargetFieldNumber = 1,
     kServiceWorkerFieldNumber = 4,
   };
-  // required string url = 2;
+  // required bytes url = 2;
   bool has_url() const;
   private:
   bool _internal_has_url() const;
@@ -2212,7 +2212,7 @@ class ClientNavigateArgs final :
   std::string* _internal_mutable_url();
   public:
 
-  // required string baseURL = 3;
+  // required bytes baseURL = 3;
   bool has_baseurl() const;
   private:
   bool _internal_has_baseurl() const;
@@ -3076,7 +3076,7 @@ class ClientOpenWindowArgs final :
     kPrincipalInfoFieldNumber = 1,
     kCspInfoFieldNumber = 2,
   };
-  // required string url = 3;
+  // required bytes url = 3;
   bool has_url() const;
   private:
   bool _internal_has_url() const;
@@ -3094,7 +3094,7 @@ class ClientOpenWindowArgs final :
   std::string* _internal_mutable_url();
   public:
 
-  // required string baseURL = 4;
+  // required bytes baseURL = 4;
   bool has_baseurl() const;
   private:
   bool _internal_has_baseurl() const;
@@ -3912,7 +3912,7 @@ class ClientNavigateOpConstructorArgs final :
   std::string* _internal_mutable_target();
   public:
 
-  // required string url = 2;
+  // required bytes url = 2;
   bool has_url() const;
   private:
   bool _internal_has_url() const;
@@ -3930,7 +3930,7 @@ class ClientNavigateOpConstructorArgs final :
   std::string* _internal_mutable_url();
   public:
 
-  // required string baseURL = 3;
+  // required bytes baseURL = 3;
   bool has_baseurl() const;
   private:
   bool _internal_has_baseurl() const;
@@ -4567,7 +4567,7 @@ inline void ClientSourceConstructorArgs::set_allocated_creationtime(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientSourceConstructorArgs.creationTime)
 }
 
-// required string url = 6;
+// required bytes url = 6;
 inline bool ClientSourceConstructorArgs::_internal_has_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -4587,7 +4587,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClientSourceConstructorArgs::set_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClientSourceConstructorArgs.url)
 }
 inline std::string* ClientSourceConstructorArgs::mutable_url() {
@@ -5066,7 +5066,7 @@ inline void IPCClientInfo::set_allocated_creationtime(std::string* creationtime)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCClientInfo.creationTime)
 }
 
-// required string url = 6;
+// required bytes url = 6;
 inline bool IPCClientInfo::_internal_has_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -5086,7 +5086,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCClientInfo::set_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCClientInfo.url)
 }
 inline std::string* IPCClientInfo::mutable_url() {
@@ -6186,7 +6186,7 @@ inline PostMessageSource::ContentCase PostMessageSource::content_case() const {
 
 // ClientSourceExecutionReadyArgs
 
-// required string url = 1;
+// required bytes url = 1;
 inline bool ClientSourceExecutionReadyArgs::_internal_has_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6206,7 +6206,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClientSourceExecutionReadyArgs::set_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClientSourceExecutionReadyArgs.url)
 }
 inline std::string* ClientSourceExecutionReadyArgs::mutable_url() {
@@ -6579,7 +6579,7 @@ inline void ClientNavigateArgs::set_allocated_target(::protobuf::mozilla::dom::I
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientNavigateArgs.target)
 }
 
-// required string url = 2;
+// required bytes url = 2;
 inline bool ClientNavigateArgs::_internal_has_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6599,7 +6599,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClientNavigateArgs::set_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClientNavigateArgs.url)
 }
 inline std::string* ClientNavigateArgs::mutable_url() {
@@ -6647,7 +6647,7 @@ inline void ClientNavigateArgs::set_allocated_url(std::string* url) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientNavigateArgs.url)
 }
 
-// required string baseURL = 3;
+// required bytes baseURL = 3;
 inline bool ClientNavigateArgs::_internal_has_baseurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6667,7 +6667,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClientNavigateArgs::set_baseurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.baseurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.baseurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClientNavigateArgs.baseURL)
 }
 inline std::string* ClientNavigateArgs::mutable_baseurl() {
@@ -7595,7 +7595,7 @@ inline void ClientOpenWindowArgs::set_allocated_cspinfo(::protobuf::mozilla::ipc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientOpenWindowArgs.cspInfo)
 }
 
-// required string url = 3;
+// required bytes url = 3;
 inline bool ClientOpenWindowArgs::_internal_has_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7615,7 +7615,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClientOpenWindowArgs::set_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClientOpenWindowArgs.url)
 }
 inline std::string* ClientOpenWindowArgs::mutable_url() {
@@ -7663,7 +7663,7 @@ inline void ClientOpenWindowArgs::set_allocated_url(std::string* url) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientOpenWindowArgs.url)
 }
 
-// required string baseURL = 4;
+// required bytes baseURL = 4;
 inline bool ClientOpenWindowArgs::_internal_has_baseurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7683,7 +7683,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClientOpenWindowArgs::set_baseurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.baseurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.baseurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClientOpenWindowArgs.baseURL)
 }
 inline std::string* ClientOpenWindowArgs::mutable_baseurl() {
@@ -8530,7 +8530,7 @@ inline void ClientNavigateOpConstructorArgs::set_allocated_target(std::string* t
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientNavigateOpConstructorArgs.target)
 }
 
-// required string url = 2;
+// required bytes url = 2;
 inline bool ClientNavigateOpConstructorArgs::_internal_has_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8550,7 +8550,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClientNavigateOpConstructorArgs::set_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClientNavigateOpConstructorArgs.url)
 }
 inline std::string* ClientNavigateOpConstructorArgs::mutable_url() {
@@ -8598,7 +8598,7 @@ inline void ClientNavigateOpConstructorArgs::set_allocated_url(std::string* url)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientNavigateOpConstructorArgs.url)
 }
 
-// required string baseURL = 3;
+// required bytes baseURL = 3;
 inline bool ClientNavigateOpConstructorArgs::_internal_has_baseurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8618,7 +8618,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClientNavigateOpConstructorArgs::set_baseurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.baseurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.baseurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClientNavigateOpConstructorArgs.baseURL)
 }
 inline std::string* ClientNavigateOpConstructorArgs::mutable_baseurl() {

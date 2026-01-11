@@ -690,7 +690,7 @@ class Msg_PChromiumCDMConstructor final :
   enum : int {
     kAKeySystemFieldNumber = 1,
   };
-  // required string aKeySystem = 1;
+  // required bytes aKeySystem = 1;
   bool has_akeysystem() const;
   private:
   bool _internal_has_akeysystem() const;
@@ -874,7 +874,7 @@ class Reply_PChromiumCDMConstructor final :
 
 // Msg_PChromiumCDMConstructor
 
-// required string aKeySystem = 1;
+// required bytes aKeySystem = 1;
 inline bool Msg_PChromiumCDMConstructor::_internal_has_akeysystem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -894,7 +894,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PChromiumCDMConstructor::set_akeysystem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.akeysystem_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.akeysystem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.aKeySystem)
 }
 inline std::string* Msg_PChromiumCDMConstructor::mutable_akeysystem() {

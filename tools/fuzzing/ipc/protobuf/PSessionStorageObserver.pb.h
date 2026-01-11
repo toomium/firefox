@@ -560,7 +560,7 @@ class Msg_Observe final :
     kOriginAttributesPatternFieldNumber = 2,
     kOriginScopeFieldNumber = 3,
   };
-  // required string topic = 1;
+  // required bytes topic = 1;
   bool has_topic() const;
   private:
   bool _internal_has_topic() const;
@@ -578,7 +578,7 @@ class Msg_Observe final :
   std::string* _internal_mutable_topic();
   public:
 
-  // required string originAttributesPattern = 2;
+  // required bytes originAttributesPattern = 2;
   bool has_originattributespattern() const;
   private:
   bool _internal_has_originattributespattern() const;
@@ -596,7 +596,7 @@ class Msg_Observe final :
   std::string* _internal_mutable_originattributespattern();
   public:
 
-  // required string originScope = 3;
+  // required bytes originScope = 3;
   bool has_originscope() const;
   private:
   bool _internal_has_originscope() const;
@@ -657,7 +657,7 @@ class Msg_Observe final :
 
 // Msg_Observe
 
-// required string topic = 1;
+// required bytes topic = 1;
 inline bool Msg_Observe::_internal_has_topic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -677,7 +677,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Observe::set_topic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.topic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.topic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.topic)
 }
 inline std::string* Msg_Observe::mutable_topic() {
@@ -725,7 +725,7 @@ inline void Msg_Observe::set_allocated_topic(std::string* topic) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.topic)
 }
 
-// required string originAttributesPattern = 2;
+// required bytes originAttributesPattern = 2;
 inline bool Msg_Observe::_internal_has_originattributespattern() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -745,7 +745,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Observe::set_originattributespattern(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.originattributespattern_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.originattributespattern_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.originAttributesPattern)
 }
 inline std::string* Msg_Observe::mutable_originattributespattern() {
@@ -793,7 +793,7 @@ inline void Msg_Observe::set_allocated_originattributespattern(std::string* orig
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.originAttributesPattern)
 }
 
-// required string originScope = 3;
+// required bytes originScope = 3;
 inline bool Msg_Observe::_internal_has_originscope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -813,7 +813,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Observe::set_originscope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.originscope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.originscope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.originScope)
 }
 inline std::string* Msg_Observe::mutable_originscope() {

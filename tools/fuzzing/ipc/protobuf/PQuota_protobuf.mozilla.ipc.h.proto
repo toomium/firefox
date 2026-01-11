@@ -29,7 +29,7 @@ message UInt64Response {
 
 message CStringArrayResponse {
   message _mVArrayOfnsCString {
-    repeated string mVArrayOfnsCString = 1;
+    repeated bytes mVArrayOfnsCString = 1;
   }
   oneof content {
     bytes mVnsresult = 1;

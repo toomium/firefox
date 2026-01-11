@@ -551,7 +551,7 @@ const char* Msg_CheckAsync::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string aWord = 1;
+      // repeated bytes aWord = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -594,10 +594,10 @@ uint8_t* Msg_CheckAsync::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string aWord = 1;
+  // repeated bytes aWord = 1;
   for (int i = 0, n = this->_internal_aword_size(); i < n; i++) {
     const auto& s = this->_internal_aword(i);
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -616,11 +616,11 @@ size_t Msg_CheckAsync::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string aWord = 1;
+  // repeated bytes aWord = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.aword_.size());
   for (int i = 0, n = _impl_.aword_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.aword_.Get(i));
   }
 
@@ -954,7 +954,7 @@ const char* Msg_SetDictionary::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string aDictionary = 1;
+      // required bytes aDictionary = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_adictionary();
@@ -994,9 +994,9 @@ uint8_t* Msg_SetDictionary::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string aDictionary = 1;
+  // required bytes aDictionary = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_adictionary(), target);
   }
 
@@ -1012,10 +1012,10 @@ size_t Msg_SetDictionary::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary)
   size_t total_size = 0;
 
-  // required string aDictionary = 1;
+  // required bytes aDictionary = 1;
   if (_internal_has_adictionary()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_adictionary());
   }
   uint32_t cached_has_bits = 0;
@@ -1340,7 +1340,7 @@ const char* Msg_SetDictionaries::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string aDictionaries = 1;
+      // repeated bytes aDictionaries = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -1383,10 +1383,10 @@ uint8_t* Msg_SetDictionaries::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string aDictionaries = 1;
+  // repeated bytes aDictionaries = 1;
   for (int i = 0, n = this->_internal_adictionaries_size(); i < n; i++) {
     const auto& s = this->_internal_adictionaries(i);
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1405,11 +1405,11 @@ size_t Msg_SetDictionaries::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string aDictionaries = 1;
+  // repeated bytes aDictionaries = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.adictionaries_.size());
   for (int i = 0, n = _impl_.adictionaries_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.adictionaries_.Get(i));
   }
 
@@ -1755,7 +1755,7 @@ const char* Msg_Suggest::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string aWord = 1;
+      // required bytes aWord = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_aword();
@@ -1804,9 +1804,9 @@ uint8_t* Msg_Suggest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string aWord = 1;
+  // required bytes aWord = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_aword(), target);
   }
 
@@ -1829,9 +1829,9 @@ size_t Msg_Suggest::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_aword()) {
-    // required string aWord = 1;
+    // required bytes aWord = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aword());
   }
 
@@ -1847,9 +1847,9 @@ size_t Msg_Suggest::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string aWord = 1;
+    // required bytes aWord = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aword());
 
     // required uint32 aCount = 2;
@@ -1993,7 +1993,7 @@ const char* Reply_Suggest::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string aSuggestions = 1;
+      // repeated bytes aSuggestions = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -2036,10 +2036,10 @@ uint8_t* Reply_Suggest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string aSuggestions = 1;
+  // repeated bytes aSuggestions = 1;
   for (int i = 0, n = this->_internal_asuggestions_size(); i < n; i++) {
     const auto& s = this->_internal_asuggestions(i);
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2058,11 +2058,11 @@ size_t Reply_Suggest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string aSuggestions = 1;
+  // repeated bytes aSuggestions = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.asuggestions_.size());
   for (int i = 0, n = _impl_.asuggestions_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.asuggestions_.Get(i));
   }
 
@@ -2180,7 +2180,7 @@ const char* Msg_SetDictionaryFromList::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string aList = 1;
+      // repeated bytes aList = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -2223,10 +2223,10 @@ uint8_t* Msg_SetDictionaryFromList::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string aList = 1;
+  // repeated bytes aList = 1;
   for (int i = 0, n = this->_internal_alist_size(); i < n; i++) {
     const auto& s = this->_internal_alist(i);
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2245,11 +2245,11 @@ size_t Msg_SetDictionaryFromList::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string aList = 1;
+  // repeated bytes aList = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.alist_.size());
   for (int i = 0, n = _impl_.alist_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.alist_.Get(i));
   }
 
@@ -2409,7 +2409,7 @@ const char* Reply_SetDictionaryFromList::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required string aDictionary = 2;
+      // required bytes aDictionary = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_adictionary();
@@ -2455,9 +2455,9 @@ uint8_t* Reply_SetDictionaryFromList::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_asuccess(), target);
   }
 
-  // required string aDictionary = 2;
+  // required bytes aDictionary = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_adictionary(), target);
   }
 
@@ -2474,9 +2474,9 @@ size_t Reply_SetDictionaryFromList::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_adictionary()) {
-    // required string aDictionary = 2;
+    // required bytes aDictionary = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_adictionary());
   }
 
@@ -2492,9 +2492,9 @@ size_t Reply_SetDictionaryFromList::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string aDictionary = 2;
+    // required bytes aDictionary = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_adictionary());
 
     // required bool aSuccess = 1;

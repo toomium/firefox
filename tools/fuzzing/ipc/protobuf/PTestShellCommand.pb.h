@@ -178,7 +178,7 @@ class Msg___delete__ final :
   enum : int {
     kAResponseFieldNumber = 1,
   };
-  // required string aResponse = 1;
+  // required bytes aResponse = 1;
   bool has_aresponse() const;
   private:
   bool _internal_has_aresponse() const;
@@ -346,7 +346,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// required string aResponse = 1;
+// required bytes aResponse = 1;
 inline bool Msg___delete__::_internal_has_aresponse() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -366,7 +366,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg___delete__::set_aresponse(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aresponse_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aresponse_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PTestShellCommand.Msg___delete__.aResponse)
 }
 inline std::string* Msg___delete__::mutable_aresponse() {

@@ -195,7 +195,7 @@ const char* KeyValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string key = 1;
+      // required bytes key = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_key();
@@ -243,9 +243,9 @@ uint8_t* KeyValue::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string key = 1;
+  // required bytes key = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_key(), target);
   }
 
@@ -269,9 +269,9 @@ size_t KeyValue::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_key()) {
-    // required string key = 1;
+    // required bytes key = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_key());
   }
 
@@ -289,9 +289,9 @@ size_t KeyValue::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string key = 1;
+    // required bytes key = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_key());
 
     // required .protobuf.mozilla._ipdltest.JSONVariant value = 2;
@@ -1000,7 +1000,7 @@ const char* JSONVariant::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // string mVnsString = 6;
+      // bytes mVnsString = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_mvnsstring();
@@ -1090,7 +1090,7 @@ uint8_t* JSONVariant::_InternalSerialize(
       break;
     }
     case kMVnsString: {
-      target = stream->WriteStringMaybeAliased(
+      target = stream->WriteBytesMaybeAliased(
           6, this->_internal_mvnsstring(), target);
       break;
     }
@@ -1159,10 +1159,10 @@ size_t JSONVariant::ByteSizeLong() const {
       total_size += 1 + 8;
       break;
     }
-    // string mVnsString = 6;
+    // bytes mVnsString = 6;
     case kMVnsString: {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_mvnsstring());
       break;
     }

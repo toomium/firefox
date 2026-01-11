@@ -216,7 +216,7 @@ class Msg_NotifyNetworkConnectivityServiceObservers final :
   enum : int {
     kATopicFieldNumber = 1,
   };
-  // required string aTopic = 1;
+  // required bytes aTopic = 1;
   bool has_atopic() const;
   private:
   bool _internal_has_atopic() const;
@@ -877,7 +877,7 @@ class Msg_UpdatePlatformDNSInformation final :
   enum : int {
     kASuffixListFieldNumber = 1,
   };
-  // repeated string aSuffixList = 1;
+  // repeated bytes aSuffixList = 1;
   int asuffixlist_size() const;
   private:
   int _internal_asuffixlist_size() const;
@@ -888,12 +888,12 @@ class Msg_UpdatePlatformDNSInformation final :
   void set_asuffixlist(int index, const std::string& value);
   void set_asuffixlist(int index, std::string&& value);
   void set_asuffixlist(int index, const char* value);
-  void set_asuffixlist(int index, const char* value, size_t size);
+  void set_asuffixlist(int index, const void* value, size_t size);
   std::string* add_asuffixlist();
   void add_asuffixlist(const std::string& value);
   void add_asuffixlist(std::string&& value);
   void add_asuffixlist(const char* value);
-  void add_asuffixlist(const char* value, size_t size);
+  void add_asuffixlist(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& asuffixlist() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_asuffixlist();
   private:
@@ -1313,7 +1313,7 @@ class Msg_SetDetectedTrrURI final :
   enum : int {
     kAURIFieldNumber = 1,
   };
-  // required string aURI = 1;
+  // required bytes aURI = 1;
   bool has_auri() const;
   private:
   bool _internal_has_auri() const;
@@ -1607,7 +1607,7 @@ class Msg_UpdateEtcHosts final :
   enum : int {
     kAHostsFieldNumber = 1,
   };
-  // repeated string aHosts = 1;
+  // repeated bytes aHosts = 1;
   int ahosts_size() const;
   private:
   int _internal_ahosts_size() const;
@@ -1618,12 +1618,12 @@ class Msg_UpdateEtcHosts final :
   void set_ahosts(int index, const std::string& value);
   void set_ahosts(int index, std::string&& value);
   void set_ahosts(int index, const char* value);
-  void set_ahosts(int index, const char* value, size_t size);
+  void set_ahosts(int index, const void* value, size_t size);
   std::string* add_ahosts();
   void add_ahosts(const std::string& value);
   void add_ahosts(std::string&& value);
   void add_ahosts(const char* value);
-  void add_ahosts(const char* value, size_t size);
+  void add_ahosts(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& ahosts() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_ahosts();
   private:
@@ -1656,7 +1656,7 @@ class Msg_UpdateEtcHosts final :
 #endif  // __GNUC__
 // Msg_NotifyNetworkConnectivityServiceObservers
 
-// required string aTopic = 1;
+// required bytes aTopic = 1;
 inline bool Msg_NotifyNetworkConnectivityServiceObservers::_internal_has_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1676,7 +1676,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyNetworkConnectivityServiceObservers::set_atopic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atopic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atopic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.aTopic)
 }
 inline std::string* Msg_NotifyNetworkConnectivityServiceObservers::mutable_atopic() {
@@ -1772,7 +1772,7 @@ inline void Msg_SetConfirmationState::set_anewstate(uint32_t value) {
 
 // Msg_UpdatePlatformDNSInformation
 
-// repeated string aSuffixList = 1;
+// repeated bytes aSuffixList = 1;
 inline int Msg_UpdatePlatformDNSInformation::_internal_asuffixlist_size() const {
   return _impl_.asuffixlist_.size();
 }
@@ -1811,7 +1811,7 @@ inline void Msg_UpdatePlatformDNSInformation::set_asuffixlist(int index, const c
   _impl_.asuffixlist_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
 }
-inline void Msg_UpdatePlatformDNSInformation::set_asuffixlist(int index, const char* value, size_t size) {
+inline void Msg_UpdatePlatformDNSInformation::set_asuffixlist(int index, const void* value, size_t size) {
   _impl_.asuffixlist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
@@ -1832,7 +1832,7 @@ inline void Msg_UpdatePlatformDNSInformation::add_asuffixlist(const char* value)
   _impl_.asuffixlist_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
 }
-inline void Msg_UpdatePlatformDNSInformation::add_asuffixlist(const char* value, size_t size) {
+inline void Msg_UpdatePlatformDNSInformation::add_asuffixlist(const void* value, size_t size) {
   _impl_.asuffixlist_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
 }
@@ -1915,7 +1915,7 @@ inline void Msg_ClearDNSCache::set_atrrtoo(bool value) {
 
 // Msg_SetDetectedTrrURI
 
-// required string aURI = 1;
+// required bytes aURI = 1;
 inline bool Msg_SetDetectedTrrURI::_internal_has_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1935,7 +1935,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetDetectedTrrURI::set_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.auri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.aURI)
 }
 inline std::string* Msg_SetDetectedTrrURI::mutable_auri() {
@@ -2078,7 +2078,7 @@ inline void Msg_SetDefaultTRRConnectionInfo::set_allocated_aconninfoargs(::proto
 
 // Msg_UpdateEtcHosts
 
-// repeated string aHosts = 1;
+// repeated bytes aHosts = 1;
 inline int Msg_UpdateEtcHosts::_internal_ahosts_size() const {
   return _impl_.ahosts_.size();
 }
@@ -2117,7 +2117,7 @@ inline void Msg_UpdateEtcHosts::set_ahosts(int index, const char* value) {
   _impl_.ahosts_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
 }
-inline void Msg_UpdateEtcHosts::set_ahosts(int index, const char* value, size_t size) {
+inline void Msg_UpdateEtcHosts::set_ahosts(int index, const void* value, size_t size) {
   _impl_.ahosts_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
@@ -2138,7 +2138,7 @@ inline void Msg_UpdateEtcHosts::add_ahosts(const char* value) {
   _impl_.ahosts_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
 }
-inline void Msg_UpdateEtcHosts::add_ahosts(const char* value, size_t size) {
+inline void Msg_UpdateEtcHosts::add_ahosts(const void* value, size_t size) {
   _impl_.ahosts_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
 }

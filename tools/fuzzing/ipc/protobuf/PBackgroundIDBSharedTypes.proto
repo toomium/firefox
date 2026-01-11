@@ -14,5 +14,5 @@ import public "PBackgroundIDBSharedTypes_protobuf.mozilla.dom.indexedDB.h.proto"
 // Parameter mappings stats:
 // Total parameters in this file 112
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 5, "<class 'ipdl.type.BuiltinCType'>": 8, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 51, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 7, "<class 'ipdl.type.NotNullType'>": 1, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 39, "<class 'ipdl.type.UnionType'>": 1, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 44
+// Scalar mappings performed: 40
 // Message structs/unions generated from ipdl structs/unions: 36

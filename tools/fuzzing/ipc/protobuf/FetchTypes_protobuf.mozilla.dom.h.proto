@@ -17,8 +17,8 @@ import "NeckoChannelParams.proto";
 
 // Structs and unions declarations
 message HeadersEntry {
-  required string name = 1;
-  required string value = 2;
+  required bytes name = 1;
+  required bytes value = 2;
 }
 
 message ParentToParentStream {
@@ -45,16 +45,16 @@ message BodyStreamVariant {
 }
 
 message IPCInternalRequest {
-  required string method = 1;
-  repeated string urlList = 2;
+  required bytes method = 1;
+  repeated bytes urlList = 2;
   required bytes headersGuard = 3;
   repeated protobuf.mozilla.dom.HeadersEntry headers = 4;
   optional protobuf.mozilla.dom.BodyStreamVariant body = 5;
   required int64 bodySize = 6;
-  required string preferredAlternativeDataType = 7;
+  required bytes preferredAlternativeDataType = 7;
   required bytes contentPolicyType = 8;
   required int32 internalPriority = 9;
-  required string referrer = 10;
+  required bytes referrer = 10;
   required bytes referrerPolicy = 11;
   required bytes environmentReferrerPolicy = 12;
   required bytes requestMode = 13;
@@ -62,9 +62,9 @@ message IPCInternalRequest {
   required bytes cacheMode = 15;
   required bytes requestRedirect = 16;
   required bytes requestPriority = 17;
-  required string integrity = 18;
+  required bytes integrity = 18;
   required bool keepalive = 19;
-  required string fragment = 20;
+  required bytes fragment = 20;
   optional protobuf.mozilla.ipc.PrincipalInfo principalInfo = 21;
   optional protobuf.mozilla.ipc.PrincipalInfo interceptionTriggeringPrincipalInfo = 22;
   required bytes interceptionContentPolicyType = 23;
@@ -75,17 +75,17 @@ message IPCInternalRequest {
 
 message InternalResponseMetadata {
   required bytes type = 1;
-  repeated string urlList = 2;
+  repeated bytes urlList = 2;
   required uint32 status = 3;
-  required string statusText = 4;
+  required bytes statusText = 4;
   required bytes headersGuard = 5;
   repeated protobuf.mozilla.dom.HeadersEntry headers = 6;
   required bytes errorCode = 7;
-  required string alternativeDataType = 8;
+  required bytes alternativeDataType = 8;
   required bytes securityInfo = 9;
   optional protobuf.mozilla.ipc.PrincipalInfo principalInfo = 10;
-  required string bodyBlobURISpec = 11;
-  required string bodyLocalPath = 12;
+  required bytes bodyBlobURISpec = 11;
+  required bytes bodyLocalPath = 12;
   required bytes credentialsMode = 13;
 }
 
@@ -112,8 +112,8 @@ message ChildToParentInternalResponse {
 
 message ResponseTiming {
   required protobuf.mozilla.dom.IPCPerformanceTimingData timingData = 1;
-  required string initiatorType = 2;
-  required string entryName = 3;
+  required bytes initiatorType = 2;
+  required bytes entryName = 3;
 }
 
 message ResponseEndArgs {

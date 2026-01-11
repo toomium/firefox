@@ -359,7 +359,7 @@ class Msg_InitializePrint final :
     kAStartPageFieldNumber = 2,
     kAEndPageFieldNumber = 3,
   };
-  // required string aDocumentTitle = 1;
+  // required bytes aDocumentTitle = 1;
   bool has_adocumenttitle() const;
   private:
   bool _internal_has_adocumenttitle() const;
@@ -1716,7 +1716,7 @@ inline void Msg_AbortPrint::set_allocated_arv(std::string* arv) {
 
 // Msg_InitializePrint
 
-// required string aDocumentTitle = 1;
+// required bytes aDocumentTitle = 1;
 inline bool Msg_InitializePrint::_internal_has_adocumenttitle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1736,7 +1736,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitializePrint::set_adocumenttitle(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.adocumenttitle_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.adocumenttitle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layout.PRemotePrintJob.Msg_InitializePrint.aDocumentTitle)
 }
 inline std::string* Msg_InitializePrint::mutable_adocumenttitle() {

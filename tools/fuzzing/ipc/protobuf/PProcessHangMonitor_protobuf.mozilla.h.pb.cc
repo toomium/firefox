@@ -194,7 +194,7 @@ const char* SlowScriptData::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required string filename = 2;
+      // required bytes filename = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_filename();
@@ -203,7 +203,7 @@ const char* SlowScriptData::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required string addonId = 3;
+      // required bytes addonId = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_addonid();
@@ -258,15 +258,15 @@ uint8_t* SlowScriptData::_InternalSerialize(
         1, this->_internal_tabid(), target);
   }
 
-  // required string filename = 2;
+  // required bytes filename = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_filename(), target);
   }
 
-  // required string addonId = 3;
+  // required bytes addonId = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_addonid(), target);
   }
 
@@ -296,16 +296,16 @@ size_t SlowScriptData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_filename()) {
-    // required string filename = 2;
+    // required bytes filename = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filename());
   }
 
   if (_internal_has_addonid()) {
-    // required string addonId = 3;
+    // required bytes addonId = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_addonid());
   }
 
@@ -326,14 +326,14 @@ size_t SlowScriptData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_tabid());
 
-    // required string filename = 2;
+    // required bytes filename = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filename());
 
-    // required string addonId = 3;
+    // required bytes addonId = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_addonid());
 
     // required double duration = 4;

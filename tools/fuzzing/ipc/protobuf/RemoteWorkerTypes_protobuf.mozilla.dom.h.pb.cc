@@ -392,7 +392,7 @@ const char* ServiceWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string cacheName = 3;
+      // required bytes cacheName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_cachename();
@@ -410,7 +410,7 @@ const char* ServiceWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string id = 5;
+      // required bytes id = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_id();
@@ -464,9 +464,9 @@ uint8_t* ServiceWorkerData::_InternalSerialize(
         _Internal::registrationdescriptor(this).GetCachedSize(), target, stream);
   }
 
-  // required string cacheName = 3;
+  // required bytes cacheName = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_cachename(), target);
   }
 
@@ -476,9 +476,9 @@ uint8_t* ServiceWorkerData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_loadflags(), target);
   }
 
-  // required string id = 5;
+  // required bytes id = 5;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         5, this->_internal_id(), target);
   }
 
@@ -495,16 +495,16 @@ size_t ServiceWorkerData::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_cachename()) {
-    // required string cacheName = 3;
+    // required bytes cacheName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_cachename());
   }
 
   if (_internal_has_id()) {
-    // required string id = 5;
+    // required bytes id = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_id());
   }
 
@@ -534,14 +534,14 @@ size_t ServiceWorkerData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required string cacheName = 3;
+    // required bytes cacheName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_cachename());
 
-    // required string id = 5;
+    // required bytes id = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_id());
 
     // required .protobuf.mozilla.dom.IPCServiceWorkerDescriptor descriptor = 1;
@@ -1427,7 +1427,7 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string originalScriptURL = 1;
+      // required bytes originalScriptURL = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_originalscripturl();
@@ -1511,7 +1511,7 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required string domain = 11;
+      // required bytes domain = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           auto str = _internal_mutable_domain();
@@ -1617,7 +1617,7 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required string remoteType = 23;
+      // required bytes remoteType = 23;
       case 23:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 186)) {
           auto str = _internal_mutable_remotetype();
@@ -1657,9 +1657,9 @@ uint8_t* RemoteWorkerData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string originalScriptURL = 1;
+  // required bytes originalScriptURL = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_originalscripturl(), target);
   }
 
@@ -1723,9 +1723,9 @@ uint8_t* RemoteWorkerData::_InternalSerialize(
         _Internal::cookiejarsettings(this).GetCachedSize(), target, stream);
   }
 
-  // required string domain = 11;
+  // required bytes domain = 11;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         11, this->_internal_domain(), target);
   }
 
@@ -1797,9 +1797,9 @@ uint8_t* RemoteWorkerData::_InternalSerialize(
         22, this->_internal_agentclusterid(), target);
   }
 
-  // required string remoteType = 23;
+  // required bytes remoteType = 23;
   if (cached_has_bits & 0x00000100u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         23, this->_internal_remotetype(), target);
   }
 
@@ -1816,9 +1816,9 @@ size_t RemoteWorkerData::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_originalscripturl()) {
-    // required string originalScriptURL = 1;
+    // required bytes originalScriptURL = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_originalscripturl());
   }
 
@@ -1830,9 +1830,9 @@ size_t RemoteWorkerData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_domain()) {
-    // required string domain = 11;
+    // required bytes domain = 11;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_domain());
   }
 
@@ -1865,9 +1865,9 @@ size_t RemoteWorkerData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_remotetype()) {
-    // required string remoteType = 23;
+    // required bytes remoteType = 23;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_remotetype());
   }
 
@@ -1957,9 +1957,9 @@ size_t RemoteWorkerData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x007f7fdf) ^ 0x007f7fdf) == 0) {  // All required fields are present.
-    // required string originalScriptURL = 1;
+    // required bytes originalScriptURL = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_originalscripturl());
 
     // required bytes workerOptions = 4;
@@ -1967,9 +1967,9 @@ size_t RemoteWorkerData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_workeroptions());
 
-    // required string domain = 11;
+    // required bytes domain = 11;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_domain());
 
     // required bytes referrerInfo = 14;
@@ -1992,9 +1992,9 @@ size_t RemoteWorkerData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_agentclusterid());
 
-    // required string remoteType = 23;
+    // required bytes remoteType = 23;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_remotetype());
 
     // required .protobuf.mozilla.ipc.URIParams baseScriptURL = 2;
@@ -2424,7 +2424,7 @@ const char* ErrorDataNote::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required string message = 3;
+      // required bytes message = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_message();
@@ -2433,7 +2433,7 @@ const char* ErrorDataNote::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required string filename = 4;
+      // required bytes filename = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_filename();
@@ -2485,15 +2485,15 @@ uint8_t* ErrorDataNote::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_columnnumber(), target);
   }
 
-  // required string message = 3;
+  // required bytes message = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_message(), target);
   }
 
-  // required string filename = 4;
+  // required bytes filename = 4;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_filename(), target);
   }
 
@@ -2510,16 +2510,16 @@ size_t ErrorDataNote::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_message()) {
-    // required string message = 3;
+    // required bytes message = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_message());
   }
 
   if (_internal_has_filename()) {
-    // required string filename = 4;
+    // required bytes filename = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filename());
   }
 
@@ -2540,14 +2540,14 @@ size_t ErrorDataNote::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string message = 3;
+    // required bytes message = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_message());
 
-    // required string filename = 4;
+    // required bytes filename = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filename());
 
     // required uint32 lineNumber = 1;
@@ -2812,7 +2812,7 @@ const char* ErrorData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string message = 4;
+      // required bytes message = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_message();
@@ -2821,7 +2821,7 @@ const char* ErrorData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string filename = 5;
+      // required bytes filename = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_filename();
@@ -2892,15 +2892,15 @@ uint8_t* ErrorData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_columnnumber(), target);
   }
 
-  // required string message = 4;
+  // required bytes message = 4;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_message(), target);
   }
 
-  // required string filename = 5;
+  // required bytes filename = 5;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         5, this->_internal_filename(), target);
   }
 
@@ -2925,16 +2925,16 @@ size_t ErrorData::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_message()) {
-    // required string message = 4;
+    // required bytes message = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_message());
   }
 
   if (_internal_has_filename()) {
-    // required string filename = 5;
+    // required bytes filename = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filename());
   }
 
@@ -2960,14 +2960,14 @@ size_t ErrorData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required string message = 4;
+    // required bytes message = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_message());
 
-    // required string filename = 5;
+    // required bytes filename = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filename());
 
     // required bool isWarning = 1;
@@ -3172,7 +3172,7 @@ const char* CSPViolation::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string json = 1;
+      // required bytes json = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_json();
@@ -3212,9 +3212,9 @@ uint8_t* CSPViolation::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string json = 1;
+  // required bytes json = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_json(), target);
   }
 
@@ -3230,10 +3230,10 @@ size_t CSPViolation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.CSPViolation)
   size_t total_size = 0;
 
-  // required string json = 1;
+  // required bytes json = 1;
   if (_internal_has_json()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_json());
   }
   uint32_t cached_has_bits = 0;
@@ -4127,7 +4127,7 @@ const char* RemoteWorkerDebuggerInfo::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string url = 3;
+      // required bytes url = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_url();
@@ -4163,7 +4163,7 @@ const char* RemoteWorkerDebuggerInfo::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string Id = 7;
+      // required bytes Id = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_id();
@@ -4172,7 +4172,7 @@ const char* RemoteWorkerDebuggerInfo::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string name = 8;
+      // required bytes name = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_name();
@@ -4181,7 +4181,7 @@ const char* RemoteWorkerDebuggerInfo::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string parentId = 9;
+      // required bytes parentId = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_parentid();
@@ -4233,9 +4233,9 @@ uint8_t* RemoteWorkerDebuggerInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_type(), target);
   }
 
-  // required string url = 3;
+  // required bytes url = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_url(), target);
   }
 
@@ -4257,21 +4257,21 @@ uint8_t* RemoteWorkerDebuggerInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(6, this->_internal_serviceworkerid(), target);
   }
 
-  // required string Id = 7;
+  // required bytes Id = 7;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         7, this->_internal_id(), target);
   }
 
-  // required string name = 8;
+  // required bytes name = 8;
   if (cached_has_bits & 0x00000008u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         8, this->_internal_name(), target);
   }
 
-  // required string parentId = 9;
+  // required bytes parentId = 9;
   if (cached_has_bits & 0x00000010u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         9, this->_internal_parentid(), target);
   }
 
@@ -4288,9 +4288,9 @@ size_t RemoteWorkerDebuggerInfo::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_url()) {
-    // required string url = 3;
+    // required bytes url = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_url());
   }
 
@@ -4302,23 +4302,23 @@ size_t RemoteWorkerDebuggerInfo::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_id()) {
-    // required string Id = 7;
+    // required bytes Id = 7;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_id());
   }
 
   if (_internal_has_name()) {
-    // required string name = 8;
+    // required bytes name = 8;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
   }
 
   if (_internal_has_parentid()) {
-    // required string parentId = 9;
+    // required bytes parentId = 9;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_parentid());
   }
 
@@ -4349,9 +4349,9 @@ size_t RemoteWorkerDebuggerInfo::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x000001ff) ^ 0x000001ff) == 0) {  // All required fields are present.
-    // required string url = 3;
+    // required bytes url = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_url());
 
     // required bytes principal = 5;
@@ -4359,19 +4359,19 @@ size_t RemoteWorkerDebuggerInfo::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_principal());
 
-    // required string Id = 7;
+    // required bytes Id = 7;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_id());
 
-    // required string name = 8;
+    // required bytes name = 8;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
 
-    // required string parentId = 9;
+    // required bytes parentId = 9;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_parentid());
 
     // required bool isChrome = 1;
@@ -4622,7 +4622,7 @@ const char* RemoteWorkerDebuggerErrorInfo::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string fileName = 1;
+      // required bytes fileName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_filename();
@@ -4640,7 +4640,7 @@ const char* RemoteWorkerDebuggerErrorInfo::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required string message = 3;
+      // required bytes message = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_message();
@@ -4680,9 +4680,9 @@ uint8_t* RemoteWorkerDebuggerErrorInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string fileName = 1;
+  // required bytes fileName = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_filename(), target);
   }
 
@@ -4692,9 +4692,9 @@ uint8_t* RemoteWorkerDebuggerErrorInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_lineno(), target);
   }
 
-  // required string message = 3;
+  // required bytes message = 3;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_message(), target);
   }
 
@@ -4711,16 +4711,16 @@ size_t RemoteWorkerDebuggerErrorInfo::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_filename()) {
-    // required string fileName = 1;
+    // required bytes fileName = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filename());
   }
 
   if (_internal_has_message()) {
-    // required string message = 3;
+    // required bytes message = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_message());
   }
 
@@ -4736,14 +4736,14 @@ size_t RemoteWorkerDebuggerErrorInfo::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string fileName = 1;
+    // required bytes fileName = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filename());
 
-    // required string message = 3;
+    // required bytes message = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_message());
 
     // required uint32 lineNo = 2;

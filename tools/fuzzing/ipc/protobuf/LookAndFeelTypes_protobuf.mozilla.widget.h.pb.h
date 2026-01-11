@@ -183,7 +183,7 @@ class LookAndFeelFont final :
     kItalicFieldNumber = 5,
     kWeightFieldNumber = 4,
   };
-  // required string name = 2;
+  // required bytes name = 2;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -861,7 +861,7 @@ inline void LookAndFeelFont::set_havefont(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.LookAndFeelFont.haveFont)
 }
 
-// required string name = 2;
+// required bytes name = 2;
 inline bool LookAndFeelFont::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -881,7 +881,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LookAndFeelFont::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.LookAndFeelFont.name)
 }
 inline std::string* LookAndFeelFont::mutable_name() {

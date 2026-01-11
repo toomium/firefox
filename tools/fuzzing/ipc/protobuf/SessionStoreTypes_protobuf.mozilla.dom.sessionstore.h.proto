@@ -19,20 +19,20 @@ message Checkbox {
 }
 
 message TextField {
-  required string value = 1;
+  required bytes value = 1;
 }
 
 message FileList {
-  repeated string valueList = 1;
+  repeated bytes valueList = 1;
 }
 
 message SingleSelect {
   required uint32 index = 1;
-  required string value = 2;
+  required bytes value = 2;
 }
 
 message MultipleSelect {
-  repeated string valueList = 1;
+  repeated bytes valueList = 1;
 }
 
 message FormEntryValue {
@@ -47,7 +47,7 @@ message FormEntryValue {
 }
 
 message FormEntry {
-  required string id = 1;
+  required bytes id = 1;
   required protobuf.mozilla.dom.sessionstore.FormEntryValue value = 2;
 }
 
@@ -55,11 +55,11 @@ message FormData {
   required bool hasData = 1;
   repeated protobuf.mozilla.dom.sessionstore.FormEntry id = 2;
   repeated protobuf.mozilla.dom.sessionstore.FormEntry xpath = 3;
-  required string innerHTML = 4;
-  required string uri = 5;
+  required bytes innerHTML = 4;
+  required bytes uri = 5;
 }
 
 message DocShellRestoreState {
   required bytes URI = 1;
-  required string docShellCaps = 2;
+  required bytes docShellCaps = 2;
 }

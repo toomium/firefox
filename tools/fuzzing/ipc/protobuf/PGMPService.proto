@@ -19,8 +19,8 @@ import "GMPTypes.proto";
 // Message declarations
 message Msg_LaunchGMP {
   required protobuf.mozilla.gmp.NodeIdVariant nodeIdVariant = 1;
-  required string api = 2;
-  repeated string tags = 3;
+  required bytes api = 2;
+  repeated bytes tags = 3;
   repeated bytes alreadyBridgedTo = 4;
 }
 
@@ -29,13 +29,13 @@ message Reply_LaunchGMP {
 }
 
 message Msg_GetGMPNodeId {
-  required string origin = 1;
-  required string topLevelOrigin = 2;
-  required string gmpName = 3;
+  required bytes origin = 1;
+  required bytes topLevelOrigin = 2;
+  required bytes gmpName = 3;
 }
 
 message Reply_GetGMPNodeId {
-  required string id = 1;
+  required bytes id = 1;
 }
 
 message Msg_BeginShutdown {
@@ -44,5 +44,5 @@ message Msg_BeginShutdown {
 // Parameter mappings stats:
 // Total parameters in this file 18
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 2, "<class 'ipdl.type.BuiltinCType'>": 0, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 1, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 13, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 1, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 9
+// Scalar mappings performed: 1
 // Message structs/unions generated from ipdl structs/unions: 1

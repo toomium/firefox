@@ -204,7 +204,7 @@ class Msg_AsyncLog final :
     kALineNumberFieldNumber = 2,
     kAColumnNumberFieldNumber = 3,
   };
-  // repeated string aParams = 5;
+  // repeated bytes aParams = 5;
   int aparams_size() const;
   private:
   int _internal_aparams_size() const;
@@ -215,12 +215,12 @@ class Msg_AsyncLog final :
   void set_aparams(int index, const std::string& value);
   void set_aparams(int index, std::string&& value);
   void set_aparams(int index, const char* value);
-  void set_aparams(int index, const char* value, size_t size);
+  void set_aparams(int index, const void* value, size_t size);
   std::string* add_aparams();
   void add_aparams(const std::string& value);
   void add_aparams(std::string&& value);
   void add_aparams(const char* value);
-  void add_aparams(const char* value, size_t size);
+  void add_aparams(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& aparams() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_aparams();
   private:
@@ -228,7 +228,7 @@ class Msg_AsyncLog final :
   std::string* _internal_add_aparams();
   public:
 
-  // required string aScriptSpec = 1;
+  // required bytes aScriptSpec = 1;
   bool has_ascriptspec() const;
   private:
   bool _internal_has_ascriptspec() const;
@@ -246,7 +246,7 @@ class Msg_AsyncLog final :
   std::string* _internal_mutable_ascriptspec();
   public:
 
-  // required string aMessageName = 4;
+  // required bytes aMessageName = 4;
   bool has_amessagename() const;
   private:
   bool _internal_has_amessagename() const;
@@ -1182,7 +1182,7 @@ class Msg_PreloadResponseEnd final :
 #endif  // __GNUC__
 // Msg_AsyncLog
 
-// required string aScriptSpec = 1;
+// required bytes aScriptSpec = 1;
 inline bool Msg_AsyncLog::_internal_has_ascriptspec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1202,7 +1202,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncLog::set_ascriptspec(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ascriptspec_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.ascriptspec_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFetchEventOpProxy.Msg_AsyncLog.aScriptSpec)
 }
 inline std::string* Msg_AsyncLog::mutable_ascriptspec() {
@@ -1306,7 +1306,7 @@ inline void Msg_AsyncLog::set_acolumnnumber(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFetchEventOpProxy.Msg_AsyncLog.aColumnNumber)
 }
 
-// required string aMessageName = 4;
+// required bytes aMessageName = 4;
 inline bool Msg_AsyncLog::_internal_has_amessagename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1326,7 +1326,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncLog::set_amessagename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.amessagename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.amessagename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFetchEventOpProxy.Msg_AsyncLog.aMessageName)
 }
 inline std::string* Msg_AsyncLog::mutable_amessagename() {
@@ -1374,7 +1374,7 @@ inline void Msg_AsyncLog::set_allocated_amessagename(std::string* amessagename) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PFetchEventOpProxy.Msg_AsyncLog.aMessageName)
 }
 
-// repeated string aParams = 5;
+// repeated bytes aParams = 5;
 inline int Msg_AsyncLog::_internal_aparams_size() const {
   return _impl_.aparams_.size();
 }
@@ -1413,7 +1413,7 @@ inline void Msg_AsyncLog::set_aparams(int index, const char* value) {
   _impl_.aparams_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PFetchEventOpProxy.Msg_AsyncLog.aParams)
 }
-inline void Msg_AsyncLog::set_aparams(int index, const char* value, size_t size) {
+inline void Msg_AsyncLog::set_aparams(int index, const void* value, size_t size) {
   _impl_.aparams_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PFetchEventOpProxy.Msg_AsyncLog.aParams)
@@ -1434,7 +1434,7 @@ inline void Msg_AsyncLog::add_aparams(const char* value) {
   _impl_.aparams_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PFetchEventOpProxy.Msg_AsyncLog.aParams)
 }
-inline void Msg_AsyncLog::add_aparams(const char* value, size_t size) {
+inline void Msg_AsyncLog::add_aparams(const void* value, size_t size) {
   _impl_.aparams_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PFetchEventOpProxy.Msg_AsyncLog.aParams)
 }

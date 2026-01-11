@@ -315,7 +315,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
     kMinSizeFieldNumber = 4,
     kIncreasePeakUsageFieldNumber = 3,
   };
-  // required string documentURI = 1;
+  // required bytes documentURI = 1;
   bool has_documenturi() const;
   private:
   bool _internal_has_documenturi() const;
@@ -333,7 +333,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   std::string* _internal_mutable_documenturi();
   public:
 
-  // required string key = 2;
+  // required bytes key = 2;
   bool has_key() const;
   private:
   bool _internal_has_key() const;
@@ -684,7 +684,7 @@ class Msg_RequestAllowToClose final :
 
 // Msg_PBackgroundLSSnapshotConstructor
 
-// required string documentURI = 1;
+// required bytes documentURI = 1;
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -704,7 +704,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PBackgroundLSSnapshotConstructor::set_documenturi(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.documenturi_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.documenturi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.documentURI)
 }
 inline std::string* Msg_PBackgroundLSSnapshotConstructor::mutable_documenturi() {
@@ -752,7 +752,7 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_allocated_documenturi(std:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.documentURI)
 }
 
-// required string key = 2;
+// required bytes key = 2;
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -772,7 +772,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PBackgroundLSSnapshotConstructor::set_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.key)
 }
 inline std::string* Msg_PBackgroundLSSnapshotConstructor::mutable_key() {

@@ -1154,7 +1154,7 @@ const char* ServiceWorkerLifeCycleEventOpArgs::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string eventName = 1;
+      // required bytes eventName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_eventname();
@@ -1194,9 +1194,9 @@ uint8_t* ServiceWorkerLifeCycleEventOpArgs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string eventName = 1;
+  // required bytes eventName = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_eventname(), target);
   }
 
@@ -1212,10 +1212,10 @@ size_t ServiceWorkerLifeCycleEventOpArgs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.ServiceWorkerLifeCycleEventOpArgs)
   size_t total_size = 0;
 
-  // required string eventName = 1;
+  // required bytes eventName = 1;
   if (_internal_has_eventname()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_eventname());
   }
   uint32_t cached_has_bits = 0;
@@ -2140,7 +2140,7 @@ const char* ServiceWorkerPushEventOpArgs::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string messageId = 1;
+      // required bytes messageId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_messageid();
@@ -2188,9 +2188,9 @@ uint8_t* ServiceWorkerPushEventOpArgs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string messageId = 1;
+  // required bytes messageId = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_messageid(), target);
   }
 
@@ -2214,9 +2214,9 @@ size_t ServiceWorkerPushEventOpArgs::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_messageid()) {
-    // required string messageId = 1;
+    // required bytes messageId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_messageid());
   }
 
@@ -2234,9 +2234,9 @@ size_t ServiceWorkerPushEventOpArgs::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string messageId = 1;
+    // required bytes messageId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_messageid());
 
     // required .protobuf.mozilla.dom.OptionalPushData data = 2;
@@ -2420,7 +2420,7 @@ const char* PushSubscriptionData::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string endpoint = 1;
+      // required bytes endpoint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_endpoint();
@@ -2508,9 +2508,9 @@ uint8_t* PushSubscriptionData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string endpoint = 1;
+  // required bytes endpoint = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_endpoint(), target);
   }
 
@@ -2544,10 +2544,10 @@ size_t PushSubscriptionData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PushSubscriptionData)
   size_t total_size = 0;
 
-  // required string endpoint = 1;
+  // required bytes endpoint = 1;
   if (_internal_has_endpoint()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_endpoint());
   }
   uint32_t cached_has_bits = 0;
@@ -2979,7 +2979,7 @@ const char* ServiceWorkerNotificationClickEventOpArgs::_InternalParse(const char
         } else
           goto handle_unusual;
         continue;
-      // required string action = 2;
+      // required bytes action = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_action();
@@ -3026,9 +3026,9 @@ uint8_t* ServiceWorkerNotificationClickEventOpArgs::_InternalSerialize(
         _Internal::notification(this).GetCachedSize(), target, stream);
   }
 
-  // required string action = 2;
+  // required bytes action = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_action(), target);
   }
 
@@ -3045,9 +3045,9 @@ size_t ServiceWorkerNotificationClickEventOpArgs::RequiredFieldsByteSizeFallback
   size_t total_size = 0;
 
   if (_internal_has_action()) {
-    // required string action = 2;
+    // required bytes action = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_action());
   }
 
@@ -3065,9 +3065,9 @@ size_t ServiceWorkerNotificationClickEventOpArgs::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string action = 2;
+    // required bytes action = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_action());
 
     // required .protobuf.mozilla.dom.IPCNotification notification = 1;
@@ -3807,7 +3807,7 @@ const char* ServiceWorkerExtensionAPIEventOpArgs::_InternalParse(const char* ptr
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string apiNamespace = 1;
+      // required bytes apiNamespace = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_apinamespace();
@@ -3816,7 +3816,7 @@ const char* ServiceWorkerExtensionAPIEventOpArgs::_InternalParse(const char* ptr
         } else
           goto handle_unusual;
         continue;
-      // required string apiEventName = 2;
+      // required bytes apiEventName = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_apieventname();
@@ -3856,15 +3856,15 @@ uint8_t* ServiceWorkerExtensionAPIEventOpArgs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string apiNamespace = 1;
+  // required bytes apiNamespace = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_apinamespace(), target);
   }
 
-  // required string apiEventName = 2;
+  // required bytes apiEventName = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_apieventname(), target);
   }
 
@@ -3881,16 +3881,16 @@ size_t ServiceWorkerExtensionAPIEventOpArgs::RequiredFieldsByteSizeFallback() co
   size_t total_size = 0;
 
   if (_internal_has_apinamespace()) {
-    // required string apiNamespace = 1;
+    // required bytes apiNamespace = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_apinamespace());
   }
 
   if (_internal_has_apieventname()) {
-    // required string apiEventName = 2;
+    // required bytes apiEventName = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_apieventname());
   }
 
@@ -3901,14 +3901,14 @@ size_t ServiceWorkerExtensionAPIEventOpArgs::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string apiNamespace = 1;
+    // required bytes apiNamespace = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_apinamespace());
 
-    // required string apiEventName = 2;
+    // required bytes apiEventName = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_apieventname());
 
   } else {
@@ -4479,7 +4479,7 @@ const char* ServiceWorkerFetchEventOpArgsCommon::_InternalParse(const char* ptr,
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string workerScriptSpec = 1;
+      // required bytes workerScriptSpec = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_workerscriptspec();
@@ -4496,7 +4496,7 @@ const char* ServiceWorkerFetchEventOpArgsCommon::_InternalParse(const char* ptr,
         } else
           goto handle_unusual;
         continue;
-      // required string clientId = 3;
+      // required bytes clientId = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_clientid();
@@ -4505,7 +4505,7 @@ const char* ServiceWorkerFetchEventOpArgsCommon::_InternalParse(const char* ptr,
         } else
           goto handle_unusual;
         continue;
-      // required string resultingClientId = 4;
+      // required bytes resultingClientId = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_resultingclientid();
@@ -4572,9 +4572,9 @@ uint8_t* ServiceWorkerFetchEventOpArgsCommon::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string workerScriptSpec = 1;
+  // required bytes workerScriptSpec = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_workerscriptspec(), target);
   }
 
@@ -4585,15 +4585,15 @@ uint8_t* ServiceWorkerFetchEventOpArgsCommon::_InternalSerialize(
         _Internal::internalrequest(this).GetCachedSize(), target, stream);
   }
 
-  // required string clientId = 3;
+  // required bytes clientId = 3;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_clientid(), target);
   }
 
-  // required string resultingClientId = 4;
+  // required bytes resultingClientId = 4;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_resultingclientid(), target);
   }
 
@@ -4628,23 +4628,23 @@ size_t ServiceWorkerFetchEventOpArgsCommon::RequiredFieldsByteSizeFallback() con
   size_t total_size = 0;
 
   if (_internal_has_workerscriptspec()) {
-    // required string workerScriptSpec = 1;
+    // required bytes workerScriptSpec = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_workerscriptspec());
   }
 
   if (_internal_has_clientid()) {
-    // required string clientId = 3;
+    // required bytes clientId = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_clientid());
   }
 
   if (_internal_has_resultingclientid()) {
-    // required string resultingClientId = 4;
+    // required bytes resultingClientId = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_resultingclientid());
   }
 
@@ -4679,19 +4679,19 @@ size_t ServiceWorkerFetchEventOpArgsCommon::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
-    // required string workerScriptSpec = 1;
+    // required bytes workerScriptSpec = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_workerscriptspec());
 
-    // required string clientId = 3;
+    // required bytes clientId = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_clientid());
 
-    // required string resultingClientId = 4;
+    // required bytes resultingClientId = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_resultingclientid());
 
     // required bytes testingInjectCancellation = 7;
@@ -6833,7 +6833,7 @@ const char* FetchEventRespondWithClosure::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string respondWithScriptSpec = 1;
+      // required bytes respondWithScriptSpec = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_respondwithscriptspec();
@@ -6891,9 +6891,9 @@ uint8_t* FetchEventRespondWithClosure::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string respondWithScriptSpec = 1;
+  // required bytes respondWithScriptSpec = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_respondwithscriptspec(), target);
   }
 
@@ -6922,9 +6922,9 @@ size_t FetchEventRespondWithClosure::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_respondwithscriptspec()) {
-    // required string respondWithScriptSpec = 1;
+    // required bytes respondWithScriptSpec = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_respondwithscriptspec());
   }
 
@@ -6945,9 +6945,9 @@ size_t FetchEventRespondWithClosure::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string respondWithScriptSpec = 1;
+    // required bytes respondWithScriptSpec = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_respondwithscriptspec());
 
     // required uint32 respondWithLineNumber = 2;

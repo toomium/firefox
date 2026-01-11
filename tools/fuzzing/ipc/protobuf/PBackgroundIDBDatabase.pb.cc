@@ -1144,7 +1144,7 @@ const char* Msg_PBackgroundIDBTransactionConstructor::_InternalParse(const char*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string objectStoreNames = 1;
+      // repeated bytes objectStoreNames = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -1206,10 +1206,10 @@ uint8_t* Msg_PBackgroundIDBTransactionConstructor::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string objectStoreNames = 1;
+  // repeated bytes objectStoreNames = 1;
   for (int i = 0, n = this->_internal_objectstorenames_size(); i < n; i++) {
     const auto& s = this->_internal_objectstorenames(i);
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
@@ -1275,11 +1275,11 @@ size_t Msg_PBackgroundIDBTransactionConstructor::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string objectStoreNames = 1;
+  // repeated bytes objectStoreNames = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.objectstorenames_.size());
   for (int i = 0, n = _impl_.objectstorenames_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.objectstorenames_.Get(i));
   }
 

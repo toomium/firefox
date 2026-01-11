@@ -941,7 +941,7 @@ class Msg_RenameObjectStore final :
     kNameFieldNumber = 2,
     kObjectStoreIdFieldNumber = 1,
   };
-  // required string name = 2;
+  // required bytes name = 2;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -1432,7 +1432,7 @@ class Msg_RenameIndex final :
     kObjectStoreIdFieldNumber = 1,
     kIndexIdFieldNumber = 2,
   };
-  // required string name = 3;
+  // required bytes name = 3;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -2739,7 +2739,7 @@ inline void Msg_RenameObjectStore::set_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_RenameObjectStore.objectStoreId)
 }
 
-// required string name = 2;
+// required bytes name = 2;
 inline bool Msg_RenameObjectStore::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2759,7 +2759,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RenameObjectStore::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_RenameObjectStore.name)
 }
 inline std::string* Msg_RenameObjectStore::mutable_name() {
@@ -3046,7 +3046,7 @@ inline void Msg_RenameIndex::set_indexid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_RenameIndex.indexId)
 }
 
-// required string name = 3;
+// required bytes name = 3;
 inline bool Msg_RenameIndex::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3066,7 +3066,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RenameIndex::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_RenameIndex.name)
 }
 inline std::string* Msg_RenameIndex::mutable_name() {

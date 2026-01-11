@@ -337,7 +337,7 @@ const char* IPCServiceWorkerRegistrationDescriptor::_InternalParse(const char* p
         } else
           goto handle_unusual;
         continue;
-      // required string scope = 4;
+      // required bytes scope = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_scope();
@@ -429,9 +429,9 @@ uint8_t* IPCServiceWorkerRegistrationDescriptor::_InternalSerialize(
         _Internal::principalinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required string scope = 4;
+  // required bytes scope = 4;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_scope(), target);
   }
 
@@ -475,9 +475,9 @@ size_t IPCServiceWorkerRegistrationDescriptor::RequiredFieldsByteSizeFallback() 
   size_t total_size = 0;
 
   if (_internal_has_scope()) {
-    // required string scope = 4;
+    // required bytes scope = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scope());
   }
 
@@ -512,9 +512,9 @@ size_t IPCServiceWorkerRegistrationDescriptor::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x000000c7) ^ 0x000000c7) == 0) {  // All required fields are present.
-    // required string scope = 4;
+    // required bytes scope = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scope());
 
     // required bytes updateViaCache = 5;

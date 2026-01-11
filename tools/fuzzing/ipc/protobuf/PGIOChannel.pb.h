@@ -877,7 +877,7 @@ class Msg_OnStartRequest final :
   std::string* _internal_mutable_achannelstatus();
   public:
 
-  // required string aContentType = 3;
+  // required bytes aContentType = 3;
   bool has_acontenttype() const;
   private:
   bool _internal_has_acontenttype() const;
@@ -895,7 +895,7 @@ class Msg_OnStartRequest final :
   std::string* _internal_mutable_acontenttype();
   public:
 
-  // required string aEntityID = 4;
+  // required bytes aEntityID = 4;
   bool has_aentityid() const;
   private:
   bool _internal_has_aentityid() const;
@@ -1101,7 +1101,7 @@ class Msg_OnDataAvailable final :
   std::string* _internal_mutable_channelstatus();
   public:
 
-  // required string data = 2;
+  // required bytes data = 2;
   bool has_data() const;
   private:
   bool _internal_has_data() const;
@@ -1779,7 +1779,7 @@ inline void Msg_OnStartRequest::set_acontentlength(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aContentLength)
 }
 
-// required string aContentType = 3;
+// required bytes aContentType = 3;
 inline bool Msg_OnStartRequest::_internal_has_acontenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1799,7 +1799,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStartRequest::set_acontenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.acontenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.acontenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aContentType)
 }
 inline std::string* Msg_OnStartRequest::mutable_acontenttype() {
@@ -1847,7 +1847,7 @@ inline void Msg_OnStartRequest::set_allocated_acontenttype(std::string* acontent
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aContentType)
 }
 
-// required string aEntityID = 4;
+// required bytes aEntityID = 4;
 inline bool Msg_OnStartRequest::_internal_has_aentityid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1867,7 +1867,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStartRequest::set_aentityid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.aentityid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aentityid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aEntityID)
 }
 inline std::string* Msg_OnStartRequest::mutable_aentityid() {
@@ -2074,7 +2074,7 @@ inline void Msg_OnDataAvailable::set_allocated_channelstatus(std::string* channe
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.channelStatus)
 }
 
-// required string data = 2;
+// required bytes data = 2;
 inline bool Msg_OnDataAvailable::_internal_has_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2094,7 +2094,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnDataAvailable::set_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.data_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.data)
 }
 inline std::string* Msg_OnDataAvailable::mutable_data() {

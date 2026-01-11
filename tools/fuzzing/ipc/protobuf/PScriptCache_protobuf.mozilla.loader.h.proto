@@ -13,8 +13,8 @@ package protobuf.mozilla.loader;
 
 // Structs and unions declarations
 message ScriptData {
-  required string url = 1;
-  required string cachePath = 2;
+  required bytes url = 1;
+  required bytes cachePath = 2;
   required bytes loadTime = 3;
   repeated uint32 xdrData = 4;
 }

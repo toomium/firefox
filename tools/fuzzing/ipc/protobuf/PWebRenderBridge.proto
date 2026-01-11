@@ -24,7 +24,7 @@ message Msg_EnsureConnected {
 message Reply_EnsureConnected {
   required bytes textureFactoryIdentifier = 1;
   required bytes maybeIdNamespace = 2;
-  required string error = 3;
+  required bytes error = 3;
 }
 
 message Msg_NewCompositable {
@@ -50,7 +50,7 @@ message Msg_SetDisplayList {
   required bytes vsyncStartTime = 7;
   required bytes refreshStartTime = 8;
   required bytes txnStartTime = 9;
-  required string txnURL = 10;
+  required bytes txnURL = 10;
   required bytes fwdTime = 11;
   repeated bytes payloads = 12;
   required bool renderOffscreen = 13;
@@ -66,7 +66,7 @@ message Msg_EmptyTransaction {
   required bytes vsyncStartTime = 7;
   required bytes refreshStartTime = 8;
   required bytes txnStartTime = 9;
-  required string txnURL = 10;
+  required bytes txnURL = 10;
   required bytes fwdTime = 11;
   repeated bytes payloads = 12;
 }
@@ -116,7 +116,7 @@ message Msg_Capture {
 }
 
 message Msg_StartCaptureSequence {
-  required string aPath = 1;
+  required bytes aPath = 1;
   required uint32 aFlags = 2;
 }
 
@@ -223,5 +223,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 72
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 11, "<class 'ipdl.type.BuiltinCType'>": 7, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 46, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 1, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 1, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 5, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 18
+// Scalar mappings performed: 14
 // Message structs/unions generated from ipdl structs/unions: 0

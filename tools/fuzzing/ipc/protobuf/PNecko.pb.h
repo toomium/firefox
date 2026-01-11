@@ -1865,7 +1865,7 @@ class Msg_PUDPSocketConstructor final :
   std::string* _internal_mutable_principal();
   public:
 
-  // required string filter = 2;
+  // required bytes filter = 2;
   bool has_filter() const;
   private:
   bool _internal_has_filter() const;
@@ -2145,7 +2145,7 @@ class Msg_PDNSRequestConstructor final :
     kPortFieldNumber = 3,
     kTypeFieldNumber = 4,
   };
-  // required string hostName = 1;
+  // required bytes hostName = 1;
   bool has_hostname() const;
   private:
   bool _internal_has_hostname() const;
@@ -2163,7 +2163,7 @@ class Msg_PDNSRequestConstructor final :
   std::string* _internal_mutable_hostname();
   public:
 
-  // required string trrServer = 2;
+  // required bytes trrServer = 2;
   bool has_trrserver() const;
   private:
   bool _internal_has_trrserver() const;
@@ -3821,7 +3821,7 @@ class Msg_HTMLDNSPrefetch final :
     kFlagsFieldNumber = 4,
     kIsHttpsFieldNumber = 2,
   };
-  // required string hostname = 1;
+  // required bytes hostname = 1;
   bool has_hostname() const;
   private:
   bool _internal_has_hostname() const;
@@ -4027,7 +4027,7 @@ class Msg_CancelHTMLDNSPrefetch final :
     kReasonFieldNumber = 5,
     kIsHttpsFieldNumber = 2,
   };
-  // required string hostname = 1;
+  // required bytes hostname = 1;
   bool has_hostname() const;
   private:
   bool _internal_has_hostname() const;
@@ -5770,7 +5770,7 @@ class Msg_PAltDataOutputStreamConstructor final :
     kChannelFieldNumber = 3,
     kPredictedSizeFieldNumber = 2,
   };
-  // required string type = 1;
+  // required bytes type = 1;
   bool has_type() const;
   private:
   bool _internal_has_type() const;
@@ -9062,7 +9062,7 @@ class Msg_NetworkChangeNotification final :
   enum : int {
     kTypeFieldNumber = 1,
   };
-  // required string type = 1;
+  // required bytes type = 1;
   bool has_type() const;
   private:
   bool _internal_has_type() const;
@@ -9457,7 +9457,7 @@ class Msg_SetTRRDomain final :
   enum : int {
     kDomainFieldNumber = 1,
   };
-  // required string domain = 1;
+  // required bytes domain = 1;
   bool has_domain() const;
   private:
   bool _internal_has_domain() const;
@@ -9605,7 +9605,7 @@ class Msg_PTCPSocketConstructor final :
     kHostFieldNumber = 1,
     kPortFieldNumber = 2,
   };
-  // required string host = 1;
+  // required bytes host = 1;
   bool has_host() const;
   private:
   bool _internal_has_host() const;
@@ -10369,7 +10369,7 @@ inline void Msg_PUDPSocketConstructor::set_allocated_principal(std::string* prin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNecko.Msg_PUDPSocketConstructor.principal)
 }
 
-// required string filter = 2;
+// required bytes filter = 2;
 inline bool Msg_PUDPSocketConstructor::_internal_has_filter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10389,7 +10389,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PUDPSocketConstructor::set_filter(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.filter_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.filter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNecko.Msg_PUDPSocketConstructor.filter)
 }
 inline std::string* Msg_PUDPSocketConstructor::mutable_filter() {
@@ -10445,7 +10445,7 @@ inline void Msg_PUDPSocketConstructor::set_allocated_filter(std::string* filter)
 
 // Msg_PDNSRequestConstructor
 
-// required string hostName = 1;
+// required bytes hostName = 1;
 inline bool Msg_PDNSRequestConstructor::_internal_has_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10465,7 +10465,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PDNSRequestConstructor::set_hostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.hostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNecko.Msg_PDNSRequestConstructor.hostName)
 }
 inline std::string* Msg_PDNSRequestConstructor::mutable_hostname() {
@@ -10513,7 +10513,7 @@ inline void Msg_PDNSRequestConstructor::set_allocated_hostname(std::string* host
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNecko.Msg_PDNSRequestConstructor.hostName)
 }
 
-// required string trrServer = 2;
+// required bytes trrServer = 2;
 inline bool Msg_PDNSRequestConstructor::_internal_has_trrserver() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10533,7 +10533,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PDNSRequestConstructor::set_trrserver(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.trrserver_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.trrserver_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNecko.Msg_PDNSRequestConstructor.trrServer)
 }
 inline std::string* Msg_PDNSRequestConstructor::mutable_trrserver() {
@@ -11720,7 +11720,7 @@ inline void Msg_SpeculativeConnect::set_anonymous(bool value) {
 
 // Msg_HTMLDNSPrefetch
 
-// required string hostname = 1;
+// required bytes hostname = 1;
 inline bool Msg_HTMLDNSPrefetch::_internal_has_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11740,7 +11740,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_HTMLDNSPrefetch::set_hostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.hostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNecko.Msg_HTMLDNSPrefetch.hostname)
 }
 inline std::string* Msg_HTMLDNSPrefetch::mutable_hostname() {
@@ -11956,7 +11956,7 @@ inline void Msg_HTMLDNSPrefetch::set_allocated_flags(std::string* flags) {
 
 // Msg_CancelHTMLDNSPrefetch
 
-// required string hostname = 1;
+// required bytes hostname = 1;
 inline bool Msg_CancelHTMLDNSPrefetch::_internal_has_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11976,7 +11976,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelHTMLDNSPrefetch::set_hostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.hostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNecko.Msg_CancelHTMLDNSPrefetch.hostname)
 }
 inline std::string* Msg_CancelHTMLDNSPrefetch::mutable_hostname() {
@@ -12667,7 +12667,7 @@ inline void Msg_RemoveRequestContext::set_rcid(uint64_t value) {
 
 // Msg_PAltDataOutputStreamConstructor
 
-// required string type = 1;
+// required bytes type = 1;
 inline bool Msg_PAltDataOutputStreamConstructor::_internal_has_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12687,7 +12687,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PAltDataOutputStreamConstructor::set_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNecko.Msg_PAltDataOutputStreamConstructor.type)
 }
 inline std::string* Msg_PAltDataOutputStreamConstructor::mutable_type() {
@@ -14075,7 +14075,7 @@ inline void Msg_PredOnPredictDNS::set_allocated_uri(std::string* uri) {
 
 // Msg_NetworkChangeNotification
 
-// required string type = 1;
+// required bytes type = 1;
 inline bool Msg_NetworkChangeNotification::_internal_has_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14095,7 +14095,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NetworkChangeNotification::set_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNecko.Msg_NetworkChangeNotification.type)
 }
 inline std::string* Msg_NetworkChangeNotification::mutable_type() {
@@ -14155,7 +14155,7 @@ inline void Msg_NetworkChangeNotification::set_allocated_type(std::string* type)
 
 // Msg_SetTRRDomain
 
-// required string domain = 1;
+// required bytes domain = 1;
 inline bool Msg_SetTRRDomain::_internal_has_domain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14175,7 +14175,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetTRRDomain::set_domain(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.domain_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.domain_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNecko.Msg_SetTRRDomain.domain)
 }
 inline std::string* Msg_SetTRRDomain::mutable_domain() {
@@ -14227,7 +14227,7 @@ inline void Msg_SetTRRDomain::set_allocated_domain(std::string* domain) {
 
 // Msg_PTCPSocketConstructor
 
-// required string host = 1;
+// required bytes host = 1;
 inline bool Msg_PTCPSocketConstructor::_internal_has_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14247,7 +14247,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PTCPSocketConstructor::set_host(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.host_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNecko.Msg_PTCPSocketConstructor.host)
 }
 inline std::string* Msg_PTCPSocketConstructor::mutable_host() {

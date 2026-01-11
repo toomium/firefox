@@ -202,7 +202,7 @@ class ContentSecurityPolicy final :
     kDeliveredViaMetaTagFlagFieldNumber = 3,
     kHasRequireTrustedTypesForDirectiveFieldNumber = 4,
   };
-  // required string policy = 1;
+  // required bytes policy = 1;
   bool has_policy() const;
   private:
   bool _internal_has_policy() const;
@@ -416,7 +416,7 @@ class ContentPrincipalInfo final :
   std::string* _internal_mutable_attrs();
   public:
 
-  // required string originNoSuffix = 2;
+  // required bytes originNoSuffix = 2;
   bool has_originnosuffix() const;
   private:
   bool _internal_has_originnosuffix() const;
@@ -434,7 +434,7 @@ class ContentPrincipalInfo final :
   std::string* _internal_mutable_originnosuffix();
   public:
 
-  // required string spec = 3;
+  // required bytes spec = 3;
   bool has_spec() const;
   private:
   bool _internal_has_spec() const;
@@ -452,7 +452,7 @@ class ContentPrincipalInfo final :
   std::string* _internal_mutable_spec();
   public:
 
-  // optional string domain = 4;
+  // optional bytes domain = 4;
   bool has_domain() const;
   private:
   bool _internal_has_domain() const;
@@ -470,7 +470,7 @@ class ContentPrincipalInfo final :
   std::string* _internal_mutable_domain();
   public:
 
-  // required string baseDomain = 5;
+  // required bytes baseDomain = 5;
   bool has_basedomain() const;
   private:
   bool _internal_has_basedomain() const;
@@ -767,7 +767,7 @@ class NullPrincipalInfo final :
   std::string* _internal_mutable_attrs();
   public:
 
-  // required string spec = 2;
+  // required bytes spec = 2;
   bool has_spec() const;
   private:
   bool _internal_has_spec() const;
@@ -1338,7 +1338,7 @@ class CSPInfo final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::ContentSecurityPolicy >&
       policyinfos() const;
 
-  // required string selfURISpec = 3;
+  // required bytes selfURISpec = 3;
   bool has_selfurispec() const;
   private:
   bool _internal_has_selfurispec() const;
@@ -1356,7 +1356,7 @@ class CSPInfo final :
   std::string* _internal_mutable_selfurispec();
   public:
 
-  // required string referrer = 4;
+  // required bytes referrer = 4;
   bool has_referrer() const;
   private:
   bool _internal_has_referrer() const;
@@ -1597,7 +1597,7 @@ class WebTransportHash final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_value();
 
-  // required string algorithm = 1;
+  // required bytes algorithm = 1;
   bool has_algorithm() const;
   private:
   bool _internal_has_algorithm() const;
@@ -1642,7 +1642,7 @@ class WebTransportHash final :
 #endif  // __GNUC__
 // ContentSecurityPolicy
 
-// required string policy = 1;
+// required bytes policy = 1;
 inline bool ContentSecurityPolicy::_internal_has_policy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1662,7 +1662,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ContentSecurityPolicy::set_policy(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.policy_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.policy_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.ContentSecurityPolicy.policy)
 }
 inline std::string* ContentSecurityPolicy::mutable_policy() {
@@ -1866,7 +1866,7 @@ inline void ContentPrincipalInfo::set_allocated_attrs(std::string* attrs) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.ContentPrincipalInfo.attrs)
 }
 
-// required string originNoSuffix = 2;
+// required bytes originNoSuffix = 2;
 inline bool ContentPrincipalInfo::_internal_has_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1886,7 +1886,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ContentPrincipalInfo::set_originnosuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.originnosuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.originnosuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.ContentPrincipalInfo.originNoSuffix)
 }
 inline std::string* ContentPrincipalInfo::mutable_originnosuffix() {
@@ -1934,7 +1934,7 @@ inline void ContentPrincipalInfo::set_allocated_originnosuffix(std::string* orig
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.ContentPrincipalInfo.originNoSuffix)
 }
 
-// required string spec = 3;
+// required bytes spec = 3;
 inline bool ContentPrincipalInfo::_internal_has_spec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1954,7 +1954,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ContentPrincipalInfo::set_spec(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.spec_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.spec_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.ContentPrincipalInfo.spec)
 }
 inline std::string* ContentPrincipalInfo::mutable_spec() {
@@ -2002,7 +2002,7 @@ inline void ContentPrincipalInfo::set_allocated_spec(std::string* spec) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.ContentPrincipalInfo.spec)
 }
 
-// optional string domain = 4;
+// optional bytes domain = 4;
 inline bool ContentPrincipalInfo::_internal_has_domain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2022,7 +2022,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ContentPrincipalInfo::set_domain(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.domain_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.domain_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.ContentPrincipalInfo.domain)
 }
 inline std::string* ContentPrincipalInfo::mutable_domain() {
@@ -2070,7 +2070,7 @@ inline void ContentPrincipalInfo::set_allocated_domain(std::string* domain) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.ContentPrincipalInfo.domain)
 }
 
-// required string baseDomain = 5;
+// required bytes baseDomain = 5;
 inline bool ContentPrincipalInfo::_internal_has_basedomain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2090,7 +2090,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ContentPrincipalInfo::set_basedomain(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.basedomain_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.basedomain_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.ContentPrincipalInfo.baseDomain)
 }
 inline std::string* ContentPrincipalInfo::mutable_basedomain() {
@@ -2214,7 +2214,7 @@ inline void NullPrincipalInfo::set_allocated_attrs(std::string* attrs) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.NullPrincipalInfo.attrs)
 }
 
-// required string spec = 2;
+// required bytes spec = 2;
 inline bool NullPrincipalInfo::_internal_has_spec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2234,7 +2234,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void NullPrincipalInfo::set_spec(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.spec_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.spec_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.NullPrincipalInfo.spec)
 }
 inline std::string* NullPrincipalInfo::mutable_spec() {
@@ -2837,7 +2837,7 @@ inline void CSPInfo::set_allocated_requestprincipalinfo(::protobuf::mozilla::ipc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.CSPInfo.requestPrincipalInfo)
 }
 
-// required string selfURISpec = 3;
+// required bytes selfURISpec = 3;
 inline bool CSPInfo::_internal_has_selfurispec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2857,7 +2857,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CSPInfo::set_selfurispec(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfurispec_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.selfurispec_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.CSPInfo.selfURISpec)
 }
 inline std::string* CSPInfo::mutable_selfurispec() {
@@ -2905,7 +2905,7 @@ inline void CSPInfo::set_allocated_selfurispec(std::string* selfurispec) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.CSPInfo.selfURISpec)
 }
 
-// required string referrer = 4;
+// required bytes referrer = 4;
 inline bool CSPInfo::_internal_has_referrer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2925,7 +2925,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CSPInfo::set_referrer(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.referrer_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.referrer_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.CSPInfo.referrer)
 }
 inline std::string* CSPInfo::mutable_referrer() {
@@ -3101,7 +3101,7 @@ inline void CSPInfo::set_skipallowinlinestylecheck(bool value) {
 
 // WebTransportHash
 
-// required string algorithm = 1;
+// required bytes algorithm = 1;
 inline bool WebTransportHash::_internal_has_algorithm() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3121,7 +3121,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebTransportHash::set_algorithm(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.algorithm_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.algorithm_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.WebTransportHash.algorithm)
 }
 inline std::string* WebTransportHash::mutable_algorithm() {

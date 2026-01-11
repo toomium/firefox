@@ -201,7 +201,7 @@ const char* Msg_WriteData::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string data = 1;
+      // required bytes data = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_data();
@@ -241,9 +241,9 @@ uint8_t* Msg_WriteData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string data = 1;
+  // required bytes data = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_data(), target);
   }
 
@@ -259,10 +259,10 @@ size_t Msg_WriteData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PAltDataOutputStream.Msg_WriteData)
   size_t total_size = 0;
 
-  // required string data = 1;
+  // required bytes data = 1;
   if (_internal_has_data()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_data());
   }
   uint32_t cached_has_bits = 0;

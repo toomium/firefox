@@ -22,6 +22,6 @@ message MaybeCookieStruct {
 }
 
 message CookieSubscription {
-  optional string name = 1;
-  required string url = 2;
+  optional bytes name = 1;
+  required bytes url = 2;
 }

@@ -19,50 +19,50 @@ message Msg_DeleteMe {
 }
 
 message Msg_Preload {
-  required string originSuffix = 1;
-  required string originNoSuffix = 2;
+  required bytes originSuffix = 1;
+  required bytes originNoSuffix = 2;
   required uint32 alreadyLoadedCount = 3;
 }
 
 message Reply_Preload {
-  repeated string keys = 1;
-  repeated string values = 2;
+  repeated bytes keys = 1;
+  repeated bytes values = 2;
   required bytes rv = 3;
 }
 
 message Msg_AsyncPreload {
-  required string originSuffix = 1;
-  required string originNoSuffix = 2;
+  required bytes originSuffix = 1;
+  required bytes originNoSuffix = 2;
   required bool priority = 3;
 }
 
 message Msg_AsyncGetUsage {
-  required string scope = 1;
+  required bytes scope = 1;
 }
 
 message Msg_AsyncAddItem {
-  required string originSuffix = 1;
-  required string originNoSuffix = 2;
-  required string key = 3;
-  required string value = 4;
+  required bytes originSuffix = 1;
+  required bytes originNoSuffix = 2;
+  required bytes key = 3;
+  required bytes value = 4;
 }
 
 message Msg_AsyncUpdateItem {
-  required string originSuffix = 1;
-  required string originNoSuffix = 2;
-  required string key = 3;
-  required string value = 4;
+  required bytes originSuffix = 1;
+  required bytes originNoSuffix = 2;
+  required bytes key = 3;
+  required bytes value = 4;
 }
 
 message Msg_AsyncRemoveItem {
-  required string originSuffix = 1;
-  required string originNoSuffix = 2;
-  required string key = 3;
+  required bytes originSuffix = 1;
+  required bytes originNoSuffix = 2;
+  required bytes key = 3;
 }
 
 message Msg_AsyncClear {
-  required string originSuffix = 1;
-  required string originNoSuffix = 2;
+  required bytes originSuffix = 1;
+  required bytes originNoSuffix = 2;
 }
 
 message Msg_AsyncFlush {
@@ -75,7 +75,7 @@ message Msg_ClearAll {
 }
 
 message Msg_ClearMatchingOrigin {
-  required string originNoSuffix = 1;
+  required bytes originNoSuffix = 1;
 }
 
 message Msg_ClearMatchingOriginAttributes {
@@ -89,30 +89,30 @@ message Reply___delete__ {
 }
 
 message Msg_Observe {
-  required string topic = 1;
-  required string originAttributesPattern = 2;
-  required string originScope = 3;
+  required bytes topic = 1;
+  required bytes originAttributesPattern = 2;
+  required bytes originScope = 3;
 }
 
 message Msg_OriginsHavingData {
-  repeated string origins = 1;
+  repeated bytes origins = 1;
 }
 
 message Msg_LoadItem {
-  required string originSuffix = 1;
-  required string originNoSuffix = 2;
-  required string key = 3;
-  required string value = 4;
+  required bytes originSuffix = 1;
+  required bytes originNoSuffix = 2;
+  required bytes key = 3;
+  required bytes value = 4;
 }
 
 message Msg_LoadDone {
-  required string originSuffix = 1;
-  required string originNoSuffix = 2;
+  required bytes originSuffix = 1;
+  required bytes originNoSuffix = 2;
   required bytes rv = 3;
 }
 
 message Msg_LoadUsage {
-  required string scope = 1;
+  required bytes scope = 1;
   required int64 usage = 2;
 }
 
@@ -123,5 +123,5 @@ message Msg_Error {
 // Parameter mappings stats:
 // Total parameters in this file 42
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 3, "<class 'ipdl.type.BuiltinCType'>": 1, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 38, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 35
+// Scalar mappings performed: 3
 // Message structs/unions generated from ipdl structs/unions: 0

@@ -2024,7 +2024,7 @@ class Msg_AnnouncementEvent final :
     kAIDFieldNumber = 1,
     kAPriorityFieldNumber = 3,
   };
-  // required string aAnnouncement = 2;
+  // required bytes aAnnouncement = 2;
   bool has_aannouncement() const;
   private:
   bool _internal_has_aannouncement() const;
@@ -3744,7 +3744,7 @@ class Msg_Announce final :
     kAIDFieldNumber = 1,
     kAPriorityFieldNumber = 3,
   };
-  // required string aAnnouncement = 2;
+  // required bytes aAnnouncement = 2;
   bool has_aannouncement() const;
   private:
   bool _internal_has_aannouncement() const;
@@ -4728,7 +4728,7 @@ class Msg_ReplaceText final :
     kATextFieldNumber = 2,
     kAIDFieldNumber = 1,
   };
-  // required string aText = 2;
+  // required bytes aText = 2;
   bool has_atext() const;
   private:
   bool _internal_has_atext() const;
@@ -4894,7 +4894,7 @@ class Msg_InsertText final :
     kAIDFieldNumber = 1,
     kAPositionFieldNumber = 3,
   };
-  // required string aText = 2;
+  // required bytes aText = 2;
   bool has_atext() const;
   private:
   bool _internal_has_atext() const;
@@ -7647,7 +7647,7 @@ inline void Msg_AnnouncementEvent::set_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.aID)
 }
 
-// required string aAnnouncement = 2;
+// required bytes aAnnouncement = 2;
 inline bool Msg_AnnouncementEvent::_internal_has_aannouncement() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7667,7 +7667,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AnnouncementEvent::set_aannouncement(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aannouncement_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aannouncement_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.aAnnouncement)
 }
 inline std::string* Msg_AnnouncementEvent::mutable_aannouncement() {
@@ -8390,7 +8390,7 @@ inline void Msg_Announce::set_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.aID)
 }
 
-// required string aAnnouncement = 2;
+// required bytes aAnnouncement = 2;
 inline bool Msg_Announce::_internal_has_aannouncement() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8410,7 +8410,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Announce::set_aannouncement(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aannouncement_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aannouncement_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.aAnnouncement)
 }
 inline std::string* Msg_Announce::mutable_aannouncement() {
@@ -9066,7 +9066,7 @@ inline void Msg_ReplaceText::set_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.aID)
 }
 
-// required string aText = 2;
+// required bytes aText = 2;
 inline bool Msg_ReplaceText::_internal_has_atext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9086,7 +9086,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReplaceText::set_atext(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atext_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.aText)
 }
 inline std::string* Msg_ReplaceText::mutable_atext() {
@@ -9166,7 +9166,7 @@ inline void Msg_InsertText::set_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.aID)
 }
 
-// required string aText = 2;
+// required bytes aText = 2;
 inline bool Msg_InsertText::_internal_has_atext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9186,7 +9186,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InsertText::set_atext(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atext_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.aText)
 }
 inline std::string* Msg_InsertText::mutable_atext() {

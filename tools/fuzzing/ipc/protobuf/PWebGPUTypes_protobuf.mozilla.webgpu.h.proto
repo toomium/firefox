@@ -18,7 +18,7 @@ message BufferMapSuccess {
 }
 
 message BufferMapError {
-  required string message = 1;
+  required bytes message = 1;
 }
 
 message BufferMapResult {

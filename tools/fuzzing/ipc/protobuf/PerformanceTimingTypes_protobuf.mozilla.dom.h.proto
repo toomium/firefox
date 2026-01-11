@@ -12,14 +12,14 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message IPCServerTiming {
-  required string name = 1;
+  required bytes name = 1;
   required double duration = 2;
-  required string description = 3;
+  required bytes description = 3;
 }
 
 message IPCPerformanceTimingData {
   repeated protobuf.mozilla.dom.IPCServerTiming serverTiming = 1;
-  required string nextHopProtocol = 2;
+  required bytes nextHopProtocol = 2;
   required bytes asyncOpen = 3;
   required bytes redirectStart = 4;
   required bytes redirectEnd = 5;
@@ -44,7 +44,7 @@ message IPCPerformanceTimingData {
   required uint32 responseStatus = 24;
   required uint32 redirectCount = 25;
   required bool renderBlocking = 26;
-  required string contentType = 27;
+  required bytes contentType = 27;
   required bool allRedirectsSameOrigin = 28;
   required bool allRedirectsPassTAO = 29;
   required bool secureConnection = 30;

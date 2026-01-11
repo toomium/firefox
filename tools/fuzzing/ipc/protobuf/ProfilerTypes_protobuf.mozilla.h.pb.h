@@ -190,7 +190,7 @@ class ProfilerInitParams final :
     kActiveTabIDFieldNumber = 6,
     kFeaturesFieldNumber = 5,
   };
-  // repeated string filters = 7;
+  // repeated bytes filters = 7;
   int filters_size() const;
   private:
   int _internal_filters_size() const;
@@ -201,12 +201,12 @@ class ProfilerInitParams final :
   void set_filters(int index, const std::string& value);
   void set_filters(int index, std::string&& value);
   void set_filters(int index, const char* value);
-  void set_filters(int index, const char* value, size_t size);
+  void set_filters(int index, const void* value, size_t size);
   std::string* add_filters();
   void add_filters(const std::string& value);
   void add_filters(std::string&& value);
   void add_filters(const char* value);
-  void add_filters(const char* value, size_t size);
+  void add_filters(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& filters() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_filters();
   private:
@@ -796,7 +796,7 @@ class GatherProfileProgress final :
     kProgressLocationFieldNumber = 2,
     kProgressProportionValueUnderlyingTypeFieldNumber = 1,
   };
-  // required string progressLocation = 2;
+  // required bytes progressLocation = 2;
   bool has_progresslocation() const;
   private:
   bool _internal_has_progresslocation() const;
@@ -1192,7 +1192,7 @@ inline void ProfilerInitParams::set_activetabid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.activeTabID)
 }
 
-// repeated string filters = 7;
+// repeated bytes filters = 7;
 inline int ProfilerInitParams::_internal_filters_size() const {
   return _impl_.filters_.size();
 }
@@ -1231,7 +1231,7 @@ inline void ProfilerInitParams::set_filters(int index, const char* value) {
   _impl_.filters_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ProfilerInitParams.filters)
 }
-inline void ProfilerInitParams::set_filters(int index, const char* value, size_t size) {
+inline void ProfilerInitParams::set_filters(int index, const void* value, size_t size) {
   _impl_.filters_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ProfilerInitParams.filters)
@@ -1252,7 +1252,7 @@ inline void ProfilerInitParams::add_filters(const char* value) {
   _impl_.filters_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ProfilerInitParams.filters)
 }
-inline void ProfilerInitParams::add_filters(const char* value, size_t size) {
+inline void ProfilerInitParams::add_filters(const void* value, size_t size) {
   _impl_.filters_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ProfilerInitParams.filters)
 }
@@ -1567,7 +1567,7 @@ inline void GatherProfileProgress::set_progressproportionvalueunderlyingtype(uin
   // @@protoc_insertion_point(field_set:protobuf.mozilla.GatherProfileProgress.progressProportionValueUnderlyingType)
 }
 
-// required string progressLocation = 2;
+// required bytes progressLocation = 2;
 inline bool GatherProfileProgress::_internal_has_progresslocation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1587,7 +1587,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GatherProfileProgress::set_progresslocation(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.progresslocation_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.progresslocation_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.GatherProfileProgress.progressLocation)
 }
 inline std::string* GatherProfileProgress::mutable_progresslocation() {

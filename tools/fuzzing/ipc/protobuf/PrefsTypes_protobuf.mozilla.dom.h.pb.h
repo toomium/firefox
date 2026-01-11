@@ -184,7 +184,7 @@ class PrefValue final :
     kMVint32TFieldNumber = 2,
     kMVboolFieldNumber = 3,
   };
-  // string mVnsCString = 1;
+  // bytes mVnsCString = 1;
   bool has_mvnscstring() const;
   private:
   bool _internal_has_mvnscstring() const;
@@ -376,7 +376,7 @@ class Pref final :
     kIsLockedFieldNumber = 2,
     kIsSanitizedFieldNumber = 3,
   };
-  // required string name = 1;
+  // required bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -489,7 +489,7 @@ class Pref final :
 #endif  // __GNUC__
 // PrefValue
 
-// string mVnsCString = 1;
+// bytes mVnsCString = 1;
 inline bool PrefValue::_internal_has_mvnscstring() const {
   return content_case() == kMVnsCString;
 }
@@ -516,7 +516,7 @@ inline void PrefValue::set_mvnscstring(ArgT0&& arg0, ArgT... args) {
     set_has_mvnscstring();
     _impl_.content_.mvnscstring_.InitDefault();
   }
-  _impl_.content_.mvnscstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.mvnscstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PrefValue.mVnsCString)
 }
 inline std::string* PrefValue::mutable_mvnscstring() {
@@ -655,7 +655,7 @@ inline PrefValue::ContentCase PrefValue::content_case() const {
 
 // Pref
 
-// required string name = 1;
+// required bytes name = 1;
 inline bool Pref::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -675,7 +675,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Pref::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.Pref.name)
 }
 inline std::string* Pref::mutable_name() {

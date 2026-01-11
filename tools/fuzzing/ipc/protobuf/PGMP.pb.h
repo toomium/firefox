@@ -1298,7 +1298,7 @@ class Msg_StartPlugin final :
   enum : int {
     kAdapterFieldNumber = 1,
   };
-  // required string adapter = 1;
+  // required bytes adapter = 1;
   bool has_adapter() const;
   private:
   bool _internal_has_adapter() const;
@@ -1569,7 +1569,7 @@ class Msg_ProvideStorageId final :
   enum : int {
     kStorageIdFieldNumber = 1,
   };
-  // required string storageId = 1;
+  // required bytes storageId = 1;
   bool has_storageid() const;
   private:
   bool _internal_has_storageid() const;
@@ -1716,7 +1716,7 @@ class Msg_PreloadLibs final :
   enum : int {
     kLibsFieldNumber = 1,
   };
-  // required string libs = 1;
+  // required bytes libs = 1;
   bool has_libs() const;
   private:
   bool _internal_has_libs() const;
@@ -3089,7 +3089,7 @@ class Reply_Shutdown final :
   enum : int {
     kProfileFieldNumber = 1,
   };
-  // required string profile = 1;
+  // required bytes profile = 1;
   bool has_profile() const;
   private:
   bool _internal_has_profile() const;
@@ -3320,7 +3320,7 @@ inline void Msg_FOGData::set_allocated_buf(std::string* buf) {
 
 // Msg_StartPlugin
 
-// required string adapter = 1;
+// required bytes adapter = 1;
 inline bool Msg_StartPlugin::_internal_has_adapter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3340,7 +3340,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StartPlugin::set_adapter(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.adapter_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.adapter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMP.Msg_StartPlugin.adapter)
 }
 inline std::string* Msg_StartPlugin::mutable_adapter() {
@@ -3396,7 +3396,7 @@ inline void Msg_StartPlugin::set_allocated_adapter(std::string* adapter) {
 
 // Msg_ProvideStorageId
 
-// required string storageId = 1;
+// required bytes storageId = 1;
 inline bool Msg_ProvideStorageId::_internal_has_storageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3416,7 +3416,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ProvideStorageId::set_storageid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.storageid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.storageid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMP.Msg_ProvideStorageId.storageId)
 }
 inline std::string* Msg_ProvideStorageId::mutable_storageid() {
@@ -3468,7 +3468,7 @@ inline void Msg_ProvideStorageId::set_allocated_storageid(std::string* storageid
 
 // Msg_PreloadLibs
 
-// required string libs = 1;
+// required bytes libs = 1;
 inline bool Msg_PreloadLibs::_internal_has_libs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3488,7 +3488,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PreloadLibs::set_libs(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.libs_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.libs_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMP.Msg_PreloadLibs.libs)
 }
 inline std::string* Msg_PreloadLibs::mutable_libs() {
@@ -3895,7 +3895,7 @@ inline void Reply_TestTriggerMetrics::set_unused(bool value) {
 
 // Reply_Shutdown
 
-// required string profile = 1;
+// required bytes profile = 1;
 inline bool Reply_Shutdown::_internal_has_profile() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3915,7 +3915,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_Shutdown::set_profile(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.profile_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.profile_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMP.Reply_Shutdown.profile)
 }
 inline std::string* Reply_Shutdown::mutable_profile() {

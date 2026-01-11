@@ -877,7 +877,7 @@ class Msg_PBackgroundIDBTransactionConstructor final :
     kModeFieldNumber = 2,
     kDurabilityFieldNumber = 3,
   };
-  // repeated string objectStoreNames = 1;
+  // repeated bytes objectStoreNames = 1;
   int objectstorenames_size() const;
   private:
   int _internal_objectstorenames_size() const;
@@ -888,12 +888,12 @@ class Msg_PBackgroundIDBTransactionConstructor final :
   void set_objectstorenames(int index, const std::string& value);
   void set_objectstorenames(int index, std::string&& value);
   void set_objectstorenames(int index, const char* value);
-  void set_objectstorenames(int index, const char* value, size_t size);
+  void set_objectstorenames(int index, const void* value, size_t size);
   std::string* add_objectstorenames();
   void add_objectstorenames(const std::string& value);
   void add_objectstorenames(std::string&& value);
   void add_objectstorenames(const char* value);
-  void add_objectstorenames(const char* value, size_t size);
+  void add_objectstorenames(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& objectstorenames() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_objectstorenames();
   private:
@@ -2166,7 +2166,7 @@ inline void Msg_PBackgroundIDBDatabaseFileConstructor::set_allocated_blob(::prot
 
 // Msg_PBackgroundIDBTransactionConstructor
 
-// repeated string objectStoreNames = 1;
+// repeated bytes objectStoreNames = 1;
 inline int Msg_PBackgroundIDBTransactionConstructor::_internal_objectstorenames_size() const {
   return _impl_.objectstorenames_.size();
 }
@@ -2205,7 +2205,7 @@ inline void Msg_PBackgroundIDBTransactionConstructor::set_objectstorenames(int i
   _impl_.objectstorenames_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBTransactionConstructor.objectStoreNames)
 }
-inline void Msg_PBackgroundIDBTransactionConstructor::set_objectstorenames(int index, const char* value, size_t size) {
+inline void Msg_PBackgroundIDBTransactionConstructor::set_objectstorenames(int index, const void* value, size_t size) {
   _impl_.objectstorenames_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBTransactionConstructor.objectStoreNames)
@@ -2226,7 +2226,7 @@ inline void Msg_PBackgroundIDBTransactionConstructor::add_objectstorenames(const
   _impl_.objectstorenames_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBTransactionConstructor.objectStoreNames)
 }
-inline void Msg_PBackgroundIDBTransactionConstructor::add_objectstorenames(const char* value, size_t size) {
+inline void Msg_PBackgroundIDBTransactionConstructor::add_objectstorenames(const void* value, size_t size) {
   _impl_.objectstorenames_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBTransactionConstructor.objectStoreNames)
 }

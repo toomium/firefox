@@ -17,18 +17,18 @@ import "PrefsTypes.proto";
 
 // Structs and unions declarations
 message HttpHandlerInitArgs {
-  required string mLegacyAppName = 1;
-  required string mLegacyAppVersion = 2;
-  required string mPlatform = 3;
-  required string mOscpu = 4;
-  required string mMisc = 5;
-  required string mProduct = 6;
-  required string mProductSub = 7;
-  required string mAppName = 8;
-  required string mAppVersion = 9;
-  required string mCompatFirefox = 10;
-  required string mCompatDevice = 11;
-  required string mDeviceModelId = 12;
+  required bytes mLegacyAppName = 1;
+  required bytes mLegacyAppVersion = 2;
+  required bytes mPlatform = 3;
+  required bytes mOscpu = 4;
+  required bytes mMisc = 5;
+  required bytes mProduct = 6;
+  required bytes mProductSub = 7;
+  required bytes mAppName = 8;
+  required bytes mAppVersion = 9;
+  required bytes mCompatFirefox = 10;
+  required bytes mCompatDevice = 11;
+  required bytes mDeviceModelId = 12;
 }
 
 message SocketDataArgs {

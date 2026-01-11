@@ -463,7 +463,7 @@ class Msg_CheckAsync final :
   enum : int {
     kAWordFieldNumber = 1,
   };
-  // repeated string aWord = 1;
+  // repeated bytes aWord = 1;
   int aword_size() const;
   private:
   int _internal_aword_size() const;
@@ -474,12 +474,12 @@ class Msg_CheckAsync final :
   void set_aword(int index, const std::string& value);
   void set_aword(int index, std::string&& value);
   void set_aword(int index, const char* value);
-  void set_aword(int index, const char* value, size_t size);
+  void set_aword(int index, const void* value, size_t size);
   std::string* add_aword();
   void add_aword(const std::string& value);
   void add_aword(std::string&& value);
   void add_aword(const char* value);
-  void add_aword(const char* value, size_t size);
+  void add_aword(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& aword() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_aword();
   private:
@@ -765,7 +765,7 @@ class Msg_SetDictionary final :
   enum : int {
     kADictionaryFieldNumber = 1,
   };
-  // required string aDictionary = 1;
+  // required bytes aDictionary = 1;
   bool has_adictionary() const;
   private:
   bool _internal_has_adictionary() const;
@@ -1054,7 +1054,7 @@ class Msg_SetDictionaries final :
   enum : int {
     kADictionariesFieldNumber = 1,
   };
-  // repeated string aDictionaries = 1;
+  // repeated bytes aDictionaries = 1;
   int adictionaries_size() const;
   private:
   int _internal_adictionaries_size() const;
@@ -1065,12 +1065,12 @@ class Msg_SetDictionaries final :
   void set_adictionaries(int index, const std::string& value);
   void set_adictionaries(int index, std::string&& value);
   void set_adictionaries(int index, const char* value);
-  void set_adictionaries(int index, const char* value, size_t size);
+  void set_adictionaries(int index, const void* value, size_t size);
   std::string* add_adictionaries();
   void add_adictionaries(const std::string& value);
   void add_adictionaries(std::string&& value);
   void add_adictionaries(const char* value);
-  void add_adictionaries(const char* value, size_t size);
+  void add_adictionaries(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& adictionaries() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_adictionaries();
   private:
@@ -1349,7 +1349,7 @@ class Msg_Suggest final :
     kAWordFieldNumber = 1,
     kACountFieldNumber = 2,
   };
-  // required string aWord = 1;
+  // required bytes aWord = 1;
   bool has_aword() const;
   private:
   bool _internal_has_aword() const;
@@ -1513,7 +1513,7 @@ class Reply_Suggest final :
   enum : int {
     kASuggestionsFieldNumber = 1,
   };
-  // repeated string aSuggestions = 1;
+  // repeated bytes aSuggestions = 1;
   int asuggestions_size() const;
   private:
   int _internal_asuggestions_size() const;
@@ -1524,12 +1524,12 @@ class Reply_Suggest final :
   void set_asuggestions(int index, const std::string& value);
   void set_asuggestions(int index, std::string&& value);
   void set_asuggestions(int index, const char* value);
-  void set_asuggestions(int index, const char* value, size_t size);
+  void set_asuggestions(int index, const void* value, size_t size);
   std::string* add_asuggestions();
   void add_asuggestions(const std::string& value);
   void add_asuggestions(std::string&& value);
   void add_asuggestions(const char* value);
-  void add_asuggestions(const char* value, size_t size);
+  void add_asuggestions(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& asuggestions() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_asuggestions();
   private:
@@ -1665,7 +1665,7 @@ class Msg_SetDictionaryFromList final :
   enum : int {
     kAListFieldNumber = 1,
   };
-  // repeated string aList = 1;
+  // repeated bytes aList = 1;
   int alist_size() const;
   private:
   int _internal_alist_size() const;
@@ -1676,12 +1676,12 @@ class Msg_SetDictionaryFromList final :
   void set_alist(int index, const std::string& value);
   void set_alist(int index, std::string&& value);
   void set_alist(int index, const char* value);
-  void set_alist(int index, const char* value, size_t size);
+  void set_alist(int index, const void* value, size_t size);
   std::string* add_alist();
   void add_alist(const std::string& value);
   void add_alist(std::string&& value);
   void add_alist(const char* value);
-  void add_alist(const char* value, size_t size);
+  void add_alist(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& alist() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_alist();
   private:
@@ -1818,7 +1818,7 @@ class Reply_SetDictionaryFromList final :
     kADictionaryFieldNumber = 2,
     kASuccessFieldNumber = 1,
   };
-  // required string aDictionary = 2;
+  // required bytes aDictionary = 2;
   bool has_adictionary() const;
   private:
   bool _internal_has_adictionary() const;
@@ -1887,7 +1887,7 @@ class Reply_SetDictionaryFromList final :
 
 // Msg_CheckAsync
 
-// repeated string aWord = 1;
+// repeated bytes aWord = 1;
 inline int Msg_CheckAsync::_internal_aword_size() const {
   return _impl_.aword_.size();
 }
@@ -1926,7 +1926,7 @@ inline void Msg_CheckAsync::set_aword(int index, const char* value) {
   _impl_.aword_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync.aWord)
 }
-inline void Msg_CheckAsync::set_aword(int index, const char* value, size_t size) {
+inline void Msg_CheckAsync::set_aword(int index, const void* value, size_t size) {
   _impl_.aword_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync.aWord)
@@ -1947,7 +1947,7 @@ inline void Msg_CheckAsync::add_aword(const char* value) {
   _impl_.aword_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync.aWord)
 }
-inline void Msg_CheckAsync::add_aword(const char* value, size_t size) {
+inline void Msg_CheckAsync::add_aword(const void* value, size_t size) {
   _impl_.aword_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync.aWord)
 }
@@ -2017,7 +2017,7 @@ Reply_CheckAsync::mutable_aismisspelled() {
 
 // Msg_SetDictionary
 
-// required string aDictionary = 1;
+// required bytes aDictionary = 1;
 inline bool Msg_SetDictionary::_internal_has_adictionary() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2037,7 +2037,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetDictionary::set_adictionary(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.adictionary_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.adictionary_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary.aDictionary)
 }
 inline std::string* Msg_SetDictionary::mutable_adictionary() {
@@ -2121,7 +2121,7 @@ inline void Reply_SetDictionary::set_success(bool value) {
 
 // Msg_SetDictionaries
 
-// repeated string aDictionaries = 1;
+// repeated bytes aDictionaries = 1;
 inline int Msg_SetDictionaries::_internal_adictionaries_size() const {
   return _impl_.adictionaries_.size();
 }
@@ -2160,7 +2160,7 @@ inline void Msg_SetDictionaries::set_adictionaries(int index, const char* value)
   _impl_.adictionaries_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries.aDictionaries)
 }
-inline void Msg_SetDictionaries::set_adictionaries(int index, const char* value, size_t size) {
+inline void Msg_SetDictionaries::set_adictionaries(int index, const void* value, size_t size) {
   _impl_.adictionaries_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries.aDictionaries)
@@ -2181,7 +2181,7 @@ inline void Msg_SetDictionaries::add_adictionaries(const char* value) {
   _impl_.adictionaries_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries.aDictionaries)
 }
-inline void Msg_SetDictionaries::add_adictionaries(const char* value, size_t size) {
+inline void Msg_SetDictionaries::add_adictionaries(const void* value, size_t size) {
   _impl_.adictionaries_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries.aDictionaries)
 }
@@ -2232,7 +2232,7 @@ inline void Reply_SetDictionaries::set_success(bool value) {
 
 // Msg_Suggest
 
-// required string aWord = 1;
+// required bytes aWord = 1;
 inline bool Msg_Suggest::_internal_has_aword() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2252,7 +2252,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Suggest::set_aword(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aword_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aword_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest.aWord)
 }
 inline std::string* Msg_Suggest::mutable_aword() {
@@ -2332,7 +2332,7 @@ inline void Msg_Suggest::set_acount(uint32_t value) {
 
 // Reply_Suggest
 
-// repeated string aSuggestions = 1;
+// repeated bytes aSuggestions = 1;
 inline int Reply_Suggest::_internal_asuggestions_size() const {
   return _impl_.asuggestions_.size();
 }
@@ -2371,7 +2371,7 @@ inline void Reply_Suggest::set_asuggestions(int index, const char* value) {
   _impl_.asuggestions_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest.aSuggestions)
 }
-inline void Reply_Suggest::set_asuggestions(int index, const char* value, size_t size) {
+inline void Reply_Suggest::set_asuggestions(int index, const void* value, size_t size) {
   _impl_.asuggestions_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest.aSuggestions)
@@ -2392,7 +2392,7 @@ inline void Reply_Suggest::add_asuggestions(const char* value) {
   _impl_.asuggestions_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest.aSuggestions)
 }
-inline void Reply_Suggest::add_asuggestions(const char* value, size_t size) {
+inline void Reply_Suggest::add_asuggestions(const void* value, size_t size) {
   _impl_.asuggestions_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest.aSuggestions)
 }
@@ -2411,7 +2411,7 @@ Reply_Suggest::mutable_asuggestions() {
 
 // Msg_SetDictionaryFromList
 
-// repeated string aList = 1;
+// repeated bytes aList = 1;
 inline int Msg_SetDictionaryFromList::_internal_alist_size() const {
   return _impl_.alist_.size();
 }
@@ -2450,7 +2450,7 @@ inline void Msg_SetDictionaryFromList::set_alist(int index, const char* value) {
   _impl_.alist_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList.aList)
 }
-inline void Msg_SetDictionaryFromList::set_alist(int index, const char* value, size_t size) {
+inline void Msg_SetDictionaryFromList::set_alist(int index, const void* value, size_t size) {
   _impl_.alist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList.aList)
@@ -2471,7 +2471,7 @@ inline void Msg_SetDictionaryFromList::add_alist(const char* value) {
   _impl_.alist_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList.aList)
 }
-inline void Msg_SetDictionaryFromList::add_alist(const char* value, size_t size) {
+inline void Msg_SetDictionaryFromList::add_alist(const void* value, size_t size) {
   _impl_.alist_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList.aList)
 }
@@ -2518,7 +2518,7 @@ inline void Reply_SetDictionaryFromList::set_asuccess(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.aSuccess)
 }
 
-// required string aDictionary = 2;
+// required bytes aDictionary = 2;
 inline bool Reply_SetDictionaryFromList::_internal_has_adictionary() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2538,7 +2538,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_SetDictionaryFromList::set_adictionary(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.adictionary_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.adictionary_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.aDictionary)
 }
 inline std::string* Reply_SetDictionaryFromList::mutable_adictionary() {

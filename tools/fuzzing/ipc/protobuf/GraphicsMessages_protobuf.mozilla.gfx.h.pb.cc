@@ -1534,7 +1534,7 @@ const char* FeatureFailure::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required string message = 2;
+      // required bytes message = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_message();
@@ -1543,7 +1543,7 @@ const char* FeatureFailure::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required string failureId = 3;
+      // required bytes failureId = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_failureid();
@@ -1589,15 +1589,15 @@ uint8_t* FeatureFailure::_InternalSerialize(
         1, this->_internal_status(), target);
   }
 
-  // required string message = 2;
+  // required bytes message = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_message(), target);
   }
 
-  // required string failureId = 3;
+  // required bytes failureId = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_failureid(), target);
   }
 
@@ -1621,16 +1621,16 @@ size_t FeatureFailure::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_message()) {
-    // required string message = 2;
+    // required bytes message = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_message());
   }
 
   if (_internal_has_failureid()) {
-    // required string failureId = 3;
+    // required bytes failureId = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_failureid());
   }
 
@@ -1646,14 +1646,14 @@ size_t FeatureFailure::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_status());
 
-    // required string message = 2;
+    // required bytes message = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_message());
 
-    // required string failureId = 3;
+    // required bytes failureId = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_failureid());
 
   } else {
@@ -2470,7 +2470,7 @@ const char* GfxVarValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // string mVnsCString = 5;
+      // bytes mVnsCString = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_mvnscstring();
@@ -2479,7 +2479,7 @@ const char* GfxVarValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // string mVnsString = 6;
+      // bytes mVnsString = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_mvnsstring();
@@ -2571,12 +2571,12 @@ uint8_t* GfxVarValue::_InternalSerialize(
       break;
     }
     case kMVnsCString: {
-      target = stream->WriteStringMaybeAliased(
+      target = stream->WriteBytesMaybeAliased(
           5, this->_internal_mvnscstring(), target);
       break;
     }
     case kMVnsString: {
-      target = stream->WriteStringMaybeAliased(
+      target = stream->WriteBytesMaybeAliased(
           6, this->_internal_mvnsstring(), target);
       break;
     }
@@ -2646,17 +2646,17 @@ size_t GfxVarValue::ByteSizeLong() const {
           this->_internal_mvintsize());
       break;
     }
-    // string mVnsCString = 5;
+    // bytes mVnsCString = 5;
     case kMVnsCString: {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_mvnscstring());
       break;
     }
-    // string mVnsString = 6;
+    // bytes mVnsString = 6;
     case kMVnsString: {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_mvnsstring());
       break;
     }
@@ -3176,7 +3176,7 @@ const char* GfxInfoFeatureStatus::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required string failureId = 3;
+      // required bytes failureId = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_failureid();
@@ -3228,9 +3228,9 @@ uint8_t* GfxInfoFeatureStatus::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_status(), target);
   }
 
-  // required string failureId = 3;
+  // required bytes failureId = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_failureid(), target);
   }
 
@@ -3247,9 +3247,9 @@ size_t GfxInfoFeatureStatus::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_failureid()) {
-    // required string failureId = 3;
+    // required bytes failureId = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_failureid());
   }
 
@@ -3270,9 +3270,9 @@ size_t GfxInfoFeatureStatus::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string failureId = 3;
+    // required bytes failureId = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_failureid());
 
     // required int32 feature = 1;

@@ -1888,7 +1888,7 @@ const char* Msg_NotifyMozMouseScrollEvent::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required string aEvent = 2;
+      // required bytes aEvent = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_aevent();
@@ -1934,9 +1934,9 @@ uint8_t* Msg_NotifyMozMouseScrollEvent::_InternalSerialize(
         1, this->_internal_ascrollid(), target);
   }
 
-  // required string aEvent = 2;
+  // required bytes aEvent = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_aevent(), target);
   }
 
@@ -1960,9 +1960,9 @@ size_t Msg_NotifyMozMouseScrollEvent::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_aevent()) {
-    // required string aEvent = 2;
+    // required bytes aEvent = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aevent());
   }
 
@@ -1978,9 +1978,9 @@ size_t Msg_NotifyMozMouseScrollEvent::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_ascrollid());
 
-    // required string aEvent = 2;
+    // required bytes aEvent = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aevent());
 
   } else {

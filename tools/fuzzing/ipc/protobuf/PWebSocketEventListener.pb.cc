@@ -295,7 +295,7 @@ const char* Msg_WebSocketCreated::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required string aURI = 2;
+      // required bytes aURI = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_auri();
@@ -304,7 +304,7 @@ const char* Msg_WebSocketCreated::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required string aProtocols = 3;
+      // required bytes aProtocols = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_aprotocols();
@@ -350,15 +350,15 @@ uint8_t* Msg_WebSocketCreated::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_awebsocketserialid(), target);
   }
 
-  // required string aURI = 2;
+  // required bytes aURI = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_auri(), target);
   }
 
-  // required string aProtocols = 3;
+  // required bytes aProtocols = 3;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_aprotocols(), target);
   }
 
@@ -375,16 +375,16 @@ size_t Msg_WebSocketCreated::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_auri()) {
-    // required string aURI = 2;
+    // required bytes aURI = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_auri());
   }
 
   if (_internal_has_aprotocols()) {
-    // required string aProtocols = 3;
+    // required bytes aProtocols = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aprotocols());
   }
 
@@ -400,14 +400,14 @@ size_t Msg_WebSocketCreated::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string aURI = 2;
+    // required bytes aURI = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_auri());
 
-    // required string aProtocols = 3;
+    // required bytes aProtocols = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aprotocols());
 
     // required uint32 awebSocketSerialID = 1;
@@ -655,7 +655,7 @@ const char* Msg_WebSocketOpened::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string aEffectiveURI = 2;
+      // required bytes aEffectiveURI = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_aeffectiveuri();
@@ -664,7 +664,7 @@ const char* Msg_WebSocketOpened::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string aProtocols = 3;
+      // required bytes aProtocols = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_aprotocols();
@@ -673,7 +673,7 @@ const char* Msg_WebSocketOpened::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string aExtensions = 4;
+      // required bytes aExtensions = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_aextensions();
@@ -728,21 +728,21 @@ uint8_t* Msg_WebSocketOpened::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_awebsocketserialid(), target);
   }
 
-  // required string aEffectiveURI = 2;
+  // required bytes aEffectiveURI = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_aeffectiveuri(), target);
   }
 
-  // required string aProtocols = 3;
+  // required bytes aProtocols = 3;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_aprotocols(), target);
   }
 
-  // required string aExtensions = 4;
+  // required bytes aExtensions = 4;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_aextensions(), target);
   }
 
@@ -765,23 +765,23 @@ size_t Msg_WebSocketOpened::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_aeffectiveuri()) {
-    // required string aEffectiveURI = 2;
+    // required bytes aEffectiveURI = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aeffectiveuri());
   }
 
   if (_internal_has_aprotocols()) {
-    // required string aProtocols = 3;
+    // required bytes aProtocols = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aprotocols());
   }
 
   if (_internal_has_aextensions()) {
-    // required string aExtensions = 4;
+    // required bytes aExtensions = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aextensions());
   }
 
@@ -802,19 +802,19 @@ size_t Msg_WebSocketOpened::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required string aEffectiveURI = 2;
+    // required bytes aEffectiveURI = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aeffectiveuri());
 
-    // required string aProtocols = 3;
+    // required bytes aProtocols = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aprotocols());
 
-    // required string aExtensions = 4;
+    // required bytes aExtensions = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aextensions());
 
     // required uint64 aHttpChannelId = 5;
@@ -1036,7 +1036,7 @@ const char* Msg_WebSocketMessageAvailable::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required string aData = 2;
+      // required bytes aData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_adata();
@@ -1091,9 +1091,9 @@ uint8_t* Msg_WebSocketMessageAvailable::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_awebsocketserialid(), target);
   }
 
-  // required string aData = 2;
+  // required bytes aData = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_adata(), target);
   }
 
@@ -1116,9 +1116,9 @@ size_t Msg_WebSocketMessageAvailable::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_adata()) {
-    // required string aData = 2;
+    // required bytes aData = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_adata());
   }
 
@@ -1139,9 +1139,9 @@ size_t Msg_WebSocketMessageAvailable::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string aData = 2;
+    // required bytes aData = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_adata());
 
     // required uint32 awebSocketSerialID = 1;
@@ -1372,7 +1372,7 @@ const char* Msg_WebSocketClosed::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string aReason = 4;
+      // required bytes aReason = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_areason();
@@ -1430,9 +1430,9 @@ uint8_t* Msg_WebSocketClosed::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_acode(), target);
   }
 
-  // required string aReason = 4;
+  // required bytes aReason = 4;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_areason(), target);
   }
 
@@ -1449,9 +1449,9 @@ size_t Msg_WebSocketClosed::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_areason()) {
-    // required string aReason = 4;
+    // required bytes aReason = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_areason());
   }
 
@@ -1477,9 +1477,9 @@ size_t Msg_WebSocketClosed::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string aReason = 4;
+    // required bytes aReason = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_areason());
 
     // required uint32 awebSocketSerialID = 1;

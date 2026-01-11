@@ -2686,7 +2686,7 @@ class Msg_DeviceCreateShaderModule final :
   std::string* _internal_mutable_bufferid();
   public:
 
-  // required string label = 3;
+  // required bytes label = 3;
   bool has_label() const;
   private:
   bool _internal_has_label() const;
@@ -2704,7 +2704,7 @@ class Msg_DeviceCreateShaderModule final :
   std::string* _internal_mutable_label();
   public:
 
-  // required string code = 4;
+  // required bytes code = 4;
   bool has_code() const;
   private:
   bool _internal_has_code() const;
@@ -8320,7 +8320,7 @@ class Msg_ReportError final :
   std::string* _internal_mutable_atype();
   public:
 
-  // required string message = 3;
+  // required bytes message = 3;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -8491,7 +8491,7 @@ class Msg_UncapturedError final :
   std::string* _internal_mutable_adeviceid();
   public:
 
-  // required string message = 2;
+  // required bytes message = 2;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -8659,7 +8659,7 @@ class Msg_DeviceLost final :
   std::string* _internal_mutable_adeviceid();
   public:
 
-  // required string message = 3;
+  // required bytes message = 3;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -11117,7 +11117,7 @@ inline void Msg_DeviceCreateShaderModule::set_allocated_bufferid(std::string* bu
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.bufferId)
 }
 
-// required string label = 3;
+// required bytes label = 3;
 inline bool Msg_DeviceCreateShaderModule::_internal_has_label() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11137,7 +11137,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateShaderModule::set_label(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.label_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.label_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.label)
 }
 inline std::string* Msg_DeviceCreateShaderModule::mutable_label() {
@@ -11185,7 +11185,7 @@ inline void Msg_DeviceCreateShaderModule::set_allocated_label(std::string* label
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.label)
 }
 
-// required string code = 4;
+// required bytes code = 4;
 inline bool Msg_DeviceCreateShaderModule::_internal_has_code() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11205,7 +11205,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateShaderModule::set_code(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.code_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.code_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.code)
 }
 inline std::string* Msg_DeviceCreateShaderModule::mutable_code() {
@@ -15459,7 +15459,7 @@ inline void Msg_ReportError::set_allocated_atype(std::string* atype) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.aType)
 }
 
-// required string message = 3;
+// required bytes message = 3;
 inline bool Msg_ReportError::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -15479,7 +15479,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReportError::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.message)
 }
 inline std::string* Msg_ReportError::mutable_message() {
@@ -15599,7 +15599,7 @@ inline void Msg_UncapturedError::set_allocated_adeviceid(std::string* adeviceid)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.aDeviceId)
 }
 
-// required string message = 2;
+// required bytes message = 2;
 inline bool Msg_UncapturedError::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -15619,7 +15619,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UncapturedError::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.message)
 }
 inline std::string* Msg_UncapturedError::mutable_message() {
@@ -15767,7 +15767,7 @@ inline void Msg_DeviceLost::set_reason(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.reason)
 }
 
-// required string message = 3;
+// required bytes message = 3;
 inline bool Msg_DeviceLost::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -15787,7 +15787,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceLost::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.message)
 }
 inline std::string* Msg_DeviceLost::mutable_message() {

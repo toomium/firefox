@@ -216,7 +216,7 @@ class SelectContentData final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_indices();
 
-  // repeated string values = 2;
+  // repeated bytes values = 2;
   int values_size() const;
   private:
   int _internal_values_size() const;
@@ -227,12 +227,12 @@ class SelectContentData final :
   void set_values(int index, const std::string& value);
   void set_values(int index, std::string&& value);
   void set_values(int index, const char* value);
-  void set_values(int index, const char* value, size_t size);
+  void set_values(int index, const void* value, size_t size);
   std::string* add_values();
   void add_values(const std::string& value);
   void add_values(std::string&& value);
   void add_values(const char* value);
-  void add_values(const char* value, size_t size);
+  void add_values(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& values() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_values();
   private:
@@ -536,7 +536,7 @@ class FileContentData final :
   std::string* _internal_mutable_mvblobimpl();
   public:
 
-  // string mVnsString = 2;
+  // bytes mVnsString = 2;
   bool has_mvnsstring() const;
   private:
   bool _internal_has_mvnsstring() const;
@@ -697,7 +697,7 @@ class TextContentData final :
     kValueFieldNumber = 1,
     kLastValueChangeWasInteractiveFieldNumber = 2,
   };
-  // required string value = 1;
+  // required bytes value = 1;
   bool has_value() const;
   private:
   bool _internal_has_value() const;
@@ -1471,7 +1471,7 @@ SelectContentData::mutable_indices() {
   return _internal_mutable_indices();
 }
 
-// repeated string values = 2;
+// repeated bytes values = 2;
 inline int SelectContentData::_internal_values_size() const {
   return _impl_.values_.size();
 }
@@ -1510,7 +1510,7 @@ inline void SelectContentData::set_values(int index, const char* value) {
   _impl_.values_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.SelectContentData.values)
 }
-inline void SelectContentData::set_values(int index, const char* value, size_t size) {
+inline void SelectContentData::set_values(int index, const void* value, size_t size) {
   _impl_.values_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.SelectContentData.values)
@@ -1531,7 +1531,7 @@ inline void SelectContentData::add_values(const char* value) {
   _impl_.values_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.SelectContentData.values)
 }
-inline void SelectContentData::add_values(const char* value, size_t size) {
+inline void SelectContentData::add_values(const void* value, size_t size) {
   _impl_.values_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.SelectContentData.values)
 }
@@ -1659,7 +1659,7 @@ inline void FileContentData::set_allocated_mvblobimpl(std::string* mvblobimpl) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.FileContentData.mVBlobImpl)
 }
 
-// string mVnsString = 2;
+// bytes mVnsString = 2;
 inline bool FileContentData::_internal_has_mvnsstring() const {
   return content_case() == kMVnsString;
 }
@@ -1686,7 +1686,7 @@ inline void FileContentData::set_mvnsstring(ArgT0&& arg0, ArgT... args) {
     set_has_mvnsstring();
     _impl_.content_.mvnsstring_.InitDefault();
   }
-  _impl_.content_.mvnsstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.mvnsstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.FileContentData.mVnsString)
 }
 inline std::string* FileContentData::mutable_mvnsstring() {
@@ -1749,7 +1749,7 @@ inline FileContentData::ContentCase FileContentData::content_case() const {
 
 // TextContentData
 
-// required string value = 1;
+// required bytes value = 1;
 inline bool TextContentData::_internal_has_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1769,7 +1769,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TextContentData::set_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.TextContentData.value)
 }
 inline std::string* TextContentData::mutable_value() {

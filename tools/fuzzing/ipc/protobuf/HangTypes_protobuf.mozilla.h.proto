@@ -41,7 +41,7 @@ message HangEntrySuppressed {
 
 message HangEntry {
   oneof content {
-    string mVnsCString = 1;
+    bytes mVnsCString = 1;
     protobuf.mozilla.HangEntryBufOffset mVHangEntryBufOffset = 2;
     protobuf.mozilla.HangEntryModOffset mVHangEntryModOffset = 3;
     protobuf.mozilla.HangEntryProgCounter mVHangEntryProgCounter = 4;
@@ -54,8 +54,8 @@ message HangEntry {
 }
 
 message HangModule {
-  required string name = 1;
-  required string breakpadId = 2;
+  required bytes name = 1;
+  required bytes breakpadId = 2;
 }
 
 message HangStack {
@@ -65,16 +65,16 @@ message HangStack {
 }
 
 message HangAnnotation {
-  required string name = 1;
-  required string value = 2;
+  required bytes name = 1;
+  required bytes value = 2;
 }
 
 message HangDetails {
   required bytes duration = 1;
-  required string process = 2;
-  required string remoteType = 3;
-  required string threadName = 4;
-  required string runnableName = 5;
+  required bytes process = 2;
+  required bytes remoteType = 3;
+  required bytes threadName = 4;
+  required bytes runnableName = 5;
   required protobuf.mozilla.HangStack stack = 6;
   repeated protobuf.mozilla.HangAnnotation annotations = 7;
 }

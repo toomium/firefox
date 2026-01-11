@@ -1157,7 +1157,7 @@ class TextChangeEventData final :
     kIsInsertFieldNumber = 5,
     kFromUserFieldNumber = 6,
   };
-  // required string Str = 2;
+  // required bytes Str = 2;
   bool has_str() const;
   private:
   bool _internal_has_str() const;
@@ -2488,7 +2488,7 @@ inline void TextChangeEventData::set_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextChangeEventData.ID)
 }
 
-// required string Str = 2;
+// required bytes Str = 2;
 inline bool TextChangeEventData::_internal_has_str() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2508,7 +2508,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TextChangeEventData::set_str(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.str_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.str_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextChangeEventData.Str)
 }
 inline std::string* TextChangeEventData::mutable_str() {

@@ -37,12 +37,12 @@ message Msg_PreferenceUpdate {
 }
 
 message Msg_OpenVRControllerActionPathToVR {
-  required string aPath = 1;
+  required bytes aPath = 1;
 }
 
 message Msg_OpenVRControllerManifestPathToVR {
   required bytes aType = 1;
-  required string aPath = 2;
+  required bytes aPath = 2;
 }
 
 message Msg_RequestMemoryReport {
@@ -60,12 +60,12 @@ message Msg_InitComplete {
 }
 
 message Msg_OpenVRControllerActionPathToParent {
-  required string aPath = 1;
+  required bytes aPath = 1;
 }
 
 message Msg_OpenVRControllerManifestPathToParent {
   required bytes aType = 1;
-  required string aPath = 2;
+  required bytes aPath = 2;
 }
 
 message Msg_InitCrashReporter {
@@ -79,5 +79,5 @@ message Msg_AddMemoryReport {
 // Parameter mappings stats:
 // Total parameters in this file 19
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 1, "<class 'ipdl.type.BuiltinCType'>": 2, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 1, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 8, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 1, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 6, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 8
+// Scalar mappings performed: 4
 // Message structs/unions generated from ipdl structs/unions: 0

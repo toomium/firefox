@@ -192,7 +192,7 @@ class IPCServiceWorkerRegistrationDescriptor final :
     kIdFieldNumber = 1,
     kVersionFieldNumber = 2,
   };
-  // required string scope = 4;
+  // required bytes scope = 4;
   bool has_scope() const;
   private:
   bool _internal_has_scope() const;
@@ -1021,7 +1021,7 @@ inline void IPCServiceWorkerRegistrationDescriptor::set_allocated_principalinfo(
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor.principalInfo)
 }
 
-// required string scope = 4;
+// required bytes scope = 4;
 inline bool IPCServiceWorkerRegistrationDescriptor::_internal_has_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1041,7 +1041,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCServiceWorkerRegistrationDescriptor::set_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor.scope)
 }
 inline std::string* IPCServiceWorkerRegistrationDescriptor::mutable_scope() {

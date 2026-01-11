@@ -197,7 +197,7 @@ class LSSetItemInfo final :
     kKeyFieldNumber = 1,
     kValueFieldNumber = 2,
   };
-  // required string key = 1;
+  // required bytes key = 1;
   bool has_key() const;
   private:
   bool _internal_has_key() const;
@@ -366,7 +366,7 @@ class LSRemoveItemInfo final :
   enum : int {
     kKeyFieldNumber = 1,
   };
-  // required string key = 1;
+  // required bytes key = 1;
   bool has_key() const;
   private:
   bool _internal_has_key() const;
@@ -846,7 +846,7 @@ class LSSetItemAndNotifyInfo final :
     kOldValueFieldNumber = 2,
     kValueFieldNumber = 3,
   };
-  // required string key = 1;
+  // required bytes key = 1;
   bool has_key() const;
   private:
   bool _internal_has_key() const;
@@ -1035,7 +1035,7 @@ class LSRemoveItemAndNotifyInfo final :
     kKeyFieldNumber = 1,
     kOldValueFieldNumber = 2,
   };
-  // required string key = 1;
+  // required bytes key = 1;
   bool has_key() const;
   private:
   bool _internal_has_key() const;
@@ -1308,7 +1308,7 @@ class LSWriteAndNotifyInfo final :
 #endif  // __GNUC__
 // LSSetItemInfo
 
-// required string key = 1;
+// required bytes key = 1;
 inline bool LSSetItemInfo::_internal_has_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1328,7 +1328,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSSetItemInfo::set_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemInfo.key)
 }
 inline std::string* LSSetItemInfo::mutable_key() {
@@ -1448,7 +1448,7 @@ inline void LSSetItemInfo::set_allocated_value(std::string* value) {
 
 // LSRemoveItemInfo
 
-// required string key = 1;
+// required bytes key = 1;
 inline bool LSRemoveItemInfo::_internal_has_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1468,7 +1468,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSRemoveItemInfo::set_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemInfo.key)
 }
 inline std::string* LSRemoveItemInfo::mutable_key() {
@@ -1759,7 +1759,7 @@ inline LSWriteInfo::ContentCase LSWriteInfo::content_case() const {
 
 // LSSetItemAndNotifyInfo
 
-// required string key = 1;
+// required bytes key = 1;
 inline bool LSSetItemAndNotifyInfo::_internal_has_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1779,7 +1779,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSSetItemAndNotifyInfo::set_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.key)
 }
 inline std::string* LSSetItemAndNotifyInfo::mutable_key() {
@@ -1967,7 +1967,7 @@ inline void LSSetItemAndNotifyInfo::set_allocated_value(std::string* value) {
 
 // LSRemoveItemAndNotifyInfo
 
-// required string key = 1;
+// required bytes key = 1;
 inline bool LSRemoveItemAndNotifyInfo::_internal_has_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1987,7 +1987,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSRemoveItemAndNotifyInfo::set_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.key)
 }
 inline std::string* LSRemoveItemAndNotifyInfo::mutable_key() {

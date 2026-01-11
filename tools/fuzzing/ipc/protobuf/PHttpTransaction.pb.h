@@ -325,7 +325,7 @@ class Msg_OnStartRequest final :
   std::string* _internal_mutable_securityinfo();
   public:
 
-  // optional string altSvcUsed = 8;
+  // optional bytes altSvcUsed = 8;
   bool has_altsvcused() const;
   private:
   bool _internal_has_altsvcused() const;
@@ -875,7 +875,7 @@ class Msg_OnDataAvailable final :
     kOffsetFieldNumber = 2,
     kCountFieldNumber = 3,
   };
-  // required string data = 1;
+  // required bytes data = 1;
   bool has_data() const;
   private:
   bool _internal_has_data() const;
@@ -1501,7 +1501,7 @@ class Msg_EarlyHint final :
     kReferrerPolicyFieldNumber = 2,
     kCspHeaderFieldNumber = 3,
   };
-  // required string linkHeader = 1;
+  // required bytes linkHeader = 1;
   bool has_linkheader() const;
   private:
   bool _internal_has_linkheader() const;
@@ -1519,7 +1519,7 @@ class Msg_EarlyHint final :
   std::string* _internal_mutable_linkheader();
   public:
 
-  // required string referrerPolicy = 2;
+  // required bytes referrerPolicy = 2;
   bool has_referrerpolicy() const;
   private:
   bool _internal_has_referrerpolicy() const;
@@ -1537,7 +1537,7 @@ class Msg_EarlyHint final :
   std::string* _internal_mutable_referrerpolicy();
   public:
 
-  // required string cspHeader = 3;
+  // required bytes cspHeader = 3;
   bool has_cspheader() const;
   private:
   bool _internal_has_cspheader() const;
@@ -3470,7 +3470,7 @@ Msg_OnStartRequest::mutable_dataforsniffer() {
   return _internal_mutable_dataforsniffer();
 }
 
-// optional string altSvcUsed = 8;
+// optional bytes altSvcUsed = 8;
 inline bool Msg_OnStartRequest::_internal_has_altsvcused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3490,7 +3490,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStartRequest::set_altsvcused(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.altsvcused_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.altsvcused_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_OnStartRequest.altSvcUsed)
 }
 inline std::string* Msg_OnStartRequest::mutable_altsvcused() {
@@ -4188,7 +4188,7 @@ inline void Msg_OnTransportStatus::set_allocated_networkaddressarg(::protobuf::m
 
 // Msg_OnDataAvailable
 
-// required string data = 1;
+// required bytes data = 1;
 inline bool Msg_OnDataAvailable::_internal_has_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4208,7 +4208,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnDataAvailable::set_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.data_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_OnDataAvailable.data)
 }
 inline std::string* Msg_OnDataAvailable::mutable_data() {
@@ -4962,7 +4962,7 @@ inline void Msg_OnInitFailed::set_allocated_status(std::string* status) {
 
 // Msg_EarlyHint
 
-// required string linkHeader = 1;
+// required bytes linkHeader = 1;
 inline bool Msg_EarlyHint::_internal_has_linkheader() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4982,7 +4982,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_EarlyHint::set_linkheader(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.linkheader_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.linkheader_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_EarlyHint.linkHeader)
 }
 inline std::string* Msg_EarlyHint::mutable_linkheader() {
@@ -5030,7 +5030,7 @@ inline void Msg_EarlyHint::set_allocated_linkheader(std::string* linkheader) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_EarlyHint.linkHeader)
 }
 
-// required string referrerPolicy = 2;
+// required bytes referrerPolicy = 2;
 inline bool Msg_EarlyHint::_internal_has_referrerpolicy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5050,7 +5050,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_EarlyHint::set_referrerpolicy(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.referrerpolicy_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.referrerpolicy_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_EarlyHint.referrerPolicy)
 }
 inline std::string* Msg_EarlyHint::mutable_referrerpolicy() {
@@ -5098,7 +5098,7 @@ inline void Msg_EarlyHint::set_allocated_referrerpolicy(std::string* referrerpol
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_EarlyHint.referrerPolicy)
 }
 
-// required string cspHeader = 3;
+// required bytes cspHeader = 3;
 inline bool Msg_EarlyHint::_internal_has_cspheader() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5118,7 +5118,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_EarlyHint::set_cspheader(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.cspheader_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.cspheader_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_EarlyHint.cspHeader)
 }
 inline std::string* Msg_EarlyHint::mutable_cspheader() {

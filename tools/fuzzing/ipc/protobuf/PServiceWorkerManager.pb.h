@@ -340,7 +340,7 @@ class Msg_Unregister final :
     kScopeFieldNumber = 2,
     kPrincipalInfoFieldNumber = 1,
   };
-  // required string scope = 2;
+  // required bytes scope = 2;
   bool has_scope() const;
   private:
   bool _internal_has_scope() const;
@@ -510,7 +510,7 @@ class Msg_PropagateUnregister final :
     kScopeFieldNumber = 2,
     kPrincipalInfoFieldNumber = 1,
   };
-  // required string scope = 2;
+  // required bytes scope = 2;
   bool has_scope() const;
   private:
   bool _internal_has_scope() const;
@@ -1002,7 +1002,7 @@ inline void Msg_Unregister::set_allocated_principalinfo(::protobuf::mozilla::ipc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorkerManager.Msg_Unregister.principalInfo)
 }
 
-// required string scope = 2;
+// required bytes scope = 2;
 inline bool Msg_Unregister::_internal_has_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1022,7 +1022,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Unregister::set_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PServiceWorkerManager.Msg_Unregister.scope)
 }
 inline std::string* Msg_Unregister::mutable_scope() {
@@ -1161,7 +1161,7 @@ inline void Msg_PropagateUnregister::set_allocated_principalinfo(::protobuf::moz
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorkerManager.Msg_PropagateUnregister.principalInfo)
 }
 
-// required string scope = 2;
+// required bytes scope = 2;
 inline bool Msg_PropagateUnregister::_internal_has_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1181,7 +1181,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PropagateUnregister::set_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PServiceWorkerManager.Msg_PropagateUnregister.scope)
 }
 inline std::string* Msg_PropagateUnregister::mutable_scope() {

@@ -80,7 +80,7 @@ message DimensionInfo {
 }
 
 message FrameScriptInfo {
-  required string url = 1;
+  required bytes url = 1;
   required bool runInGlobalScope = 2;
 }
 
@@ -106,15 +106,15 @@ message DocShellLoadStateInit {
   required bytes HeadersStream = 11;
   required bytes UnstrippedURI = 12;
   required uint64 LoadIdentifier = 13;
-  required string Target = 14;
-  required string TypeHint = 15;
-  required string FileName = 16;
+  required bytes Target = 14;
+  required bytes TypeHint = 15;
+  required bytes FileName = 16;
   required bytes SourceBrowsingContext = 17;
   required bytes TargetBrowsingContext = 18;
-  required string TriggeringRemoteType = 19;
-  required string SrcdocData = 20;
-  optional string OriginalURIString = 21;
-  optional string RemoteTypeOverride = 22;
+  required bytes TriggeringRemoteType = 19;
+  required bytes SrcdocData = 20;
+  optional bytes OriginalURIString = 21;
+  optional bytes RemoteTypeOverride = 22;
   optional bytes loadingSessionHistoryInfo = 23;
   required uint32 LoadType = 24;
   required uint32 LoadFlags = 25;
@@ -154,7 +154,7 @@ message TimedChannelInfo {
   required bytes channelCreation = 4;
   required bytes redirectStart = 5;
   required bytes redirectEnd = 6;
-  required string initiatorType = 7;
+  required bytes initiatorType = 7;
   required bool allRedirectsSameOrigin = 8;
   required bool allRedirectsPassTimingAllowCheck = 9;
   optional bool timingAllowCheckForPrincipal = 10;
@@ -173,14 +173,14 @@ message ReplacementChannelConfigInit {
   required uint32 redirectFlags = 1;
   required bytes classOfService = 2;
   optional bool privateBrowsing = 3;
-  optional string method = 4;
+  optional bytes method = 4;
   required bytes referrerInfo = 5;
   optional protobuf.mozilla.dom.TimedChannelInfo timedChannelInfo = 6;
   required bytes uploadStream = 7;
   required uint64 uploadStreamLength = 8;
   required bool uploadStreamHasHeaders = 9;
-  optional string contentType = 10;
-  optional string contentLength = 11;
+  optional bytes contentType = 10;
+  optional bytes contentLength = 11;
 }
 
 message IPDLVariantValue {
@@ -194,8 +194,8 @@ message IPDLVariantValue {
     float mVfloat = 7;
     double mVdouble = 8;
     bytes mVnsID = 9;
-    string mVnsString = 10;
-    string mVnsCString = 11;
+    bytes mVnsString = 10;
+    bytes mVnsCString = 11;
     bytes mVnsIURI = 12;
     bytes mVnsIPrincipal = 13;
   }
@@ -207,12 +207,12 @@ message IDPLVariant {
 }
 
 message IPDLProperty {
-  required string name = 1;
+  required bytes name = 1;
   required bytes value = 2;
 }
 
 message ParentShowInfo {
-  required string name = 1;
+  required bytes name = 1;
   required bool fakeShowInfo = 2;
   required bool isTransparent = 3;
   required float dpi = 4;
@@ -234,26 +234,26 @@ message IPCImage {
 }
 
 message IPCNotificationAction {
-  required string name = 1;
-  required string title = 2;
+  required bytes name = 1;
+  required bytes title = 2;
 }
 
 message IPCNotificationOptions {
-  required string title = 1;
+  required bytes title = 1;
   required bytes dir = 2;
-  required string lang = 3;
-  required string body = 4;
-  required string tag = 5;
-  required string icon = 6;
+  required bytes lang = 3;
+  required bytes body = 4;
+  required bytes tag = 5;
+  required bytes icon = 6;
   required bool requireInteraction = 7;
   required bool silent = 8;
   repeated uint32 vibrate = 9;
-  required string dataSerialized = 10;
+  required bytes dataSerialized = 10;
   repeated protobuf.mozilla.dom.IPCNotificationAction actions = 11;
 }
 
 message IPCNotification {
-  required string id = 1;
+  required bytes id = 1;
   required protobuf.mozilla.dom.IPCNotificationOptions options = 2;
 }
 

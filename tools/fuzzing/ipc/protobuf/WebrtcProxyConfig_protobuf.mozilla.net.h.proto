@@ -15,7 +15,7 @@ import "NeckoChannelParams.proto";
 // Structs and unions declarations
 message WebrtcProxyConfig {
   required bytes tabId = 1;
-  required string alpn = 2;
+  required bytes alpn = 2;
   required protobuf.mozilla.net.LoadInfoArgs loadInfoArgs = 3;
   required bool forceProxy = 4;
 }

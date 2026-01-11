@@ -6695,7 +6695,7 @@ const char* Msg_NotifyGpuObservers::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string aTopic = 1;
+      // required bytes aTopic = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_atopic();
@@ -6735,9 +6735,9 @@ uint8_t* Msg_NotifyGpuObservers::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string aTopic = 1;
+  // required bytes aTopic = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_atopic(), target);
   }
 
@@ -6753,10 +6753,10 @@ size_t Msg_NotifyGpuObservers::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PGPU.Msg_NotifyGpuObservers)
   size_t total_size = 0;
 
-  // required string aTopic = 1;
+  // required bytes aTopic = 1;
   if (_internal_has_atopic()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_atopic());
   }
   uint32_t cached_has_bits = 0;
@@ -7938,7 +7938,7 @@ const char* Reply_CollectPerfStatsJSON::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string aStats = 1;
+      // required bytes aStats = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_astats();
@@ -7978,9 +7978,9 @@ uint8_t* Reply_CollectPerfStatsJSON::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string aStats = 1;
+  // required bytes aStats = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_astats(), target);
   }
 
@@ -7996,10 +7996,10 @@ size_t Reply_CollectPerfStatsJSON::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PGPU.Reply_CollectPerfStatsJSON)
   size_t total_size = 0;
 
-  // required string aStats = 1;
+  // required bytes aStats = 1;
   if (_internal_has_astats()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_astats());
   }
   uint32_t cached_has_bits = 0;
@@ -9244,7 +9244,7 @@ const char* Msg_ReportCheckerboard::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // required string log = 2;
+      // required bytes log = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_log();
@@ -9290,9 +9290,9 @@ uint8_t* Msg_ReportCheckerboard::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_severity(), target);
   }
 
-  // required string log = 2;
+  // required bytes log = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_log(), target);
   }
 
@@ -9309,9 +9309,9 @@ size_t Msg_ReportCheckerboard::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_log()) {
-    // required string log = 2;
+    // required bytes log = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_log());
   }
 
@@ -9327,9 +9327,9 @@ size_t Msg_ReportCheckerboard::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string log = 2;
+    // required bytes log = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_log());
 
     // required uint32 severity = 1;
@@ -9499,7 +9499,7 @@ const char* Msg_GraphicsError::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string aError = 1;
+      // required bytes aError = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_aerror();
@@ -9539,9 +9539,9 @@ uint8_t* Msg_GraphicsError::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string aError = 1;
+  // required bytes aError = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_aerror(), target);
   }
 
@@ -9557,10 +9557,10 @@ size_t Msg_GraphicsError::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PGPU.Msg_GraphicsError)
   size_t total_size = 0;
 
-  // required string aError = 1;
+  // required bytes aError = 1;
   if (_internal_has_aerror()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aerror());
   }
   uint32_t cached_has_bits = 0;
@@ -10229,7 +10229,7 @@ const char* Msg_NotifyUiObservers::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string aTopic = 1;
+      // required bytes aTopic = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_atopic();
@@ -10269,9 +10269,9 @@ uint8_t* Msg_NotifyUiObservers::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string aTopic = 1;
+  // required bytes aTopic = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_atopic(), target);
   }
 
@@ -10287,10 +10287,10 @@ size_t Msg_NotifyUiObservers::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PGPU.Msg_NotifyUiObservers)
   size_t total_size = 0;
 
-  // required string aTopic = 1;
+  // required bytes aTopic = 1;
   if (_internal_has_atopic()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_atopic());
   }
   uint32_t cached_has_bits = 0;
@@ -12678,7 +12678,7 @@ const char* Msg_FlushMemory::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string reason = 1;
+      // required bytes reason = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_reason();
@@ -12718,9 +12718,9 @@ uint8_t* Msg_FlushMemory::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string reason = 1;
+  // required bytes reason = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_reason(), target);
   }
 
@@ -12736,10 +12736,10 @@ size_t Msg_FlushMemory::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PGPU.Msg_FlushMemory)
   size_t total_size = 0;
 
-  // required string reason = 1;
+  // required bytes reason = 1;
   if (_internal_has_reason()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_reason());
   }
   uint32_t cached_has_bits = 0;
@@ -13439,7 +13439,7 @@ const char* Msg_UsedFallback::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required string message = 2;
+      // required bytes message = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_message();
@@ -13485,9 +13485,9 @@ uint8_t* Msg_UsedFallback::_InternalSerialize(
         1, this->_internal_afallback(), target);
   }
 
-  // required string message = 2;
+  // required bytes message = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_message(), target);
   }
 
@@ -13511,9 +13511,9 @@ size_t Msg_UsedFallback::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_message()) {
-    // required string message = 2;
+    // required bytes message = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_message());
   }
 
@@ -13529,9 +13529,9 @@ size_t Msg_UsedFallback::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_afallback());
 
-    // required string message = 2;
+    // required bytes message = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_message());
 
   } else {

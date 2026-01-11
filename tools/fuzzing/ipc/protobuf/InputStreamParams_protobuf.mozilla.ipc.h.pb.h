@@ -217,7 +217,7 @@ class HeaderEntry final :
     kNameFieldNumber = 1,
     kValueFieldNumber = 2,
   };
-  // required string name = 1;
+  // required bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -235,7 +235,7 @@ class HeaderEntry final :
   std::string* _internal_mutable_name();
   public:
 
-  // required string value = 2;
+  // required bytes value = 2;
   bool has_value() const;
   private:
   bool _internal_has_value() const;
@@ -386,7 +386,7 @@ class StringInputStreamParams final :
   enum : int {
     kDataFieldNumber = 1,
   };
-  // required string data = 1;
+  // required bytes data = 1;
   bool has_data() const;
   private:
   bool _internal_has_data() const;
@@ -2388,7 +2388,7 @@ class InputStreamLengthWrapperParams final :
 #endif  // __GNUC__
 // HeaderEntry
 
-// required string name = 1;
+// required bytes name = 1;
 inline bool HeaderEntry::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2408,7 +2408,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HeaderEntry::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.HeaderEntry.name)
 }
 inline std::string* HeaderEntry::mutable_name() {
@@ -2456,7 +2456,7 @@ inline void HeaderEntry::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.HeaderEntry.name)
 }
 
-// required string value = 2;
+// required bytes value = 2;
 inline bool HeaderEntry::_internal_has_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2476,7 +2476,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HeaderEntry::set_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.HeaderEntry.value)
 }
 inline std::string* HeaderEntry::mutable_value() {
@@ -2528,7 +2528,7 @@ inline void HeaderEntry::set_allocated_value(std::string* value) {
 
 // StringInputStreamParams
 
-// required string data = 1;
+// required bytes data = 1;
 inline bool StringInputStreamParams::_internal_has_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2548,7 +2548,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StringInputStreamParams::set_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.data_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StringInputStreamParams.data)
 }
 inline std::string* StringInputStreamParams::mutable_data() {

@@ -30,15 +30,15 @@ message WebProgressData {
 message RequestData {
   required bytes requestURI = 1;
   required bytes originalRequestURI = 2;
-  required string matchedList = 3;
-  required string canceledReason = 4;
+  required bytes matchedList = 3;
+  required bytes canceledReason = 4;
 }
 
 message WebProgressStateChangeData {
   required bool isNavigating = 1;
   required bool mayEnableCharacterEncodingMenu = 2;
-  required string contentType = 3;
-  required string charset = 4;
+  required bytes contentType = 3;
+  required bytes charset = 4;
   required bytes documentURI = 5;
 }
 
@@ -46,9 +46,9 @@ message WebProgressLocationChangeData {
   required bool isNavigating = 1;
   required bool isSyntheticDocument = 2;
   required bool mayEnableCharacterEncodingMenu = 3;
-  required string contentType = 4;
-  required string title = 5;
-  required string charset = 6;
+  required bytes contentType = 4;
+  required bytes title = 5;
+  required bytes charset = 6;
   required bytes documentURI = 7;
   required bytes contentPrincipal = 8;
   required bytes contentPartitionedPrincipal = 9;

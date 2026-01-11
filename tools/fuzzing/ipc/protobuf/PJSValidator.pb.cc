@@ -917,7 +917,7 @@ const char* Msg_OnStopRequest::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string aContentCharset = 2;
+      // required bytes aContentCharset = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_acontentcharset();
@@ -926,7 +926,7 @@ const char* Msg_OnStopRequest::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string aHintCharset = 3;
+      // required bytes aHintCharset = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_ahintcharset();
@@ -935,7 +935,7 @@ const char* Msg_OnStopRequest::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string aDocumentCharset = 4;
+      // required bytes aDocumentCharset = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_adocumentcharset();
@@ -981,21 +981,21 @@ uint8_t* Msg_OnStopRequest::_InternalSerialize(
         1, this->_internal_areason(), target);
   }
 
-  // required string aContentCharset = 2;
+  // required bytes aContentCharset = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_acontentcharset(), target);
   }
 
-  // required string aHintCharset = 3;
+  // required bytes aHintCharset = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_ahintcharset(), target);
   }
 
-  // required string aDocumentCharset = 4;
+  // required bytes aDocumentCharset = 4;
   if (cached_has_bits & 0x00000008u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_adocumentcharset(), target);
   }
 
@@ -1019,23 +1019,23 @@ size_t Msg_OnStopRequest::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_acontentcharset()) {
-    // required string aContentCharset = 2;
+    // required bytes aContentCharset = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_acontentcharset());
   }
 
   if (_internal_has_ahintcharset()) {
-    // required string aHintCharset = 3;
+    // required bytes aHintCharset = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_ahintcharset());
   }
 
   if (_internal_has_adocumentcharset()) {
-    // required string aDocumentCharset = 4;
+    // required bytes aDocumentCharset = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_adocumentcharset());
   }
 
@@ -1051,19 +1051,19 @@ size_t Msg_OnStopRequest::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_areason());
 
-    // required string aContentCharset = 2;
+    // required bytes aContentCharset = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_acontentcharset());
 
-    // required string aHintCharset = 3;
+    // required bytes aHintCharset = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_ahintcharset());
 
-    // required string aDocumentCharset = 4;
+    // required bytes aDocumentCharset = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_adocumentcharset());
 
   } else {

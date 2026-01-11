@@ -13,7 +13,7 @@ package protobuf.mozilla._ipdltest;
 
 // Structs and unions declarations
 message KeyValue {
-  required string key = 1;
+  required bytes key = 1;
   required protobuf.mozilla._ipdltest.JSONVariant value = 2;
 }
 
@@ -30,7 +30,7 @@ message JSONVariant {
     bool mVbool = 3;
     int32 mVint = 4;
     double mVdouble = 5;
-    string mVnsString = 6;
+    bytes mVnsString = 6;
     bytes mVPTestJSONHandle = 7;
     _mVArrayOfKeyValue mVArrayOfKeyValue = 8;
     _mVArrayOfJSONVariant mVArrayOfJSONVariant = 9;

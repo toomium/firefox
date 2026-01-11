@@ -402,7 +402,7 @@ const char* Msg_RegisterMDNSHostname::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string hostname = 1;
+      // required bytes hostname = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_hostname();
@@ -411,7 +411,7 @@ const char* Msg_RegisterMDNSHostname::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string address = 2;
+      // required bytes address = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_address();
@@ -451,15 +451,15 @@ uint8_t* Msg_RegisterMDNSHostname::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string hostname = 1;
+  // required bytes hostname = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_hostname(), target);
   }
 
-  // required string address = 2;
+  // required bytes address = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_address(), target);
   }
 
@@ -476,16 +476,16 @@ size_t Msg_RegisterMDNSHostname::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_hostname()) {
-    // required string hostname = 1;
+    // required bytes hostname = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_hostname());
   }
 
   if (_internal_has_address()) {
-    // required string address = 2;
+    // required bytes address = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_address());
   }
 
@@ -496,14 +496,14 @@ size_t Msg_RegisterMDNSHostname::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string hostname = 1;
+    // required bytes hostname = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_hostname());
 
-    // required string address = 2;
+    // required bytes address = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_address());
 
   } else {
@@ -672,7 +672,7 @@ const char* Msg_QueryMDNSHostname::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string hostname = 1;
+      // required bytes hostname = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_hostname();
@@ -712,9 +712,9 @@ uint8_t* Msg_QueryMDNSHostname::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string hostname = 1;
+  // required bytes hostname = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_hostname(), target);
   }
 
@@ -730,10 +730,10 @@ size_t Msg_QueryMDNSHostname::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PStunAddrsRequest.Msg_QueryMDNSHostname)
   size_t total_size = 0;
 
-  // required string hostname = 1;
+  // required bytes hostname = 1;
   if (_internal_has_hostname()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_hostname());
   }
   uint32_t cached_has_bits = 0;
@@ -889,7 +889,7 @@ const char* Msg_UnregisterMDNSHostname::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string hostname = 1;
+      // required bytes hostname = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_hostname();
@@ -929,9 +929,9 @@ uint8_t* Msg_UnregisterMDNSHostname::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string hostname = 1;
+  // required bytes hostname = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_hostname(), target);
   }
 
@@ -947,10 +947,10 @@ size_t Msg_UnregisterMDNSHostname::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PStunAddrsRequest.Msg_UnregisterMDNSHostname)
   size_t total_size = 0;
 
-  // required string hostname = 1;
+  // required bytes hostname = 1;
   if (_internal_has_hostname()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_hostname());
   }
   uint32_t cached_has_bits = 0;
@@ -1425,7 +1425,7 @@ const char* Msg_OnMDNSQueryComplete::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string hostname = 1;
+      // required bytes hostname = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_hostname();
@@ -1474,9 +1474,9 @@ uint8_t* Msg_OnMDNSQueryComplete::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string hostname = 1;
+  // required bytes hostname = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_hostname(), target);
   }
 
@@ -1499,9 +1499,9 @@ size_t Msg_OnMDNSQueryComplete::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_hostname()) {
-    // required string hostname = 1;
+    // required bytes hostname = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_hostname());
   }
 
@@ -1519,9 +1519,9 @@ size_t Msg_OnMDNSQueryComplete::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string hostname = 1;
+    // required bytes hostname = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_hostname());
 
     // required bytes address = 2;

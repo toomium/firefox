@@ -185,7 +185,7 @@ class Msg_Start final :
     kPortFieldNumber = 2,
     kChannelIdFieldNumber = 3,
   };
-  // required string name = 1;
+  // required bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -541,7 +541,7 @@ class Msg_Complete final :
 #endif  // __GNUC__
 // Msg_Start
 
-// required string name = 1;
+// required bytes name = 1;
 inline bool Msg_Start::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -561,7 +561,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Start::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.name)
 }
 inline std::string* Msg_Start::mutable_name() {

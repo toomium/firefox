@@ -13,8 +13,8 @@ package protobuf;
 
 // Structs and unions declarations
 message TCPError {
-  required string name = 1;
-  required string message = 2;
+  required bytes name = 1;
+  required bytes message = 2;
   required bytes errorCode = 3;
 }
 
@@ -24,7 +24,7 @@ message SendableData {
   }
   oneof content {
     _mVArrayOfuint8_t mVArrayOfuint8_t = 1;
-    string mVnsCString = 2;
+    bytes mVnsCString = 2;
   }
 }
 

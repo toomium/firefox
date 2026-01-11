@@ -13,7 +13,7 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message SDBRequestOpenParams {
-  required string name = 1;
+  required bytes name = 1;
 }
 
 message SDBRequestSeekParams {
@@ -25,7 +25,7 @@ message SDBRequestReadParams {
 }
 
 message SDBRequestWriteParams {
-  required string data = 1;
+  required bytes data = 1;
 }
 
 message SDBRequestCloseParams {

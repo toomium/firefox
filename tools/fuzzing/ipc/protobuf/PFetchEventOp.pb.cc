@@ -919,7 +919,7 @@ const char* Msg_AsyncLog::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string aScriptSpec = 1;
+      // required bytes aScriptSpec = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_ascriptspec();
@@ -946,7 +946,7 @@ const char* Msg_AsyncLog::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required string aMessageName = 4;
+      // required bytes aMessageName = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_amessagename();
@@ -955,7 +955,7 @@ const char* Msg_AsyncLog::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // repeated string aParams = 5;
+      // repeated bytes aParams = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr -= 1;
@@ -1000,9 +1000,9 @@ uint8_t* Msg_AsyncLog::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string aScriptSpec = 1;
+  // required bytes aScriptSpec = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_ascriptspec(), target);
   }
 
@@ -1018,16 +1018,16 @@ uint8_t* Msg_AsyncLog::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_acolumnnumber(), target);
   }
 
-  // required string aMessageName = 4;
+  // required bytes aMessageName = 4;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_amessagename(), target);
   }
 
-  // repeated string aParams = 5;
+  // repeated bytes aParams = 5;
   for (int i = 0, n = this->_internal_aparams_size(); i < n; i++) {
     const auto& s = this->_internal_aparams(i);
-    target = stream->WriteString(5, s, target);
+    target = stream->WriteBytes(5, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1043,16 +1043,16 @@ size_t Msg_AsyncLog::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_ascriptspec()) {
-    // required string aScriptSpec = 1;
+    // required bytes aScriptSpec = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_ascriptspec());
   }
 
   if (_internal_has_amessagename()) {
-    // required string aMessageName = 4;
+    // required bytes aMessageName = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_amessagename());
   }
 
@@ -1073,14 +1073,14 @@ size_t Msg_AsyncLog::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string aScriptSpec = 1;
+    // required bytes aScriptSpec = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_ascriptspec());
 
-    // required string aMessageName = 4;
+    // required bytes aMessageName = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_amessagename());
 
     // required uint32 aLineNumber = 2;
@@ -1096,11 +1096,11 @@ size_t Msg_AsyncLog::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string aParams = 5;
+  // repeated bytes aParams = 5;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.aparams_.size());
   for (int i = 0, n = _impl_.aparams_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.aparams_.Get(i));
   }
 

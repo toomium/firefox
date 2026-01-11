@@ -438,7 +438,7 @@ class Msg_ExecuteCommand final :
   enum : int {
     kACommandFieldNumber = 1,
   };
-  // required string aCommand = 1;
+  // required bytes aCommand = 1;
   bool has_acommand() const;
   private:
   bool _internal_has_acommand() const;
@@ -585,7 +585,7 @@ class Msg_PTestShellCommandConstructor final :
   enum : int {
     kACommandFieldNumber = 1,
   };
-  // required string aCommand = 1;
+  // required bytes aCommand = 1;
   bool has_acommand() const;
   private:
   bool _internal_has_acommand() const;
@@ -761,7 +761,7 @@ class Reply_PTestShellCommandConstructor final :
 
 // Msg_ExecuteCommand
 
-// required string aCommand = 1;
+// required bytes aCommand = 1;
 inline bool Msg_ExecuteCommand::_internal_has_acommand() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -781,7 +781,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ExecuteCommand::set_acommand(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.acommand_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.acommand_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand.aCommand)
 }
 inline std::string* Msg_ExecuteCommand::mutable_acommand() {
@@ -833,7 +833,7 @@ inline void Msg_ExecuteCommand::set_allocated_acommand(std::string* acommand) {
 
 // Msg_PTestShellCommandConstructor
 
-// required string aCommand = 1;
+// required bytes aCommand = 1;
 inline bool Msg_PTestShellCommandConstructor::_internal_has_acommand() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -853,7 +853,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PTestShellCommandConstructor::set_acommand(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.acommand_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.acommand_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.aCommand)
 }
 inline std::string* Msg_PTestShellCommandConstructor::mutable_acommand() {

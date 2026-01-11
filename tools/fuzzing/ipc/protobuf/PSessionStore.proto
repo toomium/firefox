@@ -17,7 +17,7 @@ import "SessionStoreTypes.proto";
 
 // Message declarations
 message Msg_SessionStoreUpdate {
-  optional string aDocShellCaps = 1;
+  optional bytes aDocShellCaps = 1;
   optional bool aPrivateMode = 2;
   required bytes aZoom = 3;
   required bool aNeedCollectSHistory = 4;

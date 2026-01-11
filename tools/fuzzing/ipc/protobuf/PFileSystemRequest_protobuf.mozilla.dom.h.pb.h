@@ -351,7 +351,7 @@ class FileSystemDirectoryResponse final :
   enum : int {
     kRealPathFieldNumber = 1,
   };
-  // required string realPath = 1;
+  // required bytes realPath = 1;
   bool has_realpath() const;
   private:
   bool _internal_has_realpath() const;
@@ -645,7 +645,7 @@ class FileSystemDirectoryListingResponseDirectory final :
   enum : int {
     kDirectoryRealPathFieldNumber = 1,
   };
-  // required string directoryRealPath = 1;
+  // required bytes directoryRealPath = 1;
   bool has_directoryrealpath() const;
   private:
   bool _internal_has_directoryrealpath() const;
@@ -1655,7 +1655,7 @@ inline void FileSystemFileResponse::set_allocated_blob(::protobuf::mozilla::dom:
 
 // FileSystemDirectoryResponse
 
-// required string realPath = 1;
+// required bytes realPath = 1;
 inline bool FileSystemDirectoryResponse::_internal_has_realpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1675,7 +1675,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemDirectoryResponse::set_realpath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.realpath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.realpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemDirectoryResponse.realPath)
 }
 inline std::string* FileSystemDirectoryResponse::mutable_realpath() {
@@ -1818,7 +1818,7 @@ inline void FileSystemDirectoryListingResponseFile::set_allocated_blob(::protobu
 
 // FileSystemDirectoryListingResponseDirectory
 
-// required string directoryRealPath = 1;
+// required bytes directoryRealPath = 1;
 inline bool FileSystemDirectoryListingResponseDirectory::_internal_has_directoryrealpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1838,7 +1838,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemDirectoryListingResponseDirectory::set_directoryrealpath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.directoryrealpath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.directoryrealpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.directoryRealPath)
 }
 inline std::string* FileSystemDirectoryListingResponseDirectory::mutable_directoryrealpath() {

@@ -54,7 +54,7 @@ message Reply_DrawSnapshot {
 }
 
 message Msg_DispatchSecurityPolicyViolation {
-  required string aViolationEventJSON = 1;
+  required bytes aViolationEventJSON = 1;
 }
 
 message Msg_SaveStorageAccessPermissionGranted {
@@ -130,7 +130,7 @@ message Msg_UpdateCookieJarSettings {
 }
 
 message Msg_UpdateDocumentTitle {
-  required string aTitle = 1;
+  required bytes aTitle = 1;
 }
 
 message Msg_UpdateDocumentSecurityInfo {
@@ -216,7 +216,7 @@ message Reply_GetStorageAccessPermission {
 }
 
 message Msg_SetCookies {
-  required string baseDomain = 1;
+  required bytes baseDomain = 1;
   required bytes attrs = 2;
   required bytes host = 3;
   required bool fromHttp = 4;
@@ -243,12 +243,12 @@ message Reply_PWebIdentityConstructor {
 }
 
 message Msg_NotifyPermissionChange {
-  required string type = 1;
+  required bytes type = 1;
   required uint32 permission = 2;
 }
 
 // Parameter mappings stats:
 // Total parameters in this file 70
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 1, "<class 'ipdl.type.BuiltinCType'>": 16, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 38, "<class 'ipdl.type.ManagedEndpointType'>": 1, "<class 'ipdl.type.MaybeType'>": 4, "<class 'ipdl.type.NotNullType'>": 4, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 6, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 34
+// Scalar mappings performed: 26
 // Message structs/unions generated from ipdl structs/unions: 2

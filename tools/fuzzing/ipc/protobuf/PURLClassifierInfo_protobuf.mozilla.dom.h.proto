@@ -12,13 +12,13 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message ClassifierInfo {
-  required string list = 1;
-  required string provider = 2;
-  required string fullhash = 3;
+  required bytes list = 1;
+  required bytes provider = 2;
+  required bytes fullhash = 3;
 }
 
 message URLClassifierLocalResult {
   required bytes uri = 1;
-  required string featureName = 2;
-  required string matchingList = 3;
+  required bytes featureName = 2;
+  required bytes matchingList = 3;
 }

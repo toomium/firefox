@@ -191,7 +191,7 @@ const char* Msg_GetClipboard::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string aTypes = 1;
+      // repeated bytes aTypes = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -253,10 +253,10 @@ uint8_t* Msg_GetClipboard::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string aTypes = 1;
+  // repeated bytes aTypes = 1;
   for (int i = 0, n = this->_internal_atypes_size(); i < n; i++) {
     const auto& s = this->_internal_atypes(i);
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
@@ -318,11 +318,11 @@ size_t Msg_GetClipboard::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string aTypes = 1;
+  // repeated bytes aTypes = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.atypes_.size());
   for (int i = 0, n = _impl_.atypes_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.atypes_.Get(i));
   }
 
@@ -713,7 +713,7 @@ const char* Msg_GetAllClipboardDataSync::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated string aTypes = 1;
+      // repeated bytes aTypes = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -775,10 +775,10 @@ uint8_t* Msg_GetAllClipboardDataSync::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated string aTypes = 1;
+  // repeated bytes aTypes = 1;
   for (int i = 0, n = this->_internal_atypes_size(); i < n; i++) {
     const auto& s = this->_internal_atypes(i);
-    target = stream->WriteString(1, s, target);
+    target = stream->WriteBytes(1, s, target);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
@@ -840,11 +840,11 @@ size_t Msg_GetAllClipboardDataSync::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string aTypes = 1;
+  // repeated bytes aTypes = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.atypes_.size());
   for (int i = 0, n = _impl_.atypes_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.atypes_.Get(i));
   }
 

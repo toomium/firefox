@@ -18,7 +18,7 @@ message InputBlobs {
 }
 
 message InputDirectory {
-  required string directoryPath = 1;
+  required bytes directoryPath = 1;
   repeated protobuf.mozilla.dom.IPCBlob blobsInWebKitDirectory = 2;
 }
 

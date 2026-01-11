@@ -877,7 +877,7 @@ class FeatureFailure final :
   std::string* _internal_mutable_status();
   public:
 
-  // required string message = 2;
+  // required bytes message = 2;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -895,7 +895,7 @@ class FeatureFailure final :
   std::string* _internal_mutable_message();
   public:
 
-  // required string failureId = 3;
+  // required bytes failureId = 3;
   bool has_failureid() const;
   private:
   bool _internal_has_failureid() const;
@@ -1476,7 +1476,7 @@ class GfxVarValue final :
   std::string* _internal_mutable_mvintsize();
   public:
 
-  // string mVnsCString = 5;
+  // bytes mVnsCString = 5;
   bool has_mvnscstring() const;
   private:
   bool _internal_has_mvnscstring() const;
@@ -1494,7 +1494,7 @@ class GfxVarValue final :
   std::string* _internal_mutable_mvnscstring();
   public:
 
-  // string mVnsString = 6;
+  // bytes mVnsString = 6;
   bool has_mvnsstring() const;
   private:
   bool _internal_has_mvnsstring() const;
@@ -1894,7 +1894,7 @@ class GfxInfoFeatureStatus final :
     kFeatureFieldNumber = 1,
     kStatusFieldNumber = 2,
   };
-  // required string failureId = 3;
+  // required bytes failureId = 3;
   bool has_failureid() const;
   private:
   bool _internal_has_failureid() const;
@@ -2864,7 +2864,7 @@ inline void FeatureFailure::set_allocated_status(std::string* status) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.FeatureFailure.status)
 }
 
-// required string message = 2;
+// required bytes message = 2;
 inline bool FeatureFailure::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2884,7 +2884,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FeatureFailure::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.FeatureFailure.message)
 }
 inline std::string* FeatureFailure::mutable_message() {
@@ -2932,7 +2932,7 @@ inline void FeatureFailure::set_allocated_message(std::string* message) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.FeatureFailure.message)
 }
 
-// required string failureId = 3;
+// required bytes failureId = 3;
 inline bool FeatureFailure::_internal_has_failureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2952,7 +2952,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FeatureFailure::set_failureid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.failureid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.failureid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.FeatureFailure.failureId)
 }
 inline std::string* FeatureFailure::mutable_failureid() {
@@ -3598,7 +3598,7 @@ inline void GfxVarValue::set_allocated_mvintsize(std::string* mvintsize) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarValue.mVIntSize)
 }
 
-// string mVnsCString = 5;
+// bytes mVnsCString = 5;
 inline bool GfxVarValue::_internal_has_mvnscstring() const {
   return content_case() == kMVnsCString;
 }
@@ -3625,7 +3625,7 @@ inline void GfxVarValue::set_mvnscstring(ArgT0&& arg0, ArgT... args) {
     set_has_mvnscstring();
     _impl_.content_.mvnscstring_.InitDefault();
   }
-  _impl_.content_.mvnscstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.mvnscstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.mVnsCString)
 }
 inline std::string* GfxVarValue::mutable_mvnscstring() {
@@ -3675,7 +3675,7 @@ inline void GfxVarValue::set_allocated_mvnscstring(std::string* mvnscstring) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarValue.mVnsCString)
 }
 
-// string mVnsString = 6;
+// bytes mVnsString = 6;
 inline bool GfxVarValue::_internal_has_mvnsstring() const {
   return content_case() == kMVnsString;
 }
@@ -3702,7 +3702,7 @@ inline void GfxVarValue::set_mvnsstring(ArgT0&& arg0, ArgT... args) {
     set_has_mvnsstring();
     _impl_.content_.mvnsstring_.InitDefault();
   }
-  _impl_.content_.mvnsstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.mvnsstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.mVnsString)
 }
 inline std::string* GfxVarValue::mutable_mvnsstring() {
@@ -4131,7 +4131,7 @@ inline void GfxInfoFeatureStatus::set_status(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxInfoFeatureStatus.status)
 }
 
-// required string failureId = 3;
+// required bytes failureId = 3;
 inline bool GfxInfoFeatureStatus::_internal_has_failureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4151,7 +4151,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GfxInfoFeatureStatus::set_failureid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.failureid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.failureid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxInfoFeatureStatus.failureId)
 }
 inline std::string* GfxInfoFeatureStatus::mutable_failureid() {

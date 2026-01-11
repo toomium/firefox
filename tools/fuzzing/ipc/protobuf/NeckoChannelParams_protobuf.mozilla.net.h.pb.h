@@ -528,7 +528,7 @@ class CookieJarSettingsArgs final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_fingerprintingrandomizationkey();
 
-  // required string partitionKey = 7;
+  // required bytes partitionKey = 7;
   bool has_partitionkey() const;
   private:
   bool _internal_has_partitionkey() const;
@@ -780,7 +780,7 @@ class PreferredAlternativeDataTypeParams final :
     kContentTypeFieldNumber = 2,
     kDeliverAltDataFieldNumber = 3,
   };
-  // required string type = 1;
+  // required bytes type = 1;
   bool has_type() const;
   private:
   bool _internal_has_type() const;
@@ -798,7 +798,7 @@ class PreferredAlternativeDataTypeParams final :
   std::string* _internal_mutable_type();
   public:
 
-  // required string contentType = 2;
+  // required bytes contentType = 2;
   bool has_contenttype() const;
   private:
   bool _internal_has_contenttype() const;
@@ -970,7 +970,7 @@ class RedirectHistoryEntryInfo final :
     kPrincipalInfoFieldNumber = 1,
     kReferrerUriFieldNumber = 2,
   };
-  // required string remoteAddress = 3;
+  // required bytes remoteAddress = 3;
   bool has_remoteaddress() const;
   private:
   bool _internal_has_remoteaddress() const;
@@ -1481,7 +1481,7 @@ class LoadInfoArgs final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::RedirectHistoryEntryInfo >&
       redirectchain() const;
 
-  // repeated string corsUnsafeHeaders = 47;
+  // repeated bytes corsUnsafeHeaders = 47;
   int corsunsafeheaders_size() const;
   private:
   int _internal_corsunsafeheaders_size() const;
@@ -1492,12 +1492,12 @@ class LoadInfoArgs final :
   void set_corsunsafeheaders(int index, const std::string& value);
   void set_corsunsafeheaders(int index, std::string&& value);
   void set_corsunsafeheaders(int index, const char* value);
-  void set_corsunsafeheaders(int index, const char* value, size_t size);
+  void set_corsunsafeheaders(int index, const void* value, size_t size);
   std::string* add_corsunsafeheaders();
   void add_corsunsafeheaders(const std::string& value);
   void add_corsunsafeheaders(std::string&& value);
   void add_corsunsafeheaders(const char* value);
-  void add_corsunsafeheaders(const char* value, size_t size);
+  void add_corsunsafeheaders(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& corsunsafeheaders() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_corsunsafeheaders();
   private:
@@ -1505,7 +1505,7 @@ class LoadInfoArgs final :
   std::string* _internal_add_corsunsafeheaders();
   public:
 
-  // required string triggeringRemoteType = 6;
+  // required bytes triggeringRemoteType = 6;
   bool has_triggeringremotetype() const;
   private:
   bool _internal_has_triggeringremotetype() const;
@@ -1613,7 +1613,7 @@ class LoadInfoArgs final :
   std::string* _internal_mutable_httpsupgradetelemetry();
   public:
 
-  // required string cspNonce = 55;
+  // required bytes cspNonce = 55;
   bool has_cspnonce() const;
   private:
   bool _internal_has_cspnonce() const;
@@ -1631,7 +1631,7 @@ class LoadInfoArgs final :
   std::string* _internal_mutable_cspnonce();
   public:
 
-  // required string integrityMetadata = 56;
+  // required bytes integrityMetadata = 56;
   bool has_integritymetadata() const;
   private:
   bool _internal_has_integritymetadata() const;
@@ -3746,7 +3746,7 @@ class CorsPreflightArgs final :
   enum : int {
     kUnsafeHeadersFieldNumber = 1,
   };
-  // repeated string unsafeHeaders = 1;
+  // repeated bytes unsafeHeaders = 1;
   int unsafeheaders_size() const;
   private:
   int _internal_unsafeheaders_size() const;
@@ -3757,12 +3757,12 @@ class CorsPreflightArgs final :
   void set_unsafeheaders(int index, const std::string& value);
   void set_unsafeheaders(int index, std::string&& value);
   void set_unsafeheaders(int index, const char* value);
-  void set_unsafeheaders(int index, const char* value, size_t size);
+  void set_unsafeheaders(int index, const void* value, size_t size);
   std::string* add_unsafeheaders();
   void add_unsafeheaders(const std::string& value);
   void add_unsafeheaders(std::string&& value);
   void add_unsafeheaders(const char* value);
-  void add_unsafeheaders(const char* value, size_t size);
+  void add_unsafeheaders(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& unsafeheaders() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_unsafeheaders();
   private:
@@ -4223,7 +4223,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_navigationstarttimestamp();
   public:
 
-  // required string requestMethod = 22;
+  // required bytes requestMethod = 22;
   bool has_requestmethod() const;
   private:
   bool _internal_has_requestmethod() const;
@@ -4259,7 +4259,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_classofservice();
   public:
 
-  // required string entityID = 24;
+  // required bytes entityID = 24;
   bool has_entityid() const;
   private:
   bool _internal_has_entityid() const;
@@ -4277,7 +4277,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_entityid();
   public:
 
-  // required string appCacheClientID = 25;
+  // required bytes appCacheClientID = 25;
   bool has_appcacheclientid() const;
   private:
   bool _internal_has_appcacheclientid() const;
@@ -4295,7 +4295,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_appcacheclientid();
   public:
 
-  // required string contentTypeHint = 27;
+  // required bytes contentTypeHint = 27;
   bool has_contenttypehint() const;
   private:
   bool _internal_has_contenttypehint() const;
@@ -4313,7 +4313,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_contenttypehint();
   public:
 
-  // required string integrityMetadata = 28;
+  // required bytes integrityMetadata = 28;
   bool has_integritymetadata() const;
   private:
   bool _internal_has_integritymetadata() const;
@@ -4349,7 +4349,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_requestmode();
   public:
 
-  // required string classicScriptHintCharset = 53;
+  // required bytes classicScriptHintCharset = 53;
   bool has_classicscripthintcharset() const;
   private:
   bool _internal_has_classicscripthintcharset() const;
@@ -4367,7 +4367,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_classicscripthintcharset();
   public:
 
-  // required string documentCharacterSet = 54;
+  // required bytes documentCharacterSet = 54;
   bool has_documentcharacterset() const;
   private:
   bool _internal_has_documentcharacterset() const;
@@ -4385,7 +4385,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_documentcharacterset();
   public:
 
-  // required string initiatorType = 56;
+  // required bytes initiatorType = 56;
   bool has_initiatortype() const;
   private:
   bool _internal_has_initiatortype() const;
@@ -5344,7 +5344,7 @@ class ProxyInfoCloneArgs final :
     kTimeoutFieldNumber = 7,
     kResolveFlagsFieldNumber = 8,
   };
-  // required string type = 1;
+  // required bytes type = 1;
   bool has_type() const;
   private:
   bool _internal_has_type() const;
@@ -5362,7 +5362,7 @@ class ProxyInfoCloneArgs final :
   std::string* _internal_mutable_type();
   public:
 
-  // required string host = 2;
+  // required bytes host = 2;
   bool has_host() const;
   private:
   bool _internal_has_host() const;
@@ -5380,7 +5380,7 @@ class ProxyInfoCloneArgs final :
   std::string* _internal_mutable_host();
   public:
 
-  // required string username = 4;
+  // required bytes username = 4;
   bool has_username() const;
   private:
   bool _internal_has_username() const;
@@ -5398,7 +5398,7 @@ class ProxyInfoCloneArgs final :
   std::string* _internal_mutable_username();
   public:
 
-  // required string password = 5;
+  // required bytes password = 5;
   bool has_password() const;
   private:
   bool _internal_has_password() const;
@@ -5416,7 +5416,7 @@ class ProxyInfoCloneArgs final :
   std::string* _internal_mutable_password();
   public:
 
-  // required string proxyAuthorizationHeader = 9;
+  // required bytes proxyAuthorizationHeader = 9;
   bool has_proxyauthorizationheader() const;
   private:
   bool _internal_has_proxyauthorizationheader() const;
@@ -5434,7 +5434,7 @@ class ProxyInfoCloneArgs final :
   std::string* _internal_mutable_proxyauthorizationheader();
   public:
 
-  // required string connectionIsolationKey = 10;
+  // required bytes connectionIsolationKey = 10;
   bool has_connectionisolationkey() const;
   private:
   bool _internal_has_connectionisolationkey() const;
@@ -5691,7 +5691,7 @@ class HttpConnectionInfoCloneArgs final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs >&
       proxyinfo() const;
 
-  // required string host = 1;
+  // required bytes host = 1;
   bool has_host() const;
   private:
   bool _internal_has_host() const;
@@ -5709,7 +5709,7 @@ class HttpConnectionInfoCloneArgs final :
   std::string* _internal_mutable_host();
   public:
 
-  // required string npnToken = 3;
+  // required bytes npnToken = 3;
   bool has_npntoken() const;
   private:
   bool _internal_has_npntoken() const;
@@ -5727,7 +5727,7 @@ class HttpConnectionInfoCloneArgs final :
   std::string* _internal_mutable_npntoken();
   public:
 
-  // required string username = 4;
+  // required bytes username = 4;
   bool has_username() const;
   private:
   bool _internal_has_username() const;
@@ -5763,7 +5763,7 @@ class HttpConnectionInfoCloneArgs final :
   std::string* _internal_mutable_originattributes();
   public:
 
-  // required string routedHost = 7;
+  // required bytes routedHost = 7;
   bool has_routedhost() const;
   private:
   bool _internal_has_routedhost() const;
@@ -5781,7 +5781,7 @@ class HttpConnectionInfoCloneArgs final :
   std::string* _internal_mutable_routedhost();
   public:
 
-  // required string topWindowOrigin = 23;
+  // required bytes topWindowOrigin = 23;
   bool has_topwindoworigin() const;
   private:
   bool _internal_has_topwindoworigin() const;
@@ -5799,7 +5799,7 @@ class HttpConnectionInfoCloneArgs final :
   std::string* _internal_mutable_topwindoworigin();
   public:
 
-  // required string echConfig = 28;
+  // required bytes echConfig = 28;
   bool has_echconfig() const;
   private:
   bool _internal_has_echconfig() const;
@@ -6257,7 +6257,7 @@ class ConsoleReportCollected final :
     kLineNumberFieldNumber = 5,
     kColumnNumberFieldNumber = 6,
   };
-  // repeated string stringParams = 8;
+  // repeated bytes stringParams = 8;
   int stringparams_size() const;
   private:
   int _internal_stringparams_size() const;
@@ -6268,12 +6268,12 @@ class ConsoleReportCollected final :
   void set_stringparams(int index, const std::string& value);
   void set_stringparams(int index, std::string&& value);
   void set_stringparams(int index, const char* value);
-  void set_stringparams(int index, const char* value, size_t size);
+  void set_stringparams(int index, const void* value, size_t size);
   std::string* add_stringparams();
   void add_stringparams(const std::string& value);
   void add_stringparams(std::string&& value);
   void add_stringparams(const char* value);
-  void add_stringparams(const char* value, size_t size);
+  void add_stringparams(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& stringparams() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_stringparams();
   private:
@@ -6281,7 +6281,7 @@ class ConsoleReportCollected final :
   std::string* _internal_add_stringparams();
   public:
 
-  // required string category = 2;
+  // required bytes category = 2;
   bool has_category() const;
   private:
   bool _internal_has_category() const;
@@ -6299,7 +6299,7 @@ class ConsoleReportCollected final :
   std::string* _internal_mutable_category();
   public:
 
-  // required string sourceFileURI = 4;
+  // required bytes sourceFileURI = 4;
   bool has_sourcefileuri() const;
   private:
   bool _internal_has_sourcefileuri() const;
@@ -6317,7 +6317,7 @@ class ConsoleReportCollected final :
   std::string* _internal_mutable_sourcefileuri();
   public:
 
-  // required string messageName = 7;
+  // required bytes messageName = 7;
   bool has_messagename() const;
   private:
   bool _internal_has_messagename() const;
@@ -6538,7 +6538,7 @@ class CookieStruct final :
     kSameSiteFieldNumber = 12,
     kSchemeMapFieldNumber = 13,
   };
-  // required string name = 1;
+  // required bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -6556,7 +6556,7 @@ class CookieStruct final :
   std::string* _internal_mutable_name();
   public:
 
-  // required string value = 2;
+  // required bytes value = 2;
   bool has_value() const;
   private:
   bool _internal_has_value() const;
@@ -6574,7 +6574,7 @@ class CookieStruct final :
   std::string* _internal_mutable_value();
   public:
 
-  // required string host = 3;
+  // required bytes host = 3;
   bool has_host() const;
   private:
   bool _internal_has_host() const;
@@ -6592,7 +6592,7 @@ class CookieStruct final :
   std::string* _internal_mutable_host();
   public:
 
-  // required string path = 4;
+  // required bytes path = 4;
   bool has_path() const;
   private:
   bool _internal_has_path() const;
@@ -8109,7 +8109,7 @@ class RedirectToRealChannelArgs final :
   std::string* _internal_mutable_originaluri();
   public:
 
-  // optional string contentDispositionFilename = 11;
+  // optional bytes contentDispositionFilename = 11;
   bool has_contentdispositionfilename() const;
   private:
   bool _internal_has_contentdispositionfilename() const;
@@ -8163,7 +8163,7 @@ class RedirectToRealChannelArgs final :
   std::string* _internal_mutable_timing();
   public:
 
-  // required string srcdocData = 17;
+  // required bytes srcdocData = 17;
   bool has_srcdocdata() const;
   private:
   bool _internal_has_srcdocdata() const;
@@ -8217,7 +8217,7 @@ class RedirectToRealChannelArgs final :
   std::string* _internal_mutable_loadingsessionhistoryinfo();
   public:
 
-  // optional string originalUriString = 21;
+  // optional bytes originalUriString = 21;
   bool has_originaluristring() const;
   private:
   bool _internal_has_originaluristring() const;
@@ -9360,7 +9360,7 @@ class HttpActivity final :
     kPortFieldNumber = 2,
     kEndToEndSSLFieldNumber = 3,
   };
-  // required string host = 1;
+  // required bytes host = 1;
   bool has_host() const;
   private:
   bool _internal_has_host() const;
@@ -9543,7 +9543,7 @@ class HttpConnectionActivity final :
     kHasECHFieldNumber = 5,
     kIsHttp3FieldNumber = 6,
   };
-  // required string connInfoKey = 1;
+  // required bytes connInfoKey = 1;
   bool has_conninfokey() const;
   private:
   bool _internal_has_conninfokey() const;
@@ -9561,7 +9561,7 @@ class HttpConnectionActivity final :
   std::string* _internal_mutable_conninfokey();
   public:
 
-  // required string host = 2;
+  // required bytes host = 2;
   bool has_host() const;
   private:
   bool _internal_has_host() const;
@@ -10345,7 +10345,7 @@ class GIOChannelOpenArgs final :
     kStartPosFieldNumber = 2,
     kLoadFlagsFieldNumber = 6,
   };
-  // required string entityID = 3;
+  // required bytes entityID = 3;
   bool has_entityid() const;
   private:
   bool _internal_has_entityid() const;
@@ -10948,7 +10948,7 @@ class FileChannelInfo final :
   std::string* _internal_mutable_originaluri();
   public:
 
-  // required string contentType = 5;
+  // required bytes contentType = 5;
   bool has_contenttype() const;
   private:
   bool _internal_has_contenttype() const;
@@ -11167,7 +11167,7 @@ class RemoteStreamInfo final :
   std::string* _internal_mutable_inputstream();
   public:
 
-  // required string contentType = 2;
+  // required bytes contentType = 2;
   bool has_contenttype() const;
   private:
   bool _internal_has_contenttype() const;
@@ -11528,7 +11528,7 @@ inline void CookieJarSettingsArgs::set_isfixed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieJarSettingsArgs.isFixed)
 }
 
-// required string partitionKey = 7;
+// required bytes partitionKey = 7;
 inline bool CookieJarSettingsArgs::_internal_has_partitionkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11548,7 +11548,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CookieJarSettingsArgs::set_partitionkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.partitionkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.partitionkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieJarSettingsArgs.partitionKey)
 }
 inline std::string* CookieJarSettingsArgs::mutable_partitionkey() {
@@ -11703,7 +11703,7 @@ inline void CookieJarSettingsArgs::set_toplevelwindowcontextid(uint64_t value) {
 
 // PreferredAlternativeDataTypeParams
 
-// required string type = 1;
+// required bytes type = 1;
 inline bool PreferredAlternativeDataTypeParams::_internal_has_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11723,7 +11723,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PreferredAlternativeDataTypeParams::set_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PreferredAlternativeDataTypeParams.type)
 }
 inline std::string* PreferredAlternativeDataTypeParams::mutable_type() {
@@ -11771,7 +11771,7 @@ inline void PreferredAlternativeDataTypeParams::set_allocated_type(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PreferredAlternativeDataTypeParams.type)
 }
 
-// required string contentType = 2;
+// required bytes contentType = 2;
 inline bool PreferredAlternativeDataTypeParams::_internal_has_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11791,7 +11791,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PreferredAlternativeDataTypeParams::set_contenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.contenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.contenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PreferredAlternativeDataTypeParams.contentType)
 }
 inline std::string* PreferredAlternativeDataTypeParams::mutable_contenttype() {
@@ -12085,7 +12085,7 @@ inline void RedirectHistoryEntryInfo::set_allocated_referreruri(::protobuf::mozi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RedirectHistoryEntryInfo.referrerUri)
 }
 
-// required string remoteAddress = 3;
+// required bytes remoteAddress = 3;
 inline bool RedirectHistoryEntryInfo::_internal_has_remoteaddress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12105,7 +12105,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RedirectHistoryEntryInfo::set_remoteaddress(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.remoteaddress_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.remoteaddress_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.RedirectHistoryEntryInfo.remoteAddress)
 }
 inline std::string* RedirectHistoryEntryInfo::mutable_remoteaddress() {
@@ -12819,7 +12819,7 @@ inline void LoadInfoArgs::set_allocated_resultprincipaluri(::protobuf::mozilla::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.LoadInfoArgs.resultPrincipalURI)
 }
 
-// required string triggeringRemoteType = 6;
+// required bytes triggeringRemoteType = 6;
 inline bool LoadInfoArgs::_internal_has_triggeringremotetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12839,7 +12839,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LoadInfoArgs::set_triggeringremotetype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.triggeringremotetype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.triggeringremotetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.triggeringRemoteType)
 }
 inline std::string* LoadInfoArgs::mutable_triggeringremotetype() {
@@ -14467,7 +14467,7 @@ inline void LoadInfoArgs::set_allocated_controller(::protobuf::mozilla::dom::IPC
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.LoadInfoArgs.controller)
 }
 
-// repeated string corsUnsafeHeaders = 47;
+// repeated bytes corsUnsafeHeaders = 47;
 inline int LoadInfoArgs::_internal_corsunsafeheaders_size() const {
   return _impl_.corsunsafeheaders_.size();
 }
@@ -14506,7 +14506,7 @@ inline void LoadInfoArgs::set_corsunsafeheaders(int index, const char* value) {
   _impl_.corsunsafeheaders_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.LoadInfoArgs.corsUnsafeHeaders)
 }
-inline void LoadInfoArgs::set_corsunsafeheaders(int index, const char* value, size_t size) {
+inline void LoadInfoArgs::set_corsunsafeheaders(int index, const void* value, size_t size) {
   _impl_.corsunsafeheaders_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.LoadInfoArgs.corsUnsafeHeaders)
@@ -14527,7 +14527,7 @@ inline void LoadInfoArgs::add_corsunsafeheaders(const char* value) {
   _impl_.corsunsafeheaders_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.LoadInfoArgs.corsUnsafeHeaders)
 }
-inline void LoadInfoArgs::add_corsunsafeheaders(const char* value, size_t size) {
+inline void LoadInfoArgs::add_corsunsafeheaders(const void* value, size_t size) {
   _impl_.corsunsafeheaders_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.LoadInfoArgs.corsUnsafeHeaders)
 }
@@ -14738,7 +14738,7 @@ inline void LoadInfoArgs::set_needforcheckingantitrackingheuristic(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.needForCheckingAntiTrackingHeuristic)
 }
 
-// required string cspNonce = 55;
+// required bytes cspNonce = 55;
 inline bool LoadInfoArgs::_internal_has_cspnonce() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -14758,7 +14758,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LoadInfoArgs::set_cspnonce(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.cspnonce_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.cspnonce_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.cspNonce)
 }
 inline std::string* LoadInfoArgs::mutable_cspnonce() {
@@ -14806,7 +14806,7 @@ inline void LoadInfoArgs::set_allocated_cspnonce(std::string* cspnonce) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.LoadInfoArgs.cspNonce)
 }
 
-// required string integrityMetadata = 56;
+// required bytes integrityMetadata = 56;
 inline bool LoadInfoArgs::_internal_has_integritymetadata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -14826,7 +14826,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LoadInfoArgs::set_integritymetadata(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000080u;
- _impl_.integritymetadata_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.integritymetadata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.integrityMetadata)
 }
 inline std::string* LoadInfoArgs::mutable_integritymetadata() {
@@ -17743,7 +17743,7 @@ inline void ChildLoadInfoForwarderArgs::set_requestblockingreason(uint32_t value
 
 // CorsPreflightArgs
 
-// repeated string unsafeHeaders = 1;
+// repeated bytes unsafeHeaders = 1;
 inline int CorsPreflightArgs::_internal_unsafeheaders_size() const {
   return _impl_.unsafeheaders_.size();
 }
@@ -17782,7 +17782,7 @@ inline void CorsPreflightArgs::set_unsafeheaders(int index, const char* value) {
   _impl_.unsafeheaders_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.CorsPreflightArgs.unsafeHeaders)
 }
-inline void CorsPreflightArgs::set_unsafeheaders(int index, const char* value, size_t size) {
+inline void CorsPreflightArgs::set_unsafeheaders(int index, const void* value, size_t size) {
   _impl_.unsafeheaders_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.CorsPreflightArgs.unsafeHeaders)
@@ -17803,7 +17803,7 @@ inline void CorsPreflightArgs::add_unsafeheaders(const char* value) {
   _impl_.unsafeheaders_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.CorsPreflightArgs.unsafeHeaders)
 }
-inline void CorsPreflightArgs::add_unsafeheaders(const char* value, size_t size) {
+inline void CorsPreflightArgs::add_unsafeheaders(const void* value, size_t size) {
   _impl_.unsafeheaders_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.CorsPreflightArgs.unsafeHeaders)
 }
@@ -18982,7 +18982,7 @@ inline void HttpChannelOpenArgs::set_earlyhintpreloaderid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.earlyHintPreloaderId)
 }
 
-// required string requestMethod = 22;
+// required bytes requestMethod = 22;
 inline bool HttpChannelOpenArgs::_internal_has_requestmethod() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -19002,7 +19002,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOpenArgs::set_requestmethod(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00004000u;
- _impl_.requestmethod_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.requestmethod_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.requestMethod)
 }
 inline std::string* HttpChannelOpenArgs::mutable_requestmethod() {
@@ -19118,7 +19118,7 @@ inline void HttpChannelOpenArgs::set_allocated_classofservice(std::string* class
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.classOfService)
 }
 
-// required string entityID = 24;
+// required bytes entityID = 24;
 inline bool HttpChannelOpenArgs::_internal_has_entityid() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -19138,7 +19138,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOpenArgs::set_entityid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00010000u;
- _impl_.entityid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.entityid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.entityID)
 }
 inline std::string* HttpChannelOpenArgs::mutable_entityid() {
@@ -19186,7 +19186,7 @@ inline void HttpChannelOpenArgs::set_allocated_entityid(std::string* entityid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.entityID)
 }
 
-// required string appCacheClientID = 25;
+// required bytes appCacheClientID = 25;
 inline bool HttpChannelOpenArgs::_internal_has_appcacheclientid() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
@@ -19206,7 +19206,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOpenArgs::set_appcacheclientid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00020000u;
- _impl_.appcacheclientid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.appcacheclientid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.appCacheClientID)
 }
 inline std::string* HttpChannelOpenArgs::mutable_appcacheclientid() {
@@ -19344,7 +19344,7 @@ inline void HttpChannelOpenArgs::set_allocated_preflightargs(::protobuf::mozilla
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.preflightArgs)
 }
 
-// required string contentTypeHint = 27;
+// required bytes contentTypeHint = 27;
 inline bool HttpChannelOpenArgs::_internal_has_contenttypehint() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
@@ -19364,7 +19364,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOpenArgs::set_contenttypehint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00040000u;
- _impl_.contenttypehint_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.contenttypehint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.contentTypeHint)
 }
 inline std::string* HttpChannelOpenArgs::mutable_contenttypehint() {
@@ -19412,7 +19412,7 @@ inline void HttpChannelOpenArgs::set_allocated_contenttypehint(std::string* cont
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.contentTypeHint)
 }
 
-// required string integrityMetadata = 28;
+// required bytes integrityMetadata = 28;
 inline bool HttpChannelOpenArgs::_internal_has_integritymetadata() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -19432,7 +19432,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOpenArgs::set_integritymetadata(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00080000u;
- _impl_.integritymetadata_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.integritymetadata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.integrityMetadata)
 }
 inline std::string* HttpChannelOpenArgs::mutable_integritymetadata() {
@@ -20313,7 +20313,7 @@ inline void HttpChannelOpenArgs::set_redirectionlimit(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.redirectionLimit)
 }
 
-// required string classicScriptHintCharset = 53;
+// required bytes classicScriptHintCharset = 53;
 inline bool HttpChannelOpenArgs::_internal_has_classicscripthintcharset() const {
   bool value = (_impl_._has_bits_[0] & 0x00200000u) != 0;
   return value;
@@ -20333,7 +20333,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOpenArgs::set_classicscripthintcharset(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00200000u;
- _impl_.classicscripthintcharset_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.classicscripthintcharset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.classicScriptHintCharset)
 }
 inline std::string* HttpChannelOpenArgs::mutable_classicscripthintcharset() {
@@ -20381,7 +20381,7 @@ inline void HttpChannelOpenArgs::set_allocated_classicscripthintcharset(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.classicScriptHintCharset)
 }
 
-// required string documentCharacterSet = 54;
+// required bytes documentCharacterSet = 54;
 inline bool HttpChannelOpenArgs::_internal_has_documentcharacterset() const {
   bool value = (_impl_._has_bits_[0] & 0x00400000u) != 0;
   return value;
@@ -20401,7 +20401,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOpenArgs::set_documentcharacterset(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00400000u;
- _impl_.documentcharacterset_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.documentcharacterset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.documentCharacterSet)
 }
 inline std::string* HttpChannelOpenArgs::mutable_documentcharacterset() {
@@ -20477,7 +20477,7 @@ inline void HttpChannelOpenArgs::set_isuseragentheadermodified(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.isUserAgentHeaderModified)
 }
 
-// required string initiatorType = 56;
+// required bytes initiatorType = 56;
 inline bool HttpChannelOpenArgs::_internal_has_initiatortype() const {
   bool value = (_impl_._has_bits_[0] & 0x00800000u) != 0;
   return value;
@@ -20497,7 +20497,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOpenArgs::set_initiatortype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00800000u;
- _impl_.initiatortype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.initiatortype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.initiatorType)
 }
 inline std::string* HttpChannelOpenArgs::mutable_initiatortype() {
@@ -20742,7 +20742,7 @@ inline HttpChannelCreationArgs::ContentCase HttpChannelCreationArgs::content_cas
 
 // ProxyInfoCloneArgs
 
-// required string type = 1;
+// required bytes type = 1;
 inline bool ProxyInfoCloneArgs::_internal_has_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -20762,7 +20762,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ProxyInfoCloneArgs::set_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ProxyInfoCloneArgs.type)
 }
 inline std::string* ProxyInfoCloneArgs::mutable_type() {
@@ -20810,7 +20810,7 @@ inline void ProxyInfoCloneArgs::set_allocated_type(std::string* type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ProxyInfoCloneArgs.type)
 }
 
-// required string host = 2;
+// required bytes host = 2;
 inline bool ProxyInfoCloneArgs::_internal_has_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -20830,7 +20830,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ProxyInfoCloneArgs::set_host(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.host_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ProxyInfoCloneArgs.host)
 }
 inline std::string* ProxyInfoCloneArgs::mutable_host() {
@@ -20906,7 +20906,7 @@ inline void ProxyInfoCloneArgs::set_port(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ProxyInfoCloneArgs.port)
 }
 
-// required string username = 4;
+// required bytes username = 4;
 inline bool ProxyInfoCloneArgs::_internal_has_username() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -20926,7 +20926,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ProxyInfoCloneArgs::set_username(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.username_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ProxyInfoCloneArgs.username)
 }
 inline std::string* ProxyInfoCloneArgs::mutable_username() {
@@ -20974,7 +20974,7 @@ inline void ProxyInfoCloneArgs::set_allocated_username(std::string* username) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ProxyInfoCloneArgs.username)
 }
 
-// required string password = 5;
+// required bytes password = 5;
 inline bool ProxyInfoCloneArgs::_internal_has_password() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -20994,7 +20994,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ProxyInfoCloneArgs::set_password(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.password_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.password_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ProxyInfoCloneArgs.password)
 }
 inline std::string* ProxyInfoCloneArgs::mutable_password() {
@@ -21126,7 +21126,7 @@ inline void ProxyInfoCloneArgs::set_resolveflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ProxyInfoCloneArgs.resolveFlags)
 }
 
-// required string proxyAuthorizationHeader = 9;
+// required bytes proxyAuthorizationHeader = 9;
 inline bool ProxyInfoCloneArgs::_internal_has_proxyauthorizationheader() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -21146,7 +21146,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ProxyInfoCloneArgs::set_proxyauthorizationheader(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.proxyauthorizationheader_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.proxyauthorizationheader_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ProxyInfoCloneArgs.proxyAuthorizationHeader)
 }
 inline std::string* ProxyInfoCloneArgs::mutable_proxyauthorizationheader() {
@@ -21194,7 +21194,7 @@ inline void ProxyInfoCloneArgs::set_allocated_proxyauthorizationheader(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ProxyInfoCloneArgs.proxyAuthorizationHeader)
 }
 
-// required string connectionIsolationKey = 10;
+// required bytes connectionIsolationKey = 10;
 inline bool ProxyInfoCloneArgs::_internal_has_connectionisolationkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -21214,7 +21214,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ProxyInfoCloneArgs::set_connectionisolationkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.connectionisolationkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.connectionisolationkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ProxyInfoCloneArgs.connectionIsolationKey)
 }
 inline std::string* ProxyInfoCloneArgs::mutable_connectionisolationkey() {
@@ -21266,7 +21266,7 @@ inline void ProxyInfoCloneArgs::set_allocated_connectionisolationkey(std::string
 
 // HttpConnectionInfoCloneArgs
 
-// required string host = 1;
+// required bytes host = 1;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -21286,7 +21286,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpConnectionInfoCloneArgs::set_host(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.host_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.host)
 }
 inline std::string* HttpConnectionInfoCloneArgs::mutable_host() {
@@ -21362,7 +21362,7 @@ inline void HttpConnectionInfoCloneArgs::set_port(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.port)
 }
 
-// required string npnToken = 3;
+// required bytes npnToken = 3;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_npntoken() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -21382,7 +21382,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpConnectionInfoCloneArgs::set_npntoken(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.npntoken_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.npntoken_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.npnToken)
 }
 inline std::string* HttpConnectionInfoCloneArgs::mutable_npntoken() {
@@ -21430,7 +21430,7 @@ inline void HttpConnectionInfoCloneArgs::set_allocated_npntoken(std::string* npn
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.npnToken)
 }
 
-// required string username = 4;
+// required bytes username = 4;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_username() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -21450,7 +21450,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpConnectionInfoCloneArgs::set_username(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.username_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.username)
 }
 inline std::string* HttpConnectionInfoCloneArgs::mutable_username() {
@@ -21594,7 +21594,7 @@ inline void HttpConnectionInfoCloneArgs::set_endtoendssl(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.endToEndSSL)
 }
 
-// required string routedHost = 7;
+// required bytes routedHost = 7;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_routedhost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -21614,7 +21614,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpConnectionInfoCloneArgs::set_routedhost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.routedhost_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.routedhost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.routedHost)
 }
 inline std::string* HttpConnectionInfoCloneArgs::mutable_routedhost() {
@@ -22082,7 +22082,7 @@ inline void HttpConnectionInfoCloneArgs::set_isipv6disabled(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.isIPv6Disabled)
 }
 
-// required string topWindowOrigin = 23;
+// required bytes topWindowOrigin = 23;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_topwindoworigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -22102,7 +22102,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpConnectionInfoCloneArgs::set_topwindoworigin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.topwindoworigin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.topwindoworigin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.topWindowOrigin)
 }
 inline std::string* HttpConnectionInfoCloneArgs::mutable_topwindoworigin() {
@@ -22262,7 +22262,7 @@ inline void HttpConnectionInfoCloneArgs::set_hasiphintaddress(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.hasIPHintAddress)
 }
 
-// required string echConfig = 28;
+// required bytes echConfig = 28;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_echconfig() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -22282,7 +22282,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpConnectionInfoCloneArgs::set_echconfig(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.echconfig_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.echconfig_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.echConfig)
 }
 inline std::string* HttpConnectionInfoCloneArgs::mutable_echconfig() {
@@ -22402,7 +22402,7 @@ inline void ConsoleReportCollected::set_errorflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ConsoleReportCollected.errorFlags)
 }
 
-// required string category = 2;
+// required bytes category = 2;
 inline bool ConsoleReportCollected::_internal_has_category() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -22422,7 +22422,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ConsoleReportCollected::set_category(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.category_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.category_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ConsoleReportCollected.category)
 }
 inline std::string* ConsoleReportCollected::mutable_category() {
@@ -22498,7 +22498,7 @@ inline void ConsoleReportCollected::set_propertiesfile(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ConsoleReportCollected.propertiesFile)
 }
 
-// required string sourceFileURI = 4;
+// required bytes sourceFileURI = 4;
 inline bool ConsoleReportCollected::_internal_has_sourcefileuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -22518,7 +22518,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ConsoleReportCollected::set_sourcefileuri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.sourcefileuri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.sourcefileuri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ConsoleReportCollected.sourceFileURI)
 }
 inline std::string* ConsoleReportCollected::mutable_sourcefileuri() {
@@ -22622,7 +22622,7 @@ inline void ConsoleReportCollected::set_columnnumber(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ConsoleReportCollected.columnNumber)
 }
 
-// required string messageName = 7;
+// required bytes messageName = 7;
 inline bool ConsoleReportCollected::_internal_has_messagename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -22642,7 +22642,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ConsoleReportCollected::set_messagename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.messagename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.messagename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ConsoleReportCollected.messageName)
 }
 inline std::string* ConsoleReportCollected::mutable_messagename() {
@@ -22690,7 +22690,7 @@ inline void ConsoleReportCollected::set_allocated_messagename(std::string* messa
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ConsoleReportCollected.messageName)
 }
 
-// repeated string stringParams = 8;
+// repeated bytes stringParams = 8;
 inline int ConsoleReportCollected::_internal_stringparams_size() const {
   return _impl_.stringparams_.size();
 }
@@ -22729,7 +22729,7 @@ inline void ConsoleReportCollected::set_stringparams(int index, const char* valu
   _impl_.stringparams_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.ConsoleReportCollected.stringParams)
 }
-inline void ConsoleReportCollected::set_stringparams(int index, const char* value, size_t size) {
+inline void ConsoleReportCollected::set_stringparams(int index, const void* value, size_t size) {
   _impl_.stringparams_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.ConsoleReportCollected.stringParams)
@@ -22750,7 +22750,7 @@ inline void ConsoleReportCollected::add_stringparams(const char* value) {
   _impl_.stringparams_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.ConsoleReportCollected.stringParams)
 }
-inline void ConsoleReportCollected::add_stringparams(const char* value, size_t size) {
+inline void ConsoleReportCollected::add_stringparams(const void* value, size_t size) {
   _impl_.stringparams_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.ConsoleReportCollected.stringParams)
 }
@@ -22769,7 +22769,7 @@ ConsoleReportCollected::mutable_stringparams() {
 
 // CookieStruct
 
-// required string name = 1;
+// required bytes name = 1;
 inline bool CookieStruct::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -22789,7 +22789,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CookieStruct::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.name)
 }
 inline std::string* CookieStruct::mutable_name() {
@@ -22837,7 +22837,7 @@ inline void CookieStruct::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.CookieStruct.name)
 }
 
-// required string value = 2;
+// required bytes value = 2;
 inline bool CookieStruct::_internal_has_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -22857,7 +22857,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CookieStruct::set_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.value)
 }
 inline std::string* CookieStruct::mutable_value() {
@@ -22905,7 +22905,7 @@ inline void CookieStruct::set_allocated_value(std::string* value) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.CookieStruct.value)
 }
 
-// required string host = 3;
+// required bytes host = 3;
 inline bool CookieStruct::_internal_has_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -22925,7 +22925,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CookieStruct::set_host(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.host_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.host)
 }
 inline std::string* CookieStruct::mutable_host() {
@@ -22973,7 +22973,7 @@ inline void CookieStruct::set_allocated_host(std::string* host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.CookieStruct.host)
 }
 
-// required string path = 4;
+// required bytes path = 4;
 inline bool CookieStruct::_internal_has_path() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -22993,7 +22993,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CookieStruct::set_path(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.path_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.path_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.path)
 }
 inline std::string* CookieStruct::mutable_path() {
@@ -24864,7 +24864,7 @@ inline void RedirectToRealChannelArgs::set_contentdisposition(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.RedirectToRealChannelArgs.contentDisposition)
 }
 
-// optional string contentDispositionFilename = 11;
+// optional bytes contentDispositionFilename = 11;
 inline bool RedirectToRealChannelArgs::_internal_has_contentdispositionfilename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -24884,7 +24884,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RedirectToRealChannelArgs::set_contentdispositionfilename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.contentdispositionfilename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.contentdispositionfilename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.RedirectToRealChannelArgs.contentDispositionFilename)
 }
 inline std::string* RedirectToRealChannelArgs::mutable_contentdispositionfilename() {
@@ -25152,7 +25152,7 @@ inline void RedirectToRealChannelArgs::set_allocated_timing(std::string* timing)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RedirectToRealChannelArgs.timing)
 }
 
-// required string srcdocData = 17;
+// required bytes srcdocData = 17;
 inline bool RedirectToRealChannelArgs::_internal_has_srcdocdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -25172,7 +25172,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RedirectToRealChannelArgs::set_srcdocdata(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.srcdocdata_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.srcdocdata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.RedirectToRealChannelArgs.srcdocData)
 }
 inline std::string* RedirectToRealChannelArgs::mutable_srcdocdata() {
@@ -25384,7 +25384,7 @@ inline void RedirectToRealChannelArgs::set_loadidentifier(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.RedirectToRealChannelArgs.loadIdentifier)
 }
 
-// optional string originalUriString = 21;
+// optional bytes originalUriString = 21;
 inline bool RedirectToRealChannelArgs::_internal_has_originaluristring() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -25404,7 +25404,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RedirectToRealChannelArgs::set_originaluristring(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000100u;
- _impl_.originaluristring_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.originaluristring_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.RedirectToRealChannelArgs.originalUriString)
 }
 inline std::string* RedirectToRealChannelArgs::mutable_originaluristring() {
@@ -27288,7 +27288,7 @@ inline void ResourceTimingStructArgs::set_allocated_transactionpending(std::stri
 
 // HttpActivity
 
-// required string host = 1;
+// required bytes host = 1;
 inline bool HttpActivity::_internal_has_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -27308,7 +27308,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpActivity::set_host(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.host_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpActivity.host)
 }
 inline std::string* HttpActivity::mutable_host() {
@@ -27416,7 +27416,7 @@ inline void HttpActivity::set_endtoendssl(bool value) {
 
 // HttpConnectionActivity
 
-// required string connInfoKey = 1;
+// required bytes connInfoKey = 1;
 inline bool HttpConnectionActivity::_internal_has_conninfokey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -27436,7 +27436,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpConnectionActivity::set_conninfokey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.conninfokey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.conninfokey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionActivity.connInfoKey)
 }
 inline std::string* HttpConnectionActivity::mutable_conninfokey() {
@@ -27484,7 +27484,7 @@ inline void HttpConnectionActivity::set_allocated_conninfokey(std::string* conni
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpConnectionActivity.connInfoKey)
 }
 
-// required string host = 2;
+// required bytes host = 2;
 inline bool HttpConnectionActivity::_internal_has_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -27504,7 +27504,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpConnectionActivity::set_host(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.host_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionActivity.host)
 }
 inline std::string* HttpConnectionActivity::mutable_host() {
@@ -28226,7 +28226,7 @@ inline void GIOChannelOpenArgs::set_startpos(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.GIOChannelOpenArgs.startPos)
 }
 
-// required string entityID = 3;
+// required bytes entityID = 3;
 inline bool GIOChannelOpenArgs::_internal_has_entityid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -28246,7 +28246,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GIOChannelOpenArgs::set_entityid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.entityid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.entityid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.GIOChannelOpenArgs.entityID)
 }
 inline std::string* GIOChannelOpenArgs::mutable_entityid() {
@@ -28950,7 +28950,7 @@ inline void FileChannelInfo::set_allocated_loadinfo(::protobuf::mozilla::net::Lo
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.FileChannelInfo.loadInfo)
 }
 
-// required string contentType = 5;
+// required bytes contentType = 5;
 inline bool FileChannelInfo::_internal_has_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -28970,7 +28970,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileChannelInfo::set_contenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.contenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.contenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.FileChannelInfo.contentType)
 }
 inline std::string* FileChannelInfo::mutable_contenttype() {
@@ -29118,7 +29118,7 @@ inline void RemoteStreamInfo::set_allocated_inputstream(std::string* inputstream
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RemoteStreamInfo.inputStream)
 }
 
-// required string contentType = 2;
+// required bytes contentType = 2;
 inline bool RemoteStreamInfo::_internal_has_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -29138,7 +29138,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteStreamInfo::set_contenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.contenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.contenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.RemoteStreamInfo.contentType)
 }
 inline std::string* RemoteStreamInfo::mutable_contenttype() {

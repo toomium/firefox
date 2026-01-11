@@ -20,14 +20,14 @@ import "IPCBlob.proto";
 message Msg_Open {
   required int32 selectedType = 1;
   required bool addToRecentDocs = 2;
-  required string defaultFile = 3;
-  required string defaultExtension = 4;
-  repeated string filters = 5;
-  repeated string filterNames = 6;
-  repeated string rawFilters = 7;
-  required string displayDirectory = 8;
-  required string displaySpecialDirectory = 9;
-  required string okButtonLabel = 10;
+  required bytes defaultFile = 3;
+  required bytes defaultExtension = 4;
+  repeated bytes filters = 5;
+  repeated bytes filterNames = 6;
+  repeated bytes rawFilters = 7;
+  required bytes displayDirectory = 8;
+  required bytes displaySpecialDirectory = 9;
+  required bytes okButtonLabel = 10;
   required bytes capture = 11;
 }
 
@@ -42,5 +42,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 24
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 5, "<class 'ipdl.type.BuiltinCType'>": 1, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 13, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 4, "<class 'ipdl.type.UnionType'>": 1, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 11
+// Scalar mappings performed: 2
 // Message structs/unions generated from ipdl structs/unions: 3

@@ -19,7 +19,7 @@ import "PBackgroundSharedTypes.proto";
 // Message declarations
 message Msg_Close {
   required uint32 code = 1;
-  required string reason = 2;
+  required bytes reason = 2;
 }
 
 message Msg_CreateUnidirectionalStream {
@@ -78,7 +78,7 @@ message Msg_IncomingDatagram {
 message Msg_RemoteClosed {
   required bool cleanly = 1;
   required uint32 code = 2;
-  required string reason = 3;
+  required bytes reason = 3;
 }
 
 message Msg_OnStreamResetOrStopSending {
@@ -96,5 +96,5 @@ message Reply_CloseAll {
 // Parameter mappings stats:
 // Total parameters in this file 40
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 2, "<class 'ipdl.type.BuiltinCType'>": 1, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 27, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 3, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 4, "<class 'ipdl.type.UnionType'>": 3, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 14
+// Scalar mappings performed: 12
 // Message structs/unions generated from ipdl structs/unions: 7

@@ -12,7 +12,7 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message GamepadAdded {
-  required string id = 1;
+  required bytes id = 1;
   required bytes mapping = 2;
   required bytes hand = 3;
   required uint32 display_id = 4;

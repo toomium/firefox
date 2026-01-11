@@ -206,7 +206,7 @@ class DNSRecord final :
   std::string* _internal_add_addrs();
   public:
 
-  // required string canonicalName = 1;
+  // required bytes canonicalName = 1;
   bool has_canonicalname() const;
   private:
   bool _internal_has_canonicalname() const;
@@ -555,7 +555,7 @@ class DNSRequestResponse final :
 #endif  // __GNUC__
 // DNSRecord
 
-// required string canonicalName = 1;
+// required bytes canonicalName = 1;
 inline bool DNSRecord::_internal_has_canonicalname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -575,7 +575,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DNSRecord::set_canonicalname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.canonicalname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.canonicalname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.canonicalName)
 }
 inline std::string* DNSRecord::mutable_canonicalname() {

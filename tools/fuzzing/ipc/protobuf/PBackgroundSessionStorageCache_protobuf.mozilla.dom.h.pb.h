@@ -189,7 +189,7 @@ class SSSetItemInfo final :
     kKeyFieldNumber = 1,
     kValueFieldNumber = 2,
   };
-  // required string key = 1;
+  // required bytes key = 1;
   bool has_key() const;
   private:
   bool _internal_has_key() const;
@@ -207,7 +207,7 @@ class SSSetItemInfo final :
   std::string* _internal_mutable_key();
   public:
 
-  // required string value = 2;
+  // required bytes value = 2;
   bool has_value() const;
   private:
   bool _internal_has_value() const;
@@ -358,7 +358,7 @@ class SSRemoveItemInfo final :
   enum : int {
     kKeyFieldNumber = 1,
   };
-  // required string key = 1;
+  // required bytes key = 1;
   bool has_key() const;
   private:
   bool _internal_has_key() const;
@@ -856,7 +856,7 @@ class SSCacheCopy final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::SSSetItemInfo >&
       data() const;
 
-  // required string originKey = 1;
+  // required bytes originKey = 1;
   bool has_originkey() const;
   private:
   bool _internal_has_originkey() const;
@@ -923,7 +923,7 @@ class SSCacheCopy final :
 #endif  // __GNUC__
 // SSSetItemInfo
 
-// required string key = 1;
+// required bytes key = 1;
 inline bool SSSetItemInfo::_internal_has_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -943,7 +943,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SSSetItemInfo::set_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SSSetItemInfo.key)
 }
 inline std::string* SSSetItemInfo::mutable_key() {
@@ -991,7 +991,7 @@ inline void SSSetItemInfo::set_allocated_key(std::string* key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SSSetItemInfo.key)
 }
 
-// required string value = 2;
+// required bytes value = 2;
 inline bool SSSetItemInfo::_internal_has_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1011,7 +1011,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SSSetItemInfo::set_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SSSetItemInfo.value)
 }
 inline std::string* SSSetItemInfo::mutable_value() {
@@ -1063,7 +1063,7 @@ inline void SSSetItemInfo::set_allocated_value(std::string* value) {
 
 // SSRemoveItemInfo
 
-// required string key = 1;
+// required bytes key = 1;
 inline bool SSRemoveItemInfo::_internal_has_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1083,7 +1083,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SSRemoveItemInfo::set_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SSRemoveItemInfo.key)
 }
 inline std::string* SSRemoveItemInfo::mutable_key() {
@@ -1374,7 +1374,7 @@ inline SSWriteInfo::ContentCase SSWriteInfo::content_case() const {
 
 // SSCacheCopy
 
-// required string originKey = 1;
+// required bytes originKey = 1;
 inline bool SSCacheCopy::_internal_has_originkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1394,7 +1394,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SSCacheCopy::set_originkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.originkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.originkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SSCacheCopy.originKey)
 }
 inline std::string* SSCacheCopy::mutable_originkey() {

@@ -18,8 +18,8 @@ message IPCServiceWorkerDescriptor {
   required uint64 registrationId = 2;
   required uint64 registrationVersion = 3;
   required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 4;
-  required string scope = 5;
-  required string scriptURL = 6;
+  required bytes scope = 5;
+  required bytes scriptURL = 6;
   required bytes state = 7;
   required bool handlesFetch = 8;
 }

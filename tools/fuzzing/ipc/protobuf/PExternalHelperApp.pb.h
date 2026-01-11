@@ -194,7 +194,7 @@ class Msg_OnStartRequest final :
   enum : int {
     kEntityIDFieldNumber = 1,
   };
-  // required string entityID = 1;
+  // required bytes entityID = 1;
   bool has_entityid() const;
   private:
   bool _internal_has_entityid() const;
@@ -343,7 +343,7 @@ class Msg_OnDataAvailable final :
     kOffsetFieldNumber = 2,
     kCountFieldNumber = 3,
   };
-  // required string data = 1;
+  // required bytes data = 1;
   bool has_data() const;
   private:
   bool _internal_has_data() const;
@@ -960,7 +960,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OnStartRequest
 
-// required string entityID = 1;
+// required bytes entityID = 1;
 inline bool Msg_OnStartRequest::_internal_has_entityid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -980,7 +980,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStartRequest::set_entityid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.entityid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.entityid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStartRequest.entityID)
 }
 inline std::string* Msg_OnStartRequest::mutable_entityid() {
@@ -1032,7 +1032,7 @@ inline void Msg_OnStartRequest::set_allocated_entityid(std::string* entityid) {
 
 // Msg_OnDataAvailable
 
-// required string data = 1;
+// required bytes data = 1;
 inline bool Msg_OnDataAvailable::_internal_has_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1052,7 +1052,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnDataAvailable::set_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.data_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.data)
 }
 inline std::string* Msg_OnDataAvailable::mutable_data() {

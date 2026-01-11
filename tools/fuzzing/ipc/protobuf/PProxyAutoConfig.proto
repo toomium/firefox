@@ -14,24 +14,24 @@ package protobuf.mozilla.net.PProxyAutoConfig;
 
 // Message declarations
 message Msg_ConfigurePAC {
-  required string aPACURI = 1;
-  required string aPACScriptData = 2;
+  required bytes aPACURI = 1;
+  required bytes aPACScriptData = 2;
   required bool aIncludePath = 3;
   required uint32 aExtraHeapSize = 4;
 }
 
 message Msg_GetProxyForURI {
-  required string aTestURI = 1;
-  required string aTestHost = 2;
+  required bytes aTestURI = 1;
+  required bytes aTestHost = 2;
 }
 
 message Reply_GetProxyForURI {
   required bytes aStatus = 1;
-  required string aResult = 2;
+  required bytes aResult = 2;
 }
 
 // Parameter mappings stats:
 // Total parameters in this file 8
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 1, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 7, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 7
+// Scalar mappings performed: 2
 // Message structs/unions generated from ipdl structs/unions: 0

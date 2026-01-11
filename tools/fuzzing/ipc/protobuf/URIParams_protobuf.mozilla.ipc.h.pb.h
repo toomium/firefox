@@ -216,7 +216,7 @@ class SimpleURIParams final :
   enum : int {
     kSpecFieldNumber = 1,
   };
-  // required string spec = 1;
+  // required bytes spec = 1;
   bool has_spec() const;
   private:
   bool _internal_has_spec() const;
@@ -363,7 +363,7 @@ class DefaultURIParams final :
   enum : int {
     kSpecFieldNumber = 1,
   };
-  // required string spec = 1;
+  // required bytes spec = 1;
   bool has_spec() const;
   private:
   bool _internal_has_spec() const;
@@ -687,7 +687,7 @@ class StandardURLParams final :
     kSupportsFileURLFieldNumber = 17,
     kIsSubstitutingFieldNumber = 18,
   };
-  // required string spec = 4;
+  // required bytes spec = 4;
   bool has_spec() const;
   private:
   bool _internal_has_spec() const;
@@ -1137,7 +1137,7 @@ class JARURIParams final :
     kJarFileFieldNumber = 1,
     kJarEntryFieldNumber = 2,
   };
-  // required string charset = 3;
+  // required bytes charset = 3;
   bool has_charset() const;
   private:
   bool _internal_has_charset() const;
@@ -1331,7 +1331,7 @@ class IconURIParams final :
     kIconScaleFieldNumber = 6,
     kIconDarkFieldNumber = 7,
   };
-  // required string contentType = 3;
+  // required bytes contentType = 3;
   bool has_contenttype() const;
   private:
   bool _internal_has_contenttype() const;
@@ -1349,7 +1349,7 @@ class IconURIParams final :
   std::string* _internal_mutable_contenttype();
   public:
 
-  // required string fileName = 4;
+  // required bytes fileName = 4;
   bool has_filename() const;
   private:
   bool _internal_has_filename() const;
@@ -1367,7 +1367,7 @@ class IconURIParams final :
   std::string* _internal_mutable_filename();
   public:
 
-  // required string stockIcon = 5;
+  // required bytes stockIcon = 5;
   bool has_stockicon() const;
   private:
   bool _internal_has_stockicon() const;
@@ -2677,7 +2677,7 @@ class SubstitutingJARURIParams final :
 #endif  // __GNUC__
 // SimpleURIParams
 
-// required string spec = 1;
+// required bytes spec = 1;
 inline bool SimpleURIParams::_internal_has_spec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2697,7 +2697,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SimpleURIParams::set_spec(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.spec_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.spec_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SimpleURIParams.spec)
 }
 inline std::string* SimpleURIParams::mutable_spec() {
@@ -2749,7 +2749,7 @@ inline void SimpleURIParams::set_allocated_spec(std::string* spec) {
 
 // DefaultURIParams
 
-// required string spec = 1;
+// required bytes spec = 1;
 inline bool DefaultURIParams::_internal_has_spec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2769,7 +2769,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DefaultURIParams::set_spec(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.spec_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.spec_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.DefaultURIParams.spec)
 }
 inline std::string* DefaultURIParams::mutable_spec() {
@@ -2965,7 +2965,7 @@ inline void StandardURLParams::set_defaultport(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StandardURLParams.defaultPort)
 }
 
-// required string spec = 4;
+// required bytes spec = 4;
 inline bool StandardURLParams::_internal_has_spec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2985,7 +2985,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StandardURLParams::set_spec(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.spec_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.spec_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StandardURLParams.spec)
 }
 inline std::string* StandardURLParams::mutable_spec() {
@@ -4353,7 +4353,7 @@ inline void JARURIParams::set_allocated_jarentry(::protobuf::mozilla::ipc::URIPa
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.JARURIParams.jarEntry)
 }
 
-// required string charset = 3;
+// required bytes charset = 3;
 inline bool JARURIParams::_internal_has_charset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4373,7 +4373,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void JARURIParams::set_charset(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.charset_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.charset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.JARURIParams.charset)
 }
 inline std::string* JARURIParams::mutable_charset() {
@@ -4543,7 +4543,7 @@ inline void IconURIParams::set_size(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.IconURIParams.size)
 }
 
-// required string contentType = 3;
+// required bytes contentType = 3;
 inline bool IconURIParams::_internal_has_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4563,7 +4563,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IconURIParams::set_contenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.contenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.contenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.IconURIParams.contentType)
 }
 inline std::string* IconURIParams::mutable_contenttype() {
@@ -4611,7 +4611,7 @@ inline void IconURIParams::set_allocated_contenttype(std::string* contenttype) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.IconURIParams.contentType)
 }
 
-// required string fileName = 4;
+// required bytes fileName = 4;
 inline bool IconURIParams::_internal_has_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4631,7 +4631,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IconURIParams::set_filename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.filename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.IconURIParams.fileName)
 }
 inline std::string* IconURIParams::mutable_filename() {
@@ -4679,7 +4679,7 @@ inline void IconURIParams::set_allocated_filename(std::string* filename) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.IconURIParams.fileName)
 }
 
-// required string stockIcon = 5;
+// required bytes stockIcon = 5;
 inline bool IconURIParams::_internal_has_stockicon() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4699,7 +4699,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IconURIParams::set_stockicon(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.stockicon_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.stockicon_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.IconURIParams.stockIcon)
 }
 inline std::string* IconURIParams::mutable_stockicon() {

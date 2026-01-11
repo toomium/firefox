@@ -1291,7 +1291,7 @@ class Msg_ReplyGetCaptureDevice final :
     kScaryFieldNumber = 3,
     kPlaceholderFieldNumber = 4,
   };
-  // required string device_name = 1;
+  // required bytes device_name = 1;
   bool has_device_name() const;
   private:
   bool _internal_has_device_name() const;
@@ -1309,7 +1309,7 @@ class Msg_ReplyGetCaptureDevice final :
   std::string* _internal_mutable_device_name();
   public:
 
-  // required string device_id = 2;
+  // required bytes device_id = 2;
   bool has_device_id() const;
   private:
   bool _internal_has_device_id() const;
@@ -2150,7 +2150,7 @@ class Msg_NumberOfCapabilities final :
   std::string* _internal_mutable_engine();
   public:
 
-  // required string deviceUniqueIdUTF8 = 2;
+  // required bytes deviceUniqueIdUTF8 = 2;
   bool has_deviceuniqueidutf8() const;
   private:
   bool _internal_has_deviceuniqueidutf8() const;
@@ -2321,7 +2321,7 @@ class Msg_GetCaptureCapability final :
   std::string* _internal_mutable_engine();
   public:
 
-  // required string unique_idUTF8 = 2;
+  // required bytes unique_idUTF8 = 2;
   bool has_unique_idutf8() const;
   private:
   bool _internal_has_unique_idutf8() const;
@@ -2671,7 +2671,7 @@ class Msg_AllocateCapture final :
   std::string* _internal_mutable_engine();
   public:
 
-  // required string unique_idUTF8 = 2;
+  // required bytes unique_idUTF8 = 2;
   bool has_unique_idutf8() const;
   private:
   bool _internal_has_unique_idutf8() const;
@@ -4117,7 +4117,7 @@ inline void Msg_ReplyGetCaptureCapability::set_allocated_cap(::protobuf::mozilla
 
 // Msg_ReplyGetCaptureDevice
 
-// required string device_name = 1;
+// required bytes device_name = 1;
 inline bool Msg_ReplyGetCaptureDevice::_internal_has_device_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4137,7 +4137,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReplyGetCaptureDevice::set_device_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.device_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.device_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.device_name)
 }
 inline std::string* Msg_ReplyGetCaptureDevice::mutable_device_name() {
@@ -4185,7 +4185,7 @@ inline void Msg_ReplyGetCaptureDevice::set_allocated_device_name(std::string* de
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.device_name)
 }
 
-// required string device_id = 2;
+// required bytes device_id = 2;
 inline bool Msg_ReplyGetCaptureDevice::_internal_has_device_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4205,7 +4205,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReplyGetCaptureDevice::set_device_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.device_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.device_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.device_id)
 }
 inline std::string* Msg_ReplyGetCaptureDevice::mutable_device_id() {
@@ -4469,7 +4469,7 @@ inline void Msg_NumberOfCapabilities::set_allocated_engine(std::string* engine) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.engine)
 }
 
-// required string deviceUniqueIdUTF8 = 2;
+// required bytes deviceUniqueIdUTF8 = 2;
 inline bool Msg_NumberOfCapabilities::_internal_has_deviceuniqueidutf8() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4489,7 +4489,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NumberOfCapabilities::set_deviceuniqueidutf8(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.deviceuniqueidutf8_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.deviceuniqueidutf8_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.deviceUniqueIdUTF8)
 }
 inline std::string* Msg_NumberOfCapabilities::mutable_deviceuniqueidutf8() {
@@ -4609,7 +4609,7 @@ inline void Msg_GetCaptureCapability::set_allocated_engine(std::string* engine) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.engine)
 }
 
-// required string unique_idUTF8 = 2;
+// required bytes unique_idUTF8 = 2;
 inline bool Msg_GetCaptureCapability::_internal_has_unique_idutf8() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4629,7 +4629,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetCaptureCapability::set_unique_idutf8(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.unique_idutf8_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.unique_idutf8_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.unique_idUTF8)
 }
 inline std::string* Msg_GetCaptureCapability::mutable_unique_idutf8() {
@@ -4877,7 +4877,7 @@ inline void Msg_AllocateCapture::set_allocated_engine(std::string* engine) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.engine)
 }
 
-// required string unique_idUTF8 = 2;
+// required bytes unique_idUTF8 = 2;
 inline bool Msg_AllocateCapture::_internal_has_unique_idutf8() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4897,7 +4897,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AllocateCapture::set_unique_idutf8(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.unique_idutf8_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.unique_idutf8_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.unique_idUTF8)
 }
 inline std::string* Msg_AllocateCapture::mutable_unique_idutf8() {

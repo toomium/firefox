@@ -29,5 +29,5 @@ message FrameStats {
   required bytes fwdTime = 10;
   required bytes sceneBuiltTime = 11;
   required uint32 skippedComposites = 12;
-  required string url = 13;
+  required bytes url = 13;
 }

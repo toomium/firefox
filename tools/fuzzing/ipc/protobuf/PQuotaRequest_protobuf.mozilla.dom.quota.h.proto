@@ -13,7 +13,7 @@ package protobuf.mozilla.dom.quota;
 
 // Structs and unions declarations
 message StorageNameResponse {
-  required string name = 1;
+  required bytes name = 1;
 }
 
 message GetFullOriginMetadataResponse {

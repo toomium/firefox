@@ -19,7 +19,7 @@ message CacheQueryParams {
   required bool ignoreMethod = 2;
   required bool ignoreVary = 3;
   required bool cacheNameSet = 4;
-  required string cacheName = 5;
+  required bytes cacheName = 5;
 }
 
 message CacheReadStream {
@@ -29,18 +29,18 @@ message CacheReadStream {
 }
 
 message HeadersEntry {
-  required string name = 1;
-  required string value = 2;
+  required bytes name = 1;
+  required bytes value = 2;
 }
 
 message CacheRequest {
-  required string method = 1;
-  required string urlWithoutQuery = 2;
-  required string urlQuery = 3;
-  required string urlFragment = 4;
+  required bytes method = 1;
+  required bytes urlWithoutQuery = 2;
+  required bytes urlQuery = 3;
+  required bytes urlFragment = 4;
   repeated protobuf.mozilla.dom.cache.HeadersEntry headers = 5;
   required bytes headersGuard = 6;
-  required string referrer = 7;
+  required bytes referrer = 7;
   required bytes referrerPolicy = 8;
   required bytes mode = 9;
   required bytes credentials = 10;
@@ -49,16 +49,16 @@ message CacheRequest {
   required bytes contentPolicyType = 13;
   required bytes requestCache = 14;
   required bytes requestRedirect = 15;
-  required string integrity = 16;
+  required bytes integrity = 16;
   required bytes loadingEmbedderPolicy = 17;
   optional protobuf.mozilla.ipc.PrincipalInfo principalInfo = 18;
 }
 
 message CacheResponse {
   required bytes type = 1;
-  repeated string urlList = 2;
+  repeated bytes urlList = 2;
   required uint32 status = 3;
-  required string statusText = 4;
+  required bytes statusText = 4;
   repeated protobuf.mozilla.dom.cache.HeadersEntry headers = 5;
   required bytes headersGuard = 6;
   optional protobuf.mozilla.dom.cache.CacheReadStream body = 7;
@@ -109,15 +109,15 @@ message StorageMatchArgs {
 }
 
 message StorageHasArgs {
-  required string key = 1;
+  required bytes key = 1;
 }
 
 message StorageOpenArgs {
-  required string key = 1;
+  required bytes key = 1;
 }
 
 message StorageDeleteArgs {
-  required string key = 1;
+  required bytes key = 1;
 }
 
 message StorageKeysArgs {
@@ -175,7 +175,7 @@ message StorageDeleteResult {
 }
 
 message StorageKeysResult {
-  repeated string keyList = 1;
+  repeated bytes keyList = 1;
 }
 
 message CacheOpResult {

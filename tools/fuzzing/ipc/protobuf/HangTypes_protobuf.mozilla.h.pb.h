@@ -1306,7 +1306,7 @@ class HangEntry final :
     kMVHangEntryChromeScriptFieldNumber = 8,
     kMVHangEntrySuppressedFieldNumber = 9,
   };
-  // string mVnsCString = 1;
+  // bytes mVnsCString = 1;
   bool has_mvnscstring() const;
   private:
   bool _internal_has_mvnscstring() const;
@@ -1625,7 +1625,7 @@ class HangModule final :
     kNameFieldNumber = 1,
     kBreakpadIdFieldNumber = 2,
   };
-  // required string name = 1;
+  // required bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -1643,7 +1643,7 @@ class HangModule final :
   std::string* _internal_mutable_name();
   public:
 
-  // required string breakpadId = 2;
+  // required bytes breakpadId = 2;
   bool has_breakpadid() const;
   private:
   bool _internal_has_breakpadid() const;
@@ -1985,7 +1985,7 @@ class HangAnnotation final :
     kNameFieldNumber = 1,
     kValueFieldNumber = 2,
   };
-  // required string name = 1;
+  // required bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -2003,7 +2003,7 @@ class HangAnnotation final :
   std::string* _internal_mutable_name();
   public:
 
-  // required string value = 2;
+  // required bytes value = 2;
   bool has_value() const;
   private:
   bool _internal_has_value() const;
@@ -2196,7 +2196,7 @@ class HangDetails final :
   std::string* _internal_mutable_duration();
   public:
 
-  // required string process = 2;
+  // required bytes process = 2;
   bool has_process() const;
   private:
   bool _internal_has_process() const;
@@ -2214,7 +2214,7 @@ class HangDetails final :
   std::string* _internal_mutable_process();
   public:
 
-  // required string remoteType = 3;
+  // required bytes remoteType = 3;
   bool has_remotetype() const;
   private:
   bool _internal_has_remotetype() const;
@@ -2232,7 +2232,7 @@ class HangDetails final :
   std::string* _internal_mutable_remotetype();
   public:
 
-  // required string threadName = 4;
+  // required bytes threadName = 4;
   bool has_threadname() const;
   private:
   bool _internal_has_threadname() const;
@@ -2250,7 +2250,7 @@ class HangDetails final :
   std::string* _internal_mutable_threadname();
   public:
 
-  // required string runnableName = 5;
+  // required bytes runnableName = 5;
   bool has_runnablename() const;
   private:
   bool _internal_has_runnablename() const;
@@ -2505,7 +2505,7 @@ inline void HangEntryProgCounter::set_allocated_pc(std::string* pc) {
 
 // HangEntry
 
-// string mVnsCString = 1;
+// bytes mVnsCString = 1;
 inline bool HangEntry::_internal_has_mvnscstring() const {
   return content_case() == kMVnsCString;
 }
@@ -2532,7 +2532,7 @@ inline void HangEntry::set_mvnscstring(ArgT0&& arg0, ArgT... args) {
     set_has_mvnscstring();
     _impl_.content_.mvnscstring_.InitDefault();
   }
-  _impl_.content_.mvnscstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.mvnscstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangEntry.mVnsCString)
 }
 inline std::string* HangEntry::mutable_mvnscstring() {
@@ -3187,7 +3187,7 @@ inline HangEntry::ContentCase HangEntry::content_case() const {
 
 // HangModule
 
-// required string name = 1;
+// required bytes name = 1;
 inline bool HangModule::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3207,7 +3207,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangModule::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangModule.name)
 }
 inline std::string* HangModule::mutable_name() {
@@ -3255,7 +3255,7 @@ inline void HangModule::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangModule.name)
 }
 
-// required string breakpadId = 2;
+// required bytes breakpadId = 2;
 inline bool HangModule::_internal_has_breakpadid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3275,7 +3275,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangModule::set_breakpadid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.breakpadid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.breakpadid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangModule.breakpadId)
 }
 inline std::string* HangModule::mutable_breakpadid() {
@@ -3458,7 +3458,7 @@ HangStack::modules() const {
 
 // HangAnnotation
 
-// required string name = 1;
+// required bytes name = 1;
 inline bool HangAnnotation::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3478,7 +3478,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangAnnotation::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangAnnotation.name)
 }
 inline std::string* HangAnnotation::mutable_name() {
@@ -3526,7 +3526,7 @@ inline void HangAnnotation::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangAnnotation.name)
 }
 
-// required string value = 2;
+// required bytes value = 2;
 inline bool HangAnnotation::_internal_has_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3546,7 +3546,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangAnnotation::set_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangAnnotation.value)
 }
 inline std::string* HangAnnotation::mutable_value() {
@@ -3666,7 +3666,7 @@ inline void HangDetails::set_allocated_duration(std::string* duration) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.duration)
 }
 
-// required string process = 2;
+// required bytes process = 2;
 inline bool HangDetails::_internal_has_process() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3686,7 +3686,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangDetails::set_process(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.process_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.process_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangDetails.process)
 }
 inline std::string* HangDetails::mutable_process() {
@@ -3734,7 +3734,7 @@ inline void HangDetails::set_allocated_process(std::string* process) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.process)
 }
 
-// required string remoteType = 3;
+// required bytes remoteType = 3;
 inline bool HangDetails::_internal_has_remotetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3754,7 +3754,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangDetails::set_remotetype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.remotetype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.remotetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangDetails.remoteType)
 }
 inline std::string* HangDetails::mutable_remotetype() {
@@ -3802,7 +3802,7 @@ inline void HangDetails::set_allocated_remotetype(std::string* remotetype) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.remoteType)
 }
 
-// required string threadName = 4;
+// required bytes threadName = 4;
 inline bool HangDetails::_internal_has_threadname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3822,7 +3822,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangDetails::set_threadname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.threadname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.threadname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangDetails.threadName)
 }
 inline std::string* HangDetails::mutable_threadname() {
@@ -3870,7 +3870,7 @@ inline void HangDetails::set_allocated_threadname(std::string* threadname) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.threadName)
 }
 
-// required string runnableName = 5;
+// required bytes runnableName = 5;
 inline bool HangDetails::_internal_has_runnablename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -3890,7 +3890,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangDetails::set_runnablename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.runnablename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.runnablename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangDetails.runnableName)
 }
 inline std::string* HangDetails::mutable_runnablename() {

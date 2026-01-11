@@ -179,7 +179,7 @@ class IPCServiceWorkerDescriptor final :
     kRegistrationVersionFieldNumber = 3,
     kHandlesFetchFieldNumber = 8,
   };
-  // required string scope = 5;
+  // required bytes scope = 5;
   bool has_scope() const;
   private:
   bool _internal_has_scope() const;
@@ -197,7 +197,7 @@ class IPCServiceWorkerDescriptor final :
   std::string* _internal_mutable_scope();
   public:
 
-  // required string scriptURL = 6;
+  // required bytes scriptURL = 6;
   bool has_scripturl() const;
   private:
   bool _internal_has_scripturl() const;
@@ -510,7 +510,7 @@ inline void IPCServiceWorkerDescriptor::set_allocated_principalinfo(::protobuf::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.principalInfo)
 }
 
-// required string scope = 5;
+// required bytes scope = 5;
 inline bool IPCServiceWorkerDescriptor::_internal_has_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -530,7 +530,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCServiceWorkerDescriptor::set_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.scope)
 }
 inline std::string* IPCServiceWorkerDescriptor::mutable_scope() {
@@ -578,7 +578,7 @@ inline void IPCServiceWorkerDescriptor::set_allocated_scope(std::string* scope) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.scope)
 }
 
-// required string scriptURL = 6;
+// required bytes scriptURL = 6;
 inline bool IPCServiceWorkerDescriptor::_internal_has_scripturl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -598,7 +598,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCServiceWorkerDescriptor::set_scripturl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.scripturl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.scripturl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.scriptURL)
 }
 inline std::string* IPCServiceWorkerDescriptor::mutable_scripturl() {

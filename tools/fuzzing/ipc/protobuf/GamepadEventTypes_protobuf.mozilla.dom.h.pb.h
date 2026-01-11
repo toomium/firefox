@@ -215,7 +215,7 @@ class GamepadAdded final :
     kNumLightsFieldNumber = 8,
     kNumTouchesFieldNumber = 9,
   };
-  // required string id = 1;
+  // required bytes id = 1;
   bool has_id() const;
   private:
   bool _internal_has_id() const;
@@ -1969,7 +1969,7 @@ class GamepadChangeEvent final :
 #endif  // __GNUC__
 // GamepadAdded
 
-// required string id = 1;
+// required bytes id = 1;
 inline bool GamepadAdded::_internal_has_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1989,7 +1989,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GamepadAdded::set_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.id)
 }
 inline std::string* GamepadAdded::mutable_id() {

@@ -21,7 +21,7 @@ import "PerformanceTimingTypes.proto";
 message FetchOpArgs {
   required protobuf.mozilla.dom.IPCInternalRequest request = 1;
   required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 2;
-  required string workerScript = 3;
+  required bytes workerScript = 3;
   required protobuf.mozilla.dom.IPCClientInfo clientInfo = 4;
   optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor controller = 5;
   optional protobuf.mozilla.net.CookieJarSettingsArgs cookieJarSettings = 6;

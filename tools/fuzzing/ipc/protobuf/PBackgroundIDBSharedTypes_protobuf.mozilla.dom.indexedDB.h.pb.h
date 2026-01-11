@@ -1424,7 +1424,7 @@ class DatabaseMetadata final :
     kPersistenceTypeFieldNumber = 3,
     kVersionFieldNumber = 2,
   };
-  // required string name = 1;
+  // required bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -1610,7 +1610,7 @@ class ObjectStoreMetadata final :
     kIdFieldNumber = 1,
     kAutoIncrementFieldNumber = 4,
   };
-  // required string name = 2;
+  // required bytes name = 2;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -1813,7 +1813,7 @@ class IndexMetadata final :
     kMultiEntryFieldNumber = 6,
     kAutoLocaleFieldNumber = 7,
   };
-  // required string name = 2;
+  // required bytes name = 2;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -1849,7 +1849,7 @@ class IndexMetadata final :
   std::string* _internal_mutable_keypath();
   public:
 
-  // required string locale = 4;
+  // required bytes locale = 4;
   bool has_locale() const;
   private:
   bool _internal_has_locale() const;
@@ -7827,7 +7827,7 @@ inline void IndexUpdateInfo::set_allocated_localizedvalue(std::string* localized
 
 // DatabaseMetadata
 
-// required string name = 1;
+// required bytes name = 1;
 inline bool DatabaseMetadata::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7847,7 +7847,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DatabaseMetadata::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.DatabaseMetadata.name)
 }
 inline std::string* DatabaseMetadata::mutable_name() {
@@ -8023,7 +8023,7 @@ inline void ObjectStoreMetadata::set_id(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ObjectStoreMetadata.id)
 }
 
-// required string name = 2;
+// required bytes name = 2;
 inline bool ObjectStoreMetadata::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8043,7 +8043,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObjectStoreMetadata::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ObjectStoreMetadata.name)
 }
 inline std::string* ObjectStoreMetadata::mutable_name() {
@@ -8219,7 +8219,7 @@ inline void IndexMetadata::set_id(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexMetadata.id)
 }
 
-// required string name = 2;
+// required bytes name = 2;
 inline bool IndexMetadata::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8239,7 +8239,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IndexMetadata::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexMetadata.name)
 }
 inline std::string* IndexMetadata::mutable_name() {
@@ -8355,7 +8355,7 @@ inline void IndexMetadata::set_allocated_keypath(std::string* keypath) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexMetadata.keyPath)
 }
 
-// required string locale = 4;
+// required bytes locale = 4;
 inline bool IndexMetadata::_internal_has_locale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8375,7 +8375,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IndexMetadata::set_locale(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.locale_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.locale_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexMetadata.locale)
 }
 inline std::string* IndexMetadata::mutable_locale() {

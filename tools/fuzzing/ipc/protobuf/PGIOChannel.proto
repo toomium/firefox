@@ -36,14 +36,14 @@ message Msg_Resume {
 message Msg_OnStartRequest {
   required bytes aChannelStatus = 1;
   required int64 aContentLength = 2;
-  required string aContentType = 3;
-  required string aEntityID = 4;
+  required bytes aContentType = 3;
+  required bytes aEntityID = 4;
   required protobuf.mozilla.ipc.URIParams aURI = 5;
 }
 
 message Msg_OnDataAvailable {
   required bytes channelStatus = 1;
-  required string data = 2;
+  required bytes data = 2;
   required uint64 offset = 3;
   required uint32 count = 4;
 }
@@ -62,5 +62,5 @@ message Msg_DeleteSelf {
 // Parameter mappings stats:
 // Total parameters in this file 12
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 0, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 11, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 1, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 6
+// Scalar mappings performed: 3
 // Message structs/unions generated from ipdl structs/unions: 0

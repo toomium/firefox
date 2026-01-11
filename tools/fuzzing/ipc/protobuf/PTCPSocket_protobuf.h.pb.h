@@ -179,7 +179,7 @@ class TCPError final :
     kMessageFieldNumber = 2,
     kErrorCodeFieldNumber = 3,
   };
-  // required string name = 1;
+  // required bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -197,7 +197,7 @@ class TCPError final :
   std::string* _internal_mutable_name();
   public:
 
-  // required string message = 2;
+  // required bytes message = 2;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -544,7 +544,7 @@ class SendableData final :
       ::protobuf::SendableData__mVArrayOfuint8_t* mvarrayofuint8_t);
   ::protobuf::SendableData__mVArrayOfuint8_t* unsafe_arena_release_mvarrayofuint8_t();
 
-  // string mVnsCString = 2;
+  // bytes mVnsCString = 2;
   bool has_mvnscstring() const;
   private:
   bool _internal_has_mvnscstring() const;
@@ -808,7 +808,7 @@ class CallbackData final :
 #endif  // __GNUC__
 // TCPError
 
-// required string name = 1;
+// required bytes name = 1;
 inline bool TCPError::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -828,7 +828,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TCPError::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.TCPError.name)
 }
 inline std::string* TCPError::mutable_name() {
@@ -876,7 +876,7 @@ inline void TCPError::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.TCPError.name)
 }
 
-// required string message = 2;
+// required bytes message = 2;
 inline bool TCPError::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -896,7 +896,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TCPError::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.TCPError.message)
 }
 inline std::string* TCPError::mutable_message() {
@@ -1141,7 +1141,7 @@ inline ::protobuf::SendableData__mVArrayOfuint8_t* SendableData::mutable_mvarray
   return _msg;
 }
 
-// string mVnsCString = 2;
+// bytes mVnsCString = 2;
 inline bool SendableData::_internal_has_mvnscstring() const {
   return content_case() == kMVnsCString;
 }
@@ -1168,7 +1168,7 @@ inline void SendableData::set_mvnscstring(ArgT0&& arg0, ArgT... args) {
     set_has_mvnscstring();
     _impl_.content_.mvnscstring_.InitDefault();
   }
-  _impl_.content_.mvnscstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.mvnscstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.SendableData.mVnsCString)
 }
 inline std::string* SendableData::mutable_mvnscstring() {

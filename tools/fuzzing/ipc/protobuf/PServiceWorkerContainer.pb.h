@@ -215,7 +215,7 @@ class Msg_Register final :
     kAUpdateViaCacheFieldNumber = 4,
     kAClientInfoFieldNumber = 1,
   };
-  // required string aScopeURL = 2;
+  // required bytes aScopeURL = 2;
   bool has_ascopeurl() const;
   private:
   bool _internal_has_ascopeurl() const;
@@ -233,7 +233,7 @@ class Msg_Register final :
   std::string* _internal_mutable_ascopeurl();
   public:
 
-  // required string aScriptURL = 3;
+  // required bytes aScriptURL = 3;
   bool has_ascripturl() const;
   private:
   bool _internal_has_ascripturl() const;
@@ -570,7 +570,7 @@ class Msg_GetRegistration final :
     kAURLFieldNumber = 2,
     kAClientInfoFieldNumber = 1,
   };
-  // required string aURL = 2;
+  // required bytes aURL = 2;
   bool has_aurl() const;
   private:
   bool _internal_has_aurl() const;
@@ -1706,7 +1706,7 @@ inline void Msg_Register::set_allocated_aclientinfo(::protobuf::mozilla::dom::IP
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorkerContainer.Msg_Register.aClientInfo)
 }
 
-// required string aScopeURL = 2;
+// required bytes aScopeURL = 2;
 inline bool Msg_Register::_internal_has_ascopeurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1726,7 +1726,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Register::set_ascopeurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ascopeurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.ascopeurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PServiceWorkerContainer.Msg_Register.aScopeURL)
 }
 inline std::string* Msg_Register::mutable_ascopeurl() {
@@ -1774,7 +1774,7 @@ inline void Msg_Register::set_allocated_ascopeurl(std::string* ascopeurl) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorkerContainer.Msg_Register.aScopeURL)
 }
 
-// required string aScriptURL = 3;
+// required bytes aScriptURL = 3;
 inline bool Msg_Register::_internal_has_ascripturl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1794,7 +1794,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Register::set_ascripturl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.ascripturl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.ascripturl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PServiceWorkerContainer.Msg_Register.aScriptURL)
 }
 inline std::string* Msg_Register::mutable_ascripturl() {
@@ -2092,7 +2092,7 @@ inline void Msg_GetRegistration::set_allocated_aclientinfo(::protobuf::mozilla::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorkerContainer.Msg_GetRegistration.aClientInfo)
 }
 
-// required string aURL = 2;
+// required bytes aURL = 2;
 inline bool Msg_GetRegistration::_internal_has_aurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2112,7 +2112,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetRegistration::set_aurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PServiceWorkerContainer.Msg_GetRegistration.aURL)
 }
 inline std::string* Msg_GetRegistration::mutable_aurl() {

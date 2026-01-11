@@ -401,7 +401,7 @@ class RequestData final :
   std::string* _internal_mutable_originalrequesturi();
   public:
 
-  // required string matchedList = 3;
+  // required bytes matchedList = 3;
   bool has_matchedlist() const;
   private:
   bool _internal_has_matchedlist() const;
@@ -419,7 +419,7 @@ class RequestData final :
   std::string* _internal_mutable_matchedlist();
   public:
 
-  // required string canceledReason = 4;
+  // required bytes canceledReason = 4;
   bool has_canceledreason() const;
   private:
   bool _internal_has_canceledreason() const;
@@ -576,7 +576,7 @@ class WebProgressStateChangeData final :
     kIsNavigatingFieldNumber = 1,
     kMayEnableCharacterEncodingMenuFieldNumber = 2,
   };
-  // required string contentType = 3;
+  // required bytes contentType = 3;
   bool has_contenttype() const;
   private:
   bool _internal_has_contenttype() const;
@@ -594,7 +594,7 @@ class WebProgressStateChangeData final :
   std::string* _internal_mutable_contenttype();
   public:
 
-  // required string charset = 4;
+  // required bytes charset = 4;
   bool has_charset() const;
   private:
   bool _internal_has_charset() const;
@@ -803,7 +803,7 @@ class WebProgressLocationChangeData final :
     kIsSyntheticDocumentFieldNumber = 2,
     kMayEnableCharacterEncodingMenuFieldNumber = 3,
   };
-  // required string contentType = 4;
+  // required bytes contentType = 4;
   bool has_contenttype() const;
   private:
   bool _internal_has_contenttype() const;
@@ -821,7 +821,7 @@ class WebProgressLocationChangeData final :
   std::string* _internal_mutable_contenttype();
   public:
 
-  // required string title = 5;
+  // required bytes title = 5;
   bool has_title() const;
   private:
   bool _internal_has_title() const;
@@ -839,7 +839,7 @@ class WebProgressLocationChangeData final :
   std::string* _internal_mutable_title();
   public:
 
-  // required string charset = 6;
+  // required bytes charset = 6;
   bool has_charset() const;
   private:
   bool _internal_has_charset() const;
@@ -1525,7 +1525,7 @@ inline void RequestData::set_allocated_originalrequesturi(std::string* originalr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RequestData.originalRequestURI)
 }
 
-// required string matchedList = 3;
+// required bytes matchedList = 3;
 inline bool RequestData::_internal_has_matchedlist() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1545,7 +1545,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RequestData::set_matchedlist(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.matchedlist_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.matchedlist_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RequestData.matchedList)
 }
 inline std::string* RequestData::mutable_matchedlist() {
@@ -1593,7 +1593,7 @@ inline void RequestData::set_allocated_matchedlist(std::string* matchedlist) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RequestData.matchedList)
 }
 
-// required string canceledReason = 4;
+// required bytes canceledReason = 4;
 inline bool RequestData::_internal_has_canceledreason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1613,7 +1613,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RequestData::set_canceledreason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.canceledreason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.canceledreason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RequestData.canceledReason)
 }
 inline std::string* RequestData::mutable_canceledreason() {
@@ -1721,7 +1721,7 @@ inline void WebProgressStateChangeData::set_mayenablecharacterencodingmenu(bool 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebProgressStateChangeData.mayEnableCharacterEncodingMenu)
 }
 
-// required string contentType = 3;
+// required bytes contentType = 3;
 inline bool WebProgressStateChangeData::_internal_has_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1741,7 +1741,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebProgressStateChangeData::set_contenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.contenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.contenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebProgressStateChangeData.contentType)
 }
 inline std::string* WebProgressStateChangeData::mutable_contenttype() {
@@ -1789,7 +1789,7 @@ inline void WebProgressStateChangeData::set_allocated_contenttype(std::string* c
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebProgressStateChangeData.contentType)
 }
 
-// required string charset = 4;
+// required bytes charset = 4;
 inline bool WebProgressStateChangeData::_internal_has_charset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1809,7 +1809,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebProgressStateChangeData::set_charset(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.charset_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.charset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebProgressStateChangeData.charset)
 }
 inline std::string* WebProgressStateChangeData::mutable_charset() {
@@ -2013,7 +2013,7 @@ inline void WebProgressLocationChangeData::set_mayenablecharacterencodingmenu(bo
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebProgressLocationChangeData.mayEnableCharacterEncodingMenu)
 }
 
-// required string contentType = 4;
+// required bytes contentType = 4;
 inline bool WebProgressLocationChangeData::_internal_has_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2033,7 +2033,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebProgressLocationChangeData::set_contenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.contenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.contenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebProgressLocationChangeData.contentType)
 }
 inline std::string* WebProgressLocationChangeData::mutable_contenttype() {
@@ -2081,7 +2081,7 @@ inline void WebProgressLocationChangeData::set_allocated_contenttype(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebProgressLocationChangeData.contentType)
 }
 
-// required string title = 5;
+// required bytes title = 5;
 inline bool WebProgressLocationChangeData::_internal_has_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2101,7 +2101,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebProgressLocationChangeData::set_title(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.title_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.title_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebProgressLocationChangeData.title)
 }
 inline std::string* WebProgressLocationChangeData::mutable_title() {
@@ -2149,7 +2149,7 @@ inline void WebProgressLocationChangeData::set_allocated_title(std::string* titl
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebProgressLocationChangeData.title)
 }
 
-// required string charset = 6;
+// required bytes charset = 6;
 inline bool WebProgressLocationChangeData::_internal_has_charset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2169,7 +2169,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebProgressLocationChangeData::set_charset(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.charset_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.charset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebProgressLocationChangeData.charset)
 }
 inline std::string* WebProgressLocationChangeData::mutable_charset() {

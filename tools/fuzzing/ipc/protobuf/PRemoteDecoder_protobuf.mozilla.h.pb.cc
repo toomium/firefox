@@ -572,7 +572,7 @@ const char* InitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required string decoderDescription = 2;
+      // required bytes decoderDescription = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_decoderdescription();
@@ -581,7 +581,7 @@ const char* InitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required string decoderProcessName = 3;
+      // required bytes decoderProcessName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_decoderprocessname();
@@ -590,7 +590,7 @@ const char* InitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required string decoderCodecName = 4;
+      // required bytes decoderCodecName = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_decodercodecname();
@@ -608,7 +608,7 @@ const char* InitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required string hardwareReason = 6;
+      // required bytes hardwareReason = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_hardwarereason();
@@ -672,21 +672,21 @@ uint8_t* InitCompletionIPDL::_InternalSerialize(
         1, this->_internal_type(), target);
   }
 
-  // required string decoderDescription = 2;
+  // required bytes decoderDescription = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_decoderdescription(), target);
   }
 
-  // required string decoderProcessName = 3;
+  // required bytes decoderProcessName = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_decoderprocessname(), target);
   }
 
-  // required string decoderCodecName = 4;
+  // required bytes decoderCodecName = 4;
   if (cached_has_bits & 0x00000008u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_decodercodecname(), target);
   }
 
@@ -696,9 +696,9 @@ uint8_t* InitCompletionIPDL::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_hardware(), target);
   }
 
-  // required string hardwareReason = 6;
+  // required bytes hardwareReason = 6;
   if (cached_has_bits & 0x00000010u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         6, this->_internal_hardwarereason(), target);
   }
 
@@ -734,30 +734,30 @@ size_t InitCompletionIPDL::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_decoderdescription()) {
-    // required string decoderDescription = 2;
+    // required bytes decoderDescription = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_decoderdescription());
   }
 
   if (_internal_has_decoderprocessname()) {
-    // required string decoderProcessName = 3;
+    // required bytes decoderProcessName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_decoderprocessname());
   }
 
   if (_internal_has_decodercodecname()) {
-    // required string decoderCodecName = 4;
+    // required bytes decoderCodecName = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_decodercodecname());
   }
 
   if (_internal_has_hardwarereason()) {
-    // required string hardwareReason = 6;
+    // required bytes hardwareReason = 6;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_hardwarereason());
   }
 
@@ -790,24 +790,24 @@ size_t InitCompletionIPDL::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_type());
 
-    // required string decoderDescription = 2;
+    // required bytes decoderDescription = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_decoderdescription());
 
-    // required string decoderProcessName = 3;
+    // required bytes decoderProcessName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_decoderprocessname());
 
-    // required string decoderCodecName = 4;
+    // required bytes decoderCodecName = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_decodercodecname());
 
-    // required string hardwareReason = 6;
+    // required bytes hardwareReason = 6;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_hardwarereason());
 
     // required bytes conversion = 7;

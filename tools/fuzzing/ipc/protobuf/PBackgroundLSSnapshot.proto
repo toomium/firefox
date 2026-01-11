@@ -55,7 +55,7 @@ message Msg_Loaded {
 }
 
 message Msg_LoadValueAndMoreItems {
-  required string key = 1;
+  required bytes key = 1;
 }
 
 message Reply_LoadValueAndMoreItems {
@@ -67,7 +67,7 @@ message Msg_LoadKeys {
 }
 
 message Reply_LoadKeys {
-  repeated string keys = 1;
+  repeated bytes keys = 1;
 }
 
 message Msg_IncreasePeakUsage {
@@ -90,5 +90,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 30
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 6, "<class 'ipdl.type.BuiltinCType'>": 0, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 13, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 7, "<class 'ipdl.type.UnionType'>": 4, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 8
+// Scalar mappings performed: 2
 // Message structs/unions generated from ipdl structs/unions: 7

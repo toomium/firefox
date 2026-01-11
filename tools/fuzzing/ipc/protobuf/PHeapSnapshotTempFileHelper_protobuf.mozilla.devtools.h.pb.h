@@ -177,7 +177,7 @@ class OpenedFile final :
     kSnapshotIdFieldNumber = 2,
     kDescriptorFieldNumber = 3,
   };
-  // required string path = 1;
+  // required bytes path = 1;
   bool has_path() const;
   private:
   bool _internal_has_path() const;
@@ -195,7 +195,7 @@ class OpenedFile final :
   std::string* _internal_mutable_path();
   public:
 
-  // required string snapshotId = 2;
+  // required bytes snapshotId = 2;
   bool has_snapshotid() const;
   private:
   bool _internal_has_snapshotid() const;
@@ -447,7 +447,7 @@ class OpenHeapSnapshotTempFileResponse final :
 #endif  // __GNUC__
 // OpenedFile
 
-// required string path = 1;
+// required bytes path = 1;
 inline bool OpenedFile::_internal_has_path() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -467,7 +467,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpenedFile::set_path(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.path_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.path_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.devtools.OpenedFile.path)
 }
 inline std::string* OpenedFile::mutable_path() {
@@ -515,7 +515,7 @@ inline void OpenedFile::set_allocated_path(std::string* path) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.OpenedFile.path)
 }
 
-// required string snapshotId = 2;
+// required bytes snapshotId = 2;
 inline bool OpenedFile::_internal_has_snapshotid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -535,7 +535,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpenedFile::set_snapshotid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.snapshotid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.snapshotid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.devtools.OpenedFile.snapshotId)
 }
 inline std::string* OpenedFile::mutable_snapshotid() {

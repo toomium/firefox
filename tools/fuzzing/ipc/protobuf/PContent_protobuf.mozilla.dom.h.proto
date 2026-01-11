@@ -35,7 +35,7 @@ import "PContent_protobuf.h.proto";
 
 // Structs and unions declarations
 message SystemFontListEntry {
-  required string pattern = 1;
+  required bytes pattern = 1;
   required bool appFontFamily = 2;
 }
 
@@ -80,10 +80,10 @@ message DomainPolicyClone {
 }
 
 message AndroidSystemInfo {
-  required string device = 1;
-  required string manufacturer = 2;
-  required string release_version = 3;
-  required string hardware = 4;
+  required bytes device = 1;
+  required bytes manufacturer = 2;
+  required bytes release_version = 3;
+  required bytes hardware = 4;
   required uint32 sdk_version = 5;
   required bool isTablet = 6;
 }
@@ -104,15 +104,15 @@ message GetFilesResponseResult {
 }
 
 message BlobURLRegistrationData {
-  required string url = 1;
+  required bytes url = 1;
   required protobuf.mozilla.dom.IPCBlob blob = 2;
   required bytes principal = 3;
-  required string partitionKey = 4;
+  required bytes partitionKey = 4;
   required bool revoked = 5;
 }
 
 message JSWindowActorEventDecl {
-  required string name = 1;
+  required bytes name = 1;
   required bool capture = 2;
   required bool systemGroup = 3;
   required bool allowUntrusted = 4;
@@ -121,43 +121,43 @@ message JSWindowActorEventDecl {
 }
 
 message JSWindowActorInfo {
-  required string name = 1;
+  required bytes name = 1;
   required bool allFrames = 2;
   required bool loadInDevToolsLoader = 3;
-  optional string url = 4;
+  optional bytes url = 4;
   repeated protobuf.mozilla.dom.JSWindowActorEventDecl events = 5;
-  repeated string observers = 6;
-  repeated string matches = 7;
-  repeated string remoteTypes = 8;
-  repeated string messageManagerGroups = 9;
+  repeated bytes observers = 6;
+  repeated bytes matches = 7;
+  repeated bytes remoteTypes = 8;
+  repeated bytes messageManagerGroups = 9;
 }
 
 message JSProcessActorInfo {
-  required string name = 1;
+  required bytes name = 1;
   required bool isESModule = 2;
   required bool loadInDevToolsLoader = 3;
-  optional string url = 4;
-  repeated string observers = 5;
-  repeated string remoteTypes = 6;
+  optional bytes url = 4;
+  repeated bytes observers = 5;
+  repeated bytes remoteTypes = 6;
 }
 
 message GMPAPITags {
-  required string api = 1;
-  repeated string tags = 2;
+  required bytes api = 1;
+  repeated bytes tags = 2;
 }
 
 message GMPCapabilityData {
-  required string name = 1;
-  required string version = 2;
+  required bytes name = 1;
+  required bytes version = 2;
   repeated protobuf.mozilla.dom.GMPAPITags capabilities = 3;
 }
 
 message L10nFileSourceDescriptor {
-  required string name = 1;
-  required string metasource = 2;
-  repeated string locales = 3;
-  required string prePath = 4;
-  repeated string index = 5;
+  required bytes name = 1;
+  required bytes metasource = 2;
+  repeated bytes locales = 3;
+  required bytes prePath = 4;
+  repeated bytes index = 5;
 }
 
 message XPCOMInitData {
@@ -166,19 +166,19 @@ message XPCOMInitData {
   required int32 captivePortalState = 3;
   required bool isLangRTL = 4;
   required bool haveBidiKeyboards = 5;
-  repeated string dictionaries = 6;
+  repeated bytes dictionaries = 6;
   required protobuf.mozilla.dom.ClipboardCapabilities clipboardCaps = 7;
   required protobuf.mozilla.dom.DomainPolicyClone domainPolicy = 8;
   required bytes userContentSheetURL = 9;
   repeated protobuf.mozilla.gfx.GfxVarUpdate gfxNonDefaultVarUpdates = 10;
   required protobuf.mozilla.gfx.ContentDeviceData contentDeviceData = 11;
   repeated protobuf.mozilla.gfx.GfxInfoFeatureStatus gfxFeatureStatus = 12;
-  repeated string appLocales = 13;
-  repeated string requestedLocales = 14;
+  repeated bytes appLocales = 13;
+  repeated bytes requestedLocales = 14;
   repeated protobuf.mozilla.dom.L10nFileSourceDescriptor l10nFileSources = 15;
   repeated bytes dynamicScalarDefs = 16;
   required bytes perfStatsMask = 17;
-  required string trrDomain = 18;
+  required bytes trrDomain = 18;
   required bytes trrMode = 19;
   required bytes trrModeFromPref = 20;
 }
@@ -189,25 +189,25 @@ message VisitedQueryResult {
 }
 
 message StringBundleDescriptor {
-  required string bundleURL = 1;
+  required bytes bundleURL = 1;
   required bytes mapHandle = 2;
 }
 
 message IPCURLClassifierFeature {
-  required string featureName = 1;
-  repeated string tables = 2;
+  required bytes featureName = 1;
+  repeated bytes tables = 2;
 }
 
 message PostMessageData {
   required bytes source = 1;
-  required string origin = 2;
-  required string targetOrigin = 3;
+  required bytes origin = 2;
+  required bytes targetOrigin = 3;
   required bytes targetOriginURI = 4;
   required bytes callerPrincipal = 5;
   required bytes subjectPrincipal = 6;
   required bytes callerURI = 7;
   required bool isFromPrivateWindow = 8;
-  required string scriptLocation = 9;
+  required bytes scriptLocation = 9;
   required uint64 innerWindowId = 10;
 }
 
@@ -232,7 +232,7 @@ message BlobURLDataRequestResult {
 
 message TextRecognitionQuad {
   required float confidence = 1;
-  required string string = 2;
+  required bytes string = 2;
   repeated bytes points = 3;
 }
 
@@ -243,13 +243,13 @@ message TextRecognitionResult {
 message TextRecognitionResultOrError {
   oneof content {
     protobuf.mozilla.dom.TextRecognitionResult mVTextRecognitionResult = 1;
-    string mVnsCString = 2;
+    bytes mVnsCString = 2;
   }
 }
 
 message ClipboardReadRequest {
   required bytes childEndpoint = 1;
-  repeated string availableTypes = 2;
+  repeated bytes availableTypes = 2;
 }
 
 message ClipboardReadRequestOrError {
@@ -260,6 +260,6 @@ message ClipboardReadRequestOrError {
 }
 
 message BroadcastBlobURLUnregistrationRequest {
-  required string url = 1;
+  required bytes url = 1;
   required bytes principal = 2;
 }

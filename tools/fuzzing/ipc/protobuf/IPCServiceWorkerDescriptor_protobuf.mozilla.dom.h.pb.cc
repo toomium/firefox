@@ -270,7 +270,7 @@ const char* IPCServiceWorkerDescriptor::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required string scope = 5;
+      // required bytes scope = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_scope();
@@ -279,7 +279,7 @@ const char* IPCServiceWorkerDescriptor::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required string scriptURL = 6;
+      // required bytes scriptURL = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_scripturl();
@@ -362,15 +362,15 @@ uint8_t* IPCServiceWorkerDescriptor::_InternalSerialize(
         _Internal::principalinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required string scope = 5;
+  // required bytes scope = 5;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         5, this->_internal_scope(), target);
   }
 
-  // required string scriptURL = 6;
+  // required bytes scriptURL = 6;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         6, this->_internal_scripturl(), target);
   }
 
@@ -399,16 +399,16 @@ size_t IPCServiceWorkerDescriptor::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_scope()) {
-    // required string scope = 5;
+    // required bytes scope = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scope());
   }
 
   if (_internal_has_scripturl()) {
-    // required string scriptURL = 6;
+    // required bytes scriptURL = 6;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scripturl());
   }
 
@@ -453,14 +453,14 @@ size_t IPCServiceWorkerDescriptor::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
-    // required string scope = 5;
+    // required bytes scope = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scope());
 
-    // required string scriptURL = 6;
+    // required bytes scriptURL = 6;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scripturl());
 
     // required bytes state = 7;

@@ -17,21 +17,21 @@ package protobuf.mozilla.net.PWebSocketEventListener;
 // Message declarations
 message Msg_WebSocketCreated {
   required uint32 awebSocketSerialID = 1;
-  required string aURI = 2;
-  required string aProtocols = 3;
+  required bytes aURI = 2;
+  required bytes aProtocols = 3;
 }
 
 message Msg_WebSocketOpened {
   required uint32 awebSocketSerialID = 1;
-  required string aEffectiveURI = 2;
-  required string aProtocols = 3;
-  required string aExtensions = 4;
+  required bytes aEffectiveURI = 2;
+  required bytes aProtocols = 3;
+  required bytes aExtensions = 4;
   required uint64 aHttpChannelId = 5;
 }
 
 message Msg_WebSocketMessageAvailable {
   required uint32 awebSocketSerialID = 1;
-  required string aData = 2;
+  required bytes aData = 2;
   required uint32 aMessageType = 3;
 }
 
@@ -39,7 +39,7 @@ message Msg_WebSocketClosed {
   required uint32 awebSocketSerialID = 1;
   required bool aWasClean = 2;
   required uint32 aCode = 3;
-  required string aReason = 4;
+  required bytes aReason = 4;
 }
 
 message Msg_FrameReceived {
@@ -64,5 +64,5 @@ message Msg_Close {
 // Parameter mappings stats:
 // Total parameters in this file 19
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 1, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 18, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 17
+// Scalar mappings performed: 10
 // Message structs/unions generated from ipdl structs/unions: 0

@@ -212,7 +212,7 @@ const char* Msg_VisitResource::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string aURI = 1;
+      // required bytes aURI = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_auri();
@@ -261,9 +261,9 @@ uint8_t* Msg_VisitResource::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string aURI = 1;
+  // required bytes aURI = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_auri(), target);
   }
 
@@ -286,9 +286,9 @@ size_t Msg_VisitResource::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_auri()) {
-    // required string aURI = 1;
+    // required bytes aURI = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_auri());
   }
 
@@ -306,9 +306,9 @@ size_t Msg_VisitResource::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string aURI = 1;
+    // required bytes aURI = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_auri());
 
     // required bytes aContentPolicyType = 2;

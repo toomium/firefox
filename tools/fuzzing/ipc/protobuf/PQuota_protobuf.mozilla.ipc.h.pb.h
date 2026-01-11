@@ -544,7 +544,7 @@ class CStringArrayResponse__mVArrayOfnsCString final :
   enum : int {
     kMVArrayOfnsCStringFieldNumber = 1,
   };
-  // repeated string mVArrayOfnsCString = 1;
+  // repeated bytes mVArrayOfnsCString = 1;
   int mvarrayofnscstring_size() const;
   private:
   int _internal_mvarrayofnscstring_size() const;
@@ -555,12 +555,12 @@ class CStringArrayResponse__mVArrayOfnsCString final :
   void set_mvarrayofnscstring(int index, const std::string& value);
   void set_mvarrayofnscstring(int index, std::string&& value);
   void set_mvarrayofnscstring(int index, const char* value);
-  void set_mvarrayofnscstring(int index, const char* value, size_t size);
+  void set_mvarrayofnscstring(int index, const void* value, size_t size);
   std::string* add_mvarrayofnscstring();
   void add_mvarrayofnscstring(const std::string& value);
   void add_mvarrayofnscstring(std::string&& value);
   void add_mvarrayofnscstring(const char* value);
-  void add_mvarrayofnscstring(const char* value, size_t size);
+  void add_mvarrayofnscstring(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& mvarrayofnscstring() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_mvarrayofnscstring();
   private:
@@ -1036,7 +1036,7 @@ inline UInt64Response::ContentCase UInt64Response::content_case() const {
 
 // CStringArrayResponse__mVArrayOfnsCString
 
-// repeated string mVArrayOfnsCString = 1;
+// repeated bytes mVArrayOfnsCString = 1;
 inline int CStringArrayResponse__mVArrayOfnsCString::_internal_mvarrayofnscstring_size() const {
   return _impl_.mvarrayofnscstring_.size();
 }
@@ -1075,7 +1075,7 @@ inline void CStringArrayResponse__mVArrayOfnsCString::set_mvarrayofnscstring(int
   _impl_.mvarrayofnscstring_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.mVArrayOfnsCString)
 }
-inline void CStringArrayResponse__mVArrayOfnsCString::set_mvarrayofnscstring(int index, const char* value, size_t size) {
+inline void CStringArrayResponse__mVArrayOfnsCString::set_mvarrayofnscstring(int index, const void* value, size_t size) {
   _impl_.mvarrayofnscstring_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.mVArrayOfnsCString)
@@ -1096,7 +1096,7 @@ inline void CStringArrayResponse__mVArrayOfnsCString::add_mvarrayofnscstring(con
   _impl_.mvarrayofnscstring_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.mVArrayOfnsCString)
 }
-inline void CStringArrayResponse__mVArrayOfnsCString::add_mvarrayofnscstring(const char* value, size_t size) {
+inline void CStringArrayResponse__mVArrayOfnsCString::add_mvarrayofnscstring(const void* value, size_t size) {
   _impl_.mvarrayofnscstring_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.mVArrayOfnsCString)
 }

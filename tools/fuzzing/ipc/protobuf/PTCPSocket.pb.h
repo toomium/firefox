@@ -218,7 +218,7 @@ class Msg_Open final :
     kUseSSLFieldNumber = 3,
     kUseArrayBuffersFieldNumber = 4,
   };
-  // required string host = 1;
+  // required bytes host = 1;
   bool has_host() const;
   private:
   bool _internal_has_host() const;
@@ -1055,7 +1055,7 @@ class Msg_Callback final :
     kDataFieldNumber = 2,
     kReadyStateFieldNumber = 3,
   };
-  // required string type = 1;
+  // required bytes type = 1;
   bool has_type() const;
   private:
   bool _internal_has_type() const;
@@ -1667,7 +1667,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_Open
 
-// required string host = 1;
+// required bytes host = 1;
 inline bool Msg_Open::_internal_has_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1687,7 +1687,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Open::set_host(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.host_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPSocket.Msg_Open.host)
 }
 inline std::string* Msg_Open::mutable_host() {
@@ -1930,7 +1930,7 @@ inline void Msg_Data::set_allocated_data(::protobuf::SendableData* data) {
 
 // Msg_Callback
 
-// required string type = 1;
+// required bytes type = 1;
 inline bool Msg_Callback::_internal_has_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1950,7 +1950,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Callback::set_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPSocket.Msg_Callback.type)
 }
 inline std::string* Msg_Callback::mutable_type() {

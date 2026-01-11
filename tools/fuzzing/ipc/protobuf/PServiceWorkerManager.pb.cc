@@ -440,7 +440,7 @@ const char* Msg_Unregister::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required string scope = 2;
+      // required bytes scope = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_scope();
@@ -487,9 +487,9 @@ uint8_t* Msg_Unregister::_InternalSerialize(
         _Internal::principalinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required string scope = 2;
+  // required bytes scope = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_scope(), target);
   }
 
@@ -506,9 +506,9 @@ size_t Msg_Unregister::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_scope()) {
-    // required string scope = 2;
+    // required bytes scope = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scope());
   }
 
@@ -526,9 +526,9 @@ size_t Msg_Unregister::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string scope = 2;
+    // required bytes scope = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scope());
 
     // required .protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
@@ -735,7 +735,7 @@ const char* Msg_PropagateUnregister::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required string scope = 2;
+      // required bytes scope = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_scope();
@@ -782,9 +782,9 @@ uint8_t* Msg_PropagateUnregister::_InternalSerialize(
         _Internal::principalinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required string scope = 2;
+  // required bytes scope = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_scope(), target);
   }
 
@@ -801,9 +801,9 @@ size_t Msg_PropagateUnregister::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_scope()) {
-    // required string scope = 2;
+    // required bytes scope = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scope());
   }
 
@@ -821,9 +821,9 @@ size_t Msg_PropagateUnregister::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string scope = 2;
+    // required bytes scope = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scope());
 
     // required .protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;

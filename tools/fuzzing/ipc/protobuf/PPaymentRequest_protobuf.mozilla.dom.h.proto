@@ -13,46 +13,46 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message IPCPaymentMethodData {
-  required string supportedMethods = 1;
-  required string data = 2;
+  required bytes supportedMethods = 1;
+  required bytes data = 2;
 }
 
 message IPCPaymentCurrencyAmount {
-  required string currency = 1;
-  required string value = 2;
+  required bytes currency = 1;
+  required bytes value = 2;
 }
 
 message IPCPaymentItem {
-  required string label = 1;
+  required bytes label = 1;
   required protobuf.mozilla.dom.IPCPaymentCurrencyAmount amount = 2;
   required bool pending = 3;
 }
 
 message IPCPaymentDetailsModifier {
-  required string supportedMethods = 1;
+  required bytes supportedMethods = 1;
   required protobuf.mozilla.dom.IPCPaymentItem total = 2;
   repeated protobuf.mozilla.dom.IPCPaymentItem additionalDisplayItems = 3;
-  required string data = 4;
+  required bytes data = 4;
   required bool additionalDisplayItemsPassed = 5;
 }
 
 message IPCPaymentShippingOption {
-  required string id = 1;
-  required string label = 2;
+  required bytes id = 1;
+  required bytes label = 2;
   required protobuf.mozilla.dom.IPCPaymentCurrencyAmount amount = 3;
   required bool selected = 4;
 }
 
 message IPCPaymentDetails {
-  required string id = 1;
+  required bytes id = 1;
   required protobuf.mozilla.dom.IPCPaymentItem total = 2;
   repeated protobuf.mozilla.dom.IPCPaymentItem displayItems = 3;
   repeated protobuf.mozilla.dom.IPCPaymentShippingOption shippingOptions = 4;
   repeated protobuf.mozilla.dom.IPCPaymentDetailsModifier modifiers = 5;
-  required string error = 6;
-  required string shippingAddressErrors = 7;
-  required string payerErrors = 8;
-  required string paymentMethodErrors = 9;
+  required bytes error = 6;
+  required bytes shippingAddressErrors = 7;
+  required bytes payerErrors = 8;
+  required bytes paymentMethodErrors = 9;
 }
 
 message IPCPaymentOptions {
@@ -61,53 +61,53 @@ message IPCPaymentOptions {
   required bool requestPayerPhone = 3;
   required bool requestShipping = 4;
   required bool requestBillingAddress = 5;
-  required string shippingType = 6;
+  required bytes shippingType = 6;
 }
 
 message IPCPaymentCreateActionRequest {
   required uint64 topOuterWindowId = 1;
-  required string requestId = 2;
+  required bytes requestId = 2;
   required bytes topLevelPrincipal = 3;
   repeated protobuf.mozilla.dom.IPCPaymentMethodData methodData = 4;
   required protobuf.mozilla.dom.IPCPaymentDetails details = 5;
   required protobuf.mozilla.dom.IPCPaymentOptions options = 6;
-  required string shippingOption = 7;
+  required bytes shippingOption = 7;
 }
 
 message IPCPaymentCanMakeActionRequest {
-  required string requestId = 1;
+  required bytes requestId = 1;
 }
 
 message IPCPaymentShowActionRequest {
-  required string requestId = 1;
+  required bytes requestId = 1;
   required bool isUpdating = 2;
 }
 
 message IPCPaymentAbortActionRequest {
-  required string requestId = 1;
+  required bytes requestId = 1;
 }
 
 message IPCPaymentCompleteActionRequest {
-  required string requestId = 1;
-  required string completeStatus = 2;
+  required bytes requestId = 1;
+  required bytes completeStatus = 2;
 }
 
 message IPCPaymentUpdateActionRequest {
-  required string requestId = 1;
+  required bytes requestId = 1;
   required protobuf.mozilla.dom.IPCPaymentDetails details = 2;
-  required string shippingOption = 3;
+  required bytes shippingOption = 3;
 }
 
 message IPCPaymentCloseActionRequest {
-  required string requestId = 1;
+  required bytes requestId = 1;
 }
 
 message IPCPaymentRetryActionRequest {
-  required string requestId = 1;
-  required string error = 2;
-  required string payerErrors = 3;
-  required string paymentMethodErrors = 4;
-  required string shippingAddressErrors = 5;
+  required bytes requestId = 1;
+  required bytes error = 2;
+  required bytes payerErrors = 3;
+  required bytes paymentMethodErrors = 4;
+  required bytes shippingAddressErrors = 5;
 }
 
 message IPCPaymentActionRequest {
@@ -124,34 +124,34 @@ message IPCPaymentActionRequest {
 }
 
 message IPCPaymentCanMakeActionResponse {
-  required string requestId = 1;
+  required bytes requestId = 1;
   required bool result = 2;
 }
 
 message IPCPaymentAddress {
-  required string country = 1;
-  repeated string addressLine = 2;
-  required string region = 3;
-  required string regionCode = 4;
-  required string city = 5;
-  required string dependentLocality = 6;
-  required string postalCode = 7;
-  required string sortingCode = 8;
-  required string organization = 9;
-  required string recipient = 10;
-  required string phone = 11;
+  required bytes country = 1;
+  repeated bytes addressLine = 2;
+  required bytes region = 3;
+  required bytes regionCode = 4;
+  required bytes city = 5;
+  required bytes dependentLocality = 6;
+  required bytes postalCode = 7;
+  required bytes sortingCode = 8;
+  required bytes organization = 9;
+  required bytes recipient = 10;
+  required bytes phone = 11;
 }
 
 message IPCGeneralResponse {
-  required string data = 1;
+  required bytes data = 1;
 }
 
 message IPCBasicCardResponse {
-  required string cardholderName = 1;
-  required string cardNumber = 2;
-  required string expiryMonth = 3;
-  required string expiryYear = 4;
-  required string cardSecurityCode = 5;
+  required bytes cardholderName = 1;
+  required bytes cardNumber = 2;
+  required bytes expiryMonth = 3;
+  required bytes expiryYear = 4;
+  required bytes cardSecurityCode = 5;
   required protobuf.mozilla.dom.IPCPaymentAddress billingAddress = 6;
 }
 
@@ -163,22 +163,22 @@ message IPCPaymentResponseData {
 }
 
 message IPCPaymentShowActionResponse {
-  required string requestId = 1;
+  required bytes requestId = 1;
   required uint32 status = 2;
-  required string methodName = 3;
+  required bytes methodName = 3;
   required protobuf.mozilla.dom.IPCPaymentResponseData data = 4;
-  required string payerName = 5;
-  required string payerEmail = 6;
-  required string payerPhone = 7;
+  required bytes payerName = 5;
+  required bytes payerEmail = 6;
+  required bytes payerPhone = 7;
 }
 
 message IPCPaymentAbortActionResponse {
-  required string requestId = 1;
+  required bytes requestId = 1;
   required bool isSucceeded = 2;
 }
 
 message IPCPaymentCompleteActionResponse {
-  required string requestId = 1;
+  required bytes requestId = 1;
   required bool isCompleted = 2;
 }
 
@@ -192,7 +192,7 @@ message IPCPaymentActionResponse {
 }
 
 message IPCGeneralChangeDetails {
-  required string details = 1;
+  required bytes details = 1;
 }
 
 message IPCBasicCardChangeDetails {

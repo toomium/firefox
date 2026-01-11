@@ -184,7 +184,7 @@ class KeyValue final :
     kKeyFieldNumber = 1,
     kValueFieldNumber = 2,
   };
-  // required string key = 1;
+  // required bytes key = 1;
   bool has_key() const;
   private:
   bool _internal_has_key() const;
@@ -744,7 +744,7 @@ class JSONVariant final :
   void _internal_set_mvdouble(double value);
   public:
 
-  // string mVnsString = 6;
+  // bytes mVnsString = 6;
   bool has_mvnsstring() const;
   private:
   bool _internal_has_mvnsstring() const;
@@ -869,7 +869,7 @@ class JSONVariant final :
 #endif  // __GNUC__
 // KeyValue
 
-// required string key = 1;
+// required bytes key = 1;
 inline bool KeyValue::_internal_has_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -889,7 +889,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void KeyValue::set_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.KeyValue.key)
 }
 inline std::string* KeyValue::mutable_key() {
@@ -1387,7 +1387,7 @@ inline void JSONVariant::set_mvdouble(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.mVdouble)
 }
 
-// string mVnsString = 6;
+// bytes mVnsString = 6;
 inline bool JSONVariant::_internal_has_mvnsstring() const {
   return content_case() == kMVnsString;
 }
@@ -1414,7 +1414,7 @@ inline void JSONVariant::set_mvnsstring(ArgT0&& arg0, ArgT... args) {
     set_has_mvnsstring();
     _impl_.content_.mvnsstring_.InitDefault();
   }
-  _impl_.content_.mvnsstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.mvnsstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.mVnsString)
 }
 inline std::string* JSONVariant::mutable_mvnsstring() {

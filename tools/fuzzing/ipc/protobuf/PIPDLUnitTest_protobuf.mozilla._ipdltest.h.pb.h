@@ -176,7 +176,7 @@ class TestPartResult final :
     kFatalFieldNumber = 2,
     kLineNumberFieldNumber = 4,
   };
-  // required string filename = 3;
+  // required bytes filename = 3;
   bool has_filename() const;
   private:
   bool _internal_has_filename() const;
@@ -194,7 +194,7 @@ class TestPartResult final :
   std::string* _internal_mutable_filename();
   public:
 
-  // required string summary = 5;
+  // required bytes summary = 5;
   bool has_summary() const;
   private:
   bool _internal_has_summary() const;
@@ -212,7 +212,7 @@ class TestPartResult final :
   std::string* _internal_mutable_summary();
   public:
 
-  // required string message = 6;
+  // required bytes message = 6;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -359,7 +359,7 @@ inline void TestPartResult::set_fatal(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.fatal)
 }
 
-// required string filename = 3;
+// required bytes filename = 3;
 inline bool TestPartResult::_internal_has_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -379,7 +379,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TestPartResult::set_filename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.filename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.filename)
 }
 inline std::string* TestPartResult::mutable_filename() {
@@ -455,7 +455,7 @@ inline void TestPartResult::set_linenumber(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.lineNumber)
 }
 
-// required string summary = 5;
+// required bytes summary = 5;
 inline bool TestPartResult::_internal_has_summary() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -475,7 +475,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TestPartResult::set_summary(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.summary_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.summary_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.summary)
 }
 inline std::string* TestPartResult::mutable_summary() {
@@ -523,7 +523,7 @@ inline void TestPartResult::set_allocated_summary(std::string* summary) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.TestPartResult.summary)
 }
 
-// required string message = 6;
+// required bytes message = 6;
 inline bool TestPartResult::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -543,7 +543,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TestPartResult::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.message)
 }
 inline std::string* TestPartResult::mutable_message() {

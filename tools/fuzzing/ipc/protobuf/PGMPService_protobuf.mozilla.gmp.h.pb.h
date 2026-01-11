@@ -214,7 +214,7 @@ class GMPLaunchResult final :
   std::string* _internal_mutable_pid();
   public:
 
-  // required string displayName = 4;
+  // required bytes displayName = 4;
   bool has_displayname() const;
   private:
   bool _internal_has_displayname() const;
@@ -268,7 +268,7 @@ class GMPLaunchResult final :
   std::string* _internal_mutable_result();
   public:
 
-  // required string errorDescription = 7;
+  // required bytes errorDescription = 7;
   bool has_errordescription() const;
   private:
   bool _internal_has_errordescription() const;
@@ -498,7 +498,7 @@ inline void GMPLaunchResult::set_allocated_pid(std::string* pid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPLaunchResult.pid)
 }
 
-// required string displayName = 4;
+// required bytes displayName = 4;
 inline bool GMPLaunchResult::_internal_has_displayname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -518,7 +518,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GMPLaunchResult::set_displayname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.displayname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.displayname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPLaunchResult.displayName)
 }
 inline std::string* GMPLaunchResult::mutable_displayname() {
@@ -702,7 +702,7 @@ inline void GMPLaunchResult::set_allocated_result(std::string* result) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPLaunchResult.result)
 }
 
-// required string errorDescription = 7;
+// required bytes errorDescription = 7;
 inline bool GMPLaunchResult::_internal_has_errordescription() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -722,7 +722,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GMPLaunchResult::set_errordescription(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.errordescription_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.errordescription_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPLaunchResult.errorDescription)
 }
 inline std::string* GMPLaunchResult::mutable_errordescription() {

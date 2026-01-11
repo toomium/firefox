@@ -1969,7 +1969,7 @@ const char* Msg_ReplyGetCaptureDevice::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string device_name = 1;
+      // required bytes device_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_device_name();
@@ -1978,7 +1978,7 @@ const char* Msg_ReplyGetCaptureDevice::_InternalParse(const char* ptr, ::_pbi::P
         } else
           goto handle_unusual;
         continue;
-      // required string device_id = 2;
+      // required bytes device_id = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_device_id();
@@ -2036,15 +2036,15 @@ uint8_t* Msg_ReplyGetCaptureDevice::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string device_name = 1;
+  // required bytes device_name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_device_name(), target);
   }
 
-  // required string device_id = 2;
+  // required bytes device_id = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_device_id(), target);
   }
 
@@ -2073,16 +2073,16 @@ size_t Msg_ReplyGetCaptureDevice::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_device_name()) {
-    // required string device_name = 1;
+    // required bytes device_name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_device_name());
   }
 
   if (_internal_has_device_id()) {
-    // required string device_id = 2;
+    // required bytes device_id = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_device_id());
   }
 
@@ -2103,14 +2103,14 @@ size_t Msg_ReplyGetCaptureDevice::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string device_name = 1;
+    // required bytes device_name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_device_name());
 
-    // required string device_id = 2;
+    // required bytes device_id = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_device_id());
 
     // required bool scary = 3;
@@ -3139,7 +3139,7 @@ const char* Msg_NumberOfCapabilities::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string deviceUniqueIdUTF8 = 2;
+      // required bytes deviceUniqueIdUTF8 = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_deviceuniqueidutf8();
@@ -3185,9 +3185,9 @@ uint8_t* Msg_NumberOfCapabilities::_InternalSerialize(
         1, this->_internal_engine(), target);
   }
 
-  // required string deviceUniqueIdUTF8 = 2;
+  // required bytes deviceUniqueIdUTF8 = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_deviceuniqueidutf8(), target);
   }
 
@@ -3211,9 +3211,9 @@ size_t Msg_NumberOfCapabilities::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_deviceuniqueidutf8()) {
-    // required string deviceUniqueIdUTF8 = 2;
+    // required bytes deviceUniqueIdUTF8 = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_deviceuniqueidutf8());
   }
 
@@ -3229,9 +3229,9 @@ size_t Msg_NumberOfCapabilities::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_engine());
 
-    // required string deviceUniqueIdUTF8 = 2;
+    // required bytes deviceUniqueIdUTF8 = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_deviceuniqueidutf8());
 
   } else {
@@ -3439,7 +3439,7 @@ const char* Msg_GetCaptureCapability::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string unique_idUTF8 = 2;
+      // required bytes unique_idUTF8 = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_unique_idutf8();
@@ -3494,9 +3494,9 @@ uint8_t* Msg_GetCaptureCapability::_InternalSerialize(
         1, this->_internal_engine(), target);
   }
 
-  // required string unique_idUTF8 = 2;
+  // required bytes unique_idUTF8 = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_unique_idutf8(), target);
   }
 
@@ -3526,9 +3526,9 @@ size_t Msg_GetCaptureCapability::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_unique_idutf8()) {
-    // required string unique_idUTF8 = 2;
+    // required bytes unique_idUTF8 = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_unique_idutf8());
   }
 
@@ -3549,9 +3549,9 @@ size_t Msg_GetCaptureCapability::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_engine());
 
-    // required string unique_idUTF8 = 2;
+    // required bytes unique_idUTF8 = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_unique_idutf8());
 
     // required int32 capability_number = 3;
@@ -4038,7 +4038,7 @@ const char* Msg_AllocateCapture::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string unique_idUTF8 = 2;
+      // required bytes unique_idUTF8 = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_unique_idutf8();
@@ -4093,9 +4093,9 @@ uint8_t* Msg_AllocateCapture::_InternalSerialize(
         1, this->_internal_engine(), target);
   }
 
-  // required string unique_idUTF8 = 2;
+  // required bytes unique_idUTF8 = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_unique_idutf8(), target);
   }
 
@@ -4125,9 +4125,9 @@ size_t Msg_AllocateCapture::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_unique_idutf8()) {
-    // required string unique_idUTF8 = 2;
+    // required bytes unique_idUTF8 = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_unique_idutf8());
   }
 
@@ -4148,9 +4148,9 @@ size_t Msg_AllocateCapture::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_engine());
 
-    // required string unique_idUTF8 = 2;
+    // required bytes unique_idUTF8 = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_unique_idutf8());
 
     // required uint64 windowID = 3;

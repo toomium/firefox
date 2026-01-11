@@ -4128,7 +4128,7 @@ class Msg_NotifyGpuObservers final :
   enum : int {
     kATopicFieldNumber = 1,
   };
-  // required string aTopic = 1;
+  // required bytes aTopic = 1;
   bool has_atopic() const;
   private:
   bool _internal_has_atopic() const;
@@ -5002,7 +5002,7 @@ class Reply_CollectPerfStatsJSON final :
   enum : int {
     kAStatsFieldNumber = 1,
   };
-  // required string aStats = 1;
+  // required bytes aStats = 1;
   bool has_astats() const;
   private:
   bool _internal_has_astats() const;
@@ -5958,7 +5958,7 @@ class Msg_ReportCheckerboard final :
     kLogFieldNumber = 2,
     kSeverityFieldNumber = 1,
   };
-  // required string log = 2;
+  // required bytes log = 2;
   bool has_log() const;
   private:
   bool _internal_has_log() const;
@@ -6122,7 +6122,7 @@ class Msg_GraphicsError final :
   enum : int {
     kAErrorFieldNumber = 1,
   };
-  // required string aError = 1;
+  // required bytes aError = 1;
   bool has_aerror() const;
   private:
   bool _internal_has_aerror() const;
@@ -6664,7 +6664,7 @@ class Msg_NotifyUiObservers final :
   enum : int {
     kATopicFieldNumber = 1,
   };
-  // required string aTopic = 1;
+  // required bytes aTopic = 1;
   bool has_atopic() const;
   private:
   bool _internal_has_atopic() const;
@@ -8450,7 +8450,7 @@ class Msg_FlushMemory final :
   enum : int {
     kReasonFieldNumber = 1,
   };
-  // required string reason = 1;
+  // required bytes reason = 1;
   bool has_reason() const;
   private:
   bool _internal_has_reason() const;
@@ -8933,7 +8933,7 @@ class Msg_UsedFallback final :
   std::string* _internal_mutable_afallback();
   public:
 
-  // required string message = 2;
+  // required bytes message = 2;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
@@ -11663,7 +11663,7 @@ inline void Reply_GetDeviceStatus::set_allocated_status(::protobuf::mozilla::gfx
 
 // Msg_NotifyGpuObservers
 
-// required string aTopic = 1;
+// required bytes aTopic = 1;
 inline bool Msg_NotifyGpuObservers::_internal_has_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11683,7 +11683,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyGpuObservers::set_atopic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atopic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atopic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PGPU.Msg_NotifyGpuObservers.aTopic)
 }
 inline std::string* Msg_NotifyGpuObservers::mutable_atopic() {
@@ -11963,7 +11963,7 @@ inline void Msg_UpdatePerfStatsCollectionMask::set_amask(uint64_t value) {
 
 // Reply_CollectPerfStatsJSON
 
-// required string aStats = 1;
+// required bytes aStats = 1;
 inline bool Reply_CollectPerfStatsJSON::_internal_has_astats() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11983,7 +11983,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_CollectPerfStatsJSON::set_astats(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.astats_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.astats_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PGPU.Reply_CollectPerfStatsJSON.aStats)
 }
 inline std::string* Reply_CollectPerfStatsJSON::mutable_astats() {
@@ -12270,7 +12270,7 @@ inline void Msg_ReportCheckerboard::set_severity(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PGPU.Msg_ReportCheckerboard.severity)
 }
 
-// required string log = 2;
+// required bytes log = 2;
 inline bool Msg_ReportCheckerboard::_internal_has_log() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12290,7 +12290,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReportCheckerboard::set_log(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.log_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.log_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PGPU.Msg_ReportCheckerboard.log)
 }
 inline std::string* Msg_ReportCheckerboard::mutable_log() {
@@ -12342,7 +12342,7 @@ inline void Msg_ReportCheckerboard::set_allocated_log(std::string* log) {
 
 // Msg_GraphicsError
 
-// required string aError = 1;
+// required bytes aError = 1;
 inline bool Msg_GraphicsError::_internal_has_aerror() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12362,7 +12362,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GraphicsError::set_aerror(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aerror_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aerror_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PGPU.Msg_GraphicsError.aError)
 }
 inline std::string* Msg_GraphicsError::mutable_aerror() {
@@ -12513,7 +12513,7 @@ inline void Msg_InitCrashReporter::set_allocated_ainitargs(::protobuf::CrashRepo
 
 // Msg_NotifyUiObservers
 
-// required string aTopic = 1;
+// required bytes aTopic = 1;
 inline bool Msg_NotifyUiObservers::_internal_has_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12533,7 +12533,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyUiObservers::set_atopic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atopic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atopic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PGPU.Msg_NotifyUiObservers.aTopic)
 }
 inline std::string* Msg_NotifyUiObservers::mutable_atopic() {
@@ -13431,7 +13431,7 @@ inline void Msg_NotifySwapChainInfo::set_allocated_info(std::string* info) {
 
 // Msg_FlushMemory
 
-// required string reason = 1;
+// required bytes reason = 1;
 inline bool Msg_FlushMemory::_internal_has_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13451,7 +13451,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_FlushMemory::set_reason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.reason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.reason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PGPU.Msg_FlushMemory.reason)
 }
 inline std::string* Msg_FlushMemory::mutable_reason() {
@@ -13821,7 +13821,7 @@ inline void Msg_UsedFallback::set_allocated_afallback(std::string* afallback) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PGPU.Msg_UsedFallback.aFallback)
 }
 
-// required string message = 2;
+// required bytes message = 2;
 inline bool Msg_UsedFallback::_internal_has_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13841,7 +13841,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UsedFallback::set_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PGPU.Msg_UsedFallback.message)
 }
 inline std::string* Msg_UsedFallback::mutable_message() {

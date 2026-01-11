@@ -274,7 +274,7 @@ const char* ProfilerInitParams::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // repeated string filters = 7;
+      // repeated bytes filters = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr -= 1;
@@ -355,10 +355,10 @@ uint8_t* ProfilerInitParams::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(6, this->_internal_activetabid(), target);
   }
 
-  // repeated string filters = 7;
+  // repeated bytes filters = 7;
   for (int i = 0, n = this->_internal_filters_size(); i < n; i++) {
     const auto& s = this->_internal_filters(i);
-    target = stream->WriteString(7, s, target);
+    target = stream->WriteBytes(7, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -427,11 +427,11 @@ size_t ProfilerInitParams::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string filters = 7;
+  // repeated bytes filters = 7;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.filters_.size());
   for (int i = 0, n = _impl_.filters_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.filters_.Get(i));
   }
 
@@ -1247,7 +1247,7 @@ const char* GatherProfileProgress::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required string progressLocation = 2;
+      // required bytes progressLocation = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_progresslocation();
@@ -1293,9 +1293,9 @@ uint8_t* GatherProfileProgress::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_progressproportionvalueunderlyingtype(), target);
   }
 
-  // required string progressLocation = 2;
+  // required bytes progressLocation = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_progresslocation(), target);
   }
 
@@ -1312,9 +1312,9 @@ size_t GatherProfileProgress::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_progresslocation()) {
-    // required string progressLocation = 2;
+    // required bytes progressLocation = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_progresslocation());
   }
 
@@ -1330,9 +1330,9 @@ size_t GatherProfileProgress::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string progressLocation = 2;
+    // required bytes progressLocation = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_progresslocation());
 
     // required uint32 progressProportionValueUnderlyingType = 1;

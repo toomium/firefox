@@ -570,7 +570,7 @@ const char* WebAuthnAuthenticatorSelection::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string residentKey = 1;
+      // required bytes residentKey = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_residentkey();
@@ -579,7 +579,7 @@ const char* WebAuthnAuthenticatorSelection::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // required string userVerificationRequirement = 2;
+      // required bytes userVerificationRequirement = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_userverificationrequirement();
@@ -588,7 +588,7 @@ const char* WebAuthnAuthenticatorSelection::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // optional string authenticatorAttachment = 3;
+      // optional bytes authenticatorAttachment = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_authenticatorattachment();
@@ -628,21 +628,21 @@ uint8_t* WebAuthnAuthenticatorSelection::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string residentKey = 1;
+  // required bytes residentKey = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_residentkey(), target);
   }
 
-  // required string userVerificationRequirement = 2;
+  // required bytes userVerificationRequirement = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_userverificationrequirement(), target);
   }
 
-  // optional string authenticatorAttachment = 3;
+  // optional bytes authenticatorAttachment = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_authenticatorattachment(), target);
   }
 
@@ -659,16 +659,16 @@ size_t WebAuthnAuthenticatorSelection::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_residentkey()) {
-    // required string residentKey = 1;
+    // required bytes residentKey = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_residentkey());
   }
 
   if (_internal_has_userverificationrequirement()) {
-    // required string userVerificationRequirement = 2;
+    // required bytes userVerificationRequirement = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_userverificationrequirement());
   }
 
@@ -679,14 +679,14 @@ size_t WebAuthnAuthenticatorSelection::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string residentKey = 1;
+    // required bytes residentKey = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_residentkey());
 
-    // required string userVerificationRequirement = 2;
+    // required bytes userVerificationRequirement = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_userverificationrequirement());
 
   } else {
@@ -696,11 +696,11 @@ size_t WebAuthnAuthenticatorSelection::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional string authenticatorAttachment = 3;
+  // optional bytes authenticatorAttachment = 3;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000004u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_authenticatorattachment());
   }
 
@@ -5211,7 +5211,7 @@ const char* WebAuthnMakeCredentialRpInfo::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string Name = 1;
+      // required bytes Name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_name();
@@ -5251,9 +5251,9 @@ uint8_t* WebAuthnMakeCredentialRpInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string Name = 1;
+  // required bytes Name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_name(), target);
   }
 
@@ -5269,10 +5269,10 @@ size_t WebAuthnMakeCredentialRpInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo)
   size_t total_size = 0;
 
-  // required string Name = 1;
+  // required bytes Name = 1;
   if (_internal_has_name()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
   }
   uint32_t cached_has_bits = 0;
@@ -5471,7 +5471,7 @@ const char* WebAuthnMakeCredentialUserInfo::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // required string Name = 2;
+      // required bytes Name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_name();
@@ -5480,7 +5480,7 @@ const char* WebAuthnMakeCredentialUserInfo::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // required string DisplayName = 3;
+      // required bytes DisplayName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_displayname();
@@ -5526,15 +5526,15 @@ uint8_t* WebAuthnMakeCredentialUserInfo::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string Name = 2;
+  // required bytes Name = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_name(), target);
   }
 
-  // required string DisplayName = 3;
+  // required bytes DisplayName = 3;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_displayname(), target);
   }
 
@@ -5551,16 +5551,16 @@ size_t WebAuthnMakeCredentialUserInfo::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_name()) {
-    // required string Name = 2;
+    // required bytes Name = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
   }
 
   if (_internal_has_displayname()) {
-    // required string DisplayName = 3;
+    // required bytes DisplayName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_displayname());
   }
 
@@ -5571,14 +5571,14 @@ size_t WebAuthnMakeCredentialUserInfo::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string Name = 2;
+    // required bytes Name = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_name());
 
-    // required string DisplayName = 3;
+    // required bytes DisplayName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_displayname());
 
   } else {
@@ -6053,7 +6053,7 @@ const char* WebAuthnMakeCredentialInfo::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string RpId = 1;
+      // required bytes RpId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_rpid();
@@ -6150,7 +6150,7 @@ const char* WebAuthnMakeCredentialInfo::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required string attestationConveyancePreference = 10;
+      // required bytes attestationConveyancePreference = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_attestationconveyancepreference();
@@ -6190,9 +6190,9 @@ uint8_t* WebAuthnMakeCredentialInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string RpId = 1;
+  // required bytes RpId = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_rpid(), target);
   }
 
@@ -6253,9 +6253,9 @@ uint8_t* WebAuthnMakeCredentialInfo::_InternalSerialize(
         _Internal::authenticatorselection(this).GetCachedSize(), target, stream);
   }
 
-  // required string attestationConveyancePreference = 10;
+  // required bytes attestationConveyancePreference = 10;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         10, this->_internal_attestationconveyancepreference(), target);
   }
 
@@ -6272,16 +6272,16 @@ size_t WebAuthnMakeCredentialInfo::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_rpid()) {
-    // required string RpId = 1;
+    // required bytes RpId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_rpid());
   }
 
   if (_internal_has_attestationconveyancepreference()) {
-    // required string attestationConveyancePreference = 10;
+    // required bytes attestationConveyancePreference = 10;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_attestationconveyancepreference());
   }
 
@@ -6318,14 +6318,14 @@ size_t WebAuthnMakeCredentialInfo::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required string RpId = 1;
+    // required bytes RpId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_rpid());
 
-    // required string attestationConveyancePreference = 10;
+    // required bytes attestationConveyancePreference = 10;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_attestationconveyancepreference());
 
     // required .protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo Rp = 5;
@@ -6626,7 +6626,7 @@ const char* WebAuthnMakeCredentialResult::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string ClientDataJSON = 1;
+      // required bytes ClientDataJSON = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_clientdatajson();
@@ -6667,7 +6667,7 @@ const char* WebAuthnMakeCredentialResult::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // repeated string Transports = 4;
+      // repeated bytes Transports = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr -= 1;
@@ -6694,7 +6694,7 @@ const char* WebAuthnMakeCredentialResult::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // optional string AuthenticatorAttachment = 6;
+      // optional bytes AuthenticatorAttachment = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_authenticatorattachment();
@@ -6734,9 +6734,9 @@ uint8_t* WebAuthnMakeCredentialResult::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string ClientDataJSON = 1;
+  // required bytes ClientDataJSON = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_clientdatajson(), target);
   }
 
@@ -6752,10 +6752,10 @@ uint8_t* WebAuthnMakeCredentialResult::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_keyhandle(i), target);
   }
 
-  // repeated string Transports = 4;
+  // repeated bytes Transports = 4;
   for (int i = 0, n = this->_internal_transports_size(); i < n; i++) {
     const auto& s = this->_internal_transports(i);
-    target = stream->WriteString(4, s, target);
+    target = stream->WriteBytes(4, s, target);
   }
 
   // repeated .protobuf.mozilla.dom.WebAuthnExtensionResult Extensions = 5;
@@ -6766,9 +6766,9 @@ uint8_t* WebAuthnMakeCredentialResult::_InternalSerialize(
         InternalWriteMessage(5, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // optional string AuthenticatorAttachment = 6;
+  // optional bytes AuthenticatorAttachment = 6;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         6, this->_internal_authenticatorattachment(), target);
   }
 
@@ -6784,10 +6784,10 @@ size_t WebAuthnMakeCredentialResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnMakeCredentialResult)
   size_t total_size = 0;
 
-  // required string ClientDataJSON = 1;
+  // required bytes ClientDataJSON = 1;
   if (_internal_has_clientdatajson()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_clientdatajson());
   }
   uint32_t cached_has_bits = 0;
@@ -6812,11 +6812,11 @@ size_t WebAuthnMakeCredentialResult::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  // repeated string Transports = 4;
+  // repeated bytes Transports = 4;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.transports_.size());
   for (int i = 0, n = _impl_.transports_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.transports_.Get(i));
   }
 
@@ -6827,11 +6827,11 @@ size_t WebAuthnMakeCredentialResult::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // optional string AuthenticatorAttachment = 6;
+  // optional bytes AuthenticatorAttachment = 6;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000002u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_authenticatorattachment());
   }
 
@@ -7376,7 +7376,7 @@ const char* WebAuthnGetAssertionInfo::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string RpId = 1;
+      // required bytes RpId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_rpid();
@@ -7385,7 +7385,7 @@ const char* WebAuthnGetAssertionInfo::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // optional string AppId = 2;
+      // optional bytes AppId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_appid();
@@ -7445,7 +7445,7 @@ const char* WebAuthnGetAssertionInfo::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string userVerificationRequirement = 7;
+      // required bytes userVerificationRequirement = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_userverificationrequirement();
@@ -7494,15 +7494,15 @@ uint8_t* WebAuthnGetAssertionInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string RpId = 1;
+  // required bytes RpId = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_rpid(), target);
   }
 
-  // optional string AppId = 2;
+  // optional bytes AppId = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_appid(), target);
   }
 
@@ -7534,9 +7534,9 @@ uint8_t* WebAuthnGetAssertionInfo::_InternalSerialize(
         InternalWriteMessage(6, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // required string userVerificationRequirement = 7;
+  // required bytes userVerificationRequirement = 7;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         7, this->_internal_userverificationrequirement(), target);
   }
 
@@ -7559,16 +7559,16 @@ size_t WebAuthnGetAssertionInfo::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_rpid()) {
-    // required string RpId = 1;
+    // required bytes RpId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_rpid());
   }
 
   if (_internal_has_userverificationrequirement()) {
-    // required string userVerificationRequirement = 7;
+    // required bytes userVerificationRequirement = 7;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_userverificationrequirement());
   }
 
@@ -7589,14 +7589,14 @@ size_t WebAuthnGetAssertionInfo::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000001d) ^ 0x0000001d) == 0) {  // All required fields are present.
-    // required string RpId = 1;
+    // required bytes RpId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_rpid());
 
-    // required string userVerificationRequirement = 7;
+    // required bytes userVerificationRequirement = 7;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_userverificationrequirement());
 
     // required uint32 TimeoutMS = 4;
@@ -7635,11 +7635,11 @@ size_t WebAuthnGetAssertionInfo::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // optional string AppId = 2;
+  // optional bytes AppId = 2;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000002u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_appid());
   }
 
@@ -7875,7 +7875,7 @@ const char* WebAuthnGetAssertionResult::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string ClientDataJSON = 1;
+      // required bytes ClientDataJSON = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_clientdatajson();
@@ -7961,7 +7961,7 @@ const char* WebAuthnGetAssertionResult::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // optional string AuthenticatorAttachment = 7;
+      // optional bytes AuthenticatorAttachment = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_authenticatorattachment();
@@ -8001,9 +8001,9 @@ uint8_t* WebAuthnGetAssertionResult::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string ClientDataJSON = 1;
+  // required bytes ClientDataJSON = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_clientdatajson(), target);
   }
 
@@ -8039,9 +8039,9 @@ uint8_t* WebAuthnGetAssertionResult::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_userhandle(i), target);
   }
 
-  // optional string AuthenticatorAttachment = 7;
+  // optional bytes AuthenticatorAttachment = 7;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         7, this->_internal_authenticatorattachment(), target);
   }
 
@@ -8057,10 +8057,10 @@ size_t WebAuthnGetAssertionResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnGetAssertionResult)
   size_t total_size = 0;
 
-  // required string ClientDataJSON = 1;
+  // required bytes ClientDataJSON = 1;
   if (_internal_has_clientdatajson()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_clientdatajson());
   }
   uint32_t cached_has_bits = 0;
@@ -8110,11 +8110,11 @@ size_t WebAuthnGetAssertionResult::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  // optional string AuthenticatorAttachment = 7;
+  // optional bytes AuthenticatorAttachment = 7;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000002u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_authenticatorattachment());
   }
 

@@ -18,7 +18,7 @@ message IPCServiceWorkerRegistrationDescriptor {
   required uint64 id = 1;
   required uint64 version = 2;
   required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 3;
-  required string scope = 4;
+  required bytes scope = 4;
   required bytes updateViaCache = 5;
   optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor installing = 6;
   optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor waiting = 7;

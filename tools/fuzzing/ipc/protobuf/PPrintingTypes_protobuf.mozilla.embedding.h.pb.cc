@@ -225,7 +225,7 @@ const char* CStringKeyValue::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string key = 1;
+      // required bytes key = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_key();
@@ -234,7 +234,7 @@ const char* CStringKeyValue::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required string value = 2;
+      // required bytes value = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_value();
@@ -274,15 +274,15 @@ uint8_t* CStringKeyValue::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string key = 1;
+  // required bytes key = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_key(), target);
   }
 
-  // required string value = 2;
+  // required bytes value = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_value(), target);
   }
 
@@ -299,16 +299,16 @@ size_t CStringKeyValue::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_key()) {
-    // required string key = 1;
+    // required bytes key = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_key());
   }
 
   if (_internal_has_value()) {
-    // required string value = 2;
+    // required bytes value = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_value());
   }
 
@@ -319,14 +319,14 @@ size_t CStringKeyValue::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string key = 1;
+    // required bytes key = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_key());
 
-    // required string value = 2;
+    // required bytes value = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_value());
 
   } else {
@@ -1192,7 +1192,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string title = 23;
+      // required bytes title = 23;
       case 23:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 186)) {
           auto str = _internal_mutable_title();
@@ -1201,7 +1201,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string docURL = 24;
+      // required bytes docURL = 24;
       case 24:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 194)) {
           auto str = _internal_mutable_docurl();
@@ -1210,7 +1210,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string headerStrLeft = 25;
+      // required bytes headerStrLeft = 25;
       case 25:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 202)) {
           auto str = _internal_mutable_headerstrleft();
@@ -1219,7 +1219,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string headerStrCenter = 26;
+      // required bytes headerStrCenter = 26;
       case 26:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 210)) {
           auto str = _internal_mutable_headerstrcenter();
@@ -1228,7 +1228,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string headerStrRight = 27;
+      // required bytes headerStrRight = 27;
       case 27:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 218)) {
           auto str = _internal_mutable_headerstrright();
@@ -1237,7 +1237,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string footerStrLeft = 28;
+      // required bytes footerStrLeft = 28;
       case 28:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 226)) {
           auto str = _internal_mutable_footerstrleft();
@@ -1246,7 +1246,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string footerStrCenter = 29;
+      // required bytes footerStrCenter = 29;
       case 29:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 234)) {
           auto str = _internal_mutable_footerstrcenter();
@@ -1255,7 +1255,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string footerStrRight = 30;
+      // required bytes footerStrRight = 30;
       case 30:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 242)) {
           auto str = _internal_mutable_footerstrright();
@@ -1282,7 +1282,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string paperId = 33;
+      // required bytes paperId = 33;
       case 33:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_paperid();
@@ -1426,7 +1426,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string driverName = 49;
+      // required bytes driverName = 49;
       case 49:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 138)) {
           auto str = _internal_mutable_drivername();
@@ -1435,7 +1435,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string deviceName = 50;
+      // required bytes deviceName = 50;
       case 50:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 146)) {
           auto str = _internal_mutable_devicename();
@@ -1473,7 +1473,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required string disposition = 53;
+      // required bytes disposition = 53;
       case 53:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 170)) {
           auto str = _internal_mutable_disposition();
@@ -1655,51 +1655,51 @@ uint8_t* PrintData::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string title = 23;
+  // required bytes title = 23;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         23, this->_internal_title(), target);
   }
 
-  // required string docURL = 24;
+  // required bytes docURL = 24;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         24, this->_internal_docurl(), target);
   }
 
-  // required string headerStrLeft = 25;
+  // required bytes headerStrLeft = 25;
   if (cached_has_bits & 0x00000008u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         25, this->_internal_headerstrleft(), target);
   }
 
-  // required string headerStrCenter = 26;
+  // required bytes headerStrCenter = 26;
   if (cached_has_bits & 0x00000010u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         26, this->_internal_headerstrcenter(), target);
   }
 
-  // required string headerStrRight = 27;
+  // required bytes headerStrRight = 27;
   if (cached_has_bits & 0x00000020u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         27, this->_internal_headerstrright(), target);
   }
 
-  // required string footerStrLeft = 28;
+  // required bytes footerStrLeft = 28;
   if (cached_has_bits & 0x00000040u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         28, this->_internal_footerstrleft(), target);
   }
 
-  // required string footerStrCenter = 29;
+  // required bytes footerStrCenter = 29;
   if (cached_has_bits & 0x00000080u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         29, this->_internal_footerstrcenter(), target);
   }
 
-  // required string footerStrRight = 30;
+  // required bytes footerStrRight = 30;
   if (cached_has_bits & 0x00000100u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         30, this->_internal_footerstrright(), target);
   }
 
@@ -1717,9 +1717,9 @@ uint8_t* PrintData::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string paperId = 33;
+  // required bytes paperId = 33;
   if (cached_has_bits & 0x00000200u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         33, this->_internal_paperid(), target);
   }
 
@@ -1815,15 +1815,15 @@ uint8_t* PrintData::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string driverName = 49;
+  // required bytes driverName = 49;
   if (cached_has_bits & 0x00000400u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         49, this->_internal_drivername(), target);
   }
 
-  // required string deviceName = 50;
+  // required bytes deviceName = 50;
   if (cached_has_bits & 0x00000800u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         50, this->_internal_devicename(), target);
   }
 
@@ -1841,9 +1841,9 @@ uint8_t* PrintData::_InternalSerialize(
         InternalWriteMessage(52, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // required string disposition = 53;
+  // required bytes disposition = 53;
   if (cached_has_bits & 0x00001000u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         53, this->_internal_disposition(), target);
   }
 
@@ -1874,86 +1874,86 @@ size_t PrintData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_title()) {
-    // required string title = 23;
+    // required bytes title = 23;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_title());
   }
 
   if (_internal_has_docurl()) {
-    // required string docURL = 24;
+    // required bytes docURL = 24;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_docurl());
   }
 
   if (_internal_has_headerstrleft()) {
-    // required string headerStrLeft = 25;
+    // required bytes headerStrLeft = 25;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_headerstrleft());
   }
 
   if (_internal_has_headerstrcenter()) {
-    // required string headerStrCenter = 26;
+    // required bytes headerStrCenter = 26;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_headerstrcenter());
   }
 
   if (_internal_has_headerstrright()) {
-    // required string headerStrRight = 27;
+    // required bytes headerStrRight = 27;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_headerstrright());
   }
 
   if (_internal_has_footerstrleft()) {
-    // required string footerStrLeft = 28;
+    // required bytes footerStrLeft = 28;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_footerstrleft());
   }
 
   if (_internal_has_footerstrcenter()) {
-    // required string footerStrCenter = 29;
+    // required bytes footerStrCenter = 29;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_footerstrcenter());
   }
 
   if (_internal_has_footerstrright()) {
-    // required string footerStrRight = 30;
+    // required bytes footerStrRight = 30;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_footerstrright());
   }
 
   if (_internal_has_paperid()) {
-    // required string paperId = 33;
+    // required bytes paperId = 33;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_paperid());
   }
 
   if (_internal_has_drivername()) {
-    // required string driverName = 49;
+    // required bytes driverName = 49;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_drivername());
   }
 
   if (_internal_has_devicename()) {
-    // required string deviceName = 50;
+    // required bytes deviceName = 50;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_devicename());
   }
 
   if (_internal_has_disposition()) {
-    // required string disposition = 53;
+    // required bytes disposition = 53;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_disposition());
   }
 
@@ -2180,64 +2180,64 @@ size_t PrintData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_remoteprintjob());
 
-    // required string title = 23;
+    // required bytes title = 23;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_title());
 
-    // required string docURL = 24;
+    // required bytes docURL = 24;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_docurl());
 
-    // required string headerStrLeft = 25;
+    // required bytes headerStrLeft = 25;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_headerstrleft());
 
-    // required string headerStrCenter = 26;
+    // required bytes headerStrCenter = 26;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_headerstrcenter());
 
-    // required string headerStrRight = 27;
+    // required bytes headerStrRight = 27;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_headerstrright());
 
-    // required string footerStrLeft = 28;
+    // required bytes footerStrLeft = 28;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_footerstrleft());
 
-    // required string footerStrCenter = 29;
+    // required bytes footerStrCenter = 29;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_footerstrcenter());
 
-    // required string footerStrRight = 30;
+    // required bytes footerStrRight = 30;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_footerstrright());
 
-    // required string paperId = 33;
+    // required bytes paperId = 33;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_paperid());
 
-    // required string driverName = 49;
+    // required bytes driverName = 49;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_drivername());
 
-    // required string deviceName = 50;
+    // required bytes deviceName = 50;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_devicename());
 
-    // required string disposition = 53;
+    // required bytes disposition = 53;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_disposition());
 
     // required double edgeTop = 2;

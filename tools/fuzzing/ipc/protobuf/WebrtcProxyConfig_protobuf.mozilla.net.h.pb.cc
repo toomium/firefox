@@ -198,7 +198,7 @@ const char* WebrtcProxyConfig::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string alpn = 2;
+      // required bytes alpn = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_alpn();
@@ -261,9 +261,9 @@ uint8_t* WebrtcProxyConfig::_InternalSerialize(
         1, this->_internal_tabid(), target);
   }
 
-  // required string alpn = 2;
+  // required bytes alpn = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_alpn(), target);
   }
 
@@ -300,9 +300,9 @@ size_t WebrtcProxyConfig::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_alpn()) {
-    // required string alpn = 2;
+    // required bytes alpn = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_alpn());
   }
 
@@ -330,9 +330,9 @@ size_t WebrtcProxyConfig::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_tabid());
 
-    // required string alpn = 2;
+    // required bytes alpn = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_alpn());
 
     // required .protobuf.mozilla.net.LoadInfoArgs loadInfoArgs = 3;

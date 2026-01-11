@@ -212,7 +212,7 @@ class Msg_OpenComplete final :
     kARecordNameFieldNumber = 1,
     kAStatusFieldNumber = 2,
   };
-  // required string aRecordName = 1;
+  // required bytes aRecordName = 1;
   bool has_arecordname() const;
   private:
   bool _internal_has_arecordname() const;
@@ -405,7 +405,7 @@ class Msg_ReadComplete final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_abytes();
 
-  // required string aRecordName = 1;
+  // required bytes aRecordName = 1;
   bool has_arecordname() const;
   private:
   bool _internal_has_arecordname() const;
@@ -576,7 +576,7 @@ class Msg_WriteComplete final :
     kARecordNameFieldNumber = 1,
     kAStatusFieldNumber = 2,
   };
-  // required string aRecordName = 1;
+  // required bytes aRecordName = 1;
   bool has_arecordname() const;
   private:
   bool _internal_has_arecordname() const;
@@ -869,7 +869,7 @@ class Msg_Open final :
   enum : int {
     kARecordNameFieldNumber = 1,
   };
-  // required string aRecordName = 1;
+  // required bytes aRecordName = 1;
   bool has_arecordname() const;
   private:
   bool _internal_has_arecordname() const;
@@ -1016,7 +1016,7 @@ class Msg_Read final :
   enum : int {
     kARecordNameFieldNumber = 1,
   };
-  // required string aRecordName = 1;
+  // required bytes aRecordName = 1;
   bool has_arecordname() const;
   private:
   bool _internal_has_arecordname() const;
@@ -1186,7 +1186,7 @@ class Msg_Write final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_abytes();
 
-  // required string aRecordName = 1;
+  // required bytes aRecordName = 1;
   bool has_arecordname() const;
   private:
   bool _internal_has_arecordname() const;
@@ -1334,7 +1334,7 @@ class Msg_Close final :
   enum : int {
     kARecordNameFieldNumber = 1,
   };
-  // required string aRecordName = 1;
+  // required bytes aRecordName = 1;
   bool has_arecordname() const;
   private:
   bool _internal_has_arecordname() const;
@@ -1626,7 +1626,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OpenComplete
 
-// required string aRecordName = 1;
+// required bytes aRecordName = 1;
 inline bool Msg_OpenComplete::_internal_has_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1646,7 +1646,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OpenComplete::set_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.aRecordName)
 }
 inline std::string* Msg_OpenComplete::mutable_arecordname() {
@@ -1766,7 +1766,7 @@ inline void Msg_OpenComplete::set_allocated_astatus(std::string* astatus) {
 
 // Msg_ReadComplete
 
-// required string aRecordName = 1;
+// required bytes aRecordName = 1;
 inline bool Msg_ReadComplete::_internal_has_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1786,7 +1786,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReadComplete::set_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aRecordName)
 }
 inline std::string* Msg_ReadComplete::mutable_arecordname() {
@@ -1953,7 +1953,7 @@ Msg_ReadComplete::mutable_abytes() {
 
 // Msg_WriteComplete
 
-// required string aRecordName = 1;
+// required bytes aRecordName = 1;
 inline bool Msg_WriteComplete::_internal_has_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1973,7 +1973,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WriteComplete::set_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.aRecordName)
 }
 inline std::string* Msg_WriteComplete::mutable_arecordname() {
@@ -2097,7 +2097,7 @@ inline void Msg_WriteComplete::set_allocated_astatus(std::string* astatus) {
 
 // Msg_Open
 
-// required string aRecordName = 1;
+// required bytes aRecordName = 1;
 inline bool Msg_Open::_internal_has_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2117,7 +2117,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Open::set_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Open.aRecordName)
 }
 inline std::string* Msg_Open::mutable_arecordname() {
@@ -2169,7 +2169,7 @@ inline void Msg_Open::set_allocated_arecordname(std::string* arecordname) {
 
 // Msg_Read
 
-// required string aRecordName = 1;
+// required bytes aRecordName = 1;
 inline bool Msg_Read::_internal_has_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2189,7 +2189,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Read::set_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Read.aRecordName)
 }
 inline std::string* Msg_Read::mutable_arecordname() {
@@ -2241,7 +2241,7 @@ inline void Msg_Read::set_allocated_arecordname(std::string* arecordname) {
 
 // Msg_Write
 
-// required string aRecordName = 1;
+// required bytes aRecordName = 1;
 inline bool Msg_Write::_internal_has_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2261,7 +2261,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Write::set_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.aRecordName)
 }
 inline std::string* Msg_Write::mutable_arecordname() {
@@ -2360,7 +2360,7 @@ Msg_Write::mutable_abytes() {
 
 // Msg_Close
 
-// required string aRecordName = 1;
+// required bytes aRecordName = 1;
 inline bool Msg_Close::_internal_has_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2380,7 +2380,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Close::set_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Close.aRecordName)
 }
 inline std::string* Msg_Close::mutable_arecordname() {

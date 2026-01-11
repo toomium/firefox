@@ -279,7 +279,7 @@ class Msg_GetIceLog final :
   enum : int {
     kPatternFieldNumber = 1,
   };
-  // required string pattern = 1;
+  // required bytes pattern = 1;
   bool has_pattern() const;
   private:
   bool _internal_has_pattern() const;
@@ -4680,7 +4680,7 @@ class Msg_OnRtcpStateChange final :
 #endif  // __GNUC__
 // Msg_GetIceLog
 
-// required string pattern = 1;
+// required bytes pattern = 1;
 inline bool Msg_GetIceLog::_internal_has_pattern() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4700,7 +4700,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetIceLog::set_pattern(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.pattern_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.pattern_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_GetIceLog.pattern)
 }
 inline std::string* Msg_GetIceLog::mutable_pattern() {

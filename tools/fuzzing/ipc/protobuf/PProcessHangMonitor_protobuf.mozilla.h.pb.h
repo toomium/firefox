@@ -189,7 +189,7 @@ class SlowScriptData final :
   std::string* _internal_mutable_tabid();
   public:
 
-  // required string filename = 2;
+  // required bytes filename = 2;
   bool has_filename() const;
   private:
   bool _internal_has_filename() const;
@@ -207,7 +207,7 @@ class SlowScriptData final :
   std::string* _internal_mutable_filename();
   public:
 
-  // required string addonId = 3;
+  // required bytes addonId = 3;
   bool has_addonid() const;
   private:
   bool _internal_has_addonid() const;
@@ -338,7 +338,7 @@ inline void SlowScriptData::set_allocated_tabid(std::string* tabid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.tabId)
 }
 
-// required string filename = 2;
+// required bytes filename = 2;
 inline bool SlowScriptData::_internal_has_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -358,7 +358,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SlowScriptData::set_filename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.filename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.SlowScriptData.filename)
 }
 inline std::string* SlowScriptData::mutable_filename() {
@@ -406,7 +406,7 @@ inline void SlowScriptData::set_allocated_filename(std::string* filename) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.filename)
 }
 
-// required string addonId = 3;
+// required bytes addonId = 3;
 inline bool SlowScriptData::_internal_has_addonid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -426,7 +426,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SlowScriptData::set_addonid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.addonid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.addonid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.SlowScriptData.addonId)
 }
 inline std::string* SlowScriptData::mutable_addonid() {

@@ -177,7 +177,7 @@ class ClassifierInfo final :
     kProviderFieldNumber = 2,
     kFullhashFieldNumber = 3,
   };
-  // required string list = 1;
+  // required bytes list = 1;
   bool has_list() const;
   private:
   bool _internal_has_list() const;
@@ -195,7 +195,7 @@ class ClassifierInfo final :
   std::string* _internal_mutable_list();
   public:
 
-  // required string provider = 2;
+  // required bytes provider = 2;
   bool has_provider() const;
   private:
   bool _internal_has_provider() const;
@@ -213,7 +213,7 @@ class ClassifierInfo final :
   std::string* _internal_mutable_provider();
   public:
 
-  // required string fullhash = 3;
+  // required bytes fullhash = 3;
   bool has_fullhash() const;
   private:
   bool _internal_has_fullhash() const;
@@ -385,7 +385,7 @@ class URLClassifierLocalResult final :
   std::string* _internal_mutable_uri();
   public:
 
-  // required string featureName = 2;
+  // required bytes featureName = 2;
   bool has_featurename() const;
   private:
   bool _internal_has_featurename() const;
@@ -403,7 +403,7 @@ class URLClassifierLocalResult final :
   std::string* _internal_mutable_featurename();
   public:
 
-  // required string matchingList = 3;
+  // required bytes matchingList = 3;
   bool has_matchinglist() const;
   private:
   bool _internal_has_matchinglist() const;
@@ -452,7 +452,7 @@ class URLClassifierLocalResult final :
 #endif  // __GNUC__
 // ClassifierInfo
 
-// required string list = 1;
+// required bytes list = 1;
 inline bool ClassifierInfo::_internal_has_list() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -472,7 +472,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClassifierInfo::set_list(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.list_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.list_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClassifierInfo.list)
 }
 inline std::string* ClassifierInfo::mutable_list() {
@@ -520,7 +520,7 @@ inline void ClassifierInfo::set_allocated_list(std::string* list) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClassifierInfo.list)
 }
 
-// required string provider = 2;
+// required bytes provider = 2;
 inline bool ClassifierInfo::_internal_has_provider() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -540,7 +540,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClassifierInfo::set_provider(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.provider_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.provider_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClassifierInfo.provider)
 }
 inline std::string* ClassifierInfo::mutable_provider() {
@@ -588,7 +588,7 @@ inline void ClassifierInfo::set_allocated_provider(std::string* provider) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClassifierInfo.provider)
 }
 
-// required string fullhash = 3;
+// required bytes fullhash = 3;
 inline bool ClassifierInfo::_internal_has_fullhash() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -608,7 +608,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClassifierInfo::set_fullhash(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.fullhash_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.fullhash_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClassifierInfo.fullhash)
 }
 inline std::string* ClassifierInfo::mutable_fullhash() {
@@ -728,7 +728,7 @@ inline void URLClassifierLocalResult::set_allocated_uri(std::string* uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.URLClassifierLocalResult.uri)
 }
 
-// required string featureName = 2;
+// required bytes featureName = 2;
 inline bool URLClassifierLocalResult::_internal_has_featurename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -748,7 +748,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void URLClassifierLocalResult::set_featurename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.featurename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.featurename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.URLClassifierLocalResult.featureName)
 }
 inline std::string* URLClassifierLocalResult::mutable_featurename() {
@@ -796,7 +796,7 @@ inline void URLClassifierLocalResult::set_allocated_featurename(std::string* fea
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.URLClassifierLocalResult.featureName)
 }
 
-// required string matchingList = 3;
+// required bytes matchingList = 3;
 inline bool URLClassifierLocalResult::_internal_has_matchinglist() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -816,7 +816,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void URLClassifierLocalResult::set_matchinglist(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.matchinglist_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.matchinglist_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.URLClassifierLocalResult.matchingList)
 }
 inline std::string* URLClassifierLocalResult::mutable_matchinglist() {

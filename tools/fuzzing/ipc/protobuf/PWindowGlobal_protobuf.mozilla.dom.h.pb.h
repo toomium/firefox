@@ -182,7 +182,7 @@ class JSActorMessageMeta final :
     kKindFieldNumber = 4,
     kQueryIdFieldNumber = 3,
   };
-  // required string actorName = 1;
+  // required bytes actorName = 1;
   bool has_actorname() const;
   private:
   bool _internal_has_actorname() const;
@@ -200,7 +200,7 @@ class JSActorMessageMeta final :
   std::string* _internal_mutable_actorname();
   public:
 
-  // required string messageName = 2;
+  // required bytes messageName = 2;
   bool has_messagename() const;
   private:
   bool _internal_has_messagename() const;
@@ -386,7 +386,7 @@ class IPCWebShareData final :
     kTextFieldNumber = 2,
     kUrlFieldNumber = 3,
   };
-  // required string title = 1;
+  // required bytes title = 1;
   bool has_title() const;
   private:
   bool _internal_has_title() const;
@@ -404,7 +404,7 @@ class IPCWebShareData final :
   std::string* _internal_mutable_title();
   public:
 
-  // required string text = 2;
+  // required bytes text = 2;
   bool has_text() const;
   private:
   bool _internal_has_text() const;
@@ -471,7 +471,7 @@ class IPCWebShareData final :
 #endif  // __GNUC__
 // JSActorMessageMeta
 
-// required string actorName = 1;
+// required bytes actorName = 1;
 inline bool JSActorMessageMeta::_internal_has_actorname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -491,7 +491,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void JSActorMessageMeta::set_actorname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.actorname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.actorname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSActorMessageMeta.actorName)
 }
 inline std::string* JSActorMessageMeta::mutable_actorname() {
@@ -539,7 +539,7 @@ inline void JSActorMessageMeta::set_allocated_actorname(std::string* actorname) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.JSActorMessageMeta.actorName)
 }
 
-// required string messageName = 2;
+// required bytes messageName = 2;
 inline bool JSActorMessageMeta::_internal_has_messagename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -559,7 +559,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void JSActorMessageMeta::set_messagename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.messagename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.messagename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSActorMessageMeta.messageName)
 }
 inline std::string* JSActorMessageMeta::mutable_messagename() {
@@ -707,7 +707,7 @@ inline void JSActorMessageMeta::set_allocated_kind(std::string* kind) {
 
 // IPCWebShareData
 
-// required string title = 1;
+// required bytes title = 1;
 inline bool IPCWebShareData::_internal_has_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -727,7 +727,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCWebShareData::set_title(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.title_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.title_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCWebShareData.title)
 }
 inline std::string* IPCWebShareData::mutable_title() {
@@ -775,7 +775,7 @@ inline void IPCWebShareData::set_allocated_title(std::string* title) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCWebShareData.title)
 }
 
-// required string text = 2;
+// required bytes text = 2;
 inline bool IPCWebShareData::_internal_has_text() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -795,7 +795,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCWebShareData::set_text(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.text_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.text_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCWebShareData.text)
 }
 inline std::string* IPCWebShareData::mutable_text() {

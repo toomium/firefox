@@ -527,7 +527,7 @@ class Msg_Update final :
   enum : int {
     kANewestWorkerScriptUrlFieldNumber = 1,
   };
-  // required string aNewestWorkerScriptUrl = 1;
+  // required bytes aNewestWorkerScriptUrl = 1;
   bool has_anewestworkerscripturl() const;
   private:
   bool _internal_has_anewestworkerscripturl() const;
@@ -821,7 +821,7 @@ class Msg_GetNotifications final :
   enum : int {
     kATagFieldNumber = 1,
   };
-  // required string aTag = 1;
+  // required bytes aTag = 1;
   bool has_atag() const;
   private:
   bool _internal_has_atag() const;
@@ -1399,7 +1399,7 @@ class Msg_SetNavigationPreloadHeader final :
   enum : int {
     kAHeaderFieldNumber = 1,
   };
-  // required string aHeader = 1;
+  // required bytes aHeader = 1;
   bool has_aheader() const;
   private:
   bool _internal_has_aheader() const;
@@ -2479,7 +2479,7 @@ inline void Reply_Unregister::set_allocated_arv(std::string* arv) {
 
 // Msg_Update
 
-// required string aNewestWorkerScriptUrl = 1;
+// required bytes aNewestWorkerScriptUrl = 1;
 inline bool Msg_Update::_internal_has_anewestworkerscripturl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2499,7 +2499,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Update::set_anewestworkerscripturl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.anewestworkerscripturl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.anewestworkerscripturl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PServiceWorkerRegistration.Msg_Update.aNewestWorkerScriptUrl)
 }
 inline std::string* Msg_Update::mutable_anewestworkerscripturl() {
@@ -2642,7 +2642,7 @@ inline void Reply_Update::set_allocated_aresult(::protobuf::mozilla::dom::IPCSer
 
 // Msg_GetNotifications
 
-// required string aTag = 1;
+// required bytes aTag = 1;
 inline bool Msg_GetNotifications::_internal_has_atag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2662,7 +2662,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetNotifications::set_atag(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atag_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.atag_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PServiceWorkerRegistration.Msg_GetNotifications.aTag)
 }
 inline std::string* Msg_GetNotifications::mutable_atag() {
@@ -2869,7 +2869,7 @@ inline void Reply_SetNavigationPreloadEnabled::set_asuccess(bool value) {
 
 // Msg_SetNavigationPreloadHeader
 
-// required string aHeader = 1;
+// required bytes aHeader = 1;
 inline bool Msg_SetNavigationPreloadHeader::_internal_has_aheader() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2889,7 +2889,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetNavigationPreloadHeader::set_aheader(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aheader_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.aheader_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PServiceWorkerRegistration.Msg_SetNavigationPreloadHeader.aHeader)
 }
 inline std::string* Msg_SetNavigationPreloadHeader::mutable_aheader() {

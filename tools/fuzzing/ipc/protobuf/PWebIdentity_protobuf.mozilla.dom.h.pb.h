@@ -176,7 +176,7 @@ class IPCIdentityCredential final :
     kIdFieldNumber = 1,
     kTokenFieldNumber = 2,
   };
-  // required string id = 1;
+  // required bytes id = 1;
   bool has_id() const;
   private:
   bool _internal_has_id() const;
@@ -194,7 +194,7 @@ class IPCIdentityCredential final :
   std::string* _internal_mutable_id();
   public:
 
-  // optional string token = 2;
+  // optional bytes token = 2;
   bool has_token() const;
   private:
   bool _internal_has_token() const;
@@ -424,7 +424,7 @@ class WebIdentityGetCredentialResponse final :
 #endif  // __GNUC__
 // IPCIdentityCredential
 
-// required string id = 1;
+// required bytes id = 1;
 inline bool IPCIdentityCredential::_internal_has_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -444,7 +444,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCIdentityCredential::set_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCIdentityCredential.id)
 }
 inline std::string* IPCIdentityCredential::mutable_id() {
@@ -492,7 +492,7 @@ inline void IPCIdentityCredential::set_allocated_id(std::string* id) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCIdentityCredential.id)
 }
 
-// optional string token = 2;
+// optional bytes token = 2;
 inline bool IPCIdentityCredential::_internal_has_token() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -512,7 +512,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCIdentityCredential::set_token(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.token_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.token_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCIdentityCredential.token)
 }
 inline std::string* IPCIdentityCredential::mutable_token() {

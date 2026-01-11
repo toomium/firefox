@@ -197,7 +197,7 @@ class GtkCompositorWidgetInitData final :
   std::string* _internal_mutable_xwindow();
   public:
 
-  // required string XDisplayString = 2;
+  // required bytes XDisplayString = 2;
   bool has_xdisplaystring() const;
   private:
   bool _internal_has_xdisplaystring() const;
@@ -531,7 +531,7 @@ inline void GtkCompositorWidgetInitData::set_allocated_xwindow(std::string* xwin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.widget.GtkCompositorWidgetInitData.XWindow)
 }
 
-// required string XDisplayString = 2;
+// required bytes XDisplayString = 2;
 inline bool GtkCompositorWidgetInitData::_internal_has_xdisplaystring() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -551,7 +551,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GtkCompositorWidgetInitData::set_xdisplaystring(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.xdisplaystring_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.xdisplaystring_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.GtkCompositorWidgetInitData.XDisplayString)
 }
 inline std::string* GtkCompositorWidgetInitData::mutable_xdisplaystring() {

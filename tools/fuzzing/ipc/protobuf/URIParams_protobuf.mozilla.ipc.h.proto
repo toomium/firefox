@@ -14,11 +14,11 @@ import "PBackgroundSharedTypes.proto";
 
 // Structs and unions declarations
 message SimpleURIParams {
-  required string spec = 1;
+  required bytes spec = 1;
 }
 
 message DefaultURIParams {
-  required string spec = 1;
+  required bytes spec = 1;
 }
 
 message StandardURLSegment {
@@ -30,7 +30,7 @@ message StandardURLParams {
   required uint32 urlType = 1;
   required int32 port = 2;
   required int32 defaultPort = 3;
-  required string spec = 4;
+  required bytes spec = 4;
   required protobuf.mozilla.ipc.StandardURLSegment scheme = 5;
   required protobuf.mozilla.ipc.StandardURLSegment authority = 6;
   required protobuf.mozilla.ipc.StandardURLSegment username = 7;
@@ -50,15 +50,15 @@ message StandardURLParams {
 message JARURIParams {
   required protobuf.mozilla.ipc.URIParams jarFile = 1;
   required protobuf.mozilla.ipc.URIParams jarEntry = 2;
-  required string charset = 3;
+  required bytes charset = 3;
 }
 
 message IconURIParams {
   optional protobuf.mozilla.ipc.URIParams uri = 1;
   required uint32 size = 2;
-  required string contentType = 3;
-  required string fileName = 4;
-  required string stockIcon = 5;
+  required bytes contentType = 3;
+  required bytes fileName = 4;
+  required bytes stockIcon = 5;
   required uint32 iconScale = 6;
   optional bool iconDark = 7;
 }

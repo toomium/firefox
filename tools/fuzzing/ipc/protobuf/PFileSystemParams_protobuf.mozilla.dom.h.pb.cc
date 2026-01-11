@@ -248,7 +248,7 @@ const char* FileSystemGetDirectoryListingParams::_InternalParse(const char* ptr,
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string filesystem = 1;
+      // required bytes filesystem = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_filesystem();
@@ -257,7 +257,7 @@ const char* FileSystemGetDirectoryListingParams::_InternalParse(const char* ptr,
         } else
           goto handle_unusual;
         continue;
-      // required string realPath = 2;
+      // required bytes realPath = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_realpath();
@@ -266,7 +266,7 @@ const char* FileSystemGetDirectoryListingParams::_InternalParse(const char* ptr,
         } else
           goto handle_unusual;
         continue;
-      // required string domPath = 3;
+      // required bytes domPath = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_dompath();
@@ -275,7 +275,7 @@ const char* FileSystemGetDirectoryListingParams::_InternalParse(const char* ptr,
         } else
           goto handle_unusual;
         continue;
-      // required string filters = 4;
+      // required bytes filters = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_filters();
@@ -315,27 +315,27 @@ uint8_t* FileSystemGetDirectoryListingParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string filesystem = 1;
+  // required bytes filesystem = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_filesystem(), target);
   }
 
-  // required string realPath = 2;
+  // required bytes realPath = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_realpath(), target);
   }
 
-  // required string domPath = 3;
+  // required bytes domPath = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_dompath(), target);
   }
 
-  // required string filters = 4;
+  // required bytes filters = 4;
   if (cached_has_bits & 0x00000008u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         4, this->_internal_filters(), target);
   }
 
@@ -352,30 +352,30 @@ size_t FileSystemGetDirectoryListingParams::RequiredFieldsByteSizeFallback() con
   size_t total_size = 0;
 
   if (_internal_has_filesystem()) {
-    // required string filesystem = 1;
+    // required bytes filesystem = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filesystem());
   }
 
   if (_internal_has_realpath()) {
-    // required string realPath = 2;
+    // required bytes realPath = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_realpath());
   }
 
   if (_internal_has_dompath()) {
-    // required string domPath = 3;
+    // required bytes domPath = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_dompath());
   }
 
   if (_internal_has_filters()) {
-    // required string filters = 4;
+    // required bytes filters = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filters());
   }
 
@@ -386,24 +386,24 @@ size_t FileSystemGetDirectoryListingParams::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string filesystem = 1;
+    // required bytes filesystem = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filesystem());
 
-    // required string realPath = 2;
+    // required bytes realPath = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_realpath());
 
-    // required string domPath = 3;
+    // required bytes domPath = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_dompath());
 
-    // required string filters = 4;
+    // required bytes filters = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filters());
 
   } else {
@@ -637,7 +637,7 @@ const char* FileSystemGetFilesParams::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string filesystem = 1;
+      // required bytes filesystem = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_filesystem();
@@ -646,7 +646,7 @@ const char* FileSystemGetFilesParams::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string realPath = 2;
+      // required bytes realPath = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_realpath();
@@ -655,7 +655,7 @@ const char* FileSystemGetFilesParams::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string domPath = 3;
+      // required bytes domPath = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_dompath();
@@ -704,21 +704,21 @@ uint8_t* FileSystemGetFilesParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string filesystem = 1;
+  // required bytes filesystem = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_filesystem(), target);
   }
 
-  // required string realPath = 2;
+  // required bytes realPath = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_realpath(), target);
   }
 
-  // required string domPath = 3;
+  // required bytes domPath = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         3, this->_internal_dompath(), target);
   }
 
@@ -741,23 +741,23 @@ size_t FileSystemGetFilesParams::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_filesystem()) {
-    // required string filesystem = 1;
+    // required bytes filesystem = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filesystem());
   }
 
   if (_internal_has_realpath()) {
-    // required string realPath = 2;
+    // required bytes realPath = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_realpath());
   }
 
   if (_internal_has_dompath()) {
-    // required string domPath = 3;
+    // required bytes domPath = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_dompath());
   }
 
@@ -773,19 +773,19 @@ size_t FileSystemGetFilesParams::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string filesystem = 1;
+    // required bytes filesystem = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filesystem());
 
-    // required string realPath = 2;
+    // required bytes realPath = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_realpath());
 
-    // required string domPath = 3;
+    // required bytes domPath = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_dompath());
 
     // required bool recursiveFlag = 4;
@@ -992,7 +992,7 @@ const char* FileSystemGetFileOrDirectoryParams::_InternalParse(const char* ptr, 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string filesystem = 1;
+      // required bytes filesystem = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_filesystem();
@@ -1001,7 +1001,7 @@ const char* FileSystemGetFileOrDirectoryParams::_InternalParse(const char* ptr, 
         } else
           goto handle_unusual;
         continue;
-      // required string realPath = 2;
+      // required bytes realPath = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_realpath();
@@ -1041,15 +1041,15 @@ uint8_t* FileSystemGetFileOrDirectoryParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string filesystem = 1;
+  // required bytes filesystem = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_filesystem(), target);
   }
 
-  // required string realPath = 2;
+  // required bytes realPath = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_realpath(), target);
   }
 
@@ -1066,16 +1066,16 @@ size_t FileSystemGetFileOrDirectoryParams::RequiredFieldsByteSizeFallback() cons
   size_t total_size = 0;
 
   if (_internal_has_filesystem()) {
-    // required string filesystem = 1;
+    // required bytes filesystem = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filesystem());
   }
 
   if (_internal_has_realpath()) {
-    // required string realPath = 2;
+    // required bytes realPath = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_realpath());
   }
 
@@ -1086,14 +1086,14 @@ size_t FileSystemGetFileOrDirectoryParams::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string filesystem = 1;
+    // required bytes filesystem = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filesystem());
 
-    // required string realPath = 2;
+    // required bytes realPath = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_realpath());
 
   } else {

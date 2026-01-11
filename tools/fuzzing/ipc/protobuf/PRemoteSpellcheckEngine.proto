@@ -22,7 +22,7 @@ message Reply___delete__ {
 }
 
 message Msg_CheckAsync {
-  repeated string aWord = 1;
+  repeated bytes aWord = 1;
 }
 
 message Reply_CheckAsync {
@@ -30,7 +30,7 @@ message Reply_CheckAsync {
 }
 
 message Msg_SetDictionary {
-  required string aDictionary = 1;
+  required bytes aDictionary = 1;
 }
 
 message Reply_SetDictionary {
@@ -38,7 +38,7 @@ message Reply_SetDictionary {
 }
 
 message Msg_SetDictionaries {
-  repeated string aDictionaries = 1;
+  repeated bytes aDictionaries = 1;
 }
 
 message Reply_SetDictionaries {
@@ -46,25 +46,25 @@ message Reply_SetDictionaries {
 }
 
 message Msg_Suggest {
-  required string aWord = 1;
+  required bytes aWord = 1;
   required uint32 aCount = 2;
 }
 
 message Reply_Suggest {
-  repeated string aSuggestions = 1;
+  repeated bytes aSuggestions = 1;
 }
 
 message Msg_SetDictionaryFromList {
-  repeated string aList = 1;
+  repeated bytes aList = 1;
 }
 
 message Reply_SetDictionaryFromList {
   required bool aSuccess = 1;
-  required string aDictionary = 2;
+  required bytes aDictionary = 2;
 }
 
 // Parameter mappings stats:
 // Total parameters in this file 17
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 5, "<class 'ipdl.type.BuiltinCType'>": 4, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 8, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 12
+// Scalar mappings performed: 5
 // Message structs/unions generated from ipdl structs/unions: 0

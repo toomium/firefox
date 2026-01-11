@@ -186,7 +186,7 @@ class FileSystemGetDirectoryListingParams final :
     kDomPathFieldNumber = 3,
     kFiltersFieldNumber = 4,
   };
-  // required string filesystem = 1;
+  // required bytes filesystem = 1;
   bool has_filesystem() const;
   private:
   bool _internal_has_filesystem() const;
@@ -204,7 +204,7 @@ class FileSystemGetDirectoryListingParams final :
   std::string* _internal_mutable_filesystem();
   public:
 
-  // required string realPath = 2;
+  // required bytes realPath = 2;
   bool has_realpath() const;
   private:
   bool _internal_has_realpath() const;
@@ -222,7 +222,7 @@ class FileSystemGetDirectoryListingParams final :
   std::string* _internal_mutable_realpath();
   public:
 
-  // required string domPath = 3;
+  // required bytes domPath = 3;
   bool has_dompath() const;
   private:
   bool _internal_has_dompath() const;
@@ -240,7 +240,7 @@ class FileSystemGetDirectoryListingParams final :
   std::string* _internal_mutable_dompath();
   public:
 
-  // required string filters = 4;
+  // required bytes filters = 4;
   bool has_filters() const;
   private:
   bool _internal_has_filters() const;
@@ -396,7 +396,7 @@ class FileSystemGetFilesParams final :
     kDomPathFieldNumber = 3,
     kRecursiveFlagFieldNumber = 4,
   };
-  // required string filesystem = 1;
+  // required bytes filesystem = 1;
   bool has_filesystem() const;
   private:
   bool _internal_has_filesystem() const;
@@ -414,7 +414,7 @@ class FileSystemGetFilesParams final :
   std::string* _internal_mutable_filesystem();
   public:
 
-  // required string realPath = 2;
+  // required bytes realPath = 2;
   bool has_realpath() const;
   private:
   bool _internal_has_realpath() const;
@@ -432,7 +432,7 @@ class FileSystemGetFilesParams final :
   std::string* _internal_mutable_realpath();
   public:
 
-  // required string domPath = 3;
+  // required bytes domPath = 3;
   bool has_dompath() const;
   private:
   bool _internal_has_dompath() const;
@@ -599,7 +599,7 @@ class FileSystemGetFileOrDirectoryParams final :
     kFilesystemFieldNumber = 1,
     kRealPathFieldNumber = 2,
   };
-  // required string filesystem = 1;
+  // required bytes filesystem = 1;
   bool has_filesystem() const;
   private:
   bool _internal_has_filesystem() const;
@@ -617,7 +617,7 @@ class FileSystemGetFileOrDirectoryParams final :
   std::string* _internal_mutable_filesystem();
   public:
 
-  // required string realPath = 2;
+  // required bytes realPath = 2;
   bool has_realpath() const;
   private:
   bool _internal_has_realpath() const;
@@ -872,7 +872,7 @@ class FileSystemParams final :
 #endif  // __GNUC__
 // FileSystemGetDirectoryListingParams
 
-// required string filesystem = 1;
+// required bytes filesystem = 1;
 inline bool FileSystemGetDirectoryListingParams::_internal_has_filesystem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -892,7 +892,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetDirectoryListingParams::set_filesystem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.filesystem_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.filesystem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.filesystem)
 }
 inline std::string* FileSystemGetDirectoryListingParams::mutable_filesystem() {
@@ -940,7 +940,7 @@ inline void FileSystemGetDirectoryListingParams::set_allocated_filesystem(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.filesystem)
 }
 
-// required string realPath = 2;
+// required bytes realPath = 2;
 inline bool FileSystemGetDirectoryListingParams::_internal_has_realpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -960,7 +960,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetDirectoryListingParams::set_realpath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.realpath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.realpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.realPath)
 }
 inline std::string* FileSystemGetDirectoryListingParams::mutable_realpath() {
@@ -1008,7 +1008,7 @@ inline void FileSystemGetDirectoryListingParams::set_allocated_realpath(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.realPath)
 }
 
-// required string domPath = 3;
+// required bytes domPath = 3;
 inline bool FileSystemGetDirectoryListingParams::_internal_has_dompath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1028,7 +1028,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetDirectoryListingParams::set_dompath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.dompath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.dompath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.domPath)
 }
 inline std::string* FileSystemGetDirectoryListingParams::mutable_dompath() {
@@ -1076,7 +1076,7 @@ inline void FileSystemGetDirectoryListingParams::set_allocated_dompath(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.domPath)
 }
 
-// required string filters = 4;
+// required bytes filters = 4;
 inline bool FileSystemGetDirectoryListingParams::_internal_has_filters() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1096,7 +1096,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetDirectoryListingParams::set_filters(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.filters_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.filters_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.filters)
 }
 inline std::string* FileSystemGetDirectoryListingParams::mutable_filters() {
@@ -1148,7 +1148,7 @@ inline void FileSystemGetDirectoryListingParams::set_allocated_filters(std::stri
 
 // FileSystemGetFilesParams
 
-// required string filesystem = 1;
+// required bytes filesystem = 1;
 inline bool FileSystemGetFilesParams::_internal_has_filesystem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1168,7 +1168,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetFilesParams::set_filesystem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.filesystem_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.filesystem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFilesParams.filesystem)
 }
 inline std::string* FileSystemGetFilesParams::mutable_filesystem() {
@@ -1216,7 +1216,7 @@ inline void FileSystemGetFilesParams::set_allocated_filesystem(std::string* file
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFilesParams.filesystem)
 }
 
-// required string realPath = 2;
+// required bytes realPath = 2;
 inline bool FileSystemGetFilesParams::_internal_has_realpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1236,7 +1236,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetFilesParams::set_realpath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.realpath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.realpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFilesParams.realPath)
 }
 inline std::string* FileSystemGetFilesParams::mutable_realpath() {
@@ -1284,7 +1284,7 @@ inline void FileSystemGetFilesParams::set_allocated_realpath(std::string* realpa
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFilesParams.realPath)
 }
 
-// required string domPath = 3;
+// required bytes domPath = 3;
 inline bool FileSystemGetFilesParams::_internal_has_dompath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1304,7 +1304,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetFilesParams::set_dompath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.dompath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.dompath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFilesParams.domPath)
 }
 inline std::string* FileSystemGetFilesParams::mutable_dompath() {
@@ -1384,7 +1384,7 @@ inline void FileSystemGetFilesParams::set_recursiveflag(bool value) {
 
 // FileSystemGetFileOrDirectoryParams
 
-// required string filesystem = 1;
+// required bytes filesystem = 1;
 inline bool FileSystemGetFileOrDirectoryParams::_internal_has_filesystem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1404,7 +1404,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetFileOrDirectoryParams::set_filesystem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.filesystem_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.filesystem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.filesystem)
 }
 inline std::string* FileSystemGetFileOrDirectoryParams::mutable_filesystem() {
@@ -1452,7 +1452,7 @@ inline void FileSystemGetFileOrDirectoryParams::set_allocated_filesystem(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.filesystem)
 }
 
-// required string realPath = 2;
+// required bytes realPath = 2;
 inline bool FileSystemGetFileOrDirectoryParams::_internal_has_realpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1472,7 +1472,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetFileOrDirectoryParams::set_realpath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.realpath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.realpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.realPath)
 }
 inline std::string* FileSystemGetFileOrDirectoryParams::mutable_realpath() {

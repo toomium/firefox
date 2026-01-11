@@ -1496,7 +1496,7 @@ class Msg_Error final :
   enum : int {
     kErrorFieldNumber = 1,
   };
-  // required string error = 1;
+  // required bytes error = 1;
   bool has_error() const;
   private:
   bool _internal_has_error() const;
@@ -2172,7 +2172,7 @@ Msg_Write::mutable_data() {
 
 // Msg_Error
 
-// required string error = 1;
+// required bytes error = 1;
 inline bool Msg_Error::_internal_has_error() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2192,7 +2192,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Error::set_error(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.error_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PStreamFilter.Msg_Error.error)
 }
 inline std::string* Msg_Error::mutable_error() {

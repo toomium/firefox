@@ -12,11 +12,11 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message PermissionRequest {
-  required string type = 1;
-  repeated string options = 2;
+  required bytes type = 1;
+  repeated bytes options = 2;
 }
 
 message PermissionChoice {
-  required string type = 1;
-  required string choice = 2;
+  required bytes type = 1;
+  required bytes choice = 2;
 }

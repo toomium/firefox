@@ -176,7 +176,7 @@ class HandlerApp final :
     kNameFieldNumber = 1,
     kDetailedDescriptionFieldNumber = 2,
   };
-  // required string name = 1;
+  // required bytes name = 1;
   bool has_name() const;
   private:
   bool _internal_has_name() const;
@@ -194,7 +194,7 @@ class HandlerApp final :
   std::string* _internal_mutable_name();
   public:
 
-  // required string detailedDescription = 2;
+  // required bytes detailedDescription = 2;
   bool has_detaileddescription() const;
   private:
   bool _internal_has_detaileddescription() const;
@@ -352,7 +352,7 @@ class HandlerInfo final :
     kAlwaysAskBeforeHandlingFieldNumber = 4,
     kPreferredActionFieldNumber = 8,
   };
-  // repeated string extensions = 5;
+  // repeated bytes extensions = 5;
   int extensions_size() const;
   private:
   int _internal_extensions_size() const;
@@ -363,12 +363,12 @@ class HandlerInfo final :
   void set_extensions(int index, const std::string& value);
   void set_extensions(int index, std::string&& value);
   void set_extensions(int index, const char* value);
-  void set_extensions(int index, const char* value, size_t size);
+  void set_extensions(int index, const void* value, size_t size);
   std::string* add_extensions();
   void add_extensions(const std::string& value);
   void add_extensions(std::string&& value);
   void add_extensions(const char* value);
-  void add_extensions(const char* value, size_t size);
+  void add_extensions(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& extensions() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_extensions();
   private:
@@ -394,7 +394,7 @@ class HandlerInfo final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::HandlerApp >&
       possibleapplicationhandlers() const;
 
-  // required string type = 1;
+  // required bytes type = 1;
   bool has_type() const;
   private:
   bool _internal_has_type() const;
@@ -412,7 +412,7 @@ class HandlerInfo final :
   std::string* _internal_mutable_type();
   public:
 
-  // required string description = 3;
+  // required bytes description = 3;
   bool has_description() const;
   private:
   bool _internal_has_description() const;
@@ -523,7 +523,7 @@ class HandlerInfo final :
 #endif  // __GNUC__
 // HandlerApp
 
-// required string name = 1;
+// required bytes name = 1;
 inline bool HandlerApp::_internal_has_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -543,7 +543,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HandlerApp::set_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.HandlerApp.name)
 }
 inline std::string* HandlerApp::mutable_name() {
@@ -591,7 +591,7 @@ inline void HandlerApp::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.HandlerApp.name)
 }
 
-// required string detailedDescription = 2;
+// required bytes detailedDescription = 2;
 inline bool HandlerApp::_internal_has_detaileddescription() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -611,7 +611,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HandlerApp::set_detaileddescription(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.detaileddescription_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.detaileddescription_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.HandlerApp.detailedDescription)
 }
 inline std::string* HandlerApp::mutable_detaileddescription() {
@@ -663,7 +663,7 @@ inline void HandlerApp::set_allocated_detaileddescription(std::string* detailedd
 
 // HandlerInfo
 
-// required string type = 1;
+// required bytes type = 1;
 inline bool HandlerInfo::_internal_has_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -683,7 +683,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HandlerInfo::set_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.HandlerInfo.type)
 }
 inline std::string* HandlerInfo::mutable_type() {
@@ -759,7 +759,7 @@ inline void HandlerInfo::set_ismimeinfo(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.HandlerInfo.isMIMEInfo)
 }
 
-// required string description = 3;
+// required bytes description = 3;
 inline bool HandlerInfo::_internal_has_description() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -779,7 +779,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HandlerInfo::set_description(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.description_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.description_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.HandlerInfo.description)
 }
 inline std::string* HandlerInfo::mutable_description() {
@@ -855,7 +855,7 @@ inline void HandlerInfo::set_alwaysaskbeforehandling(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.HandlerInfo.alwaysAskBeforeHandling)
 }
 
-// repeated string extensions = 5;
+// repeated bytes extensions = 5;
 inline int HandlerInfo::_internal_extensions_size() const {
   return _impl_.extensions_.size();
 }
@@ -894,7 +894,7 @@ inline void HandlerInfo::set_extensions(int index, const char* value) {
   _impl_.extensions_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.HandlerInfo.extensions)
 }
-inline void HandlerInfo::set_extensions(int index, const char* value, size_t size) {
+inline void HandlerInfo::set_extensions(int index, const void* value, size_t size) {
   _impl_.extensions_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.HandlerInfo.extensions)
@@ -915,7 +915,7 @@ inline void HandlerInfo::add_extensions(const char* value) {
   _impl_.extensions_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.HandlerInfo.extensions)
 }
-inline void HandlerInfo::add_extensions(const char* value, size_t size) {
+inline void HandlerInfo::add_extensions(const void* value, size_t size) {
   _impl_.extensions_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.HandlerInfo.extensions)
 }

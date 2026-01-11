@@ -210,7 +210,7 @@ class HttpChannelOnStartRequestArgs final :
     kIsProxyUsedFieldNumber = 31,
     kRedirectCountFieldNumber = 32,
   };
-  // repeated string cookieHeaders = 6;
+  // repeated bytes cookieHeaders = 6;
   int cookieheaders_size() const;
   private:
   int _internal_cookieheaders_size() const;
@@ -221,12 +221,12 @@ class HttpChannelOnStartRequestArgs final :
   void set_cookieheaders(int index, const std::string& value);
   void set_cookieheaders(int index, std::string&& value);
   void set_cookieheaders(int index, const char* value);
-  void set_cookieheaders(int index, const char* value, size_t size);
+  void set_cookieheaders(int index, const void* value, size_t size);
   std::string* add_cookieheaders();
   void add_cookieheaders(const std::string& value);
   void add_cookieheaders(std::string&& value);
   void add_cookieheaders(const char* value);
-  void add_cookieheaders(const char* value, size_t size);
+  void add_cookieheaders(const void* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& cookieheaders() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_cookieheaders();
   private:
@@ -270,7 +270,7 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_overridereferrerinfo();
   public:
 
-  // required string altDataType = 5;
+  // required bytes altDataType = 5;
   bool has_altdatatype() const;
   private:
   bool _internal_has_altdatatype() const;
@@ -396,7 +396,7 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_openerpolicy();
   public:
 
-  // required string protocolVersion = 33;
+  // required bytes protocolVersion = 33;
   bool has_protocolversion() const;
   private:
   bool _internal_has_protocolversion() const;
@@ -1110,7 +1110,7 @@ inline void HttpChannelOnStartRequestArgs::set_altdatalength(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.altDataLength)
 }
 
-// required string altDataType = 5;
+// required bytes altDataType = 5;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_altdatatype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1130,7 +1130,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOnStartRequestArgs::set_altdatatype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.altdatatype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.altdatatype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.altDataType)
 }
 inline std::string* HttpChannelOnStartRequestArgs::mutable_altdatatype() {
@@ -1178,7 +1178,7 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_altdatatype(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.altDataType)
 }
 
-// repeated string cookieHeaders = 6;
+// repeated bytes cookieHeaders = 6;
 inline int HttpChannelOnStartRequestArgs::_internal_cookieheaders_size() const {
   return _impl_.cookieheaders_.size();
 }
@@ -1217,7 +1217,7 @@ inline void HttpChannelOnStartRequestArgs::set_cookieheaders(int index, const ch
   _impl_.cookieheaders_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.cookieHeaders)
 }
-inline void HttpChannelOnStartRequestArgs::set_cookieheaders(int index, const char* value, size_t size) {
+inline void HttpChannelOnStartRequestArgs::set_cookieheaders(int index, const void* value, size_t size) {
   _impl_.cookieheaders_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.cookieHeaders)
@@ -1238,7 +1238,7 @@ inline void HttpChannelOnStartRequestArgs::add_cookieheaders(const char* value) 
   _impl_.cookieheaders_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.cookieHeaders)
 }
-inline void HttpChannelOnStartRequestArgs::add_cookieheaders(const char* value, size_t size) {
+inline void HttpChannelOnStartRequestArgs::add_cookieheaders(const void* value, size_t size) {
   _impl_.cookieheaders_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.cookieHeaders)
 }
@@ -2339,7 +2339,7 @@ inline void HttpChannelOnStartRequestArgs::set_redirectcount(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.redirectCount)
 }
 
-// required string protocolVersion = 33;
+// required bytes protocolVersion = 33;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_protocolversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -2359,7 +2359,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOnStartRequestArgs::set_protocolversion(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000200u;
- _impl_.protocolversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.protocolversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.protocolVersion)
 }
 inline std::string* HttpChannelOnStartRequestArgs::mutable_protocolversion() {

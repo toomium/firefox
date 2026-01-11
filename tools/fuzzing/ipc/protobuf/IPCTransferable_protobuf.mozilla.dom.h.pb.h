@@ -1197,7 +1197,7 @@ class IPCTransferableDataItem final :
     kFlavorFieldNumber = 1,
     kDataFieldNumber = 2,
   };
-  // required string flavor = 1;
+  // required bytes flavor = 1;
   bool has_flavor() const;
   private:
   bool _internal_has_flavor() const;
@@ -2620,7 +2620,7 @@ inline IPCTransferableDataType::ContentCase IPCTransferableDataType::content_cas
 
 // IPCTransferableDataItem
 
-// required string flavor = 1;
+// required bytes flavor = 1;
 inline bool IPCTransferableDataItem::_internal_has_flavor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2640,7 +2640,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCTransferableDataItem::set_flavor(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.flavor_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.flavor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataItem.flavor)
 }
 inline std::string* IPCTransferableDataItem::mutable_flavor() {

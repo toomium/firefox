@@ -653,7 +653,7 @@ class Msg_OnStopRequest final :
   std::string* _internal_mutable_areason();
   public:
 
-  // required string aContentCharset = 2;
+  // required bytes aContentCharset = 2;
   bool has_acontentcharset() const;
   private:
   bool _internal_has_acontentcharset() const;
@@ -671,7 +671,7 @@ class Msg_OnStopRequest final :
   std::string* _internal_mutable_acontentcharset();
   public:
 
-  // required string aHintCharset = 3;
+  // required bytes aHintCharset = 3;
   bool has_ahintcharset() const;
   private:
   bool _internal_has_ahintcharset() const;
@@ -689,7 +689,7 @@ class Msg_OnStopRequest final :
   std::string* _internal_mutable_ahintcharset();
   public:
 
-  // required string aDocumentCharset = 4;
+  // required bytes aDocumentCharset = 4;
   bool has_adocumentcharset() const;
   private:
   bool _internal_has_adocumentcharset() const;
@@ -1271,7 +1271,7 @@ inline void Msg_OnStopRequest::set_allocated_areason(std::string* areason) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PJSValidator.Msg_OnStopRequest.aReason)
 }
 
-// required string aContentCharset = 2;
+// required bytes aContentCharset = 2;
 inline bool Msg_OnStopRequest::_internal_has_acontentcharset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1291,7 +1291,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStopRequest::set_acontentcharset(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.acontentcharset_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.acontentcharset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PJSValidator.Msg_OnStopRequest.aContentCharset)
 }
 inline std::string* Msg_OnStopRequest::mutable_acontentcharset() {
@@ -1339,7 +1339,7 @@ inline void Msg_OnStopRequest::set_allocated_acontentcharset(std::string* aconte
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PJSValidator.Msg_OnStopRequest.aContentCharset)
 }
 
-// required string aHintCharset = 3;
+// required bytes aHintCharset = 3;
 inline bool Msg_OnStopRequest::_internal_has_ahintcharset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1359,7 +1359,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStopRequest::set_ahintcharset(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.ahintcharset_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.ahintcharset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PJSValidator.Msg_OnStopRequest.aHintCharset)
 }
 inline std::string* Msg_OnStopRequest::mutable_ahintcharset() {
@@ -1407,7 +1407,7 @@ inline void Msg_OnStopRequest::set_allocated_ahintcharset(std::string* ahintchar
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PJSValidator.Msg_OnStopRequest.aHintCharset)
 }
 
-// required string aDocumentCharset = 4;
+// required bytes aDocumentCharset = 4;
 inline bool Msg_OnStopRequest::_internal_has_adocumentcharset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1427,7 +1427,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStopRequest::set_adocumentcharset(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.adocumentcharset_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.adocumentcharset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PJSValidator.Msg_OnStopRequest.aDocumentCharset)
 }
 inline std::string* Msg_OnStopRequest::mutable_adocumentcharset() {
