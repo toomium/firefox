@@ -327,6 +327,42 @@ def main():
         print(undefinedMessages, file=sys.stderr)
         sys.exit(1)
 
+    protocolBlacklist = [
+        "PQuotaTest",
+        "PIPDLUnitTest",
+        "PTestAsyncReturns",
+        "PTestBasic",
+        "PTestCancel",
+        "PTestCrossProcessSemaphore",
+        "PTestDataStructures",
+        "PTestDataStructuresSub",
+        "PTestDescendant",
+        "PTestDescendantSub",
+        "PTestDescendantSubsub",
+        "PTestDestroyNested",
+        "PTestDestroyNestedSub",
+        "PTestEndpointOpens",
+        "PTestEndpointOpensOpened",
+        "PTestHangs",
+        "PTestInduceConnectionError",
+        "PTestJSON",
+        "PTestJSONHandle",
+        "PTestManyChildAllocs",
+        "PTestManyChildAllocsSub",
+        "PTestManyHandles",
+        "PTestMostNested",
+        "PTestMultiMgrs",
+        "PTestMultiMgrsBottom",
+        "PTestMultiMgrsLeft",
+        "PTestMultiMgrsRight",
+        "PTestSelfManage",
+        "PTestSelfManageRoot",
+        "PTestShmem",
+        "PTestSyncError",
+        "PTestUniquePtrIPC",
+        "PTestUrgency",
+        ]
+
     ipc_factory = StringIO()
 
     print(
@@ -339,10 +375,10 @@ def main():
 """, file=ipc_factory)
 
     for name in sorted(allprotocols.keys()):
-        namespace_pb = getNamespace("/", allprotocols[name], addParent=True)
-        namespace = getNamespace("/", allprotocols[name], addParent=False)
-        print(f"#include \"mozilla/fuzzing/protobuf/{name}.pb.h\"", file=ipc_factory)
-        print(f"#include \"{namespace}/{name}Protobuf.h\"", file=ipc_factory)
+        if not allprotocols[name] in protocolBlacklist:
+            namespace = getNamespace("/", allprotocols[name], addParent=False)
+            print(f"#include \"mozilla/fuzzing/protobuf/{name}.pb.h\"", file=ipc_factory)
+            print(f"#include \"{namespace}/{name}Protobuf.h\"", file=ipc_factory)
 
     print("""
 
@@ -354,19 +390,20 @@ UniquePtr<IPC::Message> ConvertProtobufToIPCMessage(UniquePtr<TypedProtobuf>& pr
         file=ipc_factory,
     )
     for protocol in sorted(allmessages.keys()):
-        for msg, num in allmessages[protocol].idnums:
-            if num or msg.endswith("End"):
-                continue
-            enum = f"{protocol}__{msg}"
-            namespace = getNamespace("::", allprotocols[protocol], addParent=False)
-            namespace_pb = getNamespace("::", allprotocols[protocol], addParent=True)
-            print("""
-    case IPC::%s: {
-        return %s::%s::%s_ToIPC(LibprotobufMapping::ParseTypedProtobuf<%s::%s::%s>(std::move(proto)));
-    }"""
-                % (enum, namespace, protocol, msg, namespace_pb, protocol, msg),
-                file=ipc_factory,
-            )
+        if not protocol in protocolBlacklist:
+            for msg, num in allmessages[protocol].idnums:
+                if num or msg.endswith("End"):
+                    continue
+                enum = f"{protocol}__{msg}"
+                namespace = getNamespace("::", allprotocols[protocol], addParent=False)
+                namespace_pb = getNamespace("::", allprotocols[protocol], addParent=True)
+                print("""
+        case IPC::%s: {
+            return %s::%s::%s_ToIPC(LibprotobufMapping::ParseTypedProtobuf<%s::%s::%s>(std::move(proto)));
+        }"""
+                    % (enum, namespace, protocol, msg, namespace_pb, protocol, msg),
+                    file=ipc_factory,
+                )
 
     print("""
     }
@@ -377,18 +414,19 @@ UniquePtr<TypedProtobuf> ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message>& ip
         file=ipc_factory,
     )
     for protocol in sorted(allmessages.keys()):
-        for msg, num in allmessages[protocol].idnums:
-            if num or msg.endswith("End"):
-                continue
-            enum = f"{protocol}__{msg}"
-            namespace = getNamespace("::", allprotocols[protocol], addParent=False)
-            namespace_pb = getNamespace("::", allprotocols[protocol], addParent=True)
-            print("""   case IPC::%s: {
-        return LibprotobufMapping::SerializeTypedProtobuf<%s::%s::%s>(%s::%s::%s_ToProtobuf(std::move(ipc)), IPC::%s);
-    }"""
-                % (enum, namespace_pb, protocol, msg, namespace, protocol, msg, enum),
-                file=ipc_factory,
-            )
+        if not protocol in protocolBlacklist:
+            for msg, num in allmessages[protocol].idnums:
+                if num or msg.endswith("End"):
+                    continue
+                enum = f"{protocol}__{msg}"
+                namespace = getNamespace("::", allprotocols[protocol], addParent=False)
+                namespace_pb = getNamespace("::", allprotocols[protocol], addParent=True)
+                print("""   case IPC::%s: {
+            return LibprotobufMapping::SerializeTypedProtobuf<%s::%s::%s>(%s::%s::%s_ToProtobuf(std::move(ipc)), IPC::%s);
+        }"""
+                    % (enum, namespace_pb, protocol, msg, namespace, protocol, msg, enum),
+                    file=ipc_factory,
+                )
 
     print("""
     }
