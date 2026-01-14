@@ -15269,11 +15269,11 @@ const char* Msg_PFileCreatorConstructor::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // optional int64 lastModified = 4;
+      // optional sint64 lastModified = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_lastmodified(&has_bits);
-          _impl_.lastmodified_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.lastmodified_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -15345,10 +15345,10 @@ uint8_t* Msg_PFileCreatorConstructor::_InternalSerialize(
         3, this->_internal_aname(), target);
   }
 
-  // optional int64 lastModified = 4;
+  // optional sint64 lastModified = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_lastmodified(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_lastmodified(), target);
   }
 
   // required bool aExistenceCheck = 5;
@@ -15441,10 +15441,10 @@ size_t Msg_PFileCreatorConstructor::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional int64 lastModified = 4;
+  // optional sint64 lastModified = 4;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000008u) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_lastmodified());
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_lastmodified());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {

@@ -1934,11 +1934,11 @@ const char* TextChangeEventData::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required int32 Start = 3;
+      // required sint32 Start = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_start(&has_bits);
-          _impl_.start_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.start_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2013,10 +2013,10 @@ uint8_t* TextChangeEventData::_InternalSerialize(
         2, this->_internal_str(), target);
   }
 
-  // required int32 Start = 3;
+  // required sint32 Start = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_start(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_start(), target);
   }
 
   // required uint32 Len = 4;
@@ -2062,8 +2062,8 @@ size_t TextChangeEventData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_start()) {
-    // required int32 Start = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_start());
+    // required sint32 Start = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_start());
   }
 
   if (_internal_has_len()) {
@@ -2096,8 +2096,8 @@ size_t TextChangeEventData::ByteSizeLong() const {
     // required uint64 ID = 1;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_id());
 
-    // required int32 Start = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_start());
+    // required sint32 Start = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_start());
 
     // required uint32 Len = 4;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_len());
@@ -2828,20 +2828,20 @@ const char* TextRangeData::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required int32 StartOffset = 3;
+      // required sint32 StartOffset = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_startoffset(&has_bits);
-          _impl_.startoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.startoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 EndOffset = 4;
+      // required sint32 EndOffset = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_endoffset(&has_bits);
-          _impl_.endoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.endoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2889,16 +2889,16 @@ uint8_t* TextRangeData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_endid(), target);
   }
 
-  // required int32 StartOffset = 3;
+  // required sint32 StartOffset = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_startoffset(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_startoffset(), target);
   }
 
-  // required int32 EndOffset = 4;
+  // required sint32 EndOffset = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_endoffset(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_endoffset(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2924,13 +2924,13 @@ size_t TextRangeData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_startoffset()) {
-    // required int32 StartOffset = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_startoffset());
+    // required sint32 StartOffset = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_startoffset());
   }
 
   if (_internal_has_endoffset()) {
-    // required int32 EndOffset = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_endoffset());
+    // required sint32 EndOffset = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_endoffset());
   }
 
   return total_size;
@@ -2946,11 +2946,11 @@ size_t TextRangeData::ByteSizeLong() const {
     // required uint64 EndID = 2;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_endid());
 
-    // required int32 StartOffset = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_startoffset());
+    // required sint32 StartOffset = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_startoffset());
 
-    // required int32 EndOffset = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_endoffset());
+    // required sint32 EndOffset = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_endoffset());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

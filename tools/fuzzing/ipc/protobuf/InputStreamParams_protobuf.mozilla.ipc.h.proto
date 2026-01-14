@@ -24,8 +24,8 @@ message StringInputStreamParams {
 
 message FileInputStreamParams {
   required bytes fileDescriptor = 1;
-  required int32 behaviorFlags = 2;
-  required int32 ioFlags = 3;
+  required sint32 behaviorFlags = 2;
+  required sint32 ioFlags = 3;
 }
 
 message MultiplexInputStreamParams {
@@ -85,6 +85,6 @@ message MIMEInputStreamParams {
 
 message InputStreamLengthWrapperParams {
   required protobuf.mozilla.ipc.InputStreamParams stream = 1;
-  required int64 length = 2;
+  required sint64 length = 2;
   required bool consumed = 3;
 }

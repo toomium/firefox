@@ -686,7 +686,7 @@ class GMPVideoEncodedFrameData final :
   void _internal_set_msize(uint32_t value);
   public:
 
-  // required int32 mTemporalLayerId = 7;
+  // required sint32 mTemporalLayerId = 7;
   bool has_mtemporallayerid() const;
   private:
   bool _internal_has_mtemporallayerid() const;
@@ -854,7 +854,7 @@ class GMPPlaneData final :
     kMSizeFieldNumber = 2,
     kMStrideFieldNumber = 3,
   };
-  // required int32 mOffset = 1;
+  // required sint32 mOffset = 1;
   bool has_moffset() const;
   private:
   bool _internal_has_moffset() const;
@@ -867,7 +867,7 @@ class GMPPlaneData final :
   void _internal_set_moffset(int32_t value);
   public:
 
-  // required int32 mSize = 2;
+  // required sint32 mSize = 2;
   bool has_msize() const;
   private:
   bool _internal_has_msize() const;
@@ -880,7 +880,7 @@ class GMPPlaneData final :
   void _internal_set_msize(int32_t value);
   public:
 
-  // required int32 mStride = 3;
+  // required sint32 mStride = 3;
   bool has_mstride() const;
   private:
   bool _internal_has_mstride() const;
@@ -1088,7 +1088,7 @@ class GMPVideoi420FrameData final :
       ::protobuf::mozilla::gmp::GMPPlaneData* mvplane);
   ::protobuf::mozilla::gmp::GMPPlaneData* unsafe_arena_release_mvplane();
 
-  // required int32 mWidth = 4;
+  // required sint32 mWidth = 4;
   bool has_mwidth() const;
   private:
   bool _internal_has_mwidth() const;
@@ -1101,7 +1101,7 @@ class GMPVideoi420FrameData final :
   void _internal_set_mwidth(int32_t value);
   public:
 
-  // required int32 mHeight = 5;
+  // required sint32 mHeight = 5;
   bool has_mheight() const;
   private:
   bool _internal_has_mheight() const;
@@ -1425,7 +1425,7 @@ class CDMInputBuffer final :
   std::string* _internal_mutable_mencryptionscheme();
   public:
 
-  // required int64 mTimestamp = 4;
+  // required sint64 mTimestamp = 4;
   bool has_mtimestamp() const;
   private:
   bool _internal_has_mtimestamp() const;
@@ -1438,7 +1438,7 @@ class CDMInputBuffer final :
   void _internal_set_mtimestamp(int64_t value);
   public:
 
-  // required int64 mDuration = 5;
+  // required sint64 mDuration = 5;
   bool has_mduration() const;
   private:
   bool _internal_has_mduration() const;
@@ -1703,7 +1703,7 @@ class CDMVideoDecoderConfig final :
   void _internal_set_mformat(uint32_t value);
   public:
 
-  // required int32 mImageWidth = 4;
+  // required sint32 mImageWidth = 4;
   bool has_mimagewidth() const;
   private:
   bool _internal_has_mimagewidth() const;
@@ -1716,7 +1716,7 @@ class CDMVideoDecoderConfig final :
   void _internal_set_mimagewidth(int32_t value);
   public:
 
-  // required int32 mImageHeight = 5;
+  // required sint32 mImageHeight = 5;
   bool has_mimageheight() const;
   private:
   bool _internal_has_mimageheight() const;
@@ -2285,7 +2285,7 @@ class CDMVideoFrame final :
   void _internal_set_mformat(uint32_t value);
   public:
 
-  // required int32 mImageWidth = 2;
+  // required sint32 mImageWidth = 2;
   bool has_mimagewidth() const;
   private:
   bool _internal_has_mimagewidth() const;
@@ -2298,7 +2298,7 @@ class CDMVideoFrame final :
   void _internal_set_mimagewidth(int32_t value);
   public:
 
-  // required int64 mTimestamp = 7;
+  // required sint64 mTimestamp = 7;
   bool has_mtimestamp() const;
   private:
   bool _internal_has_mtimestamp() const;
@@ -2311,7 +2311,7 @@ class CDMVideoFrame final :
   void _internal_set_mtimestamp(int64_t value);
   public:
 
-  // required int64 mDuration = 8;
+  // required sint64 mDuration = 8;
   bool has_mduration() const;
   private:
   bool _internal_has_mduration() const;
@@ -2324,7 +2324,7 @@ class CDMVideoFrame final :
   void _internal_set_mduration(int64_t value);
   public:
 
-  // required int32 mImageHeight = 3;
+  // required sint32 mImageHeight = 3;
   bool has_mimageheight() const;
   private:
   bool _internal_has_mimageheight() const;
@@ -2913,7 +2913,7 @@ inline void GMPVideoEncodedFrameData::set_msize(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPVideoEncodedFrameData.mSize)
 }
 
-// required int32 mTemporalLayerId = 7;
+// required sint32 mTemporalLayerId = 7;
 inline bool GMPVideoEncodedFrameData::_internal_has_mtemporallayerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -3041,7 +3041,7 @@ inline void GMPVideoEncodedFrameData::set_mcompleteframe(bool value) {
 
 // GMPPlaneData
 
-// required int32 mOffset = 1;
+// required sint32 mOffset = 1;
 inline bool GMPPlaneData::_internal_has_moffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3069,7 +3069,7 @@ inline void GMPPlaneData::set_moffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPPlaneData.mOffset)
 }
 
-// required int32 mSize = 2;
+// required sint32 mSize = 2;
 inline bool GMPPlaneData::_internal_has_msize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3097,7 +3097,7 @@ inline void GMPPlaneData::set_msize(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPPlaneData.mSize)
 }
 
-// required int32 mStride = 3;
+// required sint32 mStride = 3;
 inline bool GMPPlaneData::_internal_has_mstride() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3399,7 +3399,7 @@ inline void GMPVideoi420FrameData::set_allocated_mvplane(::protobuf::mozilla::gm
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPVideoi420FrameData.mVPlane)
 }
 
-// required int32 mWidth = 4;
+// required sint32 mWidth = 4;
 inline bool GMPVideoi420FrameData::_internal_has_mwidth() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3427,7 +3427,7 @@ inline void GMPVideoi420FrameData::set_mwidth(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPVideoi420FrameData.mWidth)
 }
 
-// required int32 mHeight = 5;
+// required sint32 mHeight = 5;
 inline bool GMPVideoi420FrameData::_internal_has_mheight() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -3705,7 +3705,7 @@ CDMInputBuffer::mutable_miv() {
   return _internal_mutable_miv();
 }
 
-// required int64 mTimestamp = 4;
+// required sint64 mTimestamp = 4;
 inline bool CDMInputBuffer::_internal_has_mtimestamp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3733,7 +3733,7 @@ inline void CDMInputBuffer::set_mtimestamp(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMInputBuffer.mTimestamp)
 }
 
-// required int64 mDuration = 5;
+// required sint64 mDuration = 5;
 inline bool CDMInputBuffer::_internal_has_mduration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4067,7 +4067,7 @@ inline void CDMVideoDecoderConfig::set_mformat(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoDecoderConfig.mFormat)
 }
 
-// required int32 mImageWidth = 4;
+// required sint32 mImageWidth = 4;
 inline bool CDMVideoDecoderConfig::_internal_has_mimagewidth() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -4095,7 +4095,7 @@ inline void CDMVideoDecoderConfig::set_mimagewidth(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoDecoderConfig.mImageWidth)
 }
 
-// required int32 mImageHeight = 5;
+// required sint32 mImageHeight = 5;
 inline bool CDMVideoDecoderConfig::_internal_has_mimageheight() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -4437,7 +4437,7 @@ inline void CDMVideoFrame::set_mformat(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoFrame.mFormat)
 }
 
-// required int32 mImageWidth = 2;
+// required sint32 mImageWidth = 2;
 inline bool CDMVideoFrame::_internal_has_mimagewidth() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -4465,7 +4465,7 @@ inline void CDMVideoFrame::set_mimagewidth(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoFrame.mImageWidth)
 }
 
-// required int32 mImageHeight = 3;
+// required sint32 mImageHeight = 3;
 inline bool CDMVideoFrame::_internal_has_mimageheight() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -4763,7 +4763,7 @@ inline void CDMVideoFrame::set_allocated_mvplane(::protobuf::mozilla::gmp::CDMVi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.CDMVideoFrame.mVPlane)
 }
 
-// required int64 mTimestamp = 7;
+// required sint64 mTimestamp = 7;
 inline bool CDMVideoFrame::_internal_has_mtimestamp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -4791,7 +4791,7 @@ inline void CDMVideoFrame::set_mtimestamp(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoFrame.mTimestamp)
 }
 
-// required int64 mDuration = 8;
+// required sint64 mDuration = 8;
 inline bool CDMVideoFrame::_internal_has_mduration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;

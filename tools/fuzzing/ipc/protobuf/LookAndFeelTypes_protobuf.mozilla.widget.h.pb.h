@@ -400,7 +400,7 @@ class LookAndFeelTables final :
     kPasswordCharFieldNumber = 11,
     kPasswordEchoFieldNumber = 12,
   };
-  // repeated int32 ints = 1;
+  // repeated sint32 ints = 1;
   int ints_size() const;
   private:
   int _internal_ints_size() const;
@@ -1017,7 +1017,7 @@ inline void LookAndFeelFont::set_italic(bool value) {
 
 // LookAndFeelTables
 
-// repeated int32 ints = 1;
+// repeated sint32 ints = 1;
 inline int LookAndFeelTables::_internal_ints_size() const {
   return _impl_.ints_.size();
 }

@@ -18,6 +18,6 @@ message DummyStruct {
 message DummyUnion {
   oneof content {
     bytes mVstring = 1;
-    int32 mVint = 2;
+    sint32 mVint = 2;
   }
 }

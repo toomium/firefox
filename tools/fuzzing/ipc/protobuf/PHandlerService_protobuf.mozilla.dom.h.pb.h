@@ -474,7 +474,7 @@ class HandlerInfo final :
   void _internal_set_alwaysaskbeforehandling(bool value);
   public:
 
-  // required int32 preferredAction = 8;
+  // required sint32 preferredAction = 8;
   bool has_preferredaction() const;
   private:
   bool _internal_has_preferredaction() const;
@@ -1060,7 +1060,7 @@ HandlerInfo::possibleapplicationhandlers() const {
   return _impl_.possibleapplicationhandlers_;
 }
 
-// required int32 preferredAction = 8;
+// required sint32 preferredAction = 8;
 inline bool HandlerInfo::_internal_has_preferredaction() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

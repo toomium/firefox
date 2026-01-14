@@ -463,7 +463,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_cacheentryid(uint64_t value);
   public:
 
-  // required int64 altDataLength = 4;
+  // required sint64 altDataLength = 4;
   bool has_altdatalength() const;
   private:
   bool _internal_has_altdatalength() const;
@@ -1082,7 +1082,7 @@ inline void HttpChannelOnStartRequestArgs::set_cacheentryid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.cacheEntryId)
 }
 
-// required int64 altDataLength = 4;
+// required sint64 altDataLength = 4;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_altdatalength() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;

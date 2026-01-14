@@ -1151,11 +1151,11 @@ const char* Msg_OnStartRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required int64 aContentLength = 2;
+      // required sint64 aContentLength = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_acontentlength(&has_bits);
-          _impl_.acontentlength_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.acontentlength_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1223,10 +1223,10 @@ uint8_t* Msg_OnStartRequest::_InternalSerialize(
         1, this->_internal_achannelstatus(), target);
   }
 
-  // required int64 aContentLength = 2;
+  // required sint64 aContentLength = 2;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_acontentlength(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_acontentlength(), target);
   }
 
   // required bytes aContentType = 3;
@@ -1289,8 +1289,8 @@ size_t Msg_OnStartRequest::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_acontentlength()) {
-    // required int64 aContentLength = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_acontentlength());
+    // required sint64 aContentLength = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_acontentlength());
   }
 
   return total_size;
@@ -1320,8 +1320,8 @@ size_t Msg_OnStartRequest::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.auri_);
 
-    // required int64 aContentLength = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_acontentlength());
+    // required sint64 aContentLength = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_acontentlength());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

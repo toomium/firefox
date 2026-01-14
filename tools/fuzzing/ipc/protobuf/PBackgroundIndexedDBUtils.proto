@@ -22,12 +22,12 @@ message Msg_GetFileReferences {
   required bytes persistenceType = 1;
   required bytes origin = 2;
   required bytes databaseName = 3;
-  required int64 fileId = 4;
+  required sint64 fileId = 4;
 }
 
 message Reply_GetFileReferences {
-  required int32 refCnt = 1;
-  required int32 dBRefCnt = 2;
+  required sint32 refCnt = 1;
+  required sint32 dBRefCnt = 2;
   required bool result = 3;
 }
 

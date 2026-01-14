@@ -369,11 +369,11 @@ const char* Msg_InitVerifySSLServerCert::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required int32 aPort = 4;
+      // required sint32 aPort = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_aport(&has_bits);
-          _impl_.aport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -480,10 +480,10 @@ uint8_t* Msg_InitVerifySSLServerCert::_InternalSerialize(
         3, this->_internal_ahostname(), target);
   }
 
-  // required int32 aPort = 4;
+  // required sint32 aPort = 4;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_aport(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_aport(), target);
   }
 
   // required bytes aOriginAttributes = 5;
@@ -559,8 +559,8 @@ size_t Msg_InitVerifySSLServerCert::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_aport()) {
-    // required int32 aPort = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aport());
+    // required sint32 aPort = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aport());
   }
 
   if (_internal_has_aproviderflags()) {
@@ -595,8 +595,8 @@ size_t Msg_InitVerifySSLServerCert::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aoriginattributes());
 
-    // required int32 aPort = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aport());
+    // required sint32 aPort = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aport());
 
     // required uint32 aProviderFlags = 9;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_aproviderflags());
@@ -969,11 +969,11 @@ const char* Msg_InitSelectTLSClientAuthCert::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // required int32 aPort = 4;
+      // required sint32 aPort = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_aport(&has_bits);
-          _impl_.aport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1075,10 +1075,10 @@ uint8_t* Msg_InitSelectTLSClientAuthCert::_InternalSerialize(
         3, this->_internal_aoriginattributes(), target);
   }
 
-  // required int32 aPort = 4;
+  // required sint32 aPort = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_aport(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_aport(), target);
   }
 
   // required uint32 aProviderFlags = 5;
@@ -1155,8 +1155,8 @@ size_t Msg_InitSelectTLSClientAuthCert::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_aport()) {
-    // required int32 aPort = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aport());
+    // required sint32 aPort = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aport());
   }
 
   if (_internal_has_aproviderflags()) {
@@ -1201,8 +1201,8 @@ size_t Msg_InitSelectTLSClientAuthCert::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.aservercertbytes_);
 
-    // required int32 aPort = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aport());
+    // required sint32 aPort = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aport());
 
     // required uint32 aProviderFlags = 5;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_aproviderflags());

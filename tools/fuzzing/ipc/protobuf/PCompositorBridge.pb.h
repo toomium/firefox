@@ -5598,7 +5598,7 @@ class Msg_StartFrameTimeRecording final :
   enum : int {
     kBufferSizeFieldNumber = 1,
   };
-  // required int32 bufferSize = 1;
+  // required sint32 bufferSize = 1;
   bool has_buffersize() const;
   private:
   bool _internal_has_buffersize() const;
@@ -8093,7 +8093,7 @@ class Msg_DynamicToolbarOffsetChanged final :
   enum : int {
     kAOffsetFieldNumber = 1,
   };
-  // required int32 aOffset = 1;
+  // required sint32 aOffset = 1;
   bool has_aoffset() const;
   private:
   bool _internal_has_aoffset() const;
@@ -10019,7 +10019,7 @@ inline void Msg_ForcePresent::set_allocated_areasons(std::string* areasons) {
 
 // Msg_StartFrameTimeRecording
 
-// required int32 bufferSize = 1;
+// required sint32 bufferSize = 1;
 inline bool Msg_StartFrameTimeRecording::_internal_has_buffersize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11135,7 +11135,7 @@ inline void Reply_EndRecording::set_allocated_recording(::protobuf::mozilla::lay
 
 // Msg_DynamicToolbarOffsetChanged
 
-// required int32 aOffset = 1;
+// required sint32 aOffset = 1;
 inline bool Msg_DynamicToolbarOffsetChanged::_internal_has_aoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

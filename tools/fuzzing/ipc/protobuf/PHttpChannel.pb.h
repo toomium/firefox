@@ -1972,7 +1972,7 @@ class Msg_BytesRead final :
   enum : int {
     kCountFieldNumber = 1,
   };
-  // required int32 count = 1;
+  // required sint32 count = 1;
   bool has_count() const;
   private:
   bool _internal_has_count() const;
@@ -4045,7 +4045,7 @@ class Msg_SetPriority final :
   enum : int {
     kPriorityFieldNumber = 1,
   };
-  // required int32 priority = 1;
+  // required sint32 priority = 1;
   bool has_priority() const;
   private:
   bool _internal_has_priority() const;
@@ -5474,7 +5474,7 @@ Msg_SetCookies::cookies() const {
 
 // Msg_BytesRead
 
-// required int32 count = 1;
+// required sint32 count = 1;
 inline bool Msg_BytesRead::_internal_has_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6867,7 +6867,7 @@ inline void Msg_OriginalCacheInputStreamAvailable::set_allocated_stream(::protob
 
 // Msg_SetPriority
 
-// required int32 priority = 1;
+// required sint32 priority = 1;
 inline bool Msg_SetPriority::_internal_has_priority() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

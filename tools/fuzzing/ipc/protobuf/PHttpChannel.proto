@@ -75,7 +75,7 @@ message Msg_OpenOriginalCacheInputStream {
 }
 
 message Msg_BytesRead {
-  required int32 count = 1;
+  required sint32 count = 1;
 }
 
 message Msg___delete__ {
@@ -137,7 +137,7 @@ message Msg_OriginalCacheInputStreamAvailable {
 }
 
 message Msg_SetPriority {
-  required int32 priority = 1;
+  required sint32 priority = 1;
 }
 
 // Parameter mappings stats:

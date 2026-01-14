@@ -215,7 +215,7 @@ message Msg_SetConnectivity {
 }
 
 message Msg_SetCaptivePortalState {
-  required int32 aState = 1;
+  required sint32 aState = 1;
 }
 
 message Msg_SetTRRMode {
@@ -582,22 +582,22 @@ message Msg_DisplayLoadError {
 
 message Msg_GoBack {
   required bytes aContext = 1;
-  optional int32 aCancelContentJSEpoch = 2;
+  optional sint32 aCancelContentJSEpoch = 2;
   required bool aRequireUserInteraction = 3;
   required bool aUserActivation = 4;
 }
 
 message Msg_GoForward {
   required bytes aContext = 1;
-  optional int32 aCancelContentJSEpoch = 2;
+  optional sint32 aCancelContentJSEpoch = 2;
   required bool aRequireUserInteraction = 3;
   required bool aUserActivation = 4;
 }
 
 message Msg_GoToIndex {
   required bytes aContext = 1;
-  required int32 aIndex = 2;
-  optional int32 aCancelContentJSEpoch = 3;
+  required sint32 aIndex = 2;
+  optional sint32 aCancelContentJSEpoch = 3;
   required bool aUserActivation = 4;
 }
 
@@ -692,8 +692,8 @@ message Msg_SessionHistoryEntryScrollRestorationIsManual {
 
 message Msg_SessionHistoryEntryScrollPosition {
   required bytes aContext = 1;
-  required int32 aX = 2;
-  required int32 aY = 3;
+  required sint32 aX = 2;
+  required sint32 aY = 3;
 }
 
 message Msg_SessionHistoryEntryCacheKey {
@@ -896,7 +896,7 @@ message Msg_PExternalHelperAppConstructor {
   required uint32 aContentDispositionHint = 5;
   required bytes aContentDispositionFilename = 6;
   required bool aForceSave = 7;
-  required int64 aContentLength = 8;
+  required sint64 aContentLength = 8;
   required bool aWasFileChannel = 9;
   required bytes aReferrer = 10;
   required bytes aContext = 11;
@@ -1255,7 +1255,7 @@ message Msg_BHRThreadHang {
 message Msg_AddCertException {
   required bytes aCert = 1;
   required bytes aHostName = 2;
-  required int32 aPort = 3;
+  required sint32 aPort = 3;
   required bytes aOriginAttributes = 4;
   required bool aIsTemporary = 5;
 }
@@ -1277,7 +1277,7 @@ message Msg_StorageAccessPermissionGrantedForOrigin {
   required bytes aParentContext = 2;
   required bytes aTrackingPrincipal = 3;
   required bytes aTrackingOrigin = 4;
-  required int32 aAllowMode = 5;
+  required sint32 aAllowMode = 5;
   optional bytes aReason = 6;
   required bool aFrameOnly = 7;
 }
@@ -1434,14 +1434,14 @@ message Msg_HistoryCommit {
 
 message Msg_HistoryGo {
   required bytes aContext = 1;
-  required int32 aOffset = 2;
+  required sint32 aOffset = 2;
   required uint64 aHistoryEpoch = 3;
   required bool aRequireUserInteraction = 4;
   required bool aUserActivation = 5;
 }
 
 message Reply_HistoryGo {
-  optional int32 requestedIndex = 1;
+  optional sint32 requestedIndex = 1;
 }
 
 message Msg_BlobURLDataRequest {

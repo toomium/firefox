@@ -582,10 +582,10 @@ const char* IntDouble::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // int32 mVint = 1;
+      // sint32 mVint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -630,7 +630,7 @@ uint8_t* IntDouble::_InternalSerialize(
   switch (content_case()) {
     case kMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvint(), target);
       break;
     }
     case kMVdouble: {
@@ -657,9 +657,9 @@ size_t IntDouble::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // int32 mVint = 1;
+    // sint32 mVint = 1;
     case kMVint: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_mvint());
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
       break;
     }
     // double mVdouble = 2;
@@ -821,11 +821,11 @@ const char* SIntDouble::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 i = 1;
+      // required sint32 i = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_i(&has_bits);
-          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -870,10 +870,10 @@ uint8_t* SIntDouble::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 i = 1;
+  // required sint32 i = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_i(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_i(), target);
   }
 
   // required double d = 2;
@@ -900,8 +900,8 @@ size_t SIntDouble::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_i()) {
-    // required int32 i = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_i());
+    // required sint32 i = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
   }
 
   return total_size;
@@ -914,8 +914,8 @@ size_t SIntDouble::ByteSizeLong() const {
     // required double d = 2;
     total_size += 1 + 8;
 
-    // required int32 i = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_i());
+    // required sint32 i = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1054,18 +1054,18 @@ const char* IntDoubleArrays__mVArrayOfint::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated int32 mVArrayOfint = 1;
+      // repeated sint32 mVArrayOfint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_mvarrayofint(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_mvarrayofint(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1099,10 +1099,10 @@ uint8_t* IntDoubleArrays__mVArrayOfint::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated int32 mVArrayOfint = 1;
+  // repeated sint32 mVArrayOfint = 1;
   for (int i = 0, n = this->_internal_mvarrayofint_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_mvarrayofint(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvarrayofint(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1121,10 +1121,10 @@ size_t IntDoubleArrays__mVArrayOfint::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated int32 mVArrayOfint = 1;
+  // repeated sint32 mVArrayOfint = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      Int32Size(this->_impl_.mvarrayofint_);
+      SInt32Size(this->_impl_.mvarrayofint_);
     total_size += 1 *
                   ::_pbi::FromIntSize(this->_internal_mvarrayofint_size());
     total_size += data_size;
@@ -1526,10 +1526,10 @@ const char* IntDoubleArrays::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // int32 mVint = 1;
+      // sint32 mVint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1582,7 +1582,7 @@ uint8_t* IntDoubleArrays::_InternalSerialize(
   switch (content_case()) {
     case kMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvint(), target);
       break;
     }
     case kMVArrayOfint: {
@@ -1616,9 +1616,9 @@ size_t IntDoubleArrays::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // int32 mVint = 1;
+    // sint32 mVint = 1;
     case kMVint: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_mvint());
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
       break;
     }
     // .protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint mVArrayOfint = 2;
@@ -1791,27 +1791,27 @@ const char* SIntDoubleArrays::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 i = 1;
+      // required sint32 i = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_i(&has_bits);
-          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated int32 ai = 2;
+      // repeated sint32 ai = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_ai(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_ai(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1863,16 +1863,16 @@ uint8_t* SIntDoubleArrays::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 i = 1;
+  // required sint32 i = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_i(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_i(), target);
   }
 
-  // repeated int32 ai = 2;
+  // repeated sint32 ai = 2;
   for (int i = 0, n = this->_internal_ai_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_ai(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_ai(i), target);
   }
 
   // repeated double ad = 3;
@@ -1893,18 +1893,18 @@ size_t SIntDoubleArrays::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._foo.SIntDoubleArrays)
   size_t total_size = 0;
 
-  // required int32 i = 1;
+  // required sint32 i = 1;
   if (_internal_has_i()) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_i());
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated int32 ai = 2;
+  // repeated sint32 ai = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      Int32Size(this->_impl_.ai_);
+      SInt32Size(this->_impl_.ai_);
     total_size += 1 *
                   ::_pbi::FromIntSize(this->_internal_ai_size());
     total_size += data_size;
@@ -2258,18 +2258,18 @@ const char* Actors__mVArrayOfint::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated int32 mVArrayOfint = 1;
+      // repeated sint32 mVArrayOfint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_mvarrayofint(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_mvarrayofint(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2303,10 +2303,10 @@ uint8_t* Actors__mVArrayOfint::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated int32 mVArrayOfint = 1;
+  // repeated sint32 mVArrayOfint = 1;
   for (int i = 0, n = this->_internal_mvarrayofint_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_mvarrayofint(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvarrayofint(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2325,10 +2325,10 @@ size_t Actors__mVArrayOfint::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated int32 mVArrayOfint = 1;
+  // repeated sint32 mVArrayOfint = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      Int32Size(this->_impl_.mvarrayofint_);
+      SInt32Size(this->_impl_.mvarrayofint_);
     total_size += 1 *
                   ::_pbi::FromIntSize(this->_internal_mvarrayofint_size());
     total_size += data_size;
@@ -2727,10 +2727,10 @@ const char* Actors::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // int32 mVint = 1;
+      // sint32 mVint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2783,7 +2783,7 @@ uint8_t* Actors::_InternalSerialize(
   switch (content_case()) {
     case kMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvint(), target);
       break;
     }
     case kMVArrayOfint: {
@@ -2817,9 +2817,9 @@ size_t Actors::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // int32 mVint = 1;
+    // sint32 mVint = 1;
     case kMVint: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_mvint());
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
       break;
     }
     // .protobuf.mozilla._foo.Actors._mVArrayOfint mVArrayOfint = 2;
@@ -2992,27 +2992,27 @@ const char* SActors::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 i = 1;
+      // required sint32 i = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_i(&has_bits);
-          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated int32 ai = 2;
+      // repeated sint32 ai = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_ai(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_ai(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3062,16 +3062,16 @@ uint8_t* SActors::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 i = 1;
+  // required sint32 i = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_i(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_i(), target);
   }
 
-  // repeated int32 ai = 2;
+  // repeated sint32 ai = 2;
   for (int i = 0, n = this->_internal_ai_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_ai(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_ai(i), target);
   }
 
   // repeated bytes ap = 3;
@@ -3092,18 +3092,18 @@ size_t SActors::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._foo.SActors)
   size_t total_size = 0;
 
-  // required int32 i = 1;
+  // required sint32 i = 1;
   if (_internal_has_i()) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_i());
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated int32 ai = 2;
+  // repeated sint32 ai = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      Int32Size(this->_impl_.ai_);
+      SInt32Size(this->_impl_.ai_);
     total_size += 1 *
                   ::_pbi::FromIntSize(this->_internal_ai_size());
     total_size += data_size;
@@ -3239,18 +3239,18 @@ const char* Unions__mVArrayOfint::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated int32 mVArrayOfint = 1;
+      // repeated sint32 mVArrayOfint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_mvarrayofint(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_mvarrayofint(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3284,10 +3284,10 @@ uint8_t* Unions__mVArrayOfint::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated int32 mVArrayOfint = 1;
+  // repeated sint32 mVArrayOfint = 1;
   for (int i = 0, n = this->_internal_mvarrayofint_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_mvarrayofint(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvarrayofint(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3306,10 +3306,10 @@ size_t Unions__mVArrayOfint::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated int32 mVArrayOfint = 1;
+  // repeated sint32 mVArrayOfint = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      Int32Size(this->_impl_.mvarrayofint_);
+      SInt32Size(this->_impl_.mvarrayofint_);
     total_size += 1 *
                   ::_pbi::FromIntSize(this->_internal_mvarrayofint_size());
     total_size += data_size;
@@ -3926,10 +3926,10 @@ const char* Unions::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // int32 mVint = 1;
+      // sint32 mVint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3990,7 +3990,7 @@ uint8_t* Unions::_InternalSerialize(
   switch (content_case()) {
     case kMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvint(), target);
       break;
     }
     case kMVArrayOfint: {
@@ -4030,9 +4030,9 @@ size_t Unions::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // int32 mVint = 1;
+    // sint32 mVint = 1;
     case kMVint: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_mvint());
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
       break;
     }
     // .protobuf.mozilla._foo.Unions._mVArrayOfint mVArrayOfint = 2;
@@ -4221,27 +4221,27 @@ const char* Structs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 i = 1;
+      // required sint32 i = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_i(&has_bits);
-          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated int32 ai = 2;
+      // repeated sint32 ai = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_ai(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_ai(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4304,16 +4304,16 @@ uint8_t* Structs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 i = 1;
+  // required sint32 i = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_i(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_i(), target);
   }
 
-  // repeated int32 ai = 2;
+  // repeated sint32 ai = 2;
   for (int i = 0, n = this->_internal_ai_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_ai(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_ai(i), target);
   }
 
   // repeated bytes ap = 3;
@@ -4342,18 +4342,18 @@ size_t Structs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._foo.Structs)
   size_t total_size = 0;
 
-  // required int32 i = 1;
+  // required sint32 i = 1;
   if (_internal_has_i()) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_i());
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated int32 ai = 2;
+  // repeated sint32 ai = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      Int32Size(this->_impl_.ai_);
+      SInt32Size(this->_impl_.ai_);
     total_size += 1 *
                   ::_pbi::FromIntSize(this->_internal_ai_size());
     total_size += data_size;
@@ -4500,18 +4500,18 @@ const char* WithStructs__mVArrayOfint::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated int32 mVArrayOfint = 1;
+      // repeated sint32 mVArrayOfint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_mvarrayofint(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_mvarrayofint(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4545,10 +4545,10 @@ uint8_t* WithStructs__mVArrayOfint::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated int32 mVArrayOfint = 1;
+  // repeated sint32 mVArrayOfint = 1;
   for (int i = 0, n = this->_internal_mvarrayofint_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_mvarrayofint(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvarrayofint(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4567,10 +4567,10 @@ size_t WithStructs__mVArrayOfint::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated int32 mVArrayOfint = 1;
+  // repeated sint32 mVArrayOfint = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      Int32Size(this->_impl_.mvarrayofint_);
+      SInt32Size(this->_impl_.mvarrayofint_);
     total_size += 1 *
                   ::_pbi::FromIntSize(this->_internal_mvarrayofint_size());
     total_size += data_size;
@@ -5409,10 +5409,10 @@ const char* WithStructs::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // int32 mVint = 1;
+      // sint32 mVint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5481,7 +5481,7 @@ uint8_t* WithStructs::_InternalSerialize(
   switch (content_case()) {
     case kMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvint(), target);
       break;
     }
     case kMVArrayOfint: {
@@ -5527,9 +5527,9 @@ size_t WithStructs::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // int32 mVint = 1;
+    // sint32 mVint = 1;
     case kMVint: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_mvint());
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
       break;
     }
     // .protobuf.mozilla._foo.WithStructs._mVArrayOfint mVArrayOfint = 2;
@@ -5760,27 +5760,27 @@ const char* WithUnions::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 i = 1;
+      // required sint32 i = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_i(&has_bits);
-          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated int32 ai = 2;
+      // repeated sint32 ai = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_ai(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_ai(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5856,16 +5856,16 @@ uint8_t* WithUnions::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 i = 1;
+  // required sint32 i = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_i(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_i(), target);
   }
 
-  // repeated int32 ai = 2;
+  // repeated sint32 ai = 2;
   for (int i = 0, n = this->_internal_ai_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_ai(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_ai(i), target);
   }
 
   // repeated bytes ap = 3;
@@ -5902,18 +5902,18 @@ size_t WithUnions::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._foo.WithUnions)
   size_t total_size = 0;
 
-  // required int32 i = 1;
+  // required sint32 i = 1;
   if (_internal_has_i()) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_i());
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated int32 ai = 2;
+  // repeated sint32 ai = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      Int32Size(this->_impl_.ai_);
+      SInt32Size(this->_impl_.ai_);
     total_size += 1 *
                   ::_pbi::FromIntSize(this->_internal_ai_size());
     total_size += data_size;
@@ -6273,11 +6273,11 @@ const char* FooAttrs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 dummy = 1;
+      // required sint32 dummy = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_dummy(&has_bits);
-          _impl_.dummy_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.dummy_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6313,10 +6313,10 @@ uint8_t* FooAttrs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 dummy = 1;
+  // required sint32 dummy = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_dummy(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_dummy(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6331,9 +6331,9 @@ size_t FooAttrs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._foo.FooAttrs)
   size_t total_size = 0;
 
-  // required int32 dummy = 1;
+  // required sint32 dummy = 1;
   if (_internal_has_dummy()) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_dummy());
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_dummy());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -7890,11 +7890,11 @@ const char* ShmemStruct::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 i = 1;
+      // required sint32 i = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_i(&has_bits);
-          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7939,10 +7939,10 @@ uint8_t* ShmemStruct::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 i = 1;
+  // required sint32 i = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_i(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_i(), target);
   }
 
   // required bytes mem = 2;
@@ -7971,8 +7971,8 @@ size_t ShmemStruct::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_i()) {
-    // required int32 i = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_i());
+    // required sint32 i = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
   }
 
   return total_size;
@@ -7987,8 +7987,8 @@ size_t ShmemStruct::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_mem());
 
-    // required int32 i = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_i());
+    // required sint32 i = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -8166,10 +8166,10 @@ const char* ShmemUnion::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // int32 mVint = 1;
+      // sint32 mVint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8215,7 +8215,7 @@ uint8_t* ShmemUnion::_InternalSerialize(
   switch (content_case()) {
     case kMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvint(), target);
       break;
     }
     case kMVShmem: {
@@ -8242,9 +8242,9 @@ size_t ShmemUnion::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // int32 mVint = 1;
+    // sint32 mVint = 1;
     case kMVint: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_mvint());
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
       break;
     }
     // bytes mVShmem = 2;

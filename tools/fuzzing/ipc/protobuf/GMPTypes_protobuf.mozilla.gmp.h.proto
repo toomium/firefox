@@ -31,23 +31,23 @@ message GMPVideoEncodedFrameData {
   required uint64 mDuration = 4;
   required uint32 mFrameType = 5;
   required uint32 mSize = 6;
-  required int32 mTemporalLayerId = 7;
+  required sint32 mTemporalLayerId = 7;
   required bytes mBufferType = 8;
   required bool mCompleteFrame = 9;
 }
 
 message GMPPlaneData {
-  required int32 mOffset = 1;
-  required int32 mSize = 2;
-  required int32 mStride = 3;
+  required sint32 mOffset = 1;
+  required sint32 mSize = 2;
+  required sint32 mStride = 3;
 }
 
 message GMPVideoi420FrameData {
   required protobuf.mozilla.gmp.GMPPlaneData mYPlane = 1;
   required protobuf.mozilla.gmp.GMPPlaneData mUPlane = 2;
   required protobuf.mozilla.gmp.GMPPlaneData mVPlane = 3;
-  required int32 mWidth = 4;
-  required int32 mHeight = 5;
+  required sint32 mWidth = 4;
+  required sint32 mHeight = 5;
   required uint64 mTimestamp = 6;
   optional uint64 mUpdatedTimestamp = 7;
   required uint64 mDuration = 8;
@@ -57,8 +57,8 @@ message CDMInputBuffer {
   required bytes mData = 1;
   repeated uint32 mKeyId = 2;
   repeated uint32 mIV = 3;
-  required int64 mTimestamp = 4;
-  required int64 mDuration = 5;
+  required sint64 mTimestamp = 4;
+  required sint64 mDuration = 5;
   repeated uint32 mClearBytes = 6;
   repeated uint32 mCipherBytes = 7;
   required uint32 mCryptByteBlock = 8;
@@ -70,8 +70,8 @@ message CDMVideoDecoderConfig {
   required uint32 mCodec = 1;
   required uint32 mProfile = 2;
   required uint32 mFormat = 3;
-  required int32 mImageWidth = 4;
-  required int32 mImageHeight = 5;
+  required sint32 mImageWidth = 4;
+  required sint32 mImageHeight = 5;
   repeated uint32 mExtraData = 6;
   required bytes mEncryptionScheme = 7;
 }
@@ -89,11 +89,11 @@ message CDMVideoPlane {
 
 message CDMVideoFrame {
   required uint32 mFormat = 1;
-  required int32 mImageWidth = 2;
-  required int32 mImageHeight = 3;
+  required sint32 mImageWidth = 2;
+  required sint32 mImageHeight = 3;
   required protobuf.mozilla.gmp.CDMVideoPlane mYPlane = 4;
   required protobuf.mozilla.gmp.CDMVideoPlane mUPlane = 5;
   required protobuf.mozilla.gmp.CDMVideoPlane mVPlane = 6;
-  required int64 mTimestamp = 7;
-  required int64 mDuration = 8;
+  required sint64 mTimestamp = 7;
+  required sint64 mDuration = 8;
 }

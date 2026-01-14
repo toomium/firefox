@@ -350,11 +350,11 @@ const char* D3D11DeviceStatus::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required int32 sequenceNumber = 5;
+      // required sint32 sequenceNumber = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_sequencenumber(&has_bits);
-          _impl_.sequencenumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.sequencenumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -423,10 +423,10 @@ uint8_t* D3D11DeviceStatus::_InternalSerialize(
         4, this->_internal_adapter(), target);
   }
 
-  // required int32 sequenceNumber = 5;
+  // required sint32 sequenceNumber = 5;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_sequencenumber(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_sequencenumber(), target);
   }
 
   // required bytes formatOptions = 6;
@@ -477,8 +477,8 @@ size_t D3D11DeviceStatus::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_sequencenumber()) {
-    // required int32 sequenceNumber = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_sequencenumber());
+    // required sint32 sequenceNumber = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_sequencenumber());
   }
 
   return total_size;
@@ -507,8 +507,8 @@ size_t D3D11DeviceStatus::ByteSizeLong() const {
     // required uint32 featureLevel = 3;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_featurelevel());
 
-    // required int32 sequenceNumber = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_sequencenumber());
+    // required sint32 sequenceNumber = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_sequencenumber());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -2488,10 +2488,10 @@ const char* GfxVarValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // int32 mVint32_t = 7;
+      // sint32 mVint32_t = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
-          _internal_set_mvint32_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          _internal_set_mvint32_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2582,7 +2582,7 @@ uint8_t* GfxVarValue::_InternalSerialize(
     }
     case kMVint32T: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteInt32ToArray(7, this->_internal_mvint32_t(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(7, this->_internal_mvint32_t(), target);
       break;
     }
     case kMVuint64T: {
@@ -2660,9 +2660,9 @@ size_t GfxVarValue::ByteSizeLong() const {
           this->_internal_mvnsstring());
       break;
     }
-    // int32 mVint32_t = 7;
+    // sint32 mVint32_t = 7;
     case kMVint32T: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_mvint32_t());
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint32_t());
       break;
     }
     // uint64 mVuint64_t = 8;
@@ -3158,20 +3158,20 @@ const char* GfxInfoFeatureStatus::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 feature = 1;
+      // required sint32 feature = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_feature(&has_bits);
-          _impl_.feature_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.feature_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 status = 2;
+      // required sint32 status = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_status(&has_bits);
-          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3216,16 +3216,16 @@ uint8_t* GfxInfoFeatureStatus::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 feature = 1;
+  // required sint32 feature = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_feature(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_feature(), target);
   }
 
-  // required int32 status = 2;
+  // required sint32 status = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_status(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_status(), target);
   }
 
   // required bytes failureId = 3;
@@ -3254,13 +3254,13 @@ size_t GfxInfoFeatureStatus::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_feature()) {
-    // required int32 feature = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_feature());
+    // required sint32 feature = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_feature());
   }
 
   if (_internal_has_status()) {
-    // required int32 status = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_status());
+    // required sint32 status = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_status());
   }
 
   return total_size;
@@ -3275,11 +3275,11 @@ size_t GfxInfoFeatureStatus::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_failureid());
 
-    // required int32 feature = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_feature());
+    // required sint32 feature = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_feature());
 
-    // required int32 status = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_status());
+    // required sint32 status = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_status());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

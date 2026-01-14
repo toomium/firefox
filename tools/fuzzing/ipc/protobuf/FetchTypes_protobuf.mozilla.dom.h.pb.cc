@@ -2238,11 +2238,11 @@ const char* IPCInternalRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required int64 bodySize = 6;
+      // required sint64 bodySize = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_bodysize(&has_bits);
-          _impl_.bodysize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.bodysize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2265,11 +2265,11 @@ const char* IPCInternalRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required int32 internalPriority = 9;
+      // required sint32 internalPriority = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
           _Internal::set_has_internalpriority(&has_bits);
-          _impl_.internalpriority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.internalpriority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2493,10 +2493,10 @@ uint8_t* IPCInternalRequest::_InternalSerialize(
         _Internal::body(this).GetCachedSize(), target, stream);
   }
 
-  // required int64 bodySize = 6;
+  // required sint64 bodySize = 6;
   if (cached_has_bits & 0x00080000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_bodysize(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(6, this->_internal_bodysize(), target);
   }
 
   // required bytes preferredAlternativeDataType = 7;
@@ -2511,10 +2511,10 @@ uint8_t* IPCInternalRequest::_InternalSerialize(
         8, this->_internal_contentpolicytype(), target);
   }
 
-  // required int32 internalPriority = 9;
+  // required sint32 internalPriority = 9;
   if (cached_has_bits & 0x00100000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(9, this->_internal_internalpriority(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(9, this->_internal_internalpriority(), target);
   }
 
   // required bytes referrer = 10;
@@ -2748,13 +2748,13 @@ size_t IPCInternalRequest::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_bodysize()) {
-    // required int64 bodySize = 6;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_bodysize());
+    // required sint64 bodySize = 6;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_bodysize());
   }
 
   if (_internal_has_internalpriority()) {
-    // required int32 internalPriority = 9;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_internalpriority());
+    // required sint32 internalPriority = 9;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_internalpriority());
   }
 
   if (_internal_has_keepalive()) {
@@ -2854,11 +2854,11 @@ size_t IPCInternalRequest::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_embedderpolicy());
 
-    // required int64 bodySize = 6;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_bodysize());
+    // required sint64 bodySize = 6;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_bodysize());
 
-    // required int32 internalPriority = 9;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_internalpriority());
+    // required sint32 internalPriority = 9;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_internalpriority());
 
     // required bool keepalive = 19;
     total_size += 2 + 1;
@@ -4132,11 +4132,11 @@ const char* ParentToParentInternalResponse::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // required int64 bodySize = 3;
+      // required sint64 bodySize = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_bodysize(&has_bits);
-          _impl_.bodysize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.bodysize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4194,10 +4194,10 @@ uint8_t* ParentToParentInternalResponse::_InternalSerialize(
         _Internal::body(this).GetCachedSize(), target, stream);
   }
 
-  // required int64 bodySize = 3;
+  // required sint64 bodySize = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_bodysize(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(3, this->_internal_bodysize(), target);
   }
 
   // optional .protobuf.mozilla.dom.ParentToParentStream alternativeBody = 4;
@@ -4227,8 +4227,8 @@ size_t ParentToParentInternalResponse::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_bodysize()) {
-    // required int64 bodySize = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_bodysize());
+    // required sint64 bodySize = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_bodysize());
   }
 
   return total_size;
@@ -4243,8 +4243,8 @@ size_t ParentToParentInternalResponse::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.metadata_);
 
-    // required int64 bodySize = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_bodysize());
+    // required sint64 bodySize = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_bodysize());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -4502,11 +4502,11 @@ const char* ParentToChildInternalResponse::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required int64 bodySize = 3;
+      // required sint64 bodySize = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_bodysize(&has_bits);
-          _impl_.bodysize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.bodysize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4564,10 +4564,10 @@ uint8_t* ParentToChildInternalResponse::_InternalSerialize(
         _Internal::body(this).GetCachedSize(), target, stream);
   }
 
-  // required int64 bodySize = 3;
+  // required sint64 bodySize = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_bodysize(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(3, this->_internal_bodysize(), target);
   }
 
   // optional .protobuf.mozilla.dom.ParentToChildStream alternativeBody = 4;
@@ -4597,8 +4597,8 @@ size_t ParentToChildInternalResponse::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_bodysize()) {
-    // required int64 bodySize = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_bodysize());
+    // required sint64 bodySize = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_bodysize());
   }
 
   return total_size;
@@ -4613,8 +4613,8 @@ size_t ParentToChildInternalResponse::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.metadata_);
 
-    // required int64 bodySize = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_bodysize());
+    // required sint64 bodySize = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_bodysize());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -4872,11 +4872,11 @@ const char* ChildToParentInternalResponse::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required int64 bodySize = 3;
+      // required sint64 bodySize = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_bodysize(&has_bits);
-          _impl_.bodysize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.bodysize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4934,10 +4934,10 @@ uint8_t* ChildToParentInternalResponse::_InternalSerialize(
         _Internal::body(this).GetCachedSize(), target, stream);
   }
 
-  // required int64 bodySize = 3;
+  // required sint64 bodySize = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_bodysize(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(3, this->_internal_bodysize(), target);
   }
 
   // optional .protobuf.mozilla.dom.ChildToParentStream alternativeBody = 4;
@@ -4967,8 +4967,8 @@ size_t ChildToParentInternalResponse::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_bodysize()) {
-    // required int64 bodySize = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_bodysize());
+    // required sint64 bodySize = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_bodysize());
   }
 
   return total_size;
@@ -4983,8 +4983,8 @@ size_t ChildToParentInternalResponse::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.metadata_);
 
-    // required int64 bodySize = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_bodysize());
+    // required sint64 bodySize = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_bodysize());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

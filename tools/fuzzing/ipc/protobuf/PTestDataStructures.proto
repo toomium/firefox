@@ -17,7 +17,7 @@ import "PTestDataStructuresCommon.proto";
 
 // Message declarations
 message Msg_PTestDataStructuresSubConstructor {
-  required int32 i = 1;
+  required sint32 i = 1;
 }
 
 message Reply_PTestDataStructuresSubConstructor {
@@ -33,11 +33,11 @@ message Reply___delete__ {
 }
 
 message Msg_TestArrayOfInt {
-  repeated int32 i1 = 1;
+  repeated sint32 i1 = 1;
 }
 
 message Reply_TestArrayOfInt {
-  repeated int32 o1 = 1;
+  repeated sint32 o1 = 1;
 }
 
 message Msg_TestArrayOfActor {

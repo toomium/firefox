@@ -180,11 +180,11 @@ const char* FileRandomAccessStreamParams::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // required int32 behaviorFlags = 2;
+      // required sint32 behaviorFlags = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_behaviorflags(&has_bits);
-          _impl_.behaviorflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.behaviorflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -226,10 +226,10 @@ uint8_t* FileRandomAccessStreamParams::_InternalSerialize(
         1, this->_internal_filedescriptor(), target);
   }
 
-  // required int32 behaviorFlags = 2;
+  // required sint32 behaviorFlags = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_behaviorflags(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_behaviorflags(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -252,8 +252,8 @@ size_t FileRandomAccessStreamParams::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_behaviorflags()) {
-    // required int32 behaviorFlags = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_behaviorflags());
+    // required sint32 behaviorFlags = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_behaviorflags());
   }
 
   return total_size;
@@ -268,8 +268,8 @@ size_t FileRandomAccessStreamParams::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filedescriptor());
 
-    // required int32 behaviorFlags = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_behaviorflags());
+    // required sint32 behaviorFlags = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_behaviorflags());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

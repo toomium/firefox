@@ -215,7 +215,7 @@ class LSSnapshotInitInfo final :
   std::string* _internal_mutable_loadstate();
   public:
 
-  // required int64 usage = 4;
+  // required sint64 usage = 4;
   bool has_usage() const;
   private:
   bool _internal_has_usage() const;
@@ -280,7 +280,7 @@ class LSSnapshotInitInfo final :
   void _internal_set_hasotherprocessobservers(bool value);
   public:
 
-  // required int64 peakUsage = 5;
+  // required sint64 peakUsage = 5;
   bool has_peakusage() const;
   private:
   bool _internal_has_peakusage() const;
@@ -422,7 +422,7 @@ inline void LSSnapshotInitInfo::set_totallength(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.totalLength)
 }
 
-// required int64 usage = 4;
+// required sint64 usage = 4;
 inline bool LSSnapshotInitInfo::_internal_has_usage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -450,7 +450,7 @@ inline void LSSnapshotInitInfo::set_usage(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.usage)
 }
 
-// required int64 peakUsage = 5;
+// required sint64 peakUsage = 5;
 inline bool LSSnapshotInitInfo::_internal_has_peakusage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;

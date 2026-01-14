@@ -376,7 +376,7 @@ class Msg_Continue final :
       ::protobuf::mozilla::dom::indexedDB::CursorRequestParams* params);
   ::protobuf::mozilla::dom::indexedDB::CursorRequestParams* unsafe_arena_release_params();
 
-  // required int64 requestId = 1;
+  // required sint64 requestId = 1;
   bool has_requestid() const;
   private:
   bool _internal_has_requestid() const;
@@ -820,7 +820,7 @@ class Msg_Response final :
 
 // Msg_Continue
 
-// required int64 requestId = 1;
+// required sint64 requestId = 1;
 inline bool Msg_Continue::_internal_has_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

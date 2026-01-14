@@ -358,11 +358,11 @@ const char* Msg_InitEncode::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required int32 aNumberOfCores = 3;
+      // required sint32 aNumberOfCores = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_anumberofcores(&has_bits);
-          _impl_.anumberofcores_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.anumberofcores_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -419,10 +419,10 @@ uint8_t* Msg_InitEncode::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_acodecspecific(i), target);
   }
 
-  // required int32 aNumberOfCores = 3;
+  // required sint32 aNumberOfCores = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_anumberofcores(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_anumberofcores(), target);
   }
 
   // required uint32 aMaxPayloadSize = 4;
@@ -451,8 +451,8 @@ size_t Msg_InitEncode::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_anumberofcores()) {
-    // required int32 aNumberOfCores = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_anumberofcores());
+    // required sint32 aNumberOfCores = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_anumberofcores());
   }
 
   if (_internal_has_amaxpayloadsize()) {
@@ -472,8 +472,8 @@ size_t Msg_InitEncode::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_acodecsettings());
 
-    // required int32 aNumberOfCores = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_anumberofcores());
+    // required sint32 aNumberOfCores = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_anumberofcores());
 
     // required uint32 aMaxPayloadSize = 4;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_amaxpayloadsize());

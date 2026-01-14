@@ -566,11 +566,11 @@ const char* HttpChannelOnStartRequestArgs::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required int64 altDataLength = 4;
+      // required sint64 altDataLength = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_altdatalength(&has_bits);
-          _impl_.altdatalength_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.altdatalength_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -888,10 +888,10 @@ uint8_t* HttpChannelOnStartRequestArgs::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_cacheentryid(), target);
   }
 
-  // required int64 altDataLength = 4;
+  // required sint64 altDataLength = 4;
   if (cached_has_bits & 0x00002000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_altdatalength(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_altdatalength(), target);
   }
 
   // required bytes altDataType = 5;
@@ -1172,8 +1172,8 @@ size_t HttpChannelOnStartRequestArgs::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_altdatalength()) {
-    // required int64 altDataLength = 4;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_altdatalength());
+    // required sint64 altDataLength = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_altdatalength());
   }
 
   if (_internal_has_cachefetchcount()) {
@@ -1335,8 +1335,8 @@ size_t HttpChannelOnStartRequestArgs::ByteSizeLong() const {
     // required uint64 cacheEntryId = 3;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_cacheentryid());
 
-    // required int64 altDataLength = 4;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_altdatalength());
+    // required sint64 altDataLength = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_altdatalength());
 
     // required uint32 cacheFetchCount = 14;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_cachefetchcount());

@@ -23,13 +23,13 @@ message DefaultURIParams {
 
 message StandardURLSegment {
   required uint32 position = 1;
-  required int32 length = 2;
+  required sint32 length = 2;
 }
 
 message StandardURLParams {
   required uint32 urlType = 1;
-  required int32 port = 2;
-  required int32 defaultPort = 3;
+  required sint32 port = 2;
+  required sint32 defaultPort = 3;
   required bytes spec = 4;
   required protobuf.mozilla.ipc.StandardURLSegment scheme = 5;
   required protobuf.mozilla.ipc.StandardURLSegment authority = 6;

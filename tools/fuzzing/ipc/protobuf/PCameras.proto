@@ -18,11 +18,11 @@ import "PBackgroundSharedTypes.proto";
 
 // Message declarations
 message Msg_CaptureEnded {
-  required int32 streamId = 1;
+  required sint32 streamId = 1;
 }
 
 message Msg_DeliverFrame {
-  required int32 streamId = 1;
+  required sint32 streamId = 1;
   required bytes buffer = 2;
   required protobuf.mozilla.camera.VideoFrameProperties props = 3;
 }
@@ -31,15 +31,15 @@ message Msg_DeviceChange {
 }
 
 message Msg_ReplyNumberOfCaptureDevices {
-  required int32 deviceCount = 1;
+  required sint32 deviceCount = 1;
 }
 
 message Msg_ReplyNumberOfCapabilities {
-  required int32 capabilityCount = 1;
+  required sint32 capabilityCount = 1;
 }
 
 message Msg_ReplyAllocateCapture {
-  required int32 captureId = 1;
+  required sint32 captureId = 1;
 }
 
 message Msg_ReplyGetCaptureCapability {
@@ -77,12 +77,12 @@ message Msg_NumberOfCapabilities {
 message Msg_GetCaptureCapability {
   required bytes engine = 1;
   required bytes unique_idUTF8 = 2;
-  required int32 capability_number = 3;
+  required sint32 capability_number = 3;
 }
 
 message Msg_GetCaptureDevice {
   required bytes engine = 1;
-  required int32 deviceIndex = 2;
+  required sint32 deviceIndex = 2;
 }
 
 message Msg_AllocateCapture {
@@ -93,23 +93,23 @@ message Msg_AllocateCapture {
 
 message Msg_ReleaseCapture {
   required bytes engine = 1;
-  required int32 captureId = 2;
+  required sint32 captureId = 2;
 }
 
 message Msg_StartCapture {
   required bytes engine = 1;
-  required int32 captureId = 2;
+  required sint32 captureId = 2;
   required protobuf.mozilla.camera.VideoCaptureCapability capability = 3;
 }
 
 message Msg_FocusOnSelectedSource {
   required bytes engine = 1;
-  required int32 captureId = 2;
+  required sint32 captureId = 2;
 }
 
 message Msg_StopCapture {
   required bytes engine = 1;
-  required int32 captureId = 2;
+  required sint32 captureId = 2;
 }
 
 message Msg_ReleaseFrame {

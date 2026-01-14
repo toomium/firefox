@@ -380,11 +380,11 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required int32 contentFrameTime = 5;
+      // required sint32 contentFrameTime = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_contentframetime(&has_bits);
-          _impl_.contentframetime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.contentframetime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -516,10 +516,10 @@ uint8_t* FrameStats::_InternalSerialize(
         4, this->_internal_compositeend(), target);
   }
 
-  // required int32 contentFrameTime = 5;
+  // required sint32 contentFrameTime = 5;
   if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_contentframetime(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_contentframetime(), target);
   }
 
   // required double resourceUploadTime = 6;
@@ -656,8 +656,8 @@ size_t FrameStats::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_contentframetime()) {
-    // required int32 contentFrameTime = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_contentframetime());
+    // required sint32 contentFrameTime = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_contentframetime());
   }
 
   if (_internal_has_skippedcomposites()) {
@@ -723,8 +723,8 @@ size_t FrameStats::ByteSizeLong() const {
     // required double gpuCacheUploadTime = 7;
     total_size += 1 + 8;
 
-    // required int32 contentFrameTime = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_contentframetime());
+    // required sint32 contentFrameTime = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_contentframetime());
 
     // required uint32 skippedComposites = 12;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_skippedcomposites());

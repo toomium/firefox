@@ -60,7 +60,7 @@ message HangModule {
 
 message HangStack {
   repeated protobuf.mozilla.HangEntry stack = 1;
-  repeated int32 strbuffer = 2;
+  repeated sint32 strbuffer = 2;
   repeated protobuf.mozilla.HangModule modules = 3;
 }
 

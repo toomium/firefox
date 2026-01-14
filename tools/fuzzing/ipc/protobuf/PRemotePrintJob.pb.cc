@@ -509,20 +509,20 @@ const char* Msg_InitializePrint::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required int32 aStartPage = 2;
+      // required sint32 aStartPage = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_astartpage(&has_bits);
-          _impl_.astartpage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.astartpage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 aEndPage = 3;
+      // required sint32 aEndPage = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_aendpage(&has_bits);
-          _impl_.aendpage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aendpage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -564,16 +564,16 @@ uint8_t* Msg_InitializePrint::_InternalSerialize(
         1, this->_internal_adocumenttitle(), target);
   }
 
-  // required int32 aStartPage = 2;
+  // required sint32 aStartPage = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_astartpage(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_astartpage(), target);
   }
 
-  // required int32 aEndPage = 3;
+  // required sint32 aEndPage = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_aendpage(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_aendpage(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -596,13 +596,13 @@ size_t Msg_InitializePrint::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_astartpage()) {
-    // required int32 aStartPage = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartpage());
+    // required sint32 aStartPage = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartpage());
   }
 
   if (_internal_has_aendpage()) {
-    // required int32 aEndPage = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendpage());
+    // required sint32 aEndPage = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendpage());
   }
 
   return total_size;
@@ -617,11 +617,11 @@ size_t Msg_InitializePrint::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_adocumenttitle());
 
-    // required int32 aStartPage = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartpage());
+    // required sint32 aStartPage = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartpage());
 
-    // required int32 aEndPage = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendpage());
+    // required sint32 aEndPage = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendpage());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -796,20 +796,20 @@ const char* Msg_ProcessPage::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 aWidthInPoints = 1;
+      // required sint32 aWidthInPoints = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_awidthinpoints(&has_bits);
-          _impl_.awidthinpoints_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.awidthinpoints_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 aHeightInPoints = 2;
+      // required sint32 aHeightInPoints = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_aheightinpoints(&has_bits);
-          _impl_.aheightinpoints_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aheightinpoints_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -861,16 +861,16 @@ uint8_t* Msg_ProcessPage::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 aWidthInPoints = 1;
+  // required sint32 aWidthInPoints = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_awidthinpoints(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_awidthinpoints(), target);
   }
 
-  // required int32 aHeightInPoints = 2;
+  // required sint32 aHeightInPoints = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_aheightinpoints(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_aheightinpoints(), target);
   }
 
   // repeated uint64 aDeps = 3;
@@ -892,13 +892,13 @@ size_t Msg_ProcessPage::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_awidthinpoints()) {
-    // required int32 aWidthInPoints = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_awidthinpoints());
+    // required sint32 aWidthInPoints = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_awidthinpoints());
   }
 
   if (_internal_has_aheightinpoints()) {
-    // required int32 aHeightInPoints = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aheightinpoints());
+    // required sint32 aHeightInPoints = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aheightinpoints());
   }
 
   return total_size;
@@ -908,11 +908,11 @@ size_t Msg_ProcessPage::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required int32 aWidthInPoints = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_awidthinpoints());
+    // required sint32 aWidthInPoints = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_awidthinpoints());
 
-    // required int32 aHeightInPoints = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aheightinpoints());
+    // required sint32 aHeightInPoints = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aheightinpoints());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1243,38 +1243,38 @@ const char* Msg_ProgressChange::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 aCurSelfProgress = 1;
+      // required sint64 aCurSelfProgress = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_acurselfprogress(&has_bits);
-          _impl_.acurselfprogress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.acurselfprogress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 aMaxSelfProgress = 2;
+      // required sint64 aMaxSelfProgress = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_amaxselfprogress(&has_bits);
-          _impl_.amaxselfprogress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.amaxselfprogress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 aCurTotalProgress = 3;
+      // required sint64 aCurTotalProgress = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_acurtotalprogress(&has_bits);
-          _impl_.acurtotalprogress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.acurtotalprogress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 aMaxTotalProgress = 4;
+      // required sint64 aMaxTotalProgress = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_amaxtotalprogress(&has_bits);
-          _impl_.amaxtotalprogress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.amaxtotalprogress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1310,28 +1310,28 @@ uint8_t* Msg_ProgressChange::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 aCurSelfProgress = 1;
+  // required sint64 aCurSelfProgress = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_acurselfprogress(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_acurselfprogress(), target);
   }
 
-  // required int64 aMaxSelfProgress = 2;
+  // required sint64 aMaxSelfProgress = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_amaxselfprogress(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_amaxselfprogress(), target);
   }
 
-  // required int64 aCurTotalProgress = 3;
+  // required sint64 aCurTotalProgress = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_acurtotalprogress(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(3, this->_internal_acurtotalprogress(), target);
   }
 
-  // required int64 aMaxTotalProgress = 4;
+  // required sint64 aMaxTotalProgress = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_amaxtotalprogress(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_amaxtotalprogress(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1347,23 +1347,23 @@ size_t Msg_ProgressChange::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_acurselfprogress()) {
-    // required int64 aCurSelfProgress = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_acurselfprogress());
+    // required sint64 aCurSelfProgress = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_acurselfprogress());
   }
 
   if (_internal_has_amaxselfprogress()) {
-    // required int64 aMaxSelfProgress = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_amaxselfprogress());
+    // required sint64 aMaxSelfProgress = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_amaxselfprogress());
   }
 
   if (_internal_has_acurtotalprogress()) {
-    // required int64 aCurTotalProgress = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_acurtotalprogress());
+    // required sint64 aCurTotalProgress = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_acurtotalprogress());
   }
 
   if (_internal_has_amaxtotalprogress()) {
-    // required int64 aMaxTotalProgress = 4;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_amaxtotalprogress());
+    // required sint64 aMaxTotalProgress = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_amaxtotalprogress());
   }
 
   return total_size;
@@ -1373,17 +1373,17 @@ size_t Msg_ProgressChange::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required int64 aCurSelfProgress = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_acurselfprogress());
+    // required sint64 aCurSelfProgress = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_acurselfprogress());
 
-    // required int64 aMaxSelfProgress = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_amaxselfprogress());
+    // required sint64 aMaxSelfProgress = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_amaxselfprogress());
 
-    // required int64 aCurTotalProgress = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_acurtotalprogress());
+    // required sint64 aCurTotalProgress = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_acurtotalprogress());
 
-    // required int64 aMaxTotalProgress = 4;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_amaxtotalprogress());
+    // required sint64 aMaxTotalProgress = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_amaxtotalprogress());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

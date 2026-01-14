@@ -117,7 +117,7 @@ message WebAuthnMakeCredentialUserInfo {
 }
 
 message CoseAlg {
-  required int64 alg = 1;
+  required sint64 alg = 1;
 }
 
 message WebAuthnMakeCredentialInfo {

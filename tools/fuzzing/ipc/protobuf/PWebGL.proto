@@ -158,7 +158,7 @@ message Msg_GetFragDataLocation {
 }
 
 message Reply_GetFragDataLocation {
-  required int32 ret = 1;
+  required sint32 ret = 1;
 }
 
 message Msg_GetFramebufferAttachmentParameter {

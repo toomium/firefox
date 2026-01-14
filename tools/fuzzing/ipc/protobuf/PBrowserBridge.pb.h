@@ -820,7 +820,7 @@ class Msg_ScrollRectIntoView final :
   std::string* _internal_mutable_ascrollflags();
   public:
 
-  // required int32 aAppUnitsPerDevPixel = 5;
+  // required sint32 aAppUnitsPerDevPixel = 5;
   bool has_aappunitsperdevpixel() const;
   private:
   bool _internal_has_aappunitsperdevpixel() const;
@@ -4414,7 +4414,7 @@ inline void Msg_ScrollRectIntoView::set_allocated_ascrollflags(std::string* ascr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aScrollFlags)
 }
 
-// required int32 aAppUnitsPerDevPixel = 5;
+// required sint32 aAppUnitsPerDevPixel = 5;
 inline bool Msg_ScrollRectIntoView::_internal_has_aappunitsperdevpixel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

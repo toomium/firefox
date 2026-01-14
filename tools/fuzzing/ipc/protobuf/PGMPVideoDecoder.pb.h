@@ -281,7 +281,7 @@ class Msg_InitDecode final :
   std::string* _internal_mutable_acodecsettings();
   public:
 
-  // required int32 aCoreCount = 3;
+  // required sint32 aCoreCount = 3;
   bool has_acorecount() const;
   private:
   bool _internal_has_acorecount() const;
@@ -637,7 +637,7 @@ class Msg_Decode final :
       ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* ainputframe);
   ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* unsafe_arena_release_ainputframe();
 
-  // required int64 aRenderTimeMs = 5;
+  // required sint64 aRenderTimeMs = 5;
   bool has_arendertimems() const;
   private:
   bool _internal_has_arendertimems() const;
@@ -2722,7 +2722,7 @@ Msg_InitDecode::mutable_acodecspecific() {
   return _internal_mutable_acodecspecific();
 }
 
-// required int32 aCoreCount = 3;
+// required sint32 aCoreCount = 3;
 inline bool Msg_InitDecode::_internal_has_acorecount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3056,7 +3056,7 @@ Msg_Decode::mutable_acodecspecificinfo() {
   return _internal_mutable_acodecspecificinfo();
 }
 
-// required int64 aRenderTimeMs = 5;
+// required sint64 aRenderTimeMs = 5;
 inline bool Msg_Decode::_internal_has_arendertimems() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

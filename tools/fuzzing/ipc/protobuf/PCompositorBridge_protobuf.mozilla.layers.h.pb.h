@@ -375,7 +375,7 @@ class FrameStats final :
   void _internal_set_gpucacheuploadtime(double value);
   public:
 
-  // required int32 contentFrameTime = 5;
+  // required sint32 contentFrameTime = 5;
   bool has_contentframetime() const;
   private:
   bool _internal_has_contentframetime() const;
@@ -714,7 +714,7 @@ inline void FrameStats::set_allocated_compositeend(std::string* compositeend) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.compositeEnd)
 }
 
-// required int32 contentFrameTime = 5;
+// required sint32 contentFrameTime = 5;
 inline bool FrameStats::_internal_has_contentframetime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;

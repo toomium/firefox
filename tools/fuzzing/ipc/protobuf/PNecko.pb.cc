@@ -3544,11 +3544,11 @@ const char* Msg_PDNSRequestConstructor::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required int32 port = 3;
+      // required sint32 port = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_port(&has_bits);
-          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3623,10 +3623,10 @@ uint8_t* Msg_PDNSRequestConstructor::_InternalSerialize(
         2, this->_internal_trrserver(), target);
   }
 
-  // required int32 port = 3;
+  // required sint32 port = 3;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_port(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_port(), target);
   }
 
   // required uint32 type = 4;
@@ -3688,8 +3688,8 @@ size_t Msg_PDNSRequestConstructor::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_port()) {
-    // required int32 port = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
   }
 
   if (_internal_has_type()) {
@@ -3724,8 +3724,8 @@ size_t Msg_PDNSRequestConstructor::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_flags());
 
-    // required int32 port = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
 
     // required uint32 type = 4;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_type());
@@ -9117,11 +9117,11 @@ const char* Msg_PAltDataOutputStreamConstructor::_InternalParse(const char* ptr,
         } else
           goto handle_unusual;
         continue;
-      // required int64 predictedSize = 2;
+      // required sint64 predictedSize = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_predictedsize(&has_bits);
-          _impl_.predictedsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.predictedsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -9172,10 +9172,10 @@ uint8_t* Msg_PAltDataOutputStreamConstructor::_InternalSerialize(
         1, this->_internal_type(), target);
   }
 
-  // required int64 predictedSize = 2;
+  // required sint64 predictedSize = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_predictedsize(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_predictedsize(), target);
   }
 
   // required bytes channel = 3;
@@ -9211,8 +9211,8 @@ size_t Msg_PAltDataOutputStreamConstructor::RequiredFieldsByteSizeFallback() con
   }
 
   if (_internal_has_predictedsize()) {
-    // required int64 predictedSize = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_predictedsize());
+    // required sint64 predictedSize = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_predictedsize());
   }
 
   return total_size;
@@ -9232,8 +9232,8 @@ size_t Msg_PAltDataOutputStreamConstructor::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_channel());
 
-    // required int64 predictedSize = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_predictedsize());
+    // required sint64 predictedSize = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_predictedsize());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

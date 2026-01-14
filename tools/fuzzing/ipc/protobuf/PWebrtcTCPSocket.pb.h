@@ -262,7 +262,7 @@ class Msg_AsyncOpen final :
       ::protobuf::mozilla::net::WebrtcProxyConfig* aproxyconfig);
   ::protobuf::mozilla::net::WebrtcProxyConfig* unsafe_arena_release_aproxyconfig();
 
-  // required int32 aPort = 2;
+  // required sint32 aPort = 2;
   bool has_aport() const;
   private:
   bool _internal_has_aport() const;
@@ -275,7 +275,7 @@ class Msg_AsyncOpen final :
   void _internal_set_aport(int32_t value);
   public:
 
-  // required int32 aLocalPort = 4;
+  // required sint32 aLocalPort = 4;
   bool has_alocalport() const;
   private:
   bool _internal_has_alocalport() const;
@@ -1369,7 +1369,7 @@ inline void Msg_AsyncOpen::set_allocated_ahost(std::string* ahost) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aHost)
 }
 
-// required int32 aPort = 2;
+// required sint32 aPort = 2;
 inline bool Msg_AsyncOpen::_internal_has_aport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1465,7 +1465,7 @@ inline void Msg_AsyncOpen::set_allocated_alocaladdress(std::string* alocaladdres
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aLocalAddress)
 }
 
-// required int32 aLocalPort = 4;
+// required sint32 aLocalPort = 4;
 inline bool Msg_AsyncOpen::_internal_has_alocalport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

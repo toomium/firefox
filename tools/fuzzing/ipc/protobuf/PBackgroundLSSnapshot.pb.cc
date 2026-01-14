@@ -2974,11 +2974,11 @@ const char* Msg_IncreasePeakUsage::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 minSize = 1;
+      // required sint64 minSize = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_minsize(&has_bits);
-          _impl_.minsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.minsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3014,10 +3014,10 @@ uint8_t* Msg_IncreasePeakUsage::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 minSize = 1;
+  // required sint64 minSize = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_minsize(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_minsize(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3032,9 +3032,9 @@ size_t Msg_IncreasePeakUsage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_IncreasePeakUsage)
   size_t total_size = 0;
 
-  // required int64 minSize = 1;
+  // required sint64 minSize = 1;
   if (_internal_has_minsize()) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_minsize());
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_minsize());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -3169,11 +3169,11 @@ const char* Reply_IncreasePeakUsage::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 size = 1;
+      // required sint64 size = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_size(&has_bits);
-          _impl_.size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3209,10 +3209,10 @@ uint8_t* Reply_IncreasePeakUsage::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 size = 1;
+  // required sint64 size = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_size(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_size(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3227,9 +3227,9 @@ size_t Reply_IncreasePeakUsage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_IncreasePeakUsage)
   size_t total_size = 0;
 
-  // required int64 size = 1;
+  // required sint64 size = 1;
   if (_internal_has_size()) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_size());
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_size());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused

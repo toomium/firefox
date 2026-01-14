@@ -309,11 +309,11 @@ const char* Msg_AsyncOpen::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required int32 aPort = 2;
+      // required sint32 aPort = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_aport(&has_bits);
-          _impl_.aport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -327,11 +327,11 @@ const char* Msg_AsyncOpen::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required int32 aLocalPort = 4;
+      // required sint32 aLocalPort = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_alocalport(&has_bits);
-          _impl_.alocalport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.alocalport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -390,10 +390,10 @@ uint8_t* Msg_AsyncOpen::_InternalSerialize(
         1, this->_internal_ahost(), target);
   }
 
-  // required int32 aPort = 2;
+  // required sint32 aPort = 2;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_aport(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_aport(), target);
   }
 
   // required bytes aLocalAddress = 3;
@@ -402,10 +402,10 @@ uint8_t* Msg_AsyncOpen::_InternalSerialize(
         3, this->_internal_alocaladdress(), target);
   }
 
-  // required int32 aLocalPort = 4;
+  // required sint32 aLocalPort = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_alocalport(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_alocalport(), target);
   }
 
   // required bool aUseTls = 5;
@@ -448,13 +448,13 @@ size_t Msg_AsyncOpen::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_aport()) {
-    // required int32 aPort = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aport());
+    // required sint32 aPort = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aport());
   }
 
   if (_internal_has_alocalport()) {
-    // required int32 aLocalPort = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_alocalport());
+    // required sint32 aLocalPort = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_alocalport());
   }
 
   if (_internal_has_ausetls()) {
@@ -479,11 +479,11 @@ size_t Msg_AsyncOpen::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_alocaladdress());
 
-    // required int32 aPort = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aport());
+    // required sint32 aPort = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aport());
 
-    // required int32 aLocalPort = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_alocalport());
+    // required sint32 aLocalPort = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_alocalport());
 
     // required bool aUseTls = 5;
     total_size += 1 + 1;

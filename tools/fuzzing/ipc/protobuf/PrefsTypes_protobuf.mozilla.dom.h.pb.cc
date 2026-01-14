@@ -181,10 +181,10 @@ const char* PrefValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // int32 mVint32_t = 2;
+      // sint32 mVint32_t = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _internal_set_mvint32_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          _internal_set_mvint32_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -234,7 +234,7 @@ uint8_t* PrefValue::_InternalSerialize(
     }
     case kMVint32T: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_mvint32_t(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_mvint32_t(), target);
       break;
     }
     case kMVbool: {
@@ -268,9 +268,9 @@ size_t PrefValue::ByteSizeLong() const {
           this->_internal_mvnscstring());
       break;
     }
-    // int32 mVint32_t = 2;
+    // sint32 mVint32_t = 2;
     case kMVint32T: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_mvint32_t());
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint32_t());
       break;
     }
     // bool mVbool = 3;

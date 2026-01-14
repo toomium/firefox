@@ -60,8 +60,8 @@ message ScreenDetails {
   required bytes rectDisplayPix = 2;
   required bytes availRect = 3;
   required bytes availRectDisplayPix = 4;
-  required int32 pixelDepth = 5;
-  required int32 colorDepth = 6;
+  required sint32 pixelDepth = 5;
+  required sint32 colorDepth = 6;
   required uint32 refreshRate = 7;
   required bytes contentsScaleFactor = 8;
   required bytes defaultCSSScaleFactor = 9;
@@ -124,7 +124,7 @@ message DocShellLoadStateInit {
   required uint64 TriggeringWindowId = 29;
   required bool TriggeringStorageAccess = 30;
   required bytes TriggeringClassificationFlags = 31;
-  optional int32 CancelContentJSEpoch = 32;
+  optional sint32 CancelContentJSEpoch = 32;
   required bool ResultPrincipalURIIsSome = 33;
   required bool KeepResultPrincipalURIIfSet = 34;
   required bool LoadReplace = 35;
@@ -148,8 +148,8 @@ message DocShellLoadStateInit {
 }
 
 message TimedChannelInfo {
-  required int32 redirectCount = 1;
-  required int32 internalRedirectCount = 2;
+  required sint32 redirectCount = 1;
+  required sint32 internalRedirectCount = 2;
   required bytes asyncOpen = 3;
   required bytes channelCreation = 4;
   required bytes redirectStart = 5;
@@ -187,9 +187,9 @@ message IPDLVariantValue {
   oneof content {
     bool mVbool = 1;
     uint32 mVuint8_t = 2;
-    int32 mVint16_t = 3;
+    sint32 mVint16_t = 3;
     uint32 mVuint16_t = 4;
-    int32 mVint32_t = 5;
+    sint32 mVint32_t = 5;
     uint32 mVuint32_t = 6;
     float mVfloat = 7;
     double mVdouble = 8;
@@ -216,7 +216,7 @@ message ParentShowInfo {
   required bool fakeShowInfo = 2;
   required bool isTransparent = 3;
   required float dpi = 4;
-  required int32 widgetRounding = 5;
+  required sint32 widgetRounding = 5;
   required double defaultScale = 6;
 }
 

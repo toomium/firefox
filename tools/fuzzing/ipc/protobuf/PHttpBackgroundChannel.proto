@@ -52,8 +52,8 @@ message Msg_OnConsoleReport {
 }
 
 message Msg_OnProgress {
-  required int64 progress = 1;
-  required int64 progressMax = 2;
+  required sint64 progress = 1;
+  required sint64 progressMax = 2;
 }
 
 message Msg_OnStatus {

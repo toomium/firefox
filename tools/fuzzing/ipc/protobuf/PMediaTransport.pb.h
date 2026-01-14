@@ -1469,7 +1469,7 @@ class Msg_EnsureProvisionalTransport final :
   std::string* _internal_mutable_localpwd();
   public:
 
-  // required int32 componentCount = 4;
+  // required sint32 componentCount = 4;
   bool has_componentcount() const;
   private:
   bool _internal_has_componentcount() const;
@@ -2125,7 +2125,7 @@ class Msg_ActivateTransport final :
   std::string* _internal_mutable_digests();
   public:
 
-  // required int32 componentCount = 4;
+  // required sint32 componentCount = 4;
   bool has_componentcount() const;
   private:
   bool _internal_has_componentcount() const;
@@ -2138,7 +2138,7 @@ class Msg_ActivateTransport final :
   void _internal_set_componentcount(int32_t value);
   public:
 
-  // required int32 authType = 9;
+  // required sint32 authType = 9;
   bool has_authtype() const;
   private:
   bool _internal_has_authtype() const;
@@ -3802,7 +3802,7 @@ class Msg_OnGatheringStateChange final :
   std::string* _internal_mutable_transportid();
   public:
 
-  // required int32 state = 2;
+  // required sint32 state = 2;
   bool has_state() const;
   private:
   bool _internal_has_state() const;
@@ -3967,7 +3967,7 @@ class Msg_OnConnectionStateChange final :
   std::string* _internal_mutable_transportid();
   public:
 
-  // required int32 state = 2;
+  // required sint32 state = 2;
   bool has_state() const;
   private:
   bool _internal_has_state() const;
@@ -4472,7 +4472,7 @@ class Msg_OnStateChange final :
   std::string* _internal_mutable_transportid();
   public:
 
-  // required int32 state = 2;
+  // required sint32 state = 2;
   bool has_state() const;
   private:
   bool _internal_has_state() const;
@@ -4637,7 +4637,7 @@ class Msg_OnRtcpStateChange final :
   std::string* _internal_mutable_transportid();
   public:
 
-  // required int32 state = 2;
+  // required sint32 state = 2;
   bool has_state() const;
   private:
   bool _internal_has_state() const;
@@ -5350,7 +5350,7 @@ inline void Msg_EnsureProvisionalTransport::set_allocated_localpwd(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_EnsureProvisionalTransport.localPwd)
 }
 
-// required int32 componentCount = 4;
+// required sint32 componentCount = 4;
 inline bool Msg_EnsureProvisionalTransport::_internal_has_componentcount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -5814,7 +5814,7 @@ inline void Msg_ActivateTransport::set_allocated_localpwd(std::string* localpwd)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_ActivateTransport.localPwd)
 }
 
-// required int32 componentCount = 4;
+// required sint32 componentCount = 4;
 inline bool Msg_ActivateTransport::_internal_has_componentcount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -6072,7 +6072,7 @@ Msg_ActivateTransport::mutable_certder() {
   return _internal_mutable_certder();
 }
 
-// required int32 authType = 9;
+// required sint32 authType = 9;
 inline bool Msg_ActivateTransport::_internal_has_authtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -7300,7 +7300,7 @@ inline void Msg_OnGatheringStateChange::set_allocated_transportid(std::string* t
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_OnGatheringStateChange.transportId)
 }
 
-// required int32 state = 2;
+// required sint32 state = 2;
 inline bool Msg_OnGatheringStateChange::_internal_has_state() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7400,7 +7400,7 @@ inline void Msg_OnConnectionStateChange::set_allocated_transportid(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_OnConnectionStateChange.transportId)
 }
 
-// required int32 state = 2;
+// required sint32 state = 2;
 inline bool Msg_OnConnectionStateChange::_internal_has_state() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7780,7 +7780,7 @@ inline void Msg_OnStateChange::set_allocated_transportid(std::string* transporti
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_OnStateChange.transportId)
 }
 
-// required int32 state = 2;
+// required sint32 state = 2;
 inline bool Msg_OnStateChange::_internal_has_state() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7880,7 +7880,7 @@ inline void Msg_OnRtcpStateChange::set_allocated_transportid(std::string* transp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_OnRtcpStateChange.transportId)
 }
 
-// required int32 state = 2;
+// required sint32 state = 2;
 inline bool Msg_OnRtcpStateChange::_internal_has_state() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

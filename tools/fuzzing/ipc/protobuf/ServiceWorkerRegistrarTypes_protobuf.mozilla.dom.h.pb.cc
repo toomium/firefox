@@ -322,29 +322,29 @@ const char* ServiceWorkerRegistrationData::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required int64 currentWorkerInstalledTime = 7;
+      // required sint64 currentWorkerInstalledTime = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           _Internal::set_has_currentworkerinstalledtime(&has_bits);
-          _impl_.currentworkerinstalledtime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.currentworkerinstalledtime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 currentWorkerActivatedTime = 8;
+      // required sint64 currentWorkerActivatedTime = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_currentworkeractivatedtime(&has_bits);
-          _impl_.currentworkeractivatedtime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.currentworkeractivatedtime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 lastUpdateTime = 9;
+      // required sint64 lastUpdateTime = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
           _Internal::set_has_lastupdatetime(&has_bits);
-          _impl_.lastupdatetime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.lastupdatetime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -425,22 +425,22 @@ uint8_t* ServiceWorkerRegistrationData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_updateviacache(), target);
   }
 
-  // required int64 currentWorkerInstalledTime = 7;
+  // required sint64 currentWorkerInstalledTime = 7;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(7, this->_internal_currentworkerinstalledtime(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(7, this->_internal_currentworkerinstalledtime(), target);
   }
 
-  // required int64 currentWorkerActivatedTime = 8;
+  // required sint64 currentWorkerActivatedTime = 8;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(8, this->_internal_currentworkeractivatedtime(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(8, this->_internal_currentworkeractivatedtime(), target);
   }
 
-  // required int64 lastUpdateTime = 9;
+  // required sint64 lastUpdateTime = 9;
   if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(9, this->_internal_lastupdatetime(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(9, this->_internal_lastupdatetime(), target);
   }
 
   // required .protobuf.mozilla.dom.IPCNavigationPreloadState navigationPreloadState = 10;
@@ -508,18 +508,18 @@ size_t ServiceWorkerRegistrationData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_currentworkerinstalledtime()) {
-    // required int64 currentWorkerInstalledTime = 7;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_currentworkerinstalledtime());
+    // required sint64 currentWorkerInstalledTime = 7;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_currentworkerinstalledtime());
   }
 
   if (_internal_has_currentworkeractivatedtime()) {
-    // required int64 currentWorkerActivatedTime = 8;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_currentworkeractivatedtime());
+    // required sint64 currentWorkerActivatedTime = 8;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_currentworkeractivatedtime());
   }
 
   if (_internal_has_lastupdatetime()) {
-    // required int64 lastUpdateTime = 9;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_lastupdatetime());
+    // required sint64 lastUpdateTime = 9;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_lastupdatetime());
   }
 
   return total_size;
@@ -560,14 +560,14 @@ size_t ServiceWorkerRegistrationData::ByteSizeLong() const {
     // required uint32 updateViaCache = 6;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_updateviacache());
 
-    // required int64 currentWorkerInstalledTime = 7;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_currentworkerinstalledtime());
+    // required sint64 currentWorkerInstalledTime = 7;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_currentworkerinstalledtime());
 
-    // required int64 currentWorkerActivatedTime = 8;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_currentworkeractivatedtime());
+    // required sint64 currentWorkerActivatedTime = 8;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_currentworkeractivatedtime());
 
-    // required int64 lastUpdateTime = 9;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_lastupdatetime());
+    // required sint64 lastUpdateTime = 9;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_lastupdatetime());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

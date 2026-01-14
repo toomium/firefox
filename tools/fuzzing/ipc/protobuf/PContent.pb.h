@@ -7356,7 +7356,7 @@ class Msg_SetCaptivePortalState final :
   enum : int {
     kAStateFieldNumber = 1,
   };
-  // required int32 aState = 1;
+  // required sint32 aState = 1;
   bool has_astate() const;
   private:
   bool _internal_has_astate() const;
@@ -20259,7 +20259,7 @@ class Msg_GoBack final :
   std::string* _internal_mutable_acontext();
   public:
 
-  // optional int32 aCancelContentJSEpoch = 2;
+  // optional sint32 aCancelContentJSEpoch = 2;
   bool has_acancelcontentjsepoch() const;
   private:
   bool _internal_has_acancelcontentjsepoch() const;
@@ -20454,7 +20454,7 @@ class Msg_GoForward final :
   std::string* _internal_mutable_acontext();
   public:
 
-  // optional int32 aCancelContentJSEpoch = 2;
+  // optional sint32 aCancelContentJSEpoch = 2;
   bool has_acancelcontentjsepoch() const;
   private:
   bool _internal_has_acancelcontentjsepoch() const;
@@ -20649,7 +20649,7 @@ class Msg_GoToIndex final :
   std::string* _internal_mutable_acontext();
   public:
 
-  // required int32 aIndex = 2;
+  // required sint32 aIndex = 2;
   bool has_aindex() const;
   private:
   bool _internal_has_aindex() const;
@@ -20662,7 +20662,7 @@ class Msg_GoToIndex final :
   void _internal_set_aindex(int32_t value);
   public:
 
-  // optional int32 aCancelContentJSEpoch = 3;
+  // optional sint32 aCancelContentJSEpoch = 3;
   bool has_acancelcontentjsepoch() const;
   private:
   bool _internal_has_acancelcontentjsepoch() const;
@@ -23877,7 +23877,7 @@ class Msg_SessionHistoryEntryScrollPosition final :
   std::string* _internal_mutable_acontext();
   public:
 
-  // required int32 aX = 2;
+  // required sint32 aX = 2;
   bool has_ax() const;
   private:
   bool _internal_has_ax() const;
@@ -23890,7 +23890,7 @@ class Msg_SessionHistoryEntryScrollPosition final :
   void _internal_set_ax(int32_t value);
   public:
 
-  // required int32 aY = 3;
+  // required sint32 aY = 3;
   bool has_ay() const;
   private:
   bool _internal_has_ay() const;
@@ -31215,7 +31215,7 @@ class Msg_PExternalHelperAppConstructor final :
   void _internal_set_awasfilechannel(bool value);
   public:
 
-  // required int64 aContentLength = 8;
+  // required sint64 aContentLength = 8;
   bool has_acontentlength() const;
   private:
   bool _internal_has_acontentlength() const;
@@ -42971,7 +42971,7 @@ class Msg_AddCertException final :
   std::string* _internal_mutable_aoriginattributes();
   public:
 
-  // required int32 aPort = 3;
+  // required sint32 aPort = 3;
   bool has_aport() const;
   private:
   bool _internal_has_aport() const;
@@ -43660,7 +43660,7 @@ class Msg_StorageAccessPermissionGrantedForOrigin final :
   void _internal_set_atoplevelwindowid(uint64_t value);
   public:
 
-  // required int32 aAllowMode = 5;
+  // required sint32 aAllowMode = 5;
   bool has_aallowmode() const;
   private:
   bool _internal_has_aallowmode() const;
@@ -48746,7 +48746,7 @@ class Msg_HistoryGo final :
   void _internal_set_ahistoryepoch(uint64_t value);
   public:
 
-  // required int32 aOffset = 2;
+  // required sint32 aOffset = 2;
   bool has_aoffset() const;
   private:
   bool _internal_has_aoffset() const;
@@ -48921,7 +48921,7 @@ class Reply_HistoryGo final :
   enum : int {
     kRequestedIndexFieldNumber = 1,
   };
-  // optional int32 requestedIndex = 1;
+  // optional sint32 requestedIndex = 1;
   bool has_requestedindex() const;
   private:
   bool _internal_has_requestedindex() const;
@@ -62741,7 +62741,7 @@ inline void Msg_SetConnectivity::set_connectivity(bool value) {
 
 // Msg_SetCaptivePortalState
 
-// required int32 aState = 1;
+// required sint32 aState = 1;
 inline bool Msg_SetCaptivePortalState::_internal_has_astate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -69854,7 +69854,7 @@ inline void Msg_GoBack::set_allocated_acontext(std::string* acontext) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_GoBack.aContext)
 }
 
-// optional int32 aCancelContentJSEpoch = 2;
+// optional sint32 aCancelContentJSEpoch = 2;
 inline bool Msg_GoBack::_internal_has_acancelcontentjsepoch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -70010,7 +70010,7 @@ inline void Msg_GoForward::set_allocated_acontext(std::string* acontext) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_GoForward.aContext)
 }
 
-// optional int32 aCancelContentJSEpoch = 2;
+// optional sint32 aCancelContentJSEpoch = 2;
 inline bool Msg_GoForward::_internal_has_acancelcontentjsepoch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -70166,7 +70166,7 @@ inline void Msg_GoToIndex::set_allocated_acontext(std::string* acontext) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_GoToIndex.aContext)
 }
 
-// required int32 aIndex = 2;
+// required sint32 aIndex = 2;
 inline bool Msg_GoToIndex::_internal_has_aindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -70194,7 +70194,7 @@ inline void Msg_GoToIndex::set_aindex(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_GoToIndex.aIndex)
 }
 
-// optional int32 aCancelContentJSEpoch = 3;
+// optional sint32 aCancelContentJSEpoch = 3;
 inline bool Msg_GoToIndex::_internal_has_acancelcontentjsepoch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -72254,7 +72254,7 @@ inline void Msg_SessionHistoryEntryScrollPosition::set_allocated_acontext(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryScrollPosition.aContext)
 }
 
-// required int32 aX = 2;
+// required sint32 aX = 2;
 inline bool Msg_SessionHistoryEntryScrollPosition::_internal_has_ax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -72282,7 +72282,7 @@ inline void Msg_SessionHistoryEntryScrollPosition::set_ax(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryScrollPosition.aX)
 }
 
-// required int32 aY = 3;
+// required sint32 aY = 3;
 inline bool Msg_SessionHistoryEntryScrollPosition::_internal_has_ay() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -75839,7 +75839,7 @@ inline void Msg_PExternalHelperAppConstructor::set_aforcesave(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.aForceSave)
 }
 
-// required int64 aContentLength = 8;
+// required sint64 aContentLength = 8;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_acontentlength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -84153,7 +84153,7 @@ inline void Msg_AddCertException::set_allocated_ahostname(std::string* ahostname
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AddCertException.aHostName)
 }
 
-// required int32 aPort = 3;
+// required sint32 aPort = 3;
 inline bool Msg_AddCertException::_internal_has_aport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -84689,7 +84689,7 @@ inline void Msg_StorageAccessPermissionGrantedForOrigin::set_allocated_atracking
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_StorageAccessPermissionGrantedForOrigin.aTrackingOrigin)
 }
 
-// required int32 aAllowMode = 5;
+// required sint32 aAllowMode = 5;
 inline bool Msg_StorageAccessPermissionGrantedForOrigin::_internal_has_aallowmode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -88405,7 +88405,7 @@ inline void Msg_HistoryGo::set_allocated_acontext(std::string* acontext) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_HistoryGo.aContext)
 }
 
-// required int32 aOffset = 2;
+// required sint32 aOffset = 2;
 inline bool Msg_HistoryGo::_internal_has_aoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -88521,7 +88521,7 @@ inline void Msg_HistoryGo::set_auseractivation(bool value) {
 
 // Reply_HistoryGo
 
-// optional int32 requestedIndex = 1;
+// optional sint32 requestedIndex = 1;
 inline bool Reply_HistoryGo::_internal_has_requestedindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

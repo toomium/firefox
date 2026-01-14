@@ -14,9 +14,9 @@ package protobuf.mozilla.dom;
 message MemoryReport {
   required bytes process = 1;
   required bytes path = 2;
-  required int32 kind = 3;
-  required int32 units = 4;
-  required int64 amount = 5;
+  required sint32 kind = 3;
+  required sint32 units = 4;
+  required sint64 amount = 5;
   required uint32 generation = 6;
   required bytes desc = 7;
 }

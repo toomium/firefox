@@ -1461,11 +1461,11 @@ const char* Msg_CaretMoveEvent::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required int32 aOffset = 3;
+      // required sint32 aOffset = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_aoffset(&has_bits);
-          _impl_.aoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1488,11 +1488,11 @@ const char* Msg_CaretMoveEvent::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required int32 aGranularity = 6;
+      // required sint32 aGranularity = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_agranularity(&has_bits);
-          _impl_.agranularity_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.agranularity_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1549,10 +1549,10 @@ uint8_t* Msg_CaretMoveEvent::_InternalSerialize(
         2, this->_internal_acaretrect(), target);
   }
 
-  // required int32 aOffset = 3;
+  // required sint32 aOffset = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_aoffset(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_aoffset(), target);
   }
 
   // required bool aIsSelectionCollapsed = 4;
@@ -1567,10 +1567,10 @@ uint8_t* Msg_CaretMoveEvent::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_aisatendofline(), target);
   }
 
-  // required int32 aGranularity = 6;
+  // required sint32 aGranularity = 6;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(6, this->_internal_agranularity(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(6, this->_internal_agranularity(), target);
   }
 
   // required bool aFromUser = 7;
@@ -1604,8 +1604,8 @@ size_t Msg_CaretMoveEvent::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_aoffset()) {
-    // required int32 aOffset = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aoffset());
+    // required sint32 aOffset = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aoffset());
   }
 
   if (_internal_has_aisselectioncollapsed()) {
@@ -1624,8 +1624,8 @@ size_t Msg_CaretMoveEvent::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_agranularity()) {
-    // required int32 aGranularity = 6;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_agranularity());
+    // required sint32 aGranularity = 6;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_agranularity());
   }
 
   return total_size;
@@ -1643,8 +1643,8 @@ size_t Msg_CaretMoveEvent::ByteSizeLong() const {
     // required uint64 aID = 1;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_aid());
 
-    // required int32 aOffset = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aoffset());
+    // required sint32 aOffset = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aoffset());
 
     // required bool aIsSelectionCollapsed = 4;
     total_size += 1 + 1;
@@ -1655,8 +1655,8 @@ size_t Msg_CaretMoveEvent::ByteSizeLong() const {
     // required bool aFromUser = 7;
     total_size += 1 + 1;
 
-    // required int32 aGranularity = 6;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_agranularity());
+    // required sint32 aGranularity = 6;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_agranularity());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -5607,20 +5607,20 @@ const char* Msg_ScrollToPoint::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required int32 aX = 3;
+      // required sint32 aX = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_ax(&has_bits);
-          _impl_.ax_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.ax_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 aY = 4;
+      // required sint32 aY = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_ay(&has_bits);
-          _impl_.ay_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.ay_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5668,16 +5668,16 @@ uint8_t* Msg_ScrollToPoint::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_ascrolltype(), target);
   }
 
-  // required int32 aX = 3;
+  // required sint32 aX = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_ax(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_ax(), target);
   }
 
-  // required int32 aY = 4;
+  // required sint32 aY = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_ay(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_ay(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5703,13 +5703,13 @@ size_t Msg_ScrollToPoint::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_ax()) {
-    // required int32 aX = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_ax());
+    // required sint32 aX = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_ax());
   }
 
   if (_internal_has_ay()) {
-    // required int32 aY = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_ay());
+    // required sint32 aY = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_ay());
   }
 
   return total_size;
@@ -5725,11 +5725,11 @@ size_t Msg_ScrollToPoint::ByteSizeLong() const {
     // required uint32 aScrollType = 2;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_ascrolltype());
 
-    // required int32 aX = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_ax());
+    // required sint32 aX = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_ax());
 
-    // required int32 aY = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_ay());
+    // required sint32 aY = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_ay());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -6239,11 +6239,11 @@ const char* Msg_SetTextSelection::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required int32 aStartOffset = 2;
+      // required sint32 aStartOffset = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_astartoffset(&has_bits);
-          _impl_.astartoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.astartoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6257,20 +6257,20 @@ const char* Msg_SetTextSelection::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required int32 aEndOffset = 4;
+      // required sint32 aEndOffset = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_aendoffset(&has_bits);
-          _impl_.aendoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aendoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 aSelectionNum = 5;
+      // required sint32 aSelectionNum = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_aselectionnum(&has_bits);
-          _impl_.aselectionnum_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aselectionnum_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6321,10 +6321,10 @@ uint8_t* Msg_SetTextSelection::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_astartid(), target);
   }
 
-  // required int32 aStartOffset = 2;
+  // required sint32 aStartOffset = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_astartoffset(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_astartoffset(), target);
   }
 
   // required uint64 aEndID = 3;
@@ -6333,16 +6333,16 @@ uint8_t* Msg_SetTextSelection::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_aendid(), target);
   }
 
-  // required int32 aEndOffset = 4;
+  // required sint32 aEndOffset = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_aendoffset(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_aendoffset(), target);
   }
 
-  // required int32 aSelectionNum = 5;
+  // required sint32 aSelectionNum = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_aselectionnum(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_aselectionnum(), target);
   }
 
   // required bool aSetFocus = 6;
@@ -6374,18 +6374,18 @@ size_t Msg_SetTextSelection::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_astartoffset()) {
-    // required int32 aStartOffset = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartoffset());
+    // required sint32 aStartOffset = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartoffset());
   }
 
   if (_internal_has_aendoffset()) {
-    // required int32 aEndOffset = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendoffset());
+    // required sint32 aEndOffset = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendoffset());
   }
 
   if (_internal_has_aselectionnum()) {
-    // required int32 aSelectionNum = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aselectionnum());
+    // required sint32 aSelectionNum = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aselectionnum());
   }
 
   if (_internal_has_asetfocus()) {
@@ -6406,14 +6406,14 @@ size_t Msg_SetTextSelection::ByteSizeLong() const {
     // required uint64 aEndID = 3;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_aendid());
 
-    // required int32 aStartOffset = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartoffset());
+    // required sint32 aStartOffset = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartoffset());
 
-    // required int32 aEndOffset = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendoffset());
+    // required sint32 aEndOffset = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendoffset());
 
-    // required int32 aSelectionNum = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aselectionnum());
+    // required sint32 aSelectionNum = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aselectionnum());
 
     // required bool aSetFocus = 6;
     total_size += 1 + 1;
@@ -6599,11 +6599,11 @@ const char* Msg_RemoveTextSelection::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required int32 aSelectionNum = 2;
+      // required sint32 aSelectionNum = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_aselectionnum(&has_bits);
-          _impl_.aselectionnum_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aselectionnum_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6645,10 +6645,10 @@ uint8_t* Msg_RemoveTextSelection::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_aid(), target);
   }
 
-  // required int32 aSelectionNum = 2;
+  // required sint32 aSelectionNum = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_aselectionnum(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_aselectionnum(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6669,8 +6669,8 @@ size_t Msg_RemoveTextSelection::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_aselectionnum()) {
-    // required int32 aSelectionNum = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aselectionnum());
+    // required sint32 aSelectionNum = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aselectionnum());
   }
 
   return total_size;
@@ -6683,8 +6683,8 @@ size_t Msg_RemoveTextSelection::ByteSizeLong() const {
     // required uint64 aID = 1;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_aid());
 
-    // required int32 aSelectionNum = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aselectionnum());
+    // required sint32 aSelectionNum = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aselectionnum());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -6870,11 +6870,11 @@ const char* Msg_ScrollTextLeafRangeIntoView::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // required int32 aStartOffset = 2;
+      // required sint32 aStartOffset = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_astartoffset(&has_bits);
-          _impl_.astartoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.astartoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6888,11 +6888,11 @@ const char* Msg_ScrollTextLeafRangeIntoView::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // required int32 aEndOffset = 4;
+      // required sint32 aEndOffset = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_aendoffset(&has_bits);
-          _impl_.aendoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aendoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6943,10 +6943,10 @@ uint8_t* Msg_ScrollTextLeafRangeIntoView::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_astartid(), target);
   }
 
-  // required int32 aStartOffset = 2;
+  // required sint32 aStartOffset = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_astartoffset(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_astartoffset(), target);
   }
 
   // required uint64 aEndID = 3;
@@ -6955,10 +6955,10 @@ uint8_t* Msg_ScrollTextLeafRangeIntoView::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_aendid(), target);
   }
 
-  // required int32 aEndOffset = 4;
+  // required sint32 aEndOffset = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_aendoffset(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_aendoffset(), target);
   }
 
   // required uint32 aScrollType = 5;
@@ -6990,13 +6990,13 @@ size_t Msg_ScrollTextLeafRangeIntoView::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_astartoffset()) {
-    // required int32 aStartOffset = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartoffset());
+    // required sint32 aStartOffset = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartoffset());
   }
 
   if (_internal_has_aendoffset()) {
-    // required int32 aEndOffset = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendoffset());
+    // required sint32 aEndOffset = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendoffset());
   }
 
   if (_internal_has_ascrolltype()) {
@@ -7017,11 +7017,11 @@ size_t Msg_ScrollTextLeafRangeIntoView::ByteSizeLong() const {
     // required uint64 aEndID = 3;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_aendid());
 
-    // required int32 aStartOffset = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartoffset());
+    // required sint32 aStartOffset = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartoffset());
 
-    // required int32 aEndOffset = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendoffset());
+    // required sint32 aEndOffset = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendoffset());
 
     // required uint32 aScrollType = 5;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_ascrolltype());
@@ -7224,20 +7224,20 @@ const char* Msg_ScrollSubstringToPoint::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required int32 aStartOffset = 2;
+      // required sint32 aStartOffset = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_astartoffset(&has_bits);
-          _impl_.astartoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.astartoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 aEndOffset = 3;
+      // required sint32 aEndOffset = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_aendoffset(&has_bits);
-          _impl_.aendoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aendoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7251,20 +7251,20 @@ const char* Msg_ScrollSubstringToPoint::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required int32 aX = 5;
+      // required sint32 aX = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_ax(&has_bits);
-          _impl_.ax_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.ax_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 aY = 6;
+      // required sint32 aY = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_ay(&has_bits);
-          _impl_.ay_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.ay_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7306,16 +7306,16 @@ uint8_t* Msg_ScrollSubstringToPoint::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_aid(), target);
   }
 
-  // required int32 aStartOffset = 2;
+  // required sint32 aStartOffset = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_astartoffset(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_astartoffset(), target);
   }
 
-  // required int32 aEndOffset = 3;
+  // required sint32 aEndOffset = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_aendoffset(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_aendoffset(), target);
   }
 
   // required uint32 aCoordinateType = 4;
@@ -7324,16 +7324,16 @@ uint8_t* Msg_ScrollSubstringToPoint::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_acoordinatetype(), target);
   }
 
-  // required int32 aX = 5;
+  // required sint32 aX = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_ax(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_ax(), target);
   }
 
-  // required int32 aY = 6;
+  // required sint32 aY = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(6, this->_internal_ay(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(6, this->_internal_ay(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7354,13 +7354,13 @@ size_t Msg_ScrollSubstringToPoint::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_astartoffset()) {
-    // required int32 aStartOffset = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartoffset());
+    // required sint32 aStartOffset = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartoffset());
   }
 
   if (_internal_has_aendoffset()) {
-    // required int32 aEndOffset = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendoffset());
+    // required sint32 aEndOffset = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendoffset());
   }
 
   if (_internal_has_acoordinatetype()) {
@@ -7369,13 +7369,13 @@ size_t Msg_ScrollSubstringToPoint::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_ax()) {
-    // required int32 aX = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_ax());
+    // required sint32 aX = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_ax());
   }
 
   if (_internal_has_ay()) {
-    // required int32 aY = 6;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_ay());
+    // required sint32 aY = 6;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_ay());
   }
 
   return total_size;
@@ -7388,20 +7388,20 @@ size_t Msg_ScrollSubstringToPoint::ByteSizeLong() const {
     // required uint64 aID = 1;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_aid());
 
-    // required int32 aStartOffset = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartoffset());
+    // required sint32 aStartOffset = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartoffset());
 
-    // required int32 aEndOffset = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendoffset());
+    // required sint32 aEndOffset = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendoffset());
 
     // required uint32 aCoordinateType = 4;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_acoordinatetype());
 
-    // required int32 aX = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_ax());
+    // required sint32 aX = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_ax());
 
-    // required int32 aY = 6;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_ay());
+    // required sint32 aY = 6;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_ay());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -7885,11 +7885,11 @@ const char* Msg_InsertText::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required int32 aPosition = 3;
+      // required sint32 aPosition = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_aposition(&has_bits);
-          _impl_.aposition_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aposition_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7937,10 +7937,10 @@ uint8_t* Msg_InsertText::_InternalSerialize(
         2, this->_internal_atext(), target);
   }
 
-  // required int32 aPosition = 3;
+  // required sint32 aPosition = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_aposition(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_aposition(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7968,8 +7968,8 @@ size_t Msg_InsertText::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_aposition()) {
-    // required int32 aPosition = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aposition());
+    // required sint32 aPosition = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aposition());
   }
 
   return total_size;
@@ -7987,8 +7987,8 @@ size_t Msg_InsertText::ByteSizeLong() const {
     // required uint64 aID = 1;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_aid());
 
-    // required int32 aPosition = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aposition());
+    // required sint32 aPosition = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aposition());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -8173,20 +8173,20 @@ const char* Msg_CopyText::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required int32 aStartPos = 2;
+      // required sint32 aStartPos = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_astartpos(&has_bits);
-          _impl_.astartpos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.astartpos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 aEndPos = 3;
+      // required sint32 aEndPos = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_aendpos(&has_bits);
-          _impl_.aendpos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aendpos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8228,16 +8228,16 @@ uint8_t* Msg_CopyText::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_aid(), target);
   }
 
-  // required int32 aStartPos = 2;
+  // required sint32 aStartPos = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_astartpos(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_astartpos(), target);
   }
 
-  // required int32 aEndPos = 3;
+  // required sint32 aEndPos = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_aendpos(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_aendpos(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8258,13 +8258,13 @@ size_t Msg_CopyText::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_astartpos()) {
-    // required int32 aStartPos = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartpos());
+    // required sint32 aStartPos = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartpos());
   }
 
   if (_internal_has_aendpos()) {
-    // required int32 aEndPos = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendpos());
+    // required sint32 aEndPos = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendpos());
   }
 
   return total_size;
@@ -8277,11 +8277,11 @@ size_t Msg_CopyText::ByteSizeLong() const {
     // required uint64 aID = 1;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_aid());
 
-    // required int32 aStartPos = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartpos());
+    // required sint32 aStartPos = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartpos());
 
-    // required int32 aEndPos = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendpos());
+    // required sint32 aEndPos = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendpos());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -8460,20 +8460,20 @@ const char* Msg_CutText::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required int32 aStartPos = 2;
+      // required sint32 aStartPos = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_astartpos(&has_bits);
-          _impl_.astartpos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.astartpos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 aEndPos = 3;
+      // required sint32 aEndPos = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_aendpos(&has_bits);
-          _impl_.aendpos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aendpos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8515,16 +8515,16 @@ uint8_t* Msg_CutText::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_aid(), target);
   }
 
-  // required int32 aStartPos = 2;
+  // required sint32 aStartPos = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_astartpos(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_astartpos(), target);
   }
 
-  // required int32 aEndPos = 3;
+  // required sint32 aEndPos = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_aendpos(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_aendpos(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8545,13 +8545,13 @@ size_t Msg_CutText::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_astartpos()) {
-    // required int32 aStartPos = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartpos());
+    // required sint32 aStartPos = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartpos());
   }
 
   if (_internal_has_aendpos()) {
-    // required int32 aEndPos = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendpos());
+    // required sint32 aEndPos = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendpos());
   }
 
   return total_size;
@@ -8564,11 +8564,11 @@ size_t Msg_CutText::ByteSizeLong() const {
     // required uint64 aID = 1;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_aid());
 
-    // required int32 aStartPos = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartpos());
+    // required sint32 aStartPos = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartpos());
 
-    // required int32 aEndPos = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendpos());
+    // required sint32 aEndPos = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendpos());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -8747,20 +8747,20 @@ const char* Msg_DeleteText::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required int32 aStartPos = 2;
+      // required sint32 aStartPos = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_astartpos(&has_bits);
-          _impl_.astartpos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.astartpos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 aEndPos = 3;
+      // required sint32 aEndPos = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_aendpos(&has_bits);
-          _impl_.aendpos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aendpos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8802,16 +8802,16 @@ uint8_t* Msg_DeleteText::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_aid(), target);
   }
 
-  // required int32 aStartPos = 2;
+  // required sint32 aStartPos = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_astartpos(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_astartpos(), target);
   }
 
-  // required int32 aEndPos = 3;
+  // required sint32 aEndPos = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_aendpos(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_aendpos(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8832,13 +8832,13 @@ size_t Msg_DeleteText::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_astartpos()) {
-    // required int32 aStartPos = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartpos());
+    // required sint32 aStartPos = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartpos());
   }
 
   if (_internal_has_aendpos()) {
-    // required int32 aEndPos = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendpos());
+    // required sint32 aEndPos = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendpos());
   }
 
   return total_size;
@@ -8851,11 +8851,11 @@ size_t Msg_DeleteText::ByteSizeLong() const {
     // required uint64 aID = 1;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_aid());
 
-    // required int32 aStartPos = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_astartpos());
+    // required sint32 aStartPos = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_astartpos());
 
-    // required int32 aEndPos = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aendpos());
+    // required sint32 aEndPos = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aendpos());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -9029,11 +9029,11 @@ const char* Msg_PasteText::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required int32 aPosition = 2;
+      // required sint32 aPosition = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_aposition(&has_bits);
-          _impl_.aposition_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aposition_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -9075,10 +9075,10 @@ uint8_t* Msg_PasteText::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_aid(), target);
   }
 
-  // required int32 aPosition = 2;
+  // required sint32 aPosition = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_aposition(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_aposition(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -9099,8 +9099,8 @@ size_t Msg_PasteText::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_aposition()) {
-    // required int32 aPosition = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aposition());
+    // required sint32 aPosition = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aposition());
   }
 
   return total_size;
@@ -9113,8 +9113,8 @@ size_t Msg_PasteText::ByteSizeLong() const {
     // required uint64 aID = 1;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_aid());
 
-    // required int32 aPosition = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aposition());
+    // required sint32 aPosition = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aposition());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

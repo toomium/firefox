@@ -589,18 +589,18 @@ const char* LookAndFeelTables::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated int32 ints = 1;
+      // repeated sint32 ints = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_ints(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_ints(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_ints(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_ints(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -790,10 +790,10 @@ uint8_t* LookAndFeelTables::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated int32 ints = 1;
+  // repeated sint32 ints = 1;
   for (int i = 0, n = this->_internal_ints_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_ints(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_ints(i), target);
   }
 
   // repeated float floats = 2;
@@ -907,10 +907,10 @@ size_t LookAndFeelTables::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated int32 ints = 1;
+  // repeated sint32 ints = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      Int32Size(this->_impl_.ints_);
+      SInt32Size(this->_impl_.ints_);
     total_size += 1 *
                   ::_pbi::FromIntSize(this->_internal_ints_size());
     total_size += data_size;

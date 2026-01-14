@@ -224,7 +224,7 @@ message HttpChannelOpenArgs {
   required uint32 cacheKey = 34;
   required uint32 initialRwin = 35;
   required uint32 redirectMode = 36;
-  required int32 priority = 37;
+  required sint32 priority = 37;
   required bool uploadStreamHasHeaders = 38;
   required bool allowSTS = 39;
   required bool resumeAt = 40;
@@ -260,7 +260,7 @@ message HttpChannelCreationArgs {
 message ProxyInfoCloneArgs {
   required bytes type = 1;
   required bytes host = 2;
-  required int32 port = 3;
+  required sint32 port = 3;
   required bytes username = 4;
   required bytes password = 5;
   required uint32 flags = 6;
@@ -272,13 +272,13 @@ message ProxyInfoCloneArgs {
 
 message HttpConnectionInfoCloneArgs {
   required bytes host = 1;
-  required int32 port = 2;
+  required sint32 port = 2;
   required bytes npnToken = 3;
   required bytes username = 4;
   required bytes originAttributes = 5;
   required bool endToEndSSL = 6;
   required bytes routedHost = 7;
-  required int32 routedPort = 8;
+  required sint32 routedPort = 8;
   required bool anonymous = 9;
   required bool aPrivate = 10;
   required bool insecureScheme = 11;
@@ -318,14 +318,14 @@ message CookieStruct {
   required bytes value = 2;
   required bytes host = 3;
   required bytes path = 4;
-  required int64 expiry = 5;
-  required int64 lastAccessed = 6;
-  required int64 creationTime = 7;
+  required sint64 expiry = 5;
+  required sint64 lastAccessed = 6;
+  required sint64 creationTime = 7;
   required bool isHttpOnly = 8;
   required bool isSession = 9;
   required bool isSecure = 10;
   required bool isPartitioned = 11;
-  required int32 sameSite = 12;
+  required sint32 sameSite = 12;
   required uint32 schemeMap = 13;
 }
 
@@ -431,14 +431,14 @@ message ResourceTimingStructArgs {
 
 message HttpActivity {
   required bytes host = 1;
-  required int32 port = 2;
+  required sint32 port = 2;
   required bool endToEndSSL = 3;
 }
 
 message HttpConnectionActivity {
   required bytes connInfoKey = 1;
   required bytes host = 2;
-  required int32 port = 3;
+  required sint32 port = 3;
   required bool ssl = 4;
   required bool hasECH = 5;
   required bool isHttp3 = 6;
@@ -497,5 +497,5 @@ message FileChannelInfo {
 message RemoteStreamInfo {
   required bytes inputStream = 1;
   required bytes contentType = 2;
-  required int64 contentLength = 3;
+  required sint64 contentLength = 3;
 }

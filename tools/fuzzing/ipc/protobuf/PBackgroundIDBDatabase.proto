@@ -63,8 +63,8 @@ message Msg_CloseAfterInvalidationComplete {
 message Msg_PBackgroundIDBVersionChangeTransactionConstructor {
   required uint64 currentVersion = 1;
   required uint64 requestedVersion = 2;
-  required int64 nextObjectStoreId = 3;
-  required int64 nextIndexId = 4;
+  required sint64 nextObjectStoreId = 3;
+  required sint64 nextIndexId = 4;
 }
 
 message Reply_PBackgroundIDBVersionChangeTransactionConstructor {

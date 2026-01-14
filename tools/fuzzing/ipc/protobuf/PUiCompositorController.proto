@@ -27,10 +27,10 @@ message Reply_Resume {
 }
 
 message Msg_ResumeAndResize {
-  required int32 aX = 1;
-  required int32 aY = 2;
-  required int32 aWidth = 3;
-  required int32 aHeight = 4;
+  required sint32 aX = 1;
+  required sint32 aY = 2;
+  required sint32 aWidth = 3;
+  required sint32 aHeight = 4;
 }
 
 message Reply_ResumeAndResize {
@@ -41,11 +41,11 @@ message Msg_InvalidateAndRender {
 }
 
 message Msg_MaxToolbarHeight {
-  required int32 aHeight = 1;
+  required sint32 aHeight = 1;
 }
 
 message Msg_FixedBottomOffset {
-  required int32 aOffset = 1;
+  required sint32 aOffset = 1;
 }
 
 message Msg_DefaultClearColor {
@@ -60,7 +60,7 @@ message Msg_EnableLayerUpdateNotifications {
 }
 
 message Msg_ToolbarAnimatorMessageFromCompositor {
-  required int32 aMessage = 1;
+  required sint32 aMessage = 1;
 }
 
 message Msg_NotifyCompositorScrollUpdate {

@@ -19,7 +19,7 @@ message HttpChannelOnStartRequestArgs {
   required bytes securityInfo = 1;
   required bytes overrideReferrerInfo = 2;
   required uint64 cacheEntryId = 3;
-  required int64 altDataLength = 4;
+  required sint64 altDataLength = 4;
   required bytes altDataType = 5;
   repeated bytes cookieHeaders = 6;
   required bytes selfAddr = 7;

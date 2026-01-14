@@ -4613,7 +4613,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_redirectmode(uint32_t value);
   public:
 
-  // required int32 priority = 37;
+  // required sint32 priority = 37;
   bool has_priority() const;
   private:
   bool _internal_has_priority() const;
@@ -5452,7 +5452,7 @@ class ProxyInfoCloneArgs final :
   std::string* _internal_mutable_connectionisolationkey();
   public:
 
-  // required int32 port = 3;
+  // required sint32 port = 3;
   bool has_port() const;
   private:
   bool _internal_has_port() const;
@@ -5817,7 +5817,7 @@ class HttpConnectionInfoCloneArgs final :
   std::string* _internal_mutable_echconfig();
   public:
 
-  // required int32 port = 2;
+  // required sint32 port = 2;
   bool has_port() const;
   private:
   bool _internal_has_port() const;
@@ -5830,7 +5830,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_port(int32_t value);
   public:
 
-  // required int32 routedPort = 8;
+  // required sint32 routedPort = 8;
   bool has_routedport() const;
   private:
   bool _internal_has_routedport() const;
@@ -6610,7 +6610,7 @@ class CookieStruct final :
   std::string* _internal_mutable_path();
   public:
 
-  // required int64 expiry = 5;
+  // required sint64 expiry = 5;
   bool has_expiry() const;
   private:
   bool _internal_has_expiry() const;
@@ -6623,7 +6623,7 @@ class CookieStruct final :
   void _internal_set_expiry(int64_t value);
   public:
 
-  // required int64 lastAccessed = 6;
+  // required sint64 lastAccessed = 6;
   bool has_lastaccessed() const;
   private:
   bool _internal_has_lastaccessed() const;
@@ -6636,7 +6636,7 @@ class CookieStruct final :
   void _internal_set_lastaccessed(int64_t value);
   public:
 
-  // required int64 creationTime = 7;
+  // required sint64 creationTime = 7;
   bool has_creationtime() const;
   private:
   bool _internal_has_creationtime() const;
@@ -6701,7 +6701,7 @@ class CookieStruct final :
   void _internal_set_ispartitioned(bool value);
   public:
 
-  // required int32 sameSite = 12;
+  // required sint32 sameSite = 12;
   bool has_samesite() const;
   private:
   bool _internal_has_samesite() const;
@@ -9378,7 +9378,7 @@ class HttpActivity final :
   std::string* _internal_mutable_host();
   public:
 
-  // required int32 port = 2;
+  // required sint32 port = 2;
   bool has_port() const;
   private:
   bool _internal_has_port() const;
@@ -9579,7 +9579,7 @@ class HttpConnectionActivity final :
   std::string* _internal_mutable_host();
   public:
 
-  // required int32 port = 3;
+  // required sint32 port = 3;
   bool has_port() const;
   private:
   bool _internal_has_port() const;
@@ -11185,7 +11185,7 @@ class RemoteStreamInfo final :
   std::string* _internal_mutable_contenttype();
   public:
 
-  // required int64 contentLength = 3;
+  // required sint64 contentLength = 3;
   bool has_contentlength() const;
   private:
   bool _internal_has_contentlength() const;
@@ -19825,7 +19825,7 @@ inline void HttpChannelOpenArgs::set_redirectmode(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.redirectMode)
 }
 
-// required int32 priority = 37;
+// required sint32 priority = 37;
 inline bool HttpChannelOpenArgs::_internal_has_priority() const {
   bool value = (_impl_._has_bits_[1] & 0x00000080u) != 0;
   return value;
@@ -20878,7 +20878,7 @@ inline void ProxyInfoCloneArgs::set_allocated_host(std::string* host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ProxyInfoCloneArgs.host)
 }
 
-// required int32 port = 3;
+// required sint32 port = 3;
 inline bool ProxyInfoCloneArgs::_internal_has_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -21334,7 +21334,7 @@ inline void HttpConnectionInfoCloneArgs::set_allocated_host(std::string* host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.host)
 }
 
-// required int32 port = 2;
+// required sint32 port = 2;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -21662,7 +21662,7 @@ inline void HttpConnectionInfoCloneArgs::set_allocated_routedhost(std::string* r
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.routedHost)
 }
 
-// required int32 routedPort = 8;
+// required sint32 routedPort = 8;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_routedport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -23041,7 +23041,7 @@ inline void CookieStruct::set_allocated_path(std::string* path) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.CookieStruct.path)
 }
 
-// required int64 expiry = 5;
+// required sint64 expiry = 5;
 inline bool CookieStruct::_internal_has_expiry() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -23069,7 +23069,7 @@ inline void CookieStruct::set_expiry(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.expiry)
 }
 
-// required int64 lastAccessed = 6;
+// required sint64 lastAccessed = 6;
 inline bool CookieStruct::_internal_has_lastaccessed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -23097,7 +23097,7 @@ inline void CookieStruct::set_lastaccessed(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.lastAccessed)
 }
 
-// required int64 creationTime = 7;
+// required sint64 creationTime = 7;
 inline bool CookieStruct::_internal_has_creationtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -23237,7 +23237,7 @@ inline void CookieStruct::set_ispartitioned(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.isPartitioned)
 }
 
-// required int32 sameSite = 12;
+// required sint32 sameSite = 12;
 inline bool CookieStruct::_internal_has_samesite() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -27356,7 +27356,7 @@ inline void HttpActivity::set_allocated_host(std::string* host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpActivity.host)
 }
 
-// required int32 port = 2;
+// required sint32 port = 2;
 inline bool HttpActivity::_internal_has_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -27552,7 +27552,7 @@ inline void HttpConnectionActivity::set_allocated_host(std::string* host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpConnectionActivity.host)
 }
 
-// required int32 port = 3;
+// required sint32 port = 3;
 inline bool HttpConnectionActivity::_internal_has_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -29186,7 +29186,7 @@ inline void RemoteStreamInfo::set_allocated_contenttype(std::string* contenttype
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RemoteStreamInfo.contentType)
 }
 
-// required int64 contentLength = 3;
+// required sint64 contentLength = 3;
 inline bool RemoteStreamInfo::_internal_has_contentlength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

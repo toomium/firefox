@@ -1327,7 +1327,7 @@ class Msg_CancelContentJSExecutionIfRunning final :
   std::string* _internal_mutable_anavigationuri();
   public:
 
-  // required int32 aNavigationIndex = 3;
+  // required sint32 aNavigationIndex = 3;
   bool has_anavigationindex() const;
   private:
   bool _internal_has_anavigationindex() const;
@@ -1340,7 +1340,7 @@ class Msg_CancelContentJSExecutionIfRunning final :
   void _internal_set_anavigationindex(int32_t value);
   public:
 
-  // required int32 aEpoch = 5;
+  // required sint32 aEpoch = 5;
   bool has_aepoch() const;
   private:
   bool _internal_has_aepoch() const;
@@ -1924,7 +1924,7 @@ inline void Msg_CancelContentJSExecutionIfRunning::set_allocated_anavigationtype
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.aNavigationType)
 }
 
-// required int32 aNavigationIndex = 3;
+// required sint32 aNavigationIndex = 3;
 inline bool Msg_CancelContentJSExecutionIfRunning::_internal_has_anavigationindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2020,7 +2020,7 @@ inline void Msg_CancelContentJSExecutionIfRunning::set_allocated_anavigationuri(
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.aNavigationURI)
 }
 
-// required int32 aEpoch = 5;
+// required sint32 aEpoch = 5;
 inline bool Msg_CancelContentJSExecutionIfRunning::_internal_has_aepoch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

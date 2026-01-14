@@ -20,7 +20,7 @@ message LookAndFeelFont {
 }
 
 message LookAndFeelTables {
-  repeated int32 ints = 1;
+  repeated sint32 ints = 1;
   repeated float floats = 2;
   repeated protobuf.mozilla.widget.LookAndFeelFont fonts = 3;
   repeated bytes lightColors = 4;

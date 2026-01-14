@@ -28,7 +28,7 @@ message JSONVariant {
     bytes mVvoid_t = 1;
     bytes mVnull_t = 2;
     bool mVbool = 3;
-    int32 mVint = 4;
+    sint32 mVint = 4;
     double mVdouble = 5;
     bytes mVnsString = 6;
     bytes mVPTestJSONHandle = 7;

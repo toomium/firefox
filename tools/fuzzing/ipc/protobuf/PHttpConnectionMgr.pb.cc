@@ -1008,11 +1008,11 @@ const char* Msg_AddTransaction::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required int32 aPriority = 2;
+      // required sint32 aPriority = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_apriority(&has_bits);
-          _impl_.apriority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.apriority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1054,10 +1054,10 @@ uint8_t* Msg_AddTransaction::_InternalSerialize(
         1, this->_internal_atrans(), target);
   }
 
-  // required int32 aPriority = 2;
+  // required sint32 aPriority = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_apriority(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_apriority(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1080,8 +1080,8 @@ size_t Msg_AddTransaction::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_apriority()) {
-    // required int32 aPriority = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_apriority());
+    // required sint32 aPriority = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_apriority());
   }
 
   return total_size;
@@ -1096,8 +1096,8 @@ size_t Msg_AddTransaction::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_atrans());
 
-    // required int32 aPriority = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_apriority());
+    // required sint32 aPriority = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_apriority());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1302,11 +1302,11 @@ const char* Msg_AddTransactionWithStickyConn::_InternalParse(const char* ptr, ::
         } else
           goto handle_unusual;
         continue;
-      // required int32 aPriority = 2;
+      // required sint32 aPriority = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_apriority(&has_bits);
-          _impl_.apriority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.apriority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1357,10 +1357,10 @@ uint8_t* Msg_AddTransactionWithStickyConn::_InternalSerialize(
         1, this->_internal_atrans(), target);
   }
 
-  // required int32 aPriority = 2;
+  // required sint32 aPriority = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_apriority(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_apriority(), target);
   }
 
   // required bytes aTransWithStickyConn = 3;
@@ -1396,8 +1396,8 @@ size_t Msg_AddTransactionWithStickyConn::RequiredFieldsByteSizeFallback() const 
   }
 
   if (_internal_has_apriority()) {
-    // required int32 aPriority = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_apriority());
+    // required sint32 aPriority = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_apriority());
   }
 
   return total_size;
@@ -1417,8 +1417,8 @@ size_t Msg_AddTransactionWithStickyConn::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_atranswithstickyconn());
 
-    // required int32 aPriority = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_apriority());
+    // required sint32 aPriority = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_apriority());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1607,11 +1607,11 @@ const char* Msg_RescheduleTransaction::_InternalParse(const char* ptr, ::_pbi::P
         } else
           goto handle_unusual;
         continue;
-      // required int32 aPriority = 2;
+      // required sint32 aPriority = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_apriority(&has_bits);
-          _impl_.apriority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.apriority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1653,10 +1653,10 @@ uint8_t* Msg_RescheduleTransaction::_InternalSerialize(
         1, this->_internal_atrans(), target);
   }
 
-  // required int32 aPriority = 2;
+  // required sint32 aPriority = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_apriority(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_apriority(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1679,8 +1679,8 @@ size_t Msg_RescheduleTransaction::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_apriority()) {
-    // required int32 aPriority = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_apriority());
+    // required sint32 aPriority = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_apriority());
   }
 
   return total_size;
@@ -1695,8 +1695,8 @@ size_t Msg_RescheduleTransaction::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_atrans());
 
-    // required int32 aPriority = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_apriority());
+    // required sint32 aPriority = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_apriority());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

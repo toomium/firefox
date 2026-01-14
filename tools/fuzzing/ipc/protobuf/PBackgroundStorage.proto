@@ -113,7 +113,7 @@ message Msg_LoadDone {
 
 message Msg_LoadUsage {
   required bytes scope = 1;
-  required int64 usage = 2;
+  required sint64 usage = 2;
 }
 
 message Msg_Error {

@@ -1141,7 +1141,7 @@ class Msg_OnProgress final :
     kProgressFieldNumber = 1,
     kProgressMaxFieldNumber = 2,
   };
-  // required int64 progress = 1;
+  // required sint64 progress = 1;
   bool has_progress() const;
   private:
   bool _internal_has_progress() const;
@@ -1154,7 +1154,7 @@ class Msg_OnProgress final :
   void _internal_set_progress(int64_t value);
   public:
 
-  // required int64 progressMax = 2;
+  // required sint64 progressMax = 2;
   bool has_progressmax() const;
   private:
   bool _internal_has_progressmax() const;
@@ -3703,7 +3703,7 @@ Msg_OnConsoleReport::consolereport() const {
 
 // Msg_OnProgress
 
-// required int64 progress = 1;
+// required sint64 progress = 1;
 inline bool Msg_OnProgress::_internal_has_progress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3731,7 +3731,7 @@ inline void Msg_OnProgress::set_progress(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpBackgroundChannel.Msg_OnProgress.progress)
 }
 
-// required int64 progressMax = 2;
+// required sint64 progressMax = 2;
 inline bool Msg_OnProgress::_internal_has_progressmax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

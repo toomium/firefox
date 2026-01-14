@@ -2069,20 +2069,20 @@ const char* Msg_OnProgress::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 progress = 1;
+      // required sint64 progress = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_progress(&has_bits);
-          _impl_.progress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.progress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 progressMax = 2;
+      // required sint64 progressMax = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_progressmax(&has_bits);
-          _impl_.progressmax_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.progressmax_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2118,16 +2118,16 @@ uint8_t* Msg_OnProgress::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 progress = 1;
+  // required sint64 progress = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_progress(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_progress(), target);
   }
 
-  // required int64 progressMax = 2;
+  // required sint64 progressMax = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_progressmax(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_progressmax(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2143,13 +2143,13 @@ size_t Msg_OnProgress::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_progress()) {
-    // required int64 progress = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_progress());
+    // required sint64 progress = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_progress());
   }
 
   if (_internal_has_progressmax()) {
-    // required int64 progressMax = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_progressmax());
+    // required sint64 progressMax = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_progressmax());
   }
 
   return total_size;
@@ -2159,11 +2159,11 @@ size_t Msg_OnProgress::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required int64 progress = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_progress());
+    // required sint64 progress = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_progress());
 
-    // required int64 progressMax = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_progressmax());
+    // required sint64 progressMax = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_progressmax());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

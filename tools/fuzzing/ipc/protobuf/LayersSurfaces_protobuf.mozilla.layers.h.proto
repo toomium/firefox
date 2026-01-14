@@ -169,7 +169,7 @@ message SurfaceDescriptorBuffer {
 
 message SurfaceDescriptorShared {
   required bytes size = 1;
-  required int32 stride = 2;
+  required sint32 stride = 2;
   required bytes format = 3;
   required bytes handle = 4;
 }

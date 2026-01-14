@@ -225,11 +225,11 @@ const char* Msg_ClearHostMapping::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required int32 port = 2;
+      // required sint32 port = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_port(&has_bits);
-          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -280,10 +280,10 @@ uint8_t* Msg_ClearHostMapping::_InternalSerialize(
         1, this->_internal_host(), target);
   }
 
-  // required int32 port = 2;
+  // required sint32 port = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_port(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_port(), target);
   }
 
   // required bytes originAttributes = 3;
@@ -319,8 +319,8 @@ size_t Msg_ClearHostMapping::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_port()) {
-    // required int32 port = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
   }
 
   return total_size;
@@ -340,8 +340,8 @@ size_t Msg_ClearHostMapping::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_originattributes());
 
-    // required int32 port = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -680,11 +680,11 @@ const char* Msg_ProcessHeader::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required int32 originPort = 4;
+      // required sint32 originPort = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_originport(&has_bits);
-          _impl_.originport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.originport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -795,10 +795,10 @@ uint8_t* Msg_ProcessHeader::_InternalSerialize(
         3, this->_internal_originhost(), target);
   }
 
-  // required int32 originPort = 4;
+  // required sint32 originPort = 4;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_originport(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_originport(), target);
   }
 
   // required bytes username = 5;
@@ -895,8 +895,8 @@ size_t Msg_ProcessHeader::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_originport()) {
-    // required int32 originPort = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_originport());
+    // required sint32 originPort = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_originport());
   }
 
   if (_internal_has_privatebrowsing()) {
@@ -946,8 +946,8 @@ size_t Msg_ProcessHeader::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.conninfoargs_);
 
-    // required int32 originPort = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_originport());
+    // required sint32 originPort = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_originport());
 
     // required bool privateBrowsing = 6;
     total_size += 1 + 1;

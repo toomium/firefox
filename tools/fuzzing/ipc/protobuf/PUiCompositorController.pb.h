@@ -747,7 +747,7 @@ class Msg_ResumeAndResize final :
     kAWidthFieldNumber = 3,
     kAHeightFieldNumber = 4,
   };
-  // required int32 aX = 1;
+  // required sint32 aX = 1;
   bool has_ax() const;
   private:
   bool _internal_has_ax() const;
@@ -760,7 +760,7 @@ class Msg_ResumeAndResize final :
   void _internal_set_ax(int32_t value);
   public:
 
-  // required int32 aY = 2;
+  // required sint32 aY = 2;
   bool has_ay() const;
   private:
   bool _internal_has_ay() const;
@@ -773,7 +773,7 @@ class Msg_ResumeAndResize final :
   void _internal_set_ay(int32_t value);
   public:
 
-  // required int32 aWidth = 3;
+  // required sint32 aWidth = 3;
   bool has_awidth() const;
   private:
   bool _internal_has_awidth() const;
@@ -786,7 +786,7 @@ class Msg_ResumeAndResize final :
   void _internal_set_awidth(int32_t value);
   public:
 
-  // required int32 aHeight = 4;
+  // required sint32 aHeight = 4;
   bool has_aheight() const;
   private:
   bool _internal_has_aheight() const;
@@ -1200,7 +1200,7 @@ class Msg_MaxToolbarHeight final :
   enum : int {
     kAHeightFieldNumber = 1,
   };
-  // required int32 aHeight = 1;
+  // required sint32 aHeight = 1;
   bool has_aheight() const;
   private:
   bool _internal_has_aheight() const;
@@ -1342,7 +1342,7 @@ class Msg_FixedBottomOffset final :
   enum : int {
     kAOffsetFieldNumber = 1,
   };
-  // required int32 aOffset = 1;
+  // required sint32 aOffset = 1;
   bool has_aoffset() const;
   private:
   bool _internal_has_aoffset() const;
@@ -1892,7 +1892,7 @@ class Msg_ToolbarAnimatorMessageFromCompositor final :
   enum : int {
     kAMessageFieldNumber = 1,
   };
-  // required int32 aMessage = 1;
+  // required sint32 aMessage = 1;
   bool has_amessage() const;
   private:
   bool _internal_has_amessage() const;
@@ -2307,7 +2307,7 @@ inline void Reply_Resume::set_aoutresumed(bool value) {
 
 // Msg_ResumeAndResize
 
-// required int32 aX = 1;
+// required sint32 aX = 1;
 inline bool Msg_ResumeAndResize::_internal_has_ax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2335,7 +2335,7 @@ inline void Msg_ResumeAndResize::set_ax(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.aX)
 }
 
-// required int32 aY = 2;
+// required sint32 aY = 2;
 inline bool Msg_ResumeAndResize::_internal_has_ay() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2363,7 +2363,7 @@ inline void Msg_ResumeAndResize::set_ay(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.aY)
 }
 
-// required int32 aWidth = 3;
+// required sint32 aWidth = 3;
 inline bool Msg_ResumeAndResize::_internal_has_awidth() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2391,7 +2391,7 @@ inline void Msg_ResumeAndResize::set_awidth(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.aWidth)
 }
 
-// required int32 aHeight = 4;
+// required sint32 aHeight = 4;
 inline bool Msg_ResumeAndResize::_internal_has_aheight() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2459,7 +2459,7 @@ inline void Reply_ResumeAndResize::set_aoutresumed(bool value) {
 
 // Msg_MaxToolbarHeight
 
-// required int32 aHeight = 1;
+// required sint32 aHeight = 1;
 inline bool Msg_MaxToolbarHeight::_internal_has_aheight() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2491,7 +2491,7 @@ inline void Msg_MaxToolbarHeight::set_aheight(int32_t value) {
 
 // Msg_FixedBottomOffset
 
-// required int32 aOffset = 1;
+// required sint32 aOffset = 1;
 inline bool Msg_FixedBottomOffset::_internal_has_aoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2591,7 +2591,7 @@ inline void Msg_EnableLayerUpdateNotifications::set_aenable(bool value) {
 
 // Msg_ToolbarAnimatorMessageFromCompositor
 
-// required int32 aMessage = 1;
+// required sint32 aMessage = 1;
 inline bool Msg_ToolbarAnimatorMessageFromCompositor::_internal_has_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -49,7 +49,7 @@ message ReorderEventData {
 message TextChangeEventData {
   required uint64 ID = 1;
   required bytes Str = 2;
-  required int32 Start = 3;
+  required sint32 Start = 3;
   required uint32 Len = 4;
   required bool IsInsert = 5;
   required bool FromUser = 6;
@@ -68,6 +68,6 @@ message MutationEventData {
 message TextRangeData {
   required uint64 StartID = 1;
   required uint64 EndID = 2;
-  required int32 StartOffset = 3;
-  required int32 EndOffset = 4;
+  required sint32 StartOffset = 3;
+  required sint32 EndOffset = 4;
 }

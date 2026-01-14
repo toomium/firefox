@@ -71,11 +71,11 @@ message Reply_LoadKeys {
 }
 
 message Msg_IncreasePeakUsage {
-  required int64 minSize = 1;
+  required sint64 minSize = 1;
 }
 
 message Reply_IncreasePeakUsage {
-  required int64 size = 1;
+  required sint64 size = 1;
 }
 
 message Msg_MarkDirty {

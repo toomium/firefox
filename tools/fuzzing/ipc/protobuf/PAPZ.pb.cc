@@ -2208,11 +2208,11 @@ const char* Msg_NotifyAPZStateChange::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required int32 aArg = 3;
+      // required sint32 aArg = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_aarg(&has_bits);
-          _impl_.aarg_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aarg_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2269,10 +2269,10 @@ uint8_t* Msg_NotifyAPZStateChange::_InternalSerialize(
         2, this->_internal_achange(), target);
   }
 
-  // required int32 aArg = 3;
+  // required sint32 aArg = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_aarg(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_aarg(), target);
   }
 
   // optional uint64 aInputBlockId = 4;
@@ -2308,8 +2308,8 @@ size_t Msg_NotifyAPZStateChange::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_aarg()) {
-    // required int32 aArg = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aarg());
+    // required sint32 aArg = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aarg());
   }
 
   return total_size;
@@ -2329,8 +2329,8 @@ size_t Msg_NotifyAPZStateChange::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_achange());
 
-    // required int32 aArg = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aarg());
+    // required sint32 aArg = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aarg());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

@@ -620,11 +620,11 @@ const char* Msg_CreateUnidirectionalStream::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional int64 sendOrder = 1;
+      // optional sint64 sendOrder = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_sendorder(&has_bits);
-          _impl_.sendorder_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.sendorder_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -660,10 +660,10 @@ uint8_t* Msg_CreateUnidirectionalStream::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional int64 sendOrder = 1;
+  // optional sint64 sendOrder = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_sendorder(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_sendorder(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -682,10 +682,10 @@ size_t Msg_CreateUnidirectionalStream::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional int64 sendOrder = 1;
+  // optional sint64 sendOrder = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_sendorder());
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_sendorder());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1030,11 +1030,11 @@ const char* Msg_CreateBidirectionalStream::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional int64 sendOrder = 1;
+      // optional sint64 sendOrder = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_sendorder(&has_bits);
-          _impl_.sendorder_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.sendorder_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1070,10 +1070,10 @@ uint8_t* Msg_CreateBidirectionalStream::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional int64 sendOrder = 1;
+  // optional sint64 sendOrder = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_sendorder(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_sendorder(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1092,10 +1092,10 @@ size_t Msg_CreateBidirectionalStream::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional int64 sendOrder = 1;
+  // optional sint64 sendOrder = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_sendorder());
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_sendorder());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2278,11 +2278,11 @@ const char* Msg_SetSendOrder::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // optional int64 sendOrder = 2;
+      // optional sint64 sendOrder = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_sendorder(&has_bits);
-          _impl_.sendorder_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.sendorder_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2324,10 +2324,10 @@ uint8_t* Msg_SetSendOrder::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_streamid(), target);
   }
 
-  // optional int64 sendOrder = 2;
+  // optional sint64 sendOrder = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_sendorder(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_sendorder(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2350,10 +2350,10 @@ size_t Msg_SetSendOrder::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional int64 sendOrder = 2;
+  // optional sint64 sendOrder = 2;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000002u) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_sendorder());
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_sendorder());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {

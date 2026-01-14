@@ -2232,7 +2232,7 @@ class TransformData final :
       ::protobuf::mozilla::layers::PartialPrerenderData* partialprerenderdata);
   ::protobuf::mozilla::layers::PartialPrerenderData* unsafe_arena_release_partialprerenderdata();
 
-  // required int32 appUnitsPerDevPixel = 4;
+  // required sint32 appUnitsPerDevPixel = 4;
   bool has_appunitsperdevpixel() const;
   private:
   bool _internal_has_appunitsperdevpixel() const;
@@ -9230,7 +9230,7 @@ inline void TransformData::set_allocated_bounds(std::string* bounds) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.TransformData.bounds)
 }
 
-// required int32 appUnitsPerDevPixel = 4;
+// required sint32 appUnitsPerDevPixel = 4;
 inline bool TransformData::_internal_has_appunitsperdevpixel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

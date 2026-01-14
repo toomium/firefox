@@ -771,7 +771,7 @@ class Msg_AddTransaction final :
   std::string* _internal_mutable_atrans();
   public:
 
-  // required int32 aPriority = 2;
+  // required sint32 aPriority = 2;
   bool has_apriority() const;
   private:
   bool _internal_has_apriority() const;
@@ -955,7 +955,7 @@ class Msg_AddTransactionWithStickyConn final :
   std::string* _internal_mutable_atranswithstickyconn();
   public:
 
-  // required int32 aPriority = 2;
+  // required sint32 aPriority = 2;
   bool has_apriority() const;
   private:
   bool _internal_has_apriority() const;
@@ -1121,7 +1121,7 @@ class Msg_RescheduleTransaction final :
   std::string* _internal_mutable_atrans();
   public:
 
-  // required int32 aPriority = 2;
+  // required sint32 aPriority = 2;
   bool has_apriority() const;
   private:
   bool _internal_has_apriority() const;
@@ -2088,7 +2088,7 @@ inline void Msg_AddTransaction::set_allocated_atrans(std::string* atrans) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransaction.aTrans)
 }
 
-// required int32 aPriority = 2;
+// required sint32 aPriority = 2;
 inline bool Msg_AddTransaction::_internal_has_apriority() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2188,7 +2188,7 @@ inline void Msg_AddTransactionWithStickyConn::set_allocated_atrans(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransactionWithStickyConn.aTrans)
 }
 
-// required int32 aPriority = 2;
+// required sint32 aPriority = 2;
 inline bool Msg_AddTransactionWithStickyConn::_internal_has_apriority() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2356,7 +2356,7 @@ inline void Msg_RescheduleTransaction::set_allocated_atrans(std::string* atrans)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_RescheduleTransaction.aTrans)
 }
 
-// required int32 aPriority = 2;
+// required sint32 aPriority = 2;
 inline bool Msg_RescheduleTransaction::_internal_has_apriority() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

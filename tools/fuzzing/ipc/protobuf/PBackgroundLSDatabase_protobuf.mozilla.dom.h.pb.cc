@@ -217,20 +217,20 @@ const char* LSSnapshotInitInfo::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required int64 usage = 4;
+      // required sint64 usage = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_usage(&has_bits);
-          _impl_.usage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.usage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 peakUsage = 5;
+      // required sint64 peakUsage = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_peakusage(&has_bits);
-          _impl_.peakusage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.peakusage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -313,16 +313,16 @@ uint8_t* LSSnapshotInitInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_totallength(), target);
   }
 
-  // required int64 usage = 4;
+  // required sint64 usage = 4;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_usage(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_usage(), target);
   }
 
-  // required int64 peakUsage = 5;
+  // required sint64 peakUsage = 5;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_peakusage(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(5, this->_internal_peakusage(), target);
   }
 
   // required bytes loadState = 6;
@@ -363,8 +363,8 @@ size_t LSSnapshotInitInfo::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_usage()) {
-    // required int64 usage = 4;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_usage());
+    // required sint64 usage = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_usage());
   }
 
   if (_internal_has_totallength()) {
@@ -388,8 +388,8 @@ size_t LSSnapshotInitInfo::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_peakusage()) {
-    // required int64 peakUsage = 5;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_peakusage());
+    // required sint64 peakUsage = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_peakusage());
   }
 
   return total_size;
@@ -404,8 +404,8 @@ size_t LSSnapshotInitInfo::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_loadstate());
 
-    // required int64 usage = 4;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_usage());
+    // required sint64 usage = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_usage());
 
     // required uint32 totalLength = 3;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_totallength());
@@ -419,8 +419,8 @@ size_t LSSnapshotInitInfo::ByteSizeLong() const {
     // required bool hasOtherProcessObservers = 8;
     total_size += 1 + 1;
 
-    // required int64 peakUsage = 5;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_peakusage());
+    // required sint64 peakUsage = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_peakusage());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

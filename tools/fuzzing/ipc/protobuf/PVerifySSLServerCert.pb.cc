@@ -271,11 +271,11 @@ const char* Msg_OnVerifySSLServerCertFinished::_InternalParse(const char* ptr, :
         } else
           goto handle_unusual;
         continue;
-      // required int32 aFinalError = 5;
+      // required sint32 aFinalError = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_afinalerror(&has_bits);
-          _impl_.afinalerror_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.afinalerror_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -364,10 +364,10 @@ uint8_t* Msg_OnVerifySSLServerCertFinished::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_asucceeded(), target);
   }
 
-  // required int32 aFinalError = 5;
+  // required sint32 aFinalError = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_afinalerror(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_afinalerror(), target);
   }
 
   // required bytes aOverridableErrorCategory = 6;
@@ -420,8 +420,8 @@ size_t Msg_OnVerifySSLServerCertFinished::RequiredFieldsByteSizeFallback() const
   }
 
   if (_internal_has_afinalerror()) {
-    // required int32 aFinalError = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_afinalerror());
+    // required sint32 aFinalError = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_afinalerror());
   }
 
   if (_internal_has_asucceeded()) {
@@ -459,8 +459,8 @@ size_t Msg_OnVerifySSLServerCertFinished::ByteSizeLong() const {
     // required uint32 aCertTransparencyStatus = 2;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_acerttransparencystatus());
 
-    // required int32 aFinalError = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_afinalerror());
+    // required sint32 aFinalError = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_afinalerror());
 
     // required bool aSucceeded = 4;
     total_size += 1 + 1;

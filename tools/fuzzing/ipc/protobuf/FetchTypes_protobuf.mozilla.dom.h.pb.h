@@ -1502,7 +1502,7 @@ class IPCInternalRequest final :
       ::protobuf::mozilla::ipc::PrincipalInfo* interceptiontriggeringprincipalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_interceptiontriggeringprincipalinfo();
 
-  // required int64 bodySize = 6;
+  // required sint64 bodySize = 6;
   bool has_bodysize() const;
   private:
   bool _internal_has_bodysize() const;
@@ -1515,7 +1515,7 @@ class IPCInternalRequest final :
   void _internal_set_bodysize(int64_t value);
   public:
 
-  // required int32 internalPriority = 9;
+  // required sint32 internalPriority = 9;
   bool has_internalpriority() const;
   private:
   bool _internal_has_internalpriority() const;
@@ -2159,7 +2159,7 @@ class ParentToParentInternalResponse final :
       ::protobuf::mozilla::dom::ParentToParentStream* alternativebody);
   ::protobuf::mozilla::dom::ParentToParentStream* unsafe_arena_release_alternativebody();
 
-  // required int64 bodySize = 3;
+  // required sint64 bodySize = 3;
   bool has_bodysize() const;
   private:
   bool _internal_has_bodysize() const;
@@ -2364,7 +2364,7 @@ class ParentToChildInternalResponse final :
       ::protobuf::mozilla::dom::ParentToChildStream* alternativebody);
   ::protobuf::mozilla::dom::ParentToChildStream* unsafe_arena_release_alternativebody();
 
-  // required int64 bodySize = 3;
+  // required sint64 bodySize = 3;
   bool has_bodysize() const;
   private:
   bool _internal_has_bodysize() const;
@@ -2569,7 +2569,7 @@ class ChildToParentInternalResponse final :
       ::protobuf::mozilla::dom::ChildToParentStream* alternativebody);
   ::protobuf::mozilla::dom::ChildToParentStream* unsafe_arena_release_alternativebody();
 
-  // required int64 bodySize = 3;
+  // required sint64 bodySize = 3;
   bool has_bodysize() const;
   private:
   bool _internal_has_bodysize() const;
@@ -3986,7 +3986,7 @@ inline void IPCInternalRequest::set_allocated_body(::protobuf::mozilla::dom::Bod
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCInternalRequest.body)
 }
 
-// required int64 bodySize = 6;
+// required sint64 bodySize = 6;
 inline bool IPCInternalRequest::_internal_has_bodysize() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -4150,7 +4150,7 @@ inline void IPCInternalRequest::set_allocated_contentpolicytype(std::string* con
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCInternalRequest.contentPolicyType)
 }
 
-// required int32 internalPriority = 9;
+// required sint32 internalPriority = 9;
 inline bool IPCInternalRequest::_internal_has_internalpriority() const {
   bool value = (_impl_._has_bits_[0] & 0x00100000u) != 0;
   return value;
@@ -6291,7 +6291,7 @@ inline void ParentToParentInternalResponse::set_allocated_body(::protobuf::mozil
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ParentToParentInternalResponse.body)
 }
 
-// required int64 bodySize = 3;
+// required sint64 bodySize = 3;
 inline bool ParentToParentInternalResponse::_internal_has_bodysize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -6593,7 +6593,7 @@ inline void ParentToChildInternalResponse::set_allocated_body(::protobuf::mozill
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ParentToChildInternalResponse.body)
 }
 
-// required int64 bodySize = 3;
+// required sint64 bodySize = 3;
 inline bool ParentToChildInternalResponse::_internal_has_bodysize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -6895,7 +6895,7 @@ inline void ChildToParentInternalResponse::set_allocated_body(::protobuf::mozill
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ChildToParentInternalResponse.body)
 }
 
-// required int64 bodySize = 3;
+// required sint64 bodySize = 3;
 inline bool ChildToParentInternalResponse::_internal_has_bodysize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

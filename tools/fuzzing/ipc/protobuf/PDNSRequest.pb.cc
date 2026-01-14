@@ -303,11 +303,11 @@ const char* Msg_CancelDNSRequest::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required int32 port = 3;
+      // required sint32 port = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_port(&has_bits);
-          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -391,10 +391,10 @@ uint8_t* Msg_CancelDNSRequest::_InternalSerialize(
         2, this->_internal_trrserver(), target);
   }
 
-  // required int32 port = 3;
+  // required sint32 port = 3;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_port(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_port(), target);
   }
 
   // required uint32 type = 4;
@@ -469,8 +469,8 @@ size_t Msg_CancelDNSRequest::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_port()) {
-    // required int32 port = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
   }
 
   if (_internal_has_type()) {
@@ -510,8 +510,8 @@ size_t Msg_CancelDNSRequest::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_reason());
 
-    // required int32 port = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
 
     // required uint32 type = 4;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_type());

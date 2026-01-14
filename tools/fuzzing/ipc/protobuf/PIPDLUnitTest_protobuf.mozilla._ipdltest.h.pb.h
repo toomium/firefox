@@ -256,7 +256,7 @@ class TestPartResult final :
   void _internal_set_fatal(bool value);
   public:
 
-  // required int32 lineNumber = 4;
+  // required sint32 lineNumber = 4;
   bool has_linenumber() const;
   private:
   bool _internal_has_linenumber() const;
@@ -427,7 +427,7 @@ inline void TestPartResult::set_allocated_filename(std::string* filename) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.TestPartResult.filename)
 }
 
-// required int32 lineNumber = 4;
+// required sint32 lineNumber = 4;
 inline bool TestPartResult::_internal_has_linenumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

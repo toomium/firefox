@@ -266,7 +266,7 @@ class Msg_InitEncode final :
   std::string* _internal_mutable_acodecsettings();
   public:
 
-  // required int32 aNumberOfCores = 3;
+  // required sint32 aNumberOfCores = 3;
   bool has_anumberofcores() const;
   private:
   bool _internal_has_anumberofcores() const;
@@ -2323,7 +2323,7 @@ Msg_InitEncode::mutable_acodecspecific() {
   return _internal_mutable_acodecspecific();
 }
 
-// required int32 aNumberOfCores = 3;
+// required sint32 aNumberOfCores = 3;
 inline bool Msg_InitEncode::_internal_has_anumberofcores() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

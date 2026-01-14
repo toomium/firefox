@@ -46,10 +46,10 @@ message Msg_SetRequest {
   required bytes name = 7;
   required bytes value = 8;
   required bool session = 9;
-  required int64 expires = 10;
+  required sint64 expires = 10;
   required bytes domain = 11;
   required bytes path = 12;
-  required int32 sameSite = 13;
+  required sint32 sameSite = 13;
   required bool partitioned = 14;
   required bytes operationId = 15;
 }

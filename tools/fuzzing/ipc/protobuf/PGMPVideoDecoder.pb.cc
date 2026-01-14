@@ -389,11 +389,11 @@ const char* Msg_InitDecode::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required int32 aCoreCount = 3;
+      // required sint32 aCoreCount = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_acorecount(&has_bits);
-          _impl_.acorecount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.acorecount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -441,10 +441,10 @@ uint8_t* Msg_InitDecode::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_acodecspecific(i), target);
   }
 
-  // required int32 aCoreCount = 3;
+  // required sint32 aCoreCount = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_acorecount(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_acorecount(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -467,8 +467,8 @@ size_t Msg_InitDecode::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_acorecount()) {
-    // required int32 aCoreCount = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_acorecount());
+    // required sint32 aCoreCount = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_acorecount());
   }
 
   return total_size;
@@ -483,8 +483,8 @@ size_t Msg_InitDecode::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_acodecsettings());
 
-    // required int32 aCoreCount = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_acorecount());
+    // required sint32 aCoreCount = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_acorecount());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -966,11 +966,11 @@ const char* Msg_Decode::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required int64 aRenderTimeMs = 5;
+      // required sint64 aRenderTimeMs = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_arendertimems(&has_bits);
-          _impl_.arendertimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.arendertimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1031,10 +1031,10 @@ uint8_t* Msg_Decode::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_acodecspecificinfo(i), target);
   }
 
-  // required int64 aRenderTimeMs = 5;
+  // required sint64 aRenderTimeMs = 5;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_arendertimems(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(5, this->_internal_arendertimems(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1064,8 +1064,8 @@ size_t Msg_Decode::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_arendertimems()) {
-    // required int64 aRenderTimeMs = 5;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_arendertimems());
+    // required sint64 aRenderTimeMs = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_arendertimems());
   }
 
   if (_internal_has_amissingframes()) {
@@ -1090,8 +1090,8 @@ size_t Msg_Decode::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.ainputframe_);
 
-    // required int64 aRenderTimeMs = 5;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_arendertimems());
+    // required sint64 aRenderTimeMs = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_arendertimems());
 
     // required bool aMissingFrames = 3;
     total_size += 1 + 1;

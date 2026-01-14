@@ -931,7 +931,7 @@ class Msg_OnStartRequest final :
       ::protobuf::mozilla::ipc::URIParams* auri);
   ::protobuf::mozilla::ipc::URIParams* unsafe_arena_release_auri();
 
-  // required int64 aContentLength = 2;
+  // required sint64 aContentLength = 2;
   bool has_acontentlength() const;
   private:
   bool _internal_has_acontentlength() const;
@@ -1751,7 +1751,7 @@ inline void Msg_OnStartRequest::set_allocated_achannelstatus(std::string* achann
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aChannelStatus)
 }
 
-// required int64 aContentLength = 2;
+// required sint64 aContentLength = 2;
 inline bool Msg_OnStartRequest::_internal_has_acontentlength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

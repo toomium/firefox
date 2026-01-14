@@ -50,7 +50,7 @@ message Msg_EnsureProvisionalTransport {
   required string transportId = 1;
   required string localUfrag = 2;
   required string localPwd = 3;
-  required int32 componentCount = 4;
+  required sint32 componentCount = 4;
 }
 
 message Msg_SetTargetForDefaultLocalAddressLookup {
@@ -68,12 +68,12 @@ message Msg_ActivateTransport {
   required string transportId = 1;
   required string localUfrag = 2;
   required string localPwd = 3;
-  required int32 componentCount = 4;
+  required sint32 componentCount = 4;
   required string remoteUfrag = 5;
   required string remotePwd = 6;
   repeated uint32 keyDer = 7;
   repeated uint32 certDer = 8;
-  required int32 authType = 9;
+  required sint32 authType = 9;
   required bool dtlsClient = 10;
   required bytes digests = 11;
   required bool privacyRequested = 12;
@@ -124,12 +124,12 @@ message Msg_OnAlpnNegotiated {
 
 message Msg_OnGatheringStateChange {
   required string transportId = 1;
-  required int32 state = 2;
+  required sint32 state = 2;
 }
 
 message Msg_OnConnectionStateChange {
   required string transportId = 1;
-  required int32 state = 2;
+  required sint32 state = 2;
 }
 
 message Msg_OnPacketReceived {
@@ -144,12 +144,12 @@ message Msg_OnEncryptedSending {
 
 message Msg_OnStateChange {
   required string transportId = 1;
-  required int32 state = 2;
+  required sint32 state = 2;
 }
 
 message Msg_OnRtcpStateChange {
   required string transportId = 1;
-  required int32 state = 2;
+  required sint32 state = 2;
 }
 
 // Parameter mappings stats:

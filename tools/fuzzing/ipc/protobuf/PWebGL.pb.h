@@ -5438,7 +5438,7 @@ class Reply_GetFragDataLocation final :
   enum : int {
     kRetFieldNumber = 1,
   };
-  // required int32 ret = 1;
+  // required sint32 ret = 1;
   bool has_ret() const;
   private:
   bool _internal_has_ret() const;
@@ -12379,7 +12379,7 @@ inline void Msg_GetFragDataLocation::set_allocated_name(std::string* name) {
 
 // Reply_GetFragDataLocation
 
-// required int32 ret = 1;
+// required sint32 ret = 1;
 inline bool Reply_GetFragDataLocation::_internal_has_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

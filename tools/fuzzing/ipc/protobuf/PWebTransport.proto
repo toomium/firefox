@@ -23,7 +23,7 @@ message Msg_Close {
 }
 
 message Msg_CreateUnidirectionalStream {
-  optional int64 sendOrder = 1;
+  optional sint64 sendOrder = 1;
 }
 
 message Reply_CreateUnidirectionalStream {
@@ -31,7 +31,7 @@ message Reply_CreateUnidirectionalStream {
 }
 
 message Msg_CreateBidirectionalStream {
-  optional int64 sendOrder = 1;
+  optional sint64 sendOrder = 1;
 }
 
 message Reply_CreateBidirectionalStream {
@@ -56,7 +56,7 @@ message Reply_GetMaxDatagramSize {
 
 message Msg_SetSendOrder {
   required uint64 streamId = 1;
-  optional int64 sendOrder = 2;
+  optional sint64 sendOrder = 2;
 }
 
 message Msg_IncomingUnidirectionalStream {

@@ -20,7 +20,7 @@ message Msg_InitVerifySSLServerCert {
   required bytes aEndpoint = 1;
   repeated protobuf.mozilla.psm.ByteArray aPeerCertChain = 2;
   required bytes aHostName = 3;
-  required int32 aPort = 4;
+  required sint32 aPort = 4;
   required bytes aOriginAttributes = 5;
   optional protobuf.mozilla.psm.ByteArray aStapledOCSPResponse = 6;
   optional protobuf.mozilla.psm.ByteArray aSctsFromTLSExtension = 7;
@@ -33,7 +33,7 @@ message Msg_InitSelectTLSClientAuthCert {
   required bytes aEndpoint = 1;
   required bytes aHostName = 2;
   required bytes aOriginAttributes = 3;
-  required int32 aPort = 4;
+  required sint32 aPort = 4;
   required uint32 aProviderFlags = 5;
   required uint32 aProviderTlsFlags = 6;
   required protobuf.mozilla.psm.ByteArray aServerCertBytes = 7;

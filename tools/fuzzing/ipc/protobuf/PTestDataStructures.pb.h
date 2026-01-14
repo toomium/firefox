@@ -343,7 +343,7 @@ class Msg_PTestDataStructuresSubConstructor final :
   enum : int {
     kIFieldNumber = 1,
   };
-  // required int32 i = 1;
+  // required sint32 i = 1;
   bool has_i() const;
   private:
   bool _internal_has_i() const;
@@ -981,7 +981,7 @@ class Msg_TestArrayOfInt final :
   enum : int {
     kI1FieldNumber = 1,
   };
-  // repeated int32 i1 = 1;
+  // repeated sint32 i1 = 1;
   int i1_size() const;
   private:
   int _internal_i1_size() const;
@@ -1131,7 +1131,7 @@ class Reply_TestArrayOfInt final :
   enum : int {
     kO1FieldNumber = 1,
   };
-  // repeated int32 o1 = 1;
+  // repeated sint32 o1 = 1;
   int o1_size() const;
   private:
   int _internal_o1_size() const;
@@ -6940,7 +6940,7 @@ class Reply_TestNsIntRegion final :
 #endif  // __GNUC__
 // Msg_PTestDataStructuresSubConstructor
 
-// required int32 i = 1;
+// required sint32 i = 1;
 inline bool Msg_PTestDataStructuresSubConstructor::_internal_has_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6988,7 +6988,7 @@ inline void Msg_PTestDataStructuresSubConstructor::set_i(int32_t value) {
 
 // Msg_TestArrayOfInt
 
-// repeated int32 i1 = 1;
+// repeated sint32 i1 = 1;
 inline int Msg_TestArrayOfInt::_internal_i1_size() const {
   return _impl_.i1_.size();
 }
@@ -7039,7 +7039,7 @@ Msg_TestArrayOfInt::mutable_i1() {
 
 // Reply_TestArrayOfInt
 
-// repeated int32 o1 = 1;
+// repeated sint32 o1 = 1;
 inline int Reply_TestArrayOfInt::_internal_o1_size() const {
   return _impl_.o1_.size();
 }

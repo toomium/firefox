@@ -3564,7 +3564,7 @@ class CoseAlg final :
   enum : int {
     kAlgFieldNumber = 1,
   };
-  // required int64 alg = 1;
+  // required sint64 alg = 1;
   bool has_alg() const;
   private:
   bool _internal_has_alg() const;
@@ -7545,7 +7545,7 @@ inline void WebAuthnMakeCredentialUserInfo::set_allocated_displayname(std::strin
 
 // CoseAlg
 
-// required int64 alg = 1;
+// required sint64 alg = 1;
 inline bool CoseAlg::_internal_has_alg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

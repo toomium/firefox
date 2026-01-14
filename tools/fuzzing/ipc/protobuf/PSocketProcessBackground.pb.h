@@ -322,7 +322,7 @@ class Msg_InitVerifySSLServerCert final :
       ::protobuf::mozilla::psm::DelegatedCredentialInfoArg* adcinfo);
   ::protobuf::mozilla::psm::DelegatedCredentialInfoArg* unsafe_arena_release_adcinfo();
 
-  // required int32 aPort = 4;
+  // required sint32 aPort = 4;
   bool has_aport() const;
   private:
   bool _internal_has_aport() const;
@@ -600,7 +600,7 @@ class Msg_InitSelectTLSClientAuthCert final :
       ::protobuf::mozilla::psm::ByteArray* aservercertbytes);
   ::protobuf::mozilla::psm::ByteArray* unsafe_arena_release_aservercertbytes();
 
-  // required int32 aPort = 4;
+  // required sint32 aPort = 4;
   bool has_aport() const;
   private:
   bool _internal_has_aport() const;
@@ -1174,7 +1174,7 @@ inline void Msg_InitVerifySSLServerCert::set_allocated_ahostname(std::string* ah
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitVerifySSLServerCert.aHostName)
 }
 
-// required int32 aPort = 4;
+// required sint32 aPort = 4;
 inline bool Msg_InitVerifySSLServerCert::_internal_has_aport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -1795,7 +1795,7 @@ inline void Msg_InitSelectTLSClientAuthCert::set_allocated_aoriginattributes(std
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitSelectTLSClientAuthCert.aOriginAttributes)
 }
 
-// required int32 aPort = 4;
+// required sint32 aPort = 4;
 inline bool Msg_InitSelectTLSClientAuthCert::_internal_has_aport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

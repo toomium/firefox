@@ -40,10 +40,10 @@ message SystemFontListEntry {
 }
 
 message SystemFontOptions {
-  required int32 antialias = 1;
-  required int32 subpixelOrder = 2;
-  required int32 hintStyle = 3;
-  required int32 lcdFilter = 4;
+  required sint32 antialias = 1;
+  required sint32 subpixelOrder = 2;
+  required sint32 hintStyle = 3;
+  required sint32 lcdFilter = 4;
 }
 
 message SystemFontList {
@@ -163,7 +163,7 @@ message L10nFileSourceDescriptor {
 message XPCOMInitData {
   required bool isOffline = 1;
   required bool isConnected = 2;
-  required int32 captivePortalState = 3;
+  required sint32 captivePortalState = 3;
   required bool isLangRTL = 4;
   required bool haveBidiKeyboards = 5;
   repeated bytes dictionaries = 6;

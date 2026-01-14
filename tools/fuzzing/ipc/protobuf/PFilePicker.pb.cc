@@ -311,11 +311,11 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 selectedType = 1;
+      // required sint32 selectedType = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_selectedtype(&has_bits);
-          _impl_.selectedtype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.selectedtype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -456,10 +456,10 @@ uint8_t* Msg_Open::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 selectedType = 1;
+  // required sint32 selectedType = 1;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_selectedtype(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_selectedtype(), target);
   }
 
   // required bool addToRecentDocs = 2;
@@ -577,8 +577,8 @@ size_t Msg_Open::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_selectedtype()) {
-    // required int32 selectedType = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_selectedtype());
+    // required sint32 selectedType = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_selectedtype());
   }
 
   if (_internal_has_addtorecentdocs()) {
@@ -623,8 +623,8 @@ size_t Msg_Open::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_capture());
 
-    // required int32 selectedType = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_selectedtype());
+    // required sint32 selectedType = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_selectedtype());
 
     // required bool addToRecentDocs = 2;
     total_size += 1 + 1;

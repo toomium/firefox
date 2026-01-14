@@ -24,7 +24,7 @@ message Msg_OnStartRequest {
   required bytes securityInfo = 3;
   required bool proxyConnectFailed = 4;
   required protobuf.mozilla.net.TimingStructArgs timings = 5;
-  required int32 proxyConnectResponseCode = 6;
+  required sint32 proxyConnectResponseCode = 6;
   repeated uint32 dataForSniffer = 7;
   optional bytes altSvcUsed = 8;
   required bool dataToChildProcess = 9;
@@ -40,8 +40,8 @@ message Msg_OnStartRequest {
 
 message Msg_OnTransportStatus {
   required bytes status = 1;
-  required int64 progress = 2;
-  required int64 progressMax = 3;
+  required sint64 progress = 2;
+  required sint64 progressMax = 3;
   optional protobuf.mozilla.net.NetworkAddressArg networkAddressArg = 4;
 }
 
@@ -55,7 +55,7 @@ message Msg_OnDataAvailable {
 message Msg_OnStopRequest {
   required bytes status = 1;
   required bool responseIsComplete = 2;
-  required int64 transferSize = 3;
+  required sint64 transferSize = 3;
   required protobuf.mozilla.net.TimingStructArgs timings = 4;
   optional bytes responseTrailers = 5;
   optional protobuf.mozilla.net.TransactionObserverResult transactionObserverResult = 6;

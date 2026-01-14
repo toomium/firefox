@@ -1323,11 +1323,11 @@ const char* Msg_ScrollRectIntoView::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // required int32 aAppUnitsPerDevPixel = 5;
+      // required sint32 aAppUnitsPerDevPixel = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_aappunitsperdevpixel(&has_bits);
-          _impl_.aappunitsperdevpixel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aappunitsperdevpixel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1387,10 +1387,10 @@ uint8_t* Msg_ScrollRectIntoView::_InternalSerialize(
         4, this->_internal_ascrollflags(), target);
   }
 
-  // required int32 aAppUnitsPerDevPixel = 5;
+  // required sint32 aAppUnitsPerDevPixel = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_aappunitsperdevpixel(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_aappunitsperdevpixel(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1434,8 +1434,8 @@ size_t Msg_ScrollRectIntoView::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_aappunitsperdevpixel()) {
-    // required int32 aAppUnitsPerDevPixel = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aappunitsperdevpixel());
+    // required sint32 aAppUnitsPerDevPixel = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aappunitsperdevpixel());
   }
 
   return total_size;
@@ -1465,8 +1465,8 @@ size_t Msg_ScrollRectIntoView::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_ascrollflags());
 
-    // required int32 aAppUnitsPerDevPixel = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aappunitsperdevpixel());
+    // required sint32 aAppUnitsPerDevPixel = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aappunitsperdevpixel());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

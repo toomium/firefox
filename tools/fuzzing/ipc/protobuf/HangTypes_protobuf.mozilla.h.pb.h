@@ -1814,7 +1814,7 @@ class HangStack final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::HangEntry >&
       stack() const;
 
-  // repeated int32 strbuffer = 2;
+  // repeated sint32 strbuffer = 2;
   int strbuffer_size() const;
   private:
   int _internal_strbuffer_size() const;
@@ -3367,7 +3367,7 @@ HangStack::stack() const {
   return _impl_.stack_;
 }
 
-// repeated int32 strbuffer = 2;
+// repeated sint32 strbuffer = 2;
 inline int HangStack::_internal_strbuffer_size() const {
   return _impl_.strbuffer_.size();
 }

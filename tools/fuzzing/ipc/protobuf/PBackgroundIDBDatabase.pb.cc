@@ -2449,20 +2449,20 @@ const char* Msg_PBackgroundIDBVersionChangeTransactionConstructor::_InternalPars
         } else
           goto handle_unusual;
         continue;
-      // required int64 nextObjectStoreId = 3;
+      // required sint64 nextObjectStoreId = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_nextobjectstoreid(&has_bits);
-          _impl_.nextobjectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.nextobjectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 nextIndexId = 4;
+      // required sint64 nextIndexId = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_nextindexid(&has_bits);
-          _impl_.nextindexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.nextindexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2510,16 +2510,16 @@ uint8_t* Msg_PBackgroundIDBVersionChangeTransactionConstructor::_InternalSeriali
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_requestedversion(), target);
   }
 
-  // required int64 nextObjectStoreId = 3;
+  // required sint64 nextObjectStoreId = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_nextobjectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(3, this->_internal_nextobjectstoreid(), target);
   }
 
-  // required int64 nextIndexId = 4;
+  // required sint64 nextIndexId = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_nextindexid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_nextindexid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2545,13 +2545,13 @@ size_t Msg_PBackgroundIDBVersionChangeTransactionConstructor::RequiredFieldsByte
   }
 
   if (_internal_has_nextobjectstoreid()) {
-    // required int64 nextObjectStoreId = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_nextobjectstoreid());
+    // required sint64 nextObjectStoreId = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_nextobjectstoreid());
   }
 
   if (_internal_has_nextindexid()) {
-    // required int64 nextIndexId = 4;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_nextindexid());
+    // required sint64 nextIndexId = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_nextindexid());
   }
 
   return total_size;
@@ -2567,11 +2567,11 @@ size_t Msg_PBackgroundIDBVersionChangeTransactionConstructor::ByteSizeLong() con
     // required uint64 requestedVersion = 2;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_requestedversion());
 
-    // required int64 nextObjectStoreId = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_nextobjectstoreid());
+    // required sint64 nextObjectStoreId = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_nextobjectstoreid());
 
-    // required int64 nextIndexId = 4;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_nextindexid());
+    // required sint64 nextIndexId = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_nextindexid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

@@ -18,7 +18,7 @@ import "IPCBlob.proto";
 
 // Message declarations
 message Msg_Open {
-  required int32 selectedType = 1;
+  required sint32 selectedType = 1;
   required bool addToRecentDocs = 2;
   required bytes defaultFile = 3;
   required bytes defaultExtension = 4;

@@ -159,7 +159,7 @@ message Msg_ForcePresent {
 }
 
 message Msg_StartFrameTimeRecording {
-  required int32 bufferSize = 1;
+  required sint32 bufferSize = 1;
 }
 
 message Reply_StartFrameTimeRecording {
@@ -229,7 +229,7 @@ message Msg_RequestFxrOutput {
 }
 
 message Msg_DynamicToolbarOffsetChanged {
-  required int32 aOffset = 1;
+  required sint32 aOffset = 1;
 }
 
 // Parameter mappings stats:

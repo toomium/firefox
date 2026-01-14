@@ -3274,7 +3274,7 @@ class Msg_PerformHapticFeedback final :
   enum : int {
     kATypeFieldNumber = 1,
   };
-  // required int32 aType = 1;
+  // required sint32 aType = 1;
   bool has_atype() const;
   private:
   bool _internal_has_atype() const;
@@ -5293,7 +5293,7 @@ inline void Reply_LockScreenOrientation::set_allocated_result(std::string* resul
 
 // Msg_PerformHapticFeedback
 
-// required int32 aType = 1;
+// required sint32 aType = 1;
 inline bool Msg_PerformHapticFeedback::_internal_has_atype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

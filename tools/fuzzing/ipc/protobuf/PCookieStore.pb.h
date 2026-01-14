@@ -909,7 +909,7 @@ class Msg_SetRequest final :
   void _internal_set_partitioned(bool value);
   public:
 
-  // required int64 expires = 10;
+  // required sint64 expires = 10;
   bool has_expires() const;
   private:
   bool _internal_has_expires() const;
@@ -922,7 +922,7 @@ class Msg_SetRequest final :
   void _internal_set_expires(int64_t value);
   public:
 
-  // required int32 sameSite = 13;
+  // required sint32 sameSite = 13;
   bool has_samesite() const;
   private:
   bool _internal_has_samesite() const;
@@ -3587,7 +3587,7 @@ inline void Msg_SetRequest::set_session(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.session)
 }
 
-// required int64 expires = 10;
+// required sint64 expires = 10;
 inline bool Msg_SetRequest::_internal_has_expires() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -3751,7 +3751,7 @@ inline void Msg_SetRequest::set_allocated_path(std::string* path) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.path)
 }
 
-// required int32 sameSite = 13;
+// required sint32 sameSite = 13;
 inline bool Msg_SetRequest::_internal_has_samesite() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;

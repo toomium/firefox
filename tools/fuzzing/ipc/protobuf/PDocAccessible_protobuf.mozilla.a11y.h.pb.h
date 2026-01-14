@@ -1188,7 +1188,7 @@ class TextChangeEventData final :
   void _internal_set_id(uint64_t value);
   public:
 
-  // required int32 Start = 3;
+  // required sint32 Start = 3;
   bool has_start() const;
   private:
   bool _internal_has_start() const;
@@ -1657,7 +1657,7 @@ class TextRangeData final :
   void _internal_set_endid(uint64_t value);
   public:
 
-  // required int32 StartOffset = 3;
+  // required sint32 StartOffset = 3;
   bool has_startoffset() const;
   private:
   bool _internal_has_startoffset() const;
@@ -1670,7 +1670,7 @@ class TextRangeData final :
   void _internal_set_startoffset(int32_t value);
   public:
 
-  // required int32 EndOffset = 4;
+  // required sint32 EndOffset = 4;
   bool has_endoffset() const;
   private:
   bool _internal_has_endoffset() const;
@@ -2556,7 +2556,7 @@ inline void TextChangeEventData::set_allocated_str(std::string* str) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.TextChangeEventData.Str)
 }
 
-// required int32 Start = 3;
+// required sint32 Start = 3;
 inline bool TextChangeEventData::_internal_has_start() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3111,7 +3111,7 @@ inline void TextRangeData::set_endid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextRangeData.EndID)
 }
 
-// required int32 StartOffset = 3;
+// required sint32 StartOffset = 3;
 inline bool TextRangeData::_internal_has_startoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3139,7 +3139,7 @@ inline void TextRangeData::set_startoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextRangeData.StartOffset)
 }
 
-// required int32 EndOffset = 4;
+// required sint32 EndOffset = 4;
 inline bool TextRangeData::_internal_has_endoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

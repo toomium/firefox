@@ -257,7 +257,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   void _internal_set_acerttransparencystatus(uint32_t value);
   public:
 
-  // required int32 aFinalError = 5;
+  // required sint32 aFinalError = 5;
   bool has_afinalerror() const;
   private:
   bool _internal_has_afinalerror() const;
@@ -754,7 +754,7 @@ inline void Msg_OnVerifySSLServerCertFinished::set_asucceeded(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aSucceeded)
 }
 
-// required int32 aFinalError = 5;
+// required sint32 aFinalError = 5;
 inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_afinalerror() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

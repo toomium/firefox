@@ -236,7 +236,7 @@ class IPCFile final :
   std::string* _internal_mutable_fullpath();
   public:
 
-  // required int64 lastModified = 2;
+  // required sint64 lastModified = 2;
   bool has_lastmodified() const;
   private:
   bool _internal_has_lastmodified() const;
@@ -488,7 +488,7 @@ class IPCBlob final :
   void _internal_set_size(uint64_t value);
   public:
 
-  // required int64 fileId = 6;
+  // required sint64 fileId = 6;
   bool has_fileid() const;
   private:
   bool _internal_has_fileid() const;
@@ -603,7 +603,7 @@ inline void IPCFile::set_allocated_name(std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCFile.name)
 }
 
-// required int64 lastModified = 2;
+// required sint64 lastModified = 2;
 inline bool IPCFile::_internal_has_lastmodified() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1140,7 +1140,7 @@ inline void IPCBlob::set_allocated_file(::protobuf::mozilla::dom::IPCFile* file)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBlob.file)
 }
 
-// required int64 fileId = 6;
+// required sint64 fileId = 6;
 inline bool IPCBlob::_internal_has_fileid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

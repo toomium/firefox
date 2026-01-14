@@ -386,10 +386,10 @@ const char* DummyUnion::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // int32 mVint = 2;
+      // sint32 mVint = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -431,7 +431,7 @@ uint8_t* DummyUnion::_InternalSerialize(
     }
     case kMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_mvint(), target);
       break;
     }
     default: ;
@@ -460,9 +460,9 @@ size_t DummyUnion::ByteSizeLong() const {
           this->_internal_mvstring());
       break;
     }
-    // int32 mVint = 2;
+    // sint32 mVint = 2;
     case kMVint: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_mvint());
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
       break;
     }
     case CONTENT_NOT_SET: {

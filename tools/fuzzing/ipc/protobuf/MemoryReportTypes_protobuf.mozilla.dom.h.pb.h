@@ -231,7 +231,7 @@ class MemoryReport final :
   std::string* _internal_mutable_desc();
   public:
 
-  // required int32 kind = 3;
+  // required sint32 kind = 3;
   bool has_kind() const;
   private:
   bool _internal_has_kind() const;
@@ -244,7 +244,7 @@ class MemoryReport final :
   void _internal_set_kind(int32_t value);
   public:
 
-  // required int32 units = 4;
+  // required sint32 units = 4;
   bool has_units() const;
   private:
   bool _internal_has_units() const;
@@ -257,7 +257,7 @@ class MemoryReport final :
   void _internal_set_units(int32_t value);
   public:
 
-  // required int64 amount = 5;
+  // required sint64 amount = 5;
   bool has_amount() const;
   private:
   bool _internal_has_amount() const;
@@ -454,7 +454,7 @@ inline void MemoryReport::set_allocated_path(std::string* path) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MemoryReport.path)
 }
 
-// required int32 kind = 3;
+// required sint32 kind = 3;
 inline bool MemoryReport::_internal_has_kind() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -482,7 +482,7 @@ inline void MemoryReport::set_kind(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.kind)
 }
 
-// required int32 units = 4;
+// required sint32 units = 4;
 inline bool MemoryReport::_internal_has_units() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -510,7 +510,7 @@ inline void MemoryReport::set_units(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.units)
 }
 
-// required int64 amount = 5;
+// required sint64 amount = 5;
 inline bool MemoryReport::_internal_has_amount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

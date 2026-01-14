@@ -1725,11 +1725,11 @@ const char* Msg_CancelContentJSExecutionIfRunning::_InternalParse(const char* pt
         } else
           goto handle_unusual;
         continue;
-      // required int32 aNavigationIndex = 3;
+      // required sint32 aNavigationIndex = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_anavigationindex(&has_bits);
-          _impl_.anavigationindex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.anavigationindex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1743,11 +1743,11 @@ const char* Msg_CancelContentJSExecutionIfRunning::_InternalParse(const char* pt
         } else
           goto handle_unusual;
         continue;
-      // required int32 aEpoch = 5;
+      // required sint32 aEpoch = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_aepoch(&has_bits);
-          _impl_.aepoch_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aepoch_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1795,10 +1795,10 @@ uint8_t* Msg_CancelContentJSExecutionIfRunning::_InternalSerialize(
         2, this->_internal_anavigationtype(), target);
   }
 
-  // required int32 aNavigationIndex = 3;
+  // required sint32 aNavigationIndex = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_anavigationindex(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_anavigationindex(), target);
   }
 
   // optional bytes aNavigationURI = 4;
@@ -1807,10 +1807,10 @@ uint8_t* Msg_CancelContentJSExecutionIfRunning::_InternalSerialize(
         4, this->_internal_anavigationuri(), target);
   }
 
-  // required int32 aEpoch = 5;
+  // required sint32 aEpoch = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_aepoch(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_aepoch(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1840,13 +1840,13 @@ size_t Msg_CancelContentJSExecutionIfRunning::RequiredFieldsByteSizeFallback() c
   }
 
   if (_internal_has_anavigationindex()) {
-    // required int32 aNavigationIndex = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_anavigationindex());
+    // required sint32 aNavigationIndex = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_anavigationindex());
   }
 
   if (_internal_has_aepoch()) {
-    // required int32 aEpoch = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aepoch());
+    // required sint32 aEpoch = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aepoch());
   }
 
   return total_size;
@@ -1866,11 +1866,11 @@ size_t Msg_CancelContentJSExecutionIfRunning::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_anavigationtype());
 
-    // required int32 aNavigationIndex = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_anavigationindex());
+    // required sint32 aNavigationIndex = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_anavigationindex());
 
-    // required int32 aEpoch = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aepoch());
+    // required sint32 aEpoch = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aepoch());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

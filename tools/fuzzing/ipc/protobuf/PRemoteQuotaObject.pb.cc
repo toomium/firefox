@@ -152,11 +152,11 @@ const char* Msg_MaybeUpdateSize::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 size = 1;
+      // required sint64 size = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_size(&has_bits);
-          _impl_.size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -201,10 +201,10 @@ uint8_t* Msg_MaybeUpdateSize::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 size = 1;
+  // required sint64 size = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_size(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_size(), target);
   }
 
   // required bool truncate = 2;
@@ -226,8 +226,8 @@ size_t Msg_MaybeUpdateSize::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_size()) {
-    // required int64 size = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_size());
+    // required sint64 size = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_size());
   }
 
   if (_internal_has_truncate()) {
@@ -242,8 +242,8 @@ size_t Msg_MaybeUpdateSize::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required int64 size = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_size());
+    // required sint64 size = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_size());
 
     // required bool truncate = 2;
     total_size += 1 + 1;

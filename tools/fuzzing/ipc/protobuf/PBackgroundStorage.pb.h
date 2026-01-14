@@ -3553,7 +3553,7 @@ class Msg_LoadUsage final :
   std::string* _internal_mutable_scope();
   public:
 
-  // required int64 usage = 2;
+  // required sint64 usage = 2;
   bool has_usage() const;
   private:
   bool _internal_has_usage() const;
@@ -6280,7 +6280,7 @@ inline void Msg_LoadUsage::set_allocated_scope(std::string* scope) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadUsage.scope)
 }
 
-// required int64 usage = 2;
+// required sint64 usage = 2;
 inline bool Msg_LoadUsage::_internal_has_usage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

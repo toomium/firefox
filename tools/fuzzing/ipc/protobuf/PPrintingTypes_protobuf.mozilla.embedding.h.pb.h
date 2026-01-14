@@ -398,7 +398,7 @@ class PrintData final :
     kIsInitializedFromPrefsFieldNumber = 48,
     kDestinationFieldNumber = 54,
   };
-  // repeated int32 pageRanges = 22;
+  // repeated sint32 pageRanges = 22;
   int pageranges_size() const;
   private:
   int _internal_pageranges_size() const;
@@ -993,7 +993,7 @@ class PrintData final :
   void _internal_set_paperheight(double value);
   public:
 
-  // required int32 paperSizeUnit = 36;
+  // required sint32 paperSizeUnit = 36;
   bool has_papersizeunit() const;
   private:
   bool _internal_has_papersizeunit() const;
@@ -1058,7 +1058,7 @@ class PrintData final :
   void _internal_set_isinitializedfromprinter(bool value);
   public:
 
-  // required int32 orientation = 39;
+  // required sint32 orientation = 39;
   bool has_orientation() const;
   private:
   bool _internal_has_orientation() const;
@@ -1071,7 +1071,7 @@ class PrintData final :
   void _internal_set_orientation(int32_t value);
   public:
 
-  // required int32 numCopies = 40;
+  // required sint32 numCopies = 40;
   bool has_numcopies() const;
   private:
   bool _internal_has_numcopies() const;
@@ -1084,7 +1084,7 @@ class PrintData final :
   void _internal_set_numcopies(int32_t value);
   public:
 
-  // required int32 numPagesPerSheet = 41;
+  // required sint32 numPagesPerSheet = 41;
   bool has_numpagespersheet() const;
   private:
   bool _internal_has_numpagespersheet() const;
@@ -1097,7 +1097,7 @@ class PrintData final :
   void _internal_set_numpagespersheet(int32_t value);
   public:
 
-  // required int32 outputDestination = 42;
+  // required sint32 outputDestination = 42;
   bool has_outputdestination() const;
   private:
   bool _internal_has_outputdestination() const;
@@ -1110,7 +1110,7 @@ class PrintData final :
   void _internal_set_outputdestination(int32_t value);
   public:
 
-  // required int32 outputFormat = 43;
+  // required sint32 outputFormat = 43;
   bool has_outputformat() const;
   private:
   bool _internal_has_outputformat() const;
@@ -1123,7 +1123,7 @@ class PrintData final :
   void _internal_set_outputformat(int32_t value);
   public:
 
-  // required int32 printPageDelay = 44;
+  // required sint32 printPageDelay = 44;
   bool has_printpagedelay() const;
   private:
   bool _internal_has_printpagedelay() const;
@@ -1136,7 +1136,7 @@ class PrintData final :
   void _internal_set_printpagedelay(int32_t value);
   public:
 
-  // required int32 resolution = 45;
+  // required sint32 resolution = 45;
   bool has_resolution() const;
   private:
   bool _internal_has_resolution() const;
@@ -1149,7 +1149,7 @@ class PrintData final :
   void _internal_set_resolution(int32_t value);
   public:
 
-  // required int32 duplex = 46;
+  // required sint32 duplex = 46;
   bool has_duplex() const;
   private:
   bool _internal_has_duplex() const;
@@ -2038,7 +2038,7 @@ inline void PrintData::set_printselectiononly(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.printSelectionOnly)
 }
 
-// repeated int32 pageRanges = 22;
+// repeated sint32 pageRanges = 22;
 inline int PrintData::_internal_pageranges_size() const {
   return _impl_.pageranges_.size();
 }
@@ -2809,7 +2809,7 @@ inline void PrintData::set_paperheight(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.paperHeight)
 }
 
-// required int32 paperSizeUnit = 36;
+// required sint32 paperSizeUnit = 36;
 inline bool PrintData::_internal_has_papersizeunit() const {
   bool value = (_impl_._has_bits_[1] & 0x00000010u) != 0;
   return value;
@@ -2893,7 +2893,7 @@ inline void PrintData::set_printincolor(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.printInColor)
 }
 
-// required int32 orientation = 39;
+// required sint32 orientation = 39;
 inline bool PrintData::_internal_has_orientation() const {
   bool value = (_impl_._has_bits_[1] & 0x00000200u) != 0;
   return value;
@@ -2921,7 +2921,7 @@ inline void PrintData::set_orientation(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.orientation)
 }
 
-// required int32 numCopies = 40;
+// required sint32 numCopies = 40;
 inline bool PrintData::_internal_has_numcopies() const {
   bool value = (_impl_._has_bits_[1] & 0x00000400u) != 0;
   return value;
@@ -2949,7 +2949,7 @@ inline void PrintData::set_numcopies(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.numCopies)
 }
 
-// required int32 numPagesPerSheet = 41;
+// required sint32 numPagesPerSheet = 41;
 inline bool PrintData::_internal_has_numpagespersheet() const {
   bool value = (_impl_._has_bits_[1] & 0x00000800u) != 0;
   return value;
@@ -2977,7 +2977,7 @@ inline void PrintData::set_numpagespersheet(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.numPagesPerSheet)
 }
 
-// required int32 outputDestination = 42;
+// required sint32 outputDestination = 42;
 inline bool PrintData::_internal_has_outputdestination() const {
   bool value = (_impl_._has_bits_[1] & 0x00001000u) != 0;
   return value;
@@ -3005,7 +3005,7 @@ inline void PrintData::set_outputdestination(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.outputDestination)
 }
 
-// required int32 outputFormat = 43;
+// required sint32 outputFormat = 43;
 inline bool PrintData::_internal_has_outputformat() const {
   bool value = (_impl_._has_bits_[1] & 0x00002000u) != 0;
   return value;
@@ -3033,7 +3033,7 @@ inline void PrintData::set_outputformat(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.outputFormat)
 }
 
-// required int32 printPageDelay = 44;
+// required sint32 printPageDelay = 44;
 inline bool PrintData::_internal_has_printpagedelay() const {
   bool value = (_impl_._has_bits_[1] & 0x00004000u) != 0;
   return value;
@@ -3061,7 +3061,7 @@ inline void PrintData::set_printpagedelay(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.printPageDelay)
 }
 
-// required int32 resolution = 45;
+// required sint32 resolution = 45;
 inline bool PrintData::_internal_has_resolution() const {
   bool value = (_impl_._has_bits_[1] & 0x00008000u) != 0;
   return value;
@@ -3089,7 +3089,7 @@ inline void PrintData::set_resolution(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.resolution)
 }
 
-// required int32 duplex = 46;
+// required sint32 duplex = 46;
 inline bool PrintData::_internal_has_duplex() const {
   bool value = (_impl_._has_bits_[1] & 0x00010000u) != 0;
   return value;

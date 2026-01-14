@@ -45,7 +45,7 @@ message CacheRequest {
   required bytes mode = 9;
   required bytes credentials = 10;
   optional protobuf.mozilla.dom.cache.CacheReadStream body = 11;
-  required int64 bodyDiskSize = 12;
+  required sint64 bodyDiskSize = 12;
   required bytes contentPolicyType = 13;
   required bytes requestCache = 14;
   required bytes requestRedirect = 15;
@@ -62,11 +62,11 @@ message CacheResponse {
   repeated protobuf.mozilla.dom.cache.HeadersEntry headers = 5;
   required bytes headersGuard = 6;
   optional protobuf.mozilla.dom.cache.CacheReadStream body = 7;
-  required int64 bodyDiskSize = 8;
+  required sint64 bodyDiskSize = 8;
   required bytes securityInfo = 9;
   optional protobuf.mozilla.ipc.PrincipalInfo principalInfo = 10;
   required uint32 paddingInfo = 11;
-  required int64 paddingSize = 12;
+  required sint64 paddingSize = 12;
   required bytes credentials = 13;
 }
 

@@ -3235,11 +3235,11 @@ const char* Msg_BytesRead::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 count = 1;
+      // required sint32 count = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_count(&has_bits);
-          _impl_.count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3275,10 +3275,10 @@ uint8_t* Msg_BytesRead::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 count = 1;
+  // required sint32 count = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_count(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_count(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3293,9 +3293,9 @@ size_t Msg_BytesRead::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PHttpChannel.Msg_BytesRead)
   size_t total_size = 0;
 
-  // required int32 count = 1;
+  // required sint32 count = 1;
   if (_internal_has_count()) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_count());
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_count());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -6485,11 +6485,11 @@ const char* Msg_SetPriority::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 priority = 1;
+      // required sint32 priority = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_priority(&has_bits);
-          _impl_.priority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.priority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6525,10 +6525,10 @@ uint8_t* Msg_SetPriority::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 priority = 1;
+  // required sint32 priority = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_priority(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_priority(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6543,9 +6543,9 @@ size_t Msg_SetPriority::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PHttpChannel.Msg_SetPriority)
   size_t total_size = 0;
 
-  // required int32 priority = 1;
+  // required sint32 priority = 1;
   if (_internal_has_priority()) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_priority());
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_priority());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused

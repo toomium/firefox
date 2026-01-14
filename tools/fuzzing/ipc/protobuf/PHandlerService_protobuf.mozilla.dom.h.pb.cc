@@ -592,11 +592,11 @@ const char* HandlerInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required int32 preferredAction = 8;
+      // required sint32 preferredAction = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_preferredaction(&has_bits);
-          _impl_.preferredaction_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.preferredaction_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -677,10 +677,10 @@ uint8_t* HandlerInfo::_InternalSerialize(
         InternalWriteMessage(7, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // required int32 preferredAction = 8;
+  // required sint32 preferredAction = 8;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(8, this->_internal_preferredaction(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(8, this->_internal_preferredaction(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -727,8 +727,8 @@ size_t HandlerInfo::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_preferredaction()) {
-    // required int32 preferredAction = 8;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_preferredaction());
+    // required sint32 preferredAction = 8;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_preferredaction());
   }
 
   return total_size;
@@ -759,8 +759,8 @@ size_t HandlerInfo::ByteSizeLong() const {
     // required bool alwaysAskBeforeHandling = 4;
     total_size += 1 + 1;
 
-    // required int32 preferredAction = 8;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_preferredaction());
+    // required sint32 preferredAction = 8;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_preferredaction());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

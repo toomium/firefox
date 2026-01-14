@@ -759,11 +759,11 @@ const char* StandardURLSegment::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required int32 length = 2;
+      // required sint32 length = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_length(&has_bits);
-          _impl_.length_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.length_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -805,10 +805,10 @@ uint8_t* StandardURLSegment::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_position(), target);
   }
 
-  // required int32 length = 2;
+  // required sint32 length = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_length(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_length(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -829,8 +829,8 @@ size_t StandardURLSegment::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_length()) {
-    // required int32 length = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_length());
+    // required sint32 length = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_length());
   }
 
   return total_size;
@@ -843,8 +843,8 @@ size_t StandardURLSegment::ByteSizeLong() const {
     // required uint32 position = 1;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_position());
 
-    // required int32 length = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_length());
+    // required sint32 length = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_length());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1276,20 +1276,20 @@ const char* StandardURLParams::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required int32 port = 2;
+      // required sint32 port = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_port(&has_bits);
-          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 defaultPort = 3;
+      // required sint32 defaultPort = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_defaultport(&has_bits);
-          _impl_.defaultport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.defaultport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1454,16 +1454,16 @@ uint8_t* StandardURLParams::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_urltype(), target);
   }
 
-  // required int32 port = 2;
+  // required sint32 port = 2;
   if (cached_has_bits & 0x00004000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_port(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_port(), target);
   }
 
-  // required int32 defaultPort = 3;
+  // required sint32 defaultPort = 3;
   if (cached_has_bits & 0x00008000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_defaultport(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_defaultport(), target);
   }
 
   // required bytes spec = 4;
@@ -1677,13 +1677,13 @@ size_t StandardURLParams::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_port()) {
-    // required int32 port = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
   }
 
   if (_internal_has_defaultport()) {
-    // required int32 defaultPort = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_defaultport());
+    // required sint32 defaultPort = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_defaultport());
   }
 
   if (_internal_has_supportsfileurl()) {
@@ -1771,11 +1771,11 @@ size_t StandardURLParams::ByteSizeLong() const {
     // required uint32 urlType = 1;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_urltype());
 
-    // required int32 port = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
 
-    // required int32 defaultPort = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_defaultport());
+    // required sint32 defaultPort = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_defaultport());
 
     // required bool supportsFileURL = 17;
     total_size += 2 + 1;

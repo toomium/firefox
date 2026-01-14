@@ -19,7 +19,7 @@ import "GMPTypes.proto";
 message Msg_InitEncode {
   required bytes aCodecSettings = 1;
   repeated uint32 aCodecSpecific = 2;
-  required int32 aNumberOfCores = 3;
+  required sint32 aNumberOfCores = 3;
   required uint32 aMaxPayloadSize = 4;
 }
 

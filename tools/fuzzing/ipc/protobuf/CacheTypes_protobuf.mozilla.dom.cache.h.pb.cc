@@ -1996,11 +1996,11 @@ const char* CacheRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required int64 bodyDiskSize = 12;
+      // required sint64 bodyDiskSize = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
           _Internal::set_has_bodydisksize(&has_bits);
-          _impl_.bodydisksize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.bodydisksize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2158,10 +2158,10 @@ uint8_t* CacheRequest::_InternalSerialize(
         _Internal::body(this).GetCachedSize(), target, stream);
   }
 
-  // required int64 bodyDiskSize = 12;
+  // required sint64 bodyDiskSize = 12;
   if (cached_has_bits & 0x00010000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(12, this->_internal_bodydisksize(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(12, this->_internal_bodydisksize(), target);
   }
 
   // required bytes contentPolicyType = 13;
@@ -2312,8 +2312,8 @@ size_t CacheRequest::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_bodydisksize()) {
-    // required int64 bodyDiskSize = 12;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_bodydisksize());
+    // required sint64 bodyDiskSize = 12;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_bodydisksize());
   }
 
   return total_size;
@@ -2393,8 +2393,8 @@ size_t CacheRequest::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_loadingembedderpolicy());
 
-    // required int64 bodyDiskSize = 12;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_bodydisksize());
+    // required sint64 bodyDiskSize = 12;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_bodydisksize());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -2933,11 +2933,11 @@ const char* CacheResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required int64 bodyDiskSize = 8;
+      // required sint64 bodyDiskSize = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_bodydisksize(&has_bits);
-          _impl_.bodydisksize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.bodydisksize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2968,11 +2968,11 @@ const char* CacheResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required int64 paddingSize = 12;
+      // required sint64 paddingSize = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
           _Internal::set_has_paddingsize(&has_bits);
-          _impl_.paddingsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.paddingsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3062,10 +3062,10 @@ uint8_t* CacheResponse::_InternalSerialize(
         _Internal::body(this).GetCachedSize(), target, stream);
   }
 
-  // required int64 bodyDiskSize = 8;
+  // required sint64 bodyDiskSize = 8;
   if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(8, this->_internal_bodydisksize(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(8, this->_internal_bodydisksize(), target);
   }
 
   // required bytes securityInfo = 9;
@@ -3087,10 +3087,10 @@ uint8_t* CacheResponse::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(11, this->_internal_paddinginfo(), target);
   }
 
-  // required int64 paddingSize = 12;
+  // required sint64 paddingSize = 12;
   if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(12, this->_internal_paddingsize(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(12, this->_internal_paddingsize(), target);
   }
 
   // required bytes credentials = 13;
@@ -3157,13 +3157,13 @@ size_t CacheResponse::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_bodydisksize()) {
-    // required int64 bodyDiskSize = 8;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_bodydisksize());
+    // required sint64 bodyDiskSize = 8;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_bodydisksize());
   }
 
   if (_internal_has_paddingsize()) {
-    // required int64 paddingSize = 12;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_paddingsize());
+    // required sint64 paddingSize = 12;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_paddingsize());
   }
 
   return total_size;
@@ -3204,11 +3204,11 @@ size_t CacheResponse::ByteSizeLong() const {
     // required uint32 paddingInfo = 11;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_paddinginfo());
 
-    // required int64 bodyDiskSize = 8;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_bodydisksize());
+    // required sint64 bodyDiskSize = 8;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_bodydisksize());
 
-    // required int64 paddingSize = 12;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_paddingsize());
+    // required sint64 paddingSize = 12;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_paddingsize());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

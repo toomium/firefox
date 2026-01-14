@@ -447,11 +447,11 @@ const char* Msg_GetFileReferences::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required int64 fileId = 4;
+      // required sint64 fileId = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_fileid(&has_bits);
-          _impl_.fileid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.fileid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -505,10 +505,10 @@ uint8_t* Msg_GetFileReferences::_InternalSerialize(
         3, this->_internal_databasename(), target);
   }
 
-  // required int64 fileId = 4;
+  // required sint64 fileId = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_fileid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_fileid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -545,8 +545,8 @@ size_t Msg_GetFileReferences::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_fileid()) {
-    // required int64 fileId = 4;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_fileid());
+    // required sint64 fileId = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_fileid());
   }
 
   return total_size;
@@ -571,8 +571,8 @@ size_t Msg_GetFileReferences::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_databasename());
 
-    // required int64 fileId = 4;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_fileid());
+    // required sint64 fileId = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_fileid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -754,20 +754,20 @@ const char* Reply_GetFileReferences::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 refCnt = 1;
+      // required sint32 refCnt = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_refcnt(&has_bits);
-          _impl_.refcnt_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.refcnt_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 dBRefCnt = 2;
+      // required sint32 dBRefCnt = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_dbrefcnt(&has_bits);
-          _impl_.dbrefcnt_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.dbrefcnt_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -812,16 +812,16 @@ uint8_t* Reply_GetFileReferences::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 refCnt = 1;
+  // required sint32 refCnt = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_refcnt(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_refcnt(), target);
   }
 
-  // required int32 dBRefCnt = 2;
+  // required sint32 dBRefCnt = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_dbrefcnt(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_dbrefcnt(), target);
   }
 
   // required bool result = 3;
@@ -843,13 +843,13 @@ size_t Reply_GetFileReferences::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_refcnt()) {
-    // required int32 refCnt = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_refcnt());
+    // required sint32 refCnt = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_refcnt());
   }
 
   if (_internal_has_dbrefcnt()) {
-    // required int32 dBRefCnt = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_dbrefcnt());
+    // required sint32 dBRefCnt = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_dbrefcnt());
   }
 
   if (_internal_has_result()) {
@@ -864,11 +864,11 @@ size_t Reply_GetFileReferences::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required int32 refCnt = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_refcnt());
+    // required sint32 refCnt = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_refcnt());
 
-    // required int32 dBRefCnt = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_dbrefcnt());
+    // required sint32 dBRefCnt = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_dbrefcnt());
 
     // required bool result = 3;
     total_size += 1 + 1;

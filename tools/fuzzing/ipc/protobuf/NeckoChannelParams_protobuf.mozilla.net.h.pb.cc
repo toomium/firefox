@@ -9328,11 +9328,11 @@ const char* HttpChannelOpenArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required int32 priority = 37;
+      // required sint32 priority = 37;
       case 37:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_priority(&_impl_._has_bits_);
-          _impl_.priority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.priority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -9762,10 +9762,10 @@ uint8_t* HttpChannelOpenArgs::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(36, this->_internal_redirectmode(), target);
   }
 
-  // required int32 priority = 37;
+  // required sint32 priority = 37;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(37, this->_internal_priority(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(37, this->_internal_priority(), target);
   }
 
   // required bool uploadStreamHasHeaders = 38;
@@ -10159,9 +10159,9 @@ size_t HttpChannelOpenArgs::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_priority()) {
-    // required int32 priority = 37;
+    // required sint32 priority = 37;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_priority());
   }
 
@@ -10435,9 +10435,9 @@ size_t HttpChannelOpenArgs::ByteSizeLong() const {
       ::_pbi::WireFormatLite::UInt32Size(
         this->_internal_redirectmode());
 
-    // required int32 priority = 37;
+    // required sint32 priority = 37;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_priority());
 
     // required bool uploadStreamHasHeaders = 38;
@@ -11639,11 +11639,11 @@ const char* ProxyInfoCloneArgs::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required int32 port = 3;
+      // required sint32 port = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_port(&has_bits);
-          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -11754,10 +11754,10 @@ uint8_t* ProxyInfoCloneArgs::_InternalSerialize(
         2, this->_internal_host(), target);
   }
 
-  // required int32 port = 3;
+  // required sint32 port = 3;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_port(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_port(), target);
   }
 
   // required bytes username = 4;
@@ -11857,8 +11857,8 @@ size_t ProxyInfoCloneArgs::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_port()) {
-    // required int32 port = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
   }
 
   if (_internal_has_flags()) {
@@ -11913,8 +11913,8 @@ size_t ProxyInfoCloneArgs::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_connectionisolationkey());
 
-    // required int32 port = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
 
     // required uint32 flags = 6;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_flags());
@@ -12406,11 +12406,11 @@ const char* HttpConnectionInfoCloneArgs::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required int32 port = 2;
+      // required sint32 port = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_port(&has_bits);
-          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -12460,11 +12460,11 @@ const char* HttpConnectionInfoCloneArgs::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required int32 routedPort = 8;
+      // required sint32 routedPort = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_routedport(&has_bits);
-          _impl_.routedport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.routedport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -12699,10 +12699,10 @@ uint8_t* HttpConnectionInfoCloneArgs::_InternalSerialize(
         1, this->_internal_host(), target);
   }
 
-  // required int32 port = 2;
+  // required sint32 port = 2;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_port(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_port(), target);
   }
 
   // required bytes npnToken = 3;
@@ -12735,10 +12735,10 @@ uint8_t* HttpConnectionInfoCloneArgs::_InternalSerialize(
         7, this->_internal_routedhost(), target);
   }
 
-  // required int32 routedPort = 8;
+  // required sint32 routedPort = 8;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(8, this->_internal_routedport(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(8, this->_internal_routedport(), target);
   }
 
   // required bool anonymous = 9;
@@ -12931,13 +12931,13 @@ size_t HttpConnectionInfoCloneArgs::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_port()) {
-    // required int32 port = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
   }
 
   if (_internal_has_routedport()) {
-    // required int32 routedPort = 8;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_routedport());
+    // required sint32 routedPort = 8;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_routedport());
   }
 
   if (_internal_has_endtoendssl()) {
@@ -13083,11 +13083,11 @@ size_t HttpConnectionInfoCloneArgs::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_echconfig());
 
-    // required int32 port = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
 
-    // required int32 routedPort = 8;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_routedport());
+    // required sint32 routedPort = 8;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_routedport());
 
     // required bool endToEndSSL = 6;
     total_size += 1 + 1;
@@ -14123,29 +14123,29 @@ const char* CookieStruct::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required int64 expiry = 5;
+      // required sint64 expiry = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_expiry(&has_bits);
-          _impl_.expiry_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.expiry_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 lastAccessed = 6;
+      // required sint64 lastAccessed = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_lastaccessed(&has_bits);
-          _impl_.lastaccessed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.lastaccessed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 creationTime = 7;
+      // required sint64 creationTime = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           _Internal::set_has_creationtime(&has_bits);
-          _impl_.creationtime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.creationtime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -14186,11 +14186,11 @@ const char* CookieStruct::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required int32 sameSite = 12;
+      // required sint32 sameSite = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
           _Internal::set_has_samesite(&has_bits);
-          _impl_.samesite_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.samesite_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -14259,22 +14259,22 @@ uint8_t* CookieStruct::_InternalSerialize(
         4, this->_internal_path(), target);
   }
 
-  // required int64 expiry = 5;
+  // required sint64 expiry = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_expiry(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(5, this->_internal_expiry(), target);
   }
 
-  // required int64 lastAccessed = 6;
+  // required sint64 lastAccessed = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_lastaccessed(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(6, this->_internal_lastaccessed(), target);
   }
 
-  // required int64 creationTime = 7;
+  // required sint64 creationTime = 7;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(7, this->_internal_creationtime(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(7, this->_internal_creationtime(), target);
   }
 
   // required bool isHttpOnly = 8;
@@ -14301,10 +14301,10 @@ uint8_t* CookieStruct::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(11, this->_internal_ispartitioned(), target);
   }
 
-  // required int32 sameSite = 12;
+  // required sint32 sameSite = 12;
   if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(12, this->_internal_samesite(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(12, this->_internal_samesite(), target);
   }
 
   // required uint32 schemeMap = 13;
@@ -14354,18 +14354,18 @@ size_t CookieStruct::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_expiry()) {
-    // required int64 expiry = 5;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_expiry());
+    // required sint64 expiry = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_expiry());
   }
 
   if (_internal_has_lastaccessed()) {
-    // required int64 lastAccessed = 6;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_lastaccessed());
+    // required sint64 lastAccessed = 6;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_lastaccessed());
   }
 
   if (_internal_has_creationtime()) {
-    // required int64 creationTime = 7;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_creationtime());
+    // required sint64 creationTime = 7;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_creationtime());
   }
 
   if (_internal_has_ishttponly()) {
@@ -14389,8 +14389,8 @@ size_t CookieStruct::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_samesite()) {
-    // required int32 sameSite = 12;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_samesite());
+    // required sint32 sameSite = 12;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_samesite());
   }
 
   if (_internal_has_schememap()) {
@@ -14425,14 +14425,14 @@ size_t CookieStruct::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_path());
 
-    // required int64 expiry = 5;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_expiry());
+    // required sint64 expiry = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_expiry());
 
-    // required int64 lastAccessed = 6;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_lastaccessed());
+    // required sint64 lastAccessed = 6;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_lastaccessed());
 
-    // required int64 creationTime = 7;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_creationtime());
+    // required sint64 creationTime = 7;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_creationtime());
 
     // required bool isHttpOnly = 8;
     total_size += 1 + 1;
@@ -14446,8 +14446,8 @@ size_t CookieStruct::ByteSizeLong() const {
     // required bool isPartitioned = 11;
     total_size += 1 + 1;
 
-    // required int32 sameSite = 12;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_samesite());
+    // required sint32 sameSite = 12;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_samesite());
 
     // required uint32 schemeMap = 13;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_schememap());
@@ -19737,11 +19737,11 @@ const char* HttpActivity::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required int32 port = 2;
+      // required sint32 port = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_port(&has_bits);
-          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -19792,10 +19792,10 @@ uint8_t* HttpActivity::_InternalSerialize(
         1, this->_internal_host(), target);
   }
 
-  // required int32 port = 2;
+  // required sint32 port = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_port(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_port(), target);
   }
 
   // required bool endToEndSSL = 3;
@@ -19824,8 +19824,8 @@ size_t HttpActivity::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_port()) {
-    // required int32 port = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
   }
 
   if (_internal_has_endtoendssl()) {
@@ -19845,8 +19845,8 @@ size_t HttpActivity::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_host());
 
-    // required int32 port = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
 
     // required bool endToEndSSL = 3;
     total_size += 1 + 1;
@@ -20092,11 +20092,11 @@ const char* HttpConnectionActivity::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // required int32 port = 3;
+      // required sint32 port = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_port(&has_bits);
-          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -20171,10 +20171,10 @@ uint8_t* HttpConnectionActivity::_InternalSerialize(
         2, this->_internal_host(), target);
   }
 
-  // required int32 port = 3;
+  // required sint32 port = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_port(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_port(), target);
   }
 
   // required bool ssl = 4;
@@ -20222,8 +20222,8 @@ size_t HttpConnectionActivity::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_port()) {
-    // required int32 port = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
   }
 
   if (_internal_has_ssl()) {
@@ -20258,8 +20258,8 @@ size_t HttpConnectionActivity::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_host());
 
-    // required int32 port = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_port());
+    // required sint32 port = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_port());
 
     // required bool ssl = 4;
     total_size += 1 + 1;
@@ -22962,11 +22962,11 @@ const char* RemoteStreamInfo::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required int64 contentLength = 3;
+      // required sint64 contentLength = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_contentlength(&has_bits);
-          _impl_.contentlength_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.contentlength_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -23014,10 +23014,10 @@ uint8_t* RemoteStreamInfo::_InternalSerialize(
         2, this->_internal_contenttype(), target);
   }
 
-  // required int64 contentLength = 3;
+  // required sint64 contentLength = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_contentlength(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(3, this->_internal_contentlength(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -23047,8 +23047,8 @@ size_t RemoteStreamInfo::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_contentlength()) {
-    // required int64 contentLength = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_contentlength());
+    // required sint64 contentLength = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_contentlength());
   }
 
   return total_size;
@@ -23068,8 +23068,8 @@ size_t RemoteStreamInfo::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_contenttype());
 
-    // required int64 contentLength = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_contentlength());
+    // required sint64 contentLength = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_contentlength());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

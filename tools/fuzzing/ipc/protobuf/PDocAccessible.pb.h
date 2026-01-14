@@ -824,7 +824,7 @@ class Msg_CaretMoveEvent final :
   void _internal_set_aid(uint64_t value);
   public:
 
-  // required int32 aOffset = 3;
+  // required sint32 aOffset = 3;
   bool has_aoffset() const;
   private:
   bool _internal_has_aoffset() const;
@@ -876,7 +876,7 @@ class Msg_CaretMoveEvent final :
   void _internal_set_afromuser(bool value);
   public:
 
-  // required int32 aGranularity = 6;
+  // required sint32 aGranularity = 6;
   bool has_agranularity() const;
   private:
   bool _internal_has_agranularity() const;
@@ -3581,7 +3581,7 @@ class Msg_ScrollToPoint final :
   void _internal_set_ascrolltype(uint32_t value);
   public:
 
-  // required int32 aX = 3;
+  // required sint32 aX = 3;
   bool has_ax() const;
   private:
   bool _internal_has_ax() const;
@@ -3594,7 +3594,7 @@ class Msg_ScrollToPoint final :
   void _internal_set_ax(int32_t value);
   public:
 
-  // required int32 aY = 4;
+  // required sint32 aY = 4;
   bool has_ay() const;
   private:
   bool _internal_has_ay() const;
@@ -3953,7 +3953,7 @@ class Msg_SetTextSelection final :
   void _internal_set_aendid(uint64_t value);
   public:
 
-  // required int32 aStartOffset = 2;
+  // required sint32 aStartOffset = 2;
   bool has_astartoffset() const;
   private:
   bool _internal_has_astartoffset() const;
@@ -3966,7 +3966,7 @@ class Msg_SetTextSelection final :
   void _internal_set_astartoffset(int32_t value);
   public:
 
-  // required int32 aEndOffset = 4;
+  // required sint32 aEndOffset = 4;
   bool has_aendoffset() const;
   private:
   bool _internal_has_aendoffset() const;
@@ -3979,7 +3979,7 @@ class Msg_SetTextSelection final :
   void _internal_set_aendoffset(int32_t value);
   public:
 
-  // required int32 aSelectionNum = 5;
+  // required sint32 aSelectionNum = 5;
   bool has_aselectionnum() const;
   private:
   bool _internal_has_aselectionnum() const;
@@ -4156,7 +4156,7 @@ class Msg_RemoveTextSelection final :
   void _internal_set_aid(uint64_t value);
   public:
 
-  // required int32 aSelectionNum = 2;
+  // required sint32 aSelectionNum = 2;
   bool has_aselectionnum() const;
   private:
   bool _internal_has_aselectionnum() const;
@@ -4332,7 +4332,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_aendid(uint64_t value);
   public:
 
-  // required int32 aStartOffset = 2;
+  // required sint32 aStartOffset = 2;
   bool has_astartoffset() const;
   private:
   bool _internal_has_astartoffset() const;
@@ -4345,7 +4345,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_astartoffset(int32_t value);
   public:
 
-  // required int32 aEndOffset = 4;
+  // required sint32 aEndOffset = 4;
   bool has_aendoffset() const;
   private:
   bool _internal_has_aendoffset() const;
@@ -4525,7 +4525,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_aid(uint64_t value);
   public:
 
-  // required int32 aStartOffset = 2;
+  // required sint32 aStartOffset = 2;
   bool has_astartoffset() const;
   private:
   bool _internal_has_astartoffset() const;
@@ -4538,7 +4538,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_astartoffset(int32_t value);
   public:
 
-  // required int32 aEndOffset = 3;
+  // required sint32 aEndOffset = 3;
   bool has_aendoffset() const;
   private:
   bool _internal_has_aendoffset() const;
@@ -4564,7 +4564,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_acoordinatetype(uint32_t value);
   public:
 
-  // required int32 aX = 5;
+  // required sint32 aX = 5;
   bool has_ax() const;
   private:
   bool _internal_has_ax() const;
@@ -4577,7 +4577,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_ax(int32_t value);
   public:
 
-  // required int32 aY = 6;
+  // required sint32 aY = 6;
   bool has_ay() const;
   private:
   bool _internal_has_ay() const;
@@ -4925,7 +4925,7 @@ class Msg_InsertText final :
   void _internal_set_aid(uint64_t value);
   public:
 
-  // required int32 aPosition = 3;
+  // required sint32 aPosition = 3;
   bool has_aposition() const;
   private:
   bool _internal_has_aposition() const;
@@ -5087,7 +5087,7 @@ class Msg_CopyText final :
   void _internal_set_aid(uint64_t value);
   public:
 
-  // required int32 aStartPos = 2;
+  // required sint32 aStartPos = 2;
   bool has_astartpos() const;
   private:
   bool _internal_has_astartpos() const;
@@ -5100,7 +5100,7 @@ class Msg_CopyText final :
   void _internal_set_astartpos(int32_t value);
   public:
 
-  // required int32 aEndPos = 3;
+  // required sint32 aEndPos = 3;
   bool has_aendpos() const;
   private:
   bool _internal_has_aendpos() const;
@@ -5262,7 +5262,7 @@ class Msg_CutText final :
   void _internal_set_aid(uint64_t value);
   public:
 
-  // required int32 aStartPos = 2;
+  // required sint32 aStartPos = 2;
   bool has_astartpos() const;
   private:
   bool _internal_has_astartpos() const;
@@ -5275,7 +5275,7 @@ class Msg_CutText final :
   void _internal_set_astartpos(int32_t value);
   public:
 
-  // required int32 aEndPos = 3;
+  // required sint32 aEndPos = 3;
   bool has_aendpos() const;
   private:
   bool _internal_has_aendpos() const;
@@ -5437,7 +5437,7 @@ class Msg_DeleteText final :
   void _internal_set_aid(uint64_t value);
   public:
 
-  // required int32 aStartPos = 2;
+  // required sint32 aStartPos = 2;
   bool has_astartpos() const;
   private:
   bool _internal_has_astartpos() const;
@@ -5450,7 +5450,7 @@ class Msg_DeleteText final :
   void _internal_set_astartpos(int32_t value);
   public:
 
-  // required int32 aEndPos = 3;
+  // required sint32 aEndPos = 3;
   bool has_aendpos() const;
   private:
   bool _internal_has_aendpos() const;
@@ -5611,7 +5611,7 @@ class Msg_PasteText final :
   void _internal_set_aid(uint64_t value);
   public:
 
-  // required int32 aPosition = 2;
+  // required sint32 aPosition = 2;
   bool has_aposition() const;
   private:
   bool _internal_has_aposition() const;
@@ -6970,7 +6970,7 @@ inline void Msg_CaretMoveEvent::set_allocated_acaretrect(std::string* acaretrect
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aCaretRect)
 }
 
-// required int32 aOffset = 3;
+// required sint32 aOffset = 3;
 inline bool Msg_CaretMoveEvent::_internal_has_aoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7054,7 +7054,7 @@ inline void Msg_CaretMoveEvent::set_aisatendofline(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aIsAtEndOfLine)
 }
 
-// required int32 aGranularity = 6;
+// required sint32 aGranularity = 6;
 inline bool Msg_CaretMoveEvent::_internal_has_agranularity() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -8302,7 +8302,7 @@ inline void Msg_ScrollToPoint::set_ascrolltype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.aScrollType)
 }
 
-// required int32 aX = 3;
+// required sint32 aX = 3;
 inline bool Msg_ScrollToPoint::_internal_has_ax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8330,7 +8330,7 @@ inline void Msg_ScrollToPoint::set_ax(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.aX)
 }
 
-// required int32 aY = 4;
+// required sint32 aY = 4;
 inline bool Msg_ScrollToPoint::_internal_has_ay() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8518,7 +8518,7 @@ inline void Msg_SetTextSelection::set_astartid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aStartID)
 }
 
-// required int32 aStartOffset = 2;
+// required sint32 aStartOffset = 2;
 inline bool Msg_SetTextSelection::_internal_has_astartoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8574,7 +8574,7 @@ inline void Msg_SetTextSelection::set_aendid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aEndID)
 }
 
-// required int32 aEndOffset = 4;
+// required sint32 aEndOffset = 4;
 inline bool Msg_SetTextSelection::_internal_has_aendoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8602,7 +8602,7 @@ inline void Msg_SetTextSelection::set_aendoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aEndOffset)
 }
 
-// required int32 aSelectionNum = 5;
+// required sint32 aSelectionNum = 5;
 inline bool Msg_SetTextSelection::_internal_has_aselectionnum() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -8690,7 +8690,7 @@ inline void Msg_RemoveTextSelection::set_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection.aID)
 }
 
-// required int32 aSelectionNum = 2;
+// required sint32 aSelectionNum = 2;
 inline bool Msg_RemoveTextSelection::_internal_has_aselectionnum() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8750,7 +8750,7 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_astartid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.aStartID)
 }
 
-// required int32 aStartOffset = 2;
+// required sint32 aStartOffset = 2;
 inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_astartoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8806,7 +8806,7 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_aendid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.aEndID)
 }
 
-// required int32 aEndOffset = 4;
+// required sint32 aEndOffset = 4;
 inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_aendoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8894,7 +8894,7 @@ inline void Msg_ScrollSubstringToPoint::set_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aID)
 }
 
-// required int32 aStartOffset = 2;
+// required sint32 aStartOffset = 2;
 inline bool Msg_ScrollSubstringToPoint::_internal_has_astartoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8922,7 +8922,7 @@ inline void Msg_ScrollSubstringToPoint::set_astartoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aStartOffset)
 }
 
-// required int32 aEndOffset = 3;
+// required sint32 aEndOffset = 3;
 inline bool Msg_ScrollSubstringToPoint::_internal_has_aendoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8978,7 +8978,7 @@ inline void Msg_ScrollSubstringToPoint::set_acoordinatetype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aCoordinateType)
 }
 
-// required int32 aX = 5;
+// required sint32 aX = 5;
 inline bool Msg_ScrollSubstringToPoint::_internal_has_ax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -9006,7 +9006,7 @@ inline void Msg_ScrollSubstringToPoint::set_ax(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aX)
 }
 
-// required int32 aY = 6;
+// required sint32 aY = 6;
 inline bool Msg_ScrollSubstringToPoint::_internal_has_ay() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -9234,7 +9234,7 @@ inline void Msg_InsertText::set_allocated_atext(std::string* atext) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.aText)
 }
 
-// required int32 aPosition = 3;
+// required sint32 aPosition = 3;
 inline bool Msg_InsertText::_internal_has_aposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9294,7 +9294,7 @@ inline void Msg_CopyText::set_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.aID)
 }
 
-// required int32 aStartPos = 2;
+// required sint32 aStartPos = 2;
 inline bool Msg_CopyText::_internal_has_astartpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9322,7 +9322,7 @@ inline void Msg_CopyText::set_astartpos(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.aStartPos)
 }
 
-// required int32 aEndPos = 3;
+// required sint32 aEndPos = 3;
 inline bool Msg_CopyText::_internal_has_aendpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9382,7 +9382,7 @@ inline void Msg_CutText::set_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.aID)
 }
 
-// required int32 aStartPos = 2;
+// required sint32 aStartPos = 2;
 inline bool Msg_CutText::_internal_has_astartpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9410,7 +9410,7 @@ inline void Msg_CutText::set_astartpos(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.aStartPos)
 }
 
-// required int32 aEndPos = 3;
+// required sint32 aEndPos = 3;
 inline bool Msg_CutText::_internal_has_aendpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9470,7 +9470,7 @@ inline void Msg_DeleteText::set_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.aID)
 }
 
-// required int32 aStartPos = 2;
+// required sint32 aStartPos = 2;
 inline bool Msg_DeleteText::_internal_has_astartpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9498,7 +9498,7 @@ inline void Msg_DeleteText::set_astartpos(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.aStartPos)
 }
 
-// required int32 aEndPos = 3;
+// required sint32 aEndPos = 3;
 inline bool Msg_DeleteText::_internal_has_aendpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9558,7 +9558,7 @@ inline void Msg_PasteText::set_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText.aID)
 }
 
-// required int32 aPosition = 2;
+// required sint32 aPosition = 2;
 inline bool Msg_PasteText::_internal_has_aposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

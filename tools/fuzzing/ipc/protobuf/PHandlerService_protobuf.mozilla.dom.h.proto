@@ -25,5 +25,5 @@ message HandlerInfo {
   repeated bytes extensions = 5;
   required protobuf.mozilla.dom.HandlerApp preferredApplicationHandler = 6;
   repeated protobuf.mozilla.dom.HandlerApp possibleApplicationHandlers = 7;
-  required int32 preferredAction = 8;
+  required sint32 preferredAction = 8;
 }

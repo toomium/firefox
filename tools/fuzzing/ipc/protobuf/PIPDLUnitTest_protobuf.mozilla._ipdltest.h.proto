@@ -15,7 +15,7 @@ message TestPartResult {
   required bool failed = 1;
   required bool fatal = 2;
   required bytes filename = 3;
-  required int32 lineNumber = 4;
+  required sint32 lineNumber = 4;
   required bytes summary = 5;
   required bytes message = 6;
 }

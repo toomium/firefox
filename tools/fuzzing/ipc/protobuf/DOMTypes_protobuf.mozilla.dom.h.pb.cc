@@ -2790,20 +2790,20 @@ const char* ScreenDetails::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required int32 pixelDepth = 5;
+      // required sint32 pixelDepth = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_pixeldepth(&has_bits);
-          _impl_.pixeldepth_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.pixeldepth_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 colorDepth = 6;
+      // required sint32 colorDepth = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_colordepth(&has_bits);
-          _impl_.colordepth_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.colordepth_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2935,16 +2935,16 @@ uint8_t* ScreenDetails::_InternalSerialize(
         4, this->_internal_availrectdisplaypix(), target);
   }
 
-  // required int32 pixelDepth = 5;
+  // required sint32 pixelDepth = 5;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_pixeldepth(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_pixeldepth(), target);
   }
 
-  // required int32 colorDepth = 6;
+  // required sint32 colorDepth = 6;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(6, this->_internal_colordepth(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(6, this->_internal_colordepth(), target);
   }
 
   // required uint32 refreshRate = 7;
@@ -3057,13 +3057,13 @@ size_t ScreenDetails::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_pixeldepth()) {
-    // required int32 pixelDepth = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_pixeldepth());
+    // required sint32 pixelDepth = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_pixeldepth());
   }
 
   if (_internal_has_colordepth()) {
-    // required int32 colorDepth = 6;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_colordepth());
+    // required sint32 colorDepth = 6;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_colordepth());
   }
 
   if (_internal_has_refreshrate()) {
@@ -3133,11 +3133,11 @@ size_t ScreenDetails::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_orientation());
 
-    // required int32 pixelDepth = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_pixeldepth());
+    // required sint32 pixelDepth = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_pixeldepth());
 
-    // required int32 colorDepth = 6;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_colordepth());
+    // required sint32 colorDepth = 6;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_colordepth());
 
     // required uint32 refreshRate = 7;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_refreshrate());
@@ -5429,11 +5429,11 @@ const char* DocShellLoadStateInit::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // optional int32 CancelContentJSEpoch = 32;
+      // optional sint32 CancelContentJSEpoch = 32;
       case 32:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 0)) {
           _Internal::set_has_cancelcontentjsepoch(&_impl_._has_bits_);
-          _impl_.cancelcontentjsepoch_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.cancelcontentjsepoch_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5837,10 +5837,10 @@ uint8_t* DocShellLoadStateInit::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[1];
-  // optional int32 CancelContentJSEpoch = 32;
+  // optional sint32 CancelContentJSEpoch = 32;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(32, this->_internal_cancelcontentjsepoch(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(32, this->_internal_cancelcontentjsepoch(), target);
   }
 
   // required bool ResultPrincipalURIIsSome = 33;
@@ -6512,11 +6512,11 @@ size_t DocShellLoadStateInit::ByteSizeLong() const {
     }
 
   }
-  // optional int32 CancelContentJSEpoch = 32;
+  // optional sint32 CancelContentJSEpoch = 32;
   cached_has_bits = _impl_._has_bits_[1];
   if (cached_has_bits & 0x00000001u) {
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_cancelcontentjsepoch());
   }
 
@@ -7248,20 +7248,20 @@ const char* TimedChannelInfo::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 redirectCount = 1;
+      // required sint32 redirectCount = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_redirectcount(&has_bits);
-          _impl_.redirectcount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.redirectcount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 internalRedirectCount = 2;
+      // required sint32 internalRedirectCount = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_internalredirectcount(&has_bits);
-          _impl_.internalredirectcount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.internalredirectcount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7450,16 +7450,16 @@ uint8_t* TimedChannelInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 redirectCount = 1;
+  // required sint32 redirectCount = 1;
   if (cached_has_bits & 0x00002000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_redirectcount(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_redirectcount(), target);
   }
 
-  // required int32 internalRedirectCount = 2;
+  // required sint32 internalRedirectCount = 2;
   if (cached_has_bits & 0x00004000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_internalredirectcount(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_internalredirectcount(), target);
   }
 
   // required bytes asyncOpen = 3;
@@ -7668,13 +7668,13 @@ size_t TimedChannelInfo::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_redirectcount()) {
-    // required int32 redirectCount = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_redirectcount());
+    // required sint32 redirectCount = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_redirectcount());
   }
 
   if (_internal_has_internalredirectcount()) {
-    // required int32 internalRedirectCount = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_internalredirectcount());
+    // required sint32 internalRedirectCount = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_internalredirectcount());
   }
 
   if (_internal_has_allredirectssameorigin()) {
@@ -7764,11 +7764,11 @@ size_t TimedChannelInfo::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_responseend());
 
-    // required int32 redirectCount = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_redirectcount());
+    // required sint32 redirectCount = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_redirectcount());
 
-    // required int32 internalRedirectCount = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_internalredirectcount());
+    // required sint32 internalRedirectCount = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_internalredirectcount());
 
     // required bool allRedirectsSameOrigin = 8;
     total_size += 1 + 1;
@@ -8862,10 +8862,10 @@ const char* IPDLVariantValue::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // int32 mVint16_t = 3;
+      // sint32 mVint16_t = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _internal_set_mvint16_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          _internal_set_mvint16_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8878,10 +8878,10 @@ const char* IPDLVariantValue::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // int32 mVint32_t = 5;
+      // sint32 mVint32_t = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _internal_set_mvint32_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          _internal_set_mvint32_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8997,7 +8997,7 @@ uint8_t* IPDLVariantValue::_InternalSerialize(
     }
     case kMVint16T: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_mvint16_t(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_mvint16_t(), target);
       break;
     }
     case kMVuint16T: {
@@ -9007,7 +9007,7 @@ uint8_t* IPDLVariantValue::_InternalSerialize(
     }
     case kMVint32T: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_mvint32_t(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_mvint32_t(), target);
       break;
     }
     case kMVuint32T: {
@@ -9079,9 +9079,9 @@ size_t IPDLVariantValue::ByteSizeLong() const {
       total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_mvuint8_t());
       break;
     }
-    // int32 mVint16_t = 3;
+    // sint32 mVint16_t = 3;
     case kMVint16T: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_mvint16_t());
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint16_t());
       break;
     }
     // uint32 mVuint16_t = 4;
@@ -9089,9 +9089,9 @@ size_t IPDLVariantValue::ByteSizeLong() const {
       total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_mvuint16_t());
       break;
     }
-    // int32 mVint32_t = 5;
+    // sint32 mVint32_t = 5;
     case kMVint32T: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_mvint32_t());
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint32_t());
       break;
     }
     // uint32 mVuint32_t = 6;
@@ -9975,11 +9975,11 @@ const char* ParentShowInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required int32 widgetRounding = 5;
+      // required sint32 widgetRounding = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_widgetrounding(&has_bits);
-          _impl_.widgetrounding_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.widgetrounding_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -10048,10 +10048,10 @@ uint8_t* ParentShowInfo::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteFloatToArray(4, this->_internal_dpi(), target);
   }
 
-  // required int32 widgetRounding = 5;
+  // required sint32 widgetRounding = 5;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_widgetrounding(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_widgetrounding(), target);
   }
 
   // required double defaultScale = 6;
@@ -10100,8 +10100,8 @@ size_t ParentShowInfo::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_widgetrounding()) {
-    // required int32 widgetRounding = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_widgetrounding());
+    // required sint32 widgetRounding = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_widgetrounding());
   }
 
   return total_size;
@@ -10128,8 +10128,8 @@ size_t ParentShowInfo::ByteSizeLong() const {
     // required double defaultScale = 6;
     total_size += 1 + 8;
 
-    // required int32 widgetRounding = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_widgetrounding());
+    // required sint32 widgetRounding = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_widgetrounding());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

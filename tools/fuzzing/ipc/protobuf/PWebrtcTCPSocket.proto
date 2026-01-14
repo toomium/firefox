@@ -18,9 +18,9 @@ import "WebrtcProxyConfig.proto";
 // Message declarations
 message Msg_AsyncOpen {
   required bytes aHost = 1;
-  required int32 aPort = 2;
+  required sint32 aPort = 2;
   required bytes aLocalAddress = 3;
-  required int32 aLocalPort = 4;
+  required sint32 aLocalPort = 4;
   required bool aUseTls = 5;
   optional protobuf.mozilla.net.WebrtcProxyConfig aProxyConfig = 6;
 }

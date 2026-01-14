@@ -10348,7 +10348,7 @@ class Msg_PFileCreatorConstructor final :
   std::string* _internal_mutable_aname();
   public:
 
-  // optional int64 lastModified = 4;
+  // optional sint64 lastModified = 4;
   bool has_lastmodified() const;
   private:
   bool _internal_has_lastmodified() const;
@@ -19492,7 +19492,7 @@ inline void Msg_PFileCreatorConstructor::set_allocated_aname(std::string* aname)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.aName)
 }
 
-// optional int64 lastModified = 4;
+// optional sint64 lastModified = 4;
 inline bool Msg_PFileCreatorConstructor::_internal_has_lastmodified() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

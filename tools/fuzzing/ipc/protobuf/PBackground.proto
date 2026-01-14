@@ -296,7 +296,7 @@ message Msg_PFileCreatorConstructor {
   required bytes aFullPath = 1;
   required bytes aType = 2;
   required bytes aName = 3;
-  optional int64 lastModified = 4;
+  optional sint64 lastModified = 4;
   required bool aExistenceCheck = 5;
   required bool aIsFromNsIFile = 6;
 }

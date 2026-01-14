@@ -34,10 +34,10 @@ message Msg_StateChangeEvent {
 message Msg_CaretMoveEvent {
   required uint64 aID = 1;
   required bytes aCaretRect = 2;
-  required int32 aOffset = 3;
+  required sint32 aOffset = 3;
   required bool aIsSelectionCollapsed = 4;
   required bool aIsAtEndOfLine = 5;
-  required int32 aGranularity = 6;
+  required sint32 aGranularity = 6;
   required bool aFromUser = 7;
 }
 
@@ -120,8 +120,8 @@ message Msg_ScrollTo {
 message Msg_ScrollToPoint {
   required uint64 aID = 1;
   required uint32 aScrollType = 2;
-  required int32 aX = 3;
-  required int32 aY = 4;
+  required sint32 aX = 3;
+  required sint32 aY = 4;
 }
 
 message Msg_Announce {
@@ -132,33 +132,33 @@ message Msg_Announce {
 
 message Msg_SetTextSelection {
   required uint64 aStartID = 1;
-  required int32 aStartOffset = 2;
+  required sint32 aStartOffset = 2;
   required uint64 aEndID = 3;
-  required int32 aEndOffset = 4;
-  required int32 aSelectionNum = 5;
+  required sint32 aEndOffset = 4;
+  required sint32 aSelectionNum = 5;
   required bool aSetFocus = 6;
 }
 
 message Msg_RemoveTextSelection {
   required uint64 aID = 1;
-  required int32 aSelectionNum = 2;
+  required sint32 aSelectionNum = 2;
 }
 
 message Msg_ScrollTextLeafRangeIntoView {
   required uint64 aStartID = 1;
-  required int32 aStartOffset = 2;
+  required sint32 aStartOffset = 2;
   required uint64 aEndID = 3;
-  required int32 aEndOffset = 4;
+  required sint32 aEndOffset = 4;
   required uint32 aScrollType = 5;
 }
 
 message Msg_ScrollSubstringToPoint {
   required uint64 aID = 1;
-  required int32 aStartOffset = 2;
-  required int32 aEndOffset = 3;
+  required sint32 aStartOffset = 2;
+  required sint32 aEndOffset = 3;
   required uint32 aCoordinateType = 4;
-  required int32 aX = 5;
-  required int32 aY = 6;
+  required sint32 aX = 5;
+  required sint32 aY = 6;
 }
 
 message Msg_ReplaceText {
@@ -169,30 +169,30 @@ message Msg_ReplaceText {
 message Msg_InsertText {
   required uint64 aID = 1;
   required bytes aText = 2;
-  required int32 aPosition = 3;
+  required sint32 aPosition = 3;
 }
 
 message Msg_CopyText {
   required uint64 aID = 1;
-  required int32 aStartPos = 2;
-  required int32 aEndPos = 3;
+  required sint32 aStartPos = 2;
+  required sint32 aEndPos = 3;
 }
 
 message Msg_CutText {
   required uint64 aID = 1;
-  required int32 aStartPos = 2;
-  required int32 aEndPos = 3;
+  required sint32 aStartPos = 2;
+  required sint32 aEndPos = 3;
 }
 
 message Msg_DeleteText {
   required uint64 aID = 1;
-  required int32 aStartPos = 2;
-  required int32 aEndPos = 3;
+  required sint32 aStartPos = 2;
+  required sint32 aEndPos = 3;
 }
 
 message Msg_PasteText {
   required uint64 aID = 1;
-  required int32 aPosition = 2;
+  required sint32 aPosition = 2;
 }
 
 message Msg_TakeSelection {

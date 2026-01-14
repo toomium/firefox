@@ -17,8 +17,8 @@ message LSSnapshotInitInfo {
   required bool addKeyToUnknownItems = 1;
   repeated protobuf.mozilla.dom.LSItemInfo itemInfos = 2;
   required uint32 totalLength = 3;
-  required int64 usage = 4;
-  required int64 peakUsage = 5;
+  required sint64 usage = 4;
+  required sint64 peakUsage = 5;
   required bytes loadState = 6;
   required bool hasOtherProcessDatabases = 7;
   required bool hasOtherProcessObservers = 8;

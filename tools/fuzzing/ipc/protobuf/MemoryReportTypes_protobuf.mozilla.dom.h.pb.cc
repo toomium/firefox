@@ -230,29 +230,29 @@ const char* MemoryReport::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required int32 kind = 3;
+      // required sint32 kind = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_kind(&has_bits);
-          _impl_.kind_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.kind_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 units = 4;
+      // required sint32 units = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_units(&has_bits);
-          _impl_.units_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.units_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 amount = 5;
+      // required sint64 amount = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_amount(&has_bits);
-          _impl_.amount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.amount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -318,22 +318,22 @@ uint8_t* MemoryReport::_InternalSerialize(
         2, this->_internal_path(), target);
   }
 
-  // required int32 kind = 3;
+  // required sint32 kind = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_kind(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_kind(), target);
   }
 
-  // required int32 units = 4;
+  // required sint32 units = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_units(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_units(), target);
   }
 
-  // required int64 amount = 5;
+  // required sint64 amount = 5;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_amount(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(5, this->_internal_amount(), target);
   }
 
   // required uint32 generation = 6;
@@ -382,18 +382,18 @@ size_t MemoryReport::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_kind()) {
-    // required int32 kind = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_kind());
+    // required sint32 kind = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_kind());
   }
 
   if (_internal_has_units()) {
-    // required int32 units = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_units());
+    // required sint32 units = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_units());
   }
 
   if (_internal_has_amount()) {
-    // required int64 amount = 5;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_amount());
+    // required sint64 amount = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_amount());
   }
 
   if (_internal_has_generation()) {
@@ -423,14 +423,14 @@ size_t MemoryReport::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_desc());
 
-    // required int32 kind = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_kind());
+    // required sint32 kind = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_kind());
 
-    // required int32 units = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_units());
+    // required sint32 units = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_units());
 
-    // required int64 amount = 5;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_amount());
+    // required sint64 amount = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_amount());
 
     // required uint32 generation = 6;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_generation());

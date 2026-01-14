@@ -1176,18 +1176,18 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // repeated int32 pageRanges = 22;
+      // repeated sint32 pageRanges = 22;
       case 22:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 176)) {
           ptr -= 2;
           do {
             ptr += 2;
-            _internal_add_pageranges(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_pageranges(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<176>(ptr));
         } else if (static_cast<uint8_t>(tag) == 178) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_pageranges(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_pageranges(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1309,11 +1309,11 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required int32 paperSizeUnit = 36;
+      // required sint32 paperSizeUnit = 36;
       case 36:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_papersizeunit(&_impl_._has_bits_);
-          _impl_.papersizeunit_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.papersizeunit_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1336,74 +1336,74 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required int32 orientation = 39;
+      // required sint32 orientation = 39;
       case 39:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           _Internal::set_has_orientation(&_impl_._has_bits_);
-          _impl_.orientation_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.orientation_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 numCopies = 40;
+      // required sint32 numCopies = 40;
       case 40:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_numcopies(&_impl_._has_bits_);
-          _impl_.numcopies_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.numcopies_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 numPagesPerSheet = 41;
+      // required sint32 numPagesPerSheet = 41;
       case 41:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
           _Internal::set_has_numpagespersheet(&_impl_._has_bits_);
-          _impl_.numpagespersheet_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.numpagespersheet_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 outputDestination = 42;
+      // required sint32 outputDestination = 42;
       case 42:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
           _Internal::set_has_outputdestination(&_impl_._has_bits_);
-          _impl_.outputdestination_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.outputdestination_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 outputFormat = 43;
+      // required sint32 outputFormat = 43;
       case 43:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
           _Internal::set_has_outputformat(&_impl_._has_bits_);
-          _impl_.outputformat_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.outputformat_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 printPageDelay = 44;
+      // required sint32 printPageDelay = 44;
       case 44:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
           _Internal::set_has_printpagedelay(&_impl_._has_bits_);
-          _impl_.printpagedelay_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.printpagedelay_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 resolution = 45;
+      // required sint32 resolution = 45;
       case 45:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
           _Internal::set_has_resolution(&_impl_._has_bits_);
-          _impl_.resolution_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.resolution_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 duplex = 46;
+      // required sint32 duplex = 46;
       case 46:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 112)) {
           _Internal::set_has_duplex(&_impl_._has_bits_);
-          _impl_.duplex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.duplex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1648,10 +1648,10 @@ uint8_t* PrintData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(21, this->_internal_printselectiononly(), target);
   }
 
-  // repeated int32 pageRanges = 22;
+  // repeated sint32 pageRanges = 22;
   for (int i = 0, n = this->_internal_pageranges_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(22, this->_internal_pageranges(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(22, this->_internal_pageranges(i), target);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
@@ -1736,10 +1736,10 @@ uint8_t* PrintData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(35, this->_internal_paperheight(), target);
   }
 
-  // required int32 paperSizeUnit = 36;
+  // required sint32 paperSizeUnit = 36;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(36, this->_internal_papersizeunit(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(36, this->_internal_papersizeunit(), target);
   }
 
   // required bool printReversed = 37;
@@ -1754,52 +1754,52 @@ uint8_t* PrintData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(38, this->_internal_printincolor(), target);
   }
 
-  // required int32 orientation = 39;
+  // required sint32 orientation = 39;
   if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(39, this->_internal_orientation(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(39, this->_internal_orientation(), target);
   }
 
-  // required int32 numCopies = 40;
+  // required sint32 numCopies = 40;
   if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(40, this->_internal_numcopies(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(40, this->_internal_numcopies(), target);
   }
 
-  // required int32 numPagesPerSheet = 41;
+  // required sint32 numPagesPerSheet = 41;
   if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(41, this->_internal_numpagespersheet(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(41, this->_internal_numpagespersheet(), target);
   }
 
-  // required int32 outputDestination = 42;
+  // required sint32 outputDestination = 42;
   if (cached_has_bits & 0x00001000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(42, this->_internal_outputdestination(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(42, this->_internal_outputdestination(), target);
   }
 
-  // required int32 outputFormat = 43;
+  // required sint32 outputFormat = 43;
   if (cached_has_bits & 0x00002000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(43, this->_internal_outputformat(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(43, this->_internal_outputformat(), target);
   }
 
-  // required int32 printPageDelay = 44;
+  // required sint32 printPageDelay = 44;
   if (cached_has_bits & 0x00004000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(44, this->_internal_printpagedelay(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(44, this->_internal_printpagedelay(), target);
   }
 
-  // required int32 resolution = 45;
+  // required sint32 resolution = 45;
   if (cached_has_bits & 0x00008000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(45, this->_internal_resolution(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(45, this->_internal_resolution(), target);
   }
 
-  // required int32 duplex = 46;
+  // required sint32 duplex = 46;
   if (cached_has_bits & 0x00010000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(46, this->_internal_duplex(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(46, this->_internal_duplex(), target);
   }
 
   // required bool isInitializedFromPrinter = 47;
@@ -2073,9 +2073,9 @@ size_t PrintData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_papersizeunit()) {
-    // required int32 paperSizeUnit = 36;
+    // required sint32 paperSizeUnit = 36;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_papersizeunit());
   }
 
@@ -2100,58 +2100,58 @@ size_t PrintData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_orientation()) {
-    // required int32 orientation = 39;
+    // required sint32 orientation = 39;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_orientation());
   }
 
   if (_internal_has_numcopies()) {
-    // required int32 numCopies = 40;
+    // required sint32 numCopies = 40;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_numcopies());
   }
 
   if (_internal_has_numpagespersheet()) {
-    // required int32 numPagesPerSheet = 41;
+    // required sint32 numPagesPerSheet = 41;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_numpagespersheet());
   }
 
   if (_internal_has_outputdestination()) {
-    // required int32 outputDestination = 42;
+    // required sint32 outputDestination = 42;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_outputdestination());
   }
 
   if (_internal_has_outputformat()) {
-    // required int32 outputFormat = 43;
+    // required sint32 outputFormat = 43;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_outputformat());
   }
 
   if (_internal_has_printpagedelay()) {
-    // required int32 printPageDelay = 44;
+    // required sint32 printPageDelay = 44;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_printpagedelay());
   }
 
   if (_internal_has_resolution()) {
-    // required int32 resolution = 45;
+    // required sint32 resolution = 45;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_resolution());
   }
 
   if (_internal_has_duplex()) {
-    // required int32 duplex = 46;
+    // required sint32 duplex = 46;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_duplex());
   }
 
@@ -2309,9 +2309,9 @@ size_t PrintData::ByteSizeLong() const {
     // required double paperHeight = 35;
     total_size += 2 + 8;
 
-    // required int32 paperSizeUnit = 36;
+    // required sint32 paperSizeUnit = 36;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_papersizeunit());
 
     // required bool shrinkToFit = 32;
@@ -2326,44 +2326,44 @@ size_t PrintData::ByteSizeLong() const {
     // required bool isInitializedFromPrinter = 47;
     total_size += 2 + 1;
 
-    // required int32 orientation = 39;
+    // required sint32 orientation = 39;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_orientation());
 
-    // required int32 numCopies = 40;
+    // required sint32 numCopies = 40;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_numcopies());
 
-    // required int32 numPagesPerSheet = 41;
+    // required sint32 numPagesPerSheet = 41;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_numpagespersheet());
 
-    // required int32 outputDestination = 42;
+    // required sint32 outputDestination = 42;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_outputdestination());
 
-    // required int32 outputFormat = 43;
+    // required sint32 outputFormat = 43;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_outputformat());
 
-    // required int32 printPageDelay = 44;
+    // required sint32 printPageDelay = 44;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_printpagedelay());
 
-    // required int32 resolution = 45;
+    // required sint32 resolution = 45;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_resolution());
 
-    // required int32 duplex = 46;
+    // required sint32 duplex = 46;
     total_size += 2 +
-      ::_pbi::WireFormatLite::Int32Size(
+      ::_pbi::WireFormatLite::SInt32Size(
         this->_internal_duplex());
 
     // required bool isInitializedFromPrefs = 48;
@@ -2381,10 +2381,10 @@ size_t PrintData::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated int32 pageRanges = 22;
+  // repeated sint32 pageRanges = 22;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      Int32Size(this->_impl_.pageranges_);
+      SInt32Size(this->_impl_.pageranges_);
     total_size += 2 *
                   ::_pbi::FromIntSize(this->_internal_pageranges_size());
     total_size += data_size;

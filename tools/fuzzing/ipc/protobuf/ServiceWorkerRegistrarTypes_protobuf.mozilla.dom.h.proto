@@ -21,8 +21,8 @@ message ServiceWorkerRegistrationData {
   required bytes cacheName = 4;
   required protobuf.mozilla.ipc.PrincipalInfo principal = 5;
   required uint32 updateViaCache = 6;
-  required int64 currentWorkerInstalledTime = 7;
-  required int64 currentWorkerActivatedTime = 8;
-  required int64 lastUpdateTime = 9;
+  required sint64 currentWorkerInstalledTime = 7;
+  required sint64 currentWorkerActivatedTime = 8;
+  required sint64 lastUpdateTime = 9;
   required protobuf.mozilla.dom.IPCNavigationPreloadState navigationPreloadState = 10;
 }

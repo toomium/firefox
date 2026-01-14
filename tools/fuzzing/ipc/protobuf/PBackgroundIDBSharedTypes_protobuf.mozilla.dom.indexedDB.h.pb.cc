@@ -2286,11 +2286,11 @@ const char* IndexUpdateInfo::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 indexId = 1;
+      // required sint64 indexId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_indexid(&has_bits);
-          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2344,10 +2344,10 @@ uint8_t* IndexUpdateInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 indexId = 1;
+  // required sint64 indexId = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_indexid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_indexid(), target);
   }
 
   // required bytes value = 2;
@@ -2389,8 +2389,8 @@ size_t IndexUpdateInfo::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_indexid()) {
-    // required int64 indexId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
   }
 
   return total_size;
@@ -2410,8 +2410,8 @@ size_t IndexUpdateInfo::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_localizedvalue());
 
-    // required int64 indexId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -2953,11 +2953,11 @@ const char* ObjectStoreMetadata::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 id = 1;
+      // required sint64 id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_id(&has_bits);
-          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3020,10 +3020,10 @@ uint8_t* ObjectStoreMetadata::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 id = 1;
+  // required sint64 id = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_id(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_id(), target);
   }
 
   // required bytes name = 2;
@@ -3071,8 +3071,8 @@ size_t ObjectStoreMetadata::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_id()) {
-    // required int64 id = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_id());
+    // required sint64 id = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_id());
   }
 
   if (_internal_has_autoincrement()) {
@@ -3097,8 +3097,8 @@ size_t ObjectStoreMetadata::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_keypath());
 
-    // required int64 id = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_id());
+    // required sint64 id = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_id());
 
     // required bool autoIncrement = 4;
     total_size += 1 + 1;
@@ -3354,11 +3354,11 @@ const char* IndexMetadata::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 id = 1;
+      // required sint64 id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_id(&has_bits);
-          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3448,10 +3448,10 @@ uint8_t* IndexMetadata::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 id = 1;
+  // required sint64 id = 1;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_id(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_id(), target);
   }
 
   // required bytes name = 2;
@@ -3524,8 +3524,8 @@ size_t IndexMetadata::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_id()) {
-    // required int64 id = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_id());
+    // required sint64 id = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_id());
   }
 
   if (_internal_has_unique()) {
@@ -3565,8 +3565,8 @@ size_t IndexMetadata::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_locale());
 
-    // required int64 id = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_id());
+    // required sint64 id = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_id());
 
     // required bool unique = 5;
     total_size += 1 + 1;
@@ -4294,11 +4294,11 @@ const char* CommonOpenCursorParams::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4351,10 +4351,10 @@ uint8_t* CommonOpenCursorParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
   // optional .protobuf.mozilla.dom.indexedDB.SerializedKeyRange optionalKeyRange = 2;
@@ -4390,8 +4390,8 @@ size_t CommonOpenCursorParams::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_objectstoreid()) {
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
 
   return total_size;
@@ -4406,8 +4406,8 @@ size_t CommonOpenCursorParams::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_direction());
 
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -5031,11 +5031,11 @@ const char* CommonIndexOpenCursorParams::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required int64 indexId = 2;
+      // required sint64 indexId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_indexid(&has_bits);
-          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5078,10 +5078,10 @@ uint8_t* CommonIndexOpenCursorParams::_InternalSerialize(
         _Internal::commonparams(this).GetCachedSize(), target, stream);
   }
 
-  // required int64 indexId = 2;
+  // required sint64 indexId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_indexid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_indexid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5104,8 +5104,8 @@ size_t CommonIndexOpenCursorParams::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_indexid()) {
-    // required int64 indexId = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
   }
 
   return total_size;
@@ -5120,8 +5120,8 @@ size_t CommonIndexOpenCursorParams::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.commonparams_);
 
-    // required int64 indexId = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -6495,11 +6495,11 @@ const char* ObjectStoreAddPutParams::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6578,10 +6578,10 @@ uint8_t* ObjectStoreAddPutParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
   // required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneWriteInfo cloneInfo = 2;
@@ -6640,8 +6640,8 @@ size_t ObjectStoreAddPutParams::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_objectstoreid()) {
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
 
   return total_size;
@@ -6661,8 +6661,8 @@ size_t ObjectStoreAddPutParams::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.cloneinfo_);
 
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -7292,11 +7292,11 @@ const char* ObjectStoreGetParams::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7340,10 +7340,10 @@ uint8_t* ObjectStoreGetParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
   // required .protobuf.mozilla.dom.indexedDB.SerializedKeyRange keyRange = 2;
@@ -7373,8 +7373,8 @@ size_t ObjectStoreGetParams::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_objectstoreid()) {
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
 
   return total_size;
@@ -7389,8 +7389,8 @@ size_t ObjectStoreGetParams::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.keyrange_);
 
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -7563,11 +7563,11 @@ const char* ObjectStoreGetKeyParams::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7611,10 +7611,10 @@ uint8_t* ObjectStoreGetKeyParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
   // required .protobuf.mozilla.dom.indexedDB.SerializedKeyRange keyRange = 2;
@@ -7644,8 +7644,8 @@ size_t ObjectStoreGetKeyParams::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_objectstoreid()) {
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
 
   return total_size;
@@ -7660,8 +7660,8 @@ size_t ObjectStoreGetKeyParams::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.keyrange_);
 
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -7845,11 +7845,11 @@ const char* ObjectStoreGetAllParams::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7902,10 +7902,10 @@ uint8_t* ObjectStoreGetAllParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
   // optional .protobuf.mozilla.dom.indexedDB.SerializedKeyRange optionalKeyRange = 2;
@@ -7934,8 +7934,8 @@ size_t ObjectStoreGetAllParams::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_objectstoreid()) {
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
 
   if (_internal_has_limit()) {
@@ -7950,8 +7950,8 @@ size_t ObjectStoreGetAllParams::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000006) ^ 0x00000006) == 0) {  // All required fields are present.
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
 
     // required uint32 limit = 3;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_limit());
@@ -8149,11 +8149,11 @@ const char* ObjectStoreGetAllKeysParams::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8206,10 +8206,10 @@ uint8_t* ObjectStoreGetAllKeysParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
   // optional .protobuf.mozilla.dom.indexedDB.SerializedKeyRange optionalKeyRange = 2;
@@ -8238,8 +8238,8 @@ size_t ObjectStoreGetAllKeysParams::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_objectstoreid()) {
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
 
   if (_internal_has_limit()) {
@@ -8254,8 +8254,8 @@ size_t ObjectStoreGetAllKeysParams::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000006) ^ 0x00000006) == 0) {  // All required fields are present.
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
 
     // required uint32 limit = 3;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_limit());
@@ -8442,11 +8442,11 @@ const char* ObjectStoreDeleteParams::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8490,10 +8490,10 @@ uint8_t* ObjectStoreDeleteParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
   // required .protobuf.mozilla.dom.indexedDB.SerializedKeyRange keyRange = 2;
@@ -8523,8 +8523,8 @@ size_t ObjectStoreDeleteParams::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_objectstoreid()) {
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
 
   return total_size;
@@ -8539,8 +8539,8 @@ size_t ObjectStoreDeleteParams::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.keyrange_);
 
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -8694,11 +8694,11 @@ const char* ObjectStoreClearParams::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8734,10 +8734,10 @@ uint8_t* ObjectStoreClearParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8752,9 +8752,9 @@ size_t ObjectStoreClearParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.ObjectStoreClearParams)
   size_t total_size = 0;
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (_internal_has_objectstoreid()) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -8908,11 +8908,11 @@ const char* ObjectStoreCountParams::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8956,10 +8956,10 @@ uint8_t* ObjectStoreCountParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
   // optional .protobuf.mozilla.dom.indexedDB.SerializedKeyRange optionalKeyRange = 2;
@@ -8981,9 +8981,9 @@ size_t ObjectStoreCountParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.ObjectStoreCountParams)
   size_t total_size = 0;
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (_internal_has_objectstoreid()) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -9172,20 +9172,20 @@ const char* IndexGetParams::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 indexId = 2;
+      // required sint64 indexId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_indexid(&has_bits);
-          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -9229,16 +9229,16 @@ uint8_t* IndexGetParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
-  // required int64 indexId = 2;
+  // required sint64 indexId = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_indexid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_indexid(), target);
   }
 
   // required .protobuf.mozilla.dom.indexedDB.SerializedKeyRange keyRange = 3;
@@ -9268,13 +9268,13 @@ size_t IndexGetParams::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_objectstoreid()) {
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
 
   if (_internal_has_indexid()) {
-    // required int64 indexId = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
   }
 
   return total_size;
@@ -9289,11 +9289,11 @@ size_t IndexGetParams::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.keyrange_);
 
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
 
-    // required int64 indexId = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -9480,20 +9480,20 @@ const char* IndexGetKeyParams::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 indexId = 2;
+      // required sint64 indexId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_indexid(&has_bits);
-          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -9537,16 +9537,16 @@ uint8_t* IndexGetKeyParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
-  // required int64 indexId = 2;
+  // required sint64 indexId = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_indexid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_indexid(), target);
   }
 
   // required .protobuf.mozilla.dom.indexedDB.SerializedKeyRange keyRange = 3;
@@ -9576,13 +9576,13 @@ size_t IndexGetKeyParams::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_objectstoreid()) {
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
 
   if (_internal_has_indexid()) {
-    // required int64 indexId = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
   }
 
   return total_size;
@@ -9597,11 +9597,11 @@ size_t IndexGetKeyParams::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.keyrange_);
 
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
 
-    // required int64 indexId = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -9793,20 +9793,20 @@ const char* IndexGetAllParams::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 indexId = 2;
+      // required sint64 indexId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_indexid(&has_bits);
-          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -9859,16 +9859,16 @@ uint8_t* IndexGetAllParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
-  // required int64 indexId = 2;
+  // required sint64 indexId = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_indexid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_indexid(), target);
   }
 
   // optional .protobuf.mozilla.dom.indexedDB.SerializedKeyRange optionalKeyRange = 3;
@@ -9897,13 +9897,13 @@ size_t IndexGetAllParams::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_objectstoreid()) {
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
 
   if (_internal_has_indexid()) {
-    // required int64 indexId = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
   }
 
   if (_internal_has_limit()) {
@@ -9918,11 +9918,11 @@ size_t IndexGetAllParams::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000e) ^ 0x0000000e) == 0) {  // All required fields are present.
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
 
-    // required int64 indexId = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
 
     // required uint32 limit = 4;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_limit());
@@ -10128,20 +10128,20 @@ const char* IndexGetAllKeysParams::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 indexId = 2;
+      // required sint64 indexId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_indexid(&has_bits);
-          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -10194,16 +10194,16 @@ uint8_t* IndexGetAllKeysParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
-  // required int64 indexId = 2;
+  // required sint64 indexId = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_indexid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_indexid(), target);
   }
 
   // optional .protobuf.mozilla.dom.indexedDB.SerializedKeyRange optionalKeyRange = 3;
@@ -10232,13 +10232,13 @@ size_t IndexGetAllKeysParams::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_objectstoreid()) {
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
 
   if (_internal_has_indexid()) {
-    // required int64 indexId = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
   }
 
   if (_internal_has_limit()) {
@@ -10253,11 +10253,11 @@ size_t IndexGetAllKeysParams::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000e) ^ 0x0000000e) == 0) {  // All required fields are present.
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
 
-    // required int64 indexId = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
 
     // required uint32 limit = 4;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_limit());
@@ -10458,20 +10458,20 @@ const char* IndexCountParams::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 objectStoreId = 1;
+      // required sint64 objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_objectstoreid(&has_bits);
-          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.objectstoreid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 indexId = 2;
+      // required sint64 indexId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_indexid(&has_bits);
-          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.indexid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -10515,16 +10515,16 @@ uint8_t* IndexCountParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_objectstoreid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_objectstoreid(), target);
   }
 
-  // required int64 indexId = 2;
+  // required sint64 indexId = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_indexid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_indexid(), target);
   }
 
   // optional .protobuf.mozilla.dom.indexedDB.SerializedKeyRange optionalKeyRange = 3;
@@ -10547,13 +10547,13 @@ size_t IndexCountParams::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_objectstoreid()) {
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
   }
 
   if (_internal_has_indexid()) {
-    // required int64 indexId = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
   }
 
   return total_size;
@@ -10563,11 +10563,11 @@ size_t IndexCountParams::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000006) ^ 0x00000006) == 0) {  // All required fields are present.
-    // required int64 objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_objectstoreid());
+    // required sint64 objectStoreId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_objectstoreid());
 
-    // required int64 indexId = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_indexid());
+    // required sint64 indexId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_indexid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -11860,20 +11860,20 @@ const char* LoggingInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required int64 nextTransactionSerialNumber = 2;
+      // required sint64 nextTransactionSerialNumber = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_nexttransactionserialnumber(&has_bits);
-          _impl_.nexttransactionserialnumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.nexttransactionserialnumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int64 nextVersionChangeTransactionSerialNumber = 3;
+      // required sint64 nextVersionChangeTransactionSerialNumber = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_nextversionchangetransactionserialnumber(&has_bits);
-          _impl_.nextversionchangetransactionserialnumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.nextversionchangetransactionserialnumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -11924,16 +11924,16 @@ uint8_t* LoggingInfo::_InternalSerialize(
         1, this->_internal_backgroundchildloggingid(), target);
   }
 
-  // required int64 nextTransactionSerialNumber = 2;
+  // required sint64 nextTransactionSerialNumber = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_nexttransactionserialnumber(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_nexttransactionserialnumber(), target);
   }
 
-  // required int64 nextVersionChangeTransactionSerialNumber = 3;
+  // required sint64 nextVersionChangeTransactionSerialNumber = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_nextversionchangetransactionserialnumber(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(3, this->_internal_nextversionchangetransactionserialnumber(), target);
   }
 
   // required uint64 nextRequestSerialNumber = 4;
@@ -11962,13 +11962,13 @@ size_t LoggingInfo::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_nexttransactionserialnumber()) {
-    // required int64 nextTransactionSerialNumber = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_nexttransactionserialnumber());
+    // required sint64 nextTransactionSerialNumber = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_nexttransactionserialnumber());
   }
 
   if (_internal_has_nextversionchangetransactionserialnumber()) {
-    // required int64 nextVersionChangeTransactionSerialNumber = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_nextversionchangetransactionserialnumber());
+    // required sint64 nextVersionChangeTransactionSerialNumber = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_nextversionchangetransactionserialnumber());
   }
 
   if (_internal_has_nextrequestserialnumber()) {
@@ -11988,11 +11988,11 @@ size_t LoggingInfo::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_backgroundchildloggingid());
 
-    // required int64 nextTransactionSerialNumber = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_nexttransactionserialnumber());
+    // required sint64 nextTransactionSerialNumber = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_nexttransactionserialnumber());
 
-    // required int64 nextVersionChangeTransactionSerialNumber = 3;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_nextversionchangetransactionserialnumber());
+    // required sint64 nextVersionChangeTransactionSerialNumber = 3;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_nextversionchangetransactionserialnumber());
 
     // required uint64 nextRequestSerialNumber = 4;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_nextrequestserialnumber());

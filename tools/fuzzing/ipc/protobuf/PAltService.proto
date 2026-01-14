@@ -18,7 +18,7 @@ import "NeckoChannelParams.proto";
 // Message declarations
 message Msg_ClearHostMapping {
   required bytes host = 1;
-  required int32 port = 2;
+  required sint32 port = 2;
   required bytes originAttributes = 3;
 }
 
@@ -26,7 +26,7 @@ message Msg_ProcessHeader {
   required bytes buf = 1;
   required bytes originScheme = 2;
   required bytes originHost = 3;
-  required int32 originPort = 4;
+  required sint32 originPort = 4;
   required bytes username = 5;
   required bool privateBrowsing = 6;
   repeated protobuf.mozilla.net.ProxyInfoCloneArgs proxyInfo = 7;

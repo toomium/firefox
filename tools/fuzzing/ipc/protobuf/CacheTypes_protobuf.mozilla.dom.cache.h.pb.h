@@ -1177,7 +1177,7 @@ class CacheRequest final :
       ::protobuf::mozilla::ipc::PrincipalInfo* principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_principalinfo();
 
-  // required int64 bodyDiskSize = 12;
+  // required sint64 bodyDiskSize = 12;
   bool has_bodydisksize() const;
   private:
   bool _internal_has_bodydisksize() const;
@@ -1545,7 +1545,7 @@ class CacheResponse final :
   void _internal_set_paddinginfo(uint32_t value);
   public:
 
-  // required int64 bodyDiskSize = 8;
+  // required sint64 bodyDiskSize = 8;
   bool has_bodydisksize() const;
   private:
   bool _internal_has_bodydisksize() const;
@@ -1558,7 +1558,7 @@ class CacheResponse final :
   void _internal_set_bodydisksize(int64_t value);
   public:
 
-  // required int64 paddingSize = 12;
+  // required sint64 paddingSize = 12;
   bool has_paddingsize() const;
   private:
   bool _internal_has_paddingsize() const;
@@ -6918,7 +6918,7 @@ inline void CacheRequest::set_allocated_body(::protobuf::mozilla::dom::cache::Ca
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheRequest.body)
 }
 
-// required int64 bodyDiskSize = 12;
+// required sint64 bodyDiskSize = 12;
 inline bool CacheRequest::_internal_has_bodydisksize() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -7814,7 +7814,7 @@ inline void CacheResponse::set_allocated_body(::protobuf::mozilla::dom::cache::C
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheResponse.body)
 }
 
-// required int64 bodyDiskSize = 8;
+// required sint64 bodyDiskSize = 8;
 inline bool CacheResponse::_internal_has_bodydisksize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -8025,7 +8025,7 @@ inline void CacheResponse::set_paddinginfo(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheResponse.paddingInfo)
 }
 
-// required int64 paddingSize = 12;
+// required sint64 paddingSize = 12;
 inline bool CacheResponse::_internal_has_paddingsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;

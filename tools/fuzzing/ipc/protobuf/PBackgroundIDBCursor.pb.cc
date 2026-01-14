@@ -393,11 +393,11 @@ const char* Msg_Continue::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int64 requestId = 1;
+      // required sint64 requestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_requestid(&has_bits);
-          _impl_.requestid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.requestid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -459,10 +459,10 @@ uint8_t* Msg_Continue::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int64 requestId = 1;
+  // required sint64 requestId = 1;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_requestid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_requestid(), target);
   }
 
   // required .protobuf.mozilla.dom.indexedDB.CursorRequestParams params = 2;
@@ -518,8 +518,8 @@ size_t Msg_Continue::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_requestid()) {
-    // required int64 requestId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_requestid());
+    // required sint64 requestId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_requestid());
   }
 
   return total_size;
@@ -544,8 +544,8 @@ size_t Msg_Continue::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
 
-    // required int64 requestId = 1;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_requestid());
+    // required sint64 requestId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_requestid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

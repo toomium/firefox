@@ -338,7 +338,7 @@ class Msg_Commit final :
   enum : int {
     kLastRequestFieldNumber = 1,
   };
-  // optional int64 lastRequest = 1;
+  // optional sint64 lastRequest = 1;
   bool has_lastrequest() const;
   private:
   bool _internal_has_lastrequest() const;
@@ -646,7 +646,7 @@ class Msg_PBackgroundIDBCursorConstructor final :
       ::protobuf::mozilla::dom::indexedDB::OpenCursorParams* params);
   ::protobuf::mozilla::dom::indexedDB::OpenCursorParams* unsafe_arena_release_params();
 
-  // required int64 requestId = 1;
+  // required sint64 requestId = 1;
   bool has_requestid() const;
   private:
   bool _internal_has_requestid() const;
@@ -935,7 +935,7 @@ class Msg_PBackgroundIDBRequestConstructor final :
       ::protobuf::mozilla::dom::indexedDB::RequestParams* params);
   ::protobuf::mozilla::dom::indexedDB::RequestParams* unsafe_arena_release_params();
 
-  // required int64 requestId = 1;
+  // required sint64 requestId = 1;
   bool has_requestid() const;
   private:
   bool _internal_has_requestid() const;
@@ -1501,7 +1501,7 @@ class Msg_Complete final :
 
 // Msg_Commit
 
-// optional int64 lastRequest = 1;
+// optional sint64 lastRequest = 1;
 inline bool Msg_Commit::_internal_has_lastrequest() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1605,7 +1605,7 @@ inline void Msg_Abort::set_allocated_resultcode(std::string* resultcode) {
 
 // Msg_PBackgroundIDBCursorConstructor
 
-// required int64 requestId = 1;
+// required sint64 requestId = 1;
 inline bool Msg_PBackgroundIDBCursorConstructor::_internal_has_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1728,7 +1728,7 @@ inline void Msg_PBackgroundIDBCursorConstructor::set_allocated_params(::protobuf
 
 // Msg_PBackgroundIDBRequestConstructor
 
-// required int64 requestId = 1;
+// required sint64 requestId = 1;
 inline bool Msg_PBackgroundIDBRequestConstructor::_internal_has_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

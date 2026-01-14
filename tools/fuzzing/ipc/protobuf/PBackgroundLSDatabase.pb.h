@@ -351,7 +351,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   std::string* _internal_mutable_key();
   public:
 
-  // required int64 minSize = 4;
+  // required sint64 minSize = 4;
   bool has_minsize() const;
   private:
   bool _internal_has_minsize() const;
@@ -848,7 +848,7 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_increasepeakusage(bool val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.increasePeakUsage)
 }
 
-// required int64 minSize = 4;
+// required sint64 minSize = 4;
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_minsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

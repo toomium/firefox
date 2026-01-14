@@ -405,7 +405,7 @@ class Msg_CreateUnidirectionalStream final :
   enum : int {
     kSendOrderFieldNumber = 1,
   };
-  // optional int64 sendOrder = 1;
+  // optional sint64 sendOrder = 1;
   bool has_sendorder() const;
   private:
   bool _internal_has_sendorder() const;
@@ -694,7 +694,7 @@ class Msg_CreateBidirectionalStream final :
   enum : int {
     kSendOrderFieldNumber = 1,
   };
-  // optional int64 sendOrder = 1;
+  // optional sint64 sendOrder = 1;
   bool has_sendorder() const;
   private:
   bool _internal_has_sendorder() const;
@@ -1581,7 +1581,7 @@ class Msg_SetSendOrder final :
   void _internal_set_streamid(uint64_t value);
   public:
 
-  // optional int64 sendOrder = 2;
+  // optional sint64 sendOrder = 2;
   bool has_sendorder() const;
   private:
   bool _internal_has_sendorder() const;
@@ -2858,7 +2858,7 @@ inline void Msg_Close::set_allocated_reason(std::string* reason) {
 
 // Msg_CreateUnidirectionalStream
 
-// optional int64 sendOrder = 1;
+// optional sint64 sendOrder = 1;
 inline bool Msg_CreateUnidirectionalStream::_internal_has_sendorder() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2981,7 +2981,7 @@ inline void Reply_CreateUnidirectionalStream::set_allocated_response(::protobuf:
 
 // Msg_CreateBidirectionalStream
 
-// optional int64 sendOrder = 1;
+// optional sint64 sendOrder = 1;
 inline bool Msg_CreateBidirectionalStream::_internal_has_sendorder() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3359,7 +3359,7 @@ inline void Msg_SetSendOrder::set_streamid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebTransport.Msg_SetSendOrder.streamId)
 }
 
-// optional int64 sendOrder = 2;
+// optional sint64 sendOrder = 2;
 inline bool Msg_SetSendOrder::_internal_has_sendorder() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

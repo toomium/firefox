@@ -21,7 +21,7 @@ message Msg_OnVerifySSLServerCertFinished {
   required uint32 aCertTransparencyStatus = 2;
   required bytes aEVStatus = 3;
   required bool aSucceeded = 4;
-  required int32 aFinalError = 5;
+  required sint32 aFinalError = 5;
   required bytes aOverridableErrorCategory = 6;
   required bool aIsBuiltCertChainRootBuiltInRoot = 7;
   required bool aMadeOCSPRequests = 8;

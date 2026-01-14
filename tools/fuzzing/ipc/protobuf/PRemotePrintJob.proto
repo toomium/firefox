@@ -21,13 +21,13 @@ message Msg_AbortPrint {
 
 message Msg_InitializePrint {
   required bytes aDocumentTitle = 1;
-  required int32 aStartPage = 2;
-  required int32 aEndPage = 3;
+  required sint32 aStartPage = 2;
+  required sint32 aEndPage = 3;
 }
 
 message Msg_ProcessPage {
-  required int32 aWidthInPoints = 1;
-  required int32 aHeightInPoints = 2;
+  required sint32 aWidthInPoints = 1;
+  required sint32 aHeightInPoints = 2;
   repeated uint64 aDeps = 3;
 }
 
@@ -35,10 +35,10 @@ message Msg_FinalizePrint {
 }
 
 message Msg_ProgressChange {
-  required int64 aCurSelfProgress = 1;
-  required int64 aMaxSelfProgress = 2;
-  required int64 aCurTotalProgress = 3;
-  required int64 aMaxTotalProgress = 4;
+  required sint64 aCurSelfProgress = 1;
+  required sint64 aMaxSelfProgress = 2;
+  required sint64 aCurTotalProgress = 3;
+  required sint64 aMaxTotalProgress = 4;
 }
 
 message Msg_StatusChange {

@@ -50,10 +50,10 @@ message IPCInternalRequest {
   required bytes headersGuard = 3;
   repeated protobuf.mozilla.dom.HeadersEntry headers = 4;
   optional protobuf.mozilla.dom.BodyStreamVariant body = 5;
-  required int64 bodySize = 6;
+  required sint64 bodySize = 6;
   required bytes preferredAlternativeDataType = 7;
   required bytes contentPolicyType = 8;
-  required int32 internalPriority = 9;
+  required sint32 internalPriority = 9;
   required bytes referrer = 10;
   required bytes referrerPolicy = 11;
   required bytes environmentReferrerPolicy = 12;
@@ -92,21 +92,21 @@ message InternalResponseMetadata {
 message ParentToParentInternalResponse {
   required protobuf.mozilla.dom.InternalResponseMetadata metadata = 1;
   optional protobuf.mozilla.dom.ParentToParentStream body = 2;
-  required int64 bodySize = 3;
+  required sint64 bodySize = 3;
   optional protobuf.mozilla.dom.ParentToParentStream alternativeBody = 4;
 }
 
 message ParentToChildInternalResponse {
   required protobuf.mozilla.dom.InternalResponseMetadata metadata = 1;
   optional protobuf.mozilla.dom.ParentToChildStream body = 2;
-  required int64 bodySize = 3;
+  required sint64 bodySize = 3;
   optional protobuf.mozilla.dom.ParentToChildStream alternativeBody = 4;
 }
 
 message ChildToParentInternalResponse {
   required protobuf.mozilla.dom.InternalResponseMetadata metadata = 1;
   optional protobuf.mozilla.dom.ChildToParentStream body = 2;
-  required int64 bodySize = 3;
+  required sint64 bodySize = 3;
   optional protobuf.mozilla.dom.ChildToParentStream alternativeBody = 4;
 }
 

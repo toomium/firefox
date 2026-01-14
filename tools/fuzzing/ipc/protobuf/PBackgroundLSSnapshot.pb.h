@@ -2294,7 +2294,7 @@ class Msg_IncreasePeakUsage final :
   enum : int {
     kMinSizeFieldNumber = 1,
   };
-  // required int64 minSize = 1;
+  // required sint64 minSize = 1;
   bool has_minsize() const;
   private:
   bool _internal_has_minsize() const;
@@ -2436,7 +2436,7 @@ class Reply_IncreasePeakUsage final :
   enum : int {
     kSizeFieldNumber = 1,
   };
-  // required int64 size = 1;
+  // required sint64 size = 1;
   bool has_size() const;
   private:
   bool _internal_has_size() const;
@@ -3303,7 +3303,7 @@ Reply_LoadKeys::mutable_keys() {
 
 // Msg_IncreasePeakUsage
 
-// required int64 minSize = 1;
+// required sint64 minSize = 1;
 inline bool Msg_IncreasePeakUsage::_internal_has_minsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3335,7 +3335,7 @@ inline void Msg_IncreasePeakUsage::set_minsize(int64_t value) {
 
 // Reply_IncreasePeakUsage
 
-// required int64 size = 1;
+// required sint64 size = 1;
 inline bool Reply_IncreasePeakUsage::_internal_has_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

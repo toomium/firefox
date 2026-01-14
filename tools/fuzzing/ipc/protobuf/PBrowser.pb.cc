@@ -14058,20 +14058,20 @@ const char* Msg_SynthesizeNativeKeyEvent::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 aNativeKeyboardLayout = 1;
+      // required sint32 aNativeKeyboardLayout = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_anativekeyboardlayout(&has_bits);
-          _impl_.anativekeyboardlayout_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.anativekeyboardlayout_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 aNativeKeyCode = 2;
+      // required sint32 aNativeKeyCode = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_anativekeycode(&has_bits);
-          _impl_.anativekeycode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.anativekeycode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -14143,16 +14143,16 @@ uint8_t* Msg_SynthesizeNativeKeyEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 aNativeKeyboardLayout = 1;
+  // required sint32 aNativeKeyboardLayout = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_anativekeyboardlayout(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_anativekeyboardlayout(), target);
   }
 
-  // required int32 aNativeKeyCode = 2;
+  // required sint32 aNativeKeyCode = 2;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_anativekeycode(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_anativekeycode(), target);
   }
 
   // required uint32 aModifierFlags = 3;
@@ -14206,13 +14206,13 @@ size_t Msg_SynthesizeNativeKeyEvent::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_anativekeyboardlayout()) {
-    // required int32 aNativeKeyboardLayout = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_anativekeyboardlayout());
+    // required sint32 aNativeKeyboardLayout = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_anativekeyboardlayout());
   }
 
   if (_internal_has_anativekeycode()) {
-    // required int32 aNativeKeyCode = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_anativekeycode());
+    // required sint32 aNativeKeyCode = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_anativekeycode());
   }
 
   if (_internal_has_amodifierflags()) {
@@ -14237,11 +14237,11 @@ size_t Msg_SynthesizeNativeKeyEvent::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_aunmodifiedcharacters());
 
-    // required int32 aNativeKeyboardLayout = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_anativekeyboardlayout());
+    // required sint32 aNativeKeyboardLayout = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_anativekeyboardlayout());
 
-    // required int32 aNativeKeyCode = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_anativekeycode());
+    // required sint32 aNativeKeyCode = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_anativekeycode());
 
     // required uint32 aModifierFlags = 3;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_amodifierflags());
@@ -14483,11 +14483,11 @@ const char* Msg_SynthesizeNativeMouseEvent::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // required int32 aButton = 3;
+      // required sint32 aButton = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_abutton(&has_bits);
-          _impl_.abutton_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.abutton_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -14553,10 +14553,10 @@ uint8_t* Msg_SynthesizeNativeMouseEvent::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_anativemessage(), target);
   }
 
-  // required int32 aButton = 3;
+  // required sint32 aButton = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_abutton(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_abutton(), target);
   }
 
   // required uint32 aModifierFlags = 4;
@@ -14596,8 +14596,8 @@ size_t Msg_SynthesizeNativeMouseEvent::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_abutton()) {
-    // required int32 aButton = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_abutton());
+    // required sint32 aButton = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_abutton());
   }
 
   if (_internal_has_amodifierflags()) {
@@ -14620,8 +14620,8 @@ size_t Msg_SynthesizeNativeMouseEvent::ByteSizeLong() const {
     // required uint32 aNativeMessage = 2;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_anativemessage());
 
-    // required int32 aButton = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_abutton());
+    // required sint32 aButton = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_abutton());
 
     // required uint32 aModifierFlags = 4;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_amodifierflags());
@@ -16027,11 +16027,11 @@ const char* Msg_SynthesizeNativeTouchPadPinch::_InternalParse(const char* ptr, :
         } else
           goto handle_unusual;
         continue;
-      // required int32 aModifierFlags = 4;
+      // required sint32 aModifierFlags = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_amodifierflags(&has_bits);
-          _impl_.amodifierflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.amodifierflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -16085,10 +16085,10 @@ uint8_t* Msg_SynthesizeNativeTouchPadPinch::_InternalSerialize(
         3, this->_internal_apoint(), target);
   }
 
-  // required int32 aModifierFlags = 4;
+  // required sint32 aModifierFlags = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_amodifierflags(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_amodifierflags(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -16123,8 +16123,8 @@ size_t Msg_SynthesizeNativeTouchPadPinch::RequiredFieldsByteSizeFallback() const
   }
 
   if (_internal_has_amodifierflags()) {
-    // required int32 aModifierFlags = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_amodifierflags());
+    // required sint32 aModifierFlags = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_amodifierflags());
   }
 
   return total_size;
@@ -16147,8 +16147,8 @@ size_t Msg_SynthesizeNativeTouchPadPinch::ByteSizeLong() const {
     // required float aScale = 2;
     total_size += 1 + 4;
 
-    // required int32 aModifierFlags = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_amodifierflags());
+    // required sint32 aModifierFlags = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_amodifierflags());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -16752,29 +16752,29 @@ const char* Msg_SynthesizeNativePenInput::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // required int32 aTiltX = 6;
+      // required sint32 aTiltX = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_atiltx(&has_bits);
-          _impl_.atiltx_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.atiltx_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 aTiltY = 7;
+      // required sint32 aTiltY = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           _Internal::set_has_atilty(&has_bits);
-          _impl_.atilty_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.atilty_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 aButton = 8;
+      // required sint32 aButton = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_abutton(&has_bits);
-          _impl_.abutton_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.abutton_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -16849,22 +16849,22 @@ uint8_t* Msg_SynthesizeNativePenInput::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_arotation(), target);
   }
 
-  // required int32 aTiltX = 6;
+  // required sint32 aTiltX = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(6, this->_internal_atiltx(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(6, this->_internal_atiltx(), target);
   }
 
-  // required int32 aTiltY = 7;
+  // required sint32 aTiltY = 7;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(7, this->_internal_atilty(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(7, this->_internal_atilty(), target);
   }
 
-  // required int32 aButton = 8;
+  // required sint32 aButton = 8;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(8, this->_internal_abutton(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(8, this->_internal_abutton(), target);
   }
 
   // optional uint64 aCallbackId = 9;
@@ -16915,18 +16915,18 @@ size_t Msg_SynthesizeNativePenInput::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_atiltx()) {
-    // required int32 aTiltX = 6;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_atiltx());
+    // required sint32 aTiltX = 6;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_atiltx());
   }
 
   if (_internal_has_atilty()) {
-    // required int32 aTiltY = 7;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_atilty());
+    // required sint32 aTiltY = 7;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_atilty());
   }
 
   if (_internal_has_abutton()) {
-    // required int32 aButton = 8;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_abutton());
+    // required sint32 aButton = 8;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_abutton());
   }
 
   return total_size;
@@ -16955,14 +16955,14 @@ size_t Msg_SynthesizeNativePenInput::ByteSizeLong() const {
     // required double aPressure = 4;
     total_size += 1 + 8;
 
-    // required int32 aTiltX = 6;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_atiltx());
+    // required sint32 aTiltX = 6;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_atiltx());
 
-    // required int32 aTiltY = 7;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_atilty());
+    // required sint32 aTiltY = 7;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_atilty());
 
-    // required int32 aButton = 8;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_abutton());
+    // required sint32 aButton = 8;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_abutton());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -17522,11 +17522,11 @@ const char* Msg_SynthesizeNativeTouchpadPan::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // required int32 aModifierFlags = 5;
+      // required sint32 aModifierFlags = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_amodifierflags(&has_bits);
-          _impl_.amodifierflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.amodifierflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -17595,10 +17595,10 @@ uint8_t* Msg_SynthesizeNativeTouchpadPan::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_adeltay(), target);
   }
 
-  // required int32 aModifierFlags = 5;
+  // required sint32 aModifierFlags = 5;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_amodifierflags(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_amodifierflags(), target);
   }
 
   // optional uint64 aCallbackId = 6;
@@ -17644,8 +17644,8 @@ size_t Msg_SynthesizeNativeTouchpadPan::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_amodifierflags()) {
-    // required int32 aModifierFlags = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_amodifierflags());
+    // required sint32 aModifierFlags = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_amodifierflags());
   }
 
   return total_size;
@@ -17671,8 +17671,8 @@ size_t Msg_SynthesizeNativeTouchpadPan::ByteSizeLong() const {
     // required double aDeltaY = 4;
     total_size += 1 + 8;
 
-    // required int32 aModifierFlags = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_amodifierflags());
+    // required sint32 aModifierFlags = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_amodifierflags());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -19761,20 +19761,20 @@ const char* Msg_OnProgressChange::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 aCurTotalProgress = 1;
+      // required sint32 aCurTotalProgress = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_acurtotalprogress(&has_bits);
-          _impl_.acurtotalprogress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.acurtotalprogress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 aMaxTotalProgress = 2;
+      // required sint32 aMaxTotalProgress = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_amaxtotalprogress(&has_bits);
-          _impl_.amaxtotalprogress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.amaxtotalprogress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -19810,16 +19810,16 @@ uint8_t* Msg_OnProgressChange::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 aCurTotalProgress = 1;
+  // required sint32 aCurTotalProgress = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_acurtotalprogress(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_acurtotalprogress(), target);
   }
 
-  // required int32 aMaxTotalProgress = 2;
+  // required sint32 aMaxTotalProgress = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_amaxtotalprogress(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_amaxtotalprogress(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -19835,13 +19835,13 @@ size_t Msg_OnProgressChange::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_acurtotalprogress()) {
-    // required int32 aCurTotalProgress = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_acurtotalprogress());
+    // required sint32 aCurTotalProgress = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_acurtotalprogress());
   }
 
   if (_internal_has_amaxtotalprogress()) {
-    // required int32 aMaxTotalProgress = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_amaxtotalprogress());
+    // required sint32 aMaxTotalProgress = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_amaxtotalprogress());
   }
 
   return total_size;
@@ -19851,11 +19851,11 @@ size_t Msg_OnProgressChange::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required int32 aCurTotalProgress = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_acurtotalprogress());
+    // required sint32 aCurTotalProgress = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_acurtotalprogress());
 
-    // required int32 aMaxTotalProgress = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_amaxtotalprogress());
+    // required sint32 aMaxTotalProgress = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_amaxtotalprogress());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -28036,11 +28036,11 @@ const char* Msg_ScrollRectIntoView::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // required int32 aAppUnitsPerDevPixel = 5;
+      // required sint32 aAppUnitsPerDevPixel = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_aappunitsperdevpixel(&has_bits);
-          _impl_.aappunitsperdevpixel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.aappunitsperdevpixel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -28100,10 +28100,10 @@ uint8_t* Msg_ScrollRectIntoView::_InternalSerialize(
         4, this->_internal_ascrollflags(), target);
   }
 
-  // required int32 aAppUnitsPerDevPixel = 5;
+  // required sint32 aAppUnitsPerDevPixel = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_aappunitsperdevpixel(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_aappunitsperdevpixel(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -28147,8 +28147,8 @@ size_t Msg_ScrollRectIntoView::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_aappunitsperdevpixel()) {
-    // required int32 aAppUnitsPerDevPixel = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aappunitsperdevpixel());
+    // required sint32 aAppUnitsPerDevPixel = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aappunitsperdevpixel());
   }
 
   return total_size;
@@ -28178,8 +28178,8 @@ size_t Msg_ScrollRectIntoView::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_ascrollflags());
 
-    // required int32 aAppUnitsPerDevPixel = 5;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_aappunitsperdevpixel());
+    // required sint32 aAppUnitsPerDevPixel = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_aappunitsperdevpixel());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -45836,11 +45836,11 @@ const char* Msg_UIResolutionChanged::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required int32 rounding = 2;
+      // required sint32 rounding = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_rounding(&has_bits);
-          _impl_.rounding_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.rounding_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -45891,10 +45891,10 @@ uint8_t* Msg_UIResolutionChanged::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteFloatToArray(1, this->_internal_dpi(), target);
   }
 
-  // required int32 rounding = 2;
+  // required sint32 rounding = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_rounding(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_rounding(), target);
   }
 
   // required double scale = 3;
@@ -45921,8 +45921,8 @@ size_t Msg_UIResolutionChanged::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_rounding()) {
-    // required int32 rounding = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_rounding());
+    // required sint32 rounding = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_rounding());
   }
 
   if (_internal_has_scale()) {
@@ -45940,8 +45940,8 @@ size_t Msg_UIResolutionChanged::ByteSizeLong() const {
     // required float dpi = 1;
     total_size += 1 + 4;
 
-    // required int32 rounding = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_rounding());
+    // required sint32 rounding = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_rounding());
 
     // required double scale = 3;
     total_size += 1 + 8;

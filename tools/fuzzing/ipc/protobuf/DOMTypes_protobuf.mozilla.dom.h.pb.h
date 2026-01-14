@@ -1624,7 +1624,7 @@ class ScreenDetails final :
   std::string* _internal_mutable_orientation();
   public:
 
-  // required int32 pixelDepth = 5;
+  // required sint32 pixelDepth = 5;
   bool has_pixeldepth() const;
   private:
   bool _internal_has_pixeldepth() const;
@@ -1637,7 +1637,7 @@ class ScreenDetails final :
   void _internal_set_pixeldepth(int32_t value);
   public:
 
-  // required int32 colorDepth = 6;
+  // required sint32 colorDepth = 6;
   bool has_colordepth() const;
   private:
   bool _internal_has_colordepth() const;
@@ -3052,7 +3052,7 @@ class DocShellLoadStateInit final :
   void _internal_set_triggeringwindowid(uint64_t value);
   public:
 
-  // optional int32 CancelContentJSEpoch = 32;
+  // optional sint32 CancelContentJSEpoch = 32;
   bool has_cancelcontentjsepoch() const;
   private:
   bool _internal_has_cancelcontentjsepoch() const;
@@ -3747,7 +3747,7 @@ class TimedChannelInfo final :
   std::string* _internal_mutable_responseend();
   public:
 
-  // required int32 redirectCount = 1;
+  // required sint32 redirectCount = 1;
   bool has_redirectcount() const;
   private:
   bool _internal_has_redirectcount() const;
@@ -3760,7 +3760,7 @@ class TimedChannelInfo final :
   void _internal_set_redirectcount(int32_t value);
   public:
 
-  // required int32 internalRedirectCount = 2;
+  // required sint32 internalRedirectCount = 2;
   bool has_internalredirectcount() const;
   private:
   bool _internal_has_internalredirectcount() const;
@@ -4360,7 +4360,7 @@ class IPDLVariantValue final :
   void _internal_set_mvuint8_t(uint32_t value);
   public:
 
-  // int32 mVint16_t = 3;
+  // sint32 mVint16_t = 3;
   bool has_mvint16_t() const;
   private:
   bool _internal_has_mvint16_t() const;
@@ -4386,7 +4386,7 @@ class IPDLVariantValue final :
   void _internal_set_mvuint16_t(uint32_t value);
   public:
 
-  // int32 mVint32_t = 5;
+  // sint32 mVint32_t = 5;
   bool has_mvint32_t() const;
   private:
   bool _internal_has_mvint32_t() const;
@@ -5102,7 +5102,7 @@ class ParentShowInfo final :
   void _internal_set_defaultscale(double value);
   public:
 
-  // required int32 widgetRounding = 5;
+  // required sint32 widgetRounding = 5;
   bool has_widgetrounding() const;
   private:
   bool _internal_has_widgetrounding() const;
@@ -7775,7 +7775,7 @@ inline void ScreenDetails::set_allocated_availrectdisplaypix(std::string* availr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ScreenDetails.availRectDisplayPix)
 }
 
-// required int32 pixelDepth = 5;
+// required sint32 pixelDepth = 5;
 inline bool ScreenDetails::_internal_has_pixeldepth() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -7803,7 +7803,7 @@ inline void ScreenDetails::set_pixeldepth(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ScreenDetails.pixelDepth)
 }
 
-// required int32 colorDepth = 6;
+// required sint32 colorDepth = 6;
 inline bool ScreenDetails::_internal_has_colordepth() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -10641,7 +10641,7 @@ inline void DocShellLoadStateInit::set_allocated_triggeringclassificationflags(s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.TriggeringClassificationFlags)
 }
 
-// optional int32 CancelContentJSEpoch = 32;
+// optional sint32 CancelContentJSEpoch = 32;
 inline bool DocShellLoadStateInit::_internal_has_cancelcontentjsepoch() const {
   bool value = (_impl_._has_bits_[1] & 0x00000001u) != 0;
   return value;
@@ -11313,7 +11313,7 @@ inline void DocShellLoadStateInit::set_ismetarefresh(bool value) {
 
 // TimedChannelInfo
 
-// required int32 redirectCount = 1;
+// required sint32 redirectCount = 1;
 inline bool TimedChannelInfo::_internal_has_redirectcount() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -11341,7 +11341,7 @@ inline void TimedChannelInfo::set_redirectcount(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.TimedChannelInfo.redirectCount)
 }
 
-// required int32 internalRedirectCount = 2;
+// required sint32 internalRedirectCount = 2;
 inline bool TimedChannelInfo::_internal_has_internalredirectcount() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -13059,7 +13059,7 @@ inline void IPDLVariantValue::set_mvuint8_t(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPDLVariantValue.mVuint8_t)
 }
 
-// int32 mVint16_t = 3;
+// sint32 mVint16_t = 3;
 inline bool IPDLVariantValue::_internal_has_mvint16_t() const {
   return content_case() == kMVint16T;
 }
@@ -13135,7 +13135,7 @@ inline void IPDLVariantValue::set_mvuint16_t(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPDLVariantValue.mVuint16_t)
 }
 
-// int32 mVint32_t = 5;
+// sint32 mVint32_t = 5;
 inline bool IPDLVariantValue::_internal_has_mvint32_t() const {
   return content_case() == kMVint32T;
 }
@@ -14099,7 +14099,7 @@ inline void ParentShowInfo::set_dpi(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ParentShowInfo.dpi)
 }
 
-// required int32 widgetRounding = 5;
+// required sint32 widgetRounding = 5;
 inline bool ParentShowInfo::_internal_has_widgetrounding() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

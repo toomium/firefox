@@ -33,7 +33,7 @@ message Msg_LengthNeeded {
 }
 
 message Reply_LengthNeeded {
-  required int64 length = 1;
+  required sint64 length = 1;
 }
 
 message Msg_Goodbye {

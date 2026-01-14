@@ -19,7 +19,7 @@ import "GMPTypes.proto";
 message Msg_InitDecode {
   required bytes aCodecSettings = 1;
   repeated uint32 aCodecSpecific = 2;
-  required int32 aCoreCount = 3;
+  required sint32 aCoreCount = 3;
 }
 
 message Msg_GiveShmem {
@@ -31,7 +31,7 @@ message Msg_Decode {
   required bytes aInputShmem = 2;
   required bool aMissingFrames = 3;
   repeated uint32 aCodecSpecificInfo = 4;
-  required int64 aRenderTimeMs = 5;
+  required sint64 aRenderTimeMs = 5;
 }
 
 message Msg_Reset {

@@ -283,7 +283,7 @@ class Msg_CancelDNSRequest final :
   std::string* _internal_mutable_reason();
   public:
 
-  // required int32 port = 3;
+  // required sint32 port = 3;
   bool has_port() const;
   private:
   bool _internal_has_port() const;
@@ -875,7 +875,7 @@ inline void Msg_CancelDNSRequest::set_allocated_trrserver(std::string* trrserver
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.trrServer)
 }
 
-// required int32 port = 3;
+// required sint32 port = 3;
 inline bool Msg_CancelDNSRequest::_internal_has_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

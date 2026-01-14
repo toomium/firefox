@@ -225,7 +225,7 @@ class Msg_ClearHostMapping final :
   std::string* _internal_mutable_originattributes();
   public:
 
-  // required int32 port = 2;
+  // required sint32 port = 2;
   bool has_port() const;
   private:
   bool _internal_has_port() const;
@@ -507,7 +507,7 @@ class Msg_ProcessHeader final :
       ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* conninfoargs);
   ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_conninfoargs();
 
-  // required int32 originPort = 4;
+  // required sint32 originPort = 4;
   bool has_originport() const;
   private:
   bool _internal_has_originport() const;
@@ -900,7 +900,7 @@ inline void Msg_ClearHostMapping::set_allocated_host(std::string* host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.host)
 }
 
-// required int32 port = 2;
+// required sint32 port = 2;
 inline bool Msg_ClearHostMapping::_internal_has_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1204,7 +1204,7 @@ inline void Msg_ProcessHeader::set_allocated_originhost(std::string* originhost)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originHost)
 }
 
-// required int32 originPort = 4;
+// required sint32 originPort = 4;
 inline bool Msg_ProcessHeader::_internal_has_originport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;

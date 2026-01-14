@@ -925,38 +925,38 @@ const char* SystemFontOptions::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 antialias = 1;
+      // required sint32 antialias = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_antialias(&has_bits);
-          _impl_.antialias_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.antialias_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 subpixelOrder = 2;
+      // required sint32 subpixelOrder = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_subpixelorder(&has_bits);
-          _impl_.subpixelorder_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.subpixelorder_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 hintStyle = 3;
+      // required sint32 hintStyle = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_hintstyle(&has_bits);
-          _impl_.hintstyle_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.hintstyle_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 lcdFilter = 4;
+      // required sint32 lcdFilter = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_lcdfilter(&has_bits);
-          _impl_.lcdfilter_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.lcdfilter_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -992,28 +992,28 @@ uint8_t* SystemFontOptions::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 antialias = 1;
+  // required sint32 antialias = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_antialias(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_antialias(), target);
   }
 
-  // required int32 subpixelOrder = 2;
+  // required sint32 subpixelOrder = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_subpixelorder(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_subpixelorder(), target);
   }
 
-  // required int32 hintStyle = 3;
+  // required sint32 hintStyle = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_hintstyle(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_hintstyle(), target);
   }
 
-  // required int32 lcdFilter = 4;
+  // required sint32 lcdFilter = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_lcdfilter(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_lcdfilter(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1029,23 +1029,23 @@ size_t SystemFontOptions::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_antialias()) {
-    // required int32 antialias = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_antialias());
+    // required sint32 antialias = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_antialias());
   }
 
   if (_internal_has_subpixelorder()) {
-    // required int32 subpixelOrder = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_subpixelorder());
+    // required sint32 subpixelOrder = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_subpixelorder());
   }
 
   if (_internal_has_hintstyle()) {
-    // required int32 hintStyle = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_hintstyle());
+    // required sint32 hintStyle = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_hintstyle());
   }
 
   if (_internal_has_lcdfilter()) {
-    // required int32 lcdFilter = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_lcdfilter());
+    // required sint32 lcdFilter = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_lcdfilter());
   }
 
   return total_size;
@@ -1055,17 +1055,17 @@ size_t SystemFontOptions::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required int32 antialias = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_antialias());
+    // required sint32 antialias = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_antialias());
 
-    // required int32 subpixelOrder = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_subpixelorder());
+    // required sint32 subpixelOrder = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_subpixelorder());
 
-    // required int32 hintStyle = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_hintstyle());
+    // required sint32 hintStyle = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_hintstyle());
 
-    // required int32 lcdFilter = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_lcdfilter());
+    // required sint32 lcdFilter = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_lcdfilter());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -6869,11 +6869,11 @@ const char* XPCOMInitData::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required int32 captivePortalState = 3;
+      // required sint32 captivePortalState = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_captiveportalstate(&has_bits);
-          _impl_.captiveportalstate_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.captiveportalstate_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7103,10 +7103,10 @@ uint8_t* XPCOMInitData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_isconnected(), target);
   }
 
-  // required int32 captivePortalState = 3;
+  // required sint32 captivePortalState = 3;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_captiveportalstate(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_captiveportalstate(), target);
   }
 
   // required bool isLangRTL = 4;
@@ -7289,8 +7289,8 @@ size_t XPCOMInitData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_captiveportalstate()) {
-    // required int32 captivePortalState = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_captiveportalstate());
+    // required sint32 captivePortalState = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captiveportalstate());
   }
 
   if (_internal_has_isoffline()) {
@@ -7360,8 +7360,8 @@ size_t XPCOMInitData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.contentdevicedata_);
 
-    // required int32 captivePortalState = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_captiveportalstate());
+    // required sint32 captivePortalState = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captiveportalstate());
 
     // required bool isOffline = 1;
     total_size += 1 + 1;

@@ -382,7 +382,7 @@ class Msg_GetFileReferences final :
   std::string* _internal_mutable_databasename();
   public:
 
-  // required int64 fileId = 4;
+  // required sint64 fileId = 4;
   bool has_fileid() const;
   private:
   bool _internal_has_fileid() const;
@@ -532,7 +532,7 @@ class Reply_GetFileReferences final :
     kDBRefCntFieldNumber = 2,
     kResultFieldNumber = 3,
   };
-  // required int32 refCnt = 1;
+  // required sint32 refCnt = 1;
   bool has_refcnt() const;
   private:
   bool _internal_has_refcnt() const;
@@ -545,7 +545,7 @@ class Reply_GetFileReferences final :
   void _internal_set_refcnt(int32_t value);
   public:
 
-  // required int32 dBRefCnt = 2;
+  // required sint32 dBRefCnt = 2;
   bool has_dbrefcnt() const;
   private:
   bool _internal_has_dbrefcnt() const;
@@ -1329,7 +1329,7 @@ inline void Msg_GetFileReferences::set_allocated_databasename(std::string* datab
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.databaseName)
 }
 
-// required int64 fileId = 4;
+// required sint64 fileId = 4;
 inline bool Msg_GetFileReferences::_internal_has_fileid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1361,7 +1361,7 @@ inline void Msg_GetFileReferences::set_fileid(int64_t value) {
 
 // Reply_GetFileReferences
 
-// required int32 refCnt = 1;
+// required sint32 refCnt = 1;
 inline bool Reply_GetFileReferences::_internal_has_refcnt() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1389,7 +1389,7 @@ inline void Reply_GetFileReferences::set_refcnt(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.refCnt)
 }
 
-// required int32 dBRefCnt = 2;
+// required sint32 dBRefCnt = 2;
 inline bool Reply_GetFileReferences::_internal_has_dbrefcnt() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

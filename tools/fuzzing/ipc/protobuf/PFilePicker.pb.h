@@ -374,7 +374,7 @@ class Msg_Open final :
   std::string* _internal_mutable_capture();
   public:
 
-  // required int32 selectedType = 1;
+  // required sint32 selectedType = 1;
   bool has_selectedtype() const;
   private:
   bool _internal_has_selectedtype() const;
@@ -733,7 +733,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_Open
 
-// required int32 selectedType = 1;
+// required sint32 selectedType = 1;
 inline bool Msg_Open::_internal_has_selectedtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;

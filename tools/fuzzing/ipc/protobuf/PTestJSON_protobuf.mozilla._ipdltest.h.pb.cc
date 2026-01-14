@@ -984,10 +984,10 @@ const char* JSONVariant::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // int32 mVint = 4;
+      // sint32 mVint = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1081,7 +1081,7 @@ uint8_t* JSONVariant::_InternalSerialize(
     }
     case kMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_mvint(), target);
       break;
     }
     case kMVdouble: {
@@ -1149,9 +1149,9 @@ size_t JSONVariant::ByteSizeLong() const {
       total_size += 1 + 1;
       break;
     }
-    // int32 mVint = 4;
+    // sint32 mVint = 4;
     case kMVint: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_mvint());
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
       break;
     }
     // double mVdouble = 5;

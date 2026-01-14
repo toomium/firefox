@@ -230,7 +230,7 @@ class MediaDataIPDL final :
   std::string* _internal_mutable_duration();
   public:
 
-  // required int64 offset = 1;
+  // required sint64 offset = 1;
   bool has_offset() const;
   private:
   bool _internal_has_offset() const;
@@ -532,7 +532,7 @@ class CryptoInfo final :
 #endif  // __GNUC__
 // MediaDataIPDL
 
-// required int64 offset = 1;
+// required sint64 offset = 1;
 inline bool MediaDataIPDL::_internal_has_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

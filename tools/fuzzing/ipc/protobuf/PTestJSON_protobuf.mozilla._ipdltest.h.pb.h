@@ -718,7 +718,7 @@ class JSONVariant final :
   void _internal_set_mvbool(bool value);
   public:
 
-  // int32 mVint = 4;
+  // sint32 mVint = 4;
   bool has_mvint() const;
   private:
   bool _internal_has_mvint() const;
@@ -1311,7 +1311,7 @@ inline void JSONVariant::set_mvbool(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.mVbool)
 }
 
-// int32 mVint = 4;
+// sint32 mVint = 4;
 inline bool JSONVariant::_internal_has_mvint() const {
   return content_case() == kMVint;
 }

@@ -32,18 +32,18 @@ message Msg_UpdateCurrentBrowserId {
 
 message Msg_AddTransaction {
   required bytes aTrans = 1;
-  required int32 aPriority = 2;
+  required sint32 aPriority = 2;
 }
 
 message Msg_AddTransactionWithStickyConn {
   required bytes aTrans = 1;
-  required int32 aPriority = 2;
+  required sint32 aPriority = 2;
   required bytes aTransWithStickyConn = 3;
 }
 
 message Msg_RescheduleTransaction {
   required bytes aTrans = 1;
-  required int32 aPriority = 2;
+  required sint32 aPriority = 2;
 }
 
 message Msg_UpdateClassOfServiceOnTransaction {

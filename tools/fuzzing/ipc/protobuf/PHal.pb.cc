@@ -4647,11 +4647,11 @@ const char* Msg_PerformHapticFeedback::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 aType = 1;
+      // required sint32 aType = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_atype(&has_bits);
-          _impl_.atype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.atype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4687,10 +4687,10 @@ uint8_t* Msg_PerformHapticFeedback::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 aType = 1;
+  // required sint32 aType = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_atype(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_atype(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4705,9 +4705,9 @@ size_t Msg_PerformHapticFeedback::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_PerformHapticFeedback)
   size_t total_size = 0;
 
-  // required int32 aType = 1;
+  // required sint32 aType = 1;
   if (_internal_has_atype()) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_atype());
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_atype());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused

@@ -302,7 +302,7 @@ class IntDouble final :
     kMVintFieldNumber = 1,
     kMVdoubleFieldNumber = 2,
   };
-  // int32 mVint = 1;
+  // sint32 mVint = 1;
   bool has_mvint() const;
   private:
   bool _internal_has_mvint() const;
@@ -484,7 +484,7 @@ class SIntDouble final :
   void _internal_set_d(double value);
   public:
 
-  // required int32 i = 1;
+  // required sint32 i = 1;
   bool has_i() const;
   private:
   bool _internal_has_i() const;
@@ -630,7 +630,7 @@ class IntDoubleArrays__mVArrayOfint final :
   enum : int {
     kMVArrayOfintFieldNumber = 1,
   };
-  // repeated int32 mVArrayOfint = 1;
+  // repeated sint32 mVArrayOfint = 1;
   int mvarrayofint_size() const;
   private:
   int _internal_mvarrayofint_size() const;
@@ -942,7 +942,7 @@ class IntDoubleArrays final :
     kMVArrayOfintFieldNumber = 2,
     kMVArrayOfdoubleFieldNumber = 3,
   };
-  // int32 mVint = 1;
+  // sint32 mVint = 1;
   bool has_mvint() const;
   private:
   bool _internal_has_mvint() const;
@@ -1137,7 +1137,7 @@ class SIntDoubleArrays final :
     kAdFieldNumber = 3,
     kIFieldNumber = 1,
   };
-  // repeated int32 ai = 2;
+  // repeated sint32 ai = 2;
   int ai_size() const;
   private:
   int _internal_ai_size() const;
@@ -1181,7 +1181,7 @@ class SIntDoubleArrays final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
       mutable_ad();
 
-  // required int32 i = 1;
+  // required sint32 i = 1;
   bool has_i() const;
   private:
   bool _internal_has_i() const;
@@ -1472,7 +1472,7 @@ class Actors__mVArrayOfint final :
   enum : int {
     kMVArrayOfintFieldNumber = 1,
   };
-  // repeated int32 mVArrayOfint = 1;
+  // repeated sint32 mVArrayOfint = 1;
   int mvarrayofint_size() const;
   private:
   int _internal_mvarrayofint_size() const;
@@ -1786,7 +1786,7 @@ class Actors final :
     kMVArrayOfintFieldNumber = 2,
     kMVArrayOfPTestDataStructuresSubFieldNumber = 3,
   };
-  // int32 mVint = 1;
+  // sint32 mVint = 1;
   bool has_mvint() const;
   private:
   bool _internal_has_mvint() const;
@@ -1981,7 +1981,7 @@ class SActors final :
     kApFieldNumber = 3,
     kIFieldNumber = 1,
   };
-  // repeated int32 ai = 2;
+  // repeated sint32 ai = 2;
   int ai_size() const;
   private:
   int _internal_ai_size() const;
@@ -2027,7 +2027,7 @@ class SActors final :
   std::string* _internal_add_ap();
   public:
 
-  // required int32 i = 1;
+  // required sint32 i = 1;
   bool has_i() const;
   private:
   bool _internal_has_i() const;
@@ -2171,7 +2171,7 @@ class Unions__mVArrayOfint final :
   enum : int {
     kMVArrayOfintFieldNumber = 1,
   };
-  // repeated int32 mVArrayOfint = 1;
+  // repeated sint32 mVArrayOfint = 1;
   int mvarrayofint_size() const;
   private:
   int _internal_mvarrayofint_size() const;
@@ -2634,7 +2634,7 @@ class Unions final :
     kMVArrayOfPTestDataStructuresSubFieldNumber = 3,
     kMVArrayOfActorsFieldNumber = 4,
   };
-  // int32 mVint = 1;
+  // sint32 mVint = 1;
   bool has_mvint() const;
   private:
   bool _internal_has_mvint() const;
@@ -2850,7 +2850,7 @@ class Structs final :
     kAaFieldNumber = 4,
     kIFieldNumber = 1,
   };
-  // repeated int32 ai = 2;
+  // repeated sint32 ai = 2;
   int ai_size() const;
   private:
   int _internal_ai_size() const;
@@ -2914,7 +2914,7 @@ class Structs final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors >&
       aa() const;
 
-  // required int32 i = 1;
+  // required sint32 i = 1;
   bool has_i() const;
   private:
   bool _internal_has_i() const;
@@ -3059,7 +3059,7 @@ class WithStructs__mVArrayOfint final :
   enum : int {
     kMVArrayOfintFieldNumber = 1,
   };
-  // repeated int32 mVArrayOfint = 1;
+  // repeated sint32 mVArrayOfint = 1;
   int mvarrayofint_size() const;
   private:
   int _internal_mvarrayofint_size() const;
@@ -3671,7 +3671,7 @@ class WithStructs final :
     kMVArrayOfSActorsFieldNumber = 4,
     kMVArrayOfStructsFieldNumber = 5,
   };
-  // int32 mVint = 1;
+  // sint32 mVint = 1;
   bool has_mvint() const;
   private:
   bool _internal_has_mvint() const;
@@ -3908,7 +3908,7 @@ class WithUnions final :
     kAuFieldNumber = 5,
     kIFieldNumber = 1,
   };
-  // repeated int32 ai = 2;
+  // repeated sint32 ai = 2;
   int ai_size() const;
   private:
   int _internal_ai_size() const;
@@ -3990,7 +3990,7 @@ class WithUnions final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Unions >&
       au() const;
 
-  // required int32 i = 1;
+  // required sint32 i = 1;
   bool has_i() const;
   private:
   bool _internal_has_i() const;
@@ -4278,7 +4278,7 @@ class FooAttrs final :
   enum : int {
     kDummyFieldNumber = 1,
   };
-  // required int32 dummy = 1;
+  // required sint32 dummy = 1;
   bool has_dummy() const;
   private:
   bool _internal_has_dummy() const;
@@ -5291,7 +5291,7 @@ class ShmemStruct final :
   std::string* _internal_mutable_mem();
   public:
 
-  // required int32 i = 1;
+  // required sint32 i = 1;
   bool has_i() const;
   private:
   bool _internal_has_i() const;
@@ -5444,7 +5444,7 @@ class ShmemUnion final :
     kMVintFieldNumber = 1,
     kMVShmemFieldNumber = 2,
   };
-  // int32 mVint = 1;
+  // sint32 mVint = 1;
   bool has_mvint() const;
   private:
   bool _internal_has_mvint() const;
@@ -5638,7 +5638,7 @@ class Empty final :
 #endif  // __GNUC__
 // IntDouble
 
-// int32 mVint = 1;
+// sint32 mVint = 1;
 inline bool IntDouble::_internal_has_mvint() const {
   return content_case() == kMVint;
 }
@@ -5727,7 +5727,7 @@ inline IntDouble::ContentCase IntDouble::content_case() const {
 
 // SIntDouble
 
-// required int32 i = 1;
+// required sint32 i = 1;
 inline bool SIntDouble::_internal_has_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5787,7 +5787,7 @@ inline void SIntDouble::set_d(double value) {
 
 // IntDoubleArrays__mVArrayOfint
 
-// repeated int32 mVArrayOfint = 1;
+// repeated sint32 mVArrayOfint = 1;
 inline int IntDoubleArrays__mVArrayOfint::_internal_mvarrayofint_size() const {
   return _impl_.mvarrayofint_.size();
 }
@@ -5889,7 +5889,7 @@ IntDoubleArrays__mVArrayOfdouble::mutable_mvarrayofdouble() {
 
 // IntDoubleArrays
 
-// int32 mVint = 1;
+// sint32 mVint = 1;
 inline bool IntDoubleArrays::_internal_has_mvint() const {
   return content_case() == kMVint;
 }
@@ -6088,7 +6088,7 @@ inline IntDoubleArrays::ContentCase IntDoubleArrays::content_case() const {
 
 // SIntDoubleArrays
 
-// required int32 i = 1;
+// required sint32 i = 1;
 inline bool SIntDoubleArrays::_internal_has_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6116,7 +6116,7 @@ inline void SIntDoubleArrays::set_i(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SIntDoubleArrays.i)
 }
 
-// repeated int32 ai = 2;
+// repeated sint32 ai = 2;
 inline int SIntDoubleArrays::_internal_ai_size() const {
   return _impl_.ai_.size();
 }
@@ -6286,7 +6286,7 @@ inline void ActorWrapper::set_allocated_actor(std::string* actor) {
 
 // Actors__mVArrayOfint
 
-// repeated int32 mVArrayOfint = 1;
+// repeated sint32 mVArrayOfint = 1;
 inline int Actors__mVArrayOfint::_internal_mvarrayofint_size() const {
   return _impl_.mvarrayofint_.size();
 }
@@ -6416,7 +6416,7 @@ Actors__mVArrayOfPTestDataStructuresSub::mutable_mvarrayofptestdatastructuressub
 
 // Actors
 
-// int32 mVint = 1;
+// sint32 mVint = 1;
 inline bool Actors::_internal_has_mvint() const {
   return content_case() == kMVint;
 }
@@ -6615,7 +6615,7 @@ inline Actors::ContentCase Actors::content_case() const {
 
 // SActors
 
-// required int32 i = 1;
+// required sint32 i = 1;
 inline bool SActors::_internal_has_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6643,7 +6643,7 @@ inline void SActors::set_i(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SActors.i)
 }
 
-// repeated int32 ai = 2;
+// repeated sint32 ai = 2;
 inline int SActors::_internal_ai_size() const {
   return _impl_.ai_.size();
 }
@@ -6769,7 +6769,7 @@ SActors::mutable_ap() {
 
 // Unions__mVArrayOfint
 
-// repeated int32 mVArrayOfint = 1;
+// repeated sint32 mVArrayOfint = 1;
 inline int Unions__mVArrayOfint::_internal_mvarrayofint_size() const {
   return _impl_.mvarrayofint_.size();
 }
@@ -6943,7 +6943,7 @@ Unions__mVArrayOfActors::mvarrayofactors() const {
 
 // Unions
 
-// int32 mVint = 1;
+// sint32 mVint = 1;
 inline bool Unions::_internal_has_mvint() const {
   return content_case() == kMVint;
 }
@@ -7216,7 +7216,7 @@ inline Unions::ContentCase Unions::content_case() const {
 
 // Structs
 
-// required int32 i = 1;
+// required sint32 i = 1;
 inline bool Structs::_internal_has_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7244,7 +7244,7 @@ inline void Structs::set_i(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Structs.i)
 }
 
-// repeated int32 ai = 2;
+// repeated sint32 ai = 2;
 inline int Structs::_internal_ai_size() const {
   return _impl_.ai_.size();
 }
@@ -7410,7 +7410,7 @@ Structs::aa() const {
 
 // WithStructs__mVArrayOfint
 
-// repeated int32 mVArrayOfint = 1;
+// repeated sint32 mVArrayOfint = 1;
 inline int WithStructs__mVArrayOfint::_internal_mvarrayofint_size() const {
   return _impl_.mvarrayofint_.size();
 }
@@ -7628,7 +7628,7 @@ WithStructs__mVArrayOfStructs::mvarrayofstructs() const {
 
 // WithStructs
 
-// int32 mVint = 1;
+// sint32 mVint = 1;
 inline bool WithStructs::_internal_has_mvint() const {
   return content_case() == kMVint;
 }
@@ -7975,7 +7975,7 @@ inline WithStructs::ContentCase WithStructs::content_case() const {
 
 // WithUnions
 
-// required int32 i = 1;
+// required sint32 i = 1;
 inline bool WithUnions::_internal_has_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8003,7 +8003,7 @@ inline void WithUnions::set_i(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithUnions.i)
 }
 
-// repeated int32 ai = 2;
+// repeated sint32 ai = 2;
 inline int WithUnions::_internal_ai_size() const {
   return _impl_.ai_.size();
 }
@@ -8241,7 +8241,7 @@ inline void CommonAttrs::set_dummy(bool value) {
 
 // FooAttrs
 
-// required int32 dummy = 1;
+// required sint32 dummy = 1;
 inline bool FooAttrs::_internal_has_dummy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8976,7 +8976,7 @@ inline Op::ContentCase Op::content_case() const {
 
 // ShmemStruct
 
-// required int32 i = 1;
+// required sint32 i = 1;
 inline bool ShmemStruct::_internal_has_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9076,7 +9076,7 @@ inline void ShmemStruct::set_allocated_mem(std::string* mem) {
 
 // ShmemUnion
 
-// int32 mVint = 1;
+// sint32 mVint = 1;
 inline bool ShmemUnion::_internal_has_mvint() const {
   return content_case() == kMVint;
 }

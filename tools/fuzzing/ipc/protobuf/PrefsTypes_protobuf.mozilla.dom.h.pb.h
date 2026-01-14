@@ -202,7 +202,7 @@ class PrefValue final :
   std::string* _internal_mutable_mvnscstring();
   public:
 
-  // int32 mVint32_t = 2;
+  // sint32 mVint32_t = 2;
   bool has_mvint32_t() const;
   private:
   bool _internal_has_mvint32_t() const;
@@ -566,7 +566,7 @@ inline void PrefValue::set_allocated_mvnscstring(std::string* mvnscstring) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PrefValue.mVnsCString)
 }
 
-// int32 mVint32_t = 2;
+// sint32 mVint32_t = 2;
 inline bool PrefValue::_internal_has_mvint32_t() const {
   return content_case() == kMVint32T;
 }

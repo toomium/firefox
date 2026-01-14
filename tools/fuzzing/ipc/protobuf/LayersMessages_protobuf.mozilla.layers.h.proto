@@ -83,7 +83,7 @@ message TransformData {
   required bytes origin = 1;
   required bytes transformOrigin = 2;
   required bytes bounds = 3;
-  required int32 appUnitsPerDevPixel = 4;
+  required sint32 appUnitsPerDevPixel = 4;
   optional protobuf.mozilla.layers.MotionPathData motionPathData = 5;
   optional protobuf.mozilla.layers.PartialPrerenderData partialPrerenderData = 6;
 }

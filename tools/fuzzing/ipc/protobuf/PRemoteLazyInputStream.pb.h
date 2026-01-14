@@ -770,7 +770,7 @@ class Reply_LengthNeeded final :
   enum : int {
     kLengthFieldNumber = 1,
   };
-  // required int64 length = 1;
+  // required sint64 length = 1;
   bool has_length() const;
   private:
   bool _internal_has_length() const;
@@ -1160,7 +1160,7 @@ inline void Reply_StreamNeeded::set_allocated_stream(::protobuf::mozilla::ipc::I
 
 // Reply_LengthNeeded
 
-// required int64 length = 1;
+// required sint64 length = 1;
 inline bool Reply_LengthNeeded::_internal_has_length() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

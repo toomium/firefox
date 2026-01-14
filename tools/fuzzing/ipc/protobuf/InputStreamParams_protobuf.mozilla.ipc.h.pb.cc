@@ -842,20 +842,20 @@ const char* FileInputStreamParams::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required int32 behaviorFlags = 2;
+      // required sint32 behaviorFlags = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_behaviorflags(&has_bits);
-          _impl_.behaviorflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.behaviorflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required int32 ioFlags = 3;
+      // required sint32 ioFlags = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_ioflags(&has_bits);
-          _impl_.ioflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.ioflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -897,16 +897,16 @@ uint8_t* FileInputStreamParams::_InternalSerialize(
         1, this->_internal_filedescriptor(), target);
   }
 
-  // required int32 behaviorFlags = 2;
+  // required sint32 behaviorFlags = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_behaviorflags(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_behaviorflags(), target);
   }
 
-  // required int32 ioFlags = 3;
+  // required sint32 ioFlags = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_ioflags(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_ioflags(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -929,13 +929,13 @@ size_t FileInputStreamParams::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_behaviorflags()) {
-    // required int32 behaviorFlags = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_behaviorflags());
+    // required sint32 behaviorFlags = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_behaviorflags());
   }
 
   if (_internal_has_ioflags()) {
-    // required int32 ioFlags = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_ioflags());
+    // required sint32 ioFlags = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_ioflags());
   }
 
   return total_size;
@@ -950,11 +950,11 @@ size_t FileInputStreamParams::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_filedescriptor());
 
-    // required int32 behaviorFlags = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_behaviorflags());
+    // required sint32 behaviorFlags = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_behaviorflags());
 
-    // required int32 ioFlags = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_ioflags());
+    // required sint32 ioFlags = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_ioflags());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -3983,11 +3983,11 @@ const char* InputStreamLengthWrapperParams::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // required int64 length = 2;
+      // required sint64 length = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_length(&has_bits);
-          _impl_.length_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.length_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4039,10 +4039,10 @@ uint8_t* InputStreamLengthWrapperParams::_InternalSerialize(
         _Internal::stream(this).GetCachedSize(), target, stream);
   }
 
-  // required int64 length = 2;
+  // required sint64 length = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_length(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_length(), target);
   }
 
   // required bool consumed = 3;
@@ -4071,8 +4071,8 @@ size_t InputStreamLengthWrapperParams::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_length()) {
-    // required int64 length = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_length());
+    // required sint64 length = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_length());
   }
 
   if (_internal_has_consumed()) {
@@ -4092,8 +4092,8 @@ size_t InputStreamLengthWrapperParams::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.stream_);
 
-    // required int64 length = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_length());
+    // required sint64 length = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_length());
 
     // required bool consumed = 3;
     total_size += 1 + 1;

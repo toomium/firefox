@@ -283,7 +283,7 @@ class D3D11DeviceStatus final :
   void _internal_set_featurelevel(uint32_t value);
   public:
 
-  // required int32 sequenceNumber = 5;
+  // required sint32 sequenceNumber = 5;
   bool has_sequencenumber() const;
   private:
   bool _internal_has_sequencenumber() const;
@@ -1512,7 +1512,7 @@ class GfxVarValue final :
   std::string* _internal_mutable_mvnsstring();
   public:
 
-  // int32 mVint32_t = 7;
+  // sint32 mVint32_t = 7;
   bool has_mvint32_t() const;
   private:
   bool _internal_has_mvint32_t() const;
@@ -1912,7 +1912,7 @@ class GfxInfoFeatureStatus final :
   std::string* _internal_mutable_failureid();
   public:
 
-  // required int32 feature = 1;
+  // required sint32 feature = 1;
   bool has_feature() const;
   private:
   bool _internal_has_feature() const;
@@ -1925,7 +1925,7 @@ class GfxInfoFeatureStatus final :
   void _internal_set_feature(int32_t value);
   public:
 
-  // required int32 status = 2;
+  // required sint32 status = 2;
   bool has_status() const;
   private:
   bool _internal_has_status() const;
@@ -2121,7 +2121,7 @@ inline void D3D11DeviceStatus::set_allocated_adapter(std::string* adapter) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.D3D11DeviceStatus.adapter)
 }
 
-// required int32 sequenceNumber = 5;
+// required sint32 sequenceNumber = 5;
 inline bool D3D11DeviceStatus::_internal_has_sequencenumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -3752,7 +3752,7 @@ inline void GfxVarValue::set_allocated_mvnsstring(std::string* mvnsstring) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarValue.mVnsString)
 }
 
-// int32 mVint32_t = 7;
+// sint32 mVint32_t = 7;
 inline bool GfxVarValue::_internal_has_mvint32_t() const {
   return content_case() == kMVint32T;
 }
@@ -4075,7 +4075,7 @@ inline void GfxVarUpdate::set_allocated_value(::protobuf::mozilla::gfx::GfxVarVa
 
 // GfxInfoFeatureStatus
 
-// required int32 feature = 1;
+// required sint32 feature = 1;
 inline bool GfxInfoFeatureStatus::_internal_has_feature() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4103,7 +4103,7 @@ inline void GfxInfoFeatureStatus::set_feature(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxInfoFeatureStatus.feature)
 }
 
-// required int32 status = 2;
+// required sint32 status = 2;
 inline bool GfxInfoFeatureStatus::_internal_has_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

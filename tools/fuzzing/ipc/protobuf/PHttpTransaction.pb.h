@@ -433,7 +433,7 @@ class Msg_OnStartRequest final :
       ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* conninfoargs);
   ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_conninfoargs();
 
-  // required int32 proxyConnectResponseCode = 6;
+  // required sint32 proxyConnectResponseCode = 6;
   bool has_proxyconnectresponsecode() const;
   private:
   bool _internal_has_proxyconnectresponsecode() const;
@@ -711,7 +711,7 @@ class Msg_OnTransportStatus final :
       ::protobuf::mozilla::net::NetworkAddressArg* networkaddressarg);
   ::protobuf::mozilla::net::NetworkAddressArg* unsafe_arena_release_networkaddressarg();
 
-  // required int64 progress = 2;
+  // required sint64 progress = 2;
   bool has_progress() const;
   private:
   bool _internal_has_progress() const;
@@ -724,7 +724,7 @@ class Msg_OnTransportStatus final :
   void _internal_set_progress(int64_t value);
   public:
 
-  // required int64 progressMax = 3;
+  // required sint64 progressMax = 3;
   bool has_progressmax() const;
   private:
   bool _internal_has_progressmax() const;
@@ -1187,7 +1187,7 @@ class Msg_OnStopRequest final :
       ::protobuf::mozilla::net::TransactionObserverResult* transactionobserverresult);
   ::protobuf::mozilla::net::TransactionObserverResult* unsafe_arena_release_transactionobserverresult();
 
-  // required int64 transferSize = 3;
+  // required sint64 transferSize = 3;
   bool has_transfersize() const;
   private:
   bool _internal_has_transfersize() const;
@@ -3395,7 +3395,7 @@ inline void Msg_OnStartRequest::set_allocated_timings(::protobuf::mozilla::net::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_OnStartRequest.timings)
 }
 
-// required int32 proxyConnectResponseCode = 6;
+// required sint32 proxyConnectResponseCode = 6;
 inline bool Msg_OnStartRequest::_internal_has_proxyconnectresponsecode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -4041,7 +4041,7 @@ inline void Msg_OnTransportStatus::set_allocated_status(std::string* status) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_OnTransportStatus.status)
 }
 
-// required int64 progress = 2;
+// required sint64 progress = 2;
 inline bool Msg_OnTransportStatus::_internal_has_progress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4069,7 +4069,7 @@ inline void Msg_OnTransportStatus::set_progress(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_OnTransportStatus.progress)
 }
 
-// required int64 progressMax = 3;
+// required sint64 progressMax = 3;
 inline bool Msg_OnTransportStatus::_internal_has_progressmax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4480,7 +4480,7 @@ inline void Msg_OnStopRequest::set_responseiscomplete(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_OnStopRequest.responseIsComplete)
 }
 
-// required int64 transferSize = 3;
+// required sint64 transferSize = 3;
 inline bool Msg_OnStopRequest::_internal_has_transfersize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;

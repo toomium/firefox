@@ -14,7 +14,7 @@ package protobuf.mozilla.dom;
 message PrefValue {
   oneof content {
     bytes mVnsCString = 1;
-    int32 mVint32_t = 2;
+    sint32 mVint32_t = 2;
     bool mVbool = 3;
   }
 }

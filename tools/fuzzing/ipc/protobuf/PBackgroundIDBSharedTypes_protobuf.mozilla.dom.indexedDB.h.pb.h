@@ -1275,7 +1275,7 @@ class IndexUpdateInfo final :
   std::string* _internal_mutable_localizedvalue();
   public:
 
-  // required int64 indexId = 1;
+  // required sint64 indexId = 1;
   bool has_indexid() const;
   private:
   bool _internal_has_indexid() const;
@@ -1646,7 +1646,7 @@ class ObjectStoreMetadata final :
   std::string* _internal_mutable_keypath();
   public:
 
-  // required int64 id = 1;
+  // required sint64 id = 1;
   bool has_id() const;
   private:
   bool _internal_has_id() const;
@@ -1867,7 +1867,7 @@ class IndexMetadata final :
   std::string* _internal_mutable_locale();
   public:
 
-  // required int64 id = 1;
+  // required sint64 id = 1;
   bool has_id() const;
   private:
   bool _internal_has_id() const;
@@ -2429,7 +2429,7 @@ class CommonOpenCursorParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_optionalkeyrange();
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -2889,7 +2889,7 @@ class CommonIndexOpenCursorParams final :
       ::protobuf::mozilla::dom::indexedDB::CommonOpenCursorParams* commonparams);
   ::protobuf::mozilla::dom::indexedDB::CommonOpenCursorParams* unsafe_arena_release_commonparams();
 
-  // required int64 indexId = 2;
+  // required sint64 indexId = 2;
   bool has_indexid() const;
   private:
   bool _internal_has_indexid() const;
@@ -3804,7 +3804,7 @@ class ObjectStoreAddPutParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneWriteInfo* cloneinfo);
   ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneWriteInfo* unsafe_arena_release_cloneinfo();
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -4266,7 +4266,7 @@ class ObjectStoreGetParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* keyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_keyrange();
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -4431,7 +4431,7 @@ class ObjectStoreGetKeyParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* keyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_keyrange();
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -4597,7 +4597,7 @@ class ObjectStoreGetAllParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_optionalkeyrange();
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -4777,7 +4777,7 @@ class ObjectStoreGetAllKeysParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_optionalkeyrange();
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -4956,7 +4956,7 @@ class ObjectStoreDeleteParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* keyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_keyrange();
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -5102,7 +5102,7 @@ class ObjectStoreClearParams final :
   enum : int {
     kObjectStoreIdFieldNumber = 1,
   };
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -5263,7 +5263,7 @@ class ObjectStoreCountParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_optionalkeyrange();
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -5426,7 +5426,7 @@ class IndexGetParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* keyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_keyrange();
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -5439,7 +5439,7 @@ class IndexGetParams final :
   void _internal_set_objectstoreid(int64_t value);
   public:
 
-  // required int64 indexId = 2;
+  // required sint64 indexId = 2;
   bool has_indexid() const;
   private:
   bool _internal_has_indexid() const;
@@ -5606,7 +5606,7 @@ class IndexGetKeyParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* keyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_keyrange();
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -5619,7 +5619,7 @@ class IndexGetKeyParams final :
   void _internal_set_objectstoreid(int64_t value);
   public:
 
-  // required int64 indexId = 2;
+  // required sint64 indexId = 2;
   bool has_indexid() const;
   private:
   bool _internal_has_indexid() const;
@@ -5787,7 +5787,7 @@ class IndexGetAllParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_optionalkeyrange();
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -5800,7 +5800,7 @@ class IndexGetAllParams final :
   void _internal_set_objectstoreid(int64_t value);
   public:
 
-  // required int64 indexId = 2;
+  // required sint64 indexId = 2;
   bool has_indexid() const;
   private:
   bool _internal_has_indexid() const;
@@ -5982,7 +5982,7 @@ class IndexGetAllKeysParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_optionalkeyrange();
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -5995,7 +5995,7 @@ class IndexGetAllKeysParams final :
   void _internal_set_objectstoreid(int64_t value);
   public:
 
-  // required int64 indexId = 2;
+  // required sint64 indexId = 2;
   bool has_indexid() const;
   private:
   bool _internal_has_indexid() const;
@@ -6176,7 +6176,7 @@ class IndexCountParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_optionalkeyrange();
 
-  // required int64 objectStoreId = 1;
+  // required sint64 objectStoreId = 1;
   bool has_objectstoreid() const;
   private:
   bool _internal_has_objectstoreid() const;
@@ -6189,7 +6189,7 @@ class IndexCountParams final :
   void _internal_set_objectstoreid(int64_t value);
   public:
 
-  // required int64 indexId = 2;
+  // required sint64 indexId = 2;
   bool has_indexid() const;
   private:
   bool _internal_has_indexid() const;
@@ -6806,7 +6806,7 @@ class LoggingInfo final :
   std::string* _internal_mutable_backgroundchildloggingid();
   public:
 
-  // required int64 nextTransactionSerialNumber = 2;
+  // required sint64 nextTransactionSerialNumber = 2;
   bool has_nexttransactionserialnumber() const;
   private:
   bool _internal_has_nexttransactionserialnumber() const;
@@ -6819,7 +6819,7 @@ class LoggingInfo final :
   void _internal_set_nexttransactionserialnumber(int64_t value);
   public:
 
-  // required int64 nextVersionChangeTransactionSerialNumber = 3;
+  // required sint64 nextVersionChangeTransactionSerialNumber = 3;
   bool has_nextversionchangetransactionserialnumber() const;
   private:
   bool _internal_has_nextversionchangetransactionserialnumber() const;
@@ -7659,7 +7659,7 @@ inline void SerializedStructuredCloneWriteInfo::set_offsettokeyprop(uint64_t val
 
 // IndexUpdateInfo
 
-// required int64 indexId = 1;
+// required sint64 indexId = 1;
 inline bool IndexUpdateInfo::_internal_has_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7995,7 +7995,7 @@ inline void DatabaseMetadata::set_allocated_persistencetype(std::string* persist
 
 // ObjectStoreMetadata
 
-// required int64 id = 1;
+// required sint64 id = 1;
 inline bool ObjectStoreMetadata::_internal_has_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8191,7 +8191,7 @@ inline void ObjectStoreMetadata::set_autoincrement(bool value) {
 
 // IndexMetadata
 
-// required int64 id = 1;
+// required sint64 id = 1;
 inline bool IndexMetadata::_internal_has_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8779,7 +8779,7 @@ ObjectStoreSpec::indexes() const {
 
 // CommonOpenCursorParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool CommonOpenCursorParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9247,7 +9247,7 @@ inline void CommonIndexOpenCursorParams::set_allocated_commonparams(::protobuf::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.CommonIndexOpenCursorParams.commonParams)
 }
 
-// required int64 indexId = 2;
+// required sint64 indexId = 2;
 inline bool CommonIndexOpenCursorParams::_internal_has_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9916,7 +9916,7 @@ inline void FileAddInfo::set_allocated_type(std::string* type) {
 
 // ObjectStoreAddPutParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool ObjectStoreAddPutParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -10374,7 +10374,7 @@ inline void ObjectStorePutParams::set_allocated_commonparams(::protobuf::mozilla
 
 // ObjectStoreGetParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool ObjectStoreGetParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10496,7 +10496,7 @@ inline void ObjectStoreGetParams::set_allocated_keyrange(::protobuf::mozilla::do
 
 // ObjectStoreGetKeyParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool ObjectStoreGetKeyParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10618,7 +10618,7 @@ inline void ObjectStoreGetKeyParams::set_allocated_keyrange(::protobuf::mozilla:
 
 // ObjectStoreGetAllParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool ObjectStoreGetAllParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10768,7 +10768,7 @@ inline void ObjectStoreGetAllParams::set_limit(uint32_t value) {
 
 // ObjectStoreGetAllKeysParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool ObjectStoreGetAllKeysParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10918,7 +10918,7 @@ inline void ObjectStoreGetAllKeysParams::set_limit(uint32_t value) {
 
 // ObjectStoreDeleteParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool ObjectStoreDeleteParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11040,7 +11040,7 @@ inline void ObjectStoreDeleteParams::set_allocated_keyrange(::protobuf::mozilla:
 
 // ObjectStoreClearParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool ObjectStoreClearParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11072,7 +11072,7 @@ inline void ObjectStoreClearParams::set_objectstoreid(int64_t value) {
 
 // ObjectStoreCountParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool ObjectStoreCountParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11194,7 +11194,7 @@ inline void ObjectStoreCountParams::set_allocated_optionalkeyrange(::protobuf::m
 
 // IndexGetParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool IndexGetParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11222,7 +11222,7 @@ inline void IndexGetParams::set_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexGetParams.objectStoreId)
 }
 
-// required int64 indexId = 2;
+// required sint64 indexId = 2;
 inline bool IndexGetParams::_internal_has_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11344,7 +11344,7 @@ inline void IndexGetParams::set_allocated_keyrange(::protobuf::mozilla::dom::ind
 
 // IndexGetKeyParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool IndexGetKeyParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11372,7 +11372,7 @@ inline void IndexGetKeyParams::set_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexGetKeyParams.objectStoreId)
 }
 
-// required int64 indexId = 2;
+// required sint64 indexId = 2;
 inline bool IndexGetKeyParams::_internal_has_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11494,7 +11494,7 @@ inline void IndexGetKeyParams::set_allocated_keyrange(::protobuf::mozilla::dom::
 
 // IndexGetAllParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool IndexGetAllParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11522,7 +11522,7 @@ inline void IndexGetAllParams::set_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexGetAllParams.objectStoreId)
 }
 
-// required int64 indexId = 2;
+// required sint64 indexId = 2;
 inline bool IndexGetAllParams::_internal_has_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11672,7 +11672,7 @@ inline void IndexGetAllParams::set_limit(uint32_t value) {
 
 // IndexGetAllKeysParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool IndexGetAllKeysParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11700,7 +11700,7 @@ inline void IndexGetAllKeysParams::set_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexGetAllKeysParams.objectStoreId)
 }
 
-// required int64 indexId = 2;
+// required sint64 indexId = 2;
 inline bool IndexGetAllKeysParams::_internal_has_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11850,7 +11850,7 @@ inline void IndexGetAllKeysParams::set_limit(uint32_t value) {
 
 // IndexCountParams
 
-// required int64 objectStoreId = 1;
+// required sint64 objectStoreId = 1;
 inline bool IndexCountParams::_internal_has_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11878,7 +11878,7 @@ inline void IndexCountParams::set_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexCountParams.objectStoreId)
 }
 
-// required int64 indexId = 2;
+// required sint64 indexId = 2;
 inline bool IndexCountParams::_internal_has_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -13117,7 +13117,7 @@ inline void LoggingInfo::set_allocated_backgroundchildloggingid(std::string* bac
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.LoggingInfo.backgroundChildLoggingId)
 }
 
-// required int64 nextTransactionSerialNumber = 2;
+// required sint64 nextTransactionSerialNumber = 2;
 inline bool LoggingInfo::_internal_has_nexttransactionserialnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13145,7 +13145,7 @@ inline void LoggingInfo::set_nexttransactionserialnumber(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.LoggingInfo.nextTransactionSerialNumber)
 }
 
-// required int64 nextVersionChangeTransactionSerialNumber = 3;
+// required sint64 nextVersionChangeTransactionSerialNumber = 3;
 inline bool LoggingInfo::_internal_has_nextversionchangetransactionserialnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

@@ -228,11 +228,11 @@ const char* IPCFile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) 
         } else
           goto handle_unusual;
         continue;
-      // required int64 lastModified = 2;
+      // required sint64 lastModified = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_lastmodified(&has_bits);
-          _impl_.lastmodified_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.lastmodified_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -301,10 +301,10 @@ uint8_t* IPCFile::_InternalSerialize(
         1, this->_internal_name(), target);
   }
 
-  // required int64 lastModified = 2;
+  // required sint64 lastModified = 2;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_lastmodified(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_lastmodified(), target);
   }
 
   // required bytes DOMPath = 3;
@@ -359,8 +359,8 @@ size_t IPCFile::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_lastmodified()) {
-    // required int64 lastModified = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_lastmodified());
+    // required sint64 lastModified = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_lastmodified());
   }
 
   if (_internal_has_isdirectory()) {
@@ -390,8 +390,8 @@ size_t IPCFile::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_fullpath());
 
-    // required int64 lastModified = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_lastmodified());
+    // required sint64 lastModified = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_lastmodified());
 
     // required bool isDirectory = 5;
     total_size += 1 + 1;
@@ -706,11 +706,11 @@ const char* IPCBlob::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) 
         } else
           goto handle_unusual;
         continue;
-      // required int64 fileId = 6;
+      // required sint64 fileId = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_fileid(&has_bits);
-          _impl_.fileid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.fileid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -778,10 +778,10 @@ uint8_t* IPCBlob::_InternalSerialize(
         _Internal::file(this).GetCachedSize(), target, stream);
   }
 
-  // required int64 fileId = 6;
+  // required sint64 fileId = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(6, this->_internal_fileid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(6, this->_internal_fileid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -823,8 +823,8 @@ size_t IPCBlob::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_fileid()) {
-    // required int64 fileId = 6;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_fileid());
+    // required sint64 fileId = 6;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_fileid());
   }
 
   return total_size;
@@ -852,8 +852,8 @@ size_t IPCBlob::ByteSizeLong() const {
     // required uint64 size = 2;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_size());
 
-    // required int64 fileId = 6;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_fileid());
+    // required sint64 fileId = 6;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_fileid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

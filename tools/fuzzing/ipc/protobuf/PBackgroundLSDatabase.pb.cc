@@ -394,11 +394,11 @@ const char* Msg_PBackgroundLSSnapshotConstructor::_InternalParse(const char* ptr
         } else
           goto handle_unusual;
         continue;
-      // required int64 minSize = 4;
+      // required sint64 minSize = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_minsize(&has_bits);
-          _impl_.minsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.minsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -452,10 +452,10 @@ uint8_t* Msg_PBackgroundLSSnapshotConstructor::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_increasepeakusage(), target);
   }
 
-  // required int64 minSize = 4;
+  // required sint64 minSize = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_minsize(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_minsize(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -485,8 +485,8 @@ size_t Msg_PBackgroundLSSnapshotConstructor::RequiredFieldsByteSizeFallback() co
   }
 
   if (_internal_has_minsize()) {
-    // required int64 minSize = 4;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_minsize());
+    // required sint64 minSize = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_minsize());
   }
 
   if (_internal_has_increasepeakusage()) {
@@ -511,8 +511,8 @@ size_t Msg_PBackgroundLSSnapshotConstructor::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_key());
 
-    // required int64 minSize = 4;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_minsize());
+    // required sint64 minSize = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_minsize());
 
     // required bool increasePeakUsage = 3;
     total_size += 1 + 1;

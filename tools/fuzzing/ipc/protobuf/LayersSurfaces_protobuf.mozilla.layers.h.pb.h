@@ -4463,7 +4463,7 @@ class SurfaceDescriptorShared final :
   std::string* _internal_mutable_handle();
   public:
 
-  // required int32 stride = 2;
+  // required sint32 stride = 2;
   bool has_stride() const;
   private:
   bool _internal_has_stride() const;
@@ -11346,7 +11346,7 @@ inline void SurfaceDescriptorShared::set_allocated_size(std::string* size) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptorShared.size)
 }
 
-// required int32 stride = 2;
+// required sint32 stride = 2;
 inline bool SurfaceDescriptorShared::_internal_has_stride() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

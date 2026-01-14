@@ -347,7 +347,7 @@ class DummyUnion final :
   std::string* _internal_mutable_mvstring();
   public:
 
-  // int32 mVint = 2;
+  // sint32 mVint = 2;
   bool has_mvint() const;
   private:
   bool _internal_has_mvint() const;
@@ -548,7 +548,7 @@ inline void DummyUnion::set_allocated_mvstring(std::string* mvstring) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.DummyUnion.mVstring)
 }
 
-// int32 mVint = 2;
+// sint32 mVint = 2;
 inline bool DummyUnion::_internal_has_mvint() const {
   return content_case() == kMVint;
 }

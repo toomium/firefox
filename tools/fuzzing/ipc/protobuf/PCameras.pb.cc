@@ -436,11 +436,11 @@ const char* Msg_CaptureEnded::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 streamId = 1;
+      // required sint32 streamId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_streamid(&has_bits);
-          _impl_.streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -476,10 +476,10 @@ uint8_t* Msg_CaptureEnded::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 streamId = 1;
+  // required sint32 streamId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_streamid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_streamid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -494,9 +494,9 @@ size_t Msg_CaptureEnded::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.PCameras.Msg_CaptureEnded)
   size_t total_size = 0;
 
-  // required int32 streamId = 1;
+  // required sint32 streamId = 1;
   if (_internal_has_streamid()) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_streamid());
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_streamid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -677,11 +677,11 @@ const char* Msg_DeliverFrame::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 streamId = 1;
+      // required sint32 streamId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_streamid(&has_bits);
-          _impl_.streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -734,10 +734,10 @@ uint8_t* Msg_DeliverFrame::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 streamId = 1;
+  // required sint32 streamId = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_streamid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_streamid(), target);
   }
 
   // required bytes buffer = 2;
@@ -780,8 +780,8 @@ size_t Msg_DeliverFrame::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_streamid()) {
-    // required int32 streamId = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_streamid());
+    // required sint32 streamId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_streamid());
   }
 
   return total_size;
@@ -801,8 +801,8 @@ size_t Msg_DeliverFrame::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.props_);
 
-    // required int32 streamId = 1;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_streamid());
+    // required sint32 streamId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_streamid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1113,11 +1113,11 @@ const char* Msg_ReplyNumberOfCaptureDevices::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 deviceCount = 1;
+      // required sint32 deviceCount = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_devicecount(&has_bits);
-          _impl_.devicecount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.devicecount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1153,10 +1153,10 @@ uint8_t* Msg_ReplyNumberOfCaptureDevices::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 deviceCount = 1;
+  // required sint32 deviceCount = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_devicecount(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_devicecount(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1171,9 +1171,9 @@ size_t Msg_ReplyNumberOfCaptureDevices::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCaptureDevices)
   size_t total_size = 0;
 
-  // required int32 deviceCount = 1;
+  // required sint32 deviceCount = 1;
   if (_internal_has_devicecount()) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_devicecount());
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_devicecount());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1308,11 +1308,11 @@ const char* Msg_ReplyNumberOfCapabilities::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 capabilityCount = 1;
+      // required sint32 capabilityCount = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_capabilitycount(&has_bits);
-          _impl_.capabilitycount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.capabilitycount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1348,10 +1348,10 @@ uint8_t* Msg_ReplyNumberOfCapabilities::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 capabilityCount = 1;
+  // required sint32 capabilityCount = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_capabilitycount(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_capabilitycount(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1366,9 +1366,9 @@ size_t Msg_ReplyNumberOfCapabilities::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCapabilities)
   size_t total_size = 0;
 
-  // required int32 capabilityCount = 1;
+  // required sint32 capabilityCount = 1;
   if (_internal_has_capabilitycount()) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_capabilitycount());
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_capabilitycount());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1503,11 +1503,11 @@ const char* Msg_ReplyAllocateCapture::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 captureId = 1;
+      // required sint32 captureId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_captureid(&has_bits);
-          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1543,10 +1543,10 @@ uint8_t* Msg_ReplyAllocateCapture::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 captureId = 1;
+  // required sint32 captureId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_captureid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_captureid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1561,9 +1561,9 @@ size_t Msg_ReplyAllocateCapture::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.PCameras.Msg_ReplyAllocateCapture)
   size_t total_size = 0;
 
-  // required int32 captureId = 1;
+  // required sint32 captureId = 1;
   if (_internal_has_captureid()) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_captureid());
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -3448,11 +3448,11 @@ const char* Msg_GetCaptureCapability::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required int32 capability_number = 3;
+      // required sint32 capability_number = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_capability_number(&has_bits);
-          _impl_.capability_number_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.capability_number_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3500,10 +3500,10 @@ uint8_t* Msg_GetCaptureCapability::_InternalSerialize(
         2, this->_internal_unique_idutf8(), target);
   }
 
-  // required int32 capability_number = 3;
+  // required sint32 capability_number = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_capability_number(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_capability_number(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3533,8 +3533,8 @@ size_t Msg_GetCaptureCapability::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_capability_number()) {
-    // required int32 capability_number = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_capability_number());
+    // required sint32 capability_number = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_capability_number());
   }
 
   return total_size;
@@ -3554,8 +3554,8 @@ size_t Msg_GetCaptureCapability::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_unique_idutf8());
 
-    // required int32 capability_number = 3;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_capability_number());
+    // required sint32 capability_number = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_capability_number());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -3744,11 +3744,11 @@ const char* Msg_GetCaptureDevice::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required int32 deviceIndex = 2;
+      // required sint32 deviceIndex = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_deviceindex(&has_bits);
-          _impl_.deviceindex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.deviceindex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3790,10 +3790,10 @@ uint8_t* Msg_GetCaptureDevice::_InternalSerialize(
         1, this->_internal_engine(), target);
   }
 
-  // required int32 deviceIndex = 2;
+  // required sint32 deviceIndex = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_deviceindex(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_deviceindex(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3816,8 +3816,8 @@ size_t Msg_GetCaptureDevice::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_deviceindex()) {
-    // required int32 deviceIndex = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_deviceindex());
+    // required sint32 deviceIndex = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_deviceindex());
   }
 
   return total_size;
@@ -3832,8 +3832,8 @@ size_t Msg_GetCaptureDevice::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_engine());
 
-    // required int32 deviceIndex = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_deviceindex());
+    // required sint32 deviceIndex = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_deviceindex());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -4343,11 +4343,11 @@ const char* Msg_ReleaseCapture::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required int32 captureId = 2;
+      // required sint32 captureId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_captureid(&has_bits);
-          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4389,10 +4389,10 @@ uint8_t* Msg_ReleaseCapture::_InternalSerialize(
         1, this->_internal_engine(), target);
   }
 
-  // required int32 captureId = 2;
+  // required sint32 captureId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_captureid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_captureid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4415,8 +4415,8 @@ size_t Msg_ReleaseCapture::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_captureid()) {
-    // required int32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_captureid());
+    // required sint32 captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
   }
 
   return total_size;
@@ -4431,8 +4431,8 @@ size_t Msg_ReleaseCapture::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_engine());
 
-    // required int32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_captureid());
+    // required sint32 captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -4638,11 +4638,11 @@ const char* Msg_StartCapture::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required int32 captureId = 2;
+      // required sint32 captureId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_captureid(&has_bits);
-          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4692,10 +4692,10 @@ uint8_t* Msg_StartCapture::_InternalSerialize(
         1, this->_internal_engine(), target);
   }
 
-  // required int32 captureId = 2;
+  // required sint32 captureId = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_captureid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_captureid(), target);
   }
 
   // required .protobuf.mozilla.camera.VideoCaptureCapability capability = 3;
@@ -4732,8 +4732,8 @@ size_t Msg_StartCapture::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_captureid()) {
-    // required int32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_captureid());
+    // required sint32 captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
   }
 
   return total_size;
@@ -4753,8 +4753,8 @@ size_t Msg_StartCapture::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.capability_);
 
-    // required int32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_captureid());
+    // required sint32 captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -4948,11 +4948,11 @@ const char* Msg_FocusOnSelectedSource::_InternalParse(const char* ptr, ::_pbi::P
         } else
           goto handle_unusual;
         continue;
-      // required int32 captureId = 2;
+      // required sint32 captureId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_captureid(&has_bits);
-          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4994,10 +4994,10 @@ uint8_t* Msg_FocusOnSelectedSource::_InternalSerialize(
         1, this->_internal_engine(), target);
   }
 
-  // required int32 captureId = 2;
+  // required sint32 captureId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_captureid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_captureid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5020,8 +5020,8 @@ size_t Msg_FocusOnSelectedSource::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_captureid()) {
-    // required int32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_captureid());
+    // required sint32 captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
   }
 
   return total_size;
@@ -5036,8 +5036,8 @@ size_t Msg_FocusOnSelectedSource::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_engine());
 
-    // required int32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_captureid());
+    // required sint32 captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -5219,11 +5219,11 @@ const char* Msg_StopCapture::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required int32 captureId = 2;
+      // required sint32 captureId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_captureid(&has_bits);
-          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5265,10 +5265,10 @@ uint8_t* Msg_StopCapture::_InternalSerialize(
         1, this->_internal_engine(), target);
   }
 
-  // required int32 captureId = 2;
+  // required sint32 captureId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_captureid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_captureid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5291,8 +5291,8 @@ size_t Msg_StopCapture::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_captureid()) {
-    // required int32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_captureid());
+    // required sint32 captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
   }
 
   return total_size;
@@ -5307,8 +5307,8 @@ size_t Msg_StopCapture::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_engine());
 
-    // required int32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_captureid());
+    // required sint32 captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

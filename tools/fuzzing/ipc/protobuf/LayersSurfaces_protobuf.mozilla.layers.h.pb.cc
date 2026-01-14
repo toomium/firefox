@@ -8418,11 +8418,11 @@ const char* SurfaceDescriptorShared::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required int32 stride = 2;
+      // required sint32 stride = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_stride(&has_bits);
-          _impl_.stride_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.stride_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8482,10 +8482,10 @@ uint8_t* SurfaceDescriptorShared::_InternalSerialize(
         1, this->_internal_size(), target);
   }
 
-  // required int32 stride = 2;
+  // required sint32 stride = 2;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_stride(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_stride(), target);
   }
 
   // required bytes format = 3;
@@ -8534,8 +8534,8 @@ size_t SurfaceDescriptorShared::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_stride()) {
-    // required int32 stride = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_stride());
+    // required sint32 stride = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_stride());
   }
 
   return total_size;
@@ -8560,8 +8560,8 @@ size_t SurfaceDescriptorShared::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_handle());
 
-    // required int32 stride = 2;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_stride());
+    // required sint32 stride = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_stride());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

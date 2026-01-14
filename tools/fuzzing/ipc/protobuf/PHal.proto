@@ -97,7 +97,7 @@ message Msg_UnlockScreenOrientation {
 }
 
 message Msg_PerformHapticFeedback {
-  required int32 aType = 1;
+  required sint32 aType = 1;
 }
 
 message Msg_NotifySensorChange {

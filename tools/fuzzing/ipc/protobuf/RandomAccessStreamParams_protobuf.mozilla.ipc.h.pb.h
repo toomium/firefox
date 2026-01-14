@@ -199,7 +199,7 @@ class FileRandomAccessStreamParams final :
   std::string* _internal_mutable_filedescriptor();
   public:
 
-  // required int32 behaviorFlags = 2;
+  // required sint32 behaviorFlags = 2;
   bool has_behaviorflags() const;
   private:
   bool _internal_has_behaviorflags() const;
@@ -665,7 +665,7 @@ inline void FileRandomAccessStreamParams::set_allocated_filedescriptor(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.FileRandomAccessStreamParams.fileDescriptor)
 }
 
-// required int32 behaviorFlags = 2;
+// required sint32 behaviorFlags = 2;
 inline bool FileRandomAccessStreamParams::_internal_has_behaviorflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

@@ -20,7 +20,7 @@ message Msg_DeleteMe {
 }
 
 message Msg_Commit {
-  optional int64 lastRequest = 1;
+  optional sint64 lastRequest = 1;
 }
 
 message Msg_Abort {
@@ -28,7 +28,7 @@ message Msg_Abort {
 }
 
 message Msg_PBackgroundIDBCursorConstructor {
-  required int64 requestId = 1;
+  required sint64 requestId = 1;
   required protobuf.mozilla.dom.indexedDB.OpenCursorParams params = 2;
 }
 
@@ -36,7 +36,7 @@ message Reply_PBackgroundIDBCursorConstructor {
 }
 
 message Msg_PBackgroundIDBRequestConstructor {
-  required int64 requestId = 1;
+  required sint64 requestId = 1;
   required protobuf.mozilla.dom.indexedDB.RequestParams params = 2;
 }
 

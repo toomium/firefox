@@ -8212,7 +8212,7 @@ class Msg_SynthesizeNativeKeyEvent final :
   std::string* _internal_mutable_aunmodifiedcharacters();
   public:
 
-  // required int32 aNativeKeyboardLayout = 1;
+  // required sint32 aNativeKeyboardLayout = 1;
   bool has_anativekeyboardlayout() const;
   private:
   bool _internal_has_anativekeyboardlayout() const;
@@ -8225,7 +8225,7 @@ class Msg_SynthesizeNativeKeyEvent final :
   void _internal_set_anativekeyboardlayout(int32_t value);
   public:
 
-  // required int32 aNativeKeyCode = 2;
+  // required sint32 aNativeKeyCode = 2;
   bool has_anativekeycode() const;
   private:
   bool _internal_has_anativekeycode() const;
@@ -8436,7 +8436,7 @@ class Msg_SynthesizeNativeMouseEvent final :
   void _internal_set_anativemessage(uint32_t value);
   public:
 
-  // required int32 aButton = 3;
+  // required sint32 aButton = 3;
   bool has_abutton() const;
   private:
   bool _internal_has_abutton() const;
@@ -9310,7 +9310,7 @@ class Msg_SynthesizeNativeTouchPadPinch final :
   void _internal_set_ascale(float value);
   public:
 
-  // required int32 aModifierFlags = 4;
+  // required sint32 aModifierFlags = 4;
   bool has_amodifierflags() const;
   private:
   bool _internal_has_amodifierflags() const;
@@ -9721,7 +9721,7 @@ class Msg_SynthesizeNativePenInput final :
   void _internal_set_apressure(double value);
   public:
 
-  // required int32 aTiltX = 6;
+  // required sint32 aTiltX = 6;
   bool has_atiltx() const;
   private:
   bool _internal_has_atiltx() const;
@@ -9734,7 +9734,7 @@ class Msg_SynthesizeNativePenInput final :
   void _internal_set_atiltx(int32_t value);
   public:
 
-  // required int32 aTiltY = 7;
+  // required sint32 aTiltY = 7;
   bool has_atilty() const;
   private:
   bool _internal_has_atilty() const;
@@ -9760,7 +9760,7 @@ class Msg_SynthesizeNativePenInput final :
   void _internal_set_acallbackid(uint64_t value);
   public:
 
-  // required int32 aButton = 8;
+  // required sint32 aButton = 8;
   bool has_abutton() const;
   private:
   bool _internal_has_abutton() const;
@@ -10158,7 +10158,7 @@ class Msg_SynthesizeNativeTouchpadPan final :
   void _internal_set_acallbackid(uint64_t value);
   public:
 
-  // required int32 aModifierFlags = 5;
+  // required sint32 aModifierFlags = 5;
   bool has_amodifierflags() const;
   private:
   bool _internal_has_amodifierflags() const;
@@ -11409,7 +11409,7 @@ class Msg_OnProgressChange final :
     kACurTotalProgressFieldNumber = 1,
     kAMaxTotalProgressFieldNumber = 2,
   };
-  // required int32 aCurTotalProgress = 1;
+  // required sint32 aCurTotalProgress = 1;
   bool has_acurtotalprogress() const;
   private:
   bool _internal_has_acurtotalprogress() const;
@@ -11422,7 +11422,7 @@ class Msg_OnProgressChange final :
   void _internal_set_acurtotalprogress(int32_t value);
   public:
 
-  // required int32 aMaxTotalProgress = 2;
+  // required sint32 aMaxTotalProgress = 2;
   bool has_amaxtotalprogress() const;
   private:
   bool _internal_has_amaxtotalprogress() const;
@@ -17023,7 +17023,7 @@ class Msg_ScrollRectIntoView final :
   std::string* _internal_mutable_ascrollflags();
   public:
 
-  // required int32 aAppUnitsPerDevPixel = 5;
+  // required sint32 aAppUnitsPerDevPixel = 5;
   bool has_aappunitsperdevpixel() const;
   private:
   bool _internal_has_aappunitsperdevpixel() const;
@@ -27694,7 +27694,7 @@ class Msg_UIResolutionChanged final :
   void _internal_set_dpi(float value);
   public:
 
-  // required int32 rounding = 2;
+  // required sint32 rounding = 2;
   bool has_rounding() const;
   private:
   bool _internal_has_rounding() const;
@@ -36507,7 +36507,7 @@ Reply_RequestNativeKeyBindings::mutable_commands() {
 
 // Msg_SynthesizeNativeKeyEvent
 
-// required int32 aNativeKeyboardLayout = 1;
+// required sint32 aNativeKeyboardLayout = 1;
 inline bool Msg_SynthesizeNativeKeyEvent::_internal_has_anativekeyboardlayout() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -36535,7 +36535,7 @@ inline void Msg_SynthesizeNativeKeyEvent::set_anativekeyboardlayout(int32_t valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_SynthesizeNativeKeyEvent.aNativeKeyboardLayout)
 }
 
-// required int32 aNativeKeyCode = 2;
+// required sint32 aNativeKeyCode = 2;
 inline bool Msg_SynthesizeNativeKeyEvent::_internal_has_anativekeycode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -36855,7 +36855,7 @@ inline void Msg_SynthesizeNativeMouseEvent::set_anativemessage(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_SynthesizeNativeMouseEvent.aNativeMessage)
 }
 
-// required int32 aButton = 3;
+// required sint32 aButton = 3;
 inline bool Msg_SynthesizeNativeMouseEvent::_internal_has_abutton() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -37727,7 +37727,7 @@ inline void Msg_SynthesizeNativeTouchPadPinch::set_allocated_apoint(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_SynthesizeNativeTouchPadPinch.aPoint)
 }
 
-// required int32 aModifierFlags = 4;
+// required sint32 aModifierFlags = 4;
 inline bool Msg_SynthesizeNativeTouchPadPinch::_internal_has_amodifierflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -38107,7 +38107,7 @@ inline void Msg_SynthesizeNativePenInput::set_arotation(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_SynthesizeNativePenInput.aRotation)
 }
 
-// required int32 aTiltX = 6;
+// required sint32 aTiltX = 6;
 inline bool Msg_SynthesizeNativePenInput::_internal_has_atiltx() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -38135,7 +38135,7 @@ inline void Msg_SynthesizeNativePenInput::set_atiltx(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_SynthesizeNativePenInput.aTiltX)
 }
 
-// required int32 aTiltY = 7;
+// required sint32 aTiltY = 7;
 inline bool Msg_SynthesizeNativePenInput::_internal_has_atilty() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -38163,7 +38163,7 @@ inline void Msg_SynthesizeNativePenInput::set_atilty(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_SynthesizeNativePenInput.aTiltY)
 }
 
-// required int32 aButton = 8;
+// required sint32 aButton = 8;
 inline bool Msg_SynthesizeNativePenInput::_internal_has_abutton() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -38515,7 +38515,7 @@ inline void Msg_SynthesizeNativeTouchpadPan::set_adeltay(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_SynthesizeNativeTouchpadPan.aDeltaY)
 }
 
-// required int32 aModifierFlags = 5;
+// required sint32 aModifierFlags = 5;
 inline bool Msg_SynthesizeNativeTouchpadPan::_internal_has_amodifierflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -39737,7 +39737,7 @@ inline void Msg_OnLocationChange::set_allocated_alocationchangedata(::protobuf::
 
 // Msg_OnProgressChange
 
-// required int32 aCurTotalProgress = 1;
+// required sint32 aCurTotalProgress = 1;
 inline bool Msg_OnProgressChange::_internal_has_acurtotalprogress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -39765,7 +39765,7 @@ inline void Msg_OnProgressChange::set_acurtotalprogress(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_OnProgressChange.aCurTotalProgress)
 }
 
-// required int32 aMaxTotalProgress = 2;
+// required sint32 aMaxTotalProgress = 2;
 inline bool Msg_OnProgressChange::_internal_has_amaxtotalprogress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -42817,7 +42817,7 @@ inline void Msg_ScrollRectIntoView::set_allocated_ascrollflags(std::string* ascr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_ScrollRectIntoView.aScrollFlags)
 }
 
-// required int32 aAppUnitsPerDevPixel = 5;
+// required sint32 aAppUnitsPerDevPixel = 5;
 inline bool Msg_ScrollRectIntoView::_internal_has_aappunitsperdevpixel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -50955,7 +50955,7 @@ inline void Msg_UIResolutionChanged::set_dpi(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_UIResolutionChanged.dpi)
 }
 
-// required int32 rounding = 2;
+// required sint32 rounding = 2;
 inline bool Msg_UIResolutionChanged::_internal_has_rounding() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

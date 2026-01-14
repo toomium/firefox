@@ -553,7 +553,7 @@ class FileInputStreamParams final :
   std::string* _internal_mutable_filedescriptor();
   public:
 
-  // required int32 behaviorFlags = 2;
+  // required sint32 behaviorFlags = 2;
   bool has_behaviorflags() const;
   private:
   bool _internal_has_behaviorflags() const;
@@ -566,7 +566,7 @@ class FileInputStreamParams final :
   void _internal_set_behaviorflags(int32_t value);
   public:
 
-  // required int32 ioFlags = 3;
+  // required sint32 ioFlags = 3;
   bool has_ioflags() const;
   private:
   bool _internal_has_ioflags() const;
@@ -2331,7 +2331,7 @@ class InputStreamLengthWrapperParams final :
       ::protobuf::mozilla::ipc::InputStreamParams* stream);
   ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_stream();
 
-  // required int64 length = 2;
+  // required sint64 length = 2;
   bool has_length() const;
   private:
   bool _internal_has_length() const;
@@ -2668,7 +2668,7 @@ inline void FileInputStreamParams::set_allocated_filedescriptor(std::string* fil
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.FileInputStreamParams.fileDescriptor)
 }
 
-// required int32 behaviorFlags = 2;
+// required sint32 behaviorFlags = 2;
 inline bool FileInputStreamParams::_internal_has_behaviorflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2696,7 +2696,7 @@ inline void FileInputStreamParams::set_behaviorflags(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.FileInputStreamParams.behaviorFlags)
 }
 
-// required int32 ioFlags = 3;
+// required sint32 ioFlags = 3;
 inline bool FileInputStreamParams::_internal_has_ioflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4542,7 +4542,7 @@ inline void InputStreamLengthWrapperParams::set_allocated_stream(::protobuf::moz
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.stream)
 }
 
-// required int64 length = 2;
+// required sint64 length = 2;
 inline bool InputStreamLengthWrapperParams::_internal_has_length() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

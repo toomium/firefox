@@ -5670,11 +5670,11 @@ const char* Msg_LoadUsage::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required int64 usage = 2;
+      // required sint64 usage = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_usage(&has_bits);
-          _impl_.usage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.usage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5716,10 +5716,10 @@ uint8_t* Msg_LoadUsage::_InternalSerialize(
         1, this->_internal_scope(), target);
   }
 
-  // required int64 usage = 2;
+  // required sint64 usage = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_usage(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_usage(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5742,8 +5742,8 @@ size_t Msg_LoadUsage::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_usage()) {
-    // required int64 usage = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_usage());
+    // required sint64 usage = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_usage());
   }
 
   return total_size;
@@ -5758,8 +5758,8 @@ size_t Msg_LoadUsage::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_scope());
 
-    // required int64 usage = 2;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_usage());
+    // required sint64 usage = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_usage());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

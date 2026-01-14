@@ -483,7 +483,7 @@ class SystemFontOptions final :
     kHintStyleFieldNumber = 3,
     kLcdFilterFieldNumber = 4,
   };
-  // required int32 antialias = 1;
+  // required sint32 antialias = 1;
   bool has_antialias() const;
   private:
   bool _internal_has_antialias() const;
@@ -496,7 +496,7 @@ class SystemFontOptions final :
   void _internal_set_antialias(int32_t value);
   public:
 
-  // required int32 subpixelOrder = 2;
+  // required sint32 subpixelOrder = 2;
   bool has_subpixelorder() const;
   private:
   bool _internal_has_subpixelorder() const;
@@ -509,7 +509,7 @@ class SystemFontOptions final :
   void _internal_set_subpixelorder(int32_t value);
   public:
 
-  // required int32 hintStyle = 3;
+  // required sint32 hintStyle = 3;
   bool has_hintstyle() const;
   private:
   bool _internal_has_hintstyle() const;
@@ -522,7 +522,7 @@ class SystemFontOptions final :
   void _internal_set_hintstyle(int32_t value);
   public:
 
-  // required int32 lcdFilter = 4;
+  // required sint32 lcdFilter = 4;
   bool has_lcdfilter() const;
   private:
   bool _internal_has_lcdfilter() const;
@@ -4280,7 +4280,7 @@ class XPCOMInitData final :
       ::protobuf::mozilla::gfx::ContentDeviceData* contentdevicedata);
   ::protobuf::mozilla::gfx::ContentDeviceData* unsafe_arena_release_contentdevicedata();
 
-  // required int32 captivePortalState = 3;
+  // required sint32 captivePortalState = 3;
   bool has_captiveportalstate() const;
   private:
   bool _internal_has_captiveportalstate() const;
@@ -6906,7 +6906,7 @@ inline void SystemFontListEntry::set_appfontfamily(bool value) {
 
 // SystemFontOptions
 
-// required int32 antialias = 1;
+// required sint32 antialias = 1;
 inline bool SystemFontOptions::_internal_has_antialias() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6934,7 +6934,7 @@ inline void SystemFontOptions::set_antialias(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SystemFontOptions.antialias)
 }
 
-// required int32 subpixelOrder = 2;
+// required sint32 subpixelOrder = 2;
 inline bool SystemFontOptions::_internal_has_subpixelorder() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6962,7 +6962,7 @@ inline void SystemFontOptions::set_subpixelorder(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SystemFontOptions.subpixelOrder)
 }
 
-// required int32 hintStyle = 3;
+// required sint32 hintStyle = 3;
 inline bool SystemFontOptions::_internal_has_hintstyle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6990,7 +6990,7 @@ inline void SystemFontOptions::set_hintstyle(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SystemFontOptions.hintStyle)
 }
 
-// required int32 lcdFilter = 4;
+// required sint32 lcdFilter = 4;
 inline bool SystemFontOptions::_internal_has_lcdfilter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -10596,7 +10596,7 @@ inline void XPCOMInitData::set_isconnected(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.XPCOMInitData.isConnected)
 }
 
-// required int32 captivePortalState = 3;
+// required sint32 captivePortalState = 3;
 inline bool XPCOMInitData::_internal_has_captiveportalstate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;

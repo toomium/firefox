@@ -19,7 +19,7 @@ import "PDNSRequestParams.proto";
 message Msg_CancelDNSRequest {
   required bytes hostName = 1;
   required bytes trrServer = 2;
-  required int32 port = 3;
+  required sint32 port = 3;
   required uint32 type = 4;
   required bytes originAttributes = 5;
   required bytes flags = 6;

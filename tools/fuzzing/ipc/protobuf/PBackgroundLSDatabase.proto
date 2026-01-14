@@ -24,7 +24,7 @@ message Msg_PBackgroundLSSnapshotConstructor {
   required bytes documentURI = 1;
   required bytes key = 2;
   required bool increasePeakUsage = 3;
-  required int64 minSize = 4;
+  required sint64 minSize = 4;
 }
 
 message Reply_PBackgroundLSSnapshotConstructor {

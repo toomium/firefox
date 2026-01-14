@@ -2217,7 +2217,7 @@ class Msg_PDNSRequestConstructor final :
   std::string* _internal_mutable_flags();
   public:
 
-  // required int32 port = 3;
+  // required sint32 port = 3;
   bool has_port() const;
   private:
   bool _internal_has_port() const;
@@ -5806,7 +5806,7 @@ class Msg_PAltDataOutputStreamConstructor final :
   std::string* _internal_mutable_channel();
   public:
 
-  // required int64 predictedSize = 2;
+  // required sint64 predictedSize = 2;
   bool has_predictedsize() const;
   private:
   bool _internal_has_predictedsize() const;
@@ -10581,7 +10581,7 @@ inline void Msg_PDNSRequestConstructor::set_allocated_trrserver(std::string* trr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNecko.Msg_PDNSRequestConstructor.trrServer)
 }
 
-// required int32 port = 3;
+// required sint32 port = 3;
 inline bool Msg_PDNSRequestConstructor::_internal_has_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -12735,7 +12735,7 @@ inline void Msg_PAltDataOutputStreamConstructor::set_allocated_type(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNecko.Msg_PAltDataOutputStreamConstructor.type)
 }
 
-// required int64 predictedSize = 2;
+// required sint64 predictedSize = 2;
 inline bool Msg_PAltDataOutputStreamConstructor::_internal_has_predictedsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

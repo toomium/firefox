@@ -182,7 +182,7 @@ class Msg_MaybeUpdateSize final :
     kSizeFieldNumber = 1,
     kTruncateFieldNumber = 2,
   };
-  // required int64 size = 1;
+  // required sint64 size = 1;
   bool has_size() const;
   private:
   bool _internal_has_size() const;
@@ -380,7 +380,7 @@ class Reply_MaybeUpdateSize final :
 #endif  // __GNUC__
 // Msg_MaybeUpdateSize
 
-// required int64 size = 1;
+// required sint64 size = 1;
 inline bool Msg_MaybeUpdateSize::_internal_has_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

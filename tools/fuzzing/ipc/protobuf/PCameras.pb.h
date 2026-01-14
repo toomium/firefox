@@ -264,7 +264,7 @@ class Msg_CaptureEnded final :
   enum : int {
     kStreamIdFieldNumber = 1,
   };
-  // required int32 streamId = 1;
+  // required sint32 streamId = 1;
   bool has_streamid() const;
   private:
   bool _internal_has_streamid() const;
@@ -444,7 +444,7 @@ class Msg_DeliverFrame final :
       ::protobuf::mozilla::camera::VideoFrameProperties* props);
   ::protobuf::mozilla::camera::VideoFrameProperties* unsafe_arena_release_props();
 
-  // required int32 streamId = 1;
+  // required sint32 streamId = 1;
   bool has_streamid() const;
   private:
   bool _internal_has_streamid() const;
@@ -715,7 +715,7 @@ class Msg_ReplyNumberOfCaptureDevices final :
   enum : int {
     kDeviceCountFieldNumber = 1,
   };
-  // required int32 deviceCount = 1;
+  // required sint32 deviceCount = 1;
   bool has_devicecount() const;
   private:
   bool _internal_has_devicecount() const;
@@ -857,7 +857,7 @@ class Msg_ReplyNumberOfCapabilities final :
   enum : int {
     kCapabilityCountFieldNumber = 1,
   };
-  // required int32 capabilityCount = 1;
+  // required sint32 capabilityCount = 1;
   bool has_capabilitycount() const;
   private:
   bool _internal_has_capabilitycount() const;
@@ -999,7 +999,7 @@ class Msg_ReplyAllocateCapture final :
   enum : int {
     kCaptureIdFieldNumber = 1,
   };
-  // required int32 captureId = 1;
+  // required sint32 captureId = 1;
   bool has_captureid() const;
   private:
   bool _internal_has_captureid() const;
@@ -2339,7 +2339,7 @@ class Msg_GetCaptureCapability final :
   std::string* _internal_mutable_unique_idutf8();
   public:
 
-  // required int32 capability_number = 3;
+  // required sint32 capability_number = 3;
   bool has_capability_number() const;
   private:
   bool _internal_has_capability_number() const;
@@ -2505,7 +2505,7 @@ class Msg_GetCaptureDevice final :
   std::string* _internal_mutable_engine();
   public:
 
-  // required int32 deviceIndex = 2;
+  // required sint32 deviceIndex = 2;
   bool has_deviceindex() const;
   private:
   bool _internal_has_deviceindex() const;
@@ -2855,7 +2855,7 @@ class Msg_ReleaseCapture final :
   std::string* _internal_mutable_engine();
   public:
 
-  // required int32 captureId = 2;
+  // required sint32 captureId = 2;
   bool has_captureid() const;
   private:
   bool _internal_has_captureid() const;
@@ -3039,7 +3039,7 @@ class Msg_StartCapture final :
       ::protobuf::mozilla::camera::VideoCaptureCapability* capability);
   ::protobuf::mozilla::camera::VideoCaptureCapability* unsafe_arena_release_capability();
 
-  // required int32 captureId = 2;
+  // required sint32 captureId = 2;
   bool has_captureid() const;
   private:
   bool _internal_has_captureid() const;
@@ -3205,7 +3205,7 @@ class Msg_FocusOnSelectedSource final :
   std::string* _internal_mutable_engine();
   public:
 
-  // required int32 captureId = 2;
+  // required sint32 captureId = 2;
   bool has_captureid() const;
   private:
   bool _internal_has_captureid() const;
@@ -3370,7 +3370,7 @@ class Msg_StopCapture final :
   std::string* _internal_mutable_engine();
   public:
 
-  // required int32 captureId = 2;
+  // required sint32 captureId = 2;
   bool has_captureid() const;
   private:
   bool _internal_has_captureid() const;
@@ -3707,7 +3707,7 @@ class Msg_EnsureInitialized final :
 #endif  // __GNUC__
 // Msg_CaptureEnded
 
-// required int32 streamId = 1;
+// required sint32 streamId = 1;
 inline bool Msg_CaptureEnded::_internal_has_streamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3739,7 +3739,7 @@ inline void Msg_CaptureEnded::set_streamid(int32_t value) {
 
 // Msg_DeliverFrame
 
-// required int32 streamId = 1;
+// required sint32 streamId = 1;
 inline bool Msg_DeliverFrame::_internal_has_streamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3930,7 +3930,7 @@ inline void Msg_DeliverFrame::set_allocated_props(::protobuf::mozilla::camera::V
 
 // Msg_ReplyNumberOfCaptureDevices
 
-// required int32 deviceCount = 1;
+// required sint32 deviceCount = 1;
 inline bool Msg_ReplyNumberOfCaptureDevices::_internal_has_devicecount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3962,7 +3962,7 @@ inline void Msg_ReplyNumberOfCaptureDevices::set_devicecount(int32_t value) {
 
 // Msg_ReplyNumberOfCapabilities
 
-// required int32 capabilityCount = 1;
+// required sint32 capabilityCount = 1;
 inline bool Msg_ReplyNumberOfCapabilities::_internal_has_capabilitycount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3994,7 +3994,7 @@ inline void Msg_ReplyNumberOfCapabilities::set_capabilitycount(int32_t value) {
 
 // Msg_ReplyAllocateCapture
 
-// required int32 captureId = 1;
+// required sint32 captureId = 1;
 inline bool Msg_ReplyAllocateCapture::_internal_has_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4677,7 +4677,7 @@ inline void Msg_GetCaptureCapability::set_allocated_unique_idutf8(std::string* u
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.unique_idUTF8)
 }
 
-// required int32 capability_number = 3;
+// required sint32 capability_number = 3;
 inline bool Msg_GetCaptureCapability::_internal_has_capability_number() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4777,7 +4777,7 @@ inline void Msg_GetCaptureDevice::set_allocated_engine(std::string* engine) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.engine)
 }
 
-// required int32 deviceIndex = 2;
+// required sint32 deviceIndex = 2;
 inline bool Msg_GetCaptureDevice::_internal_has_deviceindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5045,7 +5045,7 @@ inline void Msg_ReleaseCapture::set_allocated_engine(std::string* engine) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.engine)
 }
 
-// required int32 captureId = 2;
+// required sint32 captureId = 2;
 inline bool Msg_ReleaseCapture::_internal_has_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5145,7 +5145,7 @@ inline void Msg_StartCapture::set_allocated_engine(std::string* engine) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_StartCapture.engine)
 }
 
-// required int32 captureId = 2;
+// required sint32 captureId = 2;
 inline bool Msg_StartCapture::_internal_has_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5332,7 +5332,7 @@ inline void Msg_FocusOnSelectedSource::set_allocated_engine(std::string* engine)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.engine)
 }
 
-// required int32 captureId = 2;
+// required sint32 captureId = 2;
 inline bool Msg_FocusOnSelectedSource::_internal_has_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5432,7 +5432,7 @@ inline void Msg_StopCapture::set_allocated_engine(std::string* engine) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_StopCapture.engine)
 }
 
-// required int32 captureId = 2;
+// required sint32 captureId = 2;
 inline bool Msg_StopCapture::_internal_has_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

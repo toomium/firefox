@@ -233,11 +233,11 @@ const char* TestPartResult::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required int32 lineNumber = 4;
+      // required sint32 lineNumber = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_linenumber(&has_bits);
-          _impl_.linenumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.linenumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -309,10 +309,10 @@ uint8_t* TestPartResult::_InternalSerialize(
         3, this->_internal_filename(), target);
   }
 
-  // required int32 lineNumber = 4;
+  // required sint32 lineNumber = 4;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_linenumber(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_linenumber(), target);
   }
 
   // required bytes summary = 5;
@@ -371,8 +371,8 @@ size_t TestPartResult::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_linenumber()) {
-    // required int32 lineNumber = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_linenumber());
+    // required sint32 lineNumber = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_linenumber());
   }
 
   return total_size;
@@ -403,8 +403,8 @@ size_t TestPartResult::ByteSizeLong() const {
     // required bool fatal = 2;
     total_size += 1 + 1;
 
-    // required int32 lineNumber = 4;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_linenumber());
+    // required sint32 lineNumber = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_linenumber());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

@@ -524,7 +524,7 @@ class StandardURLSegment final :
   void _internal_set_position(uint32_t value);
   public:
 
-  // required int32 length = 2;
+  // required sint32 length = 2;
   bool has_length() const;
   private:
   bool _internal_has_length() const;
@@ -934,7 +934,7 @@ class StandardURLParams final :
   void _internal_set_urltype(uint32_t value);
   public:
 
-  // required int32 port = 2;
+  // required sint32 port = 2;
   bool has_port() const;
   private:
   bool _internal_has_port() const;
@@ -947,7 +947,7 @@ class StandardURLParams final :
   void _internal_set_port(int32_t value);
   public:
 
-  // required int32 defaultPort = 3;
+  // required sint32 defaultPort = 3;
   bool has_defaultport() const;
   private:
   bool _internal_has_defaultport() const;
@@ -2849,7 +2849,7 @@ inline void StandardURLSegment::set_position(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StandardURLSegment.position)
 }
 
-// required int32 length = 2;
+// required sint32 length = 2;
 inline bool StandardURLSegment::_internal_has_length() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2909,7 +2909,7 @@ inline void StandardURLParams::set_urltype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StandardURLParams.urlType)
 }
 
-// required int32 port = 2;
+// required sint32 port = 2;
 inline bool StandardURLParams::_internal_has_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -2937,7 +2937,7 @@ inline void StandardURLParams::set_port(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StandardURLParams.port)
 }
 
-// required int32 defaultPort = 3;
+// required sint32 defaultPort = 3;
 inline bool StandardURLParams::_internal_has_defaultport() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;

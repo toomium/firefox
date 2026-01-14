@@ -1448,11 +1448,11 @@ const char* Msg_SetRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required int64 expires = 10;
+      // required sint64 expires = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
           _Internal::set_has_expires(&has_bits);
-          _impl_.expires_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.expires_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1475,11 +1475,11 @@ const char* Msg_SetRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required int32 sameSite = 13;
+      // required sint32 sameSite = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
           _Internal::set_has_samesite(&has_bits);
-          _impl_.samesite_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.samesite_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1587,10 +1587,10 @@ uint8_t* Msg_SetRequest::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(9, this->_internal_session(), target);
   }
 
-  // required int64 expires = 10;
+  // required sint64 expires = 10;
   if (cached_has_bits & 0x00002000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(10, this->_internal_expires(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(10, this->_internal_expires(), target);
   }
 
   // required bytes domain = 11;
@@ -1605,10 +1605,10 @@ uint8_t* Msg_SetRequest::_InternalSerialize(
         12, this->_internal_path(), target);
   }
 
-  // required int32 sameSite = 13;
+  // required sint32 sameSite = 13;
   if (cached_has_bits & 0x00004000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(13, this->_internal_samesite(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(13, this->_internal_samesite(), target);
   }
 
   // required bool partitioned = 14;
@@ -1715,13 +1715,13 @@ size_t Msg_SetRequest::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_expires()) {
-    // required int64 expires = 10;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_expires());
+    // required sint64 expires = 10;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_expires());
   }
 
   if (_internal_has_samesite()) {
-    // required int32 sameSite = 13;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_samesite());
+    // required sint32 sameSite = 13;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_samesite());
   }
 
   return total_size;
@@ -1784,11 +1784,11 @@ size_t Msg_SetRequest::ByteSizeLong() const {
     // required bool partitioned = 14;
     total_size += 1 + 1;
 
-    // required int64 expires = 10;
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_expires());
+    // required sint64 expires = 10;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_expires());
 
-    // required int32 sameSite = 13;
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_samesite());
+    // required sint32 sameSite = 13;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_samesite());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();

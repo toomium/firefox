@@ -8350,11 +8350,11 @@ const char* Reply_GetFragDataLocation::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required int32 ret = 1;
+      // required sint32 ret = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_ret(&has_bits);
-          _impl_.ret_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.ret_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8390,10 +8390,10 @@ uint8_t* Reply_GetFragDataLocation::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required int32 ret = 1;
+  // required sint32 ret = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_ret(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_ret(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8408,9 +8408,9 @@ size_t Reply_GetFragDataLocation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebGL.Reply_GetFragDataLocation)
   size_t total_size = 0;
 
-  // required int32 ret = 1;
+  // required sint32 ret = 1;
   if (_internal_has_ret()) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_ret());
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_ret());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused

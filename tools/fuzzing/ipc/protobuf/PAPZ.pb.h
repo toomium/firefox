@@ -1509,7 +1509,7 @@ class Msg_NotifyAPZStateChange final :
   void _internal_set_ainputblockid(uint64_t value);
   public:
 
-  // required int32 aArg = 3;
+  // required sint32 aArg = 3;
   bool has_aarg() const;
   private:
   bool _internal_has_aarg() const;
@@ -3032,7 +3032,7 @@ inline void Msg_NotifyAPZStateChange::set_allocated_achange(std::string* achange
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZ.Msg_NotifyAPZStateChange.aChange)
 }
 
-// required int32 aArg = 3;
+// required sint32 aArg = 3;
 inline bool Msg_NotifyAPZStateChange::_internal_has_aarg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
