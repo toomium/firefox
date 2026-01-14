@@ -49,21 +49,21 @@ Types = (
 # These mappings are used for .proto generation intended for fuzzing IPC messages
 # using structure-aware mutations.
 PBTypeMappings = {
-    'int32_t': 'int32',
-    'int64_t': 'int64',
+    'int32_t': 'sint32',
+    'int64_t': 'sint64',
     'uint32_t': 'uint32',
     'uint64_t': 'uint64',
 
     # protobuf got no 8-bit wide integer type
-    'int8_t': 'int32',
+    'int8_t': 'sint32',
     'uint8_t': 'uint32',
-    'int16_t': 'int32',
+    'int16_t': 'sint32',
     'uint16_t': 'uint32',
+    'short' : 'sint32',
 
-    'short' : 'int32',
-    'int': 'int32',
-    'long': 'int64',
-    'long long': 'int64',
+    'int': 'sint32',
+    'long': 'sint64',
+    'long long': 'sint64',
     'unsigned int': 'uint32',
     'unsigned long': 'uint64',
     'unsigned long long': 'uint64',
@@ -78,6 +78,14 @@ PBTypeMappings = {
     # 'nsString' : 'string',
     # 'nsCString' : 'string',
 }
+
+PBCastTypes = [
+    'int8_t',
+    'uint8_t',
+    'int16_t',
+    'uint16_t',
+    'short',
+]
 
 # XXX(Bug 1677487) Can we restrict including ByteBuf.h, FileDescriptor.h,
 # MozPromise.h and Shmem.h to those protocols that really use them?

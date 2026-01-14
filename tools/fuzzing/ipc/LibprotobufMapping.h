@@ -182,13 +182,18 @@ template<typename T>
     IPC::MessageReader reader__{
                           *(dummy_msg)};
 
-    T result;
-    if (!IPC::ReadParam<T>(&reader__, &result)) {
-      MOZ_FUZZING_NYX_ABORT("Deserialization from string failed\n");
+    // T result;
+    // if (!IPC::ReadParam<T>(&reader__, &result)) {
+    //   MOZ_FUZZING_NYX_ABORT("Deserialization from string failed\n");
+    //   return mozilla::Nothing();
+    // }
+    auto result = IPC::ReadParam<T>(&reader__);
+    if (!result) {
+      MOZ_FUZZING_NYX_PRINT("Deserialization from string failed\n");
       return mozilla::Nothing();
     }
 
-    return mozilla::Some(std::move(result));
+    return mozilla::Some(std::move(*result));
   }
 };
 }  // namespace fuzzing
