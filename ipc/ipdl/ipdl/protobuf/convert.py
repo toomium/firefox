@@ -170,7 +170,8 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         elif isinstance(ipdltype, ipdl.type.ArrayType):
             cardinality = ast.FieldCardinality.REPEATED
 
-        return ast.Field(param_name, 0, mapped_type, cardinality)
+        # append "a_" as prefix to avoid reserved names like "descriptor"
+        return ast.Field("a_" + param_name, 0, mapped_type, cardinality)
 
 
     def visitMessageDecl(self, md : 'ipdl.lower.MessageDecl'):

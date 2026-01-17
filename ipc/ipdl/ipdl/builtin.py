@@ -74,10 +74,15 @@ PBTypeMappings = {
 
     'bool': 'bool',
 
-    'string': 'string',
-    # 'nsString' : 'string',
-    # 'nsCString' : 'string',
+#    'string': 'string',
+    'nsString' : 'string',
+    'nsCString' : 'string',
 }
+
+PBConvertTypes = [
+    'nsString',
+    'nsCString',
+]
 
 PBCastTypes = [
     'int8_t',

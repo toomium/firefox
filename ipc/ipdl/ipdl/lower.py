@@ -14,7 +14,7 @@ from ipdl.cxx.code import *
 from ipdl.type import ActorType, UnionType, TypeVisitor, builtinHeaderIncludes
 from ipdl.util import hash_str
 from ipdl.protobuf.convert import getNamespace, ProtobufTypeMapper
-from ipdl.builtin import PBTypeMappings, PBCastTypes
+from ipdl.builtin import PBTypeMappings, PBCastTypes, PBConvertTypes
 import ipdl.type
 
 from pprint import pprint
@@ -130,6 +130,9 @@ def _protobufTypeIsMappedToBytes(type):
             or  _protobufTypeIsArray(type)
             or  _protobufTypeIsMaybe(type)
             )
+
+def _protobufTypeIsConvertible(type):
+    return type.name() in PBConvertTypes
 
 def _protobufTypeIsArray(type):
     return isinstance(type, ipdl.type.ArrayType)
@@ -845,7 +848,7 @@ class _HybridDecl:
         return __protobufGetType(self.ipdltype)
 
     def protobufName(self):
-        return self.name.lower()
+        return "a_" + self.name.lower()
 
     def protobufVar(self):
         return self.protobufName()
@@ -2444,7 +2447,6 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             funcs.append(mkOverload(False))
         return funcs
 
-
     def _generateProtobufValue(self, ipdltype, readField):
         block = Block()
 
@@ -2452,7 +2454,10 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             return ExprCall(ExprVar(f"{_getNamespacedObject(ipdltype.name(), ipdltype._ast.namespaces, False)}_ToProtobuf"), [ExprVar(readField)])
             #return ExprCall(ExprVar(f"{ipdltype.name()}_ToProtobuf"), [ExprVar(readField)])
         elif _protobufTypeIsScalar(ipdltype):
-            return ExprVar(f"{readField}")
+            if _protobufTypeIsConvertible(ipdltype):
+                return ExprCall(ExprVar(f"mozilla::fuzzing::LibprotobufMapping::{ipdltype.name()}_ToProtobuf"), [ExprVar(readField)])
+            else:
+                return ExprVar(f"{readField}")
         else:
             if _cxxTypeNeedsMoveForSend(ipdltype):
                 method = "SerializeToStringMove"
@@ -2511,7 +2516,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         elif _protobufTypeIsMaybe(ipdltype):
             # check wether basetype needs reserialization
             inner = Block()
-            convertedField = self._generateProtobufValue(ipdltype.basetype, "*" + readField)
+            convertedField = self._generateProtobufValue(ipdltype.basetype, "(*" + readField + ")")
             if _protobufTypeIsStructOrUnion(ipdltype.basetype):
                 inner.addcode(
                     """
@@ -2549,7 +2554,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                         protoVar=protoVar,
                         protoField=protoField,
                         sep=sep,
-                        readField=readField,
+                        readField=self._generateProtobufValue(ipdltype, readField),
                     )
         else:
             # read as serialized so just set it
@@ -2573,7 +2578,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         func = FunctionDefn(
             FunctionDecl(
                 msgName + "_ToProtobuf",
-                params=[Decl(Type("mozilla::UniquePtr<IPC::Message>"), "ipc_msg")],
+                params=[Decl(Type("mozilla::UniquePtr<IPC::Message>", ref=True), "ipc_msg")],
                 ret=Type(f"mozilla::UniquePtr<{_getNamespacedObject(msgName, ns)}>"),
             )
         )
@@ -2619,7 +2624,8 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         elif _protobufTypeIsScalar(ipdltype):
             if _protobufTypeNeedsCast(ipdltype):
                 return ExprCast(ExprVar(readField), _cxxBareType(ipdltype, "Child"), static=True)
-                return ExprVar(f"static_cast<{_cxxBareType(ipdltype, "Child")}>({readField})")
+            elif _protobufTypeIsConvertible(ipdltype):
+                return ExprCall(ExprVar(f"mozilla::fuzzing::LibprotobufMapping::{ipdltype.name()}_ToIPC"), [ExprVar(readField)])
             else:
                 return ExprVar(f"{readField}")
         else:
@@ -2644,12 +2650,15 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             if _protobufTypeIsScalar(p.ipdltype.basetype):
                 inner.addcode("""
                     //${varName}[i] = ${protoVar}${sep}${protoField}(i);
-                    ${varName}.AppendElement(${protoVar}${sep}${protoField}(i));
+                    //${varName}.AppendElement(${protoVar}${sep}${protoField}(i));
+                    //auto& item = ${protoVar}${sep}${protoField}(i);
+                    ${varName}.AppendElement(${protoValue});
                     """,
                     varName=p.var(),
                     protoVar=protoVar,
                     sep=sep,
                     protoField=p.protobufVar(),
+                    protoValue=self._generateIPCValue(p.ipdltype.basetype, f"{protoVar}{sep}{p.protobufVar()}(i)")
                 )
             elif _protobufTypeIsStructOrUnion(p.ipdltype.basetype):
                 inner.addcode("""
@@ -2763,7 +2772,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         func = FunctionDefn(
             FunctionDecl(
                 msgName + "_ToIPC",
-                params=[Decl(Type(f"mozilla::UniquePtr<{_getNamespacedObject(msgName, ns)}>"), protoVar)],
+                params=[Decl(Type(f"mozilla::UniquePtr<{_getNamespacedObject(msgName, ns)}>", ref=True), protoVar)],
                 ret=Type("mozilla::UniquePtr<IPC::Message>"),
             )
         )
