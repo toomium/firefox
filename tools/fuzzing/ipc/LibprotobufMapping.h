@@ -35,6 +35,10 @@ class LibprotobufMapping {
   // static UniquePtr<TypedProtobuf> ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message>& msg);
   static std::string ReadPayloadFromMessage(mozilla::UniquePtr<IPC::Message>& msg);
   static mozilla::UniquePtr<IPC::Message> CreateMessageFromPayload(const std::string& payload);
+  static nsCString nsCString_ToIPC(const std::string& str);
+  static std::string nsCString_ToProtobuf(nsCString& str);
+  static nsString nsString_ToIPC(const std::string& str);
+  static std::string nsString_ToProtobuf(nsString& str);
   // template<typename T>
   // static IPC::ReadResult<std::string> ReadSerializedParam(IPC::MessageReader* reader);
   // template<typename T>
@@ -46,16 +50,21 @@ class LibprotobufMapping {
   // template<typename T>
   // static UniquePtr<TypedProtobuf> SerializeTypedProtobuf(UniquePtr<T> proto, IPC::IPCMessages type);
   template<typename T>
-  static UniquePtr<T> ParseTypedProtobuf(UniquePtr<TypedProtobuf> proto) {
+  static UniquePtr<T> ParseTypedProtobuf(UniquePtr<TypedProtobuf>& proto) {
       auto input = mozilla::MakeUnique<T>();
       if (input->ParseFromString(proto->serialized_data)) {
           return input;
       }
-      return nullptr;
+      MOZ_FUZZING_NYX_PRINT("ERROR: Protobuf parsing failed - returning empty pointer\n");
+      return {};
   }
 
   template<typename T>
-  static UniquePtr<TypedProtobuf> SerializeTypedProtobuf(UniquePtr<T> proto, IPC::IPCMessages type) {
+  static UniquePtr<TypedProtobuf> SerializeTypedProtobuf(UniquePtr<T>& proto, IPC::IPCMessages type) {
+      if (!proto) {
+        MOZ_FUZZING_NYX_PRINT("ERROR: Cannot serialize nullptr protobuf object\n");
+        return {};
+      }
       UniquePtr<TypedProtobuf> output = mozilla::MakeUnique<TypedProtobuf>();
       output->serialized_data = proto->SerializeAsString();
       output->type = type;
